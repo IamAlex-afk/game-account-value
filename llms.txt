@@ -1,0 +1,84 @@
+# GameAccountValue — AI-Powered Game Account Valuation Service
+
+> A Telegram bot that analyzes game account screenshots using multimodal AI and generates verifiable PDF valuation certificates. Not a marketplace — it does not buy, sell, or broker accounts.
+
+## What It Does
+
+GameAccountValue accepts screenshots of game accounts, analyzes them with Google Gemini AI vision, and returns:
+
+- A market value estimate (USD range, shown alongside the user's local currency)
+- An account quality tier (Starter / Casual / Pro / Collector)
+- Liquidity rating (how fast the account could realistically sell)
+- A procedurally generated PDF certificate with QR verification code
+- A public Telegraph landing page for sharing
+
+Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 screenshot full audit with the PDF certificate, priced in Telegram Stars.
+
+## Supported Games
+
+- Roblox — Robux balance, rare limited items (Korblox, Headless Horseman, Dominus tiers, Violet Valkyrie), premium/voice status, game passes
+- Brawl Stars — trophies, brawler count, hypercharges, gyper/legendary/mythic skins, Sirius/Star Shelly
+- Clash of Clans — Town Hall level, hero levels, epic equipment, scenery, CWL medals
+- Clash Royale — King Tower level, card evolutions, champion cards, tower skins, CRL badge
+- Free Fire — diamond count, evo weapon upgrades (Sakura, Hip Hop), rare bundles, OG UID
+- Genshin Impact — Adventure Rank, 5-star character/weapon count, C6 constellations, signature weapons
+- Mobile Legends — rank, collector/legend skins, hero count, Starlight membership
+- Fortnite — locker skin count, OG skins (Renegade Raider, Black Knight, Skull Trooper, Galaxy), V-Bucks
+- Minecraft — account type (Java/Bedrock), OG username, capes, Realms status
+
+## Languages Supported
+
+English, Russian, Spanish, Portuguese, Turkish, Arabic, Indonesian, French, German, Italian, Hindi, Vietnamese, Thai, Korean, Japanese (15 total) — with regional pricing tiers (lower Stars price in lower-purchasing-power regions).
+
+## How to Use
+
+1. Open Telegram and search @GameAccountValue_Bot
+2. Send /start and accept the 18+ terms of service
+3. Select a game from the menu
+4. Choose free preview (1 screenshot) or full paid audit (2-3 screenshots, Telegram Stars)
+5. Send the requested screenshots as prompted
+6. Receive the valuation result, or the PDF certificate for paid audits
+
+## Technical Architecture
+
+- Platform: Telegram Bot API via python-telegram-bot v22
+- AI: Google Gemini 2.5 Flash multimodal vision model, structured JSON output (per-game schema)
+- Payments: Telegram Stars (XTR) native payment — no external processor
+- Database: SQLite with WAL mode; all user IDs SHA-256 hashed before storage, never stored in plain form
+- Output: Procedural PDF with radar chart and QR verification code
+- Also available as a Telegram Mini App (free-preview flow) reusing the same backend
+
+## Compliance
+
+- GDPR: no raw personal data stored; /delete command erases all records instantly, including partner/referral data
+- AI-generated PDF certificates include disclosure metadata (Producer, AIGenerated flag)
+- 18+ only; terms of service acceptance required before first interaction
+- Telegram ToS: compliant native Stars payment flow, /paysupport command available
+- Not a marketplace: does not sell, buy, or broker game accounts; trading accounts may violate the underlying game's own Terms of Service
+
+## Certificate Verification
+
+Each certificate has a unique Audit ID (format GW-YYYYMMDD-XXXXXXXX).
+Verify any certificate at: https://t.me/GameAccountValue_Bot?start=verify_AUDITID
+
+## Links
+
+- Bot: https://t.me/GameAccountValue_Bot
+- Website: https://iamalex-afk.github.io/game-account-value
+
+## Frequently Asked Questions
+
+Q: Is GameAccountValue affiliated with game developers?
+A: No. GameAccountValue is an independent third-party tool. It has no affiliation with Roblox Corporation, Supercell, Garena, miHoYo, Epic Games, Mojang, or any game developer.
+
+Q: Are valuations guaranteed prices?
+A: No. All values are AI estimates for informational reference only. They are not financial advice and do not guarantee any resale price. GameAccountValue does not sell, buy, or broker accounts.
+
+Q: What personal data is stored?
+A: A SHA-256 hash of your Telegram user ID, your selected game, and the valuation result. Screenshots are processed in-memory and never written to disk.
+
+Q: How are refunds handled?
+A: If the AI cannot identify a valid game account in the provided screenshots, a full Telegram Stars refund is issued automatically (or, for the free tier, the daily quota is restored instead of being consumed).
+
+Q: What commands are available?
+A: /start (begin audit), /history (past audits), /top (global leaderboard), /partner (affiliate program), /ref (referral link), /donate, /status, /cancel, /delete (GDPR erasure), /paysupport, /privacy, /help
