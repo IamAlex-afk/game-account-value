@@ -175,8 +175,8 @@
   .section-title { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 8px; }
   .section-sub { text-align: center; color: var(--muted); margin-bottom: 40px; }
   .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
-  .game-card { background: var(--card); border: 1px solid #1a1f35; border-radius: 12px; padding: 24px 16px; text-align: center; transition: border-color 0.2s; }
-  .game-card:hover { border-color: var(--gold); }
+  .game-card { background: var(--card); border: 1px solid #1a1f35; border-radius: 12px; padding: 24px 16px; text-align: center; transition: border-color 0.2s, transform 0.2s; display: block; text-decoration: none; color: inherit; cursor: pointer; }
+  .game-card:hover { border-color: var(--gold); transform: translateY(-2px); }
   .game-icon { font-size: 32px; margin-bottom: 10px; }
   .game-name { font-weight: 600; font-size: 14px; }
 
@@ -240,15 +240,15 @@
   <h2 class="section-title">9 поддерживаемых игр</h2>
   <p class="section-sub">Только развлекательная оценка — не котировка живой торговой площадки</p>
   <div class="games-grid">
-    <div class="game-card"><div class="game-icon">🟦</div><div class="game-name">Roblox</div></div>
-    <div class="game-card"><div class="game-icon">🐻</div><div class="game-name">Brawl Stars</div></div>
-    <div class="game-card"><div class="game-icon">⚔️</div><div class="game-name">Clash of Clans</div></div>
-    <div class="game-card"><div class="game-icon">🃏</div><div class="game-name">Clash Royale</div></div>
-    <div class="game-card"><div class="game-icon">🔫</div><div class="game-name">Free Fire</div></div>
-    <div class="game-card"><div class="game-icon">⚗️</div><div class="game-name">Genshin Impact</div></div>
-    <div class="game-card"><div class="game-icon">🏆</div><div class="game-name">Mobile Legends</div></div>
-    <div class="game-card"><div class="game-icon">🌀</div><div class="game-name">Fortnite</div></div>
-    <div class="game-card"><div class="game-icon">⛏️</div><div class="game-name">Minecraft</div></div>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon">🟦</div><div class="game-name">Roblox</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon">🐻</div><div class="game-name">Brawl Stars</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon">⚔️</div><div class="game-name">Clash of Clans</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon">🃏</div><div class="game-name">Clash Royale</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon">🔫</div><div class="game-name">Free Fire</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon">⚗️</div><div class="game-name">Genshin Impact</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon">🏆</div><div class="game-name">Mobile Legends</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon">🌀</div><div class="game-name">Fortnite</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon">⛏️</div><div class="game-name">Minecraft</div></a>
   </div>
 </section>
 
