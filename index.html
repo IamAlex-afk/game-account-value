@@ -206,6 +206,12 @@
 
   nav { background: rgba(10,12,20,0.95); border-bottom: 1px solid #1a1f35; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
   .logo { font-weight: 700; font-size: 18px; color: var(--gold); letter-spacing: 1px; white-space: nowrap; }
+  .nav-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .lang-switch { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+  .lang-switch a { color: var(--muted); text-decoration: none; padding: 2px 3px; }
+  .lang-switch a:hover { color: var(--text); }
+  .lang-switch a.lang-current { color: var(--gold); font-weight: 700; }
+  .lang-switch span { color: #2a2f45; }
   .nav-cta { background: var(--gold); color: #000; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 0; }
   @media (max-width: 420px) {
     nav { padding: 12px 16px; }
@@ -268,7 +274,14 @@
 
 <nav>
   <div class="logo">GameAccountValue</div>
-  <a href="https://t.me/GameAccountValue_Bot" class="nav-cta">🤖 Open Bot</a>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://iamalex-afk.github.io/game-account-value/" class="lang-current">EN</a>
+      <span>/</span>
+      <a href="https://iamalex-afk.github.io/game-account-value/ru/">RU</a>
+    </div>
+    <a href="https://t.me/GameAccountValue_Bot" class="nav-cta">🤖 Open Bot</a>
+  </div>
 </nav>
 
 <section class="hero">
