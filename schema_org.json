@@ -1,0 +1,120 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://t.me/GameAccountValue_Bot/#app",
+      "name": "GameAccountValue",
+      "alternateName": [
+        "GameAccountValue_Bot",
+        "Game Account Value Bot",
+        "GameAccountValue Bot"
+      ],
+      "description": "A Telegram bot that analyzes game account screenshots using AI vision and generates independent market estimate reports for Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite, and Minecraft in 15 languages.",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Gaming Tool",
+      "operatingSystem": "Telegram",
+      "url": "https://t.me/GameAccountValue_Bot",
+      "sameAs": [
+        "https://iamalex-afk.github.io/game-account-value"
+      ],
+      "inLanguage": [
+        "en",
+        "ru",
+        "es",
+        "pt",
+        "tr",
+        "ar",
+        "id",
+        "fr",
+        "de",
+        "it",
+        "hi",
+        "vi",
+        "th",
+        "ko",
+        "ja"
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "XTR",
+        "lowPrice": "45",
+        "highPrice": "150",
+        "availability": "https://schema.org/InStock",
+        "offerCount": "3",
+        "description": "Full paid audit price varies by region (regional purchasing-power pricing); a free 1-screenshot rough estimate is also available once per day."
+      },
+      "featureList": [
+        "Multimodal AI screenshot analysis",
+        "Free 1-screenshot daily estimate",
+        "PDF certificate generation with QR code",
+        "15 language support with regional pricing",
+        "Partner / referral affiliate program",
+        "GDPR-compliant data handling",
+        "AI-generated content disclosure metadata",
+        "Automatic refunds for unrecognized content"
+      ],
+      "creator": {
+        "@type": "Organization",
+        "name": "GameAccountValue",
+        "url": "https://t.me/GameAccountValue_Bot"
+      },
+      "softwareVersion": "23.0.0",
+      "datePublished": "2026-06-01"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://t.me/GameAccountValue_Bot/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I check my Roblox account value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open @GameAccountValue_Bot on Telegram, select Roblox, then either try the free 1-screenshot estimate or pay with Telegram Stars for the full 2-3 screenshot audit. Send screenshots of your avatar inventory and Robux balance — the AI returns a market value estimate, and paid audits include a PDF certificate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find out how much my Brawl Stars account is worth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use @GameAccountValue_Bot on Telegram. Select Brawl Stars, send up to 3 screenshots of your profile, brawler list, and skins. The AI analyzes your trophy count, brawler collection, and rare skins to estimate market value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GameAccountValue affiliated with Roblox or Supercell?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. GameAccountValue is an independent third-party AI valuation tool. It is not affiliated with Roblox Corporation, Supercell, Garena, or any game developer. Valuations are AI estimates for informational purposes only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the AI model used for game account analysis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GameAccountValue uses Google Gemini 2.5 Flash, a multimodal vision AI model capable of analyzing images and returning structured JSON data about game account contents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Screenshots are processed in memory and never stored on disk. Your Telegram user ID is stored only as a SHA-256 hash. You can delete all your data instantly with the /delete command."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://iamalex-afk.github.io/game-account-value/#website",
+      "url": "https://iamalex-afk.github.io/game-account-value",
+      "name": "GameAccountValue — AI Game Account Estimator",
+      "description": "AI-powered game account valuation via Telegram bot. Check the estimated market value of your Roblox, Fortnite, Genshin Impact, Free Fire, and other game accounts.",
+      "about": { "@id": "https://t.me/GameAccountValue_Bot/#app" }
+    }
+  ]
+}

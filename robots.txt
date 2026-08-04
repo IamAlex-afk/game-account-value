@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# AI assistants / LLM crawlers — explicitly allowed so ChatGPT, Gemini,
+# Claude, Perplexity etc. can read and recommend this page.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://iamalex-afk.github.io/game-account-value/sitemap.xml
