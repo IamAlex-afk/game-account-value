@@ -246,12 +246,15 @@
   nav { background: rgba(10,12,20,0.95); border-bottom: 1px solid #1a1f35; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
   .logo { font-weight: 700; font-size: 18px; color: var(--gold); letter-spacing: 1px; white-space: nowrap; }
   .nav-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  /* JS-toggled dropdown instead of <details>/<summary> — Telegram's in-app
+     browser (where most visitors open this link from) doesn't reliably fire
+     the native details-open toggle, so the menu never expanded there. */
   .lang-selector { position: relative; }
-  .lang-selector summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid #2a2f45; border-radius: 6px; font-size: 13px; color: var(--text); user-select: none; }
-  .lang-selector summary::-webkit-details-marker { display: none; }
-  .lang-selector summary::after { content: '▾'; color: var(--gold); font-size: 10px; margin-left: 2px; }
-  .lang-selector[open] summary::after { content: '▴'; }
-  .lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: var(--card); border: 1px solid #1a1f35; border-radius: 8px; padding: 6px; min-width: 170px; max-height: 320px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.5); z-index: 200; }
+  .lang-btn { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid #2a2f45; border-radius: 6px; font-size: 13px; color: var(--text); background: none; font-family: inherit; user-select: none; }
+  .lang-arrow { color: var(--gold); font-size: 10px; margin-left: 2px; display: inline-block; transition: transform 0.15s; }
+  .lang-selector.open .lang-arrow { transform: rotate(180deg); }
+  .lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: var(--card); border: 1px solid #1a1f35; border-radius: 8px; padding: 6px; min-width: 170px; max-height: 320px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.5); z-index: 200; display: none; }
+  .lang-selector.open .lang-dropdown { display: block; }
   .lang-dropdown a { display: block; padding: 8px 10px; border-radius: 6px; color: var(--text); text-decoration: none; font-size: 14px; white-space: nowrap; }
   .lang-dropdown a:hover { background: rgba(212,175,55,0.1); }
   .lang-dropdown a.lang-current { color: var(--gold); font-weight: 700; }
@@ -318,8 +321,8 @@
 <nav>
   <div class="logo">GameAccountValue</div>
   <div class="nav-right">
-    <details class="lang-selector">
-      <summary>🌐 IT</summary>
+    <div class="lang-selector">
+      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false">🌐 IT <span class="lang-arrow">▾</span></button>
       <div class="lang-dropdown">
         <a href="https://iamalex-afk.github.io/game-account-value/">🇺🇸 English</a>
         <a href="https://iamalex-afk.github.io/game-account-value/ru/">🇷🇺 Русский</a>
@@ -337,7 +340,7 @@
         <a href="https://iamalex-afk.github.io/game-account-value/ko/">🇰🇷 한국어</a>
         <a href="https://iamalex-afk.github.io/game-account-value/th/">🇹🇭 ภาษาไทย</a>
       </div>
-    </details>
+    </div>
     <a href="https://t.me/GameAccountValue_Bot" class="nav-cta">🤖 Apri il bot</a>
   </div>
 </nav>
@@ -545,5 +548,28 @@
   <p style="margin-top: 16px; font-size: 12px;">© 2026 GameAccountValue</p>
 </footer>
 
+<script>
+document.querySelectorAll('.lang-selector').forEach(function (sel) {
+  var btn = sel.querySelector('.lang-btn');
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var isOpen = sel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+});
+document.addEventListener('click', function () {
+  document.querySelectorAll('.lang-selector.open').forEach(function (sel) {
+    sel.classList.remove('open');
+    sel.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.lang-selector.open').forEach(function (sel) {
+      sel.classList.remove('open');
+    });
+  }
+});
+</script>
 </body>
 </html>
