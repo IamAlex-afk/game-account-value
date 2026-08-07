@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0C14">
+<meta name="msapplication-TileColor" content="#D4AF37">
 <title>GameAccountValue — Avaliação de contas de jogos com IA | Grátis</title>
 <meta name="description" content="Descubra o valor estimado da sua conta de Roblox, Genshin Impact, Fortnite, Clash of Clans e mais 5 jogos — um serviço de entretenimento. Certificado em PDF. 15 idiomas. Bot do Telegram.">
 <meta name="keywords" content="quanto vale minha conta roblox, valor conta fortnite, valor conta genshin impact, avaliacao de conta de jogo, avaliacao ia, bot telegram">
@@ -40,6 +42,7 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +59,7 @@
       "description": "Um bot do Telegram que analisa capturas de tela de contas de jogos usando IA e gera estimativas independentes de valor de mercado para Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite e Minecraft em 15 idiomas.",
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "Gaming Tool",
-      "operatingSystem": "Telegram",
+      "operatingSystem": "Any",
       "url": "https://t.me/GameAccountValue_Bot",
       "sameAs": [
         "https://iamalex-afk.github.io/game-account-value/"
@@ -65,15 +68,6 @@
         "en", "ru", "es", "pt", "tr", "ar", "id", "fr", "de",
         "it", "hi", "vi", "th", "ko", "ja"
       ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "XTR",
-        "lowPrice": "45",
-        "highPrice": "150",
-        "availability": "https://schema.org/InStock",
-        "offerCount": "3",
-        "description": "O preço da auditoria completa varia por região (preços ajustados por poder de compra); também há uma estimativa gratuita com 1 captura disponível uma vez por dia."
-      },
       "featureList": [
         "Análise multimodal de capturas com IA",
         "Estimativa gratuita com 1 captura por dia",
@@ -170,26 +164,50 @@
         },
         {
           "@type": "Question",
-          "name": "O GameAccountValue é afiliado à Roblox ou Supercell?",
+          "name": "Vocês precisam da senha da minha conta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Não. GameAccountValue é uma ferramenta independente de avaliação com IA. Não é afiliado à Roblox Corporation, Supercell, Garena ou qualquer desenvolvedor de jogos. As estimativas são previsões de IA apenas para fins informativos."
+            "text": "Nunca. Você só envia capturas de tela — as mesmas imagens que compartilharia em qualquer anúncio no Discord. Sem login, sem senhas, sem risco."
           }
         },
         {
           "@type": "Question",
-          "name": "Qual modelo de IA é usado para analisar a conta?",
+          "name": "Quão precisa é a avaliação?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O GameAccountValue usa o Google Gemini 2.5 Flash, um modelo de IA multimodal capaz de analisar imagens e retornar dados estruturados sobre o conteúdo da conta."
+            "text": "A IA identifica itens de alto valor (limitados, skins raras, heróis no máximo) usando uma fórmula de preço determinística para cada jogo. O resultado é uma faixa, não um número exato — trate como uma estimativa de entretenimento, não uma cotação de mercado."
           }
         },
         {
           "@type": "Question",
-          "name": "Meus dados estão seguros?",
+          "name": "Qual a diferença entre a estimativa grátis e a paga?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As capturas são processadas apenas na memória e nunca salvas em disco. Seu ID do Telegram é armazenado apenas como hash SHA-256. Você pode apagar todos os seus dados instantaneamente com o comando /delete."
+            "text": "Grátis (1x por dia): envie 1 captura, receba uma faixa rápida e aproximada — suficiente para ver que o bot realmente funciona. Paga: envie 2-3 capturas (a IA vê todo o seu inventário, não só uma tela), receba uma faixa de preço precisa mais um certificado em PDF com código QR de verificação. O nível gratuito é intencionalmente mais aproximado — pode não identificar itens raros que só aparecem na 2ª ou 3ª captura."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como eu pago?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com Telegram Stars (XTR) — o sistema de pagamento oficial do Telegram. Seguro, instantâneo, integrado ao app. O preço se ajusta pela sua região."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso pedir reembolso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Se a IA não conseguir gerar uma avaliação por capturas pouco claras ou erro técnico, as Stars são reembolsadas automaticamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que exatamente é esse serviço?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GameAccountValue é um serviço de entretenimento e informação que estima o valor aproximado investido em uma coleção de jogo. NÃO somos um marketplace. NÃO vendemos, compramos nem facilitamos a transferência de contas. Negociar contas pode violar as regras de cada jogo — siga sempre os Termos de Serviço do jogo que você usa."
           }
         }
       ]
@@ -237,7 +255,7 @@
     --bg: #0A0C14;
     --card: #0F1220;
     --text: #E0E0E0;
-    --muted: #888;
+    --muted: #AAAAAA;
     --accent: #00C8E0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -317,6 +335,9 @@
   footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
   footer a:hover { color: var(--gold); }
   .footer-logo { font-size: 20px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -373,15 +394,15 @@
   <h2 class="section-title">9 jogos suportados</h2>
   <p class="section-sub">Apenas estimativa de entretenimento — não é uma cotação real de mercado</p>
   <div class="games-grid">
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon">🟦</div><div class="game-name">Roblox</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon">🐻</div><div class="game-name">Brawl Stars</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon">⚔️</div><div class="game-name">Clash of Clans</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon">🃏</div><div class="game-name">Clash Royale</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon">🔫</div><div class="game-name">Free Fire</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon">⚗️</div><div class="game-name">Genshin Impact</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon">🏆</div><div class="game-name">Mobile Legends</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon">🌀</div><div class="game-name">Fortnite</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon">⛏️</div><div class="game-name">Minecraft</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon" aria-hidden="true">🟦</div><div class="game-name">Roblox</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon" aria-hidden="true">🐻</div><div class="game-name">Brawl Stars</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon" aria-hidden="true">⚔️</div><div class="game-name">Clash of Clans</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon" aria-hidden="true">🃏</div><div class="game-name">Clash Royale</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon" aria-hidden="true">🔫</div><div class="game-name">Free Fire</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon" aria-hidden="true">⚗️</div><div class="game-name">Genshin Impact</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon" aria-hidden="true">🏆</div><div class="game-name">Mobile Legends</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
   </div>
 </section>
 

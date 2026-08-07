@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0C14">
+<meta name="msapplication-TileColor" content="#D4AF37">
 <title>GameAccountValue — Yapay Zeka ile Oyun Hesabı Değerlemesi | Ücretsiz</title>
 <meta name="description" content="Roblox, Genshin Impact, Fortnite, Clash of Clans ve 5 oyun daha için hesabının tahmini değerini öğren — eğlence amaçlı bir hizmet. PDF sertifika. 15 dil. Telegram botu.">
 <meta name="keywords" content="roblox hesabim ne kadar eder, fortnite hesap degeri, genshin impact hesap degeri, oyun hesabi degerleme, yapay zeka tahmini, telegram botu">
@@ -40,6 +42,7 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +59,7 @@
       "description": "Yapay zeka kullanarak oyun hesabı ekran görüntülerini analiz eden ve Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite ve Minecraft için 15 dilde bağımsız piyasa değeri tahminleri üreten bir Telegram botu.",
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "Gaming Tool",
-      "operatingSystem": "Telegram",
+      "operatingSystem": "Any",
       "url": "https://t.me/GameAccountValue_Bot",
       "sameAs": [
         "https://iamalex-afk.github.io/game-account-value/"
@@ -65,15 +68,6 @@
         "en", "ru", "es", "pt", "tr", "ar", "id", "fr", "de",
         "it", "hi", "vi", "th", "ko", "ja"
       ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "XTR",
-        "lowPrice": "45",
-        "highPrice": "150",
-        "availability": "https://schema.org/InStock",
-        "offerCount": "3",
-        "description": "Tam denetim fiyatı bölgeye göre değişir (satın alma gücüne göre ayarlanmış fiyatlandırma); günde bir kez ücretsiz 1 ekran görüntülü kaba tahmin de mevcuttur."
-      },
       "featureList": [
         "Yapay zeka ile çok modlu ekran görüntüsü analizi",
         "Günde 1 ücretsiz ekran görüntüsü tahmini",
@@ -170,26 +164,50 @@
         },
         {
           "@type": "Question",
-          "name": "GameAccountValue, Roblox veya Supercell ile bağlantılı mı?",
+          "name": "Hesabımın şifresine ihtiyacınız var mı?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hayır. GameAccountValue, bağımsız üçüncü taraf bir yapay zeka değerleme aracıdır. Roblox Corporation, Supercell, Garena veya herhangi bir oyun geliştiricisiyle bağlantılı değildir. Değerlemeler yalnızca bilgilendirme amaçlı yapay zeka tahminleridir."
+            "text": "Asla. Sadece ekran görüntüsü gönderiyorsun — herhangi bir Discord ilanında paylaşacağın aynı görüntüler. Giriş yok, şifre yok, risk yok."
           }
         },
         {
           "@type": "Question",
-          "name": "Hesap analizi için hangi yapay zeka modeli kullanılıyor?",
+          "name": "Değerleme ne kadar doğru?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "GameAccountValue, görüntüleri analiz edip hesap içeriği hakkında yapılandırılmış veri döndürebilen çok modlu bir yapay zeka modeli olan Google Gemini 2.5 Flash'ı kullanır."
+            "text": "Yapay zeka, her oyun için deterministik bir fiyatlandırma formülü kullanarak yüksek değerli eşyaları (limited eşyalar, nadir skinler, maksimum kahramanlar) tespit eder. Sonuç tek bir sayı değil bir aralıktır — bunu bir piyasa teklifi değil, eğlence amaçlı bir tahmin olarak değerlendir."
           }
         },
         {
           "@type": "Question",
-          "name": "Verilerim güvende mi?",
+          "name": "Ücretsiz ve ücretli tahmin arasındaki fark nedir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ekran görüntüleri yalnızca bellekte işlenir ve asla diske kaydedilmez. Telegram kullanıcı kimliğin yalnızca SHA-256 hash olarak saklanır. /delete komutuyla tüm verilerini anında silebilirsin."
+            "text": "Ücretsiz (günde 1x): 1 ekran görüntüsü gönder, hızlı ve kaba bir aralık al — botun gerçekten çalıştığını görmek için yeterli. Ücretli: 2-3 ekran görüntüsü gönder (yapay zeka tüm envanterini görür, sadece tek bir ekranı değil), doğru bir fiyat aralığı artı doğrulama QR kodlu PDF sertifika al. Ücretsiz seviye kasıtlı olarak daha kabadır — yalnızca 2. veya 3. ekran görüntüsünde görünen nadir eşyaları kaçırabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Nasıl ödeme yapıyorum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Telegram'ın resmi ödeme sistemi olan Telegram Stars (XTR) ile. Güvenli, anında, uygulamaya entegre. Fiyat bölgene göre ayarlanır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Para iadesi alabilir miyim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet. Yapay zeka net olmayan ekran görüntüleri veya teknik bir hata nedeniyle bir değerleme üretemezse, Stars otomatik olarak iade edilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bu tam olarak ne tür bir hizmet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GameAccountValue, bir oyun koleksiyonuna yatırılan yaklaşık değeri tahmin eden bir eğlence ve bilgi hizmetidir. Bir pazar yeri DEĞİLİZ. Hesap devirlerini satmıyor, satın almıyor ya da KOLAYLAŞTIRMIYORUZ. Hesap ticareti her oyunun kurallarını ihlal edebilir — her zaman oynadığın oyunun Hizmet Şartlarını takip et."
           }
         }
       ]
@@ -237,7 +255,7 @@
     --bg: #0A0C14;
     --card: #0F1220;
     --text: #E0E0E0;
-    --muted: #888;
+    --muted: #AAAAAA;
     --accent: #00C8E0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -317,6 +335,9 @@
   footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
   footer a:hover { color: var(--gold); }
   .footer-logo { font-size: 20px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -373,15 +394,15 @@
   <h2 class="section-title">9 desteklenen oyun</h2>
   <p class="section-sub">Yalnızca eğlence amaçlı tahmin — canlı piyasa teklifi değildir</p>
   <div class="games-grid">
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon">🟦</div><div class="game-name">Roblox</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon">🐻</div><div class="game-name">Brawl Stars</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon">⚔️</div><div class="game-name">Clash of Clans</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon">🃏</div><div class="game-name">Clash Royale</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon">🔫</div><div class="game-name">Free Fire</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon">⚗️</div><div class="game-name">Genshin Impact</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon">🏆</div><div class="game-name">Mobile Legends</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon">🌀</div><div class="game-name">Fortnite</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon">⛏️</div><div class="game-name">Minecraft</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon" aria-hidden="true">🟦</div><div class="game-name">Roblox</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon" aria-hidden="true">🐻</div><div class="game-name">Brawl Stars</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon" aria-hidden="true">⚔️</div><div class="game-name">Clash of Clans</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon" aria-hidden="true">🃏</div><div class="game-name">Clash Royale</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon" aria-hidden="true">🔫</div><div class="game-name">Free Fire</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon" aria-hidden="true">⚗️</div><div class="game-name">Genshin Impact</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon" aria-hidden="true">🏆</div><div class="game-name">Mobile Legends</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
   </div>
 </section>
 

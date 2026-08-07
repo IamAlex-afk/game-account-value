@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0C14">
+<meta name="msapplication-TileColor" content="#D4AF37">
 <title>GameAccountValue — تقييم حسابات الألعاب بالذكاء الاصطناعي | مجاني</title>
 <meta name="description" content="اكتشف القيمة التقديرية لحساب Roblox أو Genshin Impact أو Fortnite أو Clash of Clans و5 ألعاب أخرى — خدمة ترفيهية. شهادة PDF. 15 لغة. بوت تيليجرام.">
 <meta name="keywords" content="كم يساوي حساب روبلوکس, قيمة حساب فورتنايت, قيمة حساب جينشين امباكت, تقييم حساب لعبة, تقدير بالذكاء الاصطناعي, بوت تيليجرام">
@@ -40,6 +42,7 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +59,7 @@
       "description": "بوت تيليجرام يحلل لقطات شاشة حسابات الألعاب باستخدام الذكاء الاصطناعي وينتج تقديرات مستقلة للقيمة السوقية لألعاب Roblox وBrawl Stars وClash of Clans وClash Royale وFree Fire وGenshin Impact وMobile Legends وFortnite وMinecraft بـ15 لغة.",
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "Gaming Tool",
-      "operatingSystem": "Telegram",
+      "operatingSystem": "Any",
       "url": "https://t.me/GameAccountValue_Bot",
       "sameAs": [
         "https://iamalex-afk.github.io/game-account-value/"
@@ -65,15 +68,6 @@
         "en", "ru", "es", "pt", "tr", "ar", "id", "fr", "de",
         "it", "hi", "vi", "th", "ko", "ja"
       ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "XTR",
-        "lowPrice": "45",
-        "highPrice": "150",
-        "availability": "https://schema.org/InStock",
-        "offerCount": "3",
-        "description": "يختلف سعر التدقيق الكامل حسب المنطقة (تسعير معدّل حسب القوة الشرائية)؛ يتوفر أيضًا تقدير مجاني بلقطة شاشة واحدة مرة واحدة يوميًا."
-      },
       "featureList": [
         "تحليل متعدد الوسائط للقطات الشاشة بالذكاء الاصطناعي",
         "تقدير مجاني بلقطة شاشة واحدة يوميًا",
@@ -170,26 +164,50 @@
         },
         {
           "@type": "Question",
-          "name": "هل GameAccountValue تابعة لـRoblox أو Supercell؟",
+          "name": "هل تحتاجون كلمة مرور حسابي؟",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "لا. GameAccountValue أداة تقييم مستقلة تابعة لطرف ثالث تعمل بالذكاء الاصطناعي. غير تابعة لـRoblox Corporation أو Supercell أو Garena أو أي مطور ألعاب. التقديرات هي توقعات ذكاء اصطناعي لأغراض إعلامية فقط."
+            "text": "أبدًا. أنت ترسل فقط لقطات شاشة — نفس الصور التي قد تشاركها في أي إعلان على Discord. بدون تسجيل دخول، بدون بيانات اعتماد، بدون مخاطر."
           }
         },
         {
           "@type": "Question",
-          "name": "ما نموذج الذكاء الاصطناعي المستخدم لتحليل الحساب؟",
+          "name": "ما مدى دقة التقييم؟",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "تستخدم GameAccountValue نموذج Google Gemini 2.5 Flash، وهو نموذج ذكاء اصطناعي متعدد الوسائط قادر على تحليل الصور وإعادة بيانات منظمة حول محتوى الحساب."
+            "text": "يحدد الذكاء الاصطناعي العناصر عالية القيمة (المحدودة، الأزياء النادرة، الأبطال القصوى) باستخدام صيغة تسعير محددة لكل لعبة. النتيجة نطاق، وليست رقمًا واحدًا — اعتبرها تقديرًا ترفيهيًا، وليس عرض سعر سوقي."
           }
         },
         {
           "@type": "Question",
-          "name": "هل بياناتي آمنة؟",
+          "name": "ما الفرق بين التقدير المجاني والمدفوع؟",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "تتم معالجة لقطات الشاشة في الذاكرة فقط ولا يتم تخزينها أبدًا على القرص. يُخزَّن معرف تيليجرام الخاص بك فقط كتجزئة SHA-256. يمكنك حذف جميع بياناتك فورًا باستخدام أمر /delete."
+            "text": "مجاني (مرة واحدة يوميًا): أرسل لقطة شاشة واحدة، احصل على نطاق سريع وتقريبي — كافٍ لرؤية أن البوت يعمل فعلًا. مدفوع: أرسل 2-3 لقطات شاشة (يرى الذكاء الاصطناعي مخزونك بالكامل، وليس شاشة واحدة فقط)، احصل على نطاق سعر دقيق بالإضافة إلى شهادة PDF برمز QR للتحقق. المستوى المجاني أكثر تقريبية عن قصد — قد يفوّت عناصر نادرة تظهر فقط في لقطة الشاشة الثانية أو الثالثة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف أدفع؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "عبر Telegram Stars (XTR) — نظام الدفع الرسمي لتيليجرام. آمن، فوري، مدمج في التطبيق. يتكيف السعر حسب منطقتك."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكنني استرداد أموالي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. إذا لم يستطع الذكاء الاصطناعي إنتاج تقييم بسبب لقطات شاشة غير واضحة أو خطأ تقني، تُسترد Stars تلقائيًا."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هي هذه الخدمة بالضبط؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GameAccountValue خدمة ترفيهية ومعلوماتية تُقدّر القيمة التقريبية المستثمرة في مجموعة لعبة. نحن لسنا سوقًا. لا نبيع أو نشتري أو نُسهّل نقل الحسابات. قد تنتهك تجارة الحسابات قواعد كل لعبة — اتبع دائمًا شروط الخدمة الخاصة باللعبة التي تلعبها."
           }
         }
       ]
@@ -237,7 +255,7 @@
     --bg: #0A0C14;
     --card: #0F1220;
     --text: #E0E0E0;
-    --muted: #888;
+    --muted: #AAAAAA;
     --accent: #00C8E0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -317,6 +335,9 @@
   footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
   footer a:hover { color: var(--gold); }
   .footer-logo { font-size: 20px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -373,15 +394,15 @@
   <h2 class="section-title">9 ألعاب مدعومة</h2>
   <p class="section-sub">تقدير ترفيهي فقط — وليس عرض سعر سوقي حقيقي</p>
   <div class="games-grid">
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon">🟦</div><div class="game-name">Roblox</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon">🐻</div><div class="game-name">Brawl Stars</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon">⚔️</div><div class="game-name">Clash of Clans</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon">🃏</div><div class="game-name">Clash Royale</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon">🔫</div><div class="game-name">Free Fire</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon">⚗️</div><div class="game-name">Genshin Impact</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon">🏆</div><div class="game-name">Mobile Legends</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon">🌀</div><div class="game-name">Fortnite</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon">⛏️</div><div class="game-name">Minecraft</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon" aria-hidden="true">🟦</div><div class="game-name">Roblox</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon" aria-hidden="true">🐻</div><div class="game-name">Brawl Stars</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon" aria-hidden="true">⚔️</div><div class="game-name">Clash of Clans</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon" aria-hidden="true">🃏</div><div class="game-name">Clash Royale</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon" aria-hidden="true">🔫</div><div class="game-name">Free Fire</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon" aria-hidden="true">⚗️</div><div class="game-name">Genshin Impact</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon" aria-hidden="true">🏆</div><div class="game-name">Mobile Legends</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
   </div>
 </section>
 
