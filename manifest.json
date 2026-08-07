@@ -1,0 +1,13 @@
+{
+  "name": "GameAccountValue",
+  "short_name": "GAV",
+  "start_url": "/game-account-value/",
+  "scope": "/game-account-value/",
+  "display": "standalone",
+  "background_color": "#0A0C14",
+  "theme_color": "#0A0C14",
+  "icons": [
+    { "src": "favicon.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

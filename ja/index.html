@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0C14">
+<meta name="msapplication-TileColor" content="#D4AF37">
 <title>GameAccountValue — AIによるゲームアカウント査定 | 無料</title>
 <meta name="description" content="Roblox、Genshin Impact、Fortnite、Clash of Clansなど9タイトルのアカウントの推定価値がわかる、エンタメ目的の査定サービス。PDF証明書発行。15言語対応。Telegramボット。">
 <meta name="keywords" content="roblox アカウント 価値, fortnite アカウント 価値, genshin impact アカウント 価値, ゲームアカウント 査定, ai 査定, telegram ボット">
@@ -40,6 +42,7 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +59,7 @@
       "description": "AIを使ってゲームアカウントのスクリーンショットを解析し、Roblox、Brawl Stars、Clash of Clans、Clash Royale、Free Fire、Genshin Impact、Mobile Legends、Fortnite、Minecraftについて15言語で独立した市場価値の推定を行うTelegramボット。",
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "Gaming Tool",
-      "operatingSystem": "Telegram",
+      "operatingSystem": "Any",
       "url": "https://t.me/GameAccountValue_Bot",
       "sameAs": [
         "https://iamalex-afk.github.io/game-account-value/"
@@ -65,15 +68,6 @@
         "en", "ru", "es", "pt", "tr", "ar", "id", "fr", "de",
         "it", "hi", "vi", "th", "ko", "ja"
       ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "XTR",
-        "lowPrice": "45",
-        "highPrice": "150",
-        "availability": "https://schema.org/InStock",
-        "offerCount": "3",
-        "description": "有料の本査定の価格は地域によって異なります(購買力に応じた価格設定)。1日1回、スクリーンショット1枚での無料の簡易査定も利用可能。"
-      },
       "featureList": [
         "AIによるマルチモーダルスクリーンショット解析",
         "1日1回、スクリーンショット1枚の無料査定",
@@ -170,26 +164,50 @@
         },
         {
           "@type": "Question",
-          "name": "GameAccountValueはRobloxやSupercellと提携していますか?",
+          "name": "アカウントのパスワードは必要ですか?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "いいえ。GameAccountValueは独立したサードパーティのAI査定ツールです。Roblox Corporation、Supercell、Garena、その他いかなるゲーム開発会社とも提携していません。査定結果は情報提供のみを目的としたAIの推定です。"
+            "text": "一切必要ありません。送信するのはスクリーンショットのみです — Discordの取引投稿で共有するのと同じ画像です。ログイン不要、認証情報不要、リスクもありません。"
           }
         },
         {
           "@type": "Question",
-          "name": "アカウント解析にはどのAIモデルが使われていますか?",
+          "name": "査定の精度はどのくらいですか?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "GameAccountValueはGoogle Gemini 2.5 Flashを使用しています。これは画像を解析し、アカウントの内容に関する構造化データを返すことができるマルチモーダルAIモデルです。"
+            "text": "AIはゲームごとの決定的な価格算出方式を使い、高価値アイテム(限定品、レアスキン、最大レベルのキャラクター)を特定します。結果は単一の数値ではなく価格帯です — あくまでエンタメ目的の目安として捉えてください。市場価格ではありません。"
           }
         },
         {
           "@type": "Question",
-          "name": "私のデータは安全ですか?",
+          "name": "無料査定と有料査定の違いは何ですか?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "スクリーンショットはメモリ上でのみ処理され、ディスクに保存されることはありません。あなたのTelegramユーザーIDはSHA-256ハッシュとしてのみ保存されます。/deleteコマンドですべてのデータを即座に削除できます。"
+            "text": "無料(1日1回): スクリーンショット1枚を送信し、素早くおおまかな価格帯を確認できます — ボットが実際に機能することを試すには十分です。有料: スクリーンショット2〜3枚を送信すると(AIが1画面だけでなく持ち物全体を確認)、正確な価格帯に加え、検証用QRコード付きPDF証明書を受け取れます。無料版は意図的におおまかな結果になっており、2枚目や3枚目にしか映っていないレアアイテムを見逃す可能性があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "支払い方法は?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Telegramの公式決済システムであるTelegram Stars(XTR)を使用します。安全、即時、アプリに組み込まれています。価格は地域に応じて調整されます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "返金は可能ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。スクリーンショットが不鮮明だったり、技術的なエラーによりAIが査定結果を出せなかった場合、Starsは自動的に返金されます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "このサービスは正確には何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GameAccountValueは、ゲームコレクションに投じられたおおよその価値を推定する、エンタメ・情報提供サービスです。マーケットプレイスではありません。アカウントの売買や譲渡の仲介は一切行いません。アカウント取引は各ゲームの規約に違反する可能性があります — 必ずプレイしているゲームの利用規約に従ってください。"
           }
         }
       ]
@@ -237,7 +255,7 @@
     --bg: #0A0C14;
     --card: #0F1220;
     --text: #E0E0E0;
-    --muted: #888;
+    --muted: #AAAAAA;
     --accent: #00C8E0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -317,6 +335,9 @@
   footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
   footer a:hover { color: var(--gold); }
   .footer-logo { font-size: 20px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -373,15 +394,15 @@
   <h2 class="section-title">対応9タイトル</h2>
   <p class="section-sub">あくまでエンタメ目的の査定です — 実際の市場取引価格ではありません</p>
   <div class="games-grid">
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon">🟦</div><div class="game-name">Roblox</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon">🐻</div><div class="game-name">Brawl Stars</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon">⚔️</div><div class="game-name">Clash of Clans</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon">🃏</div><div class="game-name">Clash Royale</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon">🔫</div><div class="game-name">Free Fire</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon">⚗️</div><div class="game-name">Genshin Impact</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon">🏆</div><div class="game-name">Mobile Legends</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon">🌀</div><div class="game-name">Fortnite</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon">⛏️</div><div class="game-name">Minecraft</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon" aria-hidden="true">🟦</div><div class="game-name">Roblox</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon" aria-hidden="true">🐻</div><div class="game-name">Brawl Stars</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon" aria-hidden="true">⚔️</div><div class="game-name">Clash of Clans</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon" aria-hidden="true">🃏</div><div class="game-name">Clash Royale</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon" aria-hidden="true">🔫</div><div class="game-name">Free Fire</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon" aria-hidden="true">⚗️</div><div class="game-name">Genshin Impact</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon" aria-hidden="true">🏆</div><div class="game-name">Mobile Legends</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
   </div>
 </section>
 

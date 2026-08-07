@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0C14">
+<meta name="msapplication-TileColor" content="#D4AF37">
 <title>GameAccountValue — AI 게임 계정 가치 평가 | 무료</title>
 <meta name="description" content="Roblox, Genshin Impact, Fortnite, Clash of Clans 등 9종 게임 계정의 추정 가치를 확인하세요 — 엔터테인먼트 목적의 서비스입니다. PDF 인증서 발급. 15개 언어 지원. Telegram 봇.">
 <meta name="keywords" content="로블록스 계정 가치, 포트나이트 계정 가치, 원신 계정 가치, 게임 계정 가치평가, ai 가치평가, 텔레그램 봇">
@@ -40,6 +42,7 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +59,7 @@
       "description": "AI를 사용해 게임 계정 스크린샷을 분석하고 Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite, Minecraft에 대해 15개 언어로 독립적인 시장 가치 추정을 제공하는 Telegram 봇입니다.",
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "Gaming Tool",
-      "operatingSystem": "Telegram",
+      "operatingSystem": "Any",
       "url": "https://t.me/GameAccountValue_Bot",
       "sameAs": [
         "https://iamalex-afk.github.io/game-account-value/"
@@ -65,15 +68,6 @@
         "en", "ru", "es", "pt", "tr", "ar", "id", "fr", "de",
         "it", "hi", "vi", "th", "ko", "ja"
       ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "XTR",
-        "lowPrice": "45",
-        "highPrice": "150",
-        "availability": "https://schema.org/InStock",
-        "offerCount": "3",
-        "description": "유료 정밀 감정 가격은 지역에 따라 다릅니다(구매력 기준 가격 조정). 하루 한 번, 스크린샷 1장으로 받는 무료 간이 감정도 이용 가능합니다."
-      },
       "featureList": [
         "AI 기반 멀티모달 스크린샷 분석",
         "하루 1회 스크린샷 1장 무료 감정",
@@ -170,26 +164,50 @@
         },
         {
           "@type": "Question",
-          "name": "GameAccountValue는 Roblox나 Supercell과 제휴되어 있나요?",
+          "name": "계정 비밀번호가 필요한가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "아니요. GameAccountValue는 독립적인 제3자 AI 가치평가 도구입니다. Roblox Corporation, Supercell, Garena 또는 어떤 게임 개발사와도 제휴되어 있지 않습니다. 감정 결과는 정보 제공 목적의 AI 추정치일 뿐입니다."
+            "text": "전혀 필요 없습니다. 스크린샷만 보내면 됩니다 — Discord 거래 게시물에 공유하는 것과 같은 이미지입니다. 로그인 없음, 인증 정보 불필요, 위험 없음."
           }
         },
         {
           "@type": "Question",
-          "name": "계정 분석에 어떤 AI 모델이 사용되나요?",
+          "name": "감정 결과는 얼마나 정확한가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "GameAccountValue는 이미지를 분석하고 계정 내용에 대한 구조화된 데이터를 반환할 수 있는 멀티모달 AI 모델인 Google Gemini 2.5 Flash를 사용합니다."
+            "text": "AI는 게임별 결정론적 가격 산정 공식을 사용해 고가치 아이템(한정판, 희귀 스킨, 최고 레벨 영웅)을 식별합니다. 결과는 단일 숫자가 아닌 가격대로 제공됩니다 — 시장 거래가가 아닌 엔터테인먼트용 참고 자료로 여겨 주세요."
           }
         },
         {
           "@type": "Question",
-          "name": "제 데이터는 안전한가요?",
+          "name": "무료 감정과 유료 감정의 차이는 무엇인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "스크린샷은 메모리에서만 처리되며 디스크에 저장되지 않습니다. Telegram 사용자 ID는 SHA-256 해시로만 저장됩니다. /delete 명령어로 모든 데이터를 즉시 삭제할 수 있습니다."
+            "text": "무료(하루 1회): 스크린샷 1장을 보내면 빠르고 대략적인 가격대를 받습니다 — 봇이 실제로 작동하는지 확인하기에 충분합니다. 유료: 스크린샷 2~3장을 보내면(AI가 한 화면이 아닌 인벤토리 전체를 확인) 정확한 가격대와 함께 검증용 QR코드가 포함된 PDF 인증서를 받습니다. 무료 등급은 의도적으로 더 대략적이며, 두 번째나 세 번째 스크린샷에서만 보이는 희귀 아이템을 놓칠 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "결제는 어떻게 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Telegram의 공식 결제 시스템인 Telegram Stars(XTR)로 결제합니다. 안전하고 즉시 처리되며 앱에 내장되어 있습니다. 가격은 지역에 따라 조정됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "환불이 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 스크린샷이 불명확하거나 기술적 오류로 AI가 감정 결과를 생성하지 못하면 Stars가 자동으로 환불됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "이 서비스는 정확히 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GameAccountValue는 게임 컬렉션에 투입된 대략적인 가치를 추정하는 엔터테인먼트 및 정보 제공 서비스입니다. 마켓플레이스가 아닙니다. 게임 계정의 매매나 이전을 중개하지 않습니다. 계정 거래는 각 게임의 이용약관을 위반할 수 있으니, 플레이하는 게임의 이용약관을 항상 준수하세요."
           }
         }
       ]
@@ -237,7 +255,7 @@
     --bg: #0A0C14;
     --card: #0F1220;
     --text: #E0E0E0;
-    --muted: #888;
+    --muted: #AAAAAA;
     --accent: #00C8E0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -317,6 +335,9 @@
   footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
   footer a:hover { color: var(--gold); }
   .footer-logo { font-size: 20px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -373,15 +394,15 @@
   <h2 class="section-title">지원하는 9종 게임</h2>
   <p class="section-sub">엔터테인먼트 목적의 감정일 뿐, 실제 시장 거래가가 아닙니다</p>
   <div class="games-grid">
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon">🟦</div><div class="game-name">Roblox</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon">🐻</div><div class="game-name">Brawl Stars</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon">⚔️</div><div class="game-name">Clash of Clans</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon">🃏</div><div class="game-name">Clash Royale</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon">🔫</div><div class="game-name">Free Fire</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon">⚗️</div><div class="game-name">Genshin Impact</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon">🏆</div><div class="game-name">Mobile Legends</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon">🌀</div><div class="game-name">Fortnite</div></a>
-    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon">⛏️</div><div class="game-name">Minecraft</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_roblox"><div class="game-icon" aria-hidden="true">🟦</div><div class="game-name">Roblox</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars"><div class="game-icon" aria-hidden="true">🐻</div><div class="game-name">Brawl Stars</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans"><div class="game-icon" aria-hidden="true">⚔️</div><div class="game-name">Clash of Clans</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_clash_royale"><div class="game-icon" aria-hidden="true">🃏</div><div class="game-name">Clash Royale</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_free_fire"><div class="game-icon" aria-hidden="true">🔫</div><div class="game-name">Free Fire</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_genshin"><div class="game-icon" aria-hidden="true">⚗️</div><div class="game-name">Genshin Impact</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends"><div class="game-icon" aria-hidden="true">🏆</div><div class="game-name">Mobile Legends</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_fortnite"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
+    <a class="game-card" href="https://t.me/GameAccountValue_Bot?start=game_minecraft"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
   </div>
 </section>
 
