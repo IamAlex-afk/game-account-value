@@ -289,6 +289,9 @@
   .game-name { font-weight: 600; font-size: 14px; }
 
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+  .cert-sample { max-width: 720px; margin: 40px auto 0; text-align: center; }
+  .cert-sample-label { color: var(--muted); font-size: 12px; margin-bottom: 12px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .cert-sample img { width: 100%; height: auto; border-radius: 12px; border: 1px solid #1a1f35; box-shadow: 0 12px 32px rgba(0,0,0,0.5); }
   .step { background: var(--card); border: 1px solid #1a1f35; border-radius: 12px; padding: 28px 20px; }
   .step-num { font-size: 36px; font-weight: 800; color: var(--gold); opacity: 0.4; margin-bottom: 12px; }
   .step h3 { font-size: 16px; margin-bottom: 8px; }
@@ -402,6 +405,10 @@
       <h3>PDF 인증서 수령</h3>
       <p>추정 가격대와 검증용 QR코드가 포함된 PDF — 그냥 궁금증 해소용입니다.</p>
     </div>
+  </div>
+  <div class="cert-sample">
+    <p class="cert-sample-label">Example certificate &middot; sample data</p>
+    <img src="../certificate-sample.jpg" alt="Example GameAccountValue PDF certificate &mdash; Roblox, GOLD tier, $861 estimate" loading="lazy">
   </div>
 </section>
 
