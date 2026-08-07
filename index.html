@@ -248,11 +248,10 @@
   /* JS-toggled dropdown instead of <details>/<summary> — Telegram's in-app
      browser (where most visitors open this link from) doesn't reliably fire
      the native details-open toggle, so the menu never expanded there. */
-  .lang-selector { position: relative; }
   .lang-btn { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid #2a2f45; border-radius: 6px; font-size: 13px; color: var(--text); background: none; font-family: inherit; user-select: none; }
   .lang-arrow { color: var(--gold); font-size: 10px; margin-left: 2px; display: inline-block; transition: transform 0.15s; }
   .lang-selector.open .lang-arrow { transform: rotate(180deg); }
-  .lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: var(--card); border: 1px solid #1a1f35; border-radius: 8px; padding: 6px; min-width: 170px; max-height: 320px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.5); z-index: 200; display: none; }
+  .lang-dropdown { position: absolute; top: calc(100% + 6px); right: 24px; max-width: calc(100vw - 32px); background: var(--card); border: 1px solid #1a1f35; border-radius: 8px; padding: 6px; min-width: 170px; max-height: 320px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.5); z-index: 200; display: none; }
   .lang-selector.open .lang-dropdown { display: block; }
   .lang-dropdown a { display: block; padding: 8px 10px; border-radius: 6px; color: var(--text); text-decoration: none; font-size: 14px; white-space: nowrap; }
   .lang-dropdown a:hover { background: rgba(212,175,55,0.1); }
@@ -262,6 +261,7 @@
     nav { padding: 12px 16px; }
     .logo { font-size: 15px; }
     .nav-cta { padding: 7px 14px; font-size: 13px; }
+    .lang-dropdown { right: 16px; }
   }
 
   .hero { text-align: center; padding: 80px 24px 60px; max-width: 860px; margin: 0 auto; }
