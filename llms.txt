@@ -7,12 +7,19 @@
 GameAccountValue accepts screenshots of game accounts, analyzes them with Google Gemini AI vision, and returns:
 
 - A market value estimate (USD range, shown alongside the user's local currency)
-- An account quality tier (Starter / Casual / Pro / Collector)
+- A value tier badge (Bronze / Silver / Gold / Diamond / Whale, based on the dollar estimate) and an internal quality tier (Starter / Casual / Pro / Collector, based on item rarity)
 - Liquidity rating (how fast the account could realistically sell)
 - A procedurally generated PDF certificate with QR verification code
 - A public Telegraph landing page for sharing
 
 Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 screenshot full audit with the PDF certificate, priced in Telegram Stars.
+
+## Pricing Tiers
+
+- Free: 1-screenshot rough estimate, once per day, no payment
+- Full audit: 2-3 screenshots, PDF certificate with QR verification, one-time payment in Telegram Stars, price adjusted by region
+- Unlimited subscription: 7-day or 30-day pass for unlimited full audits, subject to a daily fair-use cap (higher cap on the 30-day tier)
+- Referral program: anyone can share a personal /ref link and earn a percentage of a referred friend's first payment, credited as free-audit balance; a separate paid partner tier (limited slots) earns a higher percentage on an ongoing basis
 
 ## Supported Games
 
@@ -81,4 +88,4 @@ Q: How are refunds handled?
 A: If the AI cannot identify a valid game account in the provided screenshots, a full Telegram Stars refund is issued automatically (or, for the free tier, the daily quota is restored instead of being consumed).
 
 Q: What commands are available?
-A: /start (begin audit), /history (past audits), /top (global leaderboard), /partner (affiliate program), /ref (referral link), /donate, /status, /cancel, /delete (GDPR erasure), /paysupport, /privacy, /help
+A: /start (begin audit), /unlimited (subscription plans), /app (Mini App), /history (past audits), /top (global leaderboard), /partner (affiliate program), /ref (referral link), /donate, /status, /cancel, /delete (GDPR erasure), /paysupport, /feedback, /privacy, /help
