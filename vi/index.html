@@ -581,6 +581,9 @@
     <a href="../terms.html">Điều khoản dịch vụ</a>
   </div>
   <p style="margin-top: 16px; font-size: 12px;">© 2026 GameAccountValue</p>
+  <p id="pwa-install-wrap" style="display:none;margin-top: 16px;">
+    <button type="button" id="pwa-install-btn" style="cursor:pointer;font:inherit;background:transparent;border:1px solid #2a2f45;color:var(--text);padding:10px 20px;border-radius:8px;font-size:14px;">📲 Cài đặt ứng dụng</button>
+  </p>
 </footer>
 
 <script>
@@ -605,6 +608,31 @@ document.addEventListener('keydown', function (e) {
     });
   }
 });
+</script>
+<script>
+(function(){
+  var wrap = document.getElementById('pwa-install-wrap');
+  var btn = document.getElementById('pwa-install-btn');
+  if (!wrap || !btn) return;
+  var deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    deferredPrompt = e;
+    wrap.style.display = '';
+  });
+  btn.addEventListener('click', function(){
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.finally(function(){
+      deferredPrompt = null;
+      wrap.style.display = 'none';
+    });
+  });
+  window.addEventListener('appinstalled', function(){
+    deferredPrompt = null;
+    wrap.style.display = 'none';
+  });
+})();
 </script>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/game-account-value/sw.js').catch(()=>{})}</script>
 </body>
