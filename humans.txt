@@ -3,6 +3,6 @@ Developer: Aleksei Sergeevich Bitkin
 Contact: https://t.me/GameAccountValue_Bot
 
 /* SITE */
-Last update: 2026/08/04
+Last update: 2026/08/16
 Language: English
 Doctype: HTML5
