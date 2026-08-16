@@ -264,7 +264,7 @@
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', 'Noto Sans KR', sans-serif; line-height: 1.7; }
 
   nav { background: rgba(10,12,20,0.95); border-bottom: 1px solid #1a1f35; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
-  .logo { font-weight: 700; font-size: 18px; color: var(--gold); letter-spacing: 1px; white-space: nowrap; }
+  .logo { font-weight: 700; font-size: 18px; color: var(--gold); letter-spacing: 1px; white-space: nowrap; text-decoration: none; }
   .nav-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   /* JS-toggled dropdown instead of <details>/<summary> — Telegram's in-app
      browser (where most visitors open this link from) doesn't reliably fire
@@ -348,7 +348,7 @@
 <a href="#main-content" class="skip-link">본문으로 건너뛰기</a>
 
 <nav>
-  <div class="logo">GameAccountValue</div>
+  <a href="./" class="logo">GameAccountValue</a>
   <div class="nav-right">
     <div class="lang-selector">
       <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false">🌐 KO <span class="lang-arrow">▾</span></button>
