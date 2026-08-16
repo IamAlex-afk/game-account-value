@@ -1,27 +1,20 @@
 # GameAccountValue — лендинг (GitHub Pages)
 
-Отдельная папка, отдельный деплой (GitHub Pages), ведёт трафик в Telegram-бота.
-Не трогает `GAV_WORLDCLASS` и `GAV_MINIAPP`.
+Лендинг-страница, ведёт трафик в Telegram-бота GameAccountValue.
+Отдельная папка, отдельный деплой (GitHub Pages). Не связан с `GAV_WORLDCLASS` и `GAV_MINIAPP`.
 
-## Что внутри
+**Сайт:** https://iamalex-afk.github.io/game-account-value/
 
-- `index.html` — обновлён под текущую реальность: 9 игр (было 5 в черновике),
-  честная формулировка про оценку (убрал "calibrated against live listings" —
-  та же ложная точность, что чинил в самом боте), рабочие ссылки (были битые
-  на `about.html`/`terms.html`, которых нет — убрал, пока не написаны)
-- `privacy.html`, `robots.txt`, `sitemap.xml`, `_config.yml`, `llms.txt`,
-  `schema_org.json` — перенесены из `GAV_WORLDCLASS/docs/seo_landing/`
+## Структура
 
-## Важно — я сознательно убрал одну строку
+- `index.html` — главная страница (английский)
+- `{lang}/index.html` — локализации: ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th
+- `privacy.html`, `terms.html` — юридические страницы
+- `robots.txt`, `sitemap.xml` — SEO
+- `llms.txt`, `schema_org.json` — структурированные данные для поисковиков и AI-краулеров
+- `manifest.json`, `favicon.svg`/`favicon.png`, `og-image.png` — PWA и соцсети
+- `.well-known/security.txt` — контакт для security-репортов
 
-В старом черновике была строка **"Patent pending (RU Application No. 2025111730)"**.
-Я её не перенёс — не потому что это точно неправда, а потому что я не могу
-подтвердить, реальна ли эта заявка. Ложное заявление о патенте — серьёзный
-юридический риск. Если заявка реальная — скажи, верну строку. Если нет — и
-слава богу, что не попала на публичную страницу.
+## Деплой
 
-## Ещё не сделано
-
-- `terms.html`, `about.html` — упоминались в старом черновике, но не существуют
-- Деплой на реальный GitHub Pages (нужен репозиторий на GitHub)
-- Ссылка на Mini App (когда будет бэкенд и он будет задеплоен)
+Автодеплой на GitHub Pages при пуше в `main`.
