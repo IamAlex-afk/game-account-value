@@ -11,7 +11,7 @@
 - `{lang}/index.html` — локализации: ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th
 - `privacy.html`, `terms.html` — юридические страницы
 - `robots.txt`, `sitemap.xml` — SEO
-- `llms.txt`, `schema_org.json` — структурированные данные для поисковиков и AI-краулеров
+- `llms.txt` — структурированные данные для поисковиков и AI-краулеров (JSON-LD тоже встроен inline в каждую страницу)
 - `manifest.json`, `favicon.svg`/`favicon.png`, `og-image.png` — PWA и соцсети
 - `.well-known/security.txt` — контакт для security-репортов
 
