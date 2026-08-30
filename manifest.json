@@ -1,13 +1,17 @@
 {
   "name": "GameAccountValue",
   "short_name": "GAV",
+  "description": "AI-powered estimate of what your game account is worth. Send screenshots, get a price range and a PDF certificate.",
   "start_url": "/game-account-value/",
   "scope": "/game-account-value/",
   "display": "standalone",
   "background_color": "#0A0C14",
   "theme_color": "#0A0C14",
   "icons": [
-    { "src": "favicon.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+    { "src": "favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" }
   ]
 }
