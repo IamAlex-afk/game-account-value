@@ -1,3 +1,4 @@
 Contact: https://t.me/GameAccountValue_Bot
 Preferred-Languages: en, ru
 Canonical: https://iamalex-afk.github.io/game-account-value/.well-known/security.txt
+Expires: 2027-08-29T00:00:00.000Z
