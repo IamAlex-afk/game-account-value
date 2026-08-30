@@ -1,0 +1,79 @@
+:root {
+  --gold: #D4AF37;
+  --bg: #0A0C14;
+  --card: #0F1220;
+  --text: #E0E0E0;
+  --muted: #AAAAAA;
+  --accent: #00C8E0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+nav { background: rgba(10,12,20,0.95); border-bottom: 1px solid #1a1f35; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+.logo { font-weight: 700; font-size: 18px; color: var(--gold); letter-spacing: 1px; white-space: nowrap; text-decoration: none; }
+.nav-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+/* JS-toggled dropdown instead of <details>/<summary> — Telegram's in-app
+   browser (where most visitors open this link from) doesn't reliably fire
+   the native details-open toggle, so the menu never expanded there. */
+.lang-btn { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid #2a2f45; border-radius: 6px; font-size: 13px; color: var(--text); background: none; font-family: inherit; user-select: none; }
+.lang-selector.open .lang-arrow { transform: rotate(180deg); }
+.lang-selector.open .lang-dropdown { display: block; }
+.lang-dropdown a { display: block; padding: 8px 10px; border-radius: 6px; color: var(--text); text-decoration: none; font-size: 14px; white-space: nowrap; }
+.lang-dropdown a:hover { background: rgba(212,175,55,0.1); }
+.lang-dropdown a.lang-current { color: var(--gold); font-weight: 700; }
+.nav-cta { background: var(--gold); color: #000; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 0; }
+@media (max-width: 420px) {
+  nav { padding: 12px 16px; }
+  .logo { font-size: 15px; }
+  .nav-cta { padding: 7px 14px; font-size: 13px; }
+}
+
+.hero { text-align: center; padding: 80px 24px 60px; max-width: 860px; margin: 0 auto; }
+.hero-badge { display: inline-block; background: rgba(212,175,55,0.1); border: 1px solid var(--gold); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-bottom: 24px; }
+h1 span { color: var(--gold); }
+.cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: var(--gold); color: #000; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; display: inline-flex; align-items: center; gap: 8px; }
+.btn-secondary { border: 1px solid #2a2f45; color: var(--text); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; }
+
+.stats { display: flex; justify-content: center; gap: 48px; padding: 40px 24px; flex-wrap: wrap; border-top: 1px solid #1a1f35; border-bottom: 1px solid #1a1f35; }
+.stat { text-align: center; }
+.stat-num { font-size: 32px; font-weight: 800; color: var(--gold); }
+.stat-lbl { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+.section { max-width: 1000px; margin: 0 auto; padding: 64px 24px; }
+.section-sub { text-align: center; color: var(--muted); margin-bottom: 40px; }
+.games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+.game-card { background: var(--card); border: 1px solid #2a3050; border-radius: 12px; padding: 24px 16px; text-align: center; transition: border-color 0.2s, transform 0.2s; display: block; text-decoration: none; color: inherit; cursor: pointer; }
+.game-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.game-icon { font-size: 32px; margin-bottom: 10px; }
+.game-name { font-weight: 600; font-size: 14px; }
+
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+.cert-sample { max-width: 720px; margin: 40px auto 0; text-align: center; }
+.cert-sample-label { color: var(--muted); font-size: 12px; margin-bottom: 12px; letter-spacing: 0.5px; text-transform: uppercase; }
+.cert-sample img { width: 100%; height: auto; border-radius: 12px; border: 1px solid #1a1f35; box-shadow: 0 12px 32px rgba(0,0,0,0.5); }
+.step { background: var(--card); border: 1px solid #1a1f35; border-radius: 12px; padding: 28px 20px; }
+.step h3 { font-size: 16px; margin-bottom: 8px; }
+.step p { font-size: 14px; color: var(--muted); }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.feature { display: flex; gap: 16px; align-items: flex-start; }
+.feature-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.feature h3 { font-size: 15px; margin-bottom: 4px; }
+.feature p { font-size: 14px; color: var(--muted); }
+
+.faq { max-width: 700px; margin: 0 auto; }
+details { border: 1px solid #1a1f35; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+summary { padding: 16px 20px; cursor: pointer; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+summary::after { content: '+'; color: var(--gold); font-size: 20px; }
+details[open] summary::after { content: '−'; }
+details p { padding: 0 20px 16px; color: var(--muted); font-size: 14px; }
+
+footer { border-top: 1px solid #1a1f35; padding: 40px 24px; text-align: center; color: var(--muted); font-size: 13px; }
+footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
+footer a:hover { color: var(--gold); }
+.footer-logo { font-size: 20px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+.skip-link { position: absolute; left: -9999px; top: 0; background: var(--gold); color: #000; padding: 10px 16px; z-index: 1000; font-weight: 700; text-decoration: none; border-radius: 0 0 6px 0; }
+.skip-link:focus { left: 0; }
