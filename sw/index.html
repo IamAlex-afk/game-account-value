@@ -24,7 +24,7 @@
 <meta name="robots" content="index, follow">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
 <link rel="canonical" href="https://iamalex-afk.github.io/game-account-value/sw/">
 <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/game-account-value/">
 <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/game-account-value/">
@@ -282,8 +282,8 @@
   <a href="../" class="logo">GameAccountValue</a>
   <div class="nav-right">
     <div class="lang-selector">
-      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false">🌐 SW <span class="lang-arrow">▾</span></button>
-      <div class="lang-dropdown">
+      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">🌐 SW <span class="lang-arrow">▾</span></button>
+      <div class="lang-dropdown" id="lang-menu">
         <a href="https://iamalex-afk.github.io/game-account-value/">🇺🇸 English</a>
         <a href="https://iamalex-afk.github.io/game-account-value/ru/">🇷🇺 Русский</a>
         <a href="https://iamalex-afk.github.io/game-account-value/es/">🇪🇸 Español</a>
@@ -310,7 +310,7 @@
         <a href="https://iamalex-afk.github.io/game-account-value/ky/">🇰🇬 Кыргызча</a>
       </div>
     </div>
-    <a href="https://t.me/GameAccountValue_Bot" class="nav-cta" rel="noopener noreferrer">🤖 Open Bot</a>
+    <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" rel="noopener noreferrer">🤖 Open Bot</a>
   </div>
 </nav>
 
@@ -320,7 +320,7 @@
   <h1>Jua Thamani ya<br><span>Akaunti Yako ya Mchezo</span></h1>
   <p>Tuma picha 1 ya skrini kupata thamani ya makadirio bila malipo, au picha 2-3 kupata bei ya mkondo + cheti cha PDF. Boti yetu hukagua inventory, mashujaa na vitu adimu kwa AI vision, kisha kuvipa bei kupitia injini yetu ya bei na hifadhidata ya soko la upili — jambo ambalo chatbot ya kawaida ya AI haiwezi kufanya.</p>
   <div class="cta-group">
-    <a href="https://t.me/GameAccountValue_Bot" class="btn-primary" rel="noopener noreferrer">
+    <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" class="btn-primary" rel="noopener noreferrer">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.283c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.938z"/></svg>
       Pata Makadirio ya Bure
     </a>
@@ -375,7 +375,7 @@
   </div>
   <div class="cert-sample">
     <p class="cert-sample-label">Example certificate &middot; sample data</p>
-    <img src="../certificate-sample.jpg" alt="Example GameAccountValue PDF certificate &mdash; Roblox, GOLD tier, $861 estimate" loading="lazy">
+    <img src="../certificate-sample.jpg" alt="Example GameAccountValue PDF certificate &mdash; Roblox, GOLD tier, $861 estimate" loading="lazy" width="1080" height="720">
   </div>
 </section>
 
@@ -477,7 +477,7 @@
 <section style="text-align: center; padding: 80px 24px; background: linear-gradient(180deg, transparent, rgba(212,175,55,0.05));">
   <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 16px;">Uko Tayari Kujua Thamani ya Akaunti Yako?</h2>
   <p style="color: var(--muted); margin-bottom: 32px;">Inachukua chini ya sekunde 60. Hakuna usajili.</p>
-  <a href="https://t.me/GameAccountValue_Bot" class="btn-primary" style="font-size: 18px; padding: 18px 40px;" rel="noopener noreferrer">
+  <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" class="btn-primary" style="font-size: 18px; padding: 18px 40px;" rel="noopener noreferrer">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.283c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.938z"/></svg>
     Anza kwenye Telegram
   </a>
@@ -492,7 +492,7 @@
   </div>
   <p style="margin-bottom: 16px;">Makadirio yaliyotengenezwa na AI · Huduma ya burudani · 18+</p>
   <div>
-    <a href="https://t.me/GameAccountValue_Bot" rel="noopener noreferrer">Boti ya Telegram</a>
+    <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" rel="noopener noreferrer">Boti ya Telegram</a>
     <a href="../privacy.html">Sera ya Faragha</a>
     <a href="../terms.html">Masharti ya Huduma</a>
   </div>
@@ -502,6 +502,6 @@
   </p>
 </footer>
 
-<script src="../assets/nav.js" defer></script>
+<script type="module" src="../assets/nav.js" defer></script>
 </body>
 </html>
