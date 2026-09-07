@@ -123,6 +123,11 @@ nav {
 .lang-selector.open .lang-arrow { transform: rotate(180deg); }
 .lang-selector.open .lang-dropdown { display: block; }
 .lang-dropdown {
+  /* Overrides the shared frosted-glass rule above (background: var(--card),
+     ~4.5% opacity) — a menu that overlaps page content needs a solid
+     backing, not a translucent one, or the site's own text bleeds through
+     and the language names become unreadable. */
+  background: var(--card-solid);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: 0 16px 40px rgba(0,0,0,0.55);
