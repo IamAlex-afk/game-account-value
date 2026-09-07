@@ -8,7 +8,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/pages-live-success" alt="GitHub Pages: live">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License: GPL-3.0"></a>
-  <img src="https://img.shields.io/badge/languages-15-brightgreen" alt="15 languages">
+  <img src="https://img.shields.io/badge/languages-24-brightgreen" alt="24 languages">
   <img src="https://img.shields.io/badge/build-vanilla%20JS-yellow" alt="Vanilla JS, no framework">
 </p>
 
@@ -35,7 +35,7 @@ Supported games: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, G
 
 ## Features
 
-- ✅ **15 languages**: en, ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th
+- ✅ **24 languages**: en, ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th, pl, zh, tl, sw, ms, uz, kk, tk, ky
 - ✅ **Dual currency** — prices shown in USD and the visitor's local currency
 - ✅ **Verifiable PDF certificates** — unique Audit ID + QR code for instant authenticity checks
 - ✅ **Installable PWA** with offline support
@@ -49,7 +49,8 @@ Vanilla JavaScript, HTML, CSS. No frameworks, no bundler. Fully static, deployed
 
 ```
 index.html                  homepage (English)
-{lang}/index.html            localized versions: ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th
+{lang}/index.html            localized versions: ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th,
+                              pl, zh, tl, sw, ms, uz, kk, tk, ky
 privacy.html, terms.html     legal pages
 robots.txt, sitemap.xml      SEO
 llms.txt, ai.txt             structured info for AI crawlers/agents (JSON-LD also embedded inline)
