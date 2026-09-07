@@ -106,6 +106,13 @@ nav {
   box-shadow: 0 0 10px rgba(var(--gold-rgb), 0.55);
 }
 .nav-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.lang-selector {
+  /* .lang-dropdown below is position:absolute — without this, it anchors to
+     the nearest positioned ancestor (the sticky <nav>, or higher), landing
+     it in the wrong spot and overlapping page content instead of sitting
+     under its own toggle button. */
+  position: relative;
+}
 .lang-btn {
   list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px;
   padding: 7px 12px; border: 1px solid var(--border); border-radius: 8px;
