@@ -35,7 +35,7 @@ Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 scr
 
 ## Languages Supported
 
-English, Russian, Spanish, Portuguese, Turkish, Arabic, Indonesian, French, German, Italian, Hindi, Vietnamese, Thai, Korean, Japanese (15 total) — with regional pricing tiers (lower Stars price in lower-purchasing-power regions).
+English, Russian, Spanish, Portuguese, Turkish, Arabic, Indonesian, French, German, Italian, Hindi, Vietnamese, Thai, Korean, Japanese, Polish, Chinese, Filipino, Swahili, Malay, Uzbek, Kazakh, Turkmen, Kyrgyz (24 total) — with regional pricing tiers (lower Stars price in lower-purchasing-power regions).
 
 ## How to Use
 
