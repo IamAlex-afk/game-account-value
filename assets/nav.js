@@ -6,8 +6,14 @@ document.querySelectorAll('.lang-selector').forEach(function (sel) {
     btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 });
-document.addEventListener('click', function () {
+document.addEventListener('click', function (e) {
   document.querySelectorAll('.lang-selector.open').forEach(function (sel) {
+    // A tap on one of the language links must not hide the dropdown
+    // (display:none) while the same click is still mid-flight — some
+    // mobile browsers (notably iOS Safari) cancel the link's navigation
+    // if its container is hidden before the click finishes bubbling.
+    // Desktop browsers tolerate it, which is why this only broke on phones.
+    if (sel.contains(e.target)) return;
     sel.classList.remove('open');
     sel.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
   });
