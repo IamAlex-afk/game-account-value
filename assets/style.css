@@ -165,6 +165,14 @@ nav {
 }
 h1 span {
   color: var(--gold);
+  background: linear-gradient(90deg, var(--gold), #f2d989, var(--emerald), var(--gold));
+  background-size: 300% 100%;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 6s ease-in-out infinite;
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 body h1 {
   /* font-size/line-height stay owned by each locale's own inline <style>
@@ -259,6 +267,7 @@ body .section-title { font-family: var(--serif); font-variation-settings: 'wght'
   /* Linear/Apple-style "elevated product shot": one confident, mostly
      neutral drop shadow doing the work, not a colored glow halo. */
   box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform .15s ease-out;
 }
 
 /* ---- features ---- */
@@ -294,6 +303,29 @@ footer a:hover { color: var(--gold); }
 .footer-logo {
   font-family: var(--serif); font-variation-settings: 'wght' 800;
   font-size: 21px; font-weight: 800; color: var(--gold); margin-bottom: 18px;
+}
+
+/* Smooth cross-fade between language pages (Chrome/Edge/Safari 18.2+; other
+   browsers ignore the at-rule and just navigate normally, no fallback code
+   needed). Pairs with the speculationrules prerender on the lang dropdown. */
+@view-transition {
+  navigation: auto;
+}
+
+/* Reveal-on-scroll for the below-the-fold sections that don't already have
+   a load-time entrance (the game cards do, via .rise-in above). Guarded by
+   @supports so browsers without scroll-driven animations (~16% in 2026,
+   mainly older Firefox) just show the content immediately — never hidden. */
+@supports (animation-timeline: view()) {
+  .step, .feature, details, .cert-sample {
+    animation: reveal-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes reveal-in {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
