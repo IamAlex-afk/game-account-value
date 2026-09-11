@@ -174,6 +174,10 @@ body h1 {
   font-family: var(--serif); font-variation-settings: 'wght' 800; letter-spacing: -0.015em;
 }
 .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 4px; }
+/* EU AI Act Art. 50(1): explicit "you're talking to an AI" notice at the
+   entry point, so it stands regardless of what the bot's own first message
+   says (that lives in the separate private backend repo, out of our reach). */
+.ai-notice { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 16px; }
 .btn-primary {
   background: var(--gold);
   color: #0c0a04; padding: 16px 32px; border-radius: 10px; text-decoration: none;
