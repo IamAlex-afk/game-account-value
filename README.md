@@ -39,7 +39,7 @@ Supported games: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, G
 - ✅ **Dual currency** — prices shown in USD and the visitor's local currency
 - ✅ **Verifiable PDF certificates** — unique Audit ID + QR code for instant authenticity checks
 - ✅ **Installable PWA** with offline support
-- ✅ **Lighthouse 100 / 100 / 100 / 100** — Performance, Accessibility, Best Practices, SEO
+- ✅ **Lighthouse 98 / 100 / 96 / 100** — Performance, Accessibility, Best Practices, SEO (measured 2026-09-11)
 
 ## Tech stack
 
