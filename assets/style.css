@@ -254,8 +254,20 @@ body .section-title { font-family: var(--serif); font-variation-settings: 'wght'
 
 /* ---- steps ---- */
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; position: relative; }
-.step { border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 22px; transition: border-color .2s, transform .2s; }
+.step {
+  position: relative; overflow: hidden;
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 22px; transition: border-color .2s, transform .2s;
+}
 .step:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+/* Cursor-tracking spotlight, position set via --mx/--my by interactions.js.
+   Kept off .game-card/.cert-sample img on purpose — those already tilt in
+   3D, and layering a glow on top of a tilt reads as clutter, not polish. */
+.step::before, details::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--gold-rgb), 0.14), transparent 70%);
+  opacity: 0; transition: opacity .3s;
+}
+.step:hover::before, details:hover::before { opacity: 1; }
 .step h3 { font-size: 16px; margin-bottom: 8px; font-weight: 700; }
 .step p { font-size: 14px; color: var(--muted); line-height: 1.55; }
 
@@ -286,6 +298,7 @@ body .section-title { font-family: var(--serif); font-variation-settings: 'wght'
 /* ---- faq ---- */
 .faq { max-width: 700px; margin: 0 auto; }
 details {
+  position: relative;
   border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden;
   transition: border-color .2s;
 }
