@@ -70,4 +70,4 @@ python -m http.server 8080
 
 ## License
 
-GPL-3.0 — see [LICENSE](LICENSE). © 2026 Aleksei Sergeevich Bitkin.
+GPL-3.0 — see [LICENSE](LICENSE). © 2026 Aleksei Bitkin.

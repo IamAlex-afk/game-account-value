@@ -1,5 +1,5 @@
 /* TEAM */
-Developer: Aleksei Sergeevich Bitkin
+Developer: Aleksei Bitkin
 Contact: https://t.me/GameAccountValue_Bot
 
 /* SITE */
