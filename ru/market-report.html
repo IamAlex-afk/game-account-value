@@ -112,8 +112,10 @@
   .game-card p { color: var(--muted); font-size: 13px; margin: 0 0 8px; }
   .game-card .price { color: var(--gold); font-weight: 700; font-size: 13px; }
   .game-card .arrow { display: block; margin-top: 8px; font-size: 13px; color: var(--text); }
-  .other-games { margin: 10px auto 24px; padding: 0 24px; font-size: 13px; }
-  .other-games a { display: inline-block; margin: 4px 8px 4px 0; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; color: var(--muted); text-decoration: none; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .sources-list { max-width: 760px; margin: 0 auto; padding: 0 24px 60px; font-size: 12px; color: var(--muted); }
   .sources-list a { color: var(--muted); }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 760px; margin: 0 auto; }
@@ -140,6 +142,14 @@
     Торговля аккаунтами кишит мошенничеством с обеих сторон и нарушает условия использования каждой игры из этого списка — за это можно получить безвозвратную блокировку без права на восстановление. Этот отчёт существует, чтобы ответить на реальный, частый вопрос («сколько на самом деле стоит аккаунт вроде моего?») цифрами с источниками, а не чтобы поощрять торговлю.
   </div>
 </section>
+
+<div class="resources-callout">
+  <span class="resources-label">Другие материалы:</span>
+  <a href="./glossary.html">📖 Словарь терминов</a>
+  <a href="./account-trading-safety.html">🛡️ Гайд по безопасности и обманам</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ В какой игре самые дорогие аккаунты?</a>
+  <a href="./methodology.html">🔬 Наша методология</a>
+</div>
 
 <hr class="report-divider">
 
@@ -207,16 +217,6 @@
     <span class="price">$0.50 – $200,000</span>
     <span class="arrow">Читать полный отчёт →</span>
   </a>
-</div>
-
-<hr class="report-divider">
-
-<div class="other-games" style="max-width:760px;">
-  <p style="color:var(--muted); margin-bottom:8px;">Другие материалы:</p>
-  <a href="./glossary.html">Словарь терминов</a>
-  <a href="./account-trading-safety.html">Гайд по безопасности и обманам</a>
-  <a href="./which-game-accounts-are-most-valuable.html">В какой игре самые дорогие аккаунты?</a>
-  <a href="./methodology.html">Наша методология</a>
 </div>
 
 <section class="sources-list">
