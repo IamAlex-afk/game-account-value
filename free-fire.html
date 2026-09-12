@@ -148,6 +148,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -195,8 +203,25 @@
   <span>📦 <strong>1.3B+</strong> downloads</span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Prices</a>
+  <a href="#value">📊 What Drives Value</a>
+  <a href="#tips">🎮 Player Tips</a>
+  <a href="#scams">⚠️ Scams</a>
+  <a href="#rules">❓ Rules</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">More guides:</span>
+  <a href="./glossary.html">📖 Terms Glossary</a>
+  <a href="./account-trading-safety.html">🛡️ Scam &amp; Safety Guide</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Compare All Games</a>
+  <a href="./methodology.html">🔬 Our Methodology</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>How much is a Free Fire account worth?</h3>
 <div class="price-range">Real market range: $0.73 – $250 typical, up to ~$755 in Brazil</div>
 <p>Live listings on Eldorado.gg run from $0.73 (fresh, unranked accounts) up to $250 for a high-end account. A larger aggregate market (igitems.com, 293 listings) shows an average asking price of $78.32, up from $56.95 over the prior 14 weeks. Brazil — one of Free Fire's largest markets — has its own listings on MercadoLivre reaching as high as R$4,000 (~$755) for top accounts.</p>
@@ -211,6 +236,7 @@
 </table>
 <p style="font-size:13px; color:var(--muted);">Distribution from igitems.com's own market report, September 2026 — see sources.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>What actually determines a Free Fire account's value?</h3>
 <ul>
   <li>Rank level (Grandmaster and above)</li>
@@ -227,17 +253,20 @@
   <li>Keep diamond purchases for limited-time bundles rather than routine cosmetics</li>
 </ul>
 
+<span id="scams" class="anchor-target"></span>
 <h3>What are the biggest scams in Free Fire account trading?</h3>
 <div class="risk-box">
   <p>Fake reseller pages on social media that collect payment via QR code and never deliver, and buyers who use stolen payment methods to pay a seller, triggering a chargeback weeks later that leaves the seller both unpaid and without the account. Garena does not mediate account-trading disputes.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Is trading Free Fire accounts against the rules?</h3>
 <p>Yes — Garena's Terms of Service prohibit account sales and transfers, and detected trading can result in a permanent ban.</p>
 
 <h3>Where do these listings actually come from?</h3>
 <p>Eldorado.gg and igitems.com host global listings with asking prices; MercadoLivre (Brazil's largest marketplace) shows the same pattern in the local currency for one of Free Fire's biggest markets specifically — all are asking prices, not confirmed sales.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Player guide: how does an actual pro set up their sensitivity?</h3>
 <p>This section is for improving your own play, not your account's resale value. <strong><a href="https://en.wikipedia.org/wiki/Two9" target="_blank" rel="noopener">Diogenes "Two9" Inácio</a></strong>, a Brazilian pro known for trick-shot mechanics, published this full settings breakdown (source: <a href="https://escharts.com/news/mastering-two9-meta" target="_blank" rel="noopener">Esports Charts</a>):</p>
 <table class="tier-table">
@@ -267,18 +296,10 @@
   <a href="./minecraft.html">Minecraft</a>
 </div>
 
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">More resources:</p>
-  <a href="./glossary.html">Terms Glossary</a>
-  <a href="./account-trading-safety.html">Scam &amp; Safety Guide</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Cross-Game Comparison</a>
-  <a href="./methodology.html">Our Research Methodology</a>
-</div>
-
 <section class="sources-list">
   <h2 style="font-size:15px; color:var(--text); margin-bottom:10px;">Sources</h2>
   <ul>
-    <li>Player counts, downloads, release dates: Business of Apps, Udonis, DemandSage — specialist trackers, compared where sources diverge</li>
+    <li>Player counts, downloads, release dates: Business of Apps, Udonis, DemandSage</li>
     <li>igitems.com — <a href="https://igitems.com/free-fire-account" target="_blank" rel="noopener">Free Fire account market report</a>, checked September 2026</li>
     <li>Eldorado.gg — <a href="https://www.eldorado.gg/free-fire-accounts/a/46-1-0" target="_blank" rel="noopener">Free Fire account listings</a>, checked September 2026</li>
     <li>MercadoLivre.com.br — Brazilian marketplace listings for "conta free fire", checked September 2026</li>

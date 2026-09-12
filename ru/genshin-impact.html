@@ -162,6 +162,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -208,8 +216,25 @@
   <span>🌍 Больше всего в <strong>Китае, Японии, Южной Корее, России, Индии</strong></span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Цены</a>
+  <a href="#value">📊 Ценность</a>
+  <a href="#tips">🎮 Советы</a>
+  <a href="#risk">⚠️ Риск</a>
+  <a href="#rules">❓ Правила</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">Другие материалы:</span>
+  <a href="./glossary.html">📖 Словарь терминов</a>
+  <a href="./account-trading-safety.html">🛡️ Гайд по безопасности</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Сравнение игр</a>
+  <a href="./methodology.html">🔬 Наша методология</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>Сколько реально стоит аккаунт Genshin Impact?</h3>
 <div class="price-range">Стартовые аккаунты: $5 – $60 · «Китовые» аккаунты: $30 – $9000</div>
 <p>У Genshin Impact есть действующий маркетплейс аккаунтов. Eldorado.gg ведёт две отдельные категории: обычные/реролл-аккаунты (стартовые персонажи через реролл свежего аккаунта, по цене $5-$60 в зависимости от региона и стартовых пятизвёздочных персонажей) и отдельную категорию <em>«китовых» аккаунтов</em>, где цены идут от $30 до $8995 за самые топовые листинги (20 персонажей C6, 8 орудий R5). Третий агрегированный источник (igitems.com, 442 листинга) показывает, что обычные аккаунты в среднем стоят около $147 сейчас, резко выросши за последние 14 недель.</p>
@@ -242,6 +267,7 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Это текущие топовые персонажи рынка, а не постоянный список — мета Genshin меняется с каждым новым баннером, так что перепроверяйте перед тем, как считать это верным через год.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>Что делает аккаунт Genshin Impact дорогим в разработке?</h3>
 <ul>
   <li>Владение подтверждёнными выше высокоспросовыми персонажами на констелляции C6 — максимальное раскрытие пассивных способностей персонажа</li>
@@ -258,14 +284,17 @@
   <li>Баннеры оружия обычно дают более гарантированную отдачу, чем баннеры персонажей, если оптимизировать ценность на потраченный камень</li>
 </ul>
 
+<span id="risk" class="anchor-target"></span>
 <h3>Какой реальный риск при попытке купить или продать аккаунт Genshin Impact всё же?</h3>
 <div class="risk-box">
   <p>Служба безопасности аккаунтов HoYoverse активно отслеживает входы с новых устройств/локаций после передачи и может заблокировать аккаунт навсегда — без восстановления, поскольку связанная история платежей и верификация личности делают апелляции практически невыигрышными при подтверждённой передаче. Это строже, чем у большинства других игр в этом отчёте.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Нарушает ли правила покупка или продажа аккаунта Genshin Impact?</h3>
 <p>Да. Условия использования HoYoverse прямо запрещают передачу аккаунтов и торговлю за реальные деньги, и это правило соблюдается жёстче, чем в большинстве мобильных игр.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Гайд для игроков: какие командные составы реально рекомендуют опытные игроки?</h3>
 <p>Этот раздел — про улучшение своих командных составов, а не стоимость аккаунта на продажу. Это игра про ротации/командные составы, а не про прицеливание, поэтому полезные знания о мете — это знания о составах. Для <a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">Keqing</a> (GameWith, Genshin-Builds, обновлено в августе 2026) широко документированная F2P-дружелюбная команда на Aggravate сочетает Keqing (основной ДПС) с Fischl (внеполевой Электро), Collei (внеполевой Дендро) и Zhongli (щит-поддержка) — ни один из этих четырёх персонажей не требует вложений уровня «кита».</p>
 <p>Для <a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">Mavuika</a> конкретно, чью ценность мы упоминаем выше, самая цитируемая команда «китового» уровня (Icy Veins, GameWith) — это состав на Melt: Mavuika, Citlali (Крио-поддержка/снятие Pyro RES), Iansan и Bennett. С F2P-стороны несколько гайдов называют Путешественника в форме Pyro реально играбельной заменой в командах Mavuika на Overload — доказательство того, что «достаточно хорошие» составы для этих персонажей не строго требуют 5-звёздочных поддержек.</p>
@@ -286,14 +315,6 @@
   <a href="./mobile-legends.html">Mobile Legends</a>
   <a href="./fortnite.html">Fortnite</a>
   <a href="./minecraft.html">Minecraft</a>
-</div>
-
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">Другие материалы:</p>
-  <a href="./glossary.html">Словарь терминов</a>
-  <a href="./account-trading-safety.html">Гайд по безопасности и обманам</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Сравнение игр</a>
-  <a href="./methodology.html">Наша методология</a>
 </div>
 
 <section class="sources-list">

@@ -148,6 +148,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -194,8 +202,25 @@
   <span>📦 <strong>545M+</strong> total downloads</span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Prices</a>
+  <a href="#value">📊 What Drives Value</a>
+  <a href="#tips">🎮 Player Tips</a>
+  <a href="#scams">⚠️ Scams</a>
+  <a href="#rules">❓ Rules</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">More guides:</span>
+  <a href="./glossary.html">📖 Terms Glossary</a>
+  <a href="./account-trading-safety.html">🛡️ Scam &amp; Safety Guide</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Compare All Games</a>
+  <a href="./methodology.html">🔬 Our Methodology</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>How much is a Brawl Stars account worth?</h3>
 <div class="price-range">Market range: $3 – $150 (up to $300+ for top accounts)</div>
 <p>Live listings on Eldorado.gg run from $3 (12,000 trophies, 55 brawlers) up to $35 for the site's top-shown accounts (40,000+ trophies, 100+ brawlers). A larger aggregate market (igitems.com, 1,147 active listings) shows most accounts actually trade between $15-$150, with a 90-day average asking price of $73-101, and a top bracket of 34 listings over $300.</p>
@@ -210,6 +235,7 @@
 </table>
 <p style="font-size:13px; color:var(--muted);">Distribution from igitems.com's own market report, September 2026 — see sources.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>What actually determines a Brawl Stars account's value?</h3>
 <p><strong>Checked directly against the 10 highest-priced live listings: none of them named a specific rare skin at all.</strong> Every one of the top 10 was titled purely by trophy count and brawler count (e.g. "104 BRAWLERS🔥51K🏆") — unlike Fortnite, Genshin, or Mobile Legends, Brawl Stars' resale value doesn't concentrate around owning particular cosmetics. The real drivers are:</p>
 <ul>
@@ -226,17 +252,20 @@
   <li>Complete the seasonal Brawl Pass each season rather than skipping seasons, since some cosmetics don't return</li>
 </ul>
 
+<span id="scams" class="anchor-target"></span>
 <h3>What are the biggest scams in Brawl Stars account trading?</h3>
 <div class="risk-box">
   <p>Fake "escrow" middlemen who take payment and never deliver login credentials, and chargeback fraud where a buyer pays, receives the account, then reverses the payment through their bank or PayPal after the seller has already handed over access. Both are common enough that most established marketplaces now push their own buyer/seller protection instead of direct peer deals.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Is trading Brawl Stars accounts against the rules?</h3>
 <p>Yes — Supercell's Terms of Service prohibit selling, buying, or transferring accounts. Accounts confirmed to have changed hands can be permanently banned, and Supercell support does not restore access lost in a trade scam.</p>
 
 <h3>Where do these listings actually come from?</h3>
 <p>Eldorado.gg and igitems.com both host public seller listings with asking prices — these are the closest thing to real market data available, though they're asking prices, not confirmed completed sales. igitems also separately tracks sold-price movement, which recently ran 6.8% above asking despite falling ask prices — a sign real buyers are still paying up even as sellers list more cautiously.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Player guide: how do you actually push trophies faster?</h3>
 <p>This section is for improving your own play, not your account's resale value. A July 2026 guide from <a href="https://trophycoach.com/brawl-stars/guides/how-to-get-better-brawl-stars" target="_blank" rel="noopener">TrophyCoach</a> recommends locking onto one Brawler per session rather than switching around, since win-streak bonuses reset per-Brawler; winning the fight for lane control in the first 15 seconds of a match; keeping at least one shot/ammo in reserve unless you have a confirmed kill or objective; and — specifically for beginners — pushing several Brawlers to a moderate 300-500 trophies rather than pouring everything into one Brawler past 900.</p>
 <p style="font-size:13px; color:var(--muted);">A single-source tier list (mumuplayer.com, not independently cross-confirmed) names Colette, Damian, Edgar, Crow, Otis, Chester, Starr Nova, Max, and Surge as the July 2026 S-tier — treat this list with more caution than the sourced tips above. On the esports side, <strong>HMBLE</strong> won back-to-back Brawl Cup titles in 2026, and <strong>Crazy Raccoon</strong> were the 2025 World Champions. Brawl Stars isn't an aim-based game, so there's no meaningful sensitivity-setting culture around it the way there is for shooters.</p>
@@ -259,18 +288,10 @@
   <a href="./minecraft.html">Minecraft</a>
 </div>
 
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">More resources:</p>
-  <a href="./glossary.html">Terms Glossary</a>
-  <a href="./account-trading-safety.html">Scam &amp; Safety Guide</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Cross-Game Comparison</a>
-  <a href="./methodology.html">Our Research Methodology</a>
-</div>
-
 <section class="sources-list">
   <h2 style="font-size:15px; color:var(--text); margin-bottom:10px;">Sources</h2>
   <ul>
-    <li>Player counts, downloads, release dates: Business of Apps, Udonis, DemandSage — specialist trackers, compared where sources diverge</li>
+    <li>Player counts, downloads, release dates: Business of Apps, Udonis, DemandSage</li>
     <li>Eldorado.gg — <a href="https://www.eldorado.gg/brawl-stars-accounts/a/56-1-0" target="_blank" rel="noopener">Brawl Stars account listings</a>, checked September 2026</li>
     <li>igitems.com — <a href="https://igitems.com/brawl_stars-account" target="_blank" rel="noopener">Brawl Stars account market report</a>, checked September 2026</li>
   </ul>
