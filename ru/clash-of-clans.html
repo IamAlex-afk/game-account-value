@@ -146,6 +146,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -193,8 +201,25 @@
   <span>🏰 Текущий максимальный уровень Ратуши: <strong>TH18</strong> (на сентябрь 2026)</span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Цены</a>
+  <a href="#value">📊 Ценность</a>
+  <a href="#tips">🎮 Советы</a>
+  <a href="#scams">⚠️ Обманы</a>
+  <a href="#rules">❓ Правила</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">Другие материалы:</span>
+  <a href="./glossary.html">📖 Словарь терминов</a>
+  <a href="./account-trading-safety.html">🛡️ Гайд по безопасности</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Сравнение игр</a>
+  <a href="./methodology.html">🔬 Наша методология</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>Сколько реально стоит аккаунт Clash of Clans?</h3>
 <div class="price-range">Реальный диапазон на рынке: $10 – $260</div>
 <p>Clash of Clans теперь дошла до 18 уровня Ратуши, и цена аккаунта напрямую зависит и от уровня Ратуши, и от того, насколько «раш» (прокачано неравномерно, с пропуском защиты/героев) или «полный макс» аккаунт. Раш-аккаунт TH13 продаётся примерно за $10, а по-настоящему полностью максимальный TH18 выставляется за $100-$260.</p>
@@ -211,6 +236,7 @@
 </table>
 <p style="font-size:13px; color:var(--muted);">Реальные данные о запрашиваемых ценах из живого рыночного отчёта igitems.com по 4 463 листингам, сентябрь 2026 — см. источники. «Полный макс» = герои и защита полностью прокачаны для этого уровня Ратуши; «Раш» = Ратуша прокачана раньше защиты/героев.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>Что реально определяет стоимость аккаунта Clash of Clans?</h3>
 <ul>
   <li>Уровень Ратуши и то, насколько завершена прокачка героев для него</li>
@@ -227,17 +253,20 @@
   <li>Держать активным золотой пропуск / сезонный пропуск каждый сезон ради эксклюзивных косметических предметов, которые не возвращаются</li>
 </ul>
 
+<span id="scams" class="anchor-target"></span>
 <h3>Какие самые частые обманы при торговле аккаунтами Clash of Clans?</h3>
 <div class="risk-box">
   <p>Фейковые скриншоты подтверждения оплаты, фишинговые ссылки «подтвердите аккаунт» в Discord, которые крадут данные Supercell ID, и покупатели, оспаривающие платёж через банк после получения доступа. Поскольку Supercell не выступает посредником в сделках с аккаунтами, процесса разрешения споров при обмане нет ни для одной стороны.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Нарушает ли правила торговля аккаунтами Clash of Clans?</h3>
 <p>Да — условия использования Supercell запрещают продажу, покупку или передачу аккаунтов, а нарушения могут привести к безвозвратной блокировке.</p>
 
 <h3>Откуда реально берутся эти листинги?</h3>
 <p>Живой рыночный отчёт igitems.com (4 463 листинга с разбивкой по уровню Ратуши и состоянию прогресса) и публичные листинги Eldorado.gg — источники цифр выше: это реальные запрашиваемые цены, а не подтверждённые завершённые продажи.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Гайд для игроков: какой порядок прокачки реально рекомендуют опытные игроки?</h3>
 <p>Этот раздел — про улучшение своей базы, а не стоимость аккаунта на продажу. Опубликованная в 2026 году схема приоритетов прокачки от <a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a> и <a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a> формулирует общепринятый порядок так: сначала Лаборатория, затем Лагеря армии и Клан-крепость, затем Зал героев/Кузница, затем ключевые оборонительные здания, а стены — намеренно в самом конце. Обе схемы используют формулу «сначала атака, потом узкие места по времени, потом оборона, стены — последними». Контент по расстановке базы и прокачке от создателя <strong>Judo Sloth Gaming</strong> подробно разбирает тот же порядок приоритетов на 2026 год.</p>
 <p>Clash of Clans не завязан на прицеливание, поэтому вокруг него нет культуры «настроек чувствительности», как у шутеров.</p>
@@ -260,18 +289,10 @@
   <a href="./minecraft.html">Minecraft</a>
 </div>
 
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">Другие материалы:</p>
-  <a href="./glossary.html">Словарь терминов</a>
-  <a href="./account-trading-safety.html">Гайд по безопасности и обманам</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Сравнение игр</a>
-  <a href="./methodology.html">Наша методология</a>
-</div>
-
 <section class="sources-list">
   <h2 style="font-size:15px; color:var(--text); margin-bottom:10px;">Источники</h2>
   <ul>
-    <li>Количество игроков, загрузки, даты выхода: Business of Apps, Udonis, DemandSage — отраслевые трекеры, сверены там, где расходились</li>
+    <li>Количество игроков, загрузки, даты выхода: Business of Apps, Udonis, DemandSage</li>
     <li>igitems.com — <a href="https://igitems.com/clash-of-clans-account" target="_blank" rel="noopener">рыночный отчёт по аккаунтам Clash of Clans</a> (разбивка по Ратуше × прогрессу), проверено в сентябре 2026</li>
     <li>Eldorado.gg — <a href="https://www.eldorado.gg/clash-of-clans-account-for-sale/a/18-1-0" target="_blank" rel="noopener">листинги аккаунтов Clash of Clans</a>, проверено в сентябре 2026</li>
     <li>Текущий максимальный уровень Ратуши (TH18) подтверждён через CoC Strategies Hub и гайды по прокачке от сообщества, сентябрь 2026</li>

@@ -164,6 +164,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .tier-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
   .tier-table td, .tier-table th { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
   .tier-table th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -211,8 +219,25 @@
   <span>📦 <strong>1.5B+</strong> installs across 139 countries</span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Prices</a>
+  <a href="#value">📊 What Drives Value</a>
+  <a href="#tips">🎮 Player Tips</a>
+  <a href="#scams">⚠️ Scams</a>
+  <a href="#rules">❓ Rules</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">More guides:</span>
+  <a href="./glossary.html">📖 Terms Glossary</a>
+  <a href="./account-trading-safety.html">🛡️ Scam &amp; Safety Guide</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Compare All Games</a>
+  <a href="./methodology.html">🔬 Our Methodology</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>How much is a Mobile Legends account worth?</h3>
 <div class="price-range">Real market range: $0.50 – $300 typical, up to ~$605 in Indonesia</div>
 <p>Live listings on Eldorado.gg run from $0.50 (fresh Level 3 smurf accounts) to $250 for a 605-skin "mega collector" account. A larger aggregate market (igitems.com, 1,147 listings) confirms a real distribution: current average asking price is $68.61, and their own buying guide states a "solid account" with 300-400 skins runs $200-$300, while top collector accounts with 800+ cosmetics sell for $1,500+. In Indonesia — Mobile Legends' single biggest market — Tokopedia listings ("jual akun mobile legends") run from Rp80,000 to Rp9,570,000 (~$5 to ~$605).</p>
@@ -234,6 +259,7 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Other named skins seen once each (not confirmed repeats): HxH Don, Yuji Itadori Yin, KOF Karina, Naruto Vale, Legend Lunox, Naruto Gusion Minato, Lightborn Granger, Annual-Star Hayabusa, Sanrio Floryn.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>What actually determines a Mobile Legends account's value?</h3>
 <ul>
   <li>Epic and Legend-class skin collection — especially retired collector skins like the one above</li>
@@ -253,17 +279,20 @@
   <li>Complete hero collection breadth before investing heavily in cosmetics for just a few heroes</li>
 </ul>
 
+<span id="scams" class="anchor-target"></span>
 <h3>What are the biggest scams in Mobile Legends account trading?</h3>
 <div class="risk-box">
   <p>Fake middlemen on Facebook/Discord groups who take payment for an account and never deliver credentials, and "rent-to-buy" scams where a buyer is given temporary access, pays, then the seller changes the linked email and locks them out. Moonton does not mediate account-trading disputes.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Is trading Mobile Legends accounts against the rules?</h3>
 <p>Yes — Moonton's Terms of Service prohibit account sales and transfers, and confirmed trading can result in a permanent ban.</p>
 
 <h3>Where do these listings actually come from?</h3>
 <p>Eldorado.gg and igitems.com host global listings; Tokopedia (Indonesia's largest marketplace) shows the same pattern in the local currency for Mobile Legends' single biggest market specifically — all are asking prices, not confirmed sales.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Player guide: is there a real "pro settings" culture, and what's the current meta?</h3>
 <p>This section is for improving your own play, not your account's resale value. Unlike Free Fire or Fortnite, we could not find individually-attributed sensitivity settings from a named MLBB pro backed by 2+ sources — the settings guides we found (Advanced Targeting, Manual Basic Attack targeting, ~60% camera sensitivity, enlarging frequently-used skill buttons to 110-120%) are general community recommendations, not a specific pro's published setup, so treat them as a starting point rather than a proven formula.</p>
 <p>What is solidly sourced: <strong>Team Liquid PH</strong> won MPL Philippines Season 17 in 2026 — the first team to three-peat the league — with <strong>Sanford "Sanford" Vinuya</strong> named Finals MVP (source: <a href="https://en.wikipedia.org/wiki/2026_MPL_Philippines_season" target="_blank" rel="noopener">Wikipedia, 2026 MPL Philippines season</a>). As of the MLBB Hub Tier List dated August 23, 2026, the strongest jungle picks were Hanzo, Nolan, and Ling, with roam pick Chip specifically valued for reshaping jungle/roam coordination in the draft.</p>
@@ -286,18 +315,10 @@
   <a href="./minecraft.html">Minecraft</a>
 </div>
 
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">More resources:</p>
-  <a href="./glossary.html">Terms Glossary</a>
-  <a href="./account-trading-safety.html">Scam &amp; Safety Guide</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Cross-Game Comparison</a>
-  <a href="./methodology.html">Our Research Methodology</a>
-</div>
-
 <section class="sources-list">
   <h2 style="font-size:15px; color:var(--text); margin-bottom:10px;">Sources</h2>
   <ul>
-    <li>Player counts, installs, release dates: Business of Apps, Udonis, DemandSage — specialist trackers, compared where sources diverge</li>
+    <li>Player counts, installs, release dates: Business of Apps, Udonis, DemandSage</li>
     <li>igitems.com — <a href="https://igitems.com/mobile-legends-account" target="_blank" rel="noopener">Mobile Legends account market report</a>, checked September 2026</li>
     <li>Eldorado.gg — <a href="https://www.eldorado.gg/mobile-legends-accounts/a/55-1-0" target="_blank" rel="noopener">Mobile Legends account listings</a>, checked September 2026</li>
     <li>Tokopedia — Indonesian marketplace listings for "jual akun mobile legends", checked September 2026</li>

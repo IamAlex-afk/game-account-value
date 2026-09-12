@@ -162,6 +162,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -208,8 +216,25 @@
   <span>📦 <strong>350M+</strong> проданных копий — самая продаваемая видеоигра всех времён (подтверждено Mojang)</span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Цены</a>
+  <a href="#value">📊 Ценность</a>
+  <a href="#tips">🎮 Советы</a>
+  <a href="#scams">⚠️ Обманы</a>
+  <a href="#rules">❓ Правила</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">Другие материалы:</span>
+  <a href="./glossary.html">📖 Словарь терминов</a>
+  <a href="./account-trading-safety.html">🛡️ Гайд по безопасности</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Сравнение игр</a>
+  <a href="./methodology.html">🔬 Наша методология</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>Сколько реально стоит обычный аккаунт Minecraft?</h3>
 <div class="price-range">Обычные аккаунты: $0.50 – $632</div>
 <p>Живые листинги на Eldorado.gg идут от $0.50 (обычный код накидки для Java Edition) до $120 за аккаунт Hypixel с «10 накидками MVP+». Второй маркетплейс (igitems.com) показывает обычные аккаунты до ~$632 для тех, у кого ранг MVP+ на Hypixel, несколько накидок и высокий уровень Skyblock — стоимость здесь зависит от ранга на сервере и количества накидок, а не от никнейма.</p>
@@ -241,6 +266,7 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Живой рейтинг накидок по цене (mccapers.com, сентябрь 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape по $3. Накидки участников MINECON (2011-2016) и накидка сотрудников Mojang находятся в отдельном «музейном уровне» вне этого обычного рейтинга — их почти никогда не продают, именно поэтому Minecon 2011 остаётся самым упоминаемым именем, а не самой высокой ценой в списке.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>Что реально определяет стоимость аккаунта Minecraft?</h3>
 <ul>
   <li>Длина никнейма — короче значит намного дороже</li>
@@ -256,14 +282,17 @@
   <li>Если у тебя есть накидка Minecon, помни, что её нельзя перенести на новый аккаунт — она навсегда привязана к твоему</li>
 </ul>
 
+<span id="scams" class="anchor-target"></span>
 <h3>Какие самые частые обманы при торговле никнеймами Minecraft?</h3>
 <div class="risk-box">
   <p>Обман «захват никнейма», когда продавец обещает освободить никнейм в определённую дату для покупателя, а сам забирает его раньше или не освобождает вовсе; и простой обман «оплата без доставки» на Discord-маркетплейсах без эскроу. Поскольку передача аккаунтов Minecraft официально не поддерживается Mojang/Microsoft, разрешения споров при неудачной сделке нет.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Нарушает ли правила Mojang торговля аккаунтами Minecraft?</h3>
 <p>Да — условия использования Minecraft запрещают передачу аккаунтов за реальные деньги, и Mojang/Microsoft может заблокировать аккаунты, замеченные в неавторизованной передаче.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Гайд для игроков: есть ли реальный угол «как играть лучше» для Minecraft?</h3>
 <p>Этот раздел — про улучшение своей игры, а не стоимость аккаунта на продажу. В отличие от игр с единой рейтинговой лестницей, Minecraft делится на по-настоящему отдельные сообщества со своей реальной метой: спидраннинг и конкурентные PvP-серверы.</p>
 <p>У спидраннинга есть авторитетный источник (таблицы лидеров speedrun.com), но в нашем собственном исследовании мы наткнулись на противоречащие друг другу второстепенные источники о том, кто реально держит текущий мировой рекорд в категории Any% Random Seed Glitchless (RSG) — один источник называет «lowkey» с 6:50, другой — «Skycrab» с 6:39 — поэтому вместо того чтобы выбрать один вариант, мы отмечаем это расхождение, а не выдаём один из них за факт. Что точно устойчиво: сам маршрут категории всегда один и тот же — найти деревню или обломки корабля для ранних ресурсов, попасть в Нижний мир за жезлами ифрита, найти Крепость и завершить бой в Энде, именно в этом порядке.</p>
@@ -285,14 +314,6 @@
   <a href="./genshin-impact.html">Genshin Impact</a>
   <a href="./mobile-legends.html">Mobile Legends</a>
   <a href="./fortnite.html">Fortnite</a>
-</div>
-
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">Другие материалы:</p>
-  <a href="./glossary.html">Словарь терминов</a>
-  <a href="./account-trading-safety.html">Гайд по безопасности и обманам</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Сравнение игр</a>
-  <a href="./methodology.html">Наша методология</a>
 </div>
 
 <section class="sources-list">

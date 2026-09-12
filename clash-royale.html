@@ -148,6 +148,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -194,8 +202,25 @@
   <span>📦 <strong>450M+</strong> total downloads</span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Prices</a>
+  <a href="#value">📊 What Drives Value</a>
+  <a href="#tips">🎮 Player Tips</a>
+  <a href="#scams">⚠️ Scams</a>
+  <a href="#rules">❓ Rules</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">More guides:</span>
+  <a href="./glossary.html">📖 Terms Glossary</a>
+  <a href="./account-trading-safety.html">🛡️ Scam &amp; Safety Guide</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Compare All Games</a>
+  <a href="./methodology.html">🔬 Our Methodology</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>How much is a Clash Royale account worth?</h3>
 <div class="price-range">Real market range: $0.50 – $600+ (average asking ~$82-107)</div>
 <p>Live listings on Eldorado.gg run from $0.50 for a starter account up to $600 for a "full max" account. A larger aggregate market (igitems.com, 852 listings) shows the average asking price recently moved from $81.89 to $107.20 — up nearly 31% — while sold prices ran about 21% below asking, meaning buyers are negotiating hard even as sellers ask for more.</p>
@@ -210,6 +235,7 @@
 </table>
 <p style="font-size:13px; color:var(--muted);">Distribution and King Tower tiers from igitems.com's own market report, September 2026 — see sources.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>What actually determines a Clash Royale account's value?</h3>
 <p><strong>Checked directly against the 10 highest-priced live listings: 9 of them named zero specific cosmetics.</strong> Titles were built entirely around King Tower level, trophy count, and evolution count (e.g. "KT 16🏆13K🏆14 EVO+(4 OSK)🔮60 Emotes"). Only one listing named a specific emote ("Goblin Kiss Trophy"), a single mention, not a repeated pattern. The real drivers are:</p>
 <ul>
@@ -227,17 +253,20 @@
   <li>Push ladder rank consistently around season reset rather than only at the end</li>
 </ul>
 
+<span id="scams" class="anchor-target"></span>
 <h3>What are the biggest scams in Clash Royale account trading?</h3>
 <div class="risk-box">
   <p>Fake escrow services on Discord that vanish after payment, and "trial before you buy" scams where a seller lets a buyer log in temporarily then changes the password back and disappears with the funds. Supercell does not mediate or reverse either kind of loss.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Is trading Clash Royale accounts against the rules?</h3>
 <p>Yes — Supercell's Terms of Service prohibit account sales and transfers, and detected trades can result in a permanent, unappealable ban.</p>
 
 <h3>Where do these listings actually come from?</h3>
 <p>Eldorado.gg and igitems.com host public seller listings with asking prices — the closest available approximation of real market pricing, though asking prices rather than confirmed sales.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Player guide: what's the current meta, and who actually plays at the top level?</h3>
 <p>This section is for improving your own play, not your account's resale value. As of August 2026, <a href="https://royaleapi.com/decks/popular?lang=en&amp;type=Ladder&amp;time=7d" target="_blank" rel="noopener">RoyaleAPI</a>'s live ladder data and community guides (Gaming ProMax, TrophyCoach) cite Evo Royal Giant Fisherman (~56% win rate) and PEKKA Bridge Spam (~61%+ in the top 1,000) as leading decks, alongside Hog Cycle, Goblin Barrel Bait, and Elite Barbarians Evolution; the "Hog 2.6 Cycle" archetype has stayed part of the meta continuously since 2017. Two real balance changes reshaped the meta this year: a June 2026 patch cut crown-tower damage on Fireball/Rocket/Arrows/Poison/Log (weakening spell-chip decks), and an August 2026 patch nerfed all three Spirit cards so none can solo a tower.</p>
 <p>The highest-earning competitive player is <strong><a href="https://en.wikipedia.org/wiki/Mohamed_Light" target="_blank" rel="noopener">Mohamed Light</a></strong>, a 3-time CRL World Champion (2022, 2024, 2025) with roughly $960,000 in career earnings. Clash Royale is a touchscreen tap-timing game rather than an aim-based one, so sensitivity settings simply aren't part of its competitive culture.</p>
@@ -260,18 +289,10 @@
   <a href="./minecraft.html">Minecraft</a>
 </div>
 
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">More resources:</p>
-  <a href="./glossary.html">Terms Glossary</a>
-  <a href="./account-trading-safety.html">Scam &amp; Safety Guide</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Cross-Game Comparison</a>
-  <a href="./methodology.html">Our Research Methodology</a>
-</div>
-
 <section class="sources-list">
   <h2 style="font-size:15px; color:var(--text); margin-bottom:10px;">Sources</h2>
   <ul>
-    <li>Player counts, downloads, release dates: Business of Apps, Udonis, DemandSage — specialist trackers, compared where sources diverge</li>
+    <li>Player counts, downloads, release dates: Business of Apps, Udonis, DemandSage</li>
     <li>igitems.com — <a href="https://igitems.com/clash-royale-account" target="_blank" rel="noopener">Clash Royale account market report</a>, checked September 2026</li>
     <li>Eldorado.gg — <a href="https://www.eldorado.gg/clash-royale-accounts/a/52-1-0" target="_blank" rel="noopener">Clash Royale account listings</a>, checked September 2026</li>
   </ul>

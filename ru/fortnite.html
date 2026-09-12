@@ -154,6 +154,14 @@
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
   .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
   .back-btn a:hover { border-color: var(--border-strong); }
+  .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .anchor-target { display: block; scroll-margin-top: 128px; }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -200,8 +208,25 @@
   <span>🌍 Больше всего в <strong>США (~21%)</strong>, Индонезии, Бразилии</span>
 </div>
 
+<div class="section-nav">
+  <a href="#pricing">💰 Цены</a>
+  <a href="#value">📊 Ценность</a>
+  <a href="#tips">🎮 Советы</a>
+  <a href="#scams">⚠️ Обманы</a>
+  <a href="#rules">❓ Правила</a>
+</div>
+
+<div class="resources-callout">
+  <span class="resources-label">Другие материалы:</span>
+  <a href="./glossary.html">📖 Словарь терминов</a>
+  <a href="./account-trading-safety.html">🛡️ Гайд по безопасности</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Сравнение игр</a>
+  <a href="./methodology.html">🔬 Наша методология</a>
+</div>
+
 <div class="article-body">
 
+<span id="pricing" class="anchor-target"></span>
 <h3>Сколько реально стоит аккаунт Fortnite?</h3>
 <div class="price-range">Реальный диапазон на рынке: $10.90 – $1,100 (средняя запрашиваемая цена ~$59)</div>
 <p>Живые листинги на Eldorado.gg идут от $10.90 (30 скинов, без заметных эксклюзивов) до $1,100 за PC-аккаунт «OG» со скинами Ghoul Trooper и Travis Scott. Более крупный агрегированный рынок (igitems.com, 932 листинга) показывает среднюю запрашиваемую цену $59.37, упавшую на 17.8% за 90 дней, поскольку прирост новых листингов опережает спрос.</p>
@@ -234,6 +259,7 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);"><a href="https://fortnite.fandom.com/wiki/Aerial_Assault_Trooper" target="_blank" rel="noopener">Aerial Assault Trooper</a> — скин из старого заголовка «$90,000 аккаунт» — не встречается ни в одном из сегодняшних топ-10 живых листингов; относитесь к этой цифре как к исторической, а не текущей.</p>
 
+<span id="value" class="anchor-target"></span>
 <h3>Что реально определяет стоимость аккаунта Fortnite?</h3>
 <ul>
   <li>Владение одним или несколькими подтверждёнными выше высокоспросовыми скинами эры сезонов 1-3</li>
@@ -249,14 +275,17 @@
   <li>Следить, какие предметы помечены «в хранилище» — именно они держат интерес к перепродаже</li>
 </ul>
 
+<span id="scams" class="anchor-target"></span>
 <h3>Какие самые частые обманы при торговле аккаунтами Fortnite?</h3>
 <div class="risk-box">
   <p>Мошенничество с украденными картами особенно распространено при торговле аккаунтами Fortnite: покупатель платит украденной картой, получает аккаунт, а платёж отменяется недели позже — продавец остаётся и без денег, и без доступа после того, как покупатель меняет пароль. Фейковые сайты «проверки скинов», крадущие данные Epic Games, также широко распространены.</p>
 </div>
 
+<span id="rules" class="anchor-target"></span>
 <h3>Нарушает ли правила торговля аккаунтами Fortnite?</h3>
 <p>Да — условия использования Epic Games прямо запрещают продажу, покупку или передачу аккаунтов, а подтверждённые сделки могут привести к безвозвратной блокировке.</p>
 
+<span id="tips" class="anchor-target"></span>
 <h3>Гайд для игроков: какие настройки и техники строительства реально используют про-игроки?</h3>
 <p>Этот раздел — про улучшение своей игры, а не стоимость аккаунта на продажу. Опубликованные настройки оборудования/DPI для именных про-игроков (источник: <a href="https://www.setup.gg/news/fortnite-pro-settings-guide-2026-dpi-sensitivity-gear/" target="_blank" rel="noopener">setup.gg</a>, 2026):</p>
 <table class="tier-table">
@@ -284,14 +313,6 @@
   <a href="./genshin-impact.html">Genshin Impact</a>
   <a href="./mobile-legends.html">Mobile Legends</a>
   <a href="./minecraft.html">Minecraft</a>
-</div>
-
-<div class="other-games" style="padding-top:0;">
-  <p style="color:var(--muted); margin-bottom:8px;">Другие материалы:</p>
-  <a href="./glossary.html">Словарь терминов</a>
-  <a href="./account-trading-safety.html">Гайд по безопасности и обманам</a>
-  <a href="./which-game-accounts-are-most-valuable.html">Сравнение игр</a>
-  <a href="./methodology.html">Наша методология</a>
 </div>
 
 <section class="sources-list">
