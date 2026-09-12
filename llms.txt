@@ -68,6 +68,20 @@ English, Russian, Spanish, Portuguese, Turkish, Arabic, Indonesian, French, Germ
 Each certificate has a unique Audit ID (format GW-YYYYMMDD-XXXXXXXX).
 Verify any certificate at: https://t.me/GameAccountValue_Bot?start=verify_AUDITID
 
+## Research Content (Website)
+
+Beyond the bot, the website publishes original market research — real marketplace price data cross-checked across multiple platforms and regions, not estimates. Available in English and Russian (more languages in progress):
+
+- Per-game market reports (price ranges, real confirmed value drivers, scam risks) for: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite, Minecraft — https://iamalex-afk.github.io/game-account-value/market-report.html
+- Glossary of account-trading terms (OG, smurf, reroll, Full Max/Rushed, escrow, chargeback, and 10+ more) — https://iamalex-afk.github.io/game-account-value/glossary.html
+- Account trading scams & safety guide (real scam patterns per game) — https://iamalex-afk.github.io/game-account-value/account-trading-safety.html
+- Cross-game price comparison ("which game has the most valuable accounts") — https://iamalex-afk.github.io/game-account-value/which-game-accounts-are-most-valuable.html
+- Research methodology (sources, verification standard, corrections log) — https://iamalex-afk.github.io/game-account-value/methodology.html
+
+Russian versions of the same pages are at the equivalent /ru/ path (e.g. /ru/market-report.html).
+
+Every price claim traces to a specific marketplace listing checked on a specific date, cited on the relevant page. Where no reliable repeated evidence was found for a claim (e.g. no confirmed named-skin value driver in 4 of the 9 games), the page states that explicitly rather than guessing.
+
 ## Links
 
 - Bot: https://t.me/GameAccountValue_Bot
