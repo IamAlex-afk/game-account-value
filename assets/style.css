@@ -381,20 +381,30 @@ footer a:hover { color: var(--gold); }
 .value-calc input[type="range"]::-webkit-slider-runnable-track { height: 5px; border-radius: 3px; background: transparent; }
 .value-calc input[type="range"]::-moz-range-track { height: 5px; border-radius: 3px; background: transparent; }
 .value-calc input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; appearance: none; width: 28px; height: 32px; margin-top: -13px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='32' viewBox='0 0 28 32'%3E%3Cellipse cx='14' cy='29' rx='7' ry='2.5' fill='%23000000' opacity='0.35'/%3E%3Crect x='11.5' y='14' width='5' height='13' rx='2.5' fill='%23D4AF37'/%3E%3Ccircle cx='14' cy='10' r='9' fill='%23D4AF37' stroke='%23f2d989' stroke-width='1.5'/%3E%3Ccircle cx='11' cy='7' r='3' fill='%23f2d989' opacity='0.55'/%3E%3C/svg%3E");
+  -webkit-appearance: none; appearance: none; width: 32px; height: 36px; margin-top: -16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='36' viewBox='0 0 32 36'%3E%3Cellipse cx='16' cy='33' rx='8' ry='2.5' fill='%23000000' opacity='0.35'/%3E%3Crect x='13' y='15' width='6' height='15' rx='3' fill='%23D4AF37'/%3E%3Ccircle cx='16' cy='11' r='10' fill='%23D4AF37' stroke='%23f2d989' stroke-width='1.5'/%3E%3Ccircle cx='12.5' cy='7.5' r='3.3' fill='%23f2d989' opacity='0.55'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-size: contain; cursor: grab;
   transition: transform .12s ease-out;
 }
 .value-calc input[type="range"]::-moz-range-thumb {
-  width: 28px; height: 32px; border: none; border-radius: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='32' viewBox='0 0 28 32'%3E%3Cellipse cx='14' cy='29' rx='7' ry='2.5' fill='%23000000' opacity='0.35'/%3E%3Crect x='11.5' y='14' width='5' height='13' rx='2.5' fill='%23D4AF37'/%3E%3Ccircle cx='14' cy='10' r='9' fill='%23D4AF37' stroke='%23f2d989' stroke-width='1.5'/%3E%3Ccircle cx='11' cy='7' r='3' fill='%23f2d989' opacity='0.55'/%3E%3C/svg%3E");
+  width: 32px; height: 36px; border: none; border-radius: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='36' viewBox='0 0 32 36'%3E%3Cellipse cx='16' cy='33' rx='8' ry='2.5' fill='%23000000' opacity='0.35'/%3E%3Crect x='13' y='15' width='6' height='15' rx='3' fill='%23D4AF37'/%3E%3Ccircle cx='16' cy='11' r='10' fill='%23D4AF37' stroke='%23f2d989' stroke-width='1.5'/%3E%3Ccircle cx='12.5' cy='7.5' r='3.3' fill='%23f2d989' opacity='0.55'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-size: contain; background-color: transparent; cursor: grab;
 }
 .value-calc input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.12); cursor: grabbing; }
 .value-calc input[type="range"]:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--emerald); outline-offset: 3px; border-radius: 50%; }
 .value-calc input[type="range"]:focus-visible::-moz-range-thumb { outline: 2px solid var(--emerald); outline-offset: 3px; border-radius: 50%; }
 @media (prefers-reduced-motion: reduce) { .value-calc input[type="range"]::-webkit-slider-thumb { transition: none; } }
+/* WCAG 2.5.5: touch targets need to be at least 44x44 CSS px — the 32x36
+   size above is tuned for mouse precision, so bump it up specifically on
+   coarse (touch) pointers rather than penalizing desktop's look for it. */
+@media (pointer: coarse) {
+  .value-calc input[type="range"] { height: 8px; }
+  .value-calc input[type="range"]::-webkit-slider-thumb {
+    width: 44px; height: 50px; margin-top: -21px;
+  }
+  .value-calc input[type="range"]::-moz-range-thumb { width: 44px; height: 50px; }
+}
 .value-calc .vc-select { width: 100%; background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--border); padding: 10px 12px; border-radius: var(--radius-sm); font-size: 14px; cursor: pointer; }
 .value-calc .vc-select option { background: var(--card-solid); }
 .value-calc .vc-checkbox-heading { display: block; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
