@@ -47,7 +47,7 @@
         "mobile-legends": { skins: "Total skins", rank: "Rank" },
         "fortnite": { skins: "Total skins", ogItems: "Rare OG items" },
         "minecraft": { type: "Account type" },
-        "roblox": { age: "Account age", robux: "Robux balance", limiteds: "Limited items" }
+        "roblox": { age: "Account age", robux: "Robux balance", limiteds: "Common Limited items (not named rares)" }
       },
       select: { "clash-of-clans": { label: "Upgrade type", options: [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " " + (v === 1 ? "year" : "years"); },
@@ -66,7 +66,7 @@
         "mobile-legends": { skins: "Всего скинов", rank: "Ранг" },
         "fortnite": { skins: "Всего скинов", ogItems: "Редких OG-предметов" },
         "minecraft": { type: "Тип аккаунта" },
-        "roblox": { age: "Возраст аккаунта", robux: "Баланс Robux", limiteds: "Предметов Limited" }
+        "roblox": { age: "Возраст аккаунта", robux: "Баланс Robux", limiteds: "Обычных Limited-предметов (не именных редких)" }
       },
       select: { "clash-of-clans": { label: "Тип прокачки", options: [["full", "Full Max"], ["standard", "Стандартный"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " " + (v === 1 ? "год" : (v >= 2 && v <= 4 ? "года" : "лет")); },
@@ -85,7 +85,7 @@
         "mobile-legends": { skins: "Total skin", rank: "Rank" },
         "fortnite": { skins: "Total skin", ogItems: "Item OG langka" },
         "minecraft": { type: "Jenis akun" },
-        "roblox": { age: "Usia akun", robux: "Saldo Robux", limiteds: "Item Limited" }
+        "roblox": { age: "Usia akun", robux: "Saldo Robux", limiteds: "Item Limited biasa (bukan yang langka bernama)" }
       },
       select: { "clash-of-clans": { label: "Jenis upgrade", options: [["full", "Full Max"], ["standard", "Standar"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " tahun"; },
@@ -104,7 +104,7 @@
         "mobile-legends": { skins: "Total de skins", rank: "Rank" },
         "fortnite": { skins: "Total de skins", ogItems: "Itens OG raros" },
         "minecraft": { type: "Tipo de conta" },
-        "roblox": { age: "Idade da conta", robux: "Saldo de Robux", limiteds: "Itens Limited" }
+        "roblox": { age: "Idade da conta", robux: "Saldo de Robux", limiteds: "Itens Limited comuns (não os raros nomeados)" }
       },
       select: { "clash-of-clans": { label: "Tipo de evolução", options: [["full", "Full Max"], ["standard", "Padrão"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " " + (v === 1 ? "ano" : "anos"); },
