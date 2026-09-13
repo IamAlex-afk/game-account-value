@@ -344,6 +344,7 @@
   <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Anônimo</div></div>
   <div class="stat"><div class="stat-num">1 grátis</div><div class="stat-lbl">estimativa por dia</div></div>
   <div class="stat"><div class="stat-num">&lt;60s</div><div class="stat-lbl">até o resultado</div></div>
+  <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Sem cadastro necessário</div></div>
 </div>
 
 <!-- DIFFERENTIATION -->
@@ -372,6 +373,21 @@
     <a class="game-card" href="fortnite.html"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
     <a class="game-card" href="minecraft.html"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
     <div class="game-card coming-soon"><div class="game-icon" aria-hidden="true">🔜</div><div class="game-name">Mais jogos em breve</div></div>
+  </div>
+</section>
+
+<!-- LIVE CALCULATOR -->
+<section class="section">
+  <h2 class="section-title">Estime de graça — direto aqui</h2>
+  <p class="section-sub">Sem cadastro. Nada é digitado ou enviado — todo o cálculo roda no seu navegador.</p>
+  <div class="value-calc" id="vc-home" data-switcher style="max-width: 480px; margin: 0 auto;">
+    <select class="vc-switcher" aria-label="Escolher um jogo"></select>
+    <div class="vc-sliders"></div>
+    <div class="vc-result">
+      <strong class="vc-result-value">—</strong>
+      <span class="vc-result-note" data-copied="Copiado!">Estimativa aproximada, não é uma avaliação exata</span>
+      <button type="button" class="vc-share-btn">🔗 Compartilhar resultado</button>
+    </div>
   </div>
 </section>
 
@@ -528,6 +544,7 @@
 
 <script type="module" src="../assets/nav.js" defer></script>
 <script src="../assets/cursor-trail.js" defer></script>
+<script src="../assets/calculators.js" defer></script>
 <script src="../assets/tilt.js" defer></script>
 <script src="../assets/interactions.js" defer></script>
 <script src="../assets/counter.js" defer></script>

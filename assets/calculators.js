@@ -2,6 +2,8 @@
   "use strict";
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
+  if (["en", "ru", "id", "pt"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -31,15 +33,105 @@
     return "$" + rounded.toLocaleString("en-US");
   }
 
+  // --- i18n --------------------------------------------------------------
+  // Only UI text is localized here. All scoring/pricing math below is
+  // language-independent and identical across en/ru/id/pt.
+  var STR = {
+    en: {
+      sliders: {
+        "brawl-stars": { trophies: "Trophies (cups)", maxed: "Power Level 11 brawlers" },
+        "clash-of-clans": { th: "Town Hall level" },
+        "clash-royale": { kt: "King Tower level", maxed: "Max-level cards" },
+        "free-fire": { rank: "Rank", bundles: "Rare bundles/pets" },
+        "genshin-impact": { fivestars: "5★ characters", c6: "Characters with C6" },
+        "mobile-legends": { skins: "Total skins", rank: "Rank" },
+        "fortnite": { skins: "Total skins", ogItems: "Rare OG items" },
+        "minecraft": { type: "Account type" },
+        "roblox": { age: "Account age", robux: "Robux balance", limiteds: "Limited items" }
+      },
+      select: { "clash-of-clans": { label: "Upgrade type", options: [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "year" : "years"); },
+      minecraftTypes: ["Regular account", "MVP+/Hypixel, rare cape", "Minecon cape holder", "2-char name (alphanumeric)"],
+      confidence: { low: "Low", medium: "Medium", high: "High" },
+      confidencePrefix: "Confidence: ",
+      copiedFallback: "Copied!"
+    },
+    ru: {
+      sliders: {
+        "brawl-stars": { trophies: "Трофеи (кубки)", maxed: "Бойцы Power Level 11" },
+        "clash-of-clans": { th: "Уровень Ратуши (Town Hall)" },
+        "clash-royale": { kt: "Уровень King Tower", maxed: "Карт максимального уровня" },
+        "free-fire": { rank: "Ранг", bundles: "Редких бандлов/питомцев" },
+        "genshin-impact": { fivestars: "5★ персонажей", c6: "Персонажей с C6" },
+        "mobile-legends": { skins: "Всего скинов", rank: "Ранг" },
+        "fortnite": { skins: "Всего скинов", ogItems: "Редких OG-предметов" },
+        "minecraft": { type: "Тип аккаунта" },
+        "roblox": { age: "Возраст аккаунта", robux: "Баланс Robux", limiteds: "Предметов Limited" }
+      },
+      select: { "clash-of-clans": { label: "Тип прокачки", options: [["full", "Full Max"], ["standard", "Стандартный"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "год" : (v >= 2 && v <= 4 ? "года" : "лет")); },
+      minecraftTypes: ["Обычный аккаунт", "MVP+/Hypixel, редкий скин плаща", "Держатель плаща Minecon", "2-симв. ник (алфавитно-цифровой)"],
+      confidence: { low: "Низкая", medium: "Средняя", high: "Высокая" },
+      confidencePrefix: "Уверенность: ",
+      copiedFallback: "Скопировано!"
+    },
+    id: {
+      sliders: {
+        "brawl-stars": { trophies: "Trofi (cup)", maxed: "Brawler Power Level 11" },
+        "clash-of-clans": { th: "Level Town Hall" },
+        "clash-royale": { kt: "Level King Tower", maxed: "Kartu level maksimum" },
+        "free-fire": { rank: "Rank", bundles: "Bundle/pet langka" },
+        "genshin-impact": { fivestars: "Karakter 5★", c6: "Karakter dengan C6" },
+        "mobile-legends": { skins: "Total skin", rank: "Rank" },
+        "fortnite": { skins: "Total skin", ogItems: "Item OG langka" },
+        "minecraft": { type: "Jenis akun" },
+        "roblox": { age: "Usia akun", robux: "Saldo Robux", limiteds: "Item Limited" }
+      },
+      select: { "clash-of-clans": { label: "Jenis upgrade", options: [["full", "Full Max"], ["standard", "Standar"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " tahun"; },
+      minecraftTypes: ["Akun biasa", "MVP+/Hypixel, cape langka", "Pemilik cape Minecon", "Nama 2 karakter (alfanumerik)"],
+      confidence: { low: "Rendah", medium: "Sedang", high: "Tinggi" },
+      confidencePrefix: "Keyakinan: ",
+      copiedFallback: "Disalin!"
+    },
+    pt: {
+      sliders: {
+        "brawl-stars": { trophies: "Troféus (copas)", maxed: "Brawlers Power Level 11" },
+        "clash-of-clans": { th: "Nível do Town Hall" },
+        "clash-royale": { kt: "Nível da King Tower", maxed: "Cartas no nível máximo" },
+        "free-fire": { rank: "Rank", bundles: "Bundles/pets raros" },
+        "genshin-impact": { fivestars: "Personagens 5★", c6: "Personagens com C6" },
+        "mobile-legends": { skins: "Total de skins", rank: "Rank" },
+        "fortnite": { skins: "Total de skins", ogItems: "Itens OG raros" },
+        "minecraft": { type: "Tipo de conta" },
+        "roblox": { age: "Idade da conta", robux: "Saldo de Robux", limiteds: "Itens Limited" }
+      },
+      select: { "clash-of-clans": { label: "Tipo de evolução", options: [["full", "Full Max"], ["standard", "Padrão"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "ano" : "anos"); },
+      minecraftTypes: ["Conta comum", "MVP+/Hypixel, cape raro", "Dono de cape Minecon", "Nick de 2 caracteres (alfanumérico)"],
+      confidence: { low: "Baixa", medium: "Média", high: "Alta" },
+      confidencePrefix: "Confiança: ",
+      copiedFallback: "Copiado!"
+    }
+  };
+  var T = STR[LANG];
+
+  // Rank ladders are the games' own official English rank names — kept
+  // identical across languages on purpose, the same way "Town Hall" or
+  // "C6" isn't translated either.
+  var FREE_FIRE_RANKS = ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Heroic", "Grandmaster"];
+  var ML_RANKS = ["Warrior", "Elite", "Master", "Grandmaster", "Epic", "Legend", "Mythical Glory"];
+
   // Tier vocabulary matches the bot's PDF certificate (core/valuation.py:
-  // STARTER/CASUAL/PRO/COLLECTOR), so the site and the bot speak the same
-  // language. The boundaries themselves are this widget's own score
-  // quartiles, not a byte-for-byte copy of the bot's per-game conditions —
-  // those depend on named items (specific skins, badges) this slider-only
-  // widget deliberately doesn't collect. Two games (Clash of Clans by TH,
-  // Genshin by C6 count) happen to line up with the bot's real thresholds
-  // because their score IS that same slider; the rest are an honest
-  // approximation, not a claimed 1:1 match.
+  // STARTER/CASUAL/PRO/COLLECTOR — kept in English in every language, same
+  // as the bot does), so the site and the bot speak the same language. The
+  // boundaries themselves are this widget's own score quartiles, not a
+  // byte-for-byte copy of the bot's per-game conditions — those depend on
+  // named items (specific skins, badges) this slider-only widget
+  // deliberately doesn't collect. Two games (Clash of Clans by TH, Genshin
+  // by C6 count) happen to line up with the bot's real thresholds because
+  // their score IS that same slider; the rest are an honest approximation,
+  // not a claimed 1:1 match.
   function tierFromScore(score) {
     if (score >= 0.75) return { label: "COLLECTOR", cls: "tier-collector" };
     if (score >= 0.5) return { label: "PRO", cls: "tier-pro" };
@@ -48,22 +140,20 @@
   }
 
   function confidenceLabel(ratio) {
-    if (ratio >= 0.8) return "Высокая";
-    if (ratio >= 0.4) return "Средняя";
-    return "Низкая";
+    if (ratio >= 0.8) return T.confidence.high;
+    if (ratio >= 0.4) return T.confidence.medium;
+    return T.confidence.low;
   }
 
-  // --- per-game config -------------------------------------------------
-  // `score` (0..1) drives the scale bar + tier badge. `compute` returns the
-  // actual [low, high] range shown to the user. Every bracket/table value
-  // is taken directly from that game's own "Real Market Prices" table on
-  // the same page.
+  // --- per-game config -----------------------------------------------
+  // Every bracket/table value is taken directly from that game's own
+  // "Real Market Prices" table on the same page.
   var GAMES = {
     "brawl-stars": {
       name: "Brawl Stars",
       sliders: [
-        { key: "trophies", label: "Трофеи (кубки)", min: 5000, max: 45000, step: 1000, fmt: function (v) { return v.toLocaleString("en-US"); } },
-        { key: "maxed", label: "Бойцы Power Level 11", min: 0, max: 85, step: 1, fmt: function (v) { return v; } }
+        { key: "trophies", min: 5000, max: 45000, step: 1000, fmt: function (v) { return v.toLocaleString("en-US"); } },
+        { key: "maxed", min: 0, max: 85, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) { return 0.5 * norm(v.trophies, 5000, 45000) + 0.5 * norm(v.maxed, 0, 85); },
       compute: function (v, score) { return interpBrackets(score, [[3, 15], [15, 50], [50, 150], [150, 300]]); }
@@ -71,9 +161,9 @@
     "clash-of-clans": {
       name: "Clash of Clans",
       sliders: [
-        { key: "th", label: "Уровень Ратуши (Town Hall)", min: 13, max: 18, step: 1, fmt: function (v) { return "TH" + v; } }
+        { key: "th", min: 13, max: 18, step: 1, fmt: function (v) { return "TH" + v; } }
       ],
-      select: { key: "type", label: "Тип прокачки", options: [["full", "Full Max"], ["standard", "Стандартный"], ["rushed", "Rushed"]] },
+      hasSelect: true,
       score: function (v) { return norm(v.th, 13, 18); },
       compute: function (v) {
         var table = {
@@ -90,8 +180,8 @@
     "clash-royale": {
       name: "Clash Royale",
       sliders: [
-        { key: "kt", label: "Уровень King Tower", min: 9, max: 15, step: 1, fmt: function (v) { return "KT" + v; } },
-        { key: "maxed", label: "Карт максимального уровня", min: 0, max: 40, step: 1, fmt: function (v) { return v; } }
+        { key: "kt", min: 9, max: 15, step: 1, fmt: function (v) { return "KT" + v; } },
+        { key: "maxed", min: 0, max: 40, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) { return 0.5 * norm(v.kt, 9, 15) + 0.5 * norm(v.maxed, 0, 40); },
       compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]); }
@@ -99,10 +189,8 @@
     "free-fire": {
       name: "Free Fire",
       sliders: [
-        { key: "rank", label: "Ранг", min: 1, max: 7, step: 1, fmt: function (v) {
-          return ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Heroic", "Grandmaster"][v - 1];
-        } },
-        { key: "bundles", label: "Редких бандлов/питомцев", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
+        { key: "rank", min: 1, max: 7, step: 1, fmt: function (v) { return FREE_FIRE_RANKS[v - 1]; } },
+        { key: "bundles", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) { return 0.5 * norm(v.rank, 1, 7) + 0.5 * norm(v.bundles, 0, 10); },
       compute: function (v, score) { return interpBrackets(score, [[0.73, 15], [15, 50], [50, 150], [150, 300]]); }
@@ -110,8 +198,8 @@
     "genshin-impact": {
       name: "Genshin Impact",
       sliders: [
-        { key: "fivestars", label: "5★ персонажей", min: 0, max: 20, step: 1, fmt: function (v) { return v; } },
-        { key: "c6", label: "Персонажей с C6", min: 0, max: 20, step: 1, fmt: function (v) { return v; } }
+        { key: "fivestars", min: 0, max: 20, step: 1, fmt: function (v) { return v; } },
+        { key: "c6", min: 0, max: 20, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) {
         if (v.fivestars < 3) return 0;
@@ -125,10 +213,8 @@
     "mobile-legends": {
       name: "Mobile Legends",
       sliders: [
-        { key: "skins", label: "Всего скинов", min: 0, max: 400, step: 10, fmt: function (v) { return v; } },
-        { key: "rank", label: "Ранг", min: 1, max: 7, step: 1, fmt: function (v) {
-          return ["Warrior", "Elite", "Master", "Grandmaster", "Epic", "Legend", "Mythical Glory"][v - 1];
-        } }
+        { key: "skins", min: 0, max: 400, step: 10, fmt: function (v) { return v; } },
+        { key: "rank", min: 1, max: 7, step: 1, fmt: function (v) { return ML_RANKS[v - 1]; } }
       ],
       score: function (v) { return 0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7); },
       compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]); }
@@ -136,8 +222,8 @@
     "fortnite": {
       name: "Fortnite",
       sliders: [
-        { key: "skins", label: "Всего скинов", min: 0, max: 250, step: 5, fmt: function (v) { return v; } },
-        { key: "ogItems", label: "Редких OG-предметов", min: 0, max: 5, step: 1, fmt: function (v) { return v; } }
+        { key: "skins", min: 0, max: 250, step: 5, fmt: function (v) { return v; } },
+        { key: "ogItems", min: 0, max: 5, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) { return 0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5); },
       compute: function (v, score) { return interpBrackets(score, [[10.9, 15], [15, 50], [50, 150], [150, 1100]]); }
@@ -145,9 +231,7 @@
     "minecraft": {
       name: "Minecraft",
       sliders: [
-        { key: "type", label: "Тип аккаунта", min: 1, max: 4, step: 1, fmt: function (v) {
-          return ["Обычный аккаунт", "MVP+/Hypixel, редкий скин плаща", "Держатель плаща Minecon", "2-симв. ник (алфавитно-цифровой)"][v - 1];
-        } }
+        { key: "type", min: 1, max: 4, step: 1, fmt: function (v) { return T.minecraftTypes[v - 1]; } }
       ],
       score: function (v) { return norm(v.type, 1, 4); },
       compute: function (v) {
@@ -158,9 +242,9 @@
     "roblox": {
       name: "Roblox",
       sliders: [
-        { key: "age", label: "Возраст аккаунта", min: 0, max: 15, step: 1, fmt: function (v) { return v + " " + (v === 1 ? "год" : (v >= 2 && v <= 4 ? "года" : "лет")); } },
-        { key: "robux", label: "Баланс Robux", min: 0, max: 50000, step: 1000, fmt: function (v) { return v.toLocaleString("en-US") + " R$"; } },
-        { key: "limiteds", label: "Предметов Limited", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
+        { key: "age", min: 0, max: 15, step: 1, fmt: function (v) { return T.ageUnit(v); } },
+        { key: "robux", min: 0, max: 50000, step: 1000, fmt: function (v) { return v.toLocaleString("en-US") + " R$"; } },
+        { key: "limiteds", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) { return (norm(v.age, 0, 15) + norm(v.robux, 0, 50000) + norm(v.limiteds, 0, 10)) / 3; },
       compute: function (v, score) { return interpBrackets(score, [[0.5, 5], [5, 25], [25, 60]]); }
@@ -230,7 +314,7 @@
     var resultNote = root.querySelector(".vc-result-note");
 
     var state = {};
-    var totalInputs = (cfg.sliders || []).length + (cfg.select ? 1 : 0);
+    var totalInputs = (cfg.sliders || []).length + (cfg.hasSelect ? 1 : 0);
     var touched = new Set();
     var prevLo = null, prevHi = null;
 
@@ -246,16 +330,17 @@
       var tier = tierFromScore(score);
       els.tier.textContent = tier.label;
       els.tier.className = "vc-tier " + tier.cls;
-      els.confidence.textContent = "Уверенность: " + confidenceLabel(totalInputs ? touched.size / totalInputs : 1);
+      els.confidence.textContent = T.confidencePrefix + confidenceLabel(totalInputs ? touched.size / totalInputs : 1);
     }
 
     (cfg.sliders || []).forEach(function (s) {
+      var label = T.sliders[gameId][s.key];
       var field = document.createElement("div");
       field.className = "vc-field";
       var labelId = root.id + "-" + s.key + "-label";
       field.innerHTML =
         '<label for="' + root.id + "-" + s.key + '" id="' + labelId + '">' +
-        s.label + ': <strong class="vc-field-val"></strong></label>' +
+        label + ': <strong class="vc-field-val"></strong></label>' +
         '<input type="range" id="' + root.id + "-" + s.key + '" min="' + s.min +
         '" max="' + s.max + '" step="' + s.step + '" value="' + s.min +
         '" aria-labelledby="' + labelId + '">';
@@ -274,23 +359,24 @@
       });
     });
 
-    if (cfg.select) {
+    if (cfg.hasSelect) {
+      var selectCfg = T.select[gameId];
       var field = document.createElement("div");
       field.className = "vc-field";
-      var selId = root.id + "-" + cfg.select.key;
-      var html = '<label for="' + selId + '">' + cfg.select.label + "</label>" +
+      var selId = root.id + "-type";
+      var html = '<label for="' + selId + '">' + selectCfg.label + "</label>" +
         '<select id="' + selId + '" class="vc-select">';
-      cfg.select.options.forEach(function (opt) {
+      selectCfg.options.forEach(function (opt) {
         html += '<option value="' + opt[0] + '">' + opt[1] + "</option>";
       });
       html += "</select>";
       field.innerHTML = html;
       slidersWrap.appendChild(field);
       var select = field.querySelector("select");
-      state[cfg.select.key] = cfg.select.options[0][0];
+      state.type = selectCfg.options[0][0];
       select.addEventListener("change", function () {
-        touched.add(cfg.select.key);
-        state[cfg.select.key] = select.value;
+        touched.add("type");
+        state.type = select.value;
         recompute();
       });
     }
@@ -309,7 +395,7 @@
         } else if (navigator.clipboard) {
           navigator.clipboard.writeText(shareText).then(function () {
             var original = shareBtn.textContent;
-            shareBtn.textContent = resultNote.getAttribute("data-copied") || "Copied!";
+            shareBtn.textContent = resultNote.getAttribute("data-copied") || T.copiedFallback;
             setTimeout(function () { shareBtn.textContent = original; }, 1800);
           }).catch(function () {});
         }
