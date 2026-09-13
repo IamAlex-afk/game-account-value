@@ -52,6 +52,7 @@
       select: { "clash-of-clans": { label: "Upgrade type", options: [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " " + (v === 1 ? "year" : "years"); },
       minecraftTypes: ["Regular account", "MVP+/Hypixel, rare cape", "Minecon cape holder", "2-char name (alphanumeric)"],
+      checkboxHeading: "Named rare items (optional):",
       confidence: { low: "Low", medium: "Medium", high: "High" },
       confidencePrefix: "Confidence: ",
       copiedFallback: "Copied!"
@@ -71,6 +72,7 @@
       select: { "clash-of-clans": { label: "Тип прокачки", options: [["full", "Full Max"], ["standard", "Стандартный"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " " + (v === 1 ? "год" : (v >= 2 && v <= 4 ? "года" : "лет")); },
       minecraftTypes: ["Обычный аккаунт", "MVP+/Hypixel, редкий скин плаща", "Держатель плаща Minecon", "2-симв. ник (алфавитно-цифровой)"],
+      checkboxHeading: "Именные редкие предметы (опционально):",
       confidence: { low: "Низкая", medium: "Средняя", high: "Высокая" },
       confidencePrefix: "Уверенность: ",
       copiedFallback: "Скопировано!"
@@ -90,6 +92,7 @@
       select: { "clash-of-clans": { label: "Jenis upgrade", options: [["full", "Full Max"], ["standard", "Standar"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " tahun"; },
       minecraftTypes: ["Akun biasa", "MVP+/Hypixel, cape langka", "Pemilik cape Minecon", "Nama 2 karakter (alfanumerik)"],
+      checkboxHeading: "Item langka bernama (opsional):",
       confidence: { low: "Rendah", medium: "Sedang", high: "Tinggi" },
       confidencePrefix: "Keyakinan: ",
       copiedFallback: "Disalin!"
@@ -109,12 +112,25 @@
       select: { "clash-of-clans": { label: "Tipo de evolução", options: [["full", "Full Max"], ["standard", "Padrão"], ["rushed", "Rushed"]] } },
       ageUnit: function (v) { return v + " " + (v === 1 ? "ano" : "anos"); },
       minecraftTypes: ["Conta comum", "MVP+/Hypixel, cape raro", "Dono de cape Minecon", "Nick de 2 caracteres (alfanumérico)"],
+      checkboxHeading: "Itens raros nomeados (opcional):",
       confidence: { low: "Baixa", medium: "Média", high: "Alta" },
       confidencePrefix: "Confiança: ",
       copiedFallback: "Copiado!"
     }
   };
   var T = STR[LANG];
+
+  // Roblox named-item price adds — official Robux purchase cost x the
+  // $0.0035-0.004/Robux secondary rate used elsewhere on this page (not a
+  // live resale listing, an acquisition-cost proxy): Korblox Deathspeaker
+  // 17,000 R$, Headless Horseman 31,000 R$ (seasonal, Oct-only official
+  // sale), Violet Valkyrie 50,000 R$. Kept as ranges, not single points,
+  // same convention as every other bracket on this page.
+  var ROBLOX_RARE_ITEMS = [
+    { key: "korblox", name: "Korblox Deathspeaker", lo: 60, hi: 70 },
+    { key: "headless", name: "Headless Horseman", lo: 110, hi: 140 },
+    { key: "violet", name: "Violet Valkyrie", lo: 175, hi: 200 }
+  ];
 
   // Rank ladders are the games' own official English rank names — kept
   // identical across languages on purpose, the same way "Town Hall" or
@@ -246,8 +262,16 @@
         { key: "robux", min: 0, max: 50000, step: 1000, fmt: function (v) { return v.toLocaleString("en-US") + " R$"; } },
         { key: "limiteds", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
+      checkboxes: ROBLOX_RARE_ITEMS,
       score: function (v) { return (norm(v.age, 0, 15) + norm(v.robux, 0, 50000) + norm(v.limiteds, 0, 10)) / 3; },
-      compute: function (v, score) { return interpBrackets(score, [[0.5, 5], [5, 25], [25, 60]]); }
+      compute: function (v, score) {
+        var base = interpBrackets(score, [[0.5, 5], [5, 25], [25, 60]]);
+        var extraLo = 0, extraHi = 0;
+        ROBLOX_RARE_ITEMS.forEach(function (item) {
+          if (v[item.key]) { extraLo += item.lo; extraHi += item.hi; }
+        });
+        return [base[0] + extraLo, base[1] + extraHi];
+      }
     }
   };
 
@@ -314,7 +338,7 @@
     var resultNote = root.querySelector(".vc-result-note");
 
     var state = {};
-    var totalInputs = (cfg.sliders || []).length + (cfg.hasSelect ? 1 : 0);
+    var totalInputs = (cfg.sliders || []).length + (cfg.hasSelect ? 1 : 0) + (cfg.checkboxes ? cfg.checkboxes.length : 0);
     var touched = new Set();
     var prevLo = null, prevHi = null;
 
@@ -378,6 +402,31 @@
         touched.add("type");
         state.type = select.value;
         recompute();
+      });
+    }
+
+    if (cfg.checkboxes && cfg.checkboxes.length) {
+      var cbField = document.createElement("div");
+      cbField.className = "vc-field vc-checkbox-group";
+      var cbHtml = '<span class="vc-checkbox-heading">' + T.checkboxHeading + '</span>';
+      cfg.checkboxes.forEach(function (item, i) {
+        var cbId = root.id + "-cb-" + item.key;
+        cbHtml += '<label class="vc-checkbox" for="' + cbId + '">' +
+          '<input type="checkbox" id="' + cbId + '">' +
+          '<span>' + item.name + ' (+' + formatMoney(item.lo) + '–' + formatMoney(item.hi) + ')</span>' +
+          '</label>';
+      });
+      cbField.innerHTML = cbHtml;
+      slidersWrap.appendChild(cbField);
+      cfg.checkboxes.forEach(function (item) {
+        var cbId = root.id + "-cb-" + item.key;
+        var input = cbField.querySelector("#" + cbId);
+        state[item.key] = false;
+        input.addEventListener("change", function () {
+          touched.add(item.key);
+          state[item.key] = input.checked;
+          recompute();
+        });
       });
     }
 

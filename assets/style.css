@@ -377,6 +377,12 @@ footer a:hover { color: var(--gold); }
 .value-calc input[type="range"] { width: 100%; accent-color: var(--gold); height: 5px; cursor: pointer; }
 .value-calc .vc-select { width: 100%; background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--border); padding: 10px 12px; border-radius: var(--radius-sm); font-size: 14px; cursor: pointer; }
 .value-calc .vc-select option { background: var(--card-solid); }
+.value-calc .vc-checkbox-heading { display: block; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+.value-calc .vc-checkbox-group { display: flex; flex-direction: column; gap: 8px; }
+.value-calc .vc-checkbox { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 13px; cursor: pointer; transition: border-color .15s, background .15s; }
+.value-calc .vc-checkbox:hover { border-color: var(--border-strong); background: rgba(255,255,255,0.05); }
+.value-calc .vc-checkbox input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--gold); flex-shrink: 0; }
+.value-calc .vc-checkbox:has(input:checked) { border-color: var(--gold); background: rgba(212,175,55,0.08); }
 .value-calc .vc-result { margin-top: 20px; padding-top: 18px; border-top: 1px dashed var(--border); text-align: center; }
 .value-calc .vc-result-value { display: block; font-family: var(--serif); font-size: 30px; font-weight: 800; color: var(--emerald); margin-bottom: 4px; }
 .value-calc .vc-result-note { display: block; font-size: 12px; color: var(--muted); margin-bottom: 14px; }
