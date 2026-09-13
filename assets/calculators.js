@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   function lerp(t, a, b) { return a + (b - a) * t; }
 
   function norm(v, min, max) {
@@ -29,25 +31,50 @@
     return "$" + rounded.toLocaleString("en-US");
   }
 
-  // --- per-game compute functions -----------------------------------------
-  // Every bracket below is taken directly from that game's own "Real Market
-  // Prices" table on the same page — see the <table class="tier-table"> there.
+  // Tier vocabulary matches the bot's PDF certificate (core/valuation.py:
+  // STARTER/CASUAL/PRO/COLLECTOR), so the site and the bot speak the same
+  // language. The boundaries themselves are this widget's own score
+  // quartiles, not a byte-for-byte copy of the bot's per-game conditions —
+  // those depend on named items (specific skins, badges) this slider-only
+  // widget deliberately doesn't collect. Two games (Clash of Clans by TH,
+  // Genshin by C6 count) happen to line up with the bot's real thresholds
+  // because their score IS that same slider; the rest are an honest
+  // approximation, not a claimed 1:1 match.
+  function tierFromScore(score) {
+    if (score >= 0.75) return { label: "COLLECTOR", cls: "tier-collector" };
+    if (score >= 0.5) return { label: "PRO", cls: "tier-pro" };
+    if (score >= 0.25) return { label: "CASUAL", cls: "tier-casual" };
+    return { label: "STARTER", cls: "tier-starter" };
+  }
+
+  function confidenceLabel(ratio) {
+    if (ratio >= 0.8) return "Высокая";
+    if (ratio >= 0.4) return "Средняя";
+    return "Низкая";
+  }
+
+  // --- per-game config -------------------------------------------------
+  // `score` (0..1) drives the scale bar + tier badge. `compute` returns the
+  // actual [low, high] range shown to the user. Every bracket/table value
+  // is taken directly from that game's own "Real Market Prices" table on
+  // the same page.
   var GAMES = {
     "brawl-stars": {
+      name: "Brawl Stars",
       sliders: [
         { key: "trophies", label: "Трофеи (кубки)", min: 5000, max: 45000, step: 1000, fmt: function (v) { return v.toLocaleString("en-US"); } },
         { key: "maxed", label: "Бойцы Power Level 11", min: 0, max: 85, step: 1, fmt: function (v) { return v; } }
       ],
-      compute: function (v) {
-        var score = 0.5 * norm(v.trophies, 5000, 45000) + 0.5 * norm(v.maxed, 0, 85);
-        return interpBrackets(score, [[3, 15], [15, 50], [50, 150], [150, 300]]);
-      }
+      score: function (v) { return 0.5 * norm(v.trophies, 5000, 45000) + 0.5 * norm(v.maxed, 0, 85); },
+      compute: function (v, score) { return interpBrackets(score, [[3, 15], [15, 50], [50, 150], [150, 300]]); }
     },
     "clash-of-clans": {
+      name: "Clash of Clans",
       sliders: [
         { key: "th", label: "Уровень Ратуши (Town Hall)", min: 13, max: 18, step: 1, fmt: function (v) { return "TH" + v; } }
       ],
       select: { key: "type", label: "Тип прокачки", options: [["full", "Full Max"], ["standard", "Стандартный"], ["rushed", "Rushed"]] },
+      score: function (v) { return norm(v.th, 13, 18); },
       compute: function (v) {
         var table = {
           18: { full: [100, 260], standard: [45, 120], rushed: [20, 35] },
@@ -61,97 +88,165 @@
       }
     },
     "clash-royale": {
+      name: "Clash Royale",
       sliders: [
         { key: "kt", label: "Уровень King Tower", min: 9, max: 15, step: 1, fmt: function (v) { return "KT" + v; } },
         { key: "maxed", label: "Карт максимального уровня", min: 0, max: 40, step: 1, fmt: function (v) { return v; } }
       ],
-      compute: function (v) {
-        var score = 0.5 * norm(v.kt, 9, 15) + 0.5 * norm(v.maxed, 0, 40);
-        return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]);
-      }
+      score: function (v) { return 0.5 * norm(v.kt, 9, 15) + 0.5 * norm(v.maxed, 0, 40); },
+      compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]); }
     },
     "free-fire": {
+      name: "Free Fire",
       sliders: [
         { key: "rank", label: "Ранг", min: 1, max: 7, step: 1, fmt: function (v) {
           return ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Heroic", "Grandmaster"][v - 1];
         } },
         { key: "bundles", label: "Редких бандлов/питомцев", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
-      compute: function (v) {
-        var score = 0.5 * norm(v.rank, 1, 7) + 0.5 * norm(v.bundles, 0, 10);
-        return interpBrackets(score, [[0.73, 15], [15, 50], [50, 150], [150, 300]]);
-      }
+      score: function (v) { return 0.5 * norm(v.rank, 1, 7) + 0.5 * norm(v.bundles, 0, 10); },
+      compute: function (v, score) { return interpBrackets(score, [[0.73, 15], [15, 50], [50, 150], [150, 300]]); }
     },
     "genshin-impact": {
+      name: "Genshin Impact",
       sliders: [
         { key: "fivestars", label: "5★ персонажей", min: 0, max: 20, step: 1, fmt: function (v) { return v; } },
         { key: "c6", label: "Персонажей с C6", min: 0, max: 20, step: 1, fmt: function (v) { return v; } }
       ],
-      compute: function (v) {
+      score: function (v) {
+        if (v.fivestars < 3) return 0;
+        return 0.5 * norm(v.fivestars, 3, 20) + 0.5 * norm(v.c6, 0, 20);
+      },
+      compute: function (v, score) {
         if (v.fivestars < 3) return [5, 60];
-        var score = 0.5 * norm(v.fivestars, 3, 20) + 0.5 * norm(v.c6, 0, 20);
         return interpBrackets(score, [[30, 200], [300, 1000], [1000, 4200], [8400, 8995]]);
       }
     },
     "mobile-legends": {
+      name: "Mobile Legends",
       sliders: [
         { key: "skins", label: "Всего скинов", min: 0, max: 400, step: 10, fmt: function (v) { return v; } },
         { key: "rank", label: "Ранг", min: 1, max: 7, step: 1, fmt: function (v) {
           return ["Warrior", "Elite", "Master", "Grandmaster", "Epic", "Legend", "Mythical Glory"][v - 1];
         } }
       ],
-      compute: function (v) {
-        var score = 0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7);
-        return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]);
-      }
+      score: function (v) { return 0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7); },
+      compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]); }
     },
     "fortnite": {
+      name: "Fortnite",
       sliders: [
         { key: "skins", label: "Всего скинов", min: 0, max: 250, step: 5, fmt: function (v) { return v; } },
         { key: "ogItems", label: "Редких OG-предметов", min: 0, max: 5, step: 1, fmt: function (v) { return v; } }
       ],
-      compute: function (v) {
-        var score = 0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5);
-        return interpBrackets(score, [[10.9, 15], [15, 50], [50, 150], [150, 1100]]);
-      }
+      score: function (v) { return 0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5); },
+      compute: function (v, score) { return interpBrackets(score, [[10.9, 15], [15, 50], [50, 150], [150, 1100]]); }
     },
     "minecraft": {
+      name: "Minecraft",
       sliders: [
         { key: "type", label: "Тип аккаунта", min: 1, max: 4, step: 1, fmt: function (v) {
           return ["Обычный аккаунт", "MVP+/Hypixel, редкий скин плаща", "Держатель плаща Minecon", "2-симв. ник (алфавитно-цифровой)"][v - 1];
         } }
       ],
+      score: function (v) { return norm(v.type, 1, 4); },
       compute: function (v) {
         var table = { 1: [0.5, 25], 2: [25, 632], 3: [2000, 5000], 4: [25000, 50000] };
         return table[v.type];
       }
     },
     "roblox": {
+      name: "Roblox",
       sliders: [
         { key: "age", label: "Возраст аккаунта", min: 0, max: 15, step: 1, fmt: function (v) { return v + " " + (v === 1 ? "год" : (v >= 2 && v <= 4 ? "года" : "лет")); } },
         { key: "robux", label: "Баланс Robux", min: 0, max: 50000, step: 1000, fmt: function (v) { return v.toLocaleString("en-US") + " R$"; } },
         { key: "limiteds", label: "Предметов Limited", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
-      compute: function (v) {
-        var score = (norm(v.age, 0, 15) + norm(v.robux, 0, 50000) + norm(v.limiteds, 0, 10)) / 3;
-        return interpBrackets(score, [[0.5, 5], [5, 25], [25, 60]]);
-      }
+      score: function (v) { return (norm(v.age, 0, 15) + norm(v.robux, 0, 50000) + norm(v.limiteds, 0, 10)) / 3; },
+      compute: function (v, score) { return interpBrackets(score, [[0.5, 5], [5, 25], [25, 60]]); }
     }
   };
 
-  function buildCalculator(root) {
-    var game = root.getAttribute("data-game");
-    var cfg = GAMES[game];
-    if (!cfg) return;
+  var GAME_ORDER = ["roblox", "brawl-stars", "clash-of-clans", "clash-royale", "free-fire",
+    "genshin-impact", "mobile-legends", "fortnite", "minecraft"];
 
-    var state = {};
+  var rafIds = new WeakMap();
+
+  function animateNumber(el, fromVal, toVal) {
+    if (prefersReducedMotion || fromVal === toVal) { el.textContent = formatMoney(toVal); return; }
+    var pending = rafIds.get(el);
+    if (pending) cancelAnimationFrame(pending);
+    var start = null;
+    var duration = 220;
+    function tick(now) {
+      if (start === null) start = now;
+      var p = Math.min((now - start) / duration, 1);
+      el.textContent = formatMoney(fromVal + (toVal - fromVal) * p);
+      if (p < 1) {
+        rafIds.set(el, requestAnimationFrame(tick));
+      } else {
+        rafIds.delete(el);
+      }
+    }
+    rafIds.set(el, requestAnimationFrame(tick));
+  }
+
+  function ensureResultShell(root) {
+    var resultBox = root.querySelector(".vc-result");
+    var valueEl = resultBox.querySelector(".vc-result-value");
+    valueEl.setAttribute("aria-live", "polite");
+    if (!valueEl.querySelector(".vc-lo")) {
+      valueEl.innerHTML = '<span class="vc-lo">—</span> – <span class="vc-hi">—</span>';
+    }
+    if (!resultBox.querySelector(".vc-scale")) {
+      var scale = document.createElement("div");
+      scale.className = "vc-scale";
+      scale.setAttribute("aria-hidden", "true");
+      scale.innerHTML = '<div class="vc-scale-fill"></div>';
+      valueEl.insertAdjacentElement("afterend", scale);
+      var meta = document.createElement("div");
+      meta.className = "vc-meta";
+      meta.innerHTML = '<span class="vc-tier"></span><span class="vc-confidence"></span>';
+      scale.insertAdjacentElement("afterend", meta);
+    }
+    return {
+      lo: valueEl.querySelector(".vc-lo"),
+      hi: valueEl.querySelector(".vc-hi"),
+      scaleFill: resultBox.querySelector(".vc-scale-fill"),
+      tier: resultBox.querySelector(".vc-tier"),
+      confidence: resultBox.querySelector(".vc-confidence")
+    };
+  }
+
+  function mount(root, gameId) {
+    var cfg = GAMES[gameId];
+    if (!cfg) return;
+    root.setAttribute("data-game", gameId);
+    root.setAttribute("data-title", cfg.name);
+
     var slidersWrap = root.querySelector(".vc-sliders");
-    var resultOut = root.querySelector(".vc-result-value");
+    slidersWrap.innerHTML = "";
+    var els = ensureResultShell(root);
     var resultNote = root.querySelector(".vc-result-note");
 
+    var state = {};
+    var totalInputs = (cfg.sliders || []).length + (cfg.select ? 1 : 0);
+    var touched = new Set();
+    var prevLo = null, prevHi = null;
+
     function recompute() {
-      var range = cfg.compute(state);
-      resultOut.textContent = formatMoney(range[0]) + " – " + formatMoney(range[1]);
+      var score = cfg.score(state);
+      var range = cfg.compute(state, score);
+      var lo = range[0], hi = range[1];
+      animateNumber(els.lo, prevLo === null ? lo : prevLo, lo);
+      animateNumber(els.hi, prevHi === null ? hi : prevHi, hi);
+      prevLo = lo; prevHi = hi;
+
+      els.scaleFill.style.width = Math.round(score * 100) + "%";
+      var tier = tierFromScore(score);
+      els.tier.textContent = tier.label;
+      els.tier.className = "vc-tier " + tier.cls;
+      els.confidence.textContent = "Уверенность: " + confidenceLabel(totalInputs ? touched.size / totalInputs : 1);
     }
 
     (cfg.sliders || []).forEach(function (s) {
@@ -171,6 +266,7 @@
       state[s.key] = s.min;
       valEl.textContent = s.fmt(s.min);
       input.addEventListener("input", function () {
+        touched.add(s.key);
         var v = Number(input.value);
         state[s.key] = v;
         valEl.textContent = s.fmt(v);
@@ -193,6 +289,7 @@
       var select = field.querySelector("select");
       state[cfg.select.key] = cfg.select.options[0][0];
       select.addEventListener("change", function () {
+        touched.add(cfg.select.key);
         state[cfg.select.key] = select.value;
         recompute();
       });
@@ -201,9 +298,10 @@
     recompute();
 
     var shareBtn = root.querySelector(".vc-share-btn");
-    if (shareBtn) {
+    if (shareBtn && !shareBtn.dataset.bound) {
+      shareBtn.dataset.bound = "1";
       shareBtn.addEventListener("click", function () {
-        var text = resultOut.textContent;
+        var text = els.lo.textContent + " – " + els.hi.textContent;
         var title = root.getAttribute("data-title") || "GameAccountValue";
         var shareText = title + ": " + text + " — https://t.me/GameAccountValue_Bot";
         if (navigator.share) {
@@ -219,8 +317,29 @@
     }
   }
 
+  function initSwitcher(root) {
+    var switcher = root.querySelector(".vc-switcher");
+    if (!switcher) return;
+    switcher.innerHTML = "";
+    GAME_ORDER.forEach(function (id) {
+      var opt = document.createElement("option");
+      opt.value = id;
+      opt.textContent = GAMES[id].name;
+      switcher.appendChild(opt);
+    });
+    switcher.value = GAME_ORDER[0];
+    mount(root, GAME_ORDER[0]);
+    switcher.addEventListener("change", function () {
+      mount(root, switcher.value);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    var roots = document.querySelectorAll(".value-calc");
-    for (var i = 0; i < roots.length; i++) buildCalculator(roots[i]);
+    document.querySelectorAll(".value-calc[data-switcher]").forEach(initSwitcher);
+    document.querySelectorAll(".value-calc[data-game]:not([data-switcher])").forEach(function (root) {
+      mount(root, root.getAttribute("data-game"));
+    });
   });
+
+  window.GAVCalc = { GAMES: GAMES, GAME_ORDER: GAME_ORDER, mount: mount };
 })();

@@ -344,6 +344,7 @@
   <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Анонимно</div></div>
   <div class="stat"><div class="stat-num">1 бесп.</div><div class="stat-lbl">оценка в день</div></div>
   <div class="stat"><div class="stat-num">&lt;60с</div><div class="stat-lbl">до результата</div></div>
+  <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Регистраций не нужно</div></div>
 </div>
 
 <!-- DIFFERENTIATION -->
@@ -372,6 +373,21 @@
     <a class="game-card" href="fortnite.html"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
     <a class="game-card" href="minecraft.html"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
     <div class="game-card coming-soon"><div class="game-icon" aria-hidden="true">🔜</div><div class="game-name">Скоро больше игр</div></div>
+  </div>
+</section>
+
+<!-- LIVE CALCULATOR -->
+<section class="section">
+  <h2 class="section-title">Прикинь стоимость бесплатно — прямо здесь</h2>
+  <p class="section-sub">Без регистрации. Ничего не вводится и не отправляется — весь расчёт идёт в твоём браузере.</p>
+  <div class="value-calc" id="vc-home" data-switcher style="max-width: 480px; margin: 0 auto;">
+    <select class="vc-switcher" aria-label="Выбрать игру"></select>
+    <div class="vc-sliders"></div>
+    <div class="vc-result">
+      <strong class="vc-result-value">—</strong>
+      <span class="vc-result-note" data-copied="Скопировано!">Ориентировочно, не точная оценка</span>
+      <button type="button" class="vc-share-btn">🔗 Поделиться результатом</button>
+    </div>
   </div>
 </section>
 
@@ -531,6 +547,7 @@
 <script src="../assets/tilt.js" defer></script>
 <script src="../assets/interactions.js" defer></script>
 <script src="../assets/counter.js" defer></script>
+<script src="../assets/calculators.js" defer></script>
 <script type="speculationrules">
 {"prerender":[{"where":{"selector_matches":".lang-dropdown a"},"eagerness":"moderate"}]}
 </script>
