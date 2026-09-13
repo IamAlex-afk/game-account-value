@@ -352,8 +352,24 @@ footer a:hover { color: var(--gold); }
 .skip-link:focus { left: 0; }
 
 /* --- Value calculator widget (client-side only, no data collected) --- */
-.value-calc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin: 20px 0 28px; }
-.value-calc .vc-title { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 16px; color: var(--gold); margin-bottom: 4px; }
+.value-calc {
+  position: relative; overflow: hidden;
+  background: var(--card); border: 1px solid var(--border-strong); border-radius: var(--radius);
+  padding: 26px 24px 24px; margin: 24px 0 32px;
+  scroll-margin-top: 128px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.28), 0 0 0 1px rgba(var(--gold-rgb),0.06) inset;
+}
+.value-calc::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), #f2d989, var(--emerald), var(--gold));
+  background-size: 300% 100%; animation: gold-shimmer 6s ease-in-out infinite;
+}
+.value-calc .vc-title {
+  display: inline-block; font-family: var(--serif); font-variation-settings: 'wght' 750; font-size: 13px;
+  color: var(--gold); text-transform: uppercase; letter-spacing: 0.04em;
+  background: rgba(212,175,55,0.08); border: 1px solid var(--border-strong);
+  padding: 6px 14px; border-radius: 30px; margin-bottom: 10px;
+}
 .value-calc .vc-subtitle { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
 .value-calc .vc-field { margin-bottom: 16px; }
 .value-calc .vc-field label { display: block; font-size: 14px; margin-bottom: 6px; color: var(--text); }
