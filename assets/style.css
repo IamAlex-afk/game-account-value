@@ -354,7 +354,10 @@ footer a:hover { color: var(--gold); }
 /* --- Value calculator widget (client-side only, no data collected) --- */
 .value-calc {
   position: relative; overflow: hidden;
-  background: var(--card); border: 1px solid var(--border-strong); border-radius: var(--radius);
+  background:
+    radial-gradient(ellipse 140% 60% at 50% -10%, rgba(255,255,255,0.05), transparent 60%),
+    var(--card);
+  border: 1px solid var(--border-strong); border-radius: 16px 16px 42px 42px;
   padding: 26px 24px 24px; margin: 24px 0 32px;
   scroll-margin-top: 128px;
   box-shadow: 0 12px 32px rgba(0,0,0,0.28), 0 0 0 1px rgba(var(--gold-rgb),0.06) inset;
@@ -405,15 +408,48 @@ footer a:hover { color: var(--gold); }
   }
   .value-calc input[type="range"]::-moz-range-thumb { width: 44px; height: 50px; }
 }
-.value-calc .vc-select { width: 100%; background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--border); padding: 10px 12px; border-radius: var(--radius-sm); font-size: 14px; cursor: pointer; }
-.value-calc .vc-select option { background: var(--card-solid); }
+.value-calc .vc-choice-heading { display: block; font-size: 14px; color: var(--text); margin-bottom: 8px; }
+.value-calc .vc-choice-tiles { display: flex; flex-wrap: wrap; gap: 8px; }
+.value-calc .vc-choice-tiles input[type="radio"] { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.value-calc .vc-choice-tile {
+  display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  min-width: 44px; min-height: 44px; padding: 8px 14px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  color: var(--text); font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: border-color .15s, background .15s, transform .1s, box-shadow .15s;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.25);
+}
+.value-calc .vc-choice-tile:hover { border-color: var(--border-strong); background: rgba(255,255,255,0.07); }
+.value-calc .vc-choice-tiles input:checked + .vc-choice-tile {
+  border-color: var(--gold); background: rgba(212,175,55,0.14); color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold) inset, 0 0 12px rgba(212,175,55,0.35);
+  transform: translateY(1px);
+}
+.value-calc .vc-choice-tiles input:focus-visible + .vc-choice-tile { outline: 2px solid var(--emerald); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .value-calc .vc-choice-tile { transition: none; } }
 .value-calc .vc-checkbox-heading { display: block; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
 .value-calc .vc-checkbox-group { display: flex; flex-direction: column; gap: 8px; }
-.value-calc .vc-checkbox { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 13px; cursor: pointer; transition: border-color .15s, background .15s; }
-.value-calc .vc-checkbox:hover { border-color: var(--border-strong); background: rgba(255,255,255,0.05); }
-.value-calc .vc-checkbox input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--gold); flex-shrink: 0; }
-.value-calc .vc-checkbox:has(input:checked) { border-color: var(--gold); background: rgba(212,175,55,0.08); }
-.value-calc .vc-result { margin-top: 20px; padding-top: 18px; border-top: 1px dashed var(--border); text-align: center; }
+.value-calc .vc-checkbox {
+  display: flex; align-items: center; gap: 10px; min-height: 44px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 10px 14px; font-size: 13px; font-weight: 600; cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.25);
+  transition: border-color .15s, background .15s, transform .1s, box-shadow .15s;
+}
+.value-calc .vc-checkbox:hover { border-color: var(--border-strong); background: rgba(255,255,255,0.07); }
+.value-calc .vc-checkbox input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--gold); flex-shrink: 0; }
+.value-calc .vc-checkbox:has(input:checked) {
+  border-color: var(--gold); background: rgba(212,175,55,0.14); color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold) inset, 0 0 12px rgba(212,175,55,0.35);
+  transform: translateY(1px);
+}
+.value-calc .vc-checkbox:has(input:focus-visible) { outline: 2px solid var(--emerald); outline-offset: 2px; }
+.value-calc .vc-result {
+  margin-top: 20px; padding: 18px 16px 16px; text-align: center;
+  background: linear-gradient(180deg, #060a09, #0b1210);
+  border: 1px solid rgba(0,0,0,0.6); border-radius: var(--radius-sm);
+  box-shadow: inset 0 3px 10px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(var(--gold-rgb),0.08);
+}
 .value-calc .vc-result-value { display: block; font-family: var(--serif); font-size: 30px; font-weight: 800; color: var(--emerald); margin-bottom: 4px; }
 .value-calc .vc-result-note { display: block; font-size: 12px; color: var(--muted); margin-bottom: 14px; }
 .value-calc .vc-share-btn { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid var(--border); padding: 9px 18px; border-radius: var(--radius-sm); font-size: 13px; cursor: pointer; transition: background .15s; }
