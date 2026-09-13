@@ -179,7 +179,7 @@
       sliders: [
         { key: "th", min: 13, max: 18, step: 1, fmt: function (v) { return "TH" + v; } }
       ],
-      hasSelect: true,
+      choices: [{ key: "type", label: T.select["clash-of-clans"].label, options: T.select["clash-of-clans"].options }],
       score: function (v) { return norm(v.th, 13, 18); },
       compute: function (v) {
         var table = {
@@ -205,9 +205,9 @@
     "free-fire": {
       name: "Free Fire",
       sliders: [
-        { key: "rank", min: 1, max: 7, step: 1, fmt: function (v) { return FREE_FIRE_RANKS[v - 1]; } },
         { key: "bundles", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
+      choices: [{ key: "rank", label: T.sliders["free-fire"].rank, options: FREE_FIRE_RANKS.map(function (name, i) { return [String(i + 1), name]; }) }],
       score: function (v) { return 0.5 * norm(v.rank, 1, 7) + 0.5 * norm(v.bundles, 0, 10); },
       compute: function (v, score) { return interpBrackets(score, [[0.73, 15], [15, 50], [50, 150], [150, 300]]); }
     },
@@ -229,9 +229,9 @@
     "mobile-legends": {
       name: "Mobile Legends",
       sliders: [
-        { key: "skins", min: 0, max: 400, step: 10, fmt: function (v) { return v; } },
-        { key: "rank", min: 1, max: 7, step: 1, fmt: function (v) { return ML_RANKS[v - 1]; } }
+        { key: "skins", min: 0, max: 400, step: 10, fmt: function (v) { return v; } }
       ],
+      choices: [{ key: "rank", label: T.sliders["mobile-legends"].rank, options: ML_RANKS.map(function (name, i) { return [String(i + 1), name]; }) }],
       score: function (v) { return 0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7); },
       compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]); }
     },
@@ -246,9 +246,7 @@
     },
     "minecraft": {
       name: "Minecraft",
-      sliders: [
-        { key: "type", min: 1, max: 4, step: 1, fmt: function (v) { return T.minecraftTypes[v - 1]; } }
-      ],
+      choices: [{ key: "type", label: T.sliders["minecraft"].type, options: T.minecraftTypes.map(function (name, i) { return [String(i + 1), name]; }) }],
       score: function (v) { return norm(v.type, 1, 4); },
       compute: function (v) {
         var table = { 1: [0.5, 25], 2: [25, 632], 3: [2000, 5000], 4: [25000, 50000] };
@@ -338,7 +336,7 @@
     var resultNote = root.querySelector(".vc-result-note");
 
     var state = {};
-    var totalInputs = (cfg.sliders || []).length + (cfg.hasSelect ? 1 : 0) + (cfg.checkboxes ? cfg.checkboxes.length : 0);
+    var totalInputs = (cfg.sliders || []).length + (cfg.choices ? cfg.choices.length : 0) + (cfg.checkboxes ? cfg.checkboxes.length : 0);
     var touched = new Set();
     var prevLo = null, prevHi = null;
 
@@ -383,27 +381,28 @@
       });
     });
 
-    if (cfg.hasSelect) {
-      var selectCfg = T.select[gameId];
+    (cfg.choices || []).forEach(function (choice) {
       var field = document.createElement("div");
       field.className = "vc-field";
-      var selId = root.id + "-type";
-      var html = '<label for="' + selId + '">' + selectCfg.label + "</label>" +
-        '<select id="' + selId + '" class="vc-select">';
-      selectCfg.options.forEach(function (opt) {
-        html += '<option value="' + opt[0] + '">' + opt[1] + "</option>";
+      var groupName = root.id + "-" + choice.key;
+      var html = '<span class="vc-choice-heading">' + choice.label + '</span><div class="vc-choice-tiles" role="radiogroup" aria-label="' + choice.label + '">';
+      choice.options.forEach(function (opt, i) {
+        var optId = groupName + "-" + i;
+        html += '<input type="radio" name="' + groupName + '" id="' + optId + '" value="' + opt[0] + '"' + (i === 0 ? " checked" : "") + '>' +
+          '<label for="' + optId + '" class="vc-choice-tile">' + opt[1] + "</label>";
       });
-      html += "</select>";
+      html += "</div>";
       field.innerHTML = html;
       slidersWrap.appendChild(field);
-      var select = field.querySelector("select");
-      state.type = selectCfg.options[0][0];
-      select.addEventListener("change", function () {
-        touched.add("type");
-        state.type = select.value;
-        recompute();
+      state[choice.key] = choice.options[0][0];
+      field.querySelectorAll('input[type="radio"]').forEach(function (radio) {
+        radio.addEventListener("change", function () {
+          touched.add(choice.key);
+          state[choice.key] = radio.value;
+          recompute();
+        });
       });
-    }
+    });
 
     if (cfg.checkboxes && cfg.checkboxes.length) {
       var cbField = document.createElement("div");
