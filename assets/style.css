@@ -367,4 +367,15 @@ footer a:hover { color: var(--gold); }
 .value-calc .vc-share-btn { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid var(--border); padding: 9px 18px; border-radius: var(--radius-sm); font-size: 13px; cursor: pointer; transition: background .15s; }
 .value-calc .vc-share-btn:hover { background: rgba(255,255,255,0.12); }
 .value-calc .vc-share-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.value-calc .vc-scale { height: 6px; border-radius: 4px; background: rgba(255,255,255,0.07); overflow: hidden; margin: 0 auto 12px; max-width: 260px; }
+.value-calc .vc-scale-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--emerald), var(--gold)); transition: width .2s ease-out; }
+.value-calc .vc-meta { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.value-calc .vc-tier { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); color: var(--muted); }
+.value-calc .vc-tier.tier-casual { color: var(--text); border-color: var(--border); }
+.value-calc .vc-tier.tier-pro { color: var(--emerald); border-color: var(--emerald); }
+.value-calc .vc-tier.tier-collector { color: var(--gold); border-color: var(--gold); box-shadow: 0 0 10px rgba(var(--gold-rgb),0.25); }
+.value-calc .vc-confidence { font-size: 11px; color: var(--muted); }
+.value-calc .vc-switcher { width: 100%; background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--border-strong); padding: 10px 12px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 18px; }
+.value-calc .vc-switcher option { background: var(--card-solid); }
 @media (max-width: 480px) { .value-calc { padding: 18px; } .value-calc .vc-result-value { font-size: 24px; } }
+@media (prefers-reduced-motion: reduce) { .value-calc .vc-scale-fill { transition: none; } }
