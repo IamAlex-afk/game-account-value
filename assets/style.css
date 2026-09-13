@@ -242,6 +242,10 @@ body .section-title { font-family: var(--serif); font-variation-settings: 'wght'
   background: rgba(212,175,55,0.05);
   box-shadow: 0 14px 30px rgba(0,0,0,0.35), 0 0 0 1px rgba(var(--gold-rgb),0.15) inset;
 }
+.game-card.coming-soon { cursor: default; animation: none; opacity: .55; }
+.game-card.coming-soon .game-icon { background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.08), rgba(255,255,255,0.03) 70%); border-color: var(--border); }
+.game-card.coming-soon:hover { border-color: var(--border); transform: none; background: none; box-shadow: none; }
+.game-card.coming-soon:hover .game-icon { transform: none; }
 .game-icon {
   font-size: 26px; margin: 0 auto 12px; width: 52px; height: 52px;
   display: flex; align-items: center; justify-content: center; border-radius: 50%;
