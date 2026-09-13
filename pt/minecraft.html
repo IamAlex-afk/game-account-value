@@ -170,6 +170,8 @@
   .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
   .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
   .anchor-target { display: block; scroll-margin-top: 128px; }
+  .article-body h2 { font-family: var(--serif); font-variation-settings: 'wght' 750; font-size: 15px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; margin: 36px 0 4px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 8px; }
   .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
   .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
   .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
@@ -239,6 +241,7 @@
 <div class="article-body">
 
 <span id="pricing" class="anchor-target"></span>
+<h2>Preços Reais de Mercado</h2>
 <h3>Quanto vale uma conta Minecraft regular?</h3>
 <div class="price-range">Contas regulares: $0,50 – $632</div>
 <p>Anúncios ao vivo no Eldorado.gg vão de $0,50 (um código simples de capa da Java Edition) até $120 por uma conta Hypixel "MVP+ com 10 capas". Um segundo marketplace (igitems.com) mostra contas comuns chegando a ~$632 para aquelas com rank Hypixel MVP+, várias capas e níveis altos de Skyblock — o valor aqui escala com o rank do servidor e a quantidade de capas, não com o username.</p>
@@ -282,6 +285,7 @@
 <p style="font-size:13px; color:var(--muted);">Ranking ao vivo de marketplace de capas por preço (mccapers.com, set. de 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape $3 cada. As capas de participantes da MINECON (2011-2016) e a capa da equipe da Mojang ficam em um "nível museu" separado, fora deste ranking regular — quase nunca são vendidas, e é exatamente por isso que Minecon 2011 continua sendo o nome mais referenciado, e não o de maior preço de lista.</p>
 
 <span id="value" class="anchor-target"></span>
+<h2>O Que Realmente Determina o Valor</h2>
 <h3>O que realmente determina o valor de uma conta Minecraft?</h3>
 <ul>
   <li>Comprimento do username — quanto mais curto, dramaticamente mais valioso</li>
@@ -298,16 +302,19 @@
 </ul>
 
 <span id="scams" class="anchor-target"></span>
+<h2>Fraudes &amp; Riscos de Negociação</h2>
 <h3>Quais são os maiores golpes na negociação de usernames Minecraft?</h3>
 <div class="risk-box">
   <p>Golpes de "name-squatting", em que um vendedor promete liberar um username em uma data específica para o comprador pegar, e então o libera antes ou nunca o libera; e golpes diretos de pagamento sem entrega em marketplaces do Discord sem escrow. Como as transferências de conta do Minecraft não são oficialmente suportadas pela Mojang/Microsoft, não há resolução de disputa se uma negociação der errado.</p>
 </div>
 
 <span id="rules" class="anchor-target"></span>
+<h2>Regras &amp; Política de Negociação</h2>
 <h3>Negociar contas Minecraft é contra as regras da Mojang?</h3>
 <p>Sim — os Termos de Uso do Minecraft proíbem a transferência de contas por dinheiro real, e a Mojang/Microsoft pode suspender contas envolvidas em transferências não autorizadas detectadas.</p>
 
 <span id="tips" class="anchor-target"></span>
+<h2>Guia do Jogador</h2>
 <h3>Existe um ângulo real de "como melhorar" para o Minecraft?</h3>
 <p>Esta seção é sobre melhorar seu próprio jogo, não o valor de revenda da sua conta. Diferente de um jogo competitivo de ranking único, o Minecraft se divide em comunidades genuinamente separadas com seus próprios metas reais: speedrunning e servidores de PvP competitivo.</p>
 <p>O speedrunning tem uma fonte confiável (os rankings do speedrun.com), mas nossa própria pesquisa encontrou relatos secundários conflitantes sobre quem detém atualmente o recorde mundial de Any% Random Seed Glitchless (RSG) — uma fonte citou "lowkey" com 6:50, outra citou "Skycrab" com 6:39 — então, em vez de escolher um, estamos sinalizando a divergência em vez de afirmar qualquer um como fato. O que é sólido: a categoria em si sempre segue a mesma rota real — encontrar uma vila ou naufrágio para recursos iniciais, chegar ao Nether para varetas de blaze, localizar a Fortaleza, e terminar a luta do End, nessa ordem.</p>
