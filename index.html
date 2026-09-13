@@ -344,6 +344,7 @@
   <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Anonymous</div></div>
   <div class="stat"><div class="stat-num">1 free</div><div class="stat-lbl">Rough Estimate/Day</div></div>
   <div class="stat"><div class="stat-num">&lt;60s</div><div class="stat-lbl">To Result</div></div>
+  <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">No signup needed</div></div>
 </div>
 
 <!-- DIFFERENTIATION -->
@@ -372,6 +373,21 @@
     <a class="game-card" href="fortnite.html"><div class="game-icon" aria-hidden="true">🌀</div><div class="game-name">Fortnite</div></a>
     <a class="game-card" href="minecraft.html"><div class="game-icon" aria-hidden="true">⛏️</div><div class="game-name">Minecraft</div></a>
     <div class="game-card coming-soon"><div class="game-icon" aria-hidden="true">🔜</div><div class="game-name">More Games Coming Soon</div></div>
+  </div>
+</section>
+
+<!-- LIVE CALCULATOR -->
+<section class="section">
+  <h2 class="section-title">Estimate it free — right here</h2>
+  <p class="section-sub">No signup. Nothing is entered or sent — the whole calculation runs in your browser.</p>
+  <div class="value-calc" id="vc-home" data-switcher style="max-width: 480px; margin: 0 auto;">
+    <select class="vc-switcher" aria-label="Choose a game"></select>
+    <div class="vc-sliders"></div>
+    <div class="vc-result">
+      <strong class="vc-result-value">—</strong>
+      <span class="vc-result-note" data-copied="Copied!">Rough estimate, not an exact valuation</span>
+      <button type="button" class="vc-share-btn">🔗 Share result</button>
+    </div>
   </div>
 </section>
 
@@ -527,6 +543,7 @@
 
 <script type="module" src="./assets/nav.js" defer></script>
 <script src="./assets/cursor-trail.js" defer></script>
+<script src="./assets/calculators.js" defer></script>
 <script src="./assets/tilt.js" defer></script>
 <script src="./assets/interactions.js" defer></script>
 <script src="./assets/counter.js" defer></script>
