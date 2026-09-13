@@ -184,7 +184,7 @@
         { key: "maxed", min: 0, max: 40, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) { return 0.5 * norm(v.kt, 9, 15) + 0.5 * norm(v.maxed, 0, 40); },
-      compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]); }
+      compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 600]]); }
     },
     "free-fire": {
       name: "Free Fire",
