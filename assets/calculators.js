@@ -56,7 +56,7 @@
       confidence: { low: "Low", medium: "Medium", high: "High" },
       confidencePrefix: "Confidence: ",
       copiedFallback: "Copied!",
-      gamepad: { up: "Previous field", down: "Next field", left: "Decrease", right: "Increase", a: "Toggle item", b: "Share result" }
+      gamepad: { up: "Previous field", down: "Next field", left: "Decrease", right: "Increase", a: "Reset all fields", b: "Share result", resetCaption: "RESET", shareCaption: "SHARE" }
     },
     ru: {
       sliders: {
@@ -77,7 +77,7 @@
       confidence: { low: "Низкая", medium: "Средняя", high: "Высокая" },
       confidencePrefix: "Уверенность: ",
       copiedFallback: "Скопировано!",
-      gamepad: { up: "Предыдущее поле", down: "Следующее поле", left: "Уменьшить", right: "Увеличить", a: "Переключить", b: "Поделиться результатом" }
+      gamepad: { up: "Предыдущее поле", down: "Следующее поле", left: "Уменьшить", right: "Увеличить", a: "Сбросить всё", b: "Поделиться результатом", resetCaption: "СБРОС", shareCaption: "ПОДЕЛИТЬСЯ" }
     },
     id: {
       sliders: {
@@ -98,7 +98,7 @@
       confidence: { low: "Rendah", medium: "Sedang", high: "Tinggi" },
       confidencePrefix: "Keyakinan: ",
       copiedFallback: "Disalin!",
-      gamepad: { up: "Kolom sebelumnya", down: "Kolom berikutnya", left: "Kurangi", right: "Tambah", a: "Alihkan", b: "Bagikan hasil" }
+      gamepad: { up: "Kolom sebelumnya", down: "Kolom berikutnya", left: "Kurangi", right: "Tambah", a: "Reset semua", b: "Bagikan hasil", resetCaption: "RESET", shareCaption: "BAGIKAN" }
     },
     pt: {
       sliders: {
@@ -119,7 +119,7 @@
       confidence: { low: "Baixa", medium: "Média", high: "Alta" },
       confidencePrefix: "Confiança: ",
       copiedFallback: "Copiado!",
-      gamepad: { up: "Campo anterior", down: "Próximo campo", left: "Diminuir", right: "Aumentar", a: "Alternar", b: "Compartilhar resultado" }
+      gamepad: { up: "Campo anterior", down: "Próximo campo", left: "Diminuir", right: "Aumentar", a: "Reiniciar tudo", b: "Compartilhar resultado", resetCaption: "REINICIAR", shareCaption: "COMPARTILHAR" }
     },
     es: {
       sliders: {
@@ -140,7 +140,7 @@
       confidence: { low: "Baja", medium: "Media", high: "Alta" },
       confidencePrefix: "Confianza: ",
       copiedFallback: "¡Copiado!",
-      gamepad: { up: "Campo anterior", down: "Campo siguiente", left: "Disminuir", right: "Aumentar", a: "Alternar", b: "Compartir resultado" }
+      gamepad: { up: "Campo anterior", down: "Campo siguiente", left: "Disminuir", right: "Aumentar", a: "Reiniciar todo", b: "Compartir resultado", resetCaption: "REINICIAR", shareCaption: "COMPARTIR" }
     },
     fr: {
       sliders: {
@@ -161,7 +161,7 @@
       confidence: { low: "Faible", medium: "Moyenne", high: "Élevée" },
       confidencePrefix: "Confiance : ",
       copiedFallback: "Copié !",
-      gamepad: { up: "Champ précédent", down: "Champ suivant", left: "Diminuer", right: "Augmenter", a: "Basculer", b: "Partager le résultat" }
+      gamepad: { up: "Champ précédent", down: "Champ suivant", left: "Diminuer", right: "Augmenter", a: "Tout réinitialiser", b: "Partager le résultat", resetCaption: "RESET", shareCaption: "PARTAGER" }
     },
     ar: {
       sliders: {
@@ -182,7 +182,7 @@
       confidence: { low: "منخفضة", medium: "متوسطة", high: "عالية" },
       confidencePrefix: "مستوى الثقة: ",
       copiedFallback: "تم النسخ!",
-      gamepad: { up: "الحقل السابق", down: "الحقل التالي", left: "إنقاص", right: "زيادة", a: "تبديل", b: "مشاركة النتيجة" }
+      gamepad: { up: "الحقل السابق", down: "الحقل التالي", left: "إنقاص", right: "زيادة", a: "إعادة تعيين الكل", b: "مشاركة النتيجة", resetCaption: "إعادة", shareCaption: "مشاركة" }
     },
     de: {
       sliders: {
@@ -203,7 +203,7 @@
       confidence: { low: "Niedrig", medium: "Mittel", high: "Hoch" },
       confidencePrefix: "Sicherheit: ",
       copiedFallback: "Kopiert!",
-      gamepad: { up: "Vorheriges Feld", down: "Nächstes Feld", left: "Verringern", right: "Erhöhen", a: "Umschalten", b: "Ergebnis teilen" }
+      gamepad: { up: "Vorheriges Feld", down: "Nächstes Feld", left: "Verringern", right: "Erhöhen", a: "Alles zurücksetzen", b: "Ergebnis teilen", resetCaption: "RESET", shareCaption: "TEILEN" }
     }
   };
   var T = STR[LANG];
@@ -539,8 +539,8 @@
         '<button type="button" class="vc-dpad-btn vc-dpad-down" aria-label="' + T.gamepad.down + '">▼</button>' +
         '</div>' +
         '<div class="vc-abtns">' +
-        '<button type="button" class="vc-btn-round vc-btn-b" aria-label="' + T.gamepad.b + '">B</button>' +
-        '<button type="button" class="vc-btn-round vc-btn-a" aria-label="' + T.gamepad.a + '">A</button>' +
+        '<div class="vc-btn-wrap"><button type="button" class="vc-btn-round vc-btn-b" aria-label="' + T.gamepad.b + '">B</button><span class="vc-btn-label">' + T.gamepad.shareCaption + '</span></div>' +
+        '<div class="vc-btn-wrap"><button type="button" class="vc-btn-round vc-btn-a" aria-label="' + T.gamepad.a + '">A</button><span class="vc-btn-label">' + T.gamepad.resetCaption + '</span></div>' +
         '</div>';
       slidersWrap.insertBefore(gp, slidersWrap.firstChild);
 
@@ -576,8 +576,16 @@
       gp.querySelector(".vc-dpad-left").addEventListener("click", function () { nudge(-1); });
       gp.querySelector(".vc-dpad-right").addEventListener("click", function () { nudge(1); });
       gp.querySelector(".vc-btn-a").addEventListener("click", function () {
-        var c = controls[activeIndex];
-        if (c.type === "checkbox") { c.el.checked = !c.el.checked; fire(c.el, "change"); }
+        // Reset every field to its default (works on every game, unlike a
+        // checkbox toggle which is a no-op on the 8 of 9 games with none).
+        controls.forEach(function (c) {
+          if (c.type === "range") { c.el.value = c.min; fire(c.el, "input"); }
+          else if (c.type === "radio") { c.radios[0].checked = true; fire(c.radios[0], "change"); }
+          else if (c.type === "checkbox") { if (c.el.checked) { c.el.checked = false; fire(c.el, "change"); } }
+        });
+        touched.clear();
+        recompute();
+        setActive(0);
       });
       gp.querySelector(".vc-btn-b").addEventListener("click", function () {
         var shareBtnNow = root.querySelector(".vc-share-btn");

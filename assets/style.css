@@ -493,6 +493,13 @@ footer a:hover { color: var(--gold); }
   display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: ". up ." "left center right" ". down .";
 }
+/* Real touch screens force a 44x44 min touch target on every dpad button
+   (WCAG 2.5.5) — the 3x3 grid has to grow to fit 3 of those (132px+) or the
+   grid's min-content silently overflows its declared 108px box. Both rules
+   live in the SAME media query so they can never drift out of sync again. */
+@media (pointer: coarse) {
+  .value-calc .vc-dpad { width: 140px; height: 140px; }
+}
 .value-calc .vc-dpad-btn {
   background: linear-gradient(180deg, #2a2a2e, #16161a); color: var(--gold);
   border: 1px solid rgba(255,255,255,0.08); font-size: 15px; line-height: 1;
@@ -509,7 +516,8 @@ footer a:hover { color: var(--gold); }
 .value-calc .vc-dpad-left { grid-area: left; border-radius: 6px 0 0 6px; }
 .value-calc .vc-dpad-right { grid-area: right; border-radius: 0 6px 6px 0; }
 .value-calc .vc-dpad-center { grid-area: center; background: #16161a; border: 1px solid rgba(255,255,255,0.06); }
-.value-calc .vc-abtns { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
+.value-calc .vc-abtns { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
+.value-calc .vc-btn-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .value-calc .vc-btn-round {
   width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
   background: radial-gradient(circle at 35% 30%, #f2d989, var(--gold) 65%, #a8842a);
@@ -521,6 +529,10 @@ footer a:hover { color: var(--gold); }
 .value-calc .vc-btn-round:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(0,0,0,0.45); }
 .value-calc .vc-btn-round:focus-visible { outline: 2px solid var(--emerald); outline-offset: 2px; }
 .value-calc .vc-btn-b { background: radial-gradient(circle at 35% 30%, #7fe0c8, var(--emerald) 65%, #0a7a61); color: #04211a; }
+.value-calc .vc-btn-label {
+  font-size: 9px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--muted); max-width: 64px; text-align: center; line-height: 1.15;
+}
 
 /* Highlight for whichever field the D-pad currently targets */
 .value-calc .vc-field.vc-field-active {
@@ -533,5 +545,6 @@ footer a:hover { color: var(--gold); }
   border-color: var(--emerald); box-shadow: 0 0 0 2px var(--emerald), 0 0 14px rgba(var(--emerald-rgb),0.35);
 }
 @media (pointer: coarse) { .value-calc .vc-dpad-btn, .value-calc .vc-btn-round { min-width: 44px; min-height: 44px; } .value-calc .vc-btn-round { width: 48px; height: 48px; } }
-@media (max-width: 480px) { .value-calc { padding: 18px; } .value-calc .vc-result-value { font-size: 24px; } .value-calc .vc-gamepad { padding: 12px; gap: 10px; } .value-calc .vc-dpad { width: 92px; height: 92px; } }
+@media (max-width: 480px) { .value-calc { padding: 18px; } .value-calc .vc-result-value { font-size: 24px; } .value-calc .vc-gamepad { padding: 12px 10px; gap: 8px; flex-wrap: nowrap; } }
+@media (max-width: 360px) { .value-calc .vc-gamepad { gap: 4px; } .value-calc .vc-btn-label { max-width: 52px; font-size: 8px; } }
 @media (prefers-reduced-motion: reduce) { .value-calc .vc-scale-fill { transition: none; } .value-calc .vc-dpad-btn, .value-calc .vc-btn-round { transition: none; } }
