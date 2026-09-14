@@ -1,5 +1,5 @@
 /* GameAccountValue Service Worker — offline + PWA install */
-const CACHE = 'gav-landing-2026-7';
+const CACHE = 'gav-landing-2026-8';
 const PRECACHE = [
   './', './index.html', './404.html', './manifest.json',
   './favicon.png', './favicon.svg', './apple-touch-icon.png', './og-image.png',
