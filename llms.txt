@@ -70,7 +70,7 @@ Verify any certificate at: https://t.me/GameAccountValue_Bot?start=verify_AUDITI
 
 ## Research Content (Website)
 
-Beyond the bot, the website publishes original market research — real marketplace price data cross-checked across multiple platforms and regions, not estimates. Fully built out (9 dedicated per-game pages + 4 resource pages each, plus a free client-side value-estimate calculator on every page) in English, Russian, Indonesian, Portuguese, Spanish, and French; the remaining 18 languages currently have a single combined market-report page with the same fact-checked pricing data. More per-game builds in progress.
+Beyond the bot, the website publishes original market research — real marketplace price data cross-checked across multiple platforms and regions, not estimates. Fully built out (9 dedicated per-game pages + 4 resource pages each, plus a free client-side value-estimate calculator on every page) in English, Russian, Indonesian, Portuguese, Spanish, French, and Arabic; the remaining 17 languages currently have a single combined market-report page with the same fact-checked pricing data. More per-game builds in progress.
 
 - Dedicated per-game pages (price ranges, real confirmed value drivers, scam risks, and a free interactive calculator) for: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite, Minecraft — e.g. https://iamalex-afk.github.io/game-account-value/roblox.html
 - Combined hub page linking all 9 — https://iamalex-afk.github.io/game-account-value/market-report.html
@@ -79,7 +79,7 @@ Beyond the bot, the website publishes original market research — real marketpl
 - Cross-game price comparison ("which game has the most valuable accounts") — https://iamalex-afk.github.io/game-account-value/which-game-accounts-are-most-valuable.html
 - Research methodology (sources, verification standard, corrections log) — https://iamalex-afk.github.io/game-account-value/methodology.html
 
-Russian, Indonesian, Portuguese, Spanish, and French versions of the same pages are at the equivalent /ru/, /id/, /pt/, /es/, and /fr/ paths (e.g. /ru/roblox.html, /id/roblox.html, /pt/roblox.html, /es/roblox.html, /fr/roblox.html).
+Russian, Indonesian, Portuguese, Spanish, French, and Arabic versions of the same pages are at the equivalent /ru/, /id/, /pt/, /es/, /fr/, and /ar/ paths (e.g. /ru/roblox.html, /id/roblox.html, /pt/roblox.html, /es/roblox.html, /fr/roblox.html, /ar/roblox.html).
 
 Every price claim traces to a specific marketplace listing checked on a specific date, cited on the relevant page. Where no reliable repeated evidence was found for a claim (e.g. no confirmed named-skin value driver in some games), the page states that explicitly rather than guessing. The on-page calculator interpolates only between these same cited bracket values — it never introduces a number not already stated in the surrounding text.
 

@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -156,6 +156,26 @@
       confidence: { low: "Faible", medium: "Moyenne", high: "Élevée" },
       confidencePrefix: "Confiance : ",
       copiedFallback: "Copié !"
+    },
+    ar: {
+      sliders: {
+        "brawl-stars": { trophies: "الكؤوس", maxed: "مقاتلون بمستوى قوة 11" },
+        "clash-of-clans": { th: "مستوى مركز المدينة" },
+        "clash-royale": { kt: "مستوى برج الملك", maxed: "بطاقات بأقصى مستوى" },
+        "free-fire": { rank: "الرتبة", bundles: "حزم/رفقاء نادرة" },
+        "genshin-impact": { fivestars: "شخصيات 5 نجوم", c6: "شخصيات بمستوى C6" },
+        "mobile-legends": { skins: "إجمالي الأزياء", rank: "الرتبة" },
+        "fortnite": { skins: "إجمالي الأزياء", ogItems: "عناصر OG نادرة" },
+        "minecraft": { type: "نوع الحساب" },
+        "roblox": { age: "عمر الحساب", robux: "رصيد Robux", limiteds: "عناصر Limited عادية (ليست النادرة المسماة)" }
+      },
+      select: { "clash-of-clans": { label: "نوع الترقية", options: [["full", "Full Max"], ["standard", "قياسي"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "سنة" : "سنوات"); },
+      minecraftTypes: ["حساب عادي", "MVP+/Hypixel، عباءة نادرة", "حامل عباءة Minecon", "اسم من حرفين (أرقام وحروف)"],
+      checkboxHeading: "عناصر نادرة مسماة (اختياري):",
+      confidence: { low: "منخفضة", medium: "متوسطة", high: "عالية" },
+      confidencePrefix: "مستوى الثقة: ",
+      copiedFallback: "تم النسخ!"
     }
   };
   var T = STR[LANG];
