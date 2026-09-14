@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -176,6 +176,26 @@
       confidence: { low: "منخفضة", medium: "متوسطة", high: "عالية" },
       confidencePrefix: "مستوى الثقة: ",
       copiedFallback: "تم النسخ!"
+    },
+    de: {
+      sliders: {
+        "brawl-stars": { trophies: "Trophäen (Pokale)", maxed: "Brawler mit Power Level 11" },
+        "clash-of-clans": { th: "Rathaus-Level (Town Hall)" },
+        "clash-royale": { kt: "King-Tower-Level", maxed: "Karten auf Höchststufe" },
+        "free-fire": { rank: "Rang", bundles: "Seltene Bundles/Begleiter" },
+        "genshin-impact": { fivestars: "5★-Charaktere", c6: "Charaktere mit C6" },
+        "mobile-legends": { skins: "Skins insgesamt", rank: "Rang" },
+        "fortnite": { skins: "Skins insgesamt", ogItems: "Seltene OG-Items" },
+        "minecraft": { type: "Kontotyp" },
+        "roblox": { age: "Kontoalter", robux: "Robux-Guthaben", limiteds: "Gewöhnliche Limited-Items (nicht die namhaften seltenen)" }
+      },
+      select: { "clash-of-clans": { label: "Ausbaustatus", options: [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "Jahr" : "Jahre"); },
+      minecraftTypes: ["Normaler Account", "MVP+/Hypixel, seltener Cape", "Minecon-Cape-Besitzer", "2-Zeichen-Name (alphanumerisch)"],
+      checkboxHeading: "Namhafte seltene Items (optional):",
+      confidence: { low: "Niedrig", medium: "Mittel", high: "Hoch" },
+      confidencePrefix: "Sicherheit: ",
+      copiedFallback: "Kopiert!"
     }
   };
   var T = STR[LANG];
