@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -116,6 +116,26 @@
       confidence: { low: "Baixa", medium: "Média", high: "Alta" },
       confidencePrefix: "Confiança: ",
       copiedFallback: "Copiado!"
+    },
+    es: {
+      sliders: {
+        "brawl-stars": { trophies: "Trofeos (copas)", maxed: "Brawlers Power Level 11" },
+        "clash-of-clans": { th: "Nivel del Ayuntamiento (Town Hall)" },
+        "clash-royale": { kt: "Nivel de la King Tower", maxed: "Cartas al nivel máximo" },
+        "free-fire": { rank: "Rango", bundles: "Bundles/mascotas raras" },
+        "genshin-impact": { fivestars: "Personajes 5★", c6: "Personajes con C6" },
+        "mobile-legends": { skins: "Total de skins", rank: "Rango" },
+        "fortnite": { skins: "Total de skins", ogItems: "Objetos OG raros" },
+        "minecraft": { type: "Tipo de cuenta" },
+        "roblox": { age: "Antigüedad de la cuenta", robux: "Saldo de Robux", limiteds: "Objetos Limited comunes (no los raros con nombre)" }
+      },
+      select: { "clash-of-clans": { label: "Tipo de mejora", options: [["full", "Full Max"], ["standard", "Estándar"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "año" : "años"); },
+      minecraftTypes: ["Cuenta normal", "MVP+/Hypixel, capa rara", "Poseedor de la capa Minecon", "Nick de 2 caracteres (alfanumérico)"],
+      checkboxHeading: "Objetos raros con nombre (opcional):",
+      confidence: { low: "Baja", medium: "Media", high: "Alta" },
+      confidencePrefix: "Confianza: ",
+      copiedFallback: "¡Copiado!"
     }
   };
   var T = STR[LANG];
