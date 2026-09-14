@@ -55,7 +55,8 @@
       checkboxHeading: "Named rare items (optional):",
       confidence: { low: "Low", medium: "Medium", high: "High" },
       confidencePrefix: "Confidence: ",
-      copiedFallback: "Copied!"
+      copiedFallback: "Copied!",
+      gamepad: { up: "Previous field", down: "Next field", left: "Decrease", right: "Increase", a: "Toggle item", b: "Share result" }
     },
     ru: {
       sliders: {
@@ -75,7 +76,8 @@
       checkboxHeading: "Именные редкие предметы (опционально):",
       confidence: { low: "Низкая", medium: "Средняя", high: "Высокая" },
       confidencePrefix: "Уверенность: ",
-      copiedFallback: "Скопировано!"
+      copiedFallback: "Скопировано!",
+      gamepad: { up: "Предыдущее поле", down: "Следующее поле", left: "Уменьшить", right: "Увеличить", a: "Переключить", b: "Поделиться результатом" }
     },
     id: {
       sliders: {
@@ -95,7 +97,8 @@
       checkboxHeading: "Item langka bernama (opsional):",
       confidence: { low: "Rendah", medium: "Sedang", high: "Tinggi" },
       confidencePrefix: "Keyakinan: ",
-      copiedFallback: "Disalin!"
+      copiedFallback: "Disalin!",
+      gamepad: { up: "Kolom sebelumnya", down: "Kolom berikutnya", left: "Kurangi", right: "Tambah", a: "Alihkan", b: "Bagikan hasil" }
     },
     pt: {
       sliders: {
@@ -115,7 +118,8 @@
       checkboxHeading: "Itens raros nomeados (opcional):",
       confidence: { low: "Baixa", medium: "Média", high: "Alta" },
       confidencePrefix: "Confiança: ",
-      copiedFallback: "Copiado!"
+      copiedFallback: "Copiado!",
+      gamepad: { up: "Campo anterior", down: "Próximo campo", left: "Diminuir", right: "Aumentar", a: "Alternar", b: "Compartilhar resultado" }
     },
     es: {
       sliders: {
@@ -135,7 +139,8 @@
       checkboxHeading: "Objetos raros con nombre (opcional):",
       confidence: { low: "Baja", medium: "Media", high: "Alta" },
       confidencePrefix: "Confianza: ",
-      copiedFallback: "¡Copiado!"
+      copiedFallback: "¡Copiado!",
+      gamepad: { up: "Campo anterior", down: "Campo siguiente", left: "Disminuir", right: "Aumentar", a: "Alternar", b: "Compartir resultado" }
     },
     fr: {
       sliders: {
@@ -155,7 +160,8 @@
       checkboxHeading: "Objets rares nommés (facultatif) :",
       confidence: { low: "Faible", medium: "Moyenne", high: "Élevée" },
       confidencePrefix: "Confiance : ",
-      copiedFallback: "Copié !"
+      copiedFallback: "Copié !",
+      gamepad: { up: "Champ précédent", down: "Champ suivant", left: "Diminuer", right: "Augmenter", a: "Basculer", b: "Partager le résultat" }
     },
     ar: {
       sliders: {
@@ -175,7 +181,8 @@
       checkboxHeading: "عناصر نادرة مسماة (اختياري):",
       confidence: { low: "منخفضة", medium: "متوسطة", high: "عالية" },
       confidencePrefix: "مستوى الثقة: ",
-      copiedFallback: "تم النسخ!"
+      copiedFallback: "تم النسخ!",
+      gamepad: { up: "الحقل السابق", down: "الحقل التالي", left: "إنقاص", right: "زيادة", a: "تبديل", b: "مشاركة النتيجة" }
     },
     de: {
       sliders: {
@@ -195,7 +202,8 @@
       checkboxHeading: "Namhafte seltene Items (optional):",
       confidence: { low: "Niedrig", medium: "Mittel", high: "Hoch" },
       confidencePrefix: "Sicherheit: ",
-      copiedFallback: "Kopiert!"
+      copiedFallback: "Kopiert!",
+      gamepad: { up: "Vorheriges Feld", down: "Nächstes Feld", left: "Verringern", right: "Erhöhen", a: "Umschalten", b: "Ergebnis teilen" }
     }
   };
   var T = STR[LANG];
@@ -419,6 +427,7 @@
     var totalInputs = (cfg.sliders || []).length + (cfg.choices ? cfg.choices.length : 0) + (cfg.checkboxes ? cfg.checkboxes.length : 0);
     var touched = new Set();
     var prevLo = null, prevHi = null;
+    var controls = []; // gamepad D-pad navigation targets, built in the same order fields are rendered
 
     function recompute() {
       var score = cfg.score(state);
@@ -459,6 +468,7 @@
         valEl.textContent = s.fmt(v);
         recompute();
       });
+      controls.push({ type: "range", field: field, el: input, step: s.step, min: s.min, max: s.max });
     });
 
     (cfg.choices || []).forEach(function (choice) {
@@ -475,13 +485,15 @@
       field.innerHTML = html;
       slidersWrap.appendChild(field);
       state[choice.key] = choice.options[0][0];
-      field.querySelectorAll('input[type="radio"]').forEach(function (radio) {
+      var radios = Array.prototype.slice.call(field.querySelectorAll('input[type="radio"]'));
+      radios.forEach(function (radio) {
         radio.addEventListener("change", function () {
           touched.add(choice.key);
           state[choice.key] = radio.value;
           recompute();
         });
       });
+      controls.push({ type: "radio", field: field, radios: radios });
     });
 
     if (cfg.checkboxes && cfg.checkboxes.length) {
@@ -500,13 +512,78 @@
       cfg.checkboxes.forEach(function (item) {
         var cbId = root.id + "-cb-" + item.key;
         var input = cbField.querySelector("#" + cbId);
+        var cbLabel = input.closest(".vc-checkbox");
         state[item.key] = false;
         input.addEventListener("change", function () {
           touched.add(item.key);
           state[item.key] = input.checked;
           recompute();
         });
+        controls.push({ type: "checkbox", field: cbLabel, el: input });
       });
+    }
+
+    // Gamepad D-pad: a decorative remote-control layer over the real
+    // inputs above. It only ever calls .value=/.checked= then dispatches
+    // the same input/change events the inputs already listen for, so the
+    // scoring/pricing logic never has a second code path to go out of sync.
+    if (controls.length && T.gamepad) {
+      var gp = document.createElement("div");
+      gp.className = "vc-gamepad";
+      gp.innerHTML =
+        '<div class="vc-dpad" role="group" aria-label="' + T.gamepad.up + ' / ' + T.gamepad.down + ' / ' + T.gamepad.left + ' / ' + T.gamepad.right + '">' +
+        '<button type="button" class="vc-dpad-btn vc-dpad-up" aria-label="' + T.gamepad.up + '">▲</button>' +
+        '<button type="button" class="vc-dpad-btn vc-dpad-left" aria-label="' + T.gamepad.left + '">◀</button>' +
+        '<span class="vc-dpad-center" aria-hidden="true"></span>' +
+        '<button type="button" class="vc-dpad-btn vc-dpad-right" aria-label="' + T.gamepad.right + '">▶</button>' +
+        '<button type="button" class="vc-dpad-btn vc-dpad-down" aria-label="' + T.gamepad.down + '">▼</button>' +
+        '</div>' +
+        '<div class="vc-abtns">' +
+        '<button type="button" class="vc-btn-round vc-btn-b" aria-label="' + T.gamepad.b + '">B</button>' +
+        '<button type="button" class="vc-btn-round vc-btn-a" aria-label="' + T.gamepad.a + '">A</button>' +
+        '</div>';
+      slidersWrap.insertBefore(gp, slidersWrap.firstChild);
+
+      var activeIndex = 0;
+      function setActive(i) {
+        var n = controls.length;
+        activeIndex = ((i % n) + n) % n;
+        controls.forEach(function (c) { c.field.classList.remove("vc-field-active"); });
+        var target = controls[activeIndex];
+        target.field.classList.add("vc-field-active");
+        target.field.scrollIntoView({ block: "nearest", behavior: prefersReducedMotion ? "auto" : "smooth" });
+      }
+      function fire(el, type) { el.dispatchEvent(new Event(type, { bubbles: true })); }
+      function nudge(dir) {
+        var c = controls[activeIndex];
+        if (c.type === "range") {
+          var step = c.step * dir;
+          var v = Math.min(c.max, Math.max(c.min, Number(c.el.value) + step));
+          c.el.value = v;
+          fire(c.el, "input");
+        } else if (c.type === "radio") {
+          var idx = c.radios.findIndex(function (r) { return r.checked; });
+          var next = ((idx + dir) % c.radios.length + c.radios.length) % c.radios.length;
+          c.radios[next].checked = true;
+          fire(c.radios[next], "change");
+        } else if (c.type === "checkbox") {
+          c.el.checked = !c.el.checked;
+          fire(c.el, "change");
+        }
+      }
+      gp.querySelector(".vc-dpad-up").addEventListener("click", function () { setActive(activeIndex - 1); });
+      gp.querySelector(".vc-dpad-down").addEventListener("click", function () { setActive(activeIndex + 1); });
+      gp.querySelector(".vc-dpad-left").addEventListener("click", function () { nudge(-1); });
+      gp.querySelector(".vc-dpad-right").addEventListener("click", function () { nudge(1); });
+      gp.querySelector(".vc-btn-a").addEventListener("click", function () {
+        var c = controls[activeIndex];
+        if (c.type === "checkbox") { c.el.checked = !c.el.checked; fire(c.el, "change"); }
+      });
+      gp.querySelector(".vc-btn-b").addEventListener("click", function () {
+        var shareBtnNow = root.querySelector(".vc-share-btn");
+        if (shareBtnNow) shareBtnNow.click();
+      });
+      setActive(0);
     }
 
     recompute();
