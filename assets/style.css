@@ -286,6 +286,28 @@ body .section-title { font-family: var(--serif); font-variation-settings: 'wght'
   transition: transform .15s ease-out;
 }
 
+/* One-time holo sweep for mobile visitors who scroll past without ever
+   dragging the card — assets/tilt.js adds .tilt-idle-sweep via
+   IntersectionObserver the first time the card enters view. A separate
+   ::after layer (not the JS-driven .tilt-sheen/.tilt-iris divs) so this
+   can never fight the live drag animation. */
+.tilt-sheen-wrap.tilt-idle-sweep::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.4) 50%, transparent 60%);
+  background-size: 250% 250%;
+  mix-blend-mode: overlay;
+  animation: tilt-idle-sweep 2.4s ease-in-out .5s 1;
+}
+@keyframes tilt-idle-sweep {
+  0%   { background-position: 130% 130%; opacity: 0; }
+  15%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { background-position: -30% -30%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tilt-sheen-wrap.tilt-idle-sweep::after { animation: none; }
+}
+
 /* ---- features ---- */
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
 .feature { display: flex; gap: 16px; align-items: flex-start; }
