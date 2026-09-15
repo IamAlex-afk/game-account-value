@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0C14">
+<title>私たちの調査手法 | GameAccountValue</title>
+<meta name="description" content="ゲームアカウントの価格をどう調査しているか：チェックするマーケットプレイス、2ソース確認ルール、除外する内容、そしてこのサイトのすべての主張が実際の出品に遡れる理由。">
+<meta property="og:title" content="私たちの調査手法 — GameAccountValue">
+<meta property="og:description" content="公開前にゲームアカウント価格をどう調査・検証しているか。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://iamalex-afk.github.io/game-account-value/ja/methodology.html">
+<meta property="og:image" content="https://iamalex-afk.github.io/game-account-value/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="私たちの調査手法">
+<meta name="twitter:image" content="https://iamalex-afk.github.io/game-account-value/og-image.png">
+<meta name="author" content="Aleksei Bitkin">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="twitter:site" content="@GameAccountValue">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none';">
+<link rel="canonical" href="https://iamalex-afk.github.io/game-account-value/ja/methodology.html">
+<link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/game-account-value/methodology.html">
+<link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/game-account-value/methodology.html">
+<link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/game-account-value/ru/methodology.html">
+<link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/game-account-value/pt/methodology.html">
+<link rel="alternate" hreflang="id" href="https://iamalex-afk.github.io/game-account-value/id/methodology.html">
+<link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/game-account-value/es/methodology.html">
+<link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/game-account-value/fr/methodology.html">
+<link rel="alternate" hreflang="ar" href="https://iamalex-afk.github.io/game-account-value/ar/methodology.html">
+<link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/game-account-value/de/methodology.html">
+<link rel="alternate" hreflang="tr" href="https://iamalex-afk.github.io/game-account-value/tr/methodology.html">
+<link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/game-account-value/vi/methodology.html">
+<link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/game-account-value/hi/methodology.html">
+<link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/game-account-value/it/methodology.html">
+<link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/game-account-value/ja/methodology.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://iamalex-afk.github.io/game-account-value/ja/methodology.html#article",
+      "headline": "私たちの調査手法",
+      "description": "公開前にゲームアカウント価格データをどう調査・検証しているか。",
+      "author": { "@id": "https://iamalex-afk.github.io/game-account-value/#author" },
+      "publisher": { "@type": "Organization", "name": "GameAccountValue", "url": "https://t.me/GameAccountValue_Bot" },
+      "datePublished": "2026-09-16",
+      "dateModified": "2026-09-16",
+      "inLanguage": "ja",
+      "mainEntityOfPage": "https://iamalex-afk.github.io/game-account-value/ja/methodology.html"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://iamalex-afk.github.io/game-account-value/#author",
+      "name": "Aleksei Bitkin",
+      "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+      "sameAs": ["https://orcid.org/0009-0002-7986-3812", "https://doi.org/10.5281/zenodo.17972301"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://iamalex-afk.github.io/game-account-value/ja/methodology.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "価格データは実際どこから来ているのか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "古い記事やフォーラムでの主張に頼るのではなく、稼働中のサードパーティマーケットプレイスの生きた出品ページを価格順に確認している。ゲームごとの主なソース：Eldorado.gg — Roblox、Fortnite、Genshin Impact、Clash Royale、Clash of Clans、Brawl Stars、Mobile Legends、Free Fireの価格順（最高値・最安値）ライブ出品。igitems.com — 出品数付きの価格帯分布を示す集計マーケットレポートページ（例：「$0–$15：1,147件中57件」）。MercadoLivre.com.br — ブラジル比重の高いゲーム（Free Fire）の地域クロスチェック。Tokopedia — インドネシア比重の高いゲーム（Mobile Legends）の地域クロスチェック。ゲームトレード（GameTrade.jp）— 日本国内のRMTプラットフォームで、Robloxアカウント/アイテムの実際の出品を直接確認（円建ての価格、2026年9月確認）。Minecraftは例外だ：レアユーザー名の販売は単一のマーケットプレイスではなく、コミュニティ報告を通じて記録されている。そのニッチが非公式に取引されているためだ。" }
+        },
+        {
+          "@type": "Question",
+          "name": "「確認済み反復」ルールとは何か、なぜ重要なのか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "特定のアイテム、スキン、キャラクターを本物の価値決定要因として公開するのは、それが2件以上の独立したトップ価格出品に登場する場合のみだ。1回だけの言及では基準を満たさない — 内部的に未確認とフラグされ、我々が事実として述べるものからは除外される。だからこそ、例えば我々のFortniteページはIKONIKを特別に名指ししている（確認したトップ10出品のうち4件で繰り返された）が、1回しか見なかった他のスキンは価値決定要因として名指ししていない。" }
+        },
+        {
+          "@type": "Question",
+          "name": "まったく反復が見つからない場合はどうするのか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "我々は、推測しなければならない「トップスキン」リストを作るのではなく、価値がスタッツによって決まると率直に述べる。特にBrawl Stars、Clash of Clans、Clash Royale、Free Fireについては、我々のトップ10価格リサーチではネーム付きスキンの反復がゼロだった — 確認した最高額出品の中で、同じスキンやコスメティックが2回登場することはなかった。そのためこれら4ページは代わりに、トロフィー、Town Hall/King Towerレベル、ランクを実際の価値決定要因として指し示している。" }
+        },
+        {
+          "@type": "Question",
+          "name": "このデータはどのくらいの頻度で更新されるのか、フレッシュネスバッジは何を意味するのか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "各ページの見出しの下にあるバッジは、そのページのデータが最後にライブ出品と照合された日付を示す。これは永久的な保証ではない — マーケットプレイス価格は変動する — が、「トップアカウント」という主張が今月のものか3年前のものかを推測させるのではなく、読んでいる数字がどれくらい古いかを正確に伝える（クロスゲーム比較ページのFortnite比較は、まさにこの区別がなぜ重要かを示している）。" }
+        },
+        {
+          "@type": "Question",
+          "name": "簡単にできるはずなのに、あえてやらないことは？",
+          "acceptedAnswer": { "@type": "Answer", "text": "一握りのハイエンド出品からゲームの典型的な価格帯を外挿することはしない。ある地域で見つかった価格を地域クロスチェックなしにグローバルに適用されるものとして再利用することはしない。このサイトの以前のバージョンからの数字を、現在の出品と照合して再検証せずにそのまま引き継ぐこともしない。" }
+        },
+        {
+          "@type": "Question",
+          "name": "調査中に見つけたサードパーティの「アカウント価値計算機」ツールをどう扱っているか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "実際のマーケットプレイス出品とは異なる扱いをする。計算機サイトのアイテムごとのドル換算重みは、そのツール自身の内部的な仮定であり、確認された成約や生きた希望価格ではない — そのため、アイテムの実際の公式ゲーム内通貨コストと照合するなど、別の方法で独立して検証できない限り、それらの数字を事実として公開しない。計算機の数字がその方法で検証できない場合、リサーチ済みであるかのように未確認の重みを提示するのではなく、除外する。" }
+        },
+        {
+          "@type": "Question",
+          "name": "公開する数字を単一のソースだけに頼ることはあるか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "確認済みの事実として述べるものについては一切ない。このサイトのすべての価格帯は、少なくとも1つのライブマーケットプレイスと直接照合されている。ある数字が本当の外れ値である場合 — 記録的な成約、自己申告の生涯課金総額、単一プラットフォームの例示的な出品 — それを通常のマーケットレンジに混ぜるのではなく、明示的にその独自のカテゴリーとしてラベル付けする（例えばRobloxページの報告済み保有資産の注記を参照）。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+  h1 { font-size: clamp(30px, 5vw, 46px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .report-hero { text-align: center; padding: 60px 24px 32px; max-width: 720px; margin: 0 auto; }
+  .report-updated { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  .fresh-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(212,175,55,0.08); border: 1px solid var(--border-strong); border-radius: 20px; padding: 6px 14px; font-size: 12px; color: var(--gold); margin-top: 10px; }
+  .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
+  .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
+  .back-btn a:hover { border-color: var(--border-strong); }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
+  .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
+  .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
+  .article-body h3:first-of-type { margin-top: 8px; }
+  .article-body ul { margin: 8px 0 8px 20px; }
+  .article-body li { margin-bottom: 6px; }
+  .source-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
+  .source-table td, .source-table th { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  .source-table th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .report-cta { margin: 28px 0 10px; text-align: center; }
+  .other-games { max-width: 720px; margin: 0 auto; padding: 10px 24px 40px; font-size: 13px; }
+  .other-games a { display: inline-block; margin: 4px 8px 4px 0; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; color: var(--muted); text-decoration: none; }
+  .sources-list { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; font-size: 12px; color: var(--muted); }
+  .sources-list a { color: var(--muted); }
+  hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<nav>
+  <a href="./" class="logo">GameAccountValue</a>
+  <a href="https://t.me/GameAccountValue_Bot?utm_content=ja" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" data-event="cta_to_bot" rel="noopener noreferrer">🤖 ボットを開く</a>
+</nav>
+
+<div class="back-btn"><a href="./">← ホームに戻る</a></div>
+
+<main>
+<section class="report-hero" id="main-content">
+  <h1>私たちの調査手法</h1>
+  <p style="color:var(--muted); font-size:16px;">このサイトの価格の数字はすべて、実際の、確認可能な出品に遡ることができる。ここでは、私たちがデータをどのように調査・検証しているかを正確に説明する。</p>
+  <p class="report-updated">2026年9月更新。</p>
+  <div class="fresh-badge">🌍 複数のマーケットプレイスと国にわたりAIが調査プロセスを編纂、2026年9月12日時点</div>
+</section>
+
+<div class="resources-callout">
+  <span class="resources-label">その他のガイド：</span>
+  <a href="./market-report.html">📊 すべてのマーケットレポート</a>
+  <a href="./glossary.html">📖 用語集</a>
+  <a href="./account-trading-safety.html">🛡️ 詐欺・安全ガイド</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ 全ゲーム比較</a>
+</div>
+
+<div class="article-body">
+
+<h3>価格データは実際どこから来ているのか？</h3>
+<p>古い記事やフォーラムでの主張に頼るのではなく、稼働中のサードパーティマーケットプレイスの生きた出品ページを価格順に確認している。ゲームごとの主なソース：</p>
+<table class="source-table">
+<tbody>
+  <tr><th>ソース</th><th>使用目的</th></tr>
+  <tr><td>Eldorado.gg</td><td>Roblox、Fortnite、Genshin Impact、Clash Royale、Clash of Clans、Brawl Stars、Mobile Legends、Free Fireの価格順（最高値・最安値）ライブ出品</td></tr>
+  <tr><td>igitems.com</td><td>出品数付きの価格帯分布を示す集計マーケットレポートページ（例：「$0–$15：1,147件中57件」）</td></tr>
+  <tr><td>MercadoLivre.com.br</td><td>ブラジル比重の高いゲーム（Free Fire）の地域クロスチェック</td></tr>
+  <tr><td>Tokopedia</td><td>インドネシア比重の高いゲーム（Mobile Legends）の地域クロスチェック</td></tr>
+  <tr><td>ゲームトレード（GameTrade.jp）</td><td>日本国内のRMTプラットフォーム — Robloxアカウント/アイテムの実際の出品を直接確認（円建て、2026年9月確認）</td></tr>
+</tbody>
+</table>
+<p>Minecraftは例外だ：レアユーザー名の販売は単一のマーケットプレイスではなく、コミュニティ報告を通じて記録されている。そのニッチが非公式に取引されているためだ。</p>
+
+<h3>「確認済み反復」ルールとは何か、なぜ重要なのか？</h3>
+<p>特定のアイテム、スキン、キャラクターを本物の価値決定要因として公開するのは、それが<strong>2件以上の独立したトップ価格出品</strong>に登場する場合のみだ。1回だけの言及では基準を満たさない — 内部的に未確認とフラグされ、我々が事実として述べるものからは除外される。だからこそ、例えば我々のFortniteページはIKONIKを特別に名指ししている（確認したトップ10出品のうち4件で繰り返された）が、1回しか見なかった他のスキンは価値決定要因として名指ししていない。</p>
+
+<h3>まったく反復が見つからない場合はどうするのか？</h3>
+<p>我々は、推測しなければならない「トップスキン」リストを作るのではなく、価値がスタッツによって決まると率直に述べる。特にBrawl Stars、Clash of Clans、Clash Royale、Free Fireについては、我々のトップ10価格リサーチではネーム付きスキンの反復がゼロだった — 確認した最高額出品の中で、同じスキンやコスメティックが2回登場することはなかった。そのためこれら4ページは代わりに、トロフィー、Town Hall/King Towerレベル、ランクを実際の価値決定要因として指し示している。</p>
+
+<h3>このデータはどのくらいの頻度で更新されるのか、フレッシュネスバッジは何を意味するのか？</h3>
+<p>各ページの見出しの下にあるバッジは、そのページのデータが最後にライブ出品と照合された日付を示す。これは永久的な保証ではない — マーケットプレイス価格は変動する — が、「トップアカウント」という主張が今月のものか3年前のものかを推測させるのではなく、読んでいる数字がどれくらい古いかを正確に伝える（<a href="./which-game-accounts-are-most-valuable.html">クロスゲーム比較ページ</a>のFortnite比較は、まさにこの区別がなぜ重要かを示している）。</p>
+
+<h3>簡単にできるはずなのに、あえてやらないことは？</h3>
+<p>一握りのハイエンド出品からゲームの典型的な価格帯を外挿することはしない。ある地域で見つかった価格を地域クロスチェックなしにグローバルに適用されるものとして再利用することはしない。このサイトの以前のバージョンからの数字を、現在の出品と照合して再検証せずにそのまま引き継ぐこともしない。</p>
+
+<h3>調査中に見つけたサードパーティの「アカウント価値計算機」ツールをどう扱っているか？</h3>
+<p>実際のマーケットプレイス出品とは異なる扱いをする。計算機サイトのアイテムごとのドル換算重みは、そのツール自身の内部的な仮定であり、確認された成約や生きた希望価格ではない — そのため、アイテムの実際の公式ゲーム内通貨コストと照合するなど、別の方法で独立して検証できない限り、それらの数字を事実として公開しない。計算機の数字がその方法で検証できない場合、リサーチ済みであるかのように未確認の重みを提示するのではなく、除外する。</p>
+
+<h3>公開する数字を単一のソースだけに頼ることはあるか？</h3>
+<p>確認済みの事実として述べるものについては一切ない。このサイトのすべての価格帯は、少なくとも1つのライブマーケットプレイスと直接照合されている。ある数字が本当の外れ値である場合 — 記録的な成約、自己申告の生涯課金総額、単一プラットフォームの例示的な出品 — それを通常のマーケットレンジに混ぜるのではなく、明示的にその独自のカテゴリーとしてラベル付けする（例えばRobloxページの報告済み保有資産の注記を参照）。</p>
+
+</div>
+
+<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のアカウントの推定価値をチェック</a></div>
+
+<hr class="report-divider">
+
+<section class="sources-list">
+  <h2 style="font-size:15px; color:var(--text); margin-bottom:10px;">出典</h2>
+  <p>Eldorado.gg（ライブソート出品）、igitems.com（集計マーケットレポート）、MercadoLivre.com.br、Tokopedia、ゲームトレード（GameTrade.jp）— 2026年9月に直接確認。ゲーム固有のソーシングについては各ゲームの個別レポートページを参照。</p>
+</section>
+</main>
+
+<footer>
+  <div class="footer-logo">GameAccountValue</div>
+  <div style="max-width: 640px; margin: 0 auto 24px; padding: 20px; background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; font-size: 12px; line-height: 1.7;">
+    <strong style="color: var(--gold);">⚠️ 重要な注意事項</strong><br>
+    GameAccountValueは<strong>エンターテインメント・情報提供サービス</strong>です。ゲームコレクションに投入された価値のおおよその、AI生成による見積もりを、好奇心とエンターテインメントの目的のみで提供します。<br><br>
+    当サービスは<strong>マーケットプレイスではありません</strong>。ゲームアカウントの譲渡や取引を<strong>販売、購入、仲介することは一切ありません</strong>。アカウント売買を推奨するものではありません。<br><br>
+    アカウントの購入、販売、譲渡は各ゲームの規約に違反する可能性があります。プレイしているゲームのTerms of Serviceに常に従ってください。<br><br>
+    GameAccountValueは、Roblox、Supercell、Garena、miHoYo、Epic Games、Mojang、その他いかなるゲーム開発会社とも<strong>提携、承認、関連はありません</strong>。すべての商標は各所有者に帰属します。<br><br>
+    これは金融アドバイスではありません。見積もりはあくまで概算であり、エンターテインメント目的のみです。
+  </div>
+  <div style="max-width: 640px; margin: 0 auto 20px; font-size: 13px; line-height: 1.7;">
+    <p>著者・プロジェクト創設者 — Aleksei Bitkin。</p>
+    <p style="margin-top: 8px;">Mind-OSの著者・創設者でもあります（<a href="https://iamalex-afk.github.io/human-os-patch-33-protocols/" style="color: var(--gold);">ウェブサイト</a> · <a href="https://orcid.org/0009-0002-7986-3812" style="color: var(--gold);">ORCID</a> · <a href="https://doi.org/10.5281/zenodo.17972301" style="color: var(--gold);">Zenodo</a>）。</p>
+  </div>
+  <p style="margin-bottom: 16px;">AI生成の見積もり · エンターテインメントサービス · 18歳以上</p>
+  <div>
+    <a href="https://t.me/GameAccountValue_Bot?utm_content=ja" aria-label="Open GameAccountValue Bot on Telegram" rel="noopener noreferrer">Telegram Bot</a>
+    <a href="../privacy.html">プライバシーポリシー</a>
+    <a href="../terms.html">利用規約</a>
+    <a href="https://github.com/IamAlex-afk">GitHub</a>
+  </div>
+  <p style="margin-top: 16px; font-size: 12px;">© 2026 GameAccountValue</p>
+</footer>
+
+<script src="../assets/cursor-trail.js" defer></script>
+<script defer src="/game-account-value/assets/analytics-placeholder.js"></script>
+</body>
+</html>
