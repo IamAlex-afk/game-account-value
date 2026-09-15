@@ -230,7 +230,7 @@
 
 <nav>
   <a href="./" class="logo">GameAccountValue</a>
-  <a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" rel="noopener noreferrer">🤖 Open Bot</a>
+  <a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" data-event="cta_to_bot" rel="noopener noreferrer">🤖 Open Bot</a>
 </nav>
 
 <div class="back-btn"><a href="./">← Back to Home</a></div>
@@ -287,11 +287,13 @@
 
 <h3>What do the price brackets look like?</h3>
 <table class="tier-table">
+<tbody>
   <tr><th>Bracket</th><th>Share of listings</th><th>Typical progress</th></tr>
   <tr><td>$0–$15</td><td>475 of 1,147 (largest group)</td><td>Fresh/low-level smurf accounts</td></tr>
   <tr><td>$15–$50</td><td>232 of 1,147</td><td>Few dozen skins, Epic rank+</td></tr>
   <tr><td>$50–$150</td><td>451 of 1,147</td><td>100+ skins, Mythical Glory rank</td></tr>
   <tr><td>$150–$300+</td><td>325 of 1,147</td><td>300-400+ skins, "solid account" tier</td></tr>
+</tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">Distribution from igitems.com's own market report, September 2026 — see sources. Their guide separately notes top "mega collector" accounts (800+ skins) sell above $1,500.</p>
 
@@ -346,7 +348,7 @@
 
 </div>
 
-<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends" class="btn-primary" rel="noopener noreferrer">Check your Mobile Legends account's estimated value</a></div>
+<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Mobile Legends account's estimated value</a></div>
 
 <hr class="report-divider">
 
@@ -399,5 +401,6 @@
 
 <script src="./assets/cursor-trail.js" defer></script>
 <script src="./assets/calculators.js" defer></script>
+<script defer src="/game-account-value/assets/analytics-placeholder.js"></script>
 </body>
 </html>

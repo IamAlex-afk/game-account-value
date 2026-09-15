@@ -174,7 +174,7 @@
 
 <nav>
   <a href="./" class="logo">GameAccountValue</a>
-  <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" rel="noopener noreferrer">🤖 Open Bot</a>
+  <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" data-event="cta_to_bot" rel="noopener noreferrer">🤖 Open Bot</a>
 </nav>
 
 <div class="back-btn"><a href="./">← Back to Home</a></div>
@@ -200,11 +200,13 @@
 <h3>Where does the price data actually come from?</h3>
 <p>We check live listing pages on active third-party marketplaces, sorted by price, rather than relying on old articles or forum claims. Our primary sources per game:</p>
 <table class="source-table">
+<tbody>
   <tr><th>Source</th><th>What we use it for</th></tr>
   <tr><td>Eldorado.gg</td><td>Live listings sorted by price (highest and lowest) for Roblox, Fortnite, Genshin Impact, Clash Royale, Clash of Clans, Brawl Stars, Mobile Legends, Free Fire</td></tr>
   <tr><td>igitems.com</td><td>Aggregate market-report pages showing price-bracket distributions with listing counts (e.g. "$0–$15: 57 of 1,147 listings")</td></tr>
   <tr><td>MercadoLivre.com.br</td><td>Regional cross-check for Brazil-heavy games (Free Fire)</td></tr>
   <tr><td>Tokopedia</td><td>Regional cross-check for Indonesia-heavy games (Mobile Legends)</td></tr>
+</tbody>
 </table>
 <p>Minecraft is the exception: rare-username sales are documented through community reporting rather than a single marketplace, since that niche trades informally.</p>
 
@@ -228,7 +230,7 @@
 
 </div>
 
-<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot" class="btn-primary" rel="noopener noreferrer">Check your own account's estimated value</a></div>
+<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your own account's estimated value</a></div>
 
 <hr class="report-divider">
 
@@ -263,5 +265,6 @@
 </footer>
 
 <script src="./assets/cursor-trail.js" defer></script>
+<script defer src="/game-account-value/assets/analytics-placeholder.js"></script>
 </body>
 </html>
