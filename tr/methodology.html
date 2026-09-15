@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0C14">
+<title>Araştırma Metodolojimiz | GameAccountValue</title>
+<meta name="description" content="Oyun hesabı fiyatlarını nasıl araştırıyoruz: hangi pazar yerlerini kontrol ediyoruz, iki kaynak onay kuralımız, neyi hariç tutuyoruz ve bu sitedeki her iddianın neden gerçek bir ilana kadar izlenebildiği.">
+<meta property="og:title" content="Araştırma Metodolojimiz — GameAccountValue">
+<meta property="og:description" content="Yayınlamadan önce oyun hesabı fiyatlarını nasıl araştırıp doğruladığımız.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://iamalex-afk.github.io/game-account-value/tr/methodology.html">
+<meta property="og:image" content="https://iamalex-afk.github.io/game-account-value/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Araştırma Metodolojimiz">
+<meta name="twitter:image" content="https://iamalex-afk.github.io/game-account-value/og-image.png">
+<meta name="author" content="Aleksei Bitkin">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none';">
+<link rel="canonical" href="https://iamalex-afk.github.io/game-account-value/tr/methodology.html">
+<link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/game-account-value/methodology.html">
+<link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/game-account-value/methodology.html">
+<link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/game-account-value/ru/methodology.html">
+<link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/game-account-value/pt/methodology.html">
+<link rel="alternate" hreflang="id" href="https://iamalex-afk.github.io/game-account-value/id/methodology.html">
+<link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/game-account-value/es/methodology.html">
+<link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/game-account-value/fr/methodology.html">
+<link rel="alternate" hreflang="ar" href="https://iamalex-afk.github.io/game-account-value/ar/methodology.html">
+<link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/game-account-value/de/methodology.html">
+<link rel="alternate" hreflang="tr" href="https://iamalex-afk.github.io/game-account-value/tr/methodology.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://iamalex-afk.github.io/game-account-value/tr/methodology.html#article",
+      "headline": "Araştırma Metodolojimiz",
+      "description": "Yayınlamadan önce oyun hesabı fiyat verilerini nasıl araştırıp doğruladığımız.",
+      "author": {
+        "@id": "https://iamalex-afk.github.io/game-account-value/#author"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GameAccountValue",
+        "url": "https://t.me/GameAccountValue_Bot"
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "inLanguage": "tr",
+      "mainEntityOfPage": "https://iamalex-afk.github.io/game-account-value/tr/methodology.html"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://iamalex-afk.github.io/game-account-value/#author",
+      "name": "Aleksei Bitkin",
+      "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+      "sameAs": [
+        "https://orcid.org/0009-0002-7986-3812",
+        "https://doi.org/10.5281/zenodo.17972301"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://iamalex-afk.github.io/game-account-value/tr/methodology.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Fiyat verileri gerçekte nereden geliyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eski makalelere veya forum iddialarına güvenmek yerine, aktif üçüncü taraf pazar yerlerindeki canlı ilan sayfalarını fiyata göre sıralayarak kontrol ediyoruz. Oyun başına birincil kaynaklarımız: Kaynak Ne için kullanıyoruz Eldorado.gg Roblox, Fortnite, Genshin Impact, Clash Royale, Clash of Clans, Brawl Stars, Mobile Legends, Free Fire için fiyata göre sıralanmış canlı ilanlar (en yüksek ve en düşük) igitems.com İlan sayılarıyla birlikte fiyat aralığı dağılımlarını gösteren toplu pazar raporu sayfaları (ör. \"$0–$15: 1.147 ilandan 57'si\") MercadoLivre.com.br Brezilya ağırlıklı oyunlar için bölgesel çapraz kontrol (Free Fire) Tokopedia Endonezya ağırlıklı oyunlar için bölgesel çapraz kontrol (Mobile Legends) Minecraft istisnadır: nadir kullanıcı adı satışları, bu niş gayri resmi olarak işlem gördüğünden tek bir pazar yeri yerine topluluk raporlaması yoluyla belgelenir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "\"Onaylanmış tekrar\" kuralı nedir ve neden önemlidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Belirli bir eşyayı, kostümü veya karakteri yalnızca iki veya daha fazla bağımsız en yüksek fiyatlı ilanda görünüyorsa gerçek bir değer belirleyici olarak yayınlıyoruz. Tek bir bahsedilme yeterli değildir — dahili olarak onaylanmamış olarak işaretlenir ve gerçek olarak belirttiğimiz her şeyin dışında tutulur. Bu yüzden örneğin Fortnite sayfamız özellikle IKONIK'i adlandırıyor (kontrol ettiğimiz en iyi 10 ilanın 4'ünde tekrarlandı) ancak yalnızca bir kez gördüğümüz diğer kostümler değer belirleyici olarak adlandırılmıyor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hiç tekrar bulamadığınızda ne yapıyorsunuz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tahmin etmemiz gereken bir \"en iyi kostümler\" listesi adlandırmak yerine, değerin istatistiklerle belirlendiğini açıkça belirtiyoruz. Özellikle Brawl Stars, Clash of Clans, Clash Royale ve Free Fire için, fiyata göre en iyi 10 araştırmamız sıfır adlandırılmış kostüm tekrarı buldu — kontrol ettiğimiz en yüksek fiyatlı ilanlarda tek bir kostüm veya kozmetik eşya iki kez görünmedi. Bu yüzden bu dört sayfa bunun yerine gerçek değer belirleyicileri olarak kupalara, Belediye Binası/King Tower seviyesine ve rütbeye işaret ediyor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bu veriler ne sıklıkla yenileniyor ve tazelik rozeti ne anlama geliyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Her sayfanın başlığının altındaki rozet, o sayfanın verilerinin canlı ilanlara karşı en son ne zaman kontrol edildiğini belirtir. Bu kalıcı bir garanti değildir — pazar yeri fiyatları değişir — ancak bir \"en iyi hesaplar\" iddiasının bu aydan mı yoksa üç yıl öncesinden mi olduğunu tahmin etmenize gerek bırakmadan, okuduğunuz rakamların tam olarak ne kadar eski olduğunu size söyler (oyunlar arası karşılaştırma sayfamızdaki Fortnite karşılaştırması bu ayrımın neden önemli olduğunu tam olarak gösteriyor)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Daha kolay olmasına rağmen neyi yapmıyorsunuz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bir oyunun tipik fiyat aralığını birkaç üst düzey ilandan ekstrapole etmiyoruz, bir bölge için bulunan bir fiyatı bölgesel çapraz kontrol olmadan küresel olarak geçerliymiş gibi yeniden kullanmıyoruz ve bu sitenin önceki bir sürümünden bir rakamı önce güncel bir ilana karşı yeniden doğrulamadan taşımıyoruz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Araştırma sırasında bulunan üçüncü taraf \"hesap değeri hesaplayıcı\" araçlarını nasıl değerlendiriyorsunuz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gerçek bir pazar yeri ilanından farklı olarak. Bir hesaplayıcı sitesinin eşya başına dolar ağırlığı o aracın kendi dahili varsayımıdır, onaylanmış bir satış veya canlı bir istek fiyatı değildir — bu yüzden bu rakamları, bir eşyanın gerçek resmi oyun içi para birimi maliyetine karşı olduğu gibi başka bir şekilde bağımsız olarak doğrulayamadığımız sürece gerçek olarak yayınlamıyoruz. Bir hesaplayıcının rakamı bu şekilde doğrulanamadığında, araştırılmış gibi onaylanmamış bir ağırlık sunmak yerine onu dışarıda bırakıyoruz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Yayınlanan bir rakam için hiç tek bir kaynağa mı güveniyorsunuz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Onaylanmış gerçek olarak belirtilen hiçbir şey için değil. Bu sitedeki her fiyat aralığı doğrudan en az bir canlı pazar yerine karşı kontrol edilir. Bir rakam gerçek bir aykırı değer olduğunda — bir rekor satış, kendi kendine bildirilen bir ömür boyu harcama toplamı, tek bir platformun örnek ilanı — onu normal pazar aralığına karıştırmak yerine kendi kategorisi olarak açıkça etiketliyoruz (örneğin Roblox sayfasındaki bildirilen varlık notuna bakın)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+  h1 { font-size: clamp(30px, 5vw, 46px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .report-hero { text-align: center; padding: 60px 24px 32px; max-width: 720px; margin: 0 auto; }
+  .report-updated { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  .fresh-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(212,175,55,0.08); border: 1px solid var(--border-strong); border-radius: 20px; padding: 6px 14px; font-size: 12px; color: var(--gold); margin-top: 10px; }
+  .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
+  .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
+  .back-btn a:hover { border-color: var(--border-strong); }
+  .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
+  .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
+  .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
+  .article-body h3:first-of-type { margin-top: 8px; }
+  .article-body ul { margin: 8px 0 8px 20px; }
+  .article-body li { margin-bottom: 6px; }
+  .source-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
+  .source-table td, .source-table th { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  .source-table th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .report-cta { margin: 28px 0 10px; text-align: center; }
+  .other-games { max-width: 720px; margin: 0 auto; padding: 10px 24px 40px; font-size: 13px; }
+  .other-games a { display: inline-block; margin: 4px 8px 4px 0; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; color: var(--muted); text-decoration: none; }
+  .sources-list { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; font-size: 12px; color: var(--muted); }
+  .sources-list a { color: var(--muted); }
+  hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<nav>
+  <a href="./" class="logo">GameAccountValue</a>
+  <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" rel="noopener noreferrer">🤖 Botu Aç</a>
+</nav>
+
+<div class="back-btn"><a href="./">← Ana Sayfaya Dön</a></div>
+
+<main>
+<section class="report-hero" id="main-content">
+  <h1>Araştırma Metodolojimiz</h1>
+  <p style="color:var(--muted); font-size:16px;">Bu sitedeki her fiyat rakamı gerçek, kontrol edilebilir bir ilana kadar izlenebilir. İşte verilerimizi tam olarak nasıl araştırıp doğruladığımız.</p>
+  <p class="report-updated">Eylül 2026'da güncellendi.</p>
+  <div class="fresh-badge">🌍 Birden fazla pazar yeri ve ülkede yapay zeka tarafından derlenen araştırma süreci, 12 Eylül 2026 itibarıyla günceldir</div>
+</section>
+
+<div class="resources-callout">
+  <span class="resources-label">Daha fazla rehber:</span>
+  <a href="./market-report.html">📊 Tüm Pazar Raporları</a>
+  <a href="./glossary.html">📖 Terimler Sözlüğü</a>
+  <a href="./account-trading-safety.html">🛡️ Dolandırıcılık ve Güvenlik Rehberi</a>
+  <a href="./which-game-accounts-are-most-valuable.html">⚖️ Oyunlar Arası Karşılaştırma</a>
+</div>
+
+<div class="article-body">
+
+<h3>Fiyat verileri gerçekte nereden geliyor?</h3>
+<p>Eski makalelere veya forum iddialarına güvenmek yerine, aktif üçüncü taraf pazar yerlerindeki canlı ilan sayfalarını fiyata göre sıralayarak kontrol ediyoruz. Oyun başına birincil kaynaklarımız:</p>
+<table class="source-table">
+  <tr><th>Kaynak</th><th>Ne için kullanıyoruz</th></tr>
+  <tr><td>Eldorado.gg</td><td>Roblox, Fortnite, Genshin Impact, Clash Royale, Clash of Clans, Brawl Stars, Mobile Legends, Free Fire için fiyata göre sıralanmış canlı ilanlar (en yüksek ve en düşük)</td></tr>
+  <tr><td>igitems.com</td><td>İlan sayılarıyla birlikte fiyat aralığı dağılımlarını gösteren toplu pazar raporu sayfaları (ör. "$0–$15: 1.147 ilandan 57'si")</td></tr>
+  <tr><td>MercadoLivre.com.br</td><td>Brezilya ağırlıklı oyunlar için bölgesel çapraz kontrol (Free Fire)</td></tr>
+  <tr><td>Tokopedia</td><td>Endonezya ağırlıklı oyunlar için bölgesel çapraz kontrol (Mobile Legends)</td></tr>
+</table>
+<p>Minecraft istisnadır: nadir kullanıcı adı satışları, bu niş gayri resmi olarak işlem gördüğünden tek bir pazar yeri yerine topluluk raporlaması yoluyla belgelenir.</p>
+
+<h3>"Onaylanmış tekrar" kuralı nedir ve neden önemlidir?</h3>
+<p>Belirli bir eşyayı, kostümü veya karakteri yalnızca <strong>iki veya daha fazla bağımsız en yüksek fiyatlı ilanda</strong> görünüyorsa gerçek bir değer belirleyici olarak yayınlıyoruz. Tek bir bahsedilme yeterli değildir — dahili olarak onaylanmamış olarak işaretlenir ve gerçek olarak belirttiğimiz her şeyin dışında tutulur. Bu yüzden örneğin Fortnite sayfamız özellikle IKONIK'i adlandırıyor (kontrol ettiğimiz en iyi 10 ilanın 4'ünde tekrarlandı) ancak yalnızca bir kez gördüğümüz diğer kostümler değer belirleyici olarak adlandırılmıyor.</p>
+
+<h3>Hiç tekrar bulamadığınızda ne yapıyorsunuz?</h3>
+<p>Tahmin etmemiz gereken bir "en iyi kostümler" listesi adlandırmak yerine, değerin istatistiklerle belirlendiğini açıkça belirtiyoruz. Özellikle Brawl Stars, Clash of Clans, Clash Royale ve Free Fire için, fiyata göre en iyi 10 araştırmamız sıfır adlandırılmış kostüm tekrarı buldu — kontrol ettiğimiz en yüksek fiyatlı ilanlarda tek bir kostüm veya kozmetik eşya iki kez görünmedi. Bu yüzden bu dört sayfa bunun yerine gerçek değer belirleyicileri olarak kupalara, Belediye Binası/King Tower seviyesine ve rütbeye işaret ediyor.</p>
+
+<h3>Bu veriler ne sıklıkla yenileniyor ve tazelik rozeti ne anlama geliyor?</h3>
+<p>Her sayfanın başlığının altındaki rozet, o sayfanın verilerinin canlı ilanlara karşı en son ne zaman kontrol edildiğini belirtir. Bu kalıcı bir garanti değildir — pazar yeri fiyatları değişir — ancak bir "en iyi hesaplar" iddiasının bu aydan mı yoksa üç yıl öncesinden mi olduğunu tahmin etmenize gerek bırakmadan, okuduğunuz rakamların tam olarak ne kadar eski olduğunu size söyler (<a href="./which-game-accounts-are-most-valuable.html">oyunlar arası karşılaştırma sayfamızdaki</a> Fortnite karşılaştırması bu ayrımın neden önemli olduğunu tam olarak gösteriyor).</p>
+
+<h3>Daha kolay olmasına rağmen neyi yapmıyorsunuz?</h3>
+<p>Bir oyunun tipik fiyat aralığını birkaç üst düzey ilandan ekstrapole etmiyoruz, bir bölge için bulunan bir fiyatı bölgesel çapraz kontrol olmadan küresel olarak geçerliymiş gibi yeniden kullanmıyoruz ve bu sitenin önceki bir sürümünden bir rakamı önce güncel bir ilana karşı yeniden doğrulamadan taşımıyoruz.</p>
+
+<h3>Araştırma sırasında bulunan üçüncü taraf "hesap değeri hesaplayıcı" araçlarını nasıl değerlendiriyorsunuz?</h3>
+<p>Gerçek bir pazar yeri ilanından farklı olarak. Bir hesaplayıcı sitesinin eşya başına dolar ağırlığı o aracın kendi dahili varsayımıdır, onaylanmış bir satış veya canlı bir istek fiyatı değildir — bu yüzden bu rakamları, bir eşyanın gerçek resmi oyun içi para birimi maliyetine karşı olduğu gibi başka bir şekilde bağımsız olarak doğrulayamadığımız sürece gerçek olarak yayınlamıyoruz. Bir hesaplayıcının rakamı bu şekilde doğrulanamadığında, araştırılmış gibi onaylanmamış bir ağırlık sunmak yerine onu dışarıda bırakıyoruz.</p>
+
+<h3>Yayınlanan bir rakam için hiç tek bir kaynağa mı güveniyorsunuz?</h3>
+<p>Onaylanmış gerçek olarak belirtilen hiçbir şey için değil. Bu sitedeki her fiyat aralığı doğrudan en az bir canlı pazar yerine karşı kontrol edilir. Bir rakam gerçek bir aykırı değer olduğunda — bir rekor satış, kendi kendine bildirilen bir ömür boyu harcama toplamı, tek bir platformun örnek ilanı — onu normal pazar aralığına karıştırmak yerine kendi kategorisi olarak açıkça etiketliyoruz (örneğin Roblox sayfasındaki bildirilen varlık notuna bakın).</p>
+
+</div>
+
+<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot" class="btn-primary" rel="noopener noreferrer">Kendi hesabının tahmini değerini kontrol et</a></div>
+
+<hr class="report-divider">
+
+<section class="sources-list">
+  <h2 style="font-size:15px; color:var(--text); margin-bottom:10px;">Kaynaklar</h2>
+  <p>Eldorado.gg (canlı sıralanmış ilanlar), igitems.com (toplu pazar raporları), MercadoLivre.com.br, Tokopedia — doğrudan kontrol edildi, Eylül 2026. Oyuna özel kaynaklar için her oyunun kendi rapor sayfasına bakın.</p>
+</section>
+</main>
+
+<footer>
+  <div class="footer-logo">GameAccountValue</div>
+  <div style="max-width: 640px; margin: 0 auto 24px; padding: 20px; background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; font-size: 12px; line-height: 1.7;">
+    <strong style="color: var(--gold);">⚠️ Önemli Bildirim</strong><br>
+    GameAccountValue bir <strong>eğlence ve bilgi hizmetidir</strong>. Bir oyun koleksiyonuna yatırılan değerin kaba, yapay zeka tarafından oluşturulmuş bir tahminini, yalnızca merak ve eğlence amaçlı sağlıyoruz.<br><br>
+    Biz <strong>bir pazar yeri değiliz</strong>. Oyun hesaplarının transferini veya ticaretini <strong>satmıyoruz, satın almıyoruz veya kolaylaştırmıyoruz</strong>. Hesap satışlarını teşvik etmiyoruz.<br><br>
+    Hesap satın almak, satmak veya transfer etmek her oyunun kurallarını ihlal edebilir. Her zaman oynadığınız oyunun Kullanım Şartlarına uyun.<br><br>
+    GameAccountValue, Roblox, Supercell, Garena, miHoYo, Epic Games, Mojang veya başka bir oyun geliştiricisi ile <strong>bağlantılı, onaylı veya ilişkili değildir</strong>. Tüm ticari markalar ilgili sahiplerine aittir.<br><br>
+    Bu finansal tavsiye değildir. Tahminler yaklaşıktır ve yalnızca eğlence amaçlıdır.
+  </div>
+  <div style="max-width: 640px; margin: 0 auto 20px; font-size: 13px; line-height: 1.7;">
+    <p>Yazar ve proje yaratıcısı — Aleksei Bitkin.</p>
+    <p style="margin-top: 8px;">Ayrıca Mind-OS'un yazarı ve yaratıcısı (<a href="https://iamalex-afk.github.io/human-os-patch-33-protocols/" style="color: var(--gold);">web sitesi</a> · <a href="https://orcid.org/0009-0002-7986-3812" style="color: var(--gold);">ORCID</a> · <a href="https://doi.org/10.5281/zenodo.17972301" style="color: var(--gold);">Zenodo</a>).</p>
+  </div>
+  <p style="margin-bottom: 16px;">Yapay zeka tarafından oluşturulmuş tahminler · Eğlence hizmeti · 18+</p>
+  <div>
+    <a href="https://t.me/GameAccountValue_Bot" aria-label="Open GameAccountValue Bot on Telegram" rel="noopener noreferrer">Telegram Botu</a>
+    <a href="../privacy.html">Gizlilik Politikası</a>
+    <a href="../terms.html">Kullanım Şartları</a>
+    <a href="https://github.com/IamAlex-afk">GitHub</a>
+  </div>
+  <p style="margin-top: 16px; font-size: 12px;">© 2026 GameAccountValue</p>
+</footer>
+
+<script src="../assets/cursor-trail.js" defer></script>
+</body>
+</html>
