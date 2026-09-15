@@ -148,6 +148,20 @@ nav {
   nav { padding: 12px 16px; }
   .logo { font-size: 16px; }
   .nav-cta { padding: 8px 15px; font-size: 13px; }
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: linear-gradient(135deg, var(--gold), #8B6914);
+    padding: 12px 24px; padding-bottom: max(12px, env(safe-area-inset-bottom));
+    text-align: center; box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+  }
+  .sticky-cta a {
+    display: inline-block; color: #0c0a04; font-weight: 700; font-size: 14px;
+    text-decoration: none;
+  }
+  body { padding-bottom: 60px; }
+}
+@media (min-width: 421px) {
+  .sticky-cta { display: none; }
 }
 
 /* ---- hero ---- */
