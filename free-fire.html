@@ -222,7 +222,7 @@
 
 <nav>
   <a href="./" class="logo">GameAccountValue</a>
-  <a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" rel="noopener noreferrer">🤖 Open Bot</a>
+  <a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" data-event="cta_to_bot" rel="noopener noreferrer">🤖 Open Bot</a>
 </nav>
 
 <div class="back-btn"><a href="./">← Back to Home</a></div>
@@ -279,11 +279,13 @@
 
 <h3>What do the price brackets look like?</h3>
 <table class="tier-table">
+<tbody>
   <tr><th>Bracket</th><th>Share of listings</th><th>Typical progress</th></tr>
   <tr><td>$0–$15</td><td>11 of 293</td><td>Fresh/unranked accounts</td></tr>
   <tr><td>$15–$50</td><td>148 of 293 (largest group)</td><td>Ranked, partial character roster</td></tr>
   <tr><td>$50–$150</td><td>101 of 293</td><td>Grand Master rank, fuller roster</td></tr>
   <tr><td>$150–$300+</td><td>33 of 293</td><td>Rare bundles/pets, high diamond history</td></tr>
+</tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">Distribution from igitems.com's own market report, September 2026 — see sources.</p>
 
@@ -328,17 +330,19 @@
 <h3>Player guide: how does an actual pro set up their sensitivity?</h3>
 <p>This section is for improving your own play, not your account's resale value. <strong><a href="https://en.wikipedia.org/wiki/Two9" target="_blank" rel="noopener">Diogenes "Two9" Inácio</a></strong>, a Brazilian pro known for trick-shot mechanics, published this full settings breakdown (source: <a href="https://escharts.com/news/mastering-two9-meta" target="_blank" rel="noopener">Esports Charts</a>):</p>
 <table class="tier-table">
+<tbody>
   <tr><th>Setting</th><th>Value</th></tr>
   <tr><td>Mouse DPI (emulator play)</td><td>800</td></tr>
   <tr><td>In-game General</td><td>0 (emulator handles it)</td></tr>
   <tr><td>Red Dot / 2x / 4x / Sniper</td><td>95 / 92 / 88 / 50</td></tr>
   <tr><td>Free Look</td><td>70</td></tr>
+</tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">This is one named pro's personal setup, not a universal formula — Two9 himself is quoted saying <strong>"Sensi is 20%, training is 80%"</strong>. His other cited techniques: a "Wait-and-Flick" aiming style, resetting recoil by switching weapons mid-fight, and placing Gloo Walls in a "V" or "U" shape to create multiple peek angles instead of one flat wall.</p>
 
 </div>
 
-<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire" class="btn-primary" rel="noopener noreferrer">Check your Free Fire account's estimated value</a></div>
+<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Free Fire account's estimated value</a></div>
 
 <hr class="report-divider">
 
@@ -392,5 +396,6 @@
 
 <script src="./assets/cursor-trail.js" defer></script>
 <script src="./assets/calculators.js" defer></script>
+<script defer src="/game-account-value/assets/analytics-placeholder.js"></script>
 </body>
 </html>

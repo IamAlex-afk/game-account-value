@@ -222,7 +222,7 @@
 
 <nav>
   <a href="./" class="logo">GameAccountValue</a>
-  <a href="https://t.me/GameAccountValue_Bot?start=game_fortnite&utm_campaign=fortnite" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" rel="noopener noreferrer">🤖 Open Bot</a>
+  <a href="https://t.me/GameAccountValue_Bot?start=game_fortnite&utm_campaign=fortnite" aria-label="Open GameAccountValue Bot on Telegram" class="nav-cta" data-event="cta_to_bot" rel="noopener noreferrer">🤖 Open Bot</a>
 </nav>
 
 <div class="back-btn"><a href="./">← Back to Home</a></div>
@@ -284,11 +284,13 @@
 
 <h3>What do real prices look like by skin count?</h3>
 <table class="tier-table">
+<tbody>
   <tr><th>Bracket</th><th>Share of listings</th><th>Typical inventory</th></tr>
   <tr><td>$0–$15</td><td>115 of 932</td><td>Under 30 skins, no exclusives</td></tr>
   <tr><td>$15–$50</td><td>489 of 932 (largest group)</td><td>Dozens of skins, some Season 1-3 items</td></tr>
   <tr><td>$50–$150</td><td>287 of 932</td><td>50-200+ skins, named exclusives (Black Knight)</td></tr>
   <tr><td>$150–$1,100</td><td>41 of 932</td><td>200+ skins with Travis Scott/Ghoul Trooper/Leviathan Axe</td></tr>
+</tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">Distribution from igitems.com's own market report, September 2026 — see sources.</p>
 
@@ -338,17 +340,19 @@
 <h3>Player guide: what settings and building techniques do real pros actually use?</h3>
 <p>This section is for improving your own play, not your account's resale value. Published gear/DPI setups for named competitive players (source: <a href="https://www.setup.gg/news/fortnite-pro-settings-guide-2026-dpi-sensitivity-gear/" target="_blank" rel="noopener">setup.gg</a>, 2026):</p>
 <table class="tier-table">
+<tbody>
   <tr><th>Player</th><th>DPI</th><th>Mouse</th></tr>
   <tr><td>Peterbot</td><td>800</td><td>Logitech G Pro X Superlight 2</td></tr>
   <tr><td>Clix</td><td>800</td><td>Finalmouse Ultralight X Sakura</td></tr>
   <tr><td>Khanada</td><td>800</td><td>Razer Viper V3 Pro</td></tr>
   <tr><td>Cooper</td><td>1600</td><td>Razer Viper V4 Pro</td></tr>
+</tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">DPI alone doesn't determine feel — it's DPI × in-game sensitivity that matters, and that combined "effective sensitivity" number isn't disclosed for these specific players. Beyond gear, four building fundamentals show up consistently across established competitive guides (e.g. <a href="https://dignitas.gg/articles/fortnite-zero-to-hero-the-complete-beginner-s-building-guide-for-2026" target="_blank" rel="noopener">Dignitas</a>): the "90" (ramp → floor → wall → 90° turn while climbing), "boxing up" (a fast 4-wall-plus-floor box for a 1v1), the ramp rush, and simply prioritizing high ground in any extended fight.</p>
 
 </div>
 
-<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_fortnite&utm_campaign=fortnite" class="btn-primary" rel="noopener noreferrer">Check your Fortnite account's estimated value</a></div>
+<div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_fortnite&utm_campaign=fortnite" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Fortnite account's estimated value</a></div>
 
 <hr class="report-divider">
 
@@ -402,5 +406,6 @@
 
 <script src="./assets/cursor-trail.js" defer></script>
 <script src="./assets/calculators.js" defer></script>
+<script defer src="/game-account-value/assets/analytics-placeholder.js"></script>
 </body>
 </html>
