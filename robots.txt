@@ -73,4 +73,4 @@ Allow: /
 User-agent: DoubaoBot
 Allow: /
 
-Sitemap: https://iamalex-afk.github.io/game-account-value/sitemap.xml
+Sitemap: https://game-account-value.com/sitemap.xml
