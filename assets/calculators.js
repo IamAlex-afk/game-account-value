@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -204,6 +204,195 @@
       confidencePrefix: "Sicherheit: ",
       copiedFallback: "Kopiert!",
       gamepad: { up: "Vorheriges Feld", down: "Nächstes Feld", left: "Verringern", right: "Erhöhen", a: "Alles zurücksetzen", b: "Ergebnis teilen", resetCaption: "RESET", shareCaption: "TEILEN" }
+    },
+    tr: {
+      sliders: {
+        "brawl-stars": { trophies: "Kupa", maxed: "Power Level 11 karakterler" },
+        "clash-of-clans": { th: "Köy Merkezi (Town Hall) seviyesi" },
+        "clash-royale": { kt: "Kral Kulesi seviyesi", maxed: "Maksimum seviye kartlar" },
+        "free-fire": { rank: "Rütbe", bundles: "Nadir bundle/evcil hayvanlar" },
+        "genshin-impact": { fivestars: "5★ karakter", c6: "C6 karakterler" },
+        "mobile-legends": { skins: "Toplam skin", rank: "Rütbe" },
+        "fortnite": { skins: "Toplam skin", ogItems: "Nadir OG eşyalar" },
+        "minecraft": { type: "Hesap türü" },
+        "roblox": { age: "Hesap yaşı", robux: "Robux bakiyesi", limiteds: "Sıradan Limited eşyalar (isimli nadirler değil)" }
+      },
+      select: { "clash-of-clans": { label: "Yükseltme türü", options: [["full", "Full Max"], ["standard", "Standart"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " yıl"; },
+      minecraftTypes: ["Normal hesap", "MVP+/Hypixel, nadir pelerin", "Minecon pelerini sahibi", "2 karakterli isim (alfanümerik)"],
+      checkboxHeading: "İsimli nadir eşyalar (opsiyonel):",
+      confidence: { low: "Düşük", medium: "Orta", high: "Yüksek" },
+      confidencePrefix: "Güven: ",
+      copiedFallback: "Kopyalandı!",
+      gamepad: { up: "Önceki alan", down: "Sonraki alan", left: "Azalt", right: "Artır", a: "Tümünü sıfırla", b: "Sonucu paylaş", resetCaption: "SIFIRLA", shareCaption: "PAYLAŞ" }
+    },
+    vi: {
+      sliders: {
+        "brawl-stars": { trophies: "Cúp", maxed: "Tướng Power Level 11" },
+        "clash-of-clans": { th: "Cấp Trụ sở chính (Town Hall)" },
+        "clash-royale": { kt: "Cấp King Tower", maxed: "Thẻ cấp tối đa" },
+        "free-fire": { rank: "Rank", bundles: "Bundle/thú cưng hiếm" },
+        "genshin-impact": { fivestars: "Nhân vật 5★", c6: "Nhân vật C6" },
+        "mobile-legends": { skins: "Tổng số skin", rank: "Rank" },
+        "fortnite": { skins: "Tổng số skin", ogItems: "Vật phẩm OG hiếm" },
+        "minecraft": { type: "Loại acc" },
+        "roblox": { age: "Tuổi acc", robux: "Số dư Robux", limiteds: "Vật phẩm Limited thường (không phải hàng hiếm có tên)" }
+      },
+      select: { "clash-of-clans": { label: "Loại nâng cấp", options: [["full", "Full Max"], ["standard", "Tiêu chuẩn"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " năm"; },
+      minecraftTypes: ["Acc thường", "MVP+/Hypixel, cape hiếm", "Sở hữu cape Minecon", "Tên 2 ký tự (chữ+số)"],
+      checkboxHeading: "Vật phẩm hiếm có tên (tùy chọn):",
+      confidence: { low: "Thấp", medium: "Trung bình", high: "Cao" },
+      confidencePrefix: "Độ tin cậy: ",
+      copiedFallback: "Đã sao chép!",
+      gamepad: { up: "Trường trước", down: "Trường tiếp theo", left: "Giảm", right: "Tăng", a: "Đặt lại tất cả", b: "Chia sẻ kết quả", resetCaption: "RESET", shareCaption: "CHIA SẺ" }
+    },
+    hi: {
+      sliders: {
+        "brawl-stars": { trophies: "ट्रॉफ़ी", maxed: "Power Level 11 ब्रॉलर" },
+        "clash-of-clans": { th: "Town Hall लेवल" },
+        "clash-royale": { kt: "King Tower लेवल", maxed: "मैक्स-लेवल कार्ड्स" },
+        "free-fire": { rank: "रैंक", bundles: "रेयर बंडल/पेट्स" },
+        "genshin-impact": { fivestars: "5★ करैक्टर", c6: "C6 वाले करैक्टर" },
+        "mobile-legends": { skins: "कुल स्किन्स", rank: "रैंक" },
+        "fortnite": { skins: "कुल स्किन्स", ogItems: "रेयर OG आइटम्स" },
+        "minecraft": { type: "अकाउंट टाइप" },
+        "roblox": { age: "अकाउंट की उम्र", robux: "Robux बैलेंस", limiteds: "आम Limited आइटम्स (नामी रेयर नहीं)" }
+      },
+      select: { "clash-of-clans": { label: "अपग्रेड टाइप", options: [["full", "Full Max"], ["standard", "स्टैंडर्ड"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " साल"; },
+      minecraftTypes: ["रेगुलर अकाउंट", "MVP+/Hypixel, रेयर केप", "Minecon केप होल्डर", "2-कैरेक्टर नाम (अल्फ़ान्यूमेरिक)"],
+      checkboxHeading: "नामी रेयर आइटम्स (ऑप्शनल):",
+      confidence: { low: "कम", medium: "मीडियम", high: "हाई" },
+      confidencePrefix: "कॉन्फिडेंस: ",
+      copiedFallback: "कॉपी हो गया!",
+      gamepad: { up: "पिछला फ़ील्ड", down: "अगला फ़ील्ड", left: "घटाएं", right: "बढ़ाएं", a: "सब रीसेट करें", b: "रिज़ल्ट शेयर करें", resetCaption: "रीसेट", shareCaption: "शेयर" }
+    },
+    it: {
+      sliders: {
+        "brawl-stars": { trophies: "Trofei (coppe)", maxed: "Brawler Power Level 11" },
+        "clash-of-clans": { th: "Livello Municipio (Town Hall)" },
+        "clash-royale": { kt: "Livello King Tower", maxed: "Carte al livello massimo" },
+        "free-fire": { rank: "Rango", bundles: "Bundle/pet rari" },
+        "genshin-impact": { fivestars: "Personaggi 5★", c6: "Personaggi con C6" },
+        "mobile-legends": { skins: "Skin totali", rank: "Rango" },
+        "fortnite": { skins: "Skin totali", ogItems: "Oggetti OG rari" },
+        "minecraft": { type: "Tipo di account" },
+        "roblox": { age: "Anzianità dell'account", robux: "Saldo Robux", limiteds: "Oggetti Limited comuni (non i rari con nome)" }
+      },
+      select: { "clash-of-clans": { label: "Tipo di potenziamento", options: [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "anno" : "anni"); },
+      minecraftTypes: ["Account normale", "MVP+/Hypixel, cape raro", "Possessore cape Minecon", "Nome 2 caratteri (alfanumerico)"],
+      checkboxHeading: "Oggetti rari con nome (opzionale):",
+      confidence: { low: "Bassa", medium: "Media", high: "Alta" },
+      confidencePrefix: "Affidabilità: ",
+      copiedFallback: "Copiato!",
+      gamepad: { up: "Campo precedente", down: "Campo successivo", left: "Diminuisci", right: "Aumenta", a: "Reimposta tutto", b: "Condividi risultato", resetCaption: "RESET", shareCaption: "CONDIVIDI" }
+    },
+    ja: {
+      sliders: {
+        "brawl-stars": { trophies: "トロフィー", maxed: "Power Level 11のブロウラー" },
+        "clash-of-clans": { th: "タウンホールレベル" },
+        "clash-royale": { kt: "キングタワーレベル", maxed: "最大レベルのカード" },
+        "free-fire": { rank: "ランク", bundles: "レアなバンドル/ペット" },
+        "genshin-impact": { fivestars: "★5キャラクター", c6: "凸6(C6)キャラクター" },
+        "mobile-legends": { skins: "スキン総数", rank: "ランク" },
+        "fortnite": { skins: "スキン総数", ogItems: "レアなOGアイテム" },
+        "minecraft": { type: "アカウントタイプ" },
+        "roblox": { age: "アカウントの年数", robux: "Robux残高", limiteds: "一般的なLimitedアイテム(名前付きレアではない)" }
+      },
+      select: { "clash-of-clans": { label: "アップグレードタイプ", options: [["full", "フルマックス"], ["standard", "標準"], ["rushed", "ラッシュ"]] } },
+      ageUnit: function (v) { return v + "年"; },
+      minecraftTypes: ["通常アカウント", "MVP+/Hypixel、レアなケープ", "Mineconケープ所持者", "2文字の名前(英数字)"],
+      checkboxHeading: "名前付きレアアイテム(任意):",
+      confidence: { low: "低い", medium: "中程度", high: "高い" },
+      confidencePrefix: "信頼度: ",
+      copiedFallback: "コピーしました!",
+      gamepad: { up: "前のフィールド", down: "次のフィールド", left: "減らす", right: "増やす", a: "すべてリセット", b: "結果をシェア", resetCaption: "リセット", shareCaption: "シェア" }
+    },
+    ko: {
+      sliders: {
+        "brawl-stars": { trophies: "트로피", maxed: "Power Level 11 브롤러" },
+        "clash-of-clans": { th: "Town Hall 레벨" },
+        "clash-royale": { kt: "King Tower 레벨", maxed: "최대 레벨 카드" },
+        "free-fire": { rank: "랭크", bundles: "희귀 번들/펫" },
+        "genshin-impact": { fivestars: "5성 캐릭터", c6: "C6 캐릭터" },
+        "mobile-legends": { skins: "전체 스킨 수", rank: "랭크" },
+        "fortnite": { skins: "전체 스킨 수", ogItems: "희귀 OG 아이템" },
+        "minecraft": { type: "계정 유형" },
+        "roblox": { age: "계정 연식", robux: "Robux 잔액", limiteds: "일반 Limited 아이템(네임드 희귀 아님)" }
+      },
+      select: { "clash-of-clans": { label: "업그레이드 유형", options: [["full", "Full Max"], ["standard", "표준"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + "년"; },
+      minecraftTypes: ["일반 계정", "MVP+/Hypixel, 희귀 케이프", "Minecon 케이프 보유자", "2글자 이름(영숫자)"],
+      checkboxHeading: "네임드 희귀 아이템(선택):",
+      confidence: { low: "낮음", medium: "보통", high: "높음" },
+      confidencePrefix: "신뢰도: ",
+      copiedFallback: "복사됨!",
+      gamepad: { up: "이전 필드", down: "다음 필드", left: "감소", right: "증가", a: "전체 초기화", b: "결과 공유", resetCaption: "초기화", shareCaption: "공유" }
+    },
+    zh: {
+      sliders: {
+        "brawl-stars": { trophies: "奖杯", maxed: "Power Level 11 角色" },
+        "clash-of-clans": { th: "大本营等级" },
+        "clash-royale": { kt: "国王塔等级", maxed: "满级卡牌" },
+        "free-fire": { rank: "段位", bundles: "稀有套装/宠物" },
+        "genshin-impact": { fivestars: "5星角色", c6: "满命(C6)角色" },
+        "mobile-legends": { skins: "皮肤总数", rank: "段位" },
+        "fortnite": { skins: "皮肤总数", ogItems: "稀有OG道具" },
+        "minecraft": { type: "账号类型" },
+        "roblox": { age: "账号年龄", robux: "Robux余额", limiteds: "普通Limited道具(非知名稀有款)" }
+      },
+      select: { "clash-of-clans": { label: "升级类型", options: [["full", "满级"], ["standard", "标准"], ["rushed", "抢建(Rushed)"]] } },
+      ageUnit: function (v) { return v + "年"; },
+      minecraftTypes: ["普通账号", "MVP+/Hypixel，稀有披风", "Minecon披风持有者", "2字符ID(字母数字)"],
+      checkboxHeading: "知名稀有道具(可选)：",
+      confidence: { low: "低", medium: "中", high: "高" },
+      confidencePrefix: "可信度：",
+      copiedFallback: "已复制！",
+      gamepad: { up: "上一项", down: "下一项", left: "减少", right: "增加", a: "全部重置", b: "分享结果", resetCaption: "重置", shareCaption: "分享" }
+    },
+    pl: {
+      sliders: {
+        "brawl-stars": { trophies: "Puchary", maxed: "Brawlerzy Power Level 11" },
+        "clash-of-clans": { th: "Poziom Ratusza (Town Hall)" },
+        "clash-royale": { kt: "Poziom King Tower", maxed: "Karty na max. poziomie" },
+        "free-fire": { rank: "Ranga", bundles: "Rzadkie bundle/zwierzaki" },
+        "genshin-impact": { fivestars: "Postacie 5★", c6: "Postacie z C6" },
+        "mobile-legends": { skins: "Łączna liczba skórek", rank: "Ranga" },
+        "fortnite": { skins: "Łączna liczba skórek", ogItems: "Rzadkie przedmioty OG" },
+        "minecraft": { type: "Typ konta" },
+        "roblox": { age: "Wiek konta", robux: "Saldo Robux", limiteds: "Zwykłe przedmioty Limited (nie rzadkie z nazwą)" }
+      },
+      select: { "clash-of-clans": { label: "Typ rozbudowy", options: [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " " + (v === 1 ? "rok" : (v >= 2 && v <= 4 ? "lata" : "lat")); },
+      minecraftTypes: ["Zwykłe konto", "MVP+/Hypixel, rzadki płaszcz", "Posiadacz płaszcza Minecon", "2-znakowa nazwa (alfanumeryczna)"],
+      checkboxHeading: "Rzadkie przedmioty z nazwą (opcjonalnie):",
+      confidence: { low: "Niska", medium: "Średnia", high: "Wysoka" },
+      confidencePrefix: "Pewność: ",
+      copiedFallback: "Skopiowano!",
+      gamepad: { up: "Poprzednie pole", down: "Następne pole", left: "Zmniejsz", right: "Zwiększ", a: "Resetuj wszystko", b: "Udostępnij wynik", resetCaption: "RESET", shareCaption: "UDOSTĘPNIJ" }
+    },
+    th: {
+      sliders: {
+        "brawl-stars": { trophies: "ถ้วยรางวัล", maxed: "ตัวละคร Power Level 11" },
+        "clash-of-clans": { th: "เลเวล Town Hall" },
+        "clash-royale": { kt: "เลเวล King Tower", maxed: "การ์ดเลเวลสูงสุด" },
+        "free-fire": { rank: "แรงค์", bundles: "บันเดิล/สัตว์เลี้ยงหายาก" },
+        "genshin-impact": { fivestars: "ตัวละคร 5★", c6: "ตัวละคร C6" },
+        "mobile-legends": { skins: "สกินทั้งหมด", rank: "แรงค์" },
+        "fortnite": { skins: "สกินทั้งหมด", ogItems: "ไอเทม OG หายาก" },
+        "minecraft": { type: "ประเภทบัญชี" },
+        "roblox": { age: "อายุบัญชี", robux: "ยอดคงเหลือ Robux", limiteds: "ไอเทม Limited ทั่วไป (ไม่ใช่ของหายากที่มีชื่อ)" }
+      },
+      select: { "clash-of-clans": { label: "ประเภทการอัปเกรด", options: [["full", "Full Max"], ["standard", "มาตรฐาน"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " ปี"; },
+      minecraftTypes: ["บัญชีทั่วไป", "MVP+/Hypixel, เคปหายาก", "เจ้าของเคป Minecon", "ชื่อ 2 ตัวอักษร (ตัวอักษร+ตัวเลข)"],
+      checkboxHeading: "ไอเทมหายากที่มีชื่อ (ไม่บังคับ):",
+      confidence: { low: "ต่ำ", medium: "ปานกลาง", high: "สูง" },
+      confidencePrefix: "ความมั่นใจ: ",
+      copiedFallback: "คัดลอกแล้ว!",
+      gamepad: { up: "ฟิลด์ก่อนหน้า", down: "ฟิลด์ถัดไป", left: "ลด", right: "เพิ่ม", a: "รีเซ็ตทั้งหมด", b: "แชร์ผลลัพธ์", resetCaption: "รีเซ็ต", shareCaption: "แชร์" }
     }
   };
   var T = STR[LANG];
