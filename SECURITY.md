@@ -3,7 +3,7 @@
 ## Supported Versions
 
 Only the latest version deployed at
-https://iamalex-afk.github.io/game-account-value/ is supported.
+https://game-account-value.com/ is supported.
 
 ## Architecture
 
