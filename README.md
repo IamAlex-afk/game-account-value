@@ -35,9 +35,10 @@ Supported games: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, G
 
 ## Features
 
-- ✅ **24 languages**: en, ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th, pl, zh, tl, sw, ms, uz, kk, tk, ky
+- ✅ **24 languages** — 17 with the full 13-page depth (9 per-game reports + methodology, glossary, safety guide, cross-game comparison): en, ru, es, fr, pt, id, ar, de, tr, vi, hi, it, ja, ko, zh, pl, th. The remaining 7 (tl, sw, ms, uz, kk, tk, ky) currently ship the homepage + market-report only.
 - ✅ **Dual currency** — prices shown in USD and the visitor's local currency
-- ✅ **Verifiable PDF certificates** — unique Audit ID + QR code for instant authenticity checks
+- ✅ **Verifiable PDF certificates** — 9-tier gamer-style badge ladder (Wood → Whale) by estimated value, sequential collector's certificate number, QR + clickable links to both the site and the bot for instant authenticity checks
+- ✅ **Joystick-style quick calculator** on every per-game page — D-pad UI, no signup, nothing sent anywhere until the user opts into the bot
 - ✅ **Installable PWA** with offline support
 - ✅ **Lighthouse 98 / 100 / 96 / 100** — Performance, Accessibility, Best Practices, SEO (measured 2026-09-11)
 
@@ -49,14 +50,25 @@ Vanilla JavaScript, HTML, CSS. No frameworks, no bundler. Fully static, deployed
 
 ```
 index.html                  homepage (English)
-{lang}/index.html            localized versions: ru, es, pt, id, tr, ar, vi, hi, fr, de, it, ja, ko, th,
-                              pl, zh, tl, sw, ms, uz, kk, tk, ky
+{game}.html                  9 per-game market reports (roblox, brawl-stars, clash-of-clans,
+                              clash-royale, free-fire, genshin-impact, mobile-legends, fortnite, minecraft)
+methodology.html, glossary.html, account-trading-safety.html,
+which-game-accounts-are-most-valuable.html   resource pages
+market-report.html           cross-game hub
+{lang}/                      localized copy of the above — full 13-page depth for
+                              ru, es, fr, pt, id, ar, de, tr, vi, hi, it, ja, ko, zh, pl, th;
+                              index.html + market-report.html only for tl, sw, ms, uz, kk, tk, ky
 privacy.html, terms.html     legal pages
 robots.txt, sitemap.xml      SEO
 llms.txt, ai.txt             structured info for AI crawlers/agents (JSON-LD also embedded inline)
 manifest.json, favicon.svg/.png, og-image.png   PWA manifest and social preview
 .well-known/security.txt, SECURITY.md
 sw.js                        service worker — offline support, installable PWA
+assets/calculators.js        per-game quick calculator + joystick/D-pad UI
+assets/analytics-placeholder.js   no-op event hook (window.gavTrackEvent), wired via data-event
+                              attributes on CTA buttons — no third-party analytics wired up yet
+.github/workflows/validate.yml   html-validate CI (root pages) — not yet active, needs a token
+                              with the `workflow` scope to push
 ```
 
 ## Run locally
