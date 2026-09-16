@@ -20,6 +20,20 @@
   font-display: swap;
 }
 
+/* Cross-document View Transitions: unsupported browsers just navigate
+   normally, so this is a pure progressive enhancement, no fallback code
+   needed. */
+@view-transition {
+  navigation: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
 :root {
   --gold: #D4AF37;
   --gold-rgb: 212,175,55;
