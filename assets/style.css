@@ -20,12 +20,11 @@
   font-display: swap;
 }
 
-/* Cross-document View Transitions: unsupported browsers just navigate
-   normally, so this is a pure progressive enhancement, no fallback code
-   needed. */
-@view-transition {
-  navigation: auto;
-}
+/* Reduced-motion guard for the @view-transition rule further down this
+   file (cross-fade between pages). The generic "* { animation: none }"
+   reduced-motion block below doesn't reach these — ::view-transition-*
+   are generated pseudo-elements outside the normal document tree, not
+   matched by a plain universal selector — so they need their own rule. */
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(*),
   ::view-transition-old(*),
