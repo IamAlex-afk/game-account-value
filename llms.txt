@@ -7,9 +7,9 @@
 GameAccountValue accepts screenshots of game accounts, analyzes them with Google Gemini AI vision, and returns:
 
 - A market value estimate (USD range, shown alongside the user's local currency)
-- A value tier badge (Bronze / Silver / Gold / Diamond / Whale, based on the dollar estimate) and an internal quality tier (Starter / Casual / Pro / Collector, based on item rarity)
+- A value tier badge (9-tier ladder: Wood / Iron / Bronze / Silver / Gold / Platinum / Emerald / Diamond / Whale, based on the dollar estimate) and an internal quality tier (Starter / Casual / Pro / Collector, based on item rarity)
 - Liquidity rating (how fast the account could realistically sell)
-- A procedurally generated PDF certificate with QR verification code
+- A procedurally generated PDF certificate with QR verification code, a sequential collector's certificate number, and clickable links to both the bot and the website
 - A public Telegraph landing page for sharing
 
 Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 screenshot full audit with the PDF certificate, priced in Telegram Stars.
@@ -70,7 +70,7 @@ Verify any certificate at: https://t.me/GameAccountValue_Bot?start=verify_AUDITI
 
 ## Research Content (Website)
 
-Beyond the bot, the website publishes original market research — real marketplace price data cross-checked across multiple platforms and regions, not estimates. Fully built out (9 dedicated per-game pages + 4 resource pages each, plus a free client-side value-estimate calculator on every page) in English, Russian, Indonesian, Portuguese, Spanish, French, and Arabic; the remaining 17 languages currently have a single combined market-report page with the same fact-checked pricing data. More per-game builds in progress.
+Beyond the bot, the website publishes original market research — real marketplace price data cross-checked across multiple platforms and regions, not estimates. Fully built out (9 dedicated per-game pages + 4 resource pages each, plus a free client-side value-estimate calculator with joystick/D-pad controls on every game page) in 17 languages: English, Russian, Spanish, French, Portuguese, Indonesian, Arabic, German, Turkish, Vietnamese, Hindi, Italian, Japanese, Korean, Chinese (Simplified), Polish, and Thai. Where a genuine local marketplace source was verified first-hand, it's cited alongside the global sources on that language's pages: GameTrade.jp for Japanese, ItemBay.com for Korean, UU898.com for Chinese (Genshin Impact only), and Allegro Lokalnie for Polish (Roblox only). No regional source is claimed for a language unless it was directly confirmed by viewing live listings — where none could be confirmed, the page states that and cites the same global sources as the English original instead of fabricating a local one. The remaining 7 languages (Filipino, Swahili, Malay, Uzbek, Kazakh, Turkmen, Kyrgyz) currently have a single combined market-report page with the same fact-checked pricing data.
 
 - Dedicated per-game pages (price ranges, real confirmed value drivers, scam risks, and a free interactive calculator) for: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite, Minecraft — e.g. https://iamalex-afk.github.io/game-account-value/roblox.html
 - Combined hub page linking all 9 — https://iamalex-afk.github.io/game-account-value/market-report.html
@@ -79,7 +79,7 @@ Beyond the bot, the website publishes original market research — real marketpl
 - Cross-game price comparison ("which game has the most valuable accounts") — https://iamalex-afk.github.io/game-account-value/which-game-accounts-are-most-valuable.html
 - Research methodology (sources, verification standard, corrections log) — https://iamalex-afk.github.io/game-account-value/methodology.html
 
-Russian, Indonesian, Portuguese, Spanish, French, and Arabic versions of the same pages are at the equivalent /ru/, /id/, /pt/, /es/, /fr/, and /ar/ paths (e.g. /ru/roblox.html, /id/roblox.html, /pt/roblox.html, /es/roblox.html, /fr/roblox.html, /ar/roblox.html).
+Localized versions of the same pages are at the equivalent language-code path for each of the other 16 full-depth languages — /ru/, /es/, /fr/, /pt/, /id/, /ar/, /de/, /tr/, /vi/, /hi/, /it/, /ja/, /ko/, /zh/, /pl/, /th/ (e.g. /ru/roblox.html, /ja/roblox.html, /zh/roblox.html).
 
 Every price claim traces to a specific marketplace listing checked on a specific date, cited on the relevant page. Where no reliable repeated evidence was found for a claim (e.g. no confirmed named-skin value driver in some games), the page states that explicitly rather than guessing. The on-page calculator interpolates only between these same cited bracket values — it never introduces a number not already stated in the surrounding text.
 
