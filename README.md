@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/build-vanilla%20JS-yellow" alt="Vanilla JS, no framework">
 </p>
 
-<p align="center"><strong>🔗 Live: <a href="https://game-account-value.com/">game-account-value.com</a></strong></p>
+<p align="center"><strong>🔗 Live: <a href="https://gameaccountvalue.com/">gameaccountvalue.com</a></strong></p>
 <p align="center">Bot: <a href="https://t.me/GameAccountValue_Bot">@GameAccountValue_Bot</a></p>
 
 ---

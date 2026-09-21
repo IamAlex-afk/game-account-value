@@ -3,7 +3,7 @@
 ## Supported Versions
 
 Only the latest version deployed at
-https://game-account-value.com/ is supported.
+https://gameaccountvalue.com/ is supported.
 
 ## Architecture
 
