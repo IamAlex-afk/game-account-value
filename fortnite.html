@@ -223,40 +223,37 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 
-  /* ===== Cyberpunk/neon theme (Fortnite pilot) — generic genre, not
-     copying Fortnite's actual branding/logos/typeface. Re-declares the
-     shared design system's CSS custom properties so every component
-     built on var(--gold)/var(--emerald) re-themes automatically. ===== */
+  /* ===== Fortnite theme v2 — rarity-tier accent, grounded in the page's
+     own subject: skin RARITY is what drives account value here (see the
+     price-bracket table below). Loot-tier color convention (grey/green/
+     blue/orange) is genre-wide, not Fortnite-exclusive branding. Replaces
+     an earlier neon-cyberpunk pass rejected per DESIGN.md's anti-slop
+     checklist — see that file before changing this again. ===== */
   :root {
-    --gold: #FF2E63; --gold-rgb: 255,46,99;
-    --emerald: #00E5FF; --emerald-rgb: 0,229,255;
-    --border-strong: rgba(255,46,99,0.45);
-    --accent: #00E5FF; --accent-rgb: 0,229,255;
+    --gold: #A855F7; --gold-rgb: 168,85,247;
+    --border-strong: rgba(168,85,247,0.4);
   }
-  body.theme-neon {
-    background:
-      radial-gradient(ellipse 60% 45% at 6% -10%, rgba(var(--gold-rgb), 0.16), transparent 55%),
-      radial-gradient(ellipse 55% 45% at 100% 110%, rgba(var(--emerald-rgb), 0.16), transparent 55%),
-      #05060F;
+  body.theme-rarity .nav-cta, body.theme-rarity .btn-primary, body.theme-rarity .resources-callout a {
+    background: linear-gradient(135deg, #c084fc, var(--gold) 55%, #7e22ce) !important;
+    color: #fff !important;
   }
-  body.theme-neon::before {
-    content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none;
-    background: repeating-linear-gradient(0deg, rgba(255,255,255,0.028) 0px, rgba(255,255,255,0.028) 1px, transparent 1px, transparent 3px);
-    mix-blend-mode: overlay;
+  body.theme-rarity .logo::before { background: linear-gradient(135deg, #c084fc 0%, var(--gold) 48%, var(--emerald) 100%); }
+  /* The one deliberate moment: the single number every visitor came for
+     gets the "Legendary" tier treatment. Everything else stays quiet. */
+  body.theme-rarity .price-range {
+    background: linear-gradient(135deg, rgba(255,157,46,0.18), rgba(255,157,46,0.06));
+    border-color: #FF9D2E; color: #FFB35C;
+    box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
-  body.theme-neon .report-hero h1 { text-shadow: 0 0 14px rgba(var(--gold-rgb),0.55), 0 0 30px rgba(var(--emerald-rgb),0.3); }
-  body.theme-neon .nav-cta, body.theme-neon .btn-primary, body.theme-neon .resources-callout a {
-    background: linear-gradient(135deg, #ff7aa8, var(--gold) 55%, #b8123f) !important;
-  }
-  body.theme-neon .resources-callout a { color: #1a0208; }
-  body.theme-neon .logo::before { background: linear-gradient(135deg, #ff7aa8 0%, var(--gold) 48%, var(--emerald) 100%); }
-  @media (prefers-reduced-motion: no-preference) {
-    body.theme-neon .report-hero h1 { animation: neon-flicker 4.5s ease-in-out infinite; }
-  }
-  @keyframes neon-flicker { 0%, 19%, 21%, 23%, 100% { opacity: 1; } 20%, 22% { opacity: 0.86; } }
+  /* Price-bracket table is the article's own rarity ladder — color-coding
+     it makes that argument visible instead of decorating unrelated parts. */
+  body.theme-rarity .article-body table:nth-of-type(1) tr:nth-child(2) td:first-child { border-left: 4px solid #9CA3AF; padding-left: 12px; }
+  body.theme-rarity .article-body table:nth-of-type(1) tr:nth-child(3) td:first-child { border-left: 4px solid #22C55E; padding-left: 12px; }
+  body.theme-rarity .article-body table:nth-of-type(1) tr:nth-child(4) td:first-child { border-left: 4px solid #3B82F6; padding-left: 12px; }
+  body.theme-rarity .article-body table:nth-of-type(1) tr:nth-child(5) td:first-child { border-left: 4px solid #FF9D2E; padding-left: 12px; }
 </style>
 </head>
-<body class="theme-neon">
+<body class="theme-rarity">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
