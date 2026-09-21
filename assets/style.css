@@ -195,7 +195,7 @@ h1 span {
   background: linear-gradient(90deg, var(--gold), #f2d989, var(--emerald), var(--gold));
   background-size: 300% 100%;
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  animation: gold-shimmer 6s ease-in-out infinite;
+  animation: gold-shimmer 6s ease-in-out 3;
 }
 @keyframes gold-shimmer {
   0%, 100% { background-position: 0% 50%; }
@@ -425,7 +425,7 @@ footer a:hover { color: var(--gold); }
 .value-calc::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
   background: linear-gradient(90deg, var(--gold), #f2d989, var(--emerald), var(--gold));
-  background-size: 300% 100%; animation: gold-shimmer 6s ease-in-out infinite;
+  background-size: 300% 100%; animation: gold-shimmer 6s ease-in-out 3;
 }
 .value-calc .vc-title {
   display: inline-block; font-family: var(--serif); font-variation-settings: 'wght' 750; font-size: 13px;

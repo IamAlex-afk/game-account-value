@@ -740,7 +740,13 @@
         controls.forEach(function (c) { c.field.classList.remove("vc-field-active"); });
         var target = controls[activeIndex];
         target.field.classList.add("vc-field-active");
-        target.field.scrollIntoView({ block: "nearest", behavior: prefersReducedMotion ? "auto" : "smooth" });
+        // Deferred to the next frame so the browser applies the class change
+        // through its normal layout pass instead of us forcing a synchronous
+        // recalc by reading scroll position in the same tick (Lighthouse
+        // "forced reflow" — same visual result, just not forced early).
+        requestAnimationFrame(function () {
+          target.field.scrollIntoView({ block: "nearest", behavior: prefersReducedMotion ? "auto" : "smooth" });
+        });
       }
       function fire(el, type) { el.dispatchEvent(new Event(type, { bubbles: true })); }
       function nudge(dir) {
