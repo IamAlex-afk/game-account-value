@@ -71,29 +71,40 @@ theme — see "Per-game themes" below. Because shared components
 built on `var(--gold)` / `var(--emerald)`, redeclaring the variables
 re-themes the whole page without touching those shared rules.
 
-## Per-game themes (in progress)
+## Per-game themes (done — pending real visual review)
 
 Goal: each game's report page gets a distinct visual accent reflecting
 that game's own vernacular — not its trademarked logo/art/typeface
 (false-affiliation risk — the footer explicitly disclaims any
 affiliation with the game studios), but a *generic* concept genuinely
-tied to the page's subject matter.
+tied to the page's subject matter. Every theme redeclares `--gold` /
+`--gold-rgb` / `--border-strong` and overrides `.nav-cta` / `.btn-primary`
+/ `.resources-callout a` / `.logo::before` under a `body.theme-*` class,
+applied to the English page and all 16 Level-1 languages identically.
+`.price-range` (the single number every visitor came for) stays a
+consistent warm amber-gold (`#FF9D2E`/`#FFB35C`) glow across every
+theme on purpose — one recognizable "here's your answer" signal
+regardless of which game's UI color surrounds it.
 
-Status:
-- **Roblox** — base brand tokens (gold/emerald), no override. Button
-  modernization applied.
-- **Fortnite** — in progress. First attempt (hot pink + cyan "cyberpunk"
-  neon, scanline overlay, flickering H1) was reviewed against the "AI
-  slop" list above and rejected as a generic default, not a grounded
-  choice. Current direction: the page's own subject is skin *rarity*
-  driving account value (see the "by skin count" price-bracket table) —
-  loot-rarity tiering (common→uncommon→rare→epic→legendary, a genre-wide
-  convention, not Fortnite-exclusive IP) is the actual differentiator to
-  design around, e.g. color-coding the price-bracket table by tier and
-  giving the single most important number (the price range) the
-  "legendary" treatment, rather than decorating the whole page.
-- Remaining 7 games — not started. Do Pass 1 (above) per game before
-  touching CSS; don't reuse Fortnite's palette for a different game.
+| Game | Class | Accent | Grounding (not decoration) |
+|---|---|---|---|
+| Roblox | *(none)* | brand gold/emerald | Base brand, no override |
+| Fortnite | `theme-rarity` | Epic purple `#A855F7` | Skin *rarity* drives value (price-bracket table color-coded common→legendary) |
+| Brawl Stars | `theme-mythic` | Mythic pink `#E8449A` | Trophies + Mythic/Legendary skin rarity (llms.txt-cited value drivers) |
+| Clash of Clans | `theme-bronze` | Bronze/copper `#C17A3D` | Town Hall/hero level progression, CWL medals — "war village" upgrade ladder |
+| Clash Royale | `theme-royal` | Royal blue-violet `#6C5CE7` | King Tower level, card evolutions — "Royale"/crown/arena vocabulary; deliberately cooler than CoC despite being a sister game |
+| Free Fire | `theme-diamond` | Diamond cyan `#22C1D6` | Diamond count is a named value driver — the in-game currency's own color |
+| Genshin Impact | `theme-gacha` | Gacha lavender `#A78BFA` | 5-star character/weapon pull count — genre-wide gacha-banner purple |
+| Mobile Legends | `theme-immortal` | Mythic crimson `#E63950` | Competitive rank — MOBA "Mythic/Immortal" top-rank color convention |
+| Minecraft | `theme-overworld` | Overworld green `#6B9B3A` | No natural rarity ladder here, so this one also sharpens corners (`border-radius` down on cards/pills) — a nod to voxels, the game's actual defining trait, not just a color swap |
+
+**Not yet done:** real screenshot review. No browser connection was
+available for this whole rollout (Claude in Chrome never connected) —
+every theme above was built and validated (`html-validate`, JSON-LD
+parse, CSS brace balance) but never actually *seen*. Treat this table
+as "implemented per the stated logic," not "confirmed to look good."
+Open each theme in a real browser and compare against the anti-slop
+list before calling this fully done.
 
 ## How to apply
 
