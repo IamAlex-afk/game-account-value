@@ -596,4 +596,30 @@ footer a:hover { color: var(--gold); }
 @media (pointer: coarse) { .value-calc .vc-dpad-btn, .value-calc .vc-btn-round { min-width: 44px; min-height: 44px; } .value-calc .vc-btn-round { width: 48px; height: 48px; } }
 @media (max-width: 480px) { .value-calc { padding: 18px; } .value-calc .vc-result-value { font-size: 24px; } .value-calc .vc-gamepad { padding: 12px 10px; gap: 8px; flex-wrap: nowrap; } }
 @media (max-width: 360px) { .value-calc .vc-gamepad { gap: 4px; } .value-calc .vc-btn-label { max-width: 52px; font-size: 8px; } }
+
+/* ---- floating "Fresh News" button (per-game regional market watch) ---- */
+.fresh-news-fab {
+  position: fixed; right: 20px; bottom: 20px; z-index: 200;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 20px; border-radius: 30px;
+  background: linear-gradient(135deg, #f2d989, var(--gold) 55%, #b68f2a);
+  color: #201802; font-weight: 700; font-size: 14px; text-decoration: none;
+  box-shadow: 0 4px 20px rgba(var(--gold-rgb), 0.45);
+  transition: box-shadow .2s ease;
+  will-change: transform;
+}
+.fresh-news-fab:hover, .fresh-news-fab:focus-visible {
+  box-shadow: 0 6px 28px rgba(var(--gold-rgb), 0.65);
+}
+.fresh-news-fab .fab-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--emerald);
+  box-shadow: 0 0 8px var(--emerald); animation: fab-pulse 1.6s ease-in-out infinite; flex-shrink: 0;
+}
+@keyframes fab-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(1.4); } }
+@media (max-width: 480px) {
+  .fresh-news-fab { right: 14px; bottom: 14px; padding: 10px 15px; font-size: 12.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fresh-news-fab .fab-dot { animation: none; }
+}
 @media (prefers-reduced-motion: reduce) { .value-calc .vc-scale-fill { transition: none; } .value-calc .vc-dpad-btn, .value-calc .vc-btn-round { transition: none; } }
