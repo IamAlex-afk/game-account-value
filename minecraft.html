@@ -197,18 +197,18 @@
   .breadcrumb { max-width: 720px; margin: 0 auto; padding: 20px 24px 0; font-size: 13px; color: var(--muted); }
   .breadcrumb a { color: var(--muted); }
   .back-btn { display: inline-flex; align-items: center; gap: 6px; margin: 16px auto 0; max-width: 720px; padding: 0 24px; font-size: 13px; }
-  .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; }
-  .back-btn a:hover { border-color: var(--border-strong); }
+  .back-btn a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; background: rgba(255,255,255,0.03); transition: border-color .2s, background .2s, transform .2s; }
+  .back-btn a:hover { border-color: var(--gold); background: rgba(212,175,55,0.08); transform: translateX(-2px); }
   .section-nav { position: sticky; top: 61px; z-index: 90; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 20px auto 8px; padding: 12px 24px; background: rgba(8,16,14,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.07); transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; white-space: nowrap; }
-  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: rgba(212,175,55,0.16); box-shadow: 0 0 18px rgba(212,175,55,0.4); transform: translateY(-1px); }
+  .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid var(--border-strong); border-radius: 24px; color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.09); box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: border-color .2s, background .2s, box-shadow .2s ease, transform .2s cubic-bezier(.2,.8,.3,1.4); white-space: nowrap; }
+  .section-nav a:hover, .section-nav a:focus-visible { border-color: var(--gold); background: linear-gradient(135deg, rgba(242,217,137,0.25), rgba(212,175,55,0.25)); box-shadow: 0 6px 20px rgba(212,175,55,0.35); transform: translateY(-2px); }
   .anchor-target { display: block; scroll-margin-top: 128px; }
   .article-body h2 { font-family: var(--serif); font-variation-settings: 'wght' 750; font-size: 15px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; margin: 36px 0 4px; padding-top: 20px; border-top: 1px solid var(--border); }
   .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 8px; }
   .resources-callout { max-width: 760px; margin: 4px auto 20px; padding: 14px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
   .resources-label { font-size: 13px; color: var(--muted); font-weight: 600; }
-  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--border-strong); border-radius: 20px; color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; background: rgba(212,175,55,0.06); transition: background .2s, border-color .2s, box-shadow .2s; }
-  .resources-callout a:hover, .resources-callout a:focus-visible { background: rgba(212,175,55,0.18); border-color: var(--gold); box-shadow: 0 0 14px rgba(212,175,55,0.3); }
+  .resources-callout a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 1px solid transparent; border-radius: 24px; color: #1a1404; text-decoration: none; font-size: 13px; font-weight: 700; background: linear-gradient(135deg, #f2d989, var(--gold) 60%, #c99a2e); box-shadow: 0 3px 12px rgba(var(--gold-rgb),0.28); transition: transform .2s cubic-bezier(.2,.8,.3,1.4), box-shadow .2s; }
+  .resources-callout a:hover, .resources-callout a:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(var(--gold-rgb),0.45); }
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
@@ -224,14 +224,37 @@
   .fact-box strong { color: var(--text); }
   .report-cta { margin: 28px 0 10px; text-align: center; }
   .other-games { max-width: 720px; margin: 0 auto; padding: 10px 24px 40px; font-size: 13px; }
-  .other-games a { display: inline-block; margin: 4px 8px 4px 0; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; color: var(--muted); text-decoration: none; }
+  .other-games a { display: inline-block; margin: 4px 8px 4px 0; padding: 8px 16px; border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; background: rgba(255,255,255,0.04); transition: border-color .2s, background .2s, transform .2s; }
+  .other-games a:hover { border-color: var(--gold); background: rgba(212,175,55,0.1); transform: translateY(-2px); }
   .sources-list { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; font-size: 12px; color: var(--muted); }
   .sources-list a { color: var(--muted); }
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
+
+  /* ===== theme-overworld theme -- Value drivers are account type/OG username/capes, not a rarity ladder -- so instead of another color-only tier accent, this one leans on Minecraft's actual defining trait (voxels): sharper, blockier corners on cards/buttons alongside an overworld-green accent, generic to the sandbox-survival genre rather than copying any specific block texture or logo. See DESIGN.md before changing. ===== */
+  :root {
+    --gold: #6B9B3A; --gold-rgb: 107,155,58;
+    --border-strong: rgba(107,155,58,0.4);
+  }
+  body.theme-overworld .nav-cta, body.theme-overworld .btn-primary, body.theme-overworld .resources-callout a {
+    background: linear-gradient(135deg, #9ecb6a, var(--gold) 55%, #3f5f1e) !important;
+    color: #fff !important;
+  }
+  body.theme-overworld .logo::before { background: linear-gradient(135deg, #9ecb6a 0%, var(--gold) 48%, var(--emerald) 100%); }
+  body.theme-overworld .price-range {
+    background: linear-gradient(135deg, rgba(255,157,46,0.18), rgba(255,157,46,0.06));
+    border-color: #FF9D2E; color: #FFB35C;
+    box-shadow: 0 0 20px rgba(255,157,46,0.22);
+  }
+  body.theme-overworld .price-range, body.theme-overworld .risk-box, body.theme-overworld .reported-case {
+    border-radius: 4px;
+  }
+  body.theme-overworld .section-nav a, body.theme-overworld .resources-callout a, body.theme-overworld .other-games a, body.theme-overworld .back-btn a {
+    border-radius: 6px;
+  }
 </style>
 </head>
-<body>
+<body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
