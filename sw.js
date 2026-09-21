@@ -1,5 +1,5 @@
 /* GameAccountValue Service Worker — offline + PWA install */
-const CACHE = 'gav-landing-2026-15';
+const CACHE = 'gav-landing-2026-16';
 const PRECACHE = [
   './', './index.html', './404.html', './manifest.json',
   './favicon.png', './favicon.svg', './apple-touch-icon.png', './og-image.jpg',
@@ -8,6 +8,7 @@ const PRECACHE = [
   './assets/interactions.js', './assets/counter.js',
   './ru/', './de/', './es/', './fr/', './it/', './ja/', './ko/', './pt/',
   './th/', './tr/', './vi/', './ar/', './hi/', './id/', './zh/', './pl/',
+  './tl/', './sw/', './ms/', './uz/', './kk/', './tk/', './ky/',
 ];
 
 self.addEventListener('install', e => {

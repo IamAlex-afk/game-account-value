@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="og-image.png" alt="GameAccountValue — AI-powered game account appraisal" width="500">
+  <img src="og-image.jpg" alt="GameAccountValue — AI-powered game account appraisal" width="500">
 </p>
 
 <h1 align="center">GameAccountValue</h1>
