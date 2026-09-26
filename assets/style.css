@@ -368,6 +368,8 @@ details p { padding: 0 20px 18px; color: var(--muted); font-size: 14px; line-hei
 footer { border-top: 1px solid var(--border); padding: 44px 24px; text-align: center; color: var(--muted); font-size: 13px; }
 footer a { color: var(--muted); text-decoration: none; margin: 0 10px; transition: color .15s; }
 footer a:hover { color: var(--gold); }
+/* footer link row: 24px+ tap targets (WCAG 2.5.8) */
+footer > div > a { display: inline-block; padding: 6px 4px; min-height: 24px; }
 .footer-logo {
   font-family: var(--serif); font-variation-settings: 'wght' 800;
   font-size: 21px; font-weight: 800; color: var(--gold); margin-bottom: 18px;
