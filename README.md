@@ -80,6 +80,13 @@ python -m http.server 8080
 # open http://localhost:8080
 ```
 
+## Adding a page
+
+1. Add its `<url>` to `sitemap.xml` with `<lastmod>` = the commit date.
+2. After the deploy is live, ping IndexNow (Bing, Yandex and other participants — not Google):
+   `python scripts/indexnow.py https://gameaccountvalue.com/<new-page>.html`
+3. For Google: Search Console → URL Inspection → Request indexing.
+
 ## License
 
 GPL-3.0 — see [LICENSE](LICENSE). © 2026 Aleksei Bitkin.
