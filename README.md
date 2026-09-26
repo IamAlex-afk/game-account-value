@@ -40,7 +40,7 @@ Supported games: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, G
 - ✅ **Verifiable PDF certificates** — 9-tier gamer-style badge ladder (Wood → Whale) by estimated value, sequential collector's certificate number, QR + clickable links to both the site and the bot for instant authenticity checks
 - ✅ **Joystick-style quick calculator** on every per-game page — D-pad UI, no signup, nothing sent anywhere until the user opts into the bot
 - ✅ **Installable PWA** with offline support
-- ✅ **Lighthouse 98 / 100 / 96 / 100** — Performance, Accessibility, Best Practices, SEO (measured 2026-09-11)
+- ✅ **Lighthouse 94–95 / 100 / 100 / 100** — Performance, Accessibility, Best Practices, SEO (homepage, live, 3 runs, 2026-09-26; SEO occasionally shows 92 when Lighthouse's own robots.txt fetch times out on GitHub Pages — curl gets 200)
 
 ## Tech stack
 
@@ -59,12 +59,13 @@ market-report.html           cross-game hub
                               ru, es, fr, pt, id, ar, de, tr, vi, hi, it, ja, ko, zh, pl, th;
                               index.html + market-report.html only for tl, sw, ms, uz, kk, tk, ky
 privacy.html, terms.html     legal pages
-robots.txt, sitemap.xml      SEO
+robots.txt, sitemap.xml      SEO (scripts/sitemap_lastmod.py, scripts/indexnow.py)
 llms.txt, ai.txt             structured info for AI crawlers/agents (JSON-LD also embedded inline)
-manifest.json, favicon.svg/.png, og-image.png   PWA manifest and social preview
+manifest.json, favicon.svg/.png, og-image.jpg   PWA manifest and social preview
 .well-known/security.txt, SECURITY.md
 sw.js                        service worker — offline support, installable PWA
-assets/calculators.js        per-game quick calculator + joystick/D-pad UI
+assets/calculators.js        per-game quick calculator + joystick/D-pad UI; every price anchor
+                              is sourced in a comment (live listings, date checked)
 assets/analytics-placeholder.js   no-op event hook (window.gavTrackEvent), wired via data-event
                               attributes on CTA buttons — no third-party analytics wired up yet
 .github/workflows/validate.yml   html-validate CI (root pages) — not yet active, needs a token
