@@ -397,17 +397,52 @@
   };
   var T = STR[LANG];
 
-  // Roblox named-item price adds — official Robux purchase cost x the
-  // $0.0035-0.004/Robux secondary rate used elsewhere on this page (not a
-  // live resale listing, an acquisition-cost proxy): Korblox Deathspeaker
-  // 17,000 R$, Headless Horseman 31,000 R$ (seasonal, Oct-only official
-  // sale), Violet Valkyrie 50,000 R$. Kept as ranges, not single points,
-  // same convention as every other bracket on this page.
+  // Roblox named-item price adds (checked 2026-09-26, see roblox.html).
+  // Headless: Eldorado.gg "Headless accounts" category (337 listings) —
+  // middle half of the displayed listings asked $400-700, most of them
+  // Headless + Korblox, so Headless alone = that range minus Korblox's.
+  // Korblox (17,000 R$) and Violet Valkyrie (50,000 R$): official Robux
+  // price x the $0.0065-0.0075/Robux Eldorado.gg resale asking price —
+  // no large Korblox-only or Valkyrie-only listing sample exists to cite.
+  // Cross-check: Headless+Korblox+Valkyrie = $725-1,075 vs $750-1,500 listed.
   var ROBLOX_RARE_ITEMS = [
-    { key: "korblox", name: "Korblox Deathspeaker", lo: 60, hi: 70 },
-    { key: "headless", name: "Headless Horseman", lo: 110, hi: 140 },
-    { key: "violet", name: "Violet Valkyrie", lo: 175, hi: 200 }
+    { key: "korblox", name: "Korblox Deathspeaker", lo: 110, hi: 130 },
+    { key: "headless", name: "Headless Horseman", lo: 290, hi: 570 },
+    { key: "violet", name: "Violet Valkyrie", lo: 325, hi: 375 }
   ];
+
+  // Robux balance: Roblox's official DevEx cash-out rate ($0.0038/R$) as
+  // the floor, the cheapest Eldorado.gg Robux resale ask ($0.0065/R$) as
+  // the ceiling (checked 2026-09-26).
+  var ROBUX_USD = [0.0038, 0.0065];
+
+  // Fortnite named-skin ranges: middle half of Eldorado.gg's displayed
+  // listings for each skin's category, 2026-09-26 (24 listings each for
+  // Black Knight / IKONIK / Travis Scott). The four "OG 2017" entries are
+  // the original-owner styles only — Renegade Raider and Aerial Assault
+  // Trooper were re-sold in the Item Shop from 19 Dec 2024 (fortnite.com),
+  // and re-release copies list at ordinary-skin prices ($12-99). OG ranges
+  // come from the smaller set of OG-labelled listings (4-10 per skin).
+  // Several checked skins add up; the result never drops below the
+  // slider estimate. Cross-check: Black Knight + IKONIK = $405-670 vs
+  // $550/$699 listed; OG Renegade + Black Knight = $1,170-2,320 vs $1,599.
+  var FORTNITE_RARE_ITEMS = [
+    { key: "blackknight", name: "Black Knight", lo: 170, hi: 320 },
+    { key: "ikonik", name: "IKONIK", lo: 235, hi: 350 },
+    { key: "travis", name: "Travis Scott", lo: 180, hi: 390 },
+    { key: "renegade", name: "Renegade Raider — OG 2017", lo: 1000, hi: 2000, og: true },
+    { key: "aerial", name: "Aerial Assault Trooper — OG 2017", lo: 1100, hi: 1700, og: true },
+    { key: "skull", name: "Skull Trooper — OG purple 2017", lo: 800, hi: 1700, og: true },
+    { key: "ghoul", name: "Ghoul Trooper — OG pink 2017", lo: 1150, hi: 2500, og: true }
+  ];
+
+  function sumChecked(items, v) {
+    var lo = 0, hi = 0, og = false, any = false;
+    items.forEach(function (item) {
+      if (v[item.key]) { lo += item.lo; hi += item.hi; any = true; if (item.og) og = true; }
+    });
+    return { lo: lo, hi: hi, any: any, og: og };
+  }
 
   // Rank ladders are the games' own official English rank names — kept
   // identical across languages on purpose, the same way "Town Hall" or
@@ -518,8 +553,17 @@
         { key: "skins", min: 0, max: 250, step: 5, fmt: function (v) { return v; } },
         { key: "ogItems", min: 0, max: 5, step: 1, fmt: function (v) { return v; } }
       ],
-      score: function (v) { return 0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5); },
-      compute: function (v, score) { return interpBrackets(score, [[10.9, 15], [15, 50], [50, 150], [150, 1100]]); }
+      checkboxes: FORTNITE_RARE_ITEMS,
+      score: function (v) {
+        var s = 0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5);
+        var items = sumChecked(FORTNITE_RARE_ITEMS, v);
+        return items.og ? Math.max(s, 0.75) : items.any ? Math.max(s, 0.5) : s;
+      },
+      compute: function (v, score) {
+        var base = interpBrackets(0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5), [[10.9, 15], [15, 50], [50, 150], [150, 1100]]);
+        var items = sumChecked(FORTNITE_RARE_ITEMS, v);
+        return [Math.max(base[0], items.lo), Math.max(base[1], items.hi)];
+      }
     },
     "minecraft": {
       name: "Minecraft",
@@ -538,14 +582,17 @@
         { key: "limiteds", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
       checkboxes: ROBLOX_RARE_ITEMS,
-      score: function (v) { return (norm(v.age, 0, 15) + norm(v.robux, 0, 50000) + norm(v.limiteds, 0, 10)) / 3; },
-      compute: function (v, score) {
-        var base = interpBrackets(score, [[0.5, 5], [5, 25], [25, 60]]);
-        var extraLo = 0, extraHi = 0;
-        ROBLOX_RARE_ITEMS.forEach(function (item) {
-          if (v[item.key]) { extraLo += item.lo; extraHi += item.hi; }
-        });
-        return [base[0] + extraLo, base[1] + extraHi];
+      score: function (v) {
+        var s = (norm(v.age, 0, 15) + norm(v.robux, 0, 50000) + norm(v.limiteds, 0, 10)) / 3;
+        if (v.headless || v.violet) return Math.max(s, 0.75);
+        return v.korblox ? Math.max(s, 0.5) : s;
+      },
+      compute: function (v) {
+        // Account itself (age + common limiteds) on the page's $0.50-60
+        // marketplace range; Robux balance and named items priced separately.
+        var base = interpBrackets((norm(v.age, 0, 15) + norm(v.limiteds, 0, 10)) / 2, [[0.5, 5], [5, 25], [25, 60]]);
+        var items = sumChecked(ROBLOX_RARE_ITEMS, v);
+        return [base[0] + v.robux * ROBUX_USD[0] + items.lo, base[1] + v.robux * ROBUX_USD[1] + items.hi];
       }
     }
   };
@@ -772,7 +819,7 @@
       gp.querySelector(".vc-dpad-right").addEventListener("click", function () { nudge(1); });
       gp.querySelector(".vc-btn-a").addEventListener("click", function () {
         // Reset every field to its default (works on every game, unlike a
-        // checkbox toggle which is a no-op on the 8 of 9 games with none).
+        // checkbox toggle which is a no-op on the games with none).
         controls.forEach(function (c) {
           if (c.type === "range") { c.el.value = c.min; fire(c.el, "input"); }
           else if (c.type === "radio") { c.radios[0].checked = true; fire(c.radios[0], "change"); }
