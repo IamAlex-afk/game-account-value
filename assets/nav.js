@@ -50,6 +50,10 @@ document.addEventListener('keydown', function (e) {
   });
 })();
 
+// Register after load so the SW's precache download doesn't compete with
+// the first page's own resources (web.dev "Service worker registration").
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch(function () {});
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  });
 }
