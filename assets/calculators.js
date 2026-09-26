@@ -541,11 +541,24 @@
     "mobile-legends": {
       name: "Mobile Legends",
       sliders: [
-        { key: "skins", min: 0, max: 400, step: 10, fmt: function (v) { return v; } }
+        { key: "skins", min: 0, max: 1000, step: 10, fmt: function (v) { return v; } }
       ],
       choices: [{ key: "rank", label: T.sliders["mobile-legends"].rank, options: ML_RANKS.map(function (name, i) { return [String(i + 1), name]; }) }],
-      score: function (v) { return 0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7); },
-      compute: function (v, score) { return interpBrackets(score, [[0.5, 15], [15, 50], [50, 150], [150, 300]]); }
+      score: function (v) {
+        var s = 0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7);
+        return v.skins > 400 ? Math.max(s, 0.75) : s;
+      },
+      compute: function (v, score) {
+        var base = interpBrackets(0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7), [[0.5, 15], [15, 50], [50, 150], [150, 300]]);
+        if (v.skins <= 400) return base;
+        // "Mega collector" tier, checked 2026-09-26: igitems.com's MLBB guide
+        // ("The best accounts are sold for more than $1,500, and they
+        // typically feature over 800 cosmetics") and an Eldorado.gg listing
+        // with 1,000 skins / 39 Collector skins at $2,500. 400-800 skins
+        // interpolates between the 400-skin estimate and that tier.
+        var t = norm(v.skins, 400, 800);
+        return [lerp(t, base[0], 1500), lerp(t, base[1], 2500)];
+      }
     },
     "fortnite": {
       name: "Fortnite",
