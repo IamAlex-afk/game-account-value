@@ -1,5 +1,5 @@
 /* GameAccountValue Service Worker — offline + PWA install */
-const CACHE = 'gav-landing-2026-21';
+const CACHE = 'gav-landing-2026-22';
 const PRECACHE = [
   './', './index.html', './404.html', './manifest.json',
   './favicon.png', './favicon.svg', './apple-touch-icon.png', './og-image.jpg',
@@ -39,16 +39,23 @@ self.addEventListener('fetch', e => {
     return;
   }
 
+  // Stale-while-revalidate: answer from cache instantly, refresh the cached
+  // copy in the background, so an edited JS/CSS file reaches returning
+  // visitors on their next load without needing a CACHE version bump.
   e.respondWith(
     caches.match(e.request).then(cached => {
-      if (cached) return cached;
-      return fetch(e.request).then(res => {
+      const network = fetch(e.request).then(res => {
         if (res && res.status === 200 && res.type === 'basic') {
           const copy = res.clone();
           caches.open(CACHE).then(c => c.put(e.request, copy));
         }
         return res;
-      }).catch(() => caches.match('./index.html'));
+      });
+      if (cached) {
+        e.waitUntil(network.catch(() => {}));
+        return cached;
+      }
+      return network.catch(() => caches.match('./index.html'));
     })
   );
 });

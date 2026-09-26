@@ -1,12 +1,18 @@
 """Ping IndexNow (Bing, Yandex, Naver, Seznam, Yep) with every URL in the live sitemap.
 Google does not support IndexNow - use Search Console for Google.
-Usage: python scripts/indexnow.py            (all sitemap URLs)
-       python scripts/indexnow.py URL [URL...] (only these, e.g. new pages)
+Usage: python scripts/indexnow.py URL [URL...]  (changed pages only — preferred)
+       python scripts/indexnow.py                (every sitemap URL; only after
+                                                  a site-wide change, IndexNow
+                                                  asks for changed URLs only)
 """
-import glob, json, re, sys, urllib.request
+import json, pathlib, re, sys, urllib.error, urllib.request
 
 HOST = "gameaccountvalue.com"
-KEY = next(p[:-4] for p in glob.glob("*.txt") if re.fullmatch(r"[0-9a-f]{32}\.txt", p))
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+keys = [p.stem for p in ROOT.glob("*.txt") if re.fullmatch(r"[0-9a-f]{32}", p.stem)]
+if not keys:
+    sys.exit(f"no IndexNow key file (<32 hex chars>.txt) in {ROOT}")
+KEY = keys[0]
 
 urls = sys.argv[1:] or re.findall(
     r"<loc>([^<]+)</loc>",
@@ -21,3 +27,5 @@ try:
         print(len(urls), "URLs ->", r.status)
 except urllib.error.HTTPError as e:
     print(len(urls), "URLs ->", e.code, e.read().decode()[:300])
+except urllib.error.URLError as e:
+    sys.exit(f"network error: {e.reason}")

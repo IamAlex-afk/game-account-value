@@ -397,24 +397,27 @@
   };
   var T = STR[LANG];
 
-  // Roblox named-item price adds (checked 2026-09-26, see roblox.html).
-  // Headless: Eldorado.gg "Headless accounts" category (337 listings) —
-  // middle half of the displayed listings asked $400-700, most of them
-  // Headless + Korblox, so Headless alone = that range minus Korblox's.
-  // Korblox (17,000 R$) and Violet Valkyrie (50,000 R$): official Robux
-  // price x the $0.0065-0.0075/Robux Eldorado.gg resale asking price —
-  // no large Korblox-only or Valkyrie-only listing sample exists to cite.
-  // Cross-check: Headless+Korblox+Valkyrie = $725-1,075 vs $750-1,500 listed.
-  var ROBLOX_RARE_ITEMS = [
-    { key: "korblox", name: "Korblox Deathspeaker", lo: 110, hi: 130 },
-    { key: "headless", name: "Headless Horseman", lo: 290, hi: 570 },
-    { key: "violet", name: "Violet Valkyrie", lo: 325, hi: 375 }
-  ];
+  // One USD-per-Robux range for everything priced in Robux (balance and
+  // Robux-cost items): what that many Robux costs to buy on Eldorado.gg,
+  // $0.0065-0.0075/R$ across the top sellers (checked 2026-09-26) — the
+  // rate roblox.html quotes. Roblox's DevEx cash-out ($0.0038) is only
+  // open to eligible creators, so it isn't used as the floor.
+  var ROBUX_USD = [0.0065, 0.0075];
 
-  // Robux balance: Roblox's official DevEx cash-out rate ($0.0038/R$) as
-  // the floor, the cheapest Eldorado.gg Robux resale ask ($0.0065/R$) as
-  // the ceiling (checked 2026-09-26).
-  var ROBUX_USD = [0.0038, 0.0065];
+  // Roblox named items (checked 2026-09-26, see roblox.html).
+  // Korblox (17,000 R$) and Violet Valkyrie (50,000 R$): their Robux cost
+  // at ROBUX_USD — no large Korblox-only or Valkyrie-only listing sample
+  // exists to cite. Headless: Eldorado.gg "Headless accounts" category
+  // (337 listings), middle half of the displayed listings asked $400-700,
+  // most of them Headless + Korblox, so Headless alone = that range minus
+  // Korblox's. Cross-check: all three = $725-1,075 vs $750-1,500 listed.
+  function robuxCost(r) { return [Math.round(r * ROBUX_USD[0]), Math.round(r * ROBUX_USD[1])]; }
+  var KORBLOX = robuxCost(17000), VALKYRIE = robuxCost(50000);
+  var ROBLOX_RARE_ITEMS = [
+    { key: "korblox", name: "Korblox Deathspeaker", lo: KORBLOX[0], hi: KORBLOX[1] },
+    { key: "headless", name: "Headless Horseman", lo: 400 - KORBLOX[0], hi: 700 - KORBLOX[1] },
+    { key: "violet", name: "Violet Valkyrie", lo: VALKYRIE[0], hi: VALKYRIE[1] }
+  ];
 
   // Fortnite named-skin ranges: middle half of Eldorado.gg's displayed
   // listings for each skin's category, 2026-09-26 (24 listings each for
@@ -423,17 +426,19 @@
   // Trooper were re-sold in the Item Shop from 19 Dec 2024 (fortnite.com),
   // and re-release copies list at ordinary-skin prices ($12-99). OG ranges
   // come from the smaller set of OG-labelled listings (4-10 per skin).
-  // Several checked skins add up; the result never drops below the
-  // slider estimate. Cross-check: Black Knight + IKONIK = $405-670 vs
-  // $550/$699 listed; OG Renegade + Black Knight = $1,170-2,320 vs $1,599.
+  // Each range is what an account holding that skin typically lists at, so
+  // the checkboxes set a floor (labelled "≈", not "+"): several checked
+  // skins add up, and the result never drops below the slider estimate.
+  // Cross-check: Black Knight + IKONIK = $405-670 vs $550/$699 listed;
+  // OG Renegade + Black Knight = $1,170-2,320 vs $1,599.
   var FORTNITE_RARE_ITEMS = [
     { key: "blackknight", name: "Black Knight", lo: 170, hi: 320 },
     { key: "ikonik", name: "IKONIK", lo: 235, hi: 350 },
     { key: "travis", name: "Travis Scott", lo: 180, hi: 390 },
-    { key: "renegade", name: "Renegade Raider — OG 2017", lo: 1000, hi: 2000, og: true },
-    { key: "aerial", name: "Aerial Assault Trooper — OG 2017", lo: 1100, hi: 1700, og: true },
-    { key: "skull", name: "Skull Trooper — OG purple 2017", lo: 800, hi: 1700, og: true },
-    { key: "ghoul", name: "Ghoul Trooper — OG pink 2017", lo: 1150, hi: 2500, og: true }
+    { key: "renegade", name: "Renegade Raider · OG 2017", lo: 1000, hi: 2000, og: true },
+    { key: "aerial", name: "Aerial Assault Trooper · OG 2017", lo: 1100, hi: 1700, og: true },
+    { key: "skull", name: "Skull Trooper · OG 2017", lo: 800, hi: 1700, og: true },
+    { key: "ghoul", name: "Ghoul Trooper · OG 2017", lo: 1150, hi: 2500, og: true }
   ];
 
   function sumChecked(items, v) {
@@ -544,20 +549,21 @@
         { key: "skins", min: 0, max: 1000, step: 10, fmt: function (v) { return v; } }
       ],
       choices: [{ key: "rank", label: T.sliders["mobile-legends"].rank, options: ML_RANKS.map(function (name, i) { return [String(i + 1), name]; }) }],
+      // Score up to 400 skins as before; past 400 it climbs smoothly to 1 at
+      // 800 skins, so the tier follows the price instead of jumping.
       score: function (v) {
         var s = 0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7);
-        return v.skins > 400 ? Math.max(s, 0.75) : s;
+        return s + (1 - s) * norm(v.skins, 400, 800);
       },
-      compute: function (v, score) {
+      compute: function (v) {
         var base = interpBrackets(0.5 * norm(v.skins, 0, 400) + 0.5 * norm(v.rank, 1, 7), [[0.5, 15], [15, 50], [50, 150], [150, 300]]);
         if (v.skins <= 400) return base;
         // "Mega collector" tier, checked 2026-09-26: igitems.com's MLBB guide
         // ("The best accounts are sold for more than $1,500, and they
-        // typically feature over 800 cosmetics") and an Eldorado.gg listing
-        // with 1,000 skins / 39 Collector skins at $2,500. 400-800 skins
-        // interpolates between the 400-skin estimate and that tier.
-        var t = norm(v.skins, 400, 800);
-        return [lerp(t, base[0], 1500), lerp(t, base[1], 2500)];
+        // typically feature over 800 cosmetics") sets the low end ($1,500 at
+        // 800 skins); an Eldorado.gg listing with 1,000 skins / 39 Collector
+        // skins at $2,500 sets the high end at 1,000 skins.
+        return [lerp(norm(v.skins, 400, 800), base[0], 1500), lerp(norm(v.skins, 400, 1000), base[1], 2500)];
       }
     },
     "fortnite": {
@@ -567,13 +573,15 @@
         { key: "ogItems", min: 0, max: 5, step: 1, fmt: function (v) { return v; } }
       ],
       checkboxes: FORTNITE_RARE_ITEMS,
+      checkboxFloor: true,
+      baseScore: function (v) { return 0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5); },
       score: function (v) {
-        var s = 0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5);
+        var s = this.baseScore(v);
         var items = sumChecked(FORTNITE_RARE_ITEMS, v);
         return items.og ? Math.max(s, 0.75) : items.any ? Math.max(s, 0.5) : s;
       },
-      compute: function (v, score) {
-        var base = interpBrackets(0.5 * norm(v.skins, 0, 250) + 0.5 * norm(v.ogItems, 0, 5), [[10.9, 15], [15, 50], [50, 150], [150, 1100]]);
+      compute: function (v) {
+        var base = interpBrackets(this.baseScore(v), [[10.9, 15], [15, 50], [50, 150], [150, 1100]]);
         var items = sumChecked(FORTNITE_RARE_ITEMS, v);
         return [Math.max(base[0], items.lo), Math.max(base[1], items.hi)];
       }
@@ -673,7 +681,8 @@
     var resultNote = root.querySelector(".vc-result-note");
 
     var state = {};
-    var totalInputs = (cfg.sliders || []).length + (cfg.choices ? cfg.choices.length : 0) + (cfg.checkboxes ? cfg.checkboxes.length : 0);
+    // Named-item checkboxes are optional, so they don't count toward confidence.
+    var totalInputs = (cfg.sliders || []).length + (cfg.choices ? cfg.choices.length : 0);
     var touched = new Set();
     var prevLo = null, prevHi = null;
     var controls = []; // gamepad D-pad navigation targets, built in the same order fields are rendered
@@ -753,7 +762,7 @@
         var cbId = root.id + "-cb-" + item.key;
         cbHtml += '<label class="vc-checkbox" for="' + cbId + '">' +
           '<input type="checkbox" id="' + cbId + '">' +
-          '<span>' + item.name + ' (+' + formatMoney(item.lo) + '–' + formatMoney(item.hi) + ')</span>' +
+          '<span>' + item.name + ' (' + (cfg.checkboxFloor ? '≈' : '+') + formatMoney(item.lo) + '–' + formatMoney(item.hi) + ')</span>' +
           '</label>';
       });
       cbField.innerHTML = cbHtml;

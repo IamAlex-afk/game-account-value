@@ -1,6 +1,11 @@
 """Set every <lastmod> in sitemap.xml to its file's last git commit date.
-Run after committing page changes: python scripts/sitemap_lastmod.py"""
-import re, subprocess
+Run after committing page changes: python scripts/sitemap_lastmod.py
+Only the page's own HTML history counts — a change that reaches pages only
+through a shared asset (e.g. assets/calculators.js prices) does not bump
+their lastmod; touch those pages' HTML if the visible content changed."""
+import os, re, subprocess
+
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 def last_commit_date(loc):
     path = loc.replace("https://gameaccountvalue.com/", "")
