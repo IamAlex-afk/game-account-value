@@ -12,6 +12,7 @@ import os, re, sys, glob, collections, importlib.util
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from world_extra import render_extra
+from world_data import MARKETS, N
 spec = importlib.util.spec_from_file_location('r', os.path.join(HERE, 'rollout.py'))
 R = importlib.util.module_from_spec(spec); spec.loader.exec_module(R)
 
@@ -25,7 +26,7 @@ FLAG = {'global': '🌍', 'cis': '🇷🇺', 'cn': '🇨🇳', 'jp': '🇯🇵',
 DATA = {
   'brawl-stars': {
     'global': dict(where=[('Eldorado.gg', 'https://www.eldorado.gg/brawl-stars-accounts/a/56-1-0'), ('igitems.com', 'https://igitems.com/brawl_stars-account')], local='$3 – $300+', usd='$3 – $300+', demand='global'),
-    'cis':    dict(where=[('FunPay', 'https://funpay.com/en/lots/436/')], local='€0.21 – €3,852', usd='$0.24 – $4,390', demand='cis'),
+    'cis':    dict(where=[('FunPay', 'https://funpay.com/en/lots/436/')], local='€0.21 – €3,852', usd='$0.24 – $4,386', demand='cis'),
     'cn':     dict(where=[('交易猫 Jiaoyimao', 'https://m.jiaoyimao.com/jg1009835/c1/')], local='¥100 – ¥1,200', usd='$15 – $179', demand='cn'),
     'jp':     dict(where=[('GameTrade', 'https://gametrade.jp/brawl-stars/exhibits')], local='¥500 – ¥23,000', usd='$3 – $146', demand='jp'),
     'kr':     dict(where=[('저팔계 Jeo8gye', 'https://www.jeo8gye.com/trade/list?game_code=111')], local='₩15,000 – ₩2,500,000', usd='$11 – $1,825', demand='kr'),
@@ -34,6 +35,8 @@ DATA = {
     'br':     None,   # GGMAX / Desapego / DFG block automated checks → not verified
   },
 }
+
+DATA.update(MARKETS)
 
 # ---- translations -------------------------------------------------------
 T = {
@@ -178,7 +181,10 @@ T = {
 def render(game, lang, game_name):
     t = T[lang]; data = DATA[game]; local = LOCAL[lang]
     reg = lambda k: t['reg']['global_' if k == 'global' else k]
-    dem = lambda k: t['dem']['global_' if k == 'global' else k]
+    def dem(k):
+        if k is None: return '—'
+        key = 'global_' if k == 'global' else k
+        return t['dem'][key] if key in t['dem'] else N[lang][k]
     def row(k, mine=False):
         d = data.get(k)
         cls = ' class="wm-mine"' if mine else ''
@@ -189,7 +195,7 @@ def render(game, lang, game_name):
         c = t['cols']
         return ('<tr' + cls + '>' + head + '<td data-l="' + c[1] + '">' + where + '</td><td data-l="' + c[2] + '" class="wm-num">' + d['local'] +
                 '</td><td data-l="' + c[3] + '" class="wm-num">' + d['usd'] + '</td><td data-l="' + c[4] + '">' + dem(d['demand']) + '</td></tr>')
-    rows = row(local, True) + '<tr class="wm-sep"><td colspan="5">' + t['others'] + '</td></tr>' + ''.join(row(k) for k in ORDER if k != local)
+    rows = row(local, True) + '<tr class="wm-sep"><td colspan="5">' + t['others'] + '</td></tr>' + ''.join(row(k) for k in ORDER if k != local and k in data)
     c = t['cols']
     return ('<section class="g-card g-news-card g-world"><span id="world" class="anchor-target"></span>\n'
             '<h2>' + t['title'].format(game=game_name) + '</h2>\n'
@@ -200,7 +206,8 @@ def render(game, lang, game_name):
             render_extra(game, lang, game_name) + '\n</section>\n')
 
 def apply(game):
-    names = {'brawl-stars': 'Brawl Stars'}
+    names = {'brawl-stars': 'Brawl Stars', 'roblox': 'Roblox', 'clash-of-clans': 'Clash of Clans', 'clash-royale': 'Clash Royale', 'free-fire': 'Free Fire',
+             'genshin-impact': 'Genshin Impact', 'mobile-legends': 'Mobile Legends', 'fortnite': 'Fortnite', 'minecraft': 'Minecraft'}
     n = 0
     for lang in LANGS:
         f = os.path.join(R.ROOT, (lang + '/' if lang != 'en' else '') + game + '.html')

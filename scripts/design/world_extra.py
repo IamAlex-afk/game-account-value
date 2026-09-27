@@ -1,7 +1,9 @@
 """Extra blocks for the world section: esports prize money by country,
 top earners, most-watched live streamers. Data from aggregators, labelled
 as such, with dates. Imported by world_markets.py."""
-import json, os
+import json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from world_data import EXTRA as _MORE, TW_ONLY
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 NAMES = json.load(open(os.path.join(HERE, 'country_names.json'), encoding='utf-8'))
@@ -113,6 +115,8 @@ X = {
    src='来源：{s}', rec='收录赛事 {span}', upd='更新于 {d}'),
 }
 
+EXTRA.update(_MORE)
+
 def cname(lang, c):
     return NAMES['countries'][lang][c]
 
@@ -124,25 +128,25 @@ def render_extra(game, lang, game_name):
     link = lambda s: '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + '</a>'
     out = []
     # esports by country
-    es = e['esports']
+    es = e.get('esports')
     rows = ''
-    for i, (c, money, n) in enumerate(es['rows'], 1):
+    for i, (c, money, n) in enumerate(es['rows'] if es else [], 1):
         me = c == mine
         rows += ('<tr' + (' class="wm-mine"' if me else '') + '><th scope="row"><span class="wm-rank">' + str(i) + '</span><span class="wm-flag" aria-hidden="true">' + FLAGS[c] + '</span>' +
                  cname(lang, c) + (' <span class="wm-you">' + x['yours'] + '</span>' if me else '') +
                  '</th><td data-l="' + x['esp_c'][1] + '" class="wm-num">' + money + '</td><td data-l="' + x['esp_c'][2] + '" class="wm-num">' + str(n) + '</td></tr>')
     note = ''
-    if mine and mine not in [r[0] for r in es['rows']]:
+    if es and mine and mine not in [r[0] for r in es['rows']]:
         note = '<p class="wm-miss">' + x['not_top'].format(c=cname(lang, mine)) + '</p>'
-    out.append('<h3>🏆 ' + x['esp'] + '</h3><p class="wm-intro">' + x['esp_i'].format(game=game_name) + ' ' + es['total'] + '.</p>' + note +
+    if es: out.append('<h3>🏆 ' + x['esp'] + '</h3><p class="wm-intro">' + x['esp_i'].format(game=game_name) + ' ' + es['total'] + '.</p>' + note +
                '<div class="wm-wrap"><table class="wm-table wm-small"><thead><tr><th scope="col">' + '</th><th scope="col">'.join(x['esp_c']) +
                '</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
                '<p class="wm-note">' + x['src'].format(s=link(es['src'])) + ', ' + x['rec'].format(span=es['span']) + '.</p>')
     # top players
-    pl = e['players']
-    rows = ''.join('<tr><th scope="row">' + p + '</th><td data-l="' + x['top_c'][1] + '"><span class="wm-flag" aria-hidden="true">' + FLAGS[c] + '</span>' + cname(lang, c) +
+    pl = e.get('players')
+    rows = '' if not pl else ''.join('<tr><th scope="row">' + p + '</th><td data-l="' + x['top_c'][1] + '"><span class="wm-flag" aria-hidden="true">' + FLAGS[c] + '</span>' + cname(lang, c) +
                    '</td><td data-l="' + x['top_c'][2] + '" class="wm-num">' + m + '</td></tr>' for p, c, m in pl['rows'])
-    out.append('<h3>🥇 ' + x['top'] + '</h3><div class="wm-wrap"><table class="wm-table wm-small"><thead><tr><th scope="col">' + '</th><th scope="col">'.join(x['top_c']) +
+    if pl: out.append('<h3>🥇 ' + x['top'] + '</h3><div class="wm-wrap"><table class="wm-table wm-small"><thead><tr><th scope="col">' + '</th><th scope="col">'.join(x['top_c']) +
                '</th></tr></thead><tbody>' + rows + '</tbody></table></div><p class="wm-note">' + x['src'].format(s=link(pl['src'])) + '.</p>')
     # streamers: reader's language first
     st = e['streams']
@@ -153,5 +157,5 @@ def render_extra(game, lang, game_name):
                    for ch, l, v in rs)
     out.append('<h3>📺 ' + x['st'] + '</h3><p class="wm-intro">' + x['st_i'] + '</p>' + ('' if has else '<p class="wm-miss">' + x['st_none'] + '</p>') +
                '<div class="wm-wrap"><table class="wm-table wm-small"><thead><tr><th scope="col">' + '</th><th scope="col">'.join(x['st_c']) +
-               '</th></tr></thead><tbody>' + rows + '</tbody></table></div><p class="wm-note">' + x['src'].format(s=link(st['src'])) + ', ' + x['upd'].format(d=st['date']) + '.</p>')
+               '</th></tr></thead><tbody>' + rows + '</tbody></table></div><p class="wm-note">' + x['src'].format(s=link(st['src'])) + ', ' + x['upd'].format(d=st['date']) + '. ' + TW_ONLY[lang] + '</p>')
     return '\n'.join(out)

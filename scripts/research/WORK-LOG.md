@@ -10,6 +10,11 @@ screenshot scan lives in the Telegram bot, not on the site.
   never guessed. Unknown = say "not verified / TBA".
 - No sales coaching ("sell where it's pricier") — describe markets only.
 - Site stays 18+; no uploads / typing / data collection on the site.
+- **Privacy-by-design (owner, 2026-09-28): free, no registration, no data
+  collection, no ads, no cookies, no third-party requests.** Verified: no
+  cookies (server or JS), no storage, no fetch/beacon, no 3rd-party assets;
+  analytics-placeholder.js is a no-op. Any future analytics must be cookieless
+  and self-hosted, or not at all.
 - All 17 full languages get new content (en ru es pt id tr ar vi hi fr de it ja ko th pl zh).
 - Verify live (screenshots / Lighthouse / curl), then commit → push → `gh run list`.
 
@@ -38,9 +43,12 @@ language pages, generator `scripts/design/world_markets.py <game>` (data dict
 To add a game: research rows (viewed pages only) → add `DATA['<game>']` +
 name in `apply()` names → run script → screenshot → commit.
 
+**All 9 games DONE (world section on 153 pages):** markets, esports by country,
+top earners, Twitch streamers; data in `scripts/design/world_data.py`.
+
 ## Next steps
-1. Owner review of the Brawl Stars world table; then the other 8 games.
-2. Other 8 games (start with Mobile Legends, Free Fire — strong regional leagues).
+1. Deepen markets for the other 8 games (CN/JP/KR/TR marketplaces, like Brawl Stars).
+2. Rarest/most valuable items per game & country; YouTube creators need a verifiable source.
 3. Events timelines for the other 8 games (official sources only).
 4. SEO/AI audit: update llms.txt; Event JSON-LD only for in-person events;
    owner to add the site to Bing Webmaster Tools (AI Performance report).

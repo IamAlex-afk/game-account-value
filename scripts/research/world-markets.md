@@ -23,3 +23,18 @@ TRY, BRL: still to verify before showing USD equivalents.
 
 Cross-country insight (descriptive): Western top listings sell on trophies/brawlers;
 Chinese and Japanese listings foreground cosmetics and rank status.
+
+### Update 2026-09-28 (later)
+- Korea: 저팔계 jeo8gye.com (25 listings incl. completed): ₩15,000 – ₩2,500,000; top = "Korea ranking #26, prestige 202"; also "600+ skins" ₩400,000. Rate ≈ 1,370 KRW/$ (Wise, 20–23 Sep 2026 range 0.000721–0.000740 USD/KRW) → ≈ $11 – $1,825.
+- Korea forum (hungryapp): sale posts ₩10,000 – ₩70,000 (Sep 2026) — low-end, supports "most accounts are cheap, ranked accounts are the ceiling".
+- Brazil: GGMAX, Desapego Games, DFG all 403 → **not verified** (only search snippets).
+- Rates used: EUR/USD 1.1387 (2026-09-25), USD/CNY 6.71, USD/JPY 157.2, USD/KRW ≈1,370, USD/TRY ≈48.8, USD/BRL ≈5.18, VND 25,000/$.
+
+## All games — esports & streamers (added 2026-09-28)
+Esports Earnings country pages (fetched 2026-09-28): MLBB 531 (to 2026-08; PH #1 $8.69M), Free Fire 598 (to 2026-07; TH #1 $5.90M),
+Fortnite 534 (to 2026-06; US #1 $53.5M), Clash Royale 464 (to 2024-11; JP #1, EG #2 via Mohamed Light), Clash of Clans 507 (to 2024-11; DE #1),
+Minecraft 559 (to 2025-09; creator events; one "Undefined" country row dropped), Roblox 738 (single $100K creator event → not shown),
+Genshin: not listed (no esports). TwitchMetrics (avg viewers 30 days, updated 2026-09-25) for every game; Roblox: no results.
+Genshin China row: UU898 ¥105.60–¥225.60 (from zh/genshin-impact.html research, Sep 2026).
+Markets for the 8 games: global = game-page market range; CIS = FunPay, SEA = igitems (news pages, 2026-09-21).
+Data lives in scripts/design/world_data.py (MARKETS, EXTRA, N notes, TW_ONLY).
