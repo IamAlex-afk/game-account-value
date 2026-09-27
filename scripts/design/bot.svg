@@ -1,0 +1,40 @@
+<svg viewBox="0 0 460 520">
+        <defs>
+          <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D1B3A"/><stop offset="1" stop-color="#0C0B1C"/></linearGradient>
+          <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05121A"/><stop offset="1" stop-color="#0A2530"/></linearGradient>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00F0FF" stop-opacity="0"/><stop offset=".5" stop-color="#00F0FF" stop-opacity=".9"/><stop offset="1" stop-color="#00F0FF" stop-opacity="0"/></linearGradient>
+          <clipPath id="vclip"><rect x="120" y="200" width="220" height="74" rx="30"/></clipPath>
+        </defs>
+        <!-- holo rings -->
+        <g class="ring" fill="none" stroke="#00F0FF" stroke-opacity=".35" stroke-width="2"><circle cx="230" cy="250" r="205" stroke-dasharray="4 14"/></g>
+        <g class="ring2" fill="none" stroke="#FF2E88" stroke-opacity=".35" stroke-width="2"><circle cx="230" cy="250" r="180" stroke-dasharray="60 30 10 30"/></g>
+        <!-- antenna -->
+        <line x1="230" y1="92" x2="230" y2="50" stroke="#00F0FF" stroke-width="4"/>
+        <circle class="ant" cx="230" cy="44" r="10" fill="#FF2E88" style="filter:drop-shadow(0 0 10px #FF2E88)"/>
+        <!-- neck + cables -->
+        <path d="M190 380h80l12 60h-104z" fill="#12112A" stroke="#00F0FF" stroke-opacity=".5" stroke-width="2"/>
+        <path d="M200 390c-30 40-60 60-110 80M260 390c30 40 60 60 110 80" fill="none" stroke="#9D5CFF" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+        <!-- shoulders -->
+        <path d="M60 520c10-60 60-90 170-92 110 2 160 32 170 92z" fill="url(#shell)" stroke="#00F0FF" stroke-opacity=".6" stroke-width="2"/>
+        <path d="M150 470h160" stroke="#FCEE0A" stroke-width="4"/>
+        <text x="230" y="505" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#00F0FF" letter-spacing="3">GAV-AI</text>
+        <!-- ears -->
+        <rect x="84" y="200" width="30" height="90" rx="10" fill="#15132E" stroke="#FF2E88" stroke-width="3"/>
+        <rect x="346" y="200" width="30" height="90" rx="10" fill="#15132E" stroke="#FF2E88" stroke-width="3"/>
+        <!-- head -->
+        <path d="M130 100h200q40 0 44 40l8 150q2 70-62 90H140q-64-20-62-90l8-150q4-40 44-40z" fill="url(#shell)" stroke="#00F0FF" stroke-width="3"/>
+        <path d="M150 120h160" stroke="#00F0FF" stroke-opacity=".35" stroke-width="2"/>
+        <path d="M108 160l14-6M352 154l14 6" stroke="#FCEE0A" stroke-width="3"/>
+        <!-- visor -->
+        <rect x="120" y="200" width="220" height="74" rx="30" fill="url(#visor)" stroke="#00F0FF" stroke-width="3"/>
+        <g clip-path="url(#vclip)">
+          <rect class="visor-sweep" x="170" y="200" width="120" height="74" fill="url(#beam)" opacity=".35"/>
+          <rect class="eye" x="160" y="222" width="46" height="30" rx="6" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
+          <rect class="eye" x="254" y="222" width="46" height="30" rx="6" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
+        </g>
+        <!-- mouth grille -->
+        <g stroke="#00F0FF" stroke-width="3" stroke-linecap="round" opacity=".8"><path d="M190 318h80M196 332h68M204 346h52"/></g>
+        <!-- cheek lights -->
+        <circle cx="140" cy="320" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
+        <circle cx="320" cy="320" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
+      </svg>

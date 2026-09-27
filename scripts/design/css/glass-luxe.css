@@ -1,0 +1,70 @@
+
+/* ============================================================
+   Cyber-Luxe layer: depth, restraint, expensive glow.
+   Neon only on accents (buttons, key numbers, Live status).
+   No extra markup: everything via pseudo-elements.
+   ============================================================ */
+:root { --bg: #080B11; --line: rgba(255,255,255,.08); --glass: rgba(15,23,42,.7); }
+html, html body { background-color: var(--bg); }
+
+/* 1. ambient light blobs (indigo top-left, cyan bottom-right, faint violet centre) */
+html body::before {
+  background:
+    radial-gradient(600px 600px at -4% -8%, rgba(99,102,241,.30), transparent 70%),
+    radial-gradient(640px 640px at 104% 108%, rgba(6,182,212,.26), transparent 70%),
+    radial-gradient(900px 500px at 55% 45%, rgba(79,70,229,.10), transparent 70%);
+}
+/* 2. e-sports micro-grid, fading towards the edges */
+html body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image: linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, #000 35%, transparent 85%); mask-image: radial-gradient(circle at 50% 40%, #000 35%, transparent 85%); }
+/* 3. film grain: kills the "cheap plastic" look (inline SVG noise, CSP allows data:) */
+html::after { content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: .06; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* 4. premium glass: hairline border + top highlight, soft neon on hover */
+.g-panel, .stat, .feature, .game-card, .step, details, .g-card, .value-calc, .fact-box > span, .section-nav, .g-pick-btn, .lang-dropdown {
+  border-color: var(--line) !important;
+  box-shadow: 0 20px 50px -20px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.08);
+  transition: border-color .3s cubic-bezier(.16,1,.3,1), box-shadow .3s cubic-bezier(.16,1,.3,1), transform .3s cubic-bezier(.16,1,.3,1), background-color .3s;
+}
+.g-panel { background: rgba(15,23,42,.62); -webkit-backdrop-filter: blur(20px) saturate(1.2); backdrop-filter: blur(20px) saturate(1.2);
+  box-shadow: 0 40px 100px -40px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.1); }
+.stat:hover, .feature:hover, .game-card:hover, .step:hover, details:hover, .g-card:hover, .g-pick-btn:hover {
+  border-color: rgba(34,211,238,.3) !important;
+  box-shadow: 0 20px 50px -20px rgba(0,0,0,.7), 0 0 30px rgba(34,211,238,.12), inset 0 1px 0 rgba(255,255,255,.16); }
+.g-pick-btn[aria-pressed="true"] { border-color: var(--a) !important; }
+
+/* 5. ambient light response behind the price — the one "wow" spot */
+html body .g-panel .value-calc .vc-result { isolation: isolate; border-color: rgba(34,211,238,.28); }
+html body .g-panel .value-calc .vc-result::after { content: ""; position: absolute; inset: -30px; z-index: -1; border-radius: 40px; pointer-events: none;
+  background: radial-gradient(60% 55% at 50% 35%, rgba(34,211,238,.22), rgba(99,102,241,.14) 45%, transparent 75%); filter: blur(24px);
+  animation: g-ambient 5s ease-in-out infinite alternate; }
+@keyframes g-ambient { from { opacity: .55; transform: scale(.96); } to { opacity: 1; transform: scale(1.04); } }
+html body .g-panel .value-calc .vc-result-value { text-shadow: 0 0 30px rgba(34,211,238,.35), 0 2px 0 rgba(0,0,0,.4); }
+
+/* 6. restraint: calmer city, no busy rain; neon kept for accents */
+.g-fx .g-rain { opacity: .12; }
+.g-fx .g-city { opacity: .7; filter: saturate(.85); }
+.g-panel::after { opacity: .6; }
+html body .g-head h1 span { background: linear-gradient(95deg, #67E8F9, #A5B4FC 60%, #6EE7B7); -webkit-background-clip: text; background-clip: text; }
+.g-head .hero-badge { background: rgba(255,255,255,.04); border-color: var(--line); color: #E2E8F0; }
+.g-num, html body .g-panel .value-calc .vc-sliders::before, html body .g-panel .value-calc .vc-result::before { background: rgba(34,211,238,.14); color: var(--cyan); border: 1px solid rgba(34,211,238,.4); }
+
+@media (prefers-reduced-motion: reduce) { html body .g-panel .value-calc .vc-result::after { animation: none; } }
+
+/* game pages: compact calculator card in the hero */
+.g-hero .value-calc { padding: 22px; }
+.g-hero .value-calc .vc-subtitle { font-size: 14px; margin-bottom: 14px; }
+.g-hero .value-calc .vc-result { order: 2; margin: 0 0 18px; position: relative; isolation: isolate; border-color: rgba(34,211,238,.28); background: linear-gradient(160deg, rgba(34,211,238,.1), rgba(2,6,23,.7)); }
+.g-hero .value-calc .vc-result::after { content: ""; position: absolute; inset: -24px; z-index: -1; border-radius: 36px; pointer-events: none;
+  background: radial-gradient(60% 55% at 50% 35%, rgba(34,211,238,.2), rgba(99,102,241,.12) 45%, transparent 75%); filter: blur(22px); animation: g-ambient 5s ease-in-out infinite alternate; }
+.g-hero .value-calc .vc-sliders { order: 3; }
+html body .g-hero .g-exact .btn-primary { display: flex; justify-content: center; align-items: center; width: 100%; min-height: 56px; border-radius: 12px; padding: 10px 16px;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6) !important; color: #fff !important; font: 700 16px/1.3 var(--body-font); text-align: center; text-transform: none; letter-spacing: 0; box-shadow: none; }
+html body .g-hero .g-exact .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 22px rgba(139,92,246,.5); }
+@media (prefers-reduced-motion: reduce) { .g-hero .value-calc .vc-result::after { animation: none; } }
+.g-hero .g-right { position: sticky; top: 90px; }
+.g-hero .g-right .value-calc { position: static; }
+@media (max-width: 960px) { .g-hero .g-right { position: static; } }

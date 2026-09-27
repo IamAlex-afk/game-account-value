@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /scripts/
 
 # AI assistants / LLM crawlers — explicitly allowed so ChatGPT, Gemini,
 # Claude, Perplexity etc. can read and recommend this page.

@@ -1,0 +1,59 @@
+
+/* homepages without the calculator: same city hero, robot in the right column */
+.g-home-plain { align-items: center; }
+.g-home-plain .g-left { max-width: 640px; }
+html body .g-home-plain h1 { font-family: var(--body-font); font-variation-settings: normal; font-weight: 800; color: var(--white); text-transform: none;
+  font-size: clamp(36px, 5vw, 66px); line-height: 1.04; letter-spacing: -.03em; margin: 0 0 20px; }
+html body .g-home-plain h1 span { background: linear-gradient(95deg, #67E8F9, #A5B4FC 60%, #6EE7B7); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: none; }
+html body .g-home-plain .g-left > p:not(.ai-notice) { font-size: clamp(17px,1.5vw,19px); color: var(--body); line-height: 1.65; margin: 0 0 28px; }
+.g-home-plain .hero-badge { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; padding: 8px 16px; border-radius: 999px; font-size: 15px; font-weight: 600;
+  color: #E2E8F0; background: rgba(255,255,255,.04); border: 1px solid var(--line); }
+.g-home-plain .hero-badge::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--em-l); animation: g-pulse 1.8s infinite; }
+.g-home-plain .cta-group { justify-content: flex-start; }
+.g-home-plain .g-robot { position: relative; top: auto; right: auto; width: min(100%, 380px); justify-self: center; }
+.g-home-plain .ai-notice { text-align: left; }
+[dir="rtl"] .g-home-plain .cta-group, [dir="rtl"] .g-home .cta-group { justify-content: flex-start; }
+[dir="rtl"] .g-home-plain .ai-notice, [dir="rtl"] .g-exact .ai-notice { text-align: right; }
+@media (max-width: 960px) { .g-home-plain .g-robot { order: -1; width: 180px; } }
+@media (prefers-reduced-motion: reduce) { .g-home-plain .hero-badge::before { animation: none; } }
+
+/* skip link: style.css hid it with left:-9999px, which on RTL pages (ar)
+   created an 11,000px horizontal scroll area. Slide it in from the top instead. */
+.skip-link { left: 0 !important; right: auto; top: 0; transform: translateY(-120%); transition: transform .15s; }
+[dir="rtl"] .skip-link { left: auto !important; right: 0; }
+.skip-link:focus, .skip-link:focus-visible { transform: none; }
+/* key facts: only the first bold value becomes the big number; further
+   <strong>s in the same fact (lists like "A, B, C") stay inline */
+.g-hero .fact-box strong { display: inline; font-size: inherit; margin: 0; }
+.g-hero .fact-box > span > strong:first-of-type { display: block; font-size: 19px; margin: 2px 0; }
+.g-hero .fact-box > span > strong ~ strong { color: var(--white); font-weight: 700; }
+
+/* full-bleed hero art is 100vw wide (includes the scrollbar): clip, do not scroll.
+   clip (unlike hidden) creates no scroll box, so sticky still works. */
+html, html body { overflow-x: clip; }
+.g-about-cta { justify-content: center; margin-top: 18px; }
+
+/* resource pages: breathing room between Q&A blocks */
+html body .article-body h3:not(:first-child) { margin-top: 30px; }
+html body .article-body > h2:not(:first-child) { margin-top: 52px; }
+
+/* price ranges always read low → high: on RTL pages the lo/hi spans were
+   bidi-reordered into "$15 – $3" */
+.vc-result-value, .g-mini span { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .vc-result-value { text-align: right; }
+
+/* performance: the rain layer caused CLS 0.86 (it resized while the calculator
+   mounted) and repainted every frame; the art box no longer follows content height */
+.g-fx .g-rain { display: none !important; }
+.g-fx { bottom: auto !important; height: 980px; }
+@media (max-width: 960px) { .g-fx { height: 760px; } }
+
+/* reserve the meta row so the tier pill does not push content when it fills */
+.value-calc .vc-meta { min-height: 30px; }
+
+/* performance: backdrop blur only on the few large panels; small cards use a
+   denser fill instead (on this dark background the difference is invisible,
+   the rendering cost of ~40 blurred cards was not) */
+.feature, .game-card, .step, details, .stat, .g-card, .fact-box > span, .ev-body, .g-pick-btn, .other-games a, .resources-callout a, .risk-box, .reported-case, .g-news-card {
+  -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+.feature, .game-card, .step, details, .stat, .g-card, .fact-box > span, .g-news-card { background-color: rgba(15,23,42,.82); }

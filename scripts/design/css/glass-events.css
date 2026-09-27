@@ -1,0 +1,42 @@
+
+/* ============================================================
+   Official events timeline (news pages)
+   ============================================================ */
+.ev-intro { font-size: 16px !important; color: var(--muted) !important; margin: 0 0 20px; }
+.ev-list { list-style: none; margin: 0; padding: 0 0 0 4px; display: grid; gap: 14px; position: relative; }
+.ev-list::before { content: ""; position: absolute; left: 62px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--cyan), rgba(99,102,241,.5) 70%, transparent); opacity: .5; }
+.article-body .ev-list li.ev { padding: 0; display: grid; grid-template-columns: 118px 1fr; gap: 18px; align-items: start; }
+.article-body .ev-list li.ev::before { display: none; }
+.ev-date { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 76px; padding: 10px 6px; text-align: center;
+  border-radius: 14px; background: #0B1220; border: 1px solid var(--line-hi); box-shadow: 0 0 18px rgba(34,211,238,.12); }
+.ev-date time { font: 800 17px/1.2 var(--body-font); color: var(--white); }
+.ev-date span { font: 600 13px var(--body-font); color: var(--muted); margin-top: 2px; }
+.ev-body { padding: 16px 20px; border-radius: 16px; background: rgba(2,6,23,.45); border: 1px solid var(--line); transition: border-color .3s, box-shadow .3s, transform .3s; }
+.ev-body:hover { border-color: rgba(34,211,238,.3); transform: translateY(-2px); }
+html body .article-body .ev-body h3 { margin: 6px 0 6px; font-size: 19px; }
+.ev-body p { font-size: 16px !important; margin: 0 0 6px; }
+.ev-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 !important; }
+.ev-kind, .ev-status, .ev-count { display: inline-flex; align-items: center; min-height: 26px; padding: 2px 10px; border-radius: 999px; font: 700 13px var(--body-font); letter-spacing: .02em; }
+.ev-kind { background: rgba(255,255,255,.06); color: var(--body); border: 1px solid var(--line); }
+.ev-ok { background: rgba(16,185,129,.14); color: #A7F3D0; border: 1px solid rgba(16,185,129,.45); }
+.ev-ann { background: rgba(250,204,21,.1); color: #FDE68A; border: 1px solid rgba(250,204,21,.4); }
+.ev-fact { background: rgba(148,163,184,.12); color: #E2E8F0; border: 1px solid rgba(148,163,184,.35); }
+.ev-count:empty { display: none; }
+.ev-count { background: rgba(34,211,238,.12); color: #A5F3FC; border: 1px solid rgba(34,211,238,.45); }
+.ev-live .ev-count { background: rgba(244,63,94,.16); color: #FECDD3; border-color: rgba(244,63,94,.5); }
+.ev-live .ev-count::before { content: ""; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: #FB7185; animation: g-pulse 1.6s infinite; }
+.ev-src { font-size: 14px !important; color: var(--muted) !important; }
+.ev-src a::after { content: " \2197"; text-decoration: none; }        /* opens in a new tab */
+/* the headline event of the half-year */
+.ev-major .ev-date { background: linear-gradient(160deg, rgba(34,211,238,.25), rgba(99,102,241,.25)); border-color: var(--cyan); box-shadow: 0 0 26px rgba(34,211,238,.35); }
+.ev-major .ev-body { border-color: rgba(34,211,238,.45); background: linear-gradient(160deg, rgba(34,211,238,.1), rgba(2,6,23,.55)); box-shadow: 0 0 30px -6px rgba(34,211,238,.3); }
+html body .article-body .ev-major .ev-body h3 { font-size: 22px; }
+/* finished: dimmed and moved to the end by events.js */
+.ev-done { opacity: .55; }
+.ev-done .ev-count { background: rgba(148,163,184,.12); color: #CBD5E1; border-color: rgba(148,163,184,.35); }
+@media (max-width: 600px) {
+  .article-body .ev-list li.ev { grid-template-columns: 1fr; gap: 8px; }
+  .ev-list::before { display: none; }
+  .ev-date { flex-direction: row; justify-content: flex-start; gap: 8px; min-height: 0; padding: 8px 14px; width: max-content; }
+}
+@media (prefers-reduced-motion: reduce) { .ev-live .ev-count::before { animation: none; } }

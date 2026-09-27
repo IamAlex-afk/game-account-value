@@ -1,0 +1,26 @@
+
+/* ============================================================
+   Report pages without the hero split (news / market watch)
+   ============================================================ */
+html body .report-hero h1 { font-family: var(--body-font); font-variation-settings: normal; font-weight: 800; color: var(--white); text-transform: none;
+  font-size: clamp(32px, 4.6vw, 54px); line-height: 1.06; letter-spacing: -.03em; }
+.report-hero .report-updated, .report-hero .fresh-badge { margin: 8px 4px 0; }
+.disclaimer-callout { max-width: 860px !important; margin: 10px auto 8px !important; padding: 16px 20px !important; border-radius: var(--r) !important;
+  background: rgba(250,204,21,.06) !important; border: 1px solid rgba(250,204,21,.3) !important; font-size: 16px !important; line-height: 1.6 !important; color: var(--body) !important; }
+.disclaimer-callout strong { color: #FDE68A; }
+html body .article-body > p[style*="font-size"]:first-child, .resources-callout + p[style], .section-nav + p[style] { font-size: 16px !important; }
+/* each region = one glass card (wrapped by the builder) */
+.g-news-card { margin: 28px 0 0; padding: 26px; }
+html body .g-news-card h2 { margin-top: 0; }
+/* the price for a region: big, cyan, readable */
+html body .article-body .price-range, html body[class] .article-body .price-range { display: inline-block; margin: 6px 0 14px; padding: 12px 18px; border-radius: 12px;
+  background: linear-gradient(135deg, rgba(6,182,212,.16), rgba(99,102,241,.14)) !important; border: 1px solid var(--line-hi) !important; color: var(--white) !important;
+  font-size: clamp(20px, 2.2vw, 26px); font-weight: 800; box-shadow: 0 0 24px rgba(6,182,212,.15) !important; font-variant-numeric: tabular-nums; }
+.article-body p[style*="font-size:13px"], .article-body p[style*="font-size: 13px"], .article-body p[style*="font-size:12px"] { font-size: 15px !important; color: var(--muted) !important; }
+.reported-case { padding: 18px 20px; margin: 12px 0; }
+.reported-case .tag { display: inline-block; padding: 4px 10px; border-radius: 999px; background: rgba(248,113,113,.12); border: 1px solid rgba(248,113,113,.35); color: #FECACA; font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+.risk-box { margin: 12px 0; }
+/* every in-text link readable on dark glass (was browser-default dark blue) */
+html body main p a:not([class]), html body main li a:not([class]) { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+html body main p a:not([class]):hover { color: #A5F3FC; }
+.g-news-card p[style*="font-size"], .g-news-card small { font-size: 15px !important; }
