@@ -5,6 +5,44 @@ reference instead of improvised per prompt. Read this before making any
 visual change (colors, layout, new page themes). It captures both the
 site's existing base tokens and the working method for extending them.
 
+## Current system: Cyber-Glass (since 2026-09-28)
+
+`assets/glass.css` is loaded on every page **after** `style.css` and the
+page's inline `<style>`, and re-skins them; `style.css` stays as the
+structural base. Owner decisions behind it: keep all page copy unchanged
+(only visuals and button placement), the site is a free calculator only
+(no uploads, no typing, no data collected — the AI screenshot scan lives in
+the Telegram bot), audience styling is "gamer, not kiddy" (site is 18+).
+
+- **Look:** #080B11 base, indigo/cyan ambient light, faint micro-grid, film
+  grain, dark glass panels with hairline borders; neon only on accents
+  (buttons, key numbers, Live status). Font: self-hosted Inter (the CSP only
+  allows `font-src 'self'`).
+- **Homepage = the tool** (en/id/pt/ru, the locales that have the
+  calculator): 1 game tiles → 2 sliders → 3 sticky result with the bot CTA
+  directly under it. Other locales: same hero art (city + GAV-AI robot),
+  no calculator.
+- **Game pages:** hero split — title, badges, market range, facts left;
+  compact calculator right with the bot CTA under the result. Article
+  sections are glass cards.
+- **Per-game themes:** `body.theme-*` re-points `--cyan`/`--blue` (accent
+  pair), tints the ambient light and adds one faint background motif made
+  of generic shapes (no logos/characters). Roblox = `theme-studs`. All
+  accents ≥ 7:1 on the background; accent-filled buttons always use dark
+  text (white on bright accents failed 4.5:1).
+- **No layout shift:** game tiles, result shell, action row and bot CTA are
+  pre-rendered in the HTML; `assets/glass.js` only wires them. Don't move
+  them back into JS.
+- **Performance rules:** backdrop blur only on large panels (nav, tool
+  panel, calculator card, section nav) — not on small cards; no SVG filters
+  in the hero art; no full-height animated layers.
+- **Events timeline** (news pages): `.ev-list` + `assets/events.js`
+  (countdown computed in the browser; month-only dates get no countdown).
+  Every entry must link to the publisher's own announcement.
+
+The sections below describe the previous Aurora-glass skin and remain as
+background for `style.css`.
+
 ## Method: two passes, not straight to CSS
 
 **Pass 1 — plan before coding.** For any new visual work, write down:
