@@ -31,9 +31,15 @@ Owner's idea: each game page shows **Your market** (by page language) and
 Pilot game: Brawl Stars → show owner → then the other 8 games.
 Data file: `scripts/research/world-markets.md`.
 
+**Brawl Stars DONE + live (commit ab0009b):** section `#world` on all 17
+language pages, generator `scripts/design/world_markets.py <game>` (data dict
+`DATA[game]`, translations `T`, language→market map `LOCAL`), CSS
+`scripts/design/css/glass-world.css`. Brazil = not verified (403s).
+To add a game: research rows (viewed pages only) → add `DATA['<game>']` +
+name in `apply()` names → run script → screenshot → commit.
+
 ## Next steps
-1. Finish Brawl Stars country data (BR, KR still unverified), build the
-   section, show owner on 2-3 languages.
+1. Owner review of the Brawl Stars world table; then the other 8 games.
 2. Other 8 games (start with Mobile Legends, Free Fire — strong regional leagues).
 3. Events timelines for the other 8 games (official sources only).
 4. SEO/AI audit: update llms.txt; Event JSON-LD only for in-person events;
