@@ -803,12 +803,15 @@
       slidersWrap.insertBefore(gp, slidersWrap.firstChild);
 
       var activeIndex = 0;
-      function setActive(i) {
+      function setActive(i, noScroll) {
         var n = controls.length;
         activeIndex = ((i % n) + n) % n;
         controls.forEach(function (c) { c.field.classList.remove("vc-field-active"); });
         var target = controls[activeIndex];
         target.field.classList.add("vc-field-active");
+        // On page load only highlight — scrolling here yanked every visitor
+        // straight past the hero down to the calculator.
+        if (noScroll) return;
         // Deferred to the next frame so the browser applies the class change
         // through its normal layout pass instead of us forcing a synchronous
         // recalc by reading scroll position in the same tick (Lighthouse
@@ -855,7 +858,7 @@
         var shareBtnNow = root.querySelector(".vc-share-btn");
         if (shareBtnNow) shareBtnNow.click();
       });
-      setActive(0);
+      setActive(0, true);
     }
 
     recompute();
