@@ -1,0 +1,36 @@
+
+/* ============================================================
+   "Prices around the world" (game pages): table on desktop,
+   one card per market on phones; the visitor's market first.
+   ============================================================ */
+.wm-intro { font-size: 17px !important; color: var(--body) !important; margin: 0 0 18px; }
+.wm-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--line); }
+.wm-table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 760px; }
+.wm-table th, .wm-table td { padding: 13px 14px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--line); }
+.wm-table thead th { background: rgba(255,255,255,.05); color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.wm-table tbody th { color: var(--white); font-weight: 700; white-space: nowrap; }
+.wm-table td { color: var(--body); }
+.wm-table a { color: var(--cyan); }
+.wm-num { color: var(--white) !important; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; direction: ltr; unicode-bidi: isolate; }
+.wm-flag { margin-inline-end: 8px; }
+.wm-mine { background: linear-gradient(90deg, color-mix(in srgb, var(--cyan) 14%, transparent), transparent); }
+.wm-mine th { box-shadow: inset 3px 0 0 var(--cyan); }
+[dir="rtl"] .wm-mine th { box-shadow: inset -3px 0 0 var(--cyan); }
+.wm-you { display: inline-block; margin-inline-start: 8px; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 800; color: var(--on-acc); background: var(--cyan); vertical-align: 1px; }
+.wm-sep td { padding: 16px 14px 8px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-bottom: 0; }
+.wm-nv { color: var(--muted) !important; font-style: italic; }
+.wm-note { font-size: 14px !important; color: var(--muted) !important; margin: 14px 0 0; }
+@media (max-width: 760px) {
+  .wm-wrap { border: 0; overflow: visible; }
+  .wm-table { min-width: 0; }
+  .wm-table thead { display: none; }
+  .wm-table, .wm-table tbody, .wm-table tr, .wm-table th, .wm-table td { display: block; width: 100%; }
+  .wm-table tr { margin-bottom: 10px; border: 1px solid var(--line); border-radius: 14px; background: rgba(2,6,23,.45); overflow: hidden; }
+  .wm-table tr.wm-sep { border: 0; background: none; margin: 14px 0 4px; }
+  .wm-table tbody th { border-bottom: 1px solid var(--line); white-space: normal; }
+  .wm-table td { border-bottom: 0; padding: 8px 14px; }
+  .wm-table td[data-l]::before { content: attr(data-l); display: block; font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: .04em; margin-bottom: 2px; }
+  .wm-table td.wm-num { white-space: normal; }
+  .wm-mine th { box-shadow: none; }
+  .wm-mine { border-color: var(--line-hi) !important; }
+}

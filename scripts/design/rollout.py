@@ -17,7 +17,7 @@ ICON_CLS = {'roblox': 'g-roblox', 'brawl-stars': 'g-brawl', 'clash-of-clans': 'g
 def build_css():
     faces = open(S + '_inter-faces.css', encoding='utf-8').read()
     title_fix = "html body .value-calc .vc-title { font-family: var(--body-font); font-variation-settings: normal; text-transform: none; letter-spacing: -.01em; }\n"
-    parts = ['glass-body', None, 'glass-home', 'glass-tool', 'glass-luxe', 'glass-news', 'glass-events', 'glass-themes', 'glass-plain']
+    parts = ['glass-body', None, 'glass-home', 'glass-tool', 'glass-luxe', 'glass-news', 'glass-events', 'glass-themes', 'glass-plain', 'glass-world']
     css = ('/* GameAccountValue — Cyber-Glass design system (2026-09). Built from parts; see DESIGN.md.\n'
            '   Self-hosted Inter: the CSP only allows font-src \'self\'. */\n' + faces)
     for p in parts:
