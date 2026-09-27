@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,6 +219,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -233,20 +233,41 @@
 <div class="back-btn"><a href="./">← Về Trang Chủ</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ Giá Trị Acc Clash of Clans</h1>
   <p style="color:var(--muted); font-size:16px;">Dữ liệu giá thực tế theo cấp Town Hall và trạng thái tiến trình, từ tin đăng chợ thực tế — không phải ước tính bịa đặt.</p>
+  <div class="g-badges">
   <p class="report-updated">Cập nhật tháng 9/2026 từ các tin đăng chợ thực tế. Nguồn được liệt kê ở cuối trang.</p>
   <div class="fresh-badge">🌍 Dữ liệu mới nhất — được AI nghiên cứu trực tiếp trên các chợ toàn cầu thực tế, cập nhật ngày 12/9/2026</div>
+  </div>
 </section>
-
+<div class="price-range">Khoảng giá thị trường thực tế: $10 – $260</div>
 <div class="fact-box">
   <span>📅 Ra mắt <strong>2/8/2012</strong> (iOS), Android năm 2013</span>
   <span>👥 <strong>65-100 triệu+</strong> người chơi hoạt động hàng tháng (ước tính khác nhau tùy nguồn)</span>
   <span>📦 <strong>500 triệu+</strong> lượt tải tích lũy</span>
   <span>🏰 Town Hall cao nhất hiện tại: <strong>TH18</strong> (tính đến tháng 9/2026)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 Máy Tính Nhanh</div>
+  <div class="vc-subtitle">Ước tính gần đúng từ các khoảng giá ở trên — kéo thanh trượt. Bot đưa ra ước tính chính xác từ ảnh chụp màn hình. Không có gì được nhập hay gửi đi đâu cả.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Đã sao chép!">Ước tính gần đúng, không phải định giá chính xác</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Chia sẻ kết quả</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=vi" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Kiểm tra giá trị ước tính acc Clash of Clans của bạn</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Giá cả</a>
   <a href="#value">📊 Điều Gì Quyết Định Giá Trị</a>
@@ -265,22 +286,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Giá Thị Trường Thực Tế</h2>
 <h3>Acc Clash of Clans đáng giá bao nhiêu?</h3>
-<div class="price-range">Khoảng giá thị trường thực tế: $10 – $260</div>
+
 <p>Clash of Clans hiện đã lên tới Town Hall 18, và giá acc tăng theo cả cấp Town Hall lẫn mức độ "rush" (nâng cấp lệch, bỏ qua phòng thủ/tướng) so với "full max" của acc. Một acc TH13 rush bán khoảng $10, trong khi acc TH18 full-max thực sự được rao $100-$260.</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 Máy Tính Nhanh</div>
-  <div class="vc-subtitle">Ước tính gần đúng từ các khoảng giá ở trên — kéo thanh trượt. Bot đưa ra ước tính chính xác từ ảnh chụp màn hình. Không có gì được nhập hay gửi đi đâu cả.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Đã sao chép!">Ước tính gần đúng, không phải định giá chính xác</span>
-    <button type="button" class="vc-share-btn">🔗 Chia sẻ kết quả</button>
-  </div>
-</div>
+
 
 <h3>Giá thực tế theo từng cấp Town Hall trông như thế nào?</h3>
 <table class="tier-table">
@@ -296,8 +308,8 @@
 
 <h3>Khoảng giá này có đúng trên một loại chợ khác không?</h3>
 <p>Có, gần đúng. EpicNPC — một diễn đàn trade giữa người chơi thay vì chợ storefront như Eldorado.gg hay igitems.com — cho thấy các tin đăng TH17/TH18 riêng lẻ có giá từ khoảng $98 đến $340, kiểm tra qua kết quả tìm kiếm được index vào tháng 9/2026 (EpicNPC chặn truy cập trang tự động trực tiếp, nên đây là giá rao được index qua tìm kiếm, không phải trang chúng tôi tự truy cập và trích dẫn trực tiếp). Đó là hình dạng chung tương tự bảng igitems.com ở trên — acc TH17/TH18 full-max ở mức vài trăm đô thấp — với tin đăng cao nhất của EpicNPC nhỉnh hơn một chút so với mức trần $260 của igitems.com, phù hợp với việc một diễn đàn cho phép người bán tự đặt bất kỳ giá rao nào thay vì cạnh tranh với các tin đăng khác trên storefront.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Điều Gì Thực Sự Quyết Định Giá Trị</h2>
 <h3>Điều gì thực sự quyết định giá trị acc Clash of Clans?</h3>
 <ul>
@@ -314,28 +326,28 @@
   <li>Đẩy Legend League đều đặn thay vì thỉnh thoảng, vì lịch sử theo mùa cộng dồn</li>
   <li>Giữ gold pass / season pass hoạt động mỗi mùa để có cosmetic độc quyền không quay lại</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Lừa Đảo & Rủi Ro Giao Dịch</h2>
 <h3>Những kiểu lừa đảo lớn nhất trong giao dịch acc Clash of Clans là gì?</h3>
 <div class="risk-box">
   <p>Ảnh chụp màn hình chứng minh thanh toán giả, link phishing "xác minh acc của bạn" gửi qua Discord để đánh cắp thông tin Supercell ID, và người mua khiếu nại thanh toán với ngân hàng sau khi đã nhận quyền truy cập đăng nhập. Vì Supercell không làm trung gian cho giao dịch acc, không có quy trình khiếu nại nếu một trong hai bên bị lừa.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Quy Định & Chính Sách Giao Dịch</h2>
 <h3>Trade acc Clash of Clans có vi phạm quy định không?</h3>
 <p>Có — Điều khoản Dịch vụ của Supercell cấm bán, mua, hoặc chuyển nhượng acc, và vi phạm có thể dẫn đến khóa vĩnh viễn không thể khôi phục.</p>
 
 <h3>Các tin đăng này thực sự đến từ đâu?</h3>
 <p>Báo cáo thị trường trực tiếp của igitems.com (4,463 tin đăng, phân theo cấp Town Hall và trạng thái tiến trình) và tin đăng công khai của Eldorado.gg là nguồn cho các con số ở trên — giá rao thực tế, không phải giao dịch đã hoàn tất được xác nhận.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Hướng Dẫn Chơi</h2>
 <h3>Hướng dẫn người chơi: thứ tự nâng cấp nào được người chơi kinh nghiệm thực sự khuyên dùng?</h3>
 <p>Phần này để cải thiện base của bạn, không phải giá trị bán lại acc. Một khung ưu tiên nâng cấp năm 2026 do <a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a> và <a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a> công bố tóm tắt thứ tự thường được khuyên là: Laboratory trước, rồi Army Camps và Clan Castle, rồi Hero Hall/Blacksmith, rồi các phòng thủ chính, với tường thành cố tình để cuối cùng — cả hai hướng dẫn đều tóm tắt là "tấn công trước, thứ nghẽn thời gian thứ hai, phòng thủ thứ ba, tường cuối cùng". Nội dung bố trí base và hướng dẫn nâng cấp từ creator <strong>Judo Sloth Gaming</strong> cũng theo cách ưu tiên 2026 tương tự với chi tiết hơn.</p>
 <p>Clash of Clans không phải game thiên về ngắm bắn chính xác, nên không có văn hóa chỉnh sensitivity đáng kể như ở các game bắn súng.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=vi" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Kiểm tra giá trị ước tính acc Clash of Clans của bạn</a></div>
@@ -392,6 +404,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

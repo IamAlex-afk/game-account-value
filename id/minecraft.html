@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -235,6 +233,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Lewati ke konten</a>
@@ -247,19 +247,40 @@
 <div class="back-btn"><a href="./">← Kembali ke Beranda</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ Nilai Akun Minecraft</h1>
   <p style="color:var(--muted); font-size:16px;">Dua pasar terpisah: akun biasa (rank, cape, edisi) dan ceruk kolektor username pendek yang jauh lebih langka — keduanya dengan harga terdokumentasi nyata.</p>
+  <div class="g-badges">
   <p class="report-updated">Diperbarui September 2026 berdasarkan listing marketplace langsung. Sumber tercantum di bagian bawah halaman.</p>
   <div class="fresh-badge">🌍 Data terbaru — diriset langsung oleh AI dari marketplace global asli, diperbarui 12 September 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Akun biasa: $0,50 – $632</div>
 <div class="fact-box">
   <span>📅 Rilis penuh <strong>18 November 2011</strong></span>
   <span>👥 ~<strong>212 juta</strong> pemain aktif bulanan (2026)</span>
   <span>📦 <strong>350 juta+</strong> kopi terjual — video game terlaris sepanjang masa (dikonfirmasi Mojang)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 Kalkulator Cepat</div>
+  <div class="vc-subtitle">Perkiraan kasar dari rentang di atas — geser slider-nya. Bot memberikan estimasi akurat dari screenshot. Tidak ada yang diinput atau dikirim ke mana pun.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Disalin!">Perkiraan kasar, bukan estimasi pasti</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Bagikan hasil</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=id" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Cek estimasi nilai akun Minecraft kamu</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Harga</a>
   <a href="#value">📊 Penentu Nilai</a>
@@ -278,22 +299,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Harga Pasar Sungguhan</h2>
 <h3>Berapa nilai akun Minecraft biasa?</h3>
-<div class="price-range">Akun biasa: $0,50 – $632</div>
+
 <p>Listing langsung di Eldorado.gg berkisar dari $0,50 (kode cape polos Java Edition) hingga $120 untuk akun Hypixel "10-cape MVP+". Marketplace kedua (igitems.com) menunjukkan akun biasa hingga ~$632 untuk yang memiliki rank Hypixel MVP+, banyak cape, dan level Skyblock tinggi — nilai di sini berskala dengan rank server dan jumlah cape, bukan username.</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 Kalkulator Cepat</div>
-  <div class="vc-subtitle">Perkiraan kasar dari rentang di atas — geser slider-nya. Bot memberikan estimasi akurat dari screenshot. Tidak ada yang diinput atau dikirim ke mana pun.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Disalin!">Perkiraan kasar, bukan estimasi pasti</span>
-    <button type="button" class="vc-share-btn">🔗 Bagikan hasil</button>
-  </div>
-</div>
+
 
 <h3>Berapa nilai akun Minecraft dengan username pendek langka?</h3>
 <p>Ini adalah ceruk kolektor yang sama sekali terpisah dan jauh lebih kecil — nilai di sini hampir seluruhnya tentang <em>username itu sendiri</em>, bukan rank server atau progres in-game. Marketplace komunitas (seperti PlayerUp) telah mendokumentasikan harga yang konsisten berdasarkan panjang username dan tipe karakter, mulai dari ribuan hingga ratusan ribu dolar — pasar yang sama sekali berbeda dari akun biasa di atas.</p>
@@ -321,8 +333,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">Cape Minecon 2011</a></strong> — kosmetik langka Minecraft yang paling banyak dikutip di berbagai sumber independen; selalu menjadi acuan setiap kali "cape Minecraft terlangka" dibahas</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Peringkat marketplace cape langsung berdasarkan harga (mccapers.com, Sept 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape masing-masing $3. Cape peserta MINECON (2011-2016) dan cape staf Mojang berada di "tingkat museum" terpisah di luar peringkat reguler ini — nyaris tidak pernah dijual sama sekali, itulah tepatnya kenapa Minecon 2011 tetap menjadi nama yang paling sering dirujuk, bukan harga daftar tertinggi.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Apa yang Sebenarnya Menentukan Nilai</h2>
 <h3>Apa yang benar-benar menentukan nilai akun Minecraft?</h3>
 <ul>
@@ -338,26 +350,26 @@
   <li>Pertahankan email asli akun yang sudah bermigrasi Microsoft, jangan menggantinya, karena riwayat kepemilikan penting untuk kepercayaan pembeli</li>
   <li>Jika kamu punya cape Minecon, pahami bahwa itu tidak bisa dipindahkan ke akun baru — terikat permanen pada akunmu</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Penipuan &amp; Risiko Perdagangan</h2>
 <h3>Apa penipuan terbesar dalam jual-beli username Minecraft?</h3>
 <div class="risk-box">
   <p>Penipuan "name-squatting" di mana penjual menjanjikan akan melepas username pada tanggal tertentu untuk direbut pembeli, lalu melepasnya lebih awal atau tidak sama sekali; dan penipuan bayar-lalu-tidak-dikirim sederhana di marketplace Discord tanpa escrow. Karena transfer akun Minecraft tidak didukung resmi oleh Mojang/Microsoft, tidak ada penyelesaian sengketa jika transaksi bermasalah.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Aturan &amp; Kebijakan Perdagangan</h2>
 <h3>Apakah memperjualbelikan akun Minecraft melanggar aturan Mojang?</h3>
 <p>Ya — Ketentuan Penggunaan Minecraft melarang mentransfer akun untuk uang sungguhan, dan Mojang/Microsoft dapat membekukan akun yang terlibat transfer tidak sah yang terdeteksi.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Panduan Pemain</h2>
 <h3>Panduan pemain: apakah ada sudut pandang "cara jadi lebih baik" yang nyata untuk Minecraft?</h3>
 <p>Bagian ini untuk meningkatkan permainanmu sendiri, bukan nilai jual akunmu. Berbeda dengan game kompetitif satu-tangga, Minecraft terbagi menjadi komunitas-komunitas yang benar-benar terpisah dengan meta nyata masing-masing: speedrunning dan server PvP kompetitif.</p>
 <p>Speedrunning punya sumber otoritatif (leaderboard speedrun.com), tapi riset kami sendiri menemukan laporan sekunder yang saling bertentangan soal siapa yang saat ini memegang rekor dunia Any% Random Seed Glitchless (RSG) — satu sumber menyebut "lowkey" di 6:50, sumber lain menyebut "Skycrab" di 6:39 — jadi daripada memilih salah satu, kami menandai perbedaan ini alih-alih menyatakan salah satunya sebagai fakta. Yang solid: kategori ini selalu mengikuti rute nyata yang sama — cari desa atau bangkai kapal untuk sumber daya awal, capai Nether untuk blaze rod, temukan Stronghold, dan selesaikan pertarungan End, dalam urutan itu.</p>
 <p>Di sisi PvP, panduan komunitas 2026 yang mapan (<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>) menjelaskan pergeseran meta nyata dari investasi gear murni menuju positioning dan timing, dengan Crystal PvP dan Netherite Pot dirangking S-tier serta UHC/Axe PvP dirangking A-tier pada tier list mereka saat ini. Platform nyata dan aktif untuk ini: mode PvP Hypixel (Bedwars, Skywars, Duels) dan mode latihan Minemen Club (Nodebuff, Soup, UHC, Bridge).</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=id" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Cek estimasi nilai akun Minecraft kamu</a></div>
@@ -415,6 +427,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

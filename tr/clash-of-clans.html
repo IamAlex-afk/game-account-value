@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,6 +219,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -233,20 +233,41 @@
 <div class="back-btn"><a href="./">← Ana Sayfaya Dön</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ Clash of Clans Hesap Değeri</h1>
   <p style="color:var(--muted); font-size:16px;">Canlı pazar yeri ilanlarından, Ratuşa seviyesine ve ilerleme durumuna göre gerçek fiyat verisi — uydurma bir tahmin değil.</p>
+  <div class="g-badges">
   <p class="report-updated">Eylül 2026'da canlı pazar yeri ilanlarından güncellendi. Kaynaklar sayfanın altında listelenmiştir.</p>
   <div class="fresh-badge">🌍 En taze veriler — gerçek küresel pazar yerlerinde yapay zeka tarafından canlı araştırıldı, 12 Eylül 2026'da güncellendi</div>
+  </div>
 </section>
-
+<div class="price-range">Gerçek pazar aralığı: $10 – $260</div>
 <div class="fact-box">
   <span>📅 Yayın tarihi <strong>2 Ağustos 2012</strong> (iOS), 2013'te Android</span>
   <span>👥 <strong>65-100M+</strong> aylık aktif oyuncu (tahminler kaynağa göre değişir)</span>
   <span>📦 <strong>500M+</strong> toplam indirme</span>
   <span>🏰 Mevcut maksimum Ratuşa: <strong>TH18</strong> (Eylül 2026 itibarıyla)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
+  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Clash of Clans hesabının tahmini değerini kontrol et</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Fiyatlar</a>
   <a href="#value">📊 Değeri Ne Belirliyor</a>
@@ -265,22 +286,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Gerçek Pazar Fiyatları</h2>
 <h3>Bir Clash of Clans hesabı ne kadar eder?</h3>
-<div class="price-range">Gerçek pazar aralığı: $10 – $260</div>
+
 <p>Clash of Clans artık Ratuşa 18'de ve hesap fiyatı hem Ratuşa seviyesiyle hem de hesabın ne kadar "rushed" (eşit olmayan şekilde yükseltilmiş, savunmaları/kahramanları atlayarak) veya "full max" olduğuyla doğrudan ölçekleniyor. Rushed bir TH13 yaklaşık $10'a satılırken, gerçekten full-max bir TH18 $100-$260'a listeleniyor.</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
-  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
-    <button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button>
-  </div>
-</div>
+
 
 <h3>Ratuşa seviyesine göre gerçek fiyatlar nasıl görünüyor?</h3>
 <table class="tier-table">
@@ -296,8 +308,8 @@
 
 <h3>Bu aralık farklı bir pazar yeri türünde de geçerli mi?</h3>
 <p>Evet, kabaca. EpicNPC — Eldorado.gg veya igitems.com gibi bir mağaza pazarı değil, eşler arası bir ticaret forumu — bireysel TH17/TH18 ilanlarının yaklaşık $98'den $340'a kadar fiyatlandığını gösteriyor, Eylül 2026'da dizine eklenmiş arama sonuçları aracılığıyla kontrol edildi (EpicNPC doğrudan otomatik sayfa erişimini engelliyor, bu yüzden bunlar arama dizinlemesiyle ortaya çıkan istek fiyatları, doğrudan getirip alıntıladığımız bir sayfa değil). Bu, yukarıdaki igitems.com tablosuyla aynı genel şekil — düşük yüzlerdeki TH17/TH18 full-max hesaplar — EpicNPC'nin en yüksek bireysel ilanı igitems.com'un $260 tavanının biraz üzerinde oturuyor, bu da bir forumun bir satıcının bir mağazanın diğer ilanlarıyla rekabet etmek yerine herhangi bir istek fiyatı belirlemesine izin vermesiyle tutarlı.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Değeri Gerçekte Ne Belirliyor</h2>
 <h3>Bir Clash of Clans hesabının değerini gerçekte ne belirliyor?</h3>
 <ul>
@@ -314,28 +326,28 @@
   <li>Sezon geçmişi biriktiği için ara sıra değil, istikrarlı bir şekilde Legend Ligi'ne itin</li>
   <li>Geri gelmeyen özel kozmetikler için her sezon gold pass / sezon geçişini aktif tutun</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Dolandırıcılıklar ve Ticaret Riskleri</h2>
 <h3>Clash of Clans hesap ticaretindeki en büyük dolandırıcılıklar nelerdir?</h3>
 <div class="risk-box">
   <p>Sahte ödeme kanıtı ekran görüntüleri, Discord üzerinden gönderilen ve Supercell ID kimlik bilgilerini çalan "hesabınızı doğrulayın" kimlik avı bağlantıları ve giriş erişimi aldıktan sonra bankalarıyla ödemeye itiraz eden alıcılar. Supercell hesap ticaretlerine aracılık etmediği için, taraflardan biri dolandırılırsa hiçbir itiraz süreci yoktur.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Kurallar ve Ticaret Politikası</h2>
 <h3>Clash of Clans hesaplarını takas etmek kurallara aykırı mı?</h3>
 <p>Evet — Supercell'in Kullanım Şartları hesapları satmayı, satın almayı veya transfer etmeyi yasaklıyor ve ihlaller kurtarma imkanı olmadan kalıcı bir yasakla sonuçlanabilir.</p>
 
 <h3>Bu ilanlar gerçekte nereden geliyor?</h3>
 <p>igitems.com'un canlı pazar raporu (Ratuşa seviyesi ve ilerleme durumuna göre ayrılmış 4.463 ilan) ve Eldorado.gg'nin halka açık ilanları yukarıdaki rakamların kaynağı — gerçek istek fiyatları, doğrulanmış tamamlanmış satışlar değil.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Oyuncu Rehberi</h2>
 <h3>Oyuncu rehberi: deneyimli oyuncular gerçekte hangi yükseltme sırasını tavsiye ediyor?</h3>
 <p>Bu bölüm, hesabınızın yeniden satış değeri değil, kendi üssünüzü geliştirmek içindir. <a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a> ve <a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a> tarafından yayınlanan 2026 yükseltme öncelik çerçevesi, yaygın olarak tavsiye edilen sırayı şöyle özetliyor: önce Laboratuvar, ardından Ordu Kampları ve Klan Şatosu, ardından Kahraman Salonu/Demirci, ardından temel savunmalar, duvarlar kasıtlı olarak en son — her iki rehberin de kullandığı kısaltma "önce saldırı, ikinci zaman darboğazları, üçüncü savunmalar, en son duvarlar". <strong>Judo Sloth Gaming</strong> içerik üreticisinin üs düzeni ve yükseltme rehberi içeriği aynı 2026 öncelik yaklaşımını daha ayrıntılı olarak kapsıyor.</p>
 <p>Clash of Clans nişan alma tabanlı bir oyun değil, bu yüzden nişancı oyunlarında olduğu gibi etrafında anlamlı bir hassasiyet ayarı kültürü yok.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Clash of Clans hesabının tahmini değerini kontrol et</a></div>
@@ -392,6 +404,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

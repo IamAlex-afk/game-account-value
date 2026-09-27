@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,6 +219,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -233,20 +233,41 @@
 <div class="back-btn"><a href="./">← Torna alla Home</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ Valore Account Clash of Clans</h1>
   <p style="color:var(--muted); font-size:16px;">Dati di prezzo reali per livello Municipio e stato di progresso, da inserzioni marketplace live — non una stima inventata.</p>
+  <div class="g-badges">
   <p class="report-updated">Aggiornato a settembre 2026 da inserzioni marketplace live. Fonti elencate in fondo alla pagina.</p>
   <div class="fresh-badge">🌍 Dati più freschi — ricercati live dall'AI su marketplace globali reali, aggiornati il 12 settembre 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Fascia di mercato reale: $10 – $260</div>
 <div class="fact-box">
   <span>📅 Uscita <strong>2 agosto 2012</strong> (iOS), Android nel 2013</span>
   <span>👥 <strong>65-100M+</strong> giocatori attivi mensili (le stime variano a seconda della fonte)</span>
   <span>📦 <strong>500M+</strong> download cumulativi</span>
   <span>🏰 Municipio massimo attuale: <strong>TH18</strong> (a settembre 2026)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 Calcolatore Rapido</div>
+  <div class="vc-subtitle">Una stima approssimativa dalle fasce sopra — muovi gli slider. Il bot fornisce una stima esatta dagli screenshot. Nulla viene inserito o inviato da nessuna parte.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copiato!">Stima approssimativa, non una valutazione esatta</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Condividi risultato</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=it" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Verifica il valore stimato del tuo account Clash of Clans</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Prezzi</a>
   <a href="#value">📊 Cosa Determina il Valore</a>
@@ -265,22 +286,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Prezzi Reali di Mercato</h2>
 <h3>Quanto vale un account Clash of Clans?</h3>
-<div class="price-range">Fascia di mercato reale: $10 – $260</div>
+
 <p>Clash of Clans è ora al Municipio 18, e il prezzo dell'account scala direttamente sia con il livello del Municipio che con quanto l'account sia "rushed" (aggiornato in modo disomogeneo, saltando difese/eroi) rispetto a "full max". Un TH13 rushed si vende intorno ai $10, mentre un TH18 genuinamente full-max è listato a $100-$260.</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 Calcolatore Rapido</div>
-  <div class="vc-subtitle">Una stima approssimativa dalle fasce sopra — muovi gli slider. Il bot fornisce una stima esatta dagli screenshot. Nulla viene inserito o inviato da nessuna parte.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copiato!">Stima approssimativa, non una valutazione esatta</span>
-    <button type="button" class="vc-share-btn">🔗 Condividi risultato</button>
-  </div>
-</div>
+
 
 <h3>Come sono realmente i prezzi per livello di Municipio?</h3>
 <table class="tier-table">
@@ -298,8 +310,8 @@
 
 <h3>Questa fascia regge su un tipo diverso di marketplace?</h3>
 <p>Sì, approssimativamente. EpicNPC — un forum di scambio peer-to-peer piuttosto che un marketplace storefront come Eldorado.gg o igitems.com — mostra inserzioni individuali TH17/TH18 prezzate da circa $98 fino a $340, verificato tramite risultati di ricerca indicizzati a settembre 2026 (EpicNPC blocca l'accesso diretto automatizzato alla pagina, quindi questi sono i prezzi richiesti come emersi dall'indicizzazione dei motori di ricerca, non una pagina che abbiamo recuperato e citato direttamente). Questa è la stessa forma generale della tabella igitems.com sopra — account full-max TH17/TH18 nelle centinaia basse — con l'inserzione individuale più alta di EpicNPC che si trova un po' sopra il tetto di $260 di igitems.com, coerente col fatto che un forum permette a un venditore di nominare qualsiasi prezzo richiesto invece di competere contro le altre inserzioni di uno storefront.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Cosa Determina Davvero il Valore</h2>
 <h3>Cosa determina realmente il valore di un account Clash of Clans?</h3>
 <ul>
@@ -316,28 +328,28 @@
   <li>Spingi in Legend League costantemente piuttosto che occasionalmente, dato che lo storico stagionale si accumula</li>
   <li>Mantieni il gold pass / season pass attivo ogni stagione per i cosmetici esclusivi che non tornano</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Truffe e Rischi di Scambio</h2>
 <h3>Quali sono le truffe più grandi nello scambio di account Clash of Clans?</h3>
 <div class="risk-box">
   <p>Falsi screenshot di prova di pagamento, link di phishing "verifica il tuo account" inviati tramite Discord che rubano le credenziali Supercell ID, e acquirenti che disputano il pagamento con la loro banca dopo aver ricevuto l'accesso al login. Poiché Supercell non media gli scambi di account, non c'è alcun processo di disputa se una delle due parti viene truffata.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Regole e Politica di Scambio</h2>
 <h3>Scambiare account Clash of Clans è contro le regole?</h3>
 <p>Sì — i Termini di Servizio di Supercell vietano la vendita, l'acquisto, o il trasferimento di account, e le violazioni possono portare a un ban permanente senza recupero.</p>
 
 <h3>Da dove vengono realmente queste inserzioni?</h3>
 <p>Il market report live di igitems.com (4.463 inserzioni, suddivise per livello Municipio e stato di progresso) e le inserzioni pubbliche di Eldorado.gg sono le fonti per i numeri sopra — prezzi richiesti reali, non vendite completate confermate.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Guida Giocatore</h2>
 <h3>Guida giocatore: quale ordine di aggiornamento raccomandano realmente i giocatori esperti?</h3>
 <p>Questa sezione riguarda il migliorare la tua base, non il valore di rivendita del tuo account. Un framework di priorità aggiornamento 2026 pubblicato da <a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a> e <a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a> riassume l'ordine comunemente raccomandato come: Laboratorio prima, poi Accampamenti dell'Esercito e Castello del Clan, poi Sala Eroi/Fabbro, poi difese principali, con i muri deliberatamente per ultimi — la formula usata da entrambe le guide è "attacco prima, colli di bottiglia temporali secondo, difese terzo, muri ultimi". Contenuti di layout base e guide di aggiornamento del creator <strong>Judo Sloth Gaming</strong> coprono lo stesso approccio di priorità 2026 in maggior dettaglio.</p>
 <p>Clash of Clans non è un gioco basato sulla mira, quindi non esiste una cultura significativa delle impostazioni di sensibilità come per gli sparatutto.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=it" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Verifica il valore stimato del tuo account Clash of Clans</a></div>
@@ -394,6 +406,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

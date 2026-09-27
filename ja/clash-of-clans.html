@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,20 +197,41 @@
 <div class="back-btn"><a href="./">← ホームに戻る</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ クラッシュ・オブ・クランのアカウント価値</h1>
   <p style="color:var(--muted); font-size:16px;">ライブマーケットプレイスの出品情報から得た、タウンホールレベルと進行状況別の実際の価格データ — 想像で作った推定値ではない。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月、ライブマーケットプレイスの出品情報をもとに更新。出典はページ下部に記載。</p>
   <div class="fresh-badge">🌍 最新データ — AIが実際のグローバルマーケットプレイスをライブ調査、2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">実際のマーケットプライス帯：$10 〜 $260</div>
 <div class="fact-box">
   <span>📅 リリース <strong>2012年8月2日</strong>（iOS）、Androidは2013年</span>
   <span>👥 月間アクティブプレイヤー<strong>6,500万〜1億+</strong>（ソースにより推定値は異なる）</span>
   <span>📦 累計ダウンロード数<strong>5億+</strong></span>
   <span>🏰 現在の最大タウンホール：<strong>TH18</strong>（2026年9月時点）</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 クイック計算機</div>
+  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 結果を共有</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のクラッシュ・オブ・クランアカウントの推定価値をチェック</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 価格</a>
   <a href="#value">📊 価値を決めるもの</a>
@@ -229,22 +250,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>実際のマーケット価格</h2>
 <h3>クラッシュ・オブ・クランのアカウントはいくらの価値がある？</h3>
-<div class="price-range">実際のマーケットプライス帯：$10 〜 $260</div>
+
 <p>クラッシュ・オブ・クランは現在タウンホール18まであり、アカウント価格はタウンホールレベルと、アカウントが「rushed」（防衛設備/ヒーローを飛ばして不均等にアップグレード）か「full max」かの両方に直接連動する。rushed TH13はおよそ$10で売れる一方、本当のfull max TH18は$100〜$260で出品される。</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 クイック計算機</div>
-  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
-    <button type="button" class="vc-share-btn">🔗 結果を共有</button>
-  </div>
-</div>
+
 
 <h3>タウンホールレベル別の実際の価格はどうなっている？</h3>
 <table class="tier-table">
@@ -262,8 +274,8 @@
 
 <h3>この価格帯は別のタイプのマーケットプレイスでも成立するか？</h3>
 <p>おおむね成立する。EpicNPC — Eldorado.ggやigitems.comのようなストアフロント型マーケットプレイスではなくプレイヤー間取引フォーラム — では、個々のTH17/TH18出品がおよそ$98から$340で価格付けされており、2026年9月にインデックス検索結果経由で確認した（EpicNPCは自動での直接ページアクセスをブロックしているため、これらは検索インデックスに表示された希望価格であり、我々が直接取得・引用したページではない）。これは上記のigitems.comの表と同様の傾向であり、TH17/TH18のfull-maxアカウントは数百ドルの下限付近 — EpicNPCの個別出品の最高額はigitems.comの上限$260をやや上回っているが、これはフォーラムでは売り手がストアフロントの他の出品と競わずに任意の希望価格を付けられることと一致している。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>価値を実際に決めるもの</h2>
 <h3>クラッシュ・オブ・クランのアカウントの価値を実際に決めるものは？</h3>
 <ul>
@@ -280,28 +292,28 @@
   <li>シーズン履歴は積み重なるため、時々ではなく一貫してLegend Leagueを目指す</li>
   <li>復刻しない限定コスメティックのために、毎シーズンゴールドパス/シーズンパスを有効にしておく</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>詐欺と取引リスク</h2>
 <h3>クラッシュ・オブ・クランのアカウント取引における最大の詐欺は？</h3>
 <div class="risk-box">
   <p>偽の支払い証明スクリーンショット、Discordで送られてくるSupercell ID認証情報を盗む「アカウント確認」フィッシングリンク、ログインアクセスを受け取った後に銀行を通じて支払いを異議申し立てする購入者。Supercellはアカウント取引を仲介しないため、どちらかが詐欺に遭っても異議申し立てのプロセスは存在しない。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>ルールと取引ポリシー</h2>
 <h3>クラッシュ・オブ・クランのアカウント取引は規約違反か？</h3>
 <p>はい — SupercellのTerms of Serviceは、アカウントの販売・購入・譲渡を禁止しており、違反すると復元不可能な永久BANとなる可能性がある。</p>
 
 <h3>これらの出品情報は実際どこから来ているのか？</h3>
 <p>igitems.comのライブマーケットレポート（タウンホールレベル×進行状況別に分類された出品4,463件）とEldorado.ggの公開出品が上記の数字の出典であり、これらは確認された成約価格ではなく実際の希望価格である。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>プレイヤーガイド</h2>
 <h3>プレイヤーガイド：経験豊富なプレイヤーが実際に推奨するアップグレード順は？</h3>
 <p>このセクションは自分自身の村の向上のためのものであり、アカウントの転売価値のためではない。<a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a>と<a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a>が公開した2026年のアップグレード優先順位フレームワークは、一般的に推奨される順序を次のようにまとめている：まずラボ、次に兵舎とクランの城、次にヒーローホール/鍛冶場、次にコア防衛設備、そして壁は意図的に最後 — 両ガイドが使う略語は「攻撃を最初に、時間のボトルネックを次に、防衛設備を3番目に、壁は最後に」だ。クリエイター<strong>Judo Sloth Gaming</strong>による村レイアウトとアップグレードガイドのコンテンツも、同じ2026年の優先順位アプローチをより詳しく扱っている。</p>
 <p>クラッシュ・オブ・クランはエイム重視のゲームではないため、シューターのような意味のある感度設定文化は存在しない。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のクラッシュ・オブ・クランアカウントの推定価値をチェック</a></div>
@@ -358,6 +370,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

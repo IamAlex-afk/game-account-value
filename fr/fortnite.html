@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -234,6 +232,8 @@
   body.theme-rarity .article-body table:nth-of-type(1) tr:nth-child(4) td:first-child { border-left: 4px solid #3B82F6; padding-left: 12px; }
   body.theme-rarity .article-body table:nth-of-type(1) tr:nth-child(5) td:first-child { border-left: 4px solid #FF9D2E; padding-left: 12px; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-rarity">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -246,19 +246,40 @@
 <div class="back-btn"><a href="./">← Retour à l'accueil</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🌀 Valeur d'un compte Fortnite</h1>
   <p style="color:var(--muted); font-size:16px;">Prix réels de marketplace en direct, et pourquoi ils sont bien en dessous des anciens titres « compte à 90K $ » — plus ce qui détermine réellement le prix.</p>
+  <div class="g-badges">
   <p class="report-updated">Mis à jour en septembre 2026 à partir d'annonces de marché en direct. Sources listées en bas de page.</p>
   <div class="fresh-badge">🌍 Données les plus fraîches — recherchées en direct par IA sur de vrais marketplaces mondiaux, mises à jour le 12 septembre 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Fourchette réelle de marché : 10,90 $ – 6 200 $ (prix demandé moyen ~59 $)</div>
 <div class="fact-box">
   <span>📅 Battle Royale lancé le <strong>26 septembre 2017</strong></span>
   <span>👥 <strong>110-120M</strong> joueurs actifs mensuels (2026)</span>
   <span>🌍 Plus fort aux <strong>États-Unis (~21%)</strong>, Indonésie, Brésil</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-fortnite" data-game="fortnite" data-title="Fortnite">
+  <div class="vc-title">🧮 Calculateur Rapide</div>
+  <div class="vc-subtitle">Une estimation approximative à partir des fourchettes ci-dessus — déplacez les curseurs. Le bot donne une estimation exacte à partir de captures d'écran. Rien n'est saisi ni envoyé nulle part.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copié !">Estimation approximative, pas une valorisation exacte</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Partager le résultat</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_fortnite&utm_campaign=fortnite&utm_content=fr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Vérifiez la valeur estimée de votre compte Fortnite</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Prix</a>
   <a href="#value">📊 Ce Qui Détermine la Valeur</a>
@@ -277,24 +298,15 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Prix Réels du Marché</h2>
 <h3>Combien vaut un compte Fortnite ?</h3>
-<div class="price-range">Fourchette réelle de marché : 10,90 $ – 6 200 $ (prix demandé moyen ~59 $)</div>
+
 <p>Les annonces en direct sur Eldorado.gg vont de 10,90 $ (30 skins, sans exclusivités notables) jusqu'à 1 100 $ pour un compte PC « OG » avec les skins Ghoul Trooper et Travis Scott. Un marché agrégé plus large (igitems.com, 932 annonces) montre un prix demandé moyen de 59,37 $, en baisse de 17,8% sur 90 jours alors que l'offre de nouvelles annonces dépasse la demande.</p>
 
 <p>Les skins rares de 2017–2020 forment un palier de prix à part. Le 26 septembre 2026, la moitié centrale des annonces affichées sur Eldorado.gg demandait 170–320 $ pour les comptes avec Black Knight, 235–350 $ avec IKONIK et 180–390 $ avec Travis Scott. Les comptes avec le style original de 2017 de Renegade Raider, Aerial Assault Trooper, Skull Trooper violet ou Ghoul Trooper rose étaient affichés entre 800 et 2 500 $, et un compte PC réunissant les quatre classiques OG à 6 200 $. Renegade Raider et Aerial Assault Trooper sont revenus dans la boutique le 19 décembre 2024 : seules les versions originales de 2017 atteignent ces prix, une copie rééditée se vend comme un skin ordinaire.</p>
 
-<div class="value-calc" id="vc-fortnite" data-game="fortnite" data-title="Fortnite">
-  <div class="vc-title">🧮 Calculateur Rapide</div>
-  <div class="vc-subtitle">Une estimation approximative à partir des fourchettes ci-dessus — déplacez les curseurs. Le bot donne une estimation exacte à partir de captures d'écran. Rien n'est saisi ni envoyé nulle part.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copié !">Estimation approximative, pas une valorisation exacte</span>
-    <button type="button" class="vc-share-btn">🔗 Partager le résultat</button>
-  </div>
-</div>
+
 
 <h3>Quel est le compte Fortnite le plus cher jamais rapporté — et pourquoi ne correspond-il pas au prix de marketplace ?</h3>
 <div class="reported-case">
@@ -323,8 +335,8 @@
   <li><strong><a href="https://fortnite.fandom.com/wiki/Ghoul_Trooper" target="_blank" rel="noopener">Ghoul Trooper</a></strong> et <strong><a href="https://fortnite.fandom.com/wiki/Black_Knight" target="_blank" rel="noopener">Black Knight</a></strong> — 2 annonces chacune</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);"><a href="https://fortnite.fandom.com/wiki/Aerial_Assault_Trooper" target="_blank" rel="noopener">Aerial Assault Trooper</a> — la skin derrière l'ancien titre de « compte à 90 000 $ » — n'apparaît dans aucune des 10 annonces principales en direct d'aujourd'hui ; traitez ce chiffre comme historique, pas actuel.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Ce Qui Détermine Réellement la Valeur</h2>
 <h3>Qu'est-ce qui détermine réellement la valeur d'un compte Fortnite ?</h3>
 <ul>
@@ -340,20 +352,20 @@
   <li>Gardez votre plateforme/e-mail de liaison d'origine intact plutôt que d'en changer, car certaines skins historiques sont liées à une plateforme</li>
   <li>Suivez quels objets sont marqués « vaulted » (retirés) — ce sont ceux qui gardent un intérêt de revente</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Arnaques et Risques Commerciaux</h2>
 <h3>Quelles sont les plus grosses arnaques dans le commerce de comptes Fortnite ?</h3>
 <div class="risk-box">
   <p>La fraude à la carte volée est inhabituellement courante dans le commerce de comptes Fortnite : un acheteur paie avec une carte de crédit volée, reçoit le compte, et le paiement est annulé des semaines plus tard — laissant le vendeur à la fois non payé et bloqué après que l'acheteur a changé le mot de passe. Les faux sites « vérificateur de skins » qui hameçonnent les identifiants Epic Games sont aussi répandus.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Règles et Politique Commerciale</h2>
 <h3>Le commerce de comptes Fortnite est-il contraire aux règles ?</h3>
 <p>Oui — les Conditions d'Utilisation d'Epic Games interdisent explicitement de vendre, acheter ou transférer des comptes, et les échanges confirmés peuvent entraîner un bannissement permanent.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Guide Joueur</h2>
 <h3>Guide joueur : quels réglages et techniques de construction les vrais pros utilisent-ils réellement ?</h3>
 <p>Cette section vise à améliorer votre propre jeu, pas la valeur de revente de votre compte. Configurations d'équipement/DPI publiées pour des joueurs compétitifs nommés (source : <a href="https://www.setup.gg/news/fortnite-pro-settings-guide-2026-dpi-sensitivity-gear/" target="_blank" rel="noopener">setup.gg</a>, 2026) :</p>
@@ -365,7 +377,7 @@
   <tr><td>Cooper</td><td>1600</td><td>Razer Viper V4 Pro</td></tr>
 </table>
 <p style="font-size:13px; color:var(--muted);">Le DPI seul ne détermine pas le ressenti — c'est le DPI × la sensibilité en jeu qui compte, et ce nombre combiné de « sensibilité effective » n'est pas divulgué pour ces joueurs spécifiques. Au-delà de l'équipement, quatre fondamentaux de construction apparaissent de façon constante dans les guides compétitifs établis (ex. <a href="https://dignitas.gg/articles/fortnite-zero-to-hero-the-complete-beginner-s-building-guide-for-2026" target="_blank" rel="noopener">Dignitas</a>) : le « 90 » (rampe → sol → mur → virage à 90° en montant), le « boxing up » (une boîte rapide de 4 murs plus sol pour un 1v1), le ramp rush, et simplement prioriser la position haute dans tout combat prolongé.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_fortnite&utm_campaign=fortnite&utm_content=fr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Vérifiez la valeur estimée de votre compte Fortnite</a></div>
@@ -422,6 +434,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -235,6 +233,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -247,19 +247,40 @@
 <div class="back-btn"><a href="./">← العودة للرئيسية</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ قيمة حساب Minecraft</h1>
   <p style="color:var(--muted); font-size:16px;">سوقان منفصلان: الحسابات العادية (الرتب والعباءات والإصدارات) ونيتش جامعي أسماء المستخدمين القصيرة الأكثر ندرة — كلاهما بأسعار حقيقية موثقة.</p>
+  <div class="g-badges">
   <p class="report-updated">آخر تحديث سبتمبر 2026 من إعلانات سوق حية. المصادر مذكورة أسفل الصفحة.</p>
   <div class="fresh-badge">🌍 أحدث البيانات — بحث حي بالذكاء الاصطناعي عبر أسواق عالمية حقيقية، محدّث في 12 سبتمبر 2026</div>
+  </div>
 </section>
-
+<div class="price-range">الحسابات العادية: 0.50$ – 632$</div>
 <div class="fact-box">
   <span>📅 الإصدار الكامل في <strong>18 نوفمبر 2011</strong></span>
   <span>👥 ~<strong>212 مليون</strong> لاعب نشط شهريًا (2026)</span>
   <span>📦 <strong>350 مليون+</strong> نسخة مباعة — أكثر لعبة فيديو مبيعًا على الإطلاق (مؤكد من Mojang)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 حاسبة سريعة</div>
+  <div class="vc-subtitle">تقدير تقريبي من النطاقات أعلاه — حرّك أشرطة التمرير. يقدم البوت تقديرًا دقيقًا من لقطات الشاشة. لا يُدخل أو يُرسل أي شيء إلى أي مكان.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="تم النسخ!">تقدير تقريبي، وليس تقييمًا دقيقًا</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 مشاركة النتيجة</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ar" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">تحقق من القيمة التقديرية لحساب Minecraft الخاص بك</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 الأسعار</a>
   <a href="#value">📊 ما يحدد القيمة</a>
@@ -278,22 +299,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>أسعار السوق الحقيقية</h2>
 <h3>كم يساوي حساب Minecraft العادي؟</h3>
-<div class="price-range">الحسابات العادية: 0.50$ – 632$</div>
+
 <p>تتراوح الإعلانات الحية على Eldorado.gg من 0.50$ (رمز عباءة Java Edition بسيط) حتى 120$ لحساب Hypixel "10 عباءات MVP+". يُظهر سوق ثانٍ (igitems.com) حسابات عادية حتى ~632$ لتلك التي تحمل رتبة Hypixel MVP+ وعباءات متعددة ومستويات Skyblock مرتفعة — تتناسب القيمة هنا مع رتبة الخادم وعدد العباءات، وليس اسم المستخدم.</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 حاسبة سريعة</div>
-  <div class="vc-subtitle">تقدير تقريبي من النطاقات أعلاه — حرّك أشرطة التمرير. يقدم البوت تقديرًا دقيقًا من لقطات الشاشة. لا يُدخل أو يُرسل أي شيء إلى أي مكان.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="تم النسخ!">تقدير تقريبي، وليس تقييمًا دقيقًا</span>
-    <button type="button" class="vc-share-btn">🔗 مشاركة النتيجة</button>
-  </div>
-</div>
+
 
 <h3>كم يساوي حساب Minecraft بأسم مستخدم قصير ونادر؟</h3>
 <p>هذا نيتش جامعي منفصل تمامًا وأصغر بكثير — تعتمد القيمة هنا تقريبًا كليًا على <em>اسم المستخدم نفسه</em>، وليس رتبة الخادم أو التقدم داخل اللعبة. وثّقت أسواق مجتمعية (مثل PlayerUp) تسعيرًا ثابتًا حسب طول اسم المستخدم ونوع الحرف، يتراوح من آلاف إلى مئات آلاف الدولارات — سوق مختلف تمامًا عن الحسابات العادية أعلاه.</p>
@@ -321,8 +333,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">عباءة Minecon 2011</a></strong> — أكثر مقتنى نادر لـMinecraft استشهادًا عبر مصادر مستقلة متعددة؛ نقطة المرجع الثابتة كلما جاء موضوع "أندر عباءة Minecraft"</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">تصنيف سوق العباءات الحي حسب السعر (mccapers.com، سبتمبر 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) 873$ ← <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> 300$ ← <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> 116$ ← <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> 55$ ← <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> 11$ ← <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> 5$ ← <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape 3$ لكل منها. تقع عباءات حاضري MINECON (2011-2016) وعباءة موظفي Mojang في "مستوى متحفي" منفصل خارج هذا التصنيف العادي — نادرًا ما تُباع أصلًا، وهذا بالضبط سبب بقاء Minecon 2011 الاسم الأكثر إشارة إليه بدلًا من أعلى سعر قائمة.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>ما يحدد القيمة فعليًا</h2>
 <h3>ما الذي يحدد فعليًا قيمة حساب Minecraft؟</h3>
 <ul>
@@ -338,26 +350,26 @@
   <li>أبقِ البريد الإلكتروني الأصلي لحسابك المُهاجر إلى Microsoft سليمًا بدلًا من تغييره، لأن سجل الملكية مهم لثقة المشتري</li>
   <li>إذا كنت تملك عباءة Minecon، افهم أنه لا يمكن نقلها إلى حساب جديد — فهي مرتبطة بشكل دائم بحسابك</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>الاحتيال ومخاطر التداول</h2>
 <h3>ما هي أكبر عمليات الاحتيال في تداول أسماء مستخدمي Minecraft؟</h3>
 <div class="risk-box">
   <p>عمليات احتيال "احتكار الاسم" (name-squatting) حيث يَعِد البائع بتحرير اسم مستخدم قصير في تاريخ محدد ليلتقطه مشتر منتظر، ثم يحرره مبكرًا لشخص آخر أو لا يفعل أبدًا؛ وعمليات احتيال دفع-ثم-عدم-تسليم مباشرة على أسواق Discord بلا ضمان. بما أن انتقالات حسابات Minecraft غير مدعومة رسميًا من Mojang/Microsoft، لا يوجد حل نزاع إذا ساءت صفقة.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>القواعد وسياسة التداول</h2>
 <h3>هل تداول حسابات Minecraft مخالف لقواعد Mojang؟</h3>
 <p>نعم — تحظر شروط استخدام Minecraft نقل الحسابات مقابل أموال حقيقية، ويمكن لـMojang/Microsoft تعليق الحسابات المتورطة في انتقالات غير مصرح بها مكتشفة.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>دليل اللاعب</h2>
 <h3>هل يوجد زاوية حقيقية "كيف تتحسن" لـMinecraft؟</h3>
 <p>هذا القسم لتحسين أسلوب لعبك الخاص، وليس قيمة إعادة بيع حسابك. على عكس لعبة تنافسية بسلم واحد، تنقسم Minecraft إلى مجتمعات منفصلة فعليًا بميتاها الحقيقي الخاص: السرعة (speedrunning) وخوادم PvP التنافسية.</p>
 <p>للسرعة مصدر موثوق (لوحات صدارة speedrun.com)، لكن بحثنا الخاص وجد تقارير ثانوية متضاربة حول من يحمل حاليًا الرقم القياسي العالمي لـAny% Random Seed Glitchless (RSG) — استشهد مصدر بـ"lowkey" عند 6:50، واستشهد آخر بـ"Skycrab" عند 6:39 — لذا بدلًا من اختيار أحدهما، نشير إلى التضارب بدلًا من تأكيد أي منهما كحقيقة. ما هو ثابت: تتبع الفئة نفسها دائمًا نفس المسار الحقيقي — إيجاد قرية أو حطام سفينة لموارد مبكرة، الوصول إلى Nether لعصي blaze، تحديد موقع Stronghold، وإنهاء معركة End، بهذا الترتيب.</p>
 <p>على جانب PvP، تصف أدلة مجتمعية راسخة لعام 2026 (<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>) تحولًا حقيقيًا في الميتا بعيدًا عن الاستثمار البحت في المعدات نحو التموضع والتوقيت، مع تصنيف Crystal PvP وNetherite Pot في S-tier وUHC/Axe PvP في A-tier في تصنيفهم الحالي. منصات حقيقية ونشطة لهذا: أوضاع PvP الخاصة بـHypixel (Bedwars وSkywars وDuels) وأوضاع تدريب Minemen Club (Nodebuff وSoup وUHC وBridge).</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ar" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">تحقق من القيمة التقديرية لحساب Minecraft الخاص بك</a></div>
@@ -415,6 +427,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

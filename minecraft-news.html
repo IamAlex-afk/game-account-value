@@ -28,8 +28,6 @@
 <link rel="icon" type="image/png" href="./favicon.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="manifest" href="./manifest.json">
-<link rel="preload" href="./assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/style.css">
 <script type="application/ld+json">
 {
@@ -143,6 +141,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -184,28 +184,28 @@
 
 <div class="article-body">
 
-<span id="rucis" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="rucis" class="anchor-target"></span>
 <h2>RU/CIS Market — FunPay</h2>
 <h3>What are Minecraft accounts actually selling for on FunPay?</h3>
 <div class="price-range">€55 – €57 (official accounts only)</div>
 <p>A lot of the RU/CIS "Minecraft" listings on FunPay are <strong>not</strong> official Mojang/Microsoft account resale at all — they're donation ranks/currency on private RU servers (HolyWorld, ReallyWorld, FunTime, SpookyTime), ranging €0.01–€73.55. Stripping those out, the actual official-account price point is closer to <strong>€55–57</strong> (game copy + platform access) — e.g. a genuine "Minecraft Deluxe Edition, PC" listing at €57.45, not the €70+ headline number the private-server listings would suggest.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://funpay.com/en/lots/221/" target="_blank" rel="noopener">funpay.com — Minecraft category</a>, checked 2026-09-21.</p>
-
-<span id="sea" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="sea" class="anchor-target"></span>
 <h2>Southeast Asia Market — igitems.com</h2>
 <h3>What are Minecraft accounts actually selling for in Southeast Asia?</h3>
 <div class="price-range">$17 – $650+</div>
 <p>The cheapest listing (<strong>₫426,079 ≈ $17</strong>) was Java + Bedrock with 1 cape and no Hypixel rank. The most expensive (<strong>₫16,346,418 ≈ $650+</strong>) had <strong>11 cosmetic capes</strong> and no Hypixel affiliation — on igitems, cape count/rarity, not Hypixel progress, is the main driver of a pure account listing's top-end price.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://igitems.com/mc-account" target="_blank" rel="noopener">igitems.com — Minecraft accounts</a>, checked 2026-09-21. Conversion used: ~25,000 VND = $1 USD.</p>
-
-<span id="global" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="global" class="anchor-target"></span>
 <h2>Global / Western Marketplaces</h2>
 <h3>Why is there no Global-platform price here?</h3>
 <div class="risk-box">
   <p>On 2026-09-21, <strong>playerauctions.com</strong>'s Hypixel category and a direct G2G fetch both returned HTTP 403 Forbidden. Web search snippets (not page-verified, lower confidence) suggested Minecraft accounts on G2G "start around $23.43." <strong>This is a real, disclosed data gap — not a guessed number.</strong> If you see a specific "current Global average price" quoted elsewhere without a live browser check, treat it with caution.</p>
 </div>
-
-<span id="findings" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="findings" class="anchor-target"></span>
 <h2>Notable Findings</h2>
 <h3>What's the biggest current risk, beyond price?</h3>
 <div class="reported-case">
@@ -217,7 +217,7 @@
   <p>Accounts from unofficial sites are often "cracked" — running on someone else's still-active email/Microsoft account — which is exactly why they're cheap and exactly why they can vanish without warning.</p>
 </div>
 <p style="font-size:13px; color:var(--muted);">A common theft vector is Discord-based scams (fake tournament invites requesting a "verification code") and phishing pages impersonating Microsoft sign-in, used to hijack the linked Microsoft account.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft_news" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Minecraft account's estimated value</a></div>

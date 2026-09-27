@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -190,6 +188,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-immortal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -202,20 +202,41 @@
 <div class="back-btn"><a href="./">← กลับหน้าแรก</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🏆 มูลค่าบัญชี Mobile Legends</h1>
   <p style="color:var(--muted); font-size:16px;">ข้อมูลราคาจริงจากรายการขายสดบนตลาดซื้อขายหลายภูมิภาค และสิ่งที่กำหนดราคาขึ้นหรือลงจริงๆ</p>
+  <div class="g-badges">
   <p class="report-updated">อัปเดตกันยายน 2026 จากรายการขายจริงบนตลาดซื้อขาย แหล่งข้อมูลอยู่ด้านล่างหน้า</p>
   <div class="fresh-badge">🌍 ข้อมูลล่าสุด — AI วิจัยตลาดซื้อขายทั่วโลกจริงแบบเรียลไทม์ อัปเดต 12 กันยายน 2026</div>
+  </div>
 </section>
-
+<div class="price-range">ช่วงราคาตลาดจริง: ทั่วไป $0.50 - $300 สูงสุดถึง ~$605 ในอินโดนีเซีย</div>
 <div class="fact-box">
   <span>📅 เปิดตัว <strong>14 กรกฎาคม 2016</strong> (Android), พฤศจิกายน 2016 (iOS)</span>
   <span>👥 ผู้เล่นต่อเดือน <strong>40-110 ล้านคน</strong> (ตัวเลขแตกต่างกันมากตามแหล่งข้อมูล)</span>
   <span>🌍 แข็งแกร่งสุดใน <strong>อินโดนีเซีย ฟิลิปปินส์ มาเลเซีย</strong> — ครองตลาดทั่วเอเชียตะวันออกเฉียงใต้</span>
   <span>📦 ยอดติดตั้ง <strong>1.5 พันล้าน+</strong> ใน 139 ประเทศ</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
+  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
+  <div class="vc-subtitle">ครอบคลุมสกินสูงสุด 400 ตัว — บัญชี "mega collector" ที่มีสกิน 800+ ตัวขายสูงกว่าช่วงนี้มาก ดูหมายเหตุด้านบน ไม่มีการกรอกหรือส่งข้อมูลใดๆ บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Mobile Legends ของคุณ</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 ราคา</a>
   <a href="#value">📊 ปัจจัยกำหนดมูลค่า</a>
@@ -234,22 +255,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>ราคาตลาดจริง</h2>
 <h3>บัญชี Mobile Legends มีมูลค่าเท่าไหร่?</h3>
-<div class="price-range">ช่วงราคาตลาดจริง: ทั่วไป $0.50 - $300 สูงสุดถึง ~$605 ในอินโดนีเซีย</div>
+
 <p>รายการขายสดบน Eldorado.gg เริ่มตั้งแต่ $0.50 (บัญชีสเมิร์ฟเลเวล 3 ใหม่) ไปจนถึง $250 สำหรับบัญชี "mega collector" ที่มีสกิน 605 ตัว ตลาดรวมที่ใหญ่กว่า (igitems.com 1,147 รายการ) ยืนยันการกระจายตัวจริง: ราคาเสนอเฉลี่ยปัจจุบันอยู่ที่ $68.61 และคู่มือซื้อของพวกเขาเองระบุว่าบัญชี "solid" ที่มีสกิน 300-400 ตัวอยู่ที่ $200-$300 ในขณะที่บัญชีคอลเลกเตอร์ท็อปที่มีคอสเมติก 800+ ขายที่ $1,500+ ในอินโดนีเซีย — ตลาดเดี่ยวที่ใหญ่ที่สุดของ Mobile Legends — รายการบน Tokopedia ("jual akun mobile legends") อยู่ระหว่าง Rp80,000 ถึง Rp9,570,000 (~$5 ถึง ~$605)</p>
 
-<div class="value-calc" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
-  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
-  <div class="vc-subtitle">ครอบคลุมสกินสูงสุด 400 ตัว — บัญชี "mega collector" ที่มีสกิน 800+ ตัวขายสูงกว่าช่วงนี้มาก ดูหมายเหตุด้านบน ไม่มีการกรอกหรือส่งข้อมูลใดๆ บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
-    <button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button>
-  </div>
-</div>
+
 
 <h3>ช่วงราคาหน้าตาเป็นอย่างไร?</h3>
 <table class="tier-table">
@@ -269,8 +281,8 @@
   <li><strong>PRIME <a href="https://mobile-legends.fandom.com/wiki/Granger" target="_blank" rel="noopener">Granger</a></strong> — ระบุชื่อใน 3 รายการแยกกัน สกินเดียวที่ยืนยันว่าซ้ำในรายการบนสุดที่เป็นอิสระต่อกัน</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">สกินชื่ออื่นที่พบครั้งเดียว (ไม่ยืนยันว่าซ้ำ): HxH Don, Yuji Itadori Yin, KOF Karina, Naruto Vale, Legend Lunox, Naruto Gusion Minato, Lightborn Granger, Annual-Star Hayabusa, Sanrio Floryn</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>ปัจจัยที่กำหนดมูลค่าจริงๆ</h2>
 <h3>อะไรที่กำหนดมูลค่าบัญชี Mobile Legends จริงๆ?</h3>
 <ul>
@@ -290,28 +302,28 @@
   <li>ดันแรงค์อย่างสม่ำเสมอทุกซีซั่นแทนที่จะปล่อยให้ตก เพราะประวัติ Mythical Glory มีน้ำหนัก</li>
   <li>จบความกว้างของคอลเลกชันฮีโร่ก่อนลงทุนหนักในคอสเมติกของฮีโร่แค่ไม่กี่ตัว</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>การโกงและความเสี่ยงในการเทรด</h2>
 <h3>การโกงที่ใหญ่ที่สุดในการเทรดบัญชี Mobile Legends คืออะไร?</h3>
 <div class="risk-box">
   <p>คนกลางปลอมในกลุ่ม Facebook/Discord ที่รับเงินค่าบัญชีแล้วไม่ส่งมอบข้อมูลรับรอง และการโกงแบบ "rent-to-buy" ที่ผู้ซื้อได้รับสิทธิ์เข้าถึงชั่วคราว จ่ายเงิน แล้วผู้ขายเปลี่ยนอีเมลที่เชื่อมโยงและล็อกพวกเขาออก Moonton ไม่ไกล่เกลี่ยข้อพิพาทการเทรดบัญชี</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>กฎและนโยบายการเทรด</h2>
 <h3>การเทรดบัญชี Mobile Legends ผิดกฎหรือไม่?</h3>
 <p>ใช่ — ข้อกำหนดของ Moonton ห้ามการขายและโอนบัญชี และการเทรดที่ยืนยันแล้วอาจส่งผลให้ถูกแบนถาวร</p>
 
 <h3>รายการขายเหล่านี้มาจากไหนจริงๆ?</h3>
 <p>Eldorado.gg และ igitems.com มีรายการทั่วโลก Tokopedia (ตลาดที่ใหญ่ที่สุดของอินโดนีเซีย) แสดงรูปแบบเดียวกันในสกุลเงินท้องถิ่นสำหรับตลาดเดี่ยวที่ใหญ่ที่สุดของ Mobile Legends โดยเฉพาะ — ทั้งหมดเป็นราคาเสนอขาย ไม่ใช่การขายที่ยืนยันแล้ว</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>คู่มือผู้เล่น</h2>
 <h3>คู่มือผู้เล่น: มีวัฒนธรรม "การตั้งค่าโปร" จริงๆ หรือไม่ และเมต้าปัจจุบันคืออะไร?</h3>
 <p>ส่วนนี้เพื่อพัฒนาฝีมือการเล่นของคุณเอง ไม่ใช่มูลค่าขายต่อของบัญชี ต่างจาก Free Fire หรือ Fortnite เราไม่พบการตั้งค่าความไวที่ระบุตัวตนได้จากโปร MLBB ที่มีชื่อ พร้อมแหล่งอ้างอิง 2 แหล่งขึ้นไป — คู่มือการตั้งค่าที่พบ (Advanced Targeting, การเล็งโจมตีพื้นฐานด้วยตนเอง, ความไวกล้องประมาณ 60%, ขยายปุ่มสกิลที่ใช้บ่อยเป็น 110-120%) เป็นคำแนะนำทั่วไปจากคอมมูนิตี้ ไม่ใช่การตั้งค่าที่เผยแพร่ของโปรคนใดคนหนึ่งโดยเฉพาะ จึงควรถือเป็นจุดเริ่มต้นมากกว่าสูตรที่พิสูจน์แล้ว</p>
 <p>สิ่งที่มีแหล่งอ้างอิงชัดเจน: <strong>Team Liquid PH</strong> ชนะ MPL Philippines Season 17 ปี 2026 — ทีมแรกที่คว้าแชมป์ลีกติดต่อกัน 3 สมัย โดย <strong>Sanford "Sanford" Vinuya</strong> ได้รับเลือกเป็น Finals MVP (แหล่งข้อมูล: <a href="https://en.wikipedia.org/wiki/2026_MPL_Philippines_season" target="_blank" rel="noopener">Wikipedia, 2026 MPL Philippines season</a>) ณ MLBB Hub Tier List ลงวันที่ 23 สิงหาคม 2026 ฮีโร่ป่าที่แข็งแกร่งที่สุดคือ Hanzo, Nolan และ Ling โดยฮีโร่โรม Chip มีคุณค่าเป็นพิเศษในการปรับรูปแบบการประสานงานป่า/โรมในการดราฟต์</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Mobile Legends ของคุณ</a></div>
@@ -367,6 +379,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

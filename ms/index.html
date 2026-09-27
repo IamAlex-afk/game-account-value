@@ -274,8 +274,6 @@
   ]
 }
 </script>
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <style>
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
@@ -286,6 +284,8 @@
   .section-title { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 8px; }
   .step-num { font-size: 36px; font-weight: 800; color: var(--gold); opacity: 0.55; margin-bottom: 12px; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -327,8 +327,81 @@
 </nav>
 
 <main>
-<section class="hero" id="main-content">
-  <div class="hero-badge">⭐ Dikuasakan AI · PDF Segera</div>
+
+
+<section class="g-hero g-home g-home-plain" id="main-content">
+  <div class="g-fx" aria-hidden="true"><svg class="g-city" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="gc-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0E17" stop-opacity="0"/><stop offset=".55" stop-color="#1B1446" stop-opacity=".55"/><stop offset="1" stop-color="#3B1D5E" stop-opacity=".7"/>
+    </linearGradient>
+    <linearGradient id="gc-far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2560"/><stop offset="1" stop-color="#1A1840"/></linearGradient>
+    <linearGradient id="gc-mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15163A"/><stop offset="1" stop-color="#0E1028"/></linearGradient>
+    <linearGradient id="gc-near" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B0D1E"/><stop offset="1" stop-color="#070912"/></linearGradient>
+    <linearGradient id="gc-fog" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6366F1" stop-opacity="0"/><stop offset="1" stop-color="#6366F1" stop-opacity=".22"/></linearGradient>
+    <linearGradient id="gc-street" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B0F1C"/><stop offset="1" stop-color="#0A0E17"/></linearGradient>
+    <pattern id="gc-w1" width="12" height="16" patternUnits="userSpaceOnUse"><rect x="3" y="4" width="4" height="6" fill="#8B8FFF" opacity=".28"/></pattern>
+    <pattern id="gc-w2" width="14" height="18" patternUnits="userSpaceOnUse"><rect x="3" y="4" width="5" height="7" fill="#22D3EE" opacity=".45"/><rect x="10" y="4" width="2" height="7" fill="#22D3EE" opacity=".12"/></pattern>
+    <pattern id="gc-w3" width="14" height="18" patternUnits="userSpaceOnUse"><rect x="3" y="4" width="5" height="7" fill="#F0ABFC" opacity=".35"/></pattern>
+    <pattern id="gc-w4" width="16" height="20" patternUnits="userSpaceOnUse"><rect x="4" y="5" width="6" height="8" fill="#FDE68A" opacity=".3"/></pattern>
+  </defs>
+  <rect width="1600" height="700" fill="url(#gc-sky)"/>
+  <!-- far layer: hazy towers -->
+  <g fill="url(#gc-far)" opacity=".75">
+    <rect x="20" y="250" width="60" height="450"/><rect x="95" y="190" width="44" height="510"/><rect x="150" y="280" width="80" height="420"/>
+    <rect x="250" y="150" width="50" height="550"/><path d="M262 150l13-60 13 60z"/><rect x="320" y="230" width="90" height="470"/>
+    <rect x="430" y="170" width="56" height="530"/><rect x="505" y="260" width="70" height="440"/><rect x="600" y="120" width="48" height="580"/><path d="M612 120l12-70 12 70z"/>
+    <rect x="670" y="210" width="96" height="490"/><rect x="790" y="160" width="60" height="540"/><rect x="870" y="240" width="84" height="460"/>
+    <rect x="975" y="130" width="52" height="570"/><rect x="1045" y="220" width="90" height="480"/><rect x="1155" y="170" width="60" height="530"/>
+    <rect x="1235" y="250" width="80" height="450"/><rect x="1330" y="140" width="56" height="560"/><path d="M1342 140l16-80 16 80z"/><rect x="1405" y="230" width="96" height="470"/><rect x="1520" y="190" width="80" height="510"/>
+  </g>
+  <g fill="url(#gc-w1)" opacity=".8">
+    <rect x="95" y="200" width="44" height="500"/><rect x="320" y="240" width="90" height="460"/><rect x="670" y="220" width="96" height="480"/><rect x="1045" y="230" width="90" height="470"/><rect x="1405" y="240" width="96" height="460"/>
+  </g>
+  <rect y="300" width="1600" height="400" fill="url(#gc-fog)"/>
+  <!-- mid layer -->
+  <g fill="url(#gc-mid)">
+    <rect x="0" y="330" width="120" height="370"/><rect x="140" y="270" width="90" height="430"/><rect x="250" y="360" width="140" height="340"/>
+    <rect x="410" y="240" width="100" height="460"/><rect x="530" y="320" width="120" height="380"/><rect x="930" y="300" width="110" height="400"/>
+    <rect x="1060" y="220" width="90" height="480"/><rect x="1170" y="340" width="130" height="360"/><rect x="1320" y="260" width="100" height="440"/><rect x="1440" y="320" width="160" height="380"/>
+  </g>
+  <g>
+    <rect x="140" y="280" width="90" height="420" fill="url(#gc-w2)"/><rect x="410" y="250" width="100" height="450" fill="url(#gc-w3)"/>
+    <rect x="1060" y="230" width="90" height="470" fill="url(#gc-w2)"/><rect x="1320" y="270" width="100" height="430" fill="url(#gc-w4)"/>
+    <rect x="530" y="330" width="120" height="370" fill="url(#gc-w4)"/><rect x="1170" y="350" width="130" height="350" fill="url(#gc-w3)"/>
+  </g>
+  <!-- neon signs (査定 = "appraisal") -->
+  <g font-family="Inter, sans-serif" font-weight="800">
+    <rect x="948" y="330" width="64" height="150" rx="6" fill="#0A0E17" fill-opacity=".6" stroke="#F472B6" stroke-width="3"/>
+    <text x="980" y="390" fill="#F472B6" font-size="44" text-anchor="middle">査</text>
+    <text x="980" y="452" fill="#F472B6" font-size="44" text-anchor="middle">定</text>
+    <rect x="1075" y="260" width="60" height="44" rx="6" fill="none" stroke="#22D3EE" stroke-width="3"/>
+    <text x="1105" y="291" fill="#22D3EE" font-size="22" text-anchor="middle">AI</text>
+    <rect x="1330" y="300" width="80" height="30" rx="4" fill="none" stroke="#FDE047" stroke-width="2"/>
+    <text x="1370" y="321" fill="#FDE047" font-size="15" text-anchor="middle" letter-spacing="2">SCAN</text>
+    <rect x="148" y="300" width="74" height="26" rx="4" fill="none" stroke="#34D399" stroke-width="2"/>
+    <text x="185" y="319" fill="#34D399" font-size="14" text-anchor="middle" letter-spacing="1">24/7</text>
+  </g>
+  <!-- near layer: dark silhouettes with rooftop details -->
+  <g fill="url(#gc-near)">
+    <rect x="0" y="470" width="200" height="230"/><rect x="60" y="440" width="8" height="30"/><rect x="230" y="500" width="160" height="200"/>
+    <rect x="690" y="520" width="220" height="180"/><rect x="1260" y="480" width="180" height="220"/><rect x="1470" y="440" width="130" height="260"/><rect x="1520" y="400" width="6" height="40"/>
+  </g>
+  <g fill="#F472B6"><circle cx="64" cy="438" r="3"/><circle cx="1523" cy="398" r="3"/></g>
+  <!-- flying traffic -->
+  <g class="g-traffic">
+    <rect x="-80" y="210" width="36" height="3" rx="2" fill="#22D3EE"/><rect x="-300" y="170" width="24" height="2" rx="1" fill="#F472B6"/><rect x="-560" y="240" width="30" height="2" rx="1" fill="#FDE047"/>
+  </g>
+  <!-- wet street + reflections -->
+  <rect y="640" width="1600" height="60" fill="url(#gc-street)"/>
+  <g opacity=".35">
+    <rect x="960" y="646" width="40" height="50" fill="#F472B6"/><rect x="1085" y="646" width="40" height="40" fill="#22D3EE"/><rect x="1340" y="646" width="60" height="30" fill="#FDE047" opacity=".6"/>
+  </g>
+  <rect y="638" width="1600" height="2" fill="#6366F1" opacity=".5"/>
+</svg>
+</div>
+  <div class="g-left">
+<div class="hero-badge">⭐ Dikuasakan AI · PDF Segera</div>
   <h1>Ketahui Berapa Nilai<br><span>Akaun Permainan</span> Anda</h1>
   <p>Hantar 1 tangkapan skrin untuk anggaran percuma, atau 2-3 untuk julat harga + sijil PDF. Bot kami mengimbas inventori, wira dan item jarang anda menggunakan AI vision, kemudian menetapkan harga melalui enjin penilaian kami sendiri dan pangkalan data pasaran terpakai — sesuatu yang tidak mampu dilakukan oleh chatbot AI biasa.</p>
   <div class="cta-group">
@@ -339,8 +412,48 @@
     <a href="#how-it-works" class="btn-secondary">Cara ia berfungsi</a>
   </div>
   <p class="ai-notice">🤖 Anda akan berinteraksi dengan sistem AI, bukan manusia.</p>
+  </div>
+  <div class="g-robot" aria-hidden="true"><svg viewBox="0 0 460 520">
+        <defs>
+          <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D1B3A"/><stop offset="1" stop-color="#0C0B1C"/></linearGradient>
+          <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05121A"/><stop offset="1" stop-color="#0A2530"/></linearGradient>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00F0FF" stop-opacity="0"/><stop offset=".5" stop-color="#00F0FF" stop-opacity=".9"/><stop offset="1" stop-color="#00F0FF" stop-opacity="0"/></linearGradient>
+          <clipPath id="vclip"><rect x="120" y="200" width="220" height="74" rx="30"/></clipPath>
+        </defs>
+        <!-- holo rings -->
+        <g class="ring" fill="none" stroke="#00F0FF" stroke-opacity=".35" stroke-width="2"><circle cx="230" cy="250" r="205" stroke-dasharray="4 14"/></g>
+        <g class="ring2" fill="none" stroke="#FF2E88" stroke-opacity=".35" stroke-width="2"><circle cx="230" cy="250" r="180" stroke-dasharray="60 30 10 30"/></g>
+        <!-- antenna -->
+        <line x1="230" y1="92" x2="230" y2="50" stroke="#00F0FF" stroke-width="4"/>
+        <circle class="ant" cx="230" cy="44" r="10" fill="#FF2E88" style="filter:drop-shadow(0 0 10px #FF2E88)"/>
+        <!-- neck + cables -->
+        <path d="M190 380h80l12 60h-104z" fill="#12112A" stroke="#00F0FF" stroke-opacity=".5" stroke-width="2"/>
+        <path d="M200 390c-30 40-60 60-110 80M260 390c30 40 60 60 110 80" fill="none" stroke="#9D5CFF" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+        <!-- shoulders -->
+        <path d="M60 520c10-60 60-90 170-92 110 2 160 32 170 92z" fill="url(#shell)" stroke="#00F0FF" stroke-opacity=".6" stroke-width="2"/>
+        <path d="M150 470h160" stroke="#FCEE0A" stroke-width="4"/>
+        <text x="230" y="505" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#00F0FF" letter-spacing="3">GAV-AI</text>
+        <!-- ears -->
+        <rect x="84" y="200" width="30" height="90" rx="10" fill="#15132E" stroke="#FF2E88" stroke-width="3"/>
+        <rect x="346" y="200" width="30" height="90" rx="10" fill="#15132E" stroke="#FF2E88" stroke-width="3"/>
+        <!-- head -->
+        <path d="M130 100h200q40 0 44 40l8 150q2 70-62 90H140q-64-20-62-90l8-150q4-40 44-40z" fill="url(#shell)" stroke="#00F0FF" stroke-width="3"/>
+        <path d="M150 120h160" stroke="#00F0FF" stroke-opacity=".35" stroke-width="2"/>
+        <path d="M108 160l14-6M352 154l14 6" stroke="#FCEE0A" stroke-width="3"/>
+        <!-- visor -->
+        <rect x="120" y="200" width="220" height="74" rx="30" fill="url(#visor)" stroke="#00F0FF" stroke-width="3"/>
+        <g clip-path="url(#vclip)">
+          <rect class="visor-sweep" x="170" y="200" width="120" height="74" fill="url(#beam)" opacity=".35"/>
+          <rect class="eye" x="160" y="222" width="46" height="30" rx="6" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
+          <rect class="eye" x="254" y="222" width="46" height="30" rx="6" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
+        </g>
+        <!-- mouth grille -->
+        <g stroke="#00F0FF" stroke-width="3" stroke-linecap="round" opacity=".8"><path d="M190 318h80M196 332h68M204 346h52"/></g>
+        <!-- cheek lights -->
+        <circle cx="140" cy="320" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
+        <circle cx="320" cy="320" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
+      </svg></div>
 </section>
-
 <div class="stats">
   <div class="stat"><div class="stat-num">9</div><div class="stat-lbl">Permainan Disokong</div></div>
   <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Tanpa Nama</div></div>

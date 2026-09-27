@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -179,8 +177,10 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
-<body>
+<body class="theme-studs">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
@@ -191,20 +191,41 @@
 <div class="back-btn"><a href="./">← ホームに戻る</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🟦 Robloxアカウントの価値</h1>
   <p style="color:var(--muted); font-size:16px;">転売マーケットプレイスの実際の出品、コレクターアイテム保有という別世界、そしてアカウント取引のリスク。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月、ライブマーケットプレイスの出品情報をもとに更新。出典はページ下部に記載。</p>
   <div class="fresh-badge">🌍 最新データ — AIが実際のグローバルマーケットプレイスをライブ調査、2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">マーケットプライス帯：$0.50 〜 $60（特定のエクスペリエンスでは~$800まで）</div>
 <div class="fact-box">
   <span>📅 リリース <strong>2006年9月1日</strong></span>
   <span>👥 月間アクティブユーザー <strong>3億8,180万人</strong>、デイリー<strong>1億4,400万人</strong></span>
   <span>🌍 <strong>アジア太平洋</strong>、<strong>ヨーロッパ</strong>、<strong>北米</strong>で最も強い</span>
   <span>📦 登録アカウント<strong>15億+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-roblox" data-game="roblox" data-title="Roblox">
+  <div class="vc-title">🧮 クイック計算機</div>
+  <div class="vc-subtitle">下記の3つのレアアイテムを含む（HeadlessはEldorado.ggの実際の出品から、KorbloxとViolet Valkyrieは現在のRobux再販価格でのRobuxコストから算出。Robux残高も加算）。その他のDominus/レアアイテムはモデル化されていない — 上記「Limitedsマーケット」を参照。何も入力・送信されない。ボットがスクリーンショットから正確な見積もりを提供する。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 結果を共有</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のRobloxアカウントの推定価値をチェック</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 価格</a>
   <a href="#limiteds">🏆 Limiteds</a>
@@ -223,25 +244,16 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>実際のマーケット価格</h2>
 <h3>Robloxアカウントは実際いくらの価値がある？</h3>
-<div class="price-range">マーケットプライス帯：$0.50 〜 $60（特定のエクスペリエンスでは~$800まで）</div>
+
 <p>Robloxの規約で禁止されているにもかかわらず、Robloxアカウントはサードパーティのマーケットプレイスで実際に取引されている。Eldorado.ggのライブ出品は、$0.50（2007〜2015年の目立った進行状況のない素のアカウント）からきれいな4文字ユーザー名で$59.99まで幅がある。igitems.comでは、マックス化した「Pet Simulator 99」やハイレベルのBlox Fruitsアカウントなど、特定の高需要エクスペリエンスに基づくアカウントが~$800まで出品されている。レアなエクスペリエンスと結びついていない出品の大半は$25未満で取引される。</p>
 <p>日本国内のRMT（リアルマネートレード）プラットフォーム「<strong>ゲームトレード（GameTrade.jp）</strong>」でも、実際にRobloxアカウント・アイテムの出品カテゴリが存在する。同サイトの出品ページを直接確認したところ、円建てで数千円〜6万円台の出品が見られた（例として¥3,700〜¥64,000超のレンジの出品が確認できた、2026年9月時点）。あくまで確認できた出品の範囲であり、市場全体の平均を示す数字ではない点に注意。</p>
 
 <p>Headless Horsemanは「$25未満」という傾向の大きな例外だ。2026年9月26日、Eldorado.ggにはHeadlessアカウントの出品が337件あり、表示された出品の中央の半分は$400〜700（大半はKorbloxも含む）、Violet Valkyrieも持つアカウントは$750〜1,500で出品されていた。残高のRobuxにも再販価値がある。Eldorado.ggの出品者は1 Robuxあたり$0.0065〜0.0075を提示しており、RobloxのDevEx公式換金レート$0.0038を上回っている。</p>
 
-<div class="value-calc" id="vc-roblox" data-game="roblox" data-title="Roblox">
-  <div class="vc-title">🧮 クイック計算機</div>
-  <div class="vc-subtitle">下記の3つのレアアイテムを含む（HeadlessはEldorado.ggの実際の出品から、KorbloxとViolet Valkyrieは現在のRobux再販価格でのRobuxコストから算出。Robux残高も加算）。その他のDominus/レアアイテムはモデル化されていない — 上記「Limitedsマーケット」を参照。何も入力・送信されない。ボットがスクリーンショットから正確な見積もりを提供する。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
-    <button type="button" class="vc-share-btn">🔗 結果を共有</button>
-  </div>
-</div>
+
 
 <h3>Robloxアカウントは実際どこで売買されている？</h3>
 <p>Eldorado.ggやigitems.comのようなサードパーティのマーケットプレイスでは、アカウントの経過年数、ユーザー名、Robux残高、どのゲーム/エクスペリエンス向けに構築されたかで並べ替えられた、明確な希望価格付きの公開出品がある。これはマーケットが存在しないという見方に真っ向から反する — ただSteamの取引システムほど目立たないだけで、RobloxのTerms of Serviceがこれを禁止しており、これらのプラットフォームはRobloxのコントロール外のサードパーティとして運営されているためだ。日本国内向けには、ゲームトレード（gametrade.jp）のような国内RMTプラットフォームで円建ての出品を直接確認できる。</p>
@@ -259,8 +271,8 @@
   <li><strong>Adopt MeのペットとBucks通貨</strong> — トップ10のうち2件が、この単一エクスペリエンスの経済に完全に基づいて構築されている</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">別のプラットフォーム（igitems.com）では、最も価値の高い出品はPet Simulator 99の「エンドゲーム」アカウント（~$800）だった — そのプラットフォームのトップ10で繰り返されたパターンとしては未確認だが、これまでに見つかった中で最もエクスペリエンス固有の高額な数字だ。</p>
-
-<span id="limiteds" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="limiteds" class="anchor-target"></span>
 <h2>Limitedsマーケット</h2>
 <h3>Limitedsマーケットとは何か、Limitedの価格は実際どう決まるのか？</h3>
 <p>Robloxには「Limiteds」（もう新品では販売されないコスメティックアイテム）のための、数十年続く別のトレーディング経済があり、上記のアカウント販売マーケットプレイスとはほぼ完全に分離して動いている。コミュニティの標準トラッカーRolimons.comは同じアイテムに対して3つの異なる数字を定義している — これらを混同するのが最も一般的な初心者のミスだ：</p>
@@ -285,8 +297,8 @@
 <div class="risk-box">
   <p><strong>サイトからの警告：</strong>この調査中、Rolimonsの名前とブランディングを模倣した偽ドメインを発見した。必ず<strong>rolimons.com</strong>を直接使用すること — 特に広告や他人から送られたリンク経由の場合、似た名前のコピーサイトは絶対に使わないこと。</p>
 </div>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>価値を実際に決めるもの</h2>
 <h3>Robloxアカウントの価値を実際に決めるものは？</h3>
 <ul>
@@ -304,22 +316,22 @@
   <li>1つのアイテムに価値を集中させるのではなく、複数の異なるLimitedsに分散する。Robloxは時々個別のアイテムを出品停止や価値低下させることがあるためだ</li>
   <li>これを本物のリスクを伴うコレクティングホビーとして捉え、投資とは考えないこと — Limitedアイテムの価値は流動性が低く、急激に変動しうる</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>詐欺と取引リスク</h2>
 <h3>Robloxアカウントやアイテムをめぐる最大の詐欺は？</h3>
 <div class="risk-box">
   <p>Robloxコミュニティではアカウント・アイテムの取引詐欺が非常に一般的だ：偽の「middleman」取引サービス、Robloxのログインページを模倣して認証情報を盗むフィッシングサイト、アカウントへのアクセスを要求する「free Robux generator」詐欺。RobloxのTerms of Serviceがアカウント移転を禁止しているため、取引詐欺の被害者には救済手段がない — Robloxは詐欺に遭ったアカウントを復元せず、アイテム取引を巻き戻すこともなく、無許可の移転を検知した場合、詐欺に遭ったアカウント自体もBANされたままになる。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>ルールと取引ポリシー</h2>
 <h3>Robloxアカウントの売買は規約違反か？</h3>
 <p>はい。RobloxのTerms of Serviceは、アカウントの所有権移転および実際の金銭でのアカウント取引を明確に禁止している。検知された移転に関与したアカウントは永久停止される可能性があり、購入者・販売者のどちらにも異議申し立てのプロセスはない。</p>
 
 <h3>なぜRobloxアカウントの価格は他のゲームよりずっと低く見えるのか？</h3>
 <p>ほとんどのRobloxアカウントには、Clash of ClansやFree Fireのようなゲームで価値を決める種類の「進行度」が備わっていない — Robloxアカウントの価値は、全体的なレベルではなく、特定のアイテム、特定のエクスペリエンスの進行度、またはユーザー名に集中している。だからこそ大半の出品は$25未満に集中し、一部の特定のアカウント（レアなユーザー名、高需要エクスペリエンスの進行度）が数百ドルに達するという細く長いテールが存在する。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のRobloxアカウントの推定価値をチェック</a></div>
@@ -377,6 +389,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

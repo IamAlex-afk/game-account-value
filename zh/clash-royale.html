@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-royal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,19 +197,40 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🃏 Clash Royale账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">来自实时转售交易平台挂牌的真实价格分级，究竟是什么真正决定了Clash Royale账号的价格，以及交易账号的风险。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">真实市场价格区间：$0.50 ~ $600+（平均要价约$82~107）</div>
 <div class="fact-box">
   <span>📅 上线于 <strong>2016年</strong></span>
   <span>👥 月活跃 <strong>7,220万</strong>，日活跃 <strong>2,500万</strong></span>
   <span>📦 累计下载 <strong>4.5亿+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Clash Royale账号估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#value">📊 价值决定因素</a>
@@ -228,22 +249,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>Clash Royale账号值多少钱？</h3>
-<div class="price-range">真实市场价格区间：$0.50 ~ $600+（平均要价约$82~107）</div>
+
 <p>Eldorado.gg上的实时挂牌从新手账号的$0.50到"满级"账号的$600不等。更大的集合市场(igitems.com，852个挂牌)显示平均要价近期从$81.89涨到$107.20——上涨近31%——而成交价却比要价低约21%，说明买家在积极议价，即使卖家在提高要价。</p>
 
-<div class="value-calc" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>价格区间是什么样的？</h3>
 <table class="tier-table">
@@ -259,8 +271,8 @@
 
 <h3>基于论坛的交易市场数字和上述店铺型网站有区别吗？</h3>
 <p>大体是同一区间，只有一个明显偏高的异常值。EpicNPC——一个玩家对玩家交易论坛，与Eldorado.gg和igitems.com不同——其挂牌大多落在本页自己的价格区间内，比如一个KT16、63张满级卡牌的账号售价$150。但它也出现了一个远超本页$300顶级区间的挂牌：一个"OG 2019"账号，拥有30,000+宝石、稀有的2019徽章组合、15张16级卡牌和21个进化，要价$1,500——通过搜索引擎索引结果找到的(EpicNPC屏蔽自动化直接访问页面，所以这些是通过搜索索引显示的要价，而不是我们自己直接抓取并引用的页面)。账号年限和稀有的原始装饰品组合，而不仅仅是皇室塔等级，才是把一个挂牌推到远超典型顶级区间的原因。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>什么实际决定了Clash Royale账号的价值？</h3>
 <p><strong>直接对照最贵的10个实时挂牌：其中9个没有提到任何具体装饰品。</strong>标题完全围绕皇室塔等级、奖杯数和进化数构建(例如"KT 16🏆13K🏆14 EVO+(4 OSK)🔮60 Emotes")。只有一个挂牌提到了具体表情("Goblin Kiss Trophy")，仅出现一次，不是重复模式。真正的驱动因素是：</p>
@@ -278,28 +290,28 @@
   <li>每个赛季都领取赛季皇家通行证奖励 — 部分皮肤和表情不会再次出现</li>
   <li>围绕赛季重置持续稳定冲天梯排名，而不是只在赛季末冲</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>诈骗与交易风险</h2>
 <h3>Clash Royale账号交易中最大的诈骗是什么？</h3>
 <div class="risk-box">
   <p>Discord上收款后消失的虚假担保服务，以及"先试用再购买"诈骗——卖家让买家临时登录，然后改回密码并携款消失。Supercell不会调解或撤销任何一种损失。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>交易Clash Royale账号违反规定吗？</h3>
 <p>是的——Supercell的服务条款禁止账号销售和转让，被检测到的交易可能导致永久且不可申诉的封禁。</p>
 
 <h3>这些挂牌实际来自哪里？</h3>
 <p>Eldorado.gg和igitems.com都提供带有要价的公开卖家挂牌——这是目前能获得的最接近真实市场定价的近似值，不过是要价而非已确认的销售。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>玩家指南</h2>
 <h3>玩家指南：当前的meta是什么，实际是谁在顶级水平游玩？</h3>
 <p>这一部分是为了提升你自己的实力，而非账号的转售价值。截至2026年8月，<a href="https://royaleapi.com/decks/popular?lang=en&amp;type=Ladder&amp;time=7d" target="_blank" rel="noopener">RoyaleAPI</a>的实时天梯数据和社区指南(Gaming ProMax、TrophyCoach)将Evo皇家巨人渔夫(胜率约56%)和PEKKA桥矛(前1,000名胜率约61%+)列为领先套牌，此外还有Hog Cycle、Goblin Barrel Bait和精英野蛮人进化；"Hog 2.6 Cycle"这一流派自2017年以来一直持续存在于meta中。今年有两次真实的平衡性调整重塑了meta：2026年6月的补丁削减了Fireball/Rocket/Arrows/Poison/Log对皇冠塔的伤害(削弱了法术消耗套牌)，2026年8月的补丁削弱了全部三张精灵卡，使其都无法单卡推塔。</p>
 <p>收入最高的职业选手是<strong><a href="https://en.wikipedia.org/wiki/Mohamed_Light" target="_blank" rel="noopener">Mohamed Light</a></strong>，三届CRL世界冠军(2022、2024、2025)，职业生涯收入约96万美元。Clash Royale是一款依赖触屏点击时机的游戏而非瞄准类游戏，所以灵敏度设置根本不属于其竞技文化的一部分。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Clash Royale账号估值</a></div>
@@ -355,6 +367,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

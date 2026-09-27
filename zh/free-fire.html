@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-diamond">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,20 +197,41 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🔫 Free Fire账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">来自三个地区实时转售交易平台挂牌的真实价格分级，究竟是什么真正决定了Free Fire账号的价格，以及交易账号的风险。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">真实市场价格区间：一般$0.73 ~ $250，巴西最高可达~$755</div>
 <div class="fact-box">
   <span>📅 发布日期 <strong>2017年12月8日</strong></span>
   <span>👥 月活跃 <strong>1.1亿</strong>，日活跃 <strong>3,300万</strong></span>
   <span>🌍 在<strong>印度、印度尼西亚、巴西</strong>最强势 — 印尼多年来的第一手游</span>
   <span>📦 下载量 <strong>13亿+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">覆盖全球平均水平 — 巴西自己的交易平台价格明显更高，最高可达~$755，见上方说明。不会输入或发送任何内容；机器人通过截图给出精确估值。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Free Fire账号估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#value">📊 价值决定因素</a>
@@ -229,22 +250,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>Free Fire账号值多少钱？</h3>
-<div class="price-range">真实市场价格区间：一般$0.73 ~ $250，巴西最高可达~$755</div>
+
 <p>Eldorado.gg上的实时挂牌从$0.73(新账号、无段位)到高端账号的$250不等。更大的集合市场(igitems.com，293个挂牌)显示平均要价为$78.32，比此前14周的$56.95有所上涨。巴西——Free Fire最大的市场之一——在MercadoLivre上有自己的挂牌，顶级账号最高可达R$4,000(约$755)。</p>
 
-<div class="value-calc" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">覆盖全球平均水平 — 巴西自己的交易平台价格明显更高，最高可达~$755，见上方说明。不会输入或发送任何内容；机器人通过截图给出精确估值。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>价格区间是什么样的？</h3>
 <table class="tier-table">
@@ -260,8 +272,8 @@
 
 <h3>基于论坛的交易市场数字和上述店铺型网站有区别吗？</h3>
 <p>顶端略高一些。EpicNPC——一个玩家对玩家交易论坛，与Eldorado.gg和igitems.com不同——其个别挂牌远超本页$150~$300+的顶级区间：一个69级、拥有10把Evo枪械的账号要价$299，一个中东北非(MENA)地区账号要价$350，一个"Prime 8"账号要价$400，均于2026年9月通过搜索引擎索引结果找到(EpicNPC屏蔽自动化直接访问页面，所以这些是通过搜索索引显示的要价，而不是我们自己直接抓取并引用的页面)。我们在那里找到的大多数挂牌仍落在与上述店铺数据相同的$6~$250区间内——这些被提及的例子只是该论坛特有的可见上限，而不是新的典型区间。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>什么实际决定了Free Fire账号的价值？</h3>
 <ul>
@@ -278,23 +290,23 @@
   <li>优先扩充角色收藏的广度，而不是把所有资源都花在一个角色的皮肤上</li>
   <li>把钻石消费留给限时礼包，而不是日常装饰品</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>诈骗与交易风险</h2>
 <h3>Free Fire账号交易中最大的诈骗是什么？</h3>
 <div class="risk-box">
   <p>社交媒体上通过二维码收款却从不交付的虚假转售页面，以及使用被盗支付方式付款给卖家的买家——几周后触发拒付，导致卖家既没收到钱也失去了账号。Garena不调解账号交易纠纷。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>交易Free Fire账号违反规定吗？</h3>
 <p>是的——Garena的服务条款禁止账号销售和转让，被检测到的交易可能导致永久封禁。</p>
 
 <h3>这些挂牌实际来自哪里？</h3>
 <p>Eldorado.gg和igitems.com提供带有要价的全球挂牌；MercadoLivre(巴西最大的交易平台)在当地货币中显示了Free Fire最大市场之一相同的模式——都是要价，而非已确认的销售。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>玩家指南</h2>
 <h3>玩家指南：真正的职业选手如何设置灵敏度？</h3>
 <p>这一部分是为了提升你自己的实力，而非账号的转售价值。以花式打法闻名的巴西职业选手<strong><a href="https://en.wikipedia.org/wiki/Two9" target="_blank" rel="noopener">Diogenes "Two9" Inácio</a></strong>公布了完整的设置(来源：<a href="https://escharts.com/news/mastering-two9-meta" target="_blank" rel="noopener">Esports Charts</a>)：</p>
@@ -308,7 +320,7 @@
 </tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">这只是这位职业选手个人的设置，不是万能公式——Two9本人曾说<strong>"灵敏度占20%，训练占80%"</strong>。他提到的其他技巧：一种"等待并甩枪(Wait-and-Flick)"瞄准风格、在交火中切换武器来重置后坐力，以及把粘性墙摆成"V"或"U"形以创造多个探头角度，而不是一面平墙。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Free Fire账号估值</a></div>
@@ -365,6 +377,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

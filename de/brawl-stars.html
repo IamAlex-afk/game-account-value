@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,6 +219,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-mythic">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -233,19 +233,40 @@
 <div class="back-btn"><a href="./">← Zurück zur Startseite</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🐻 Brawl Stars Account-Wert</h1>
   <p style="color:var(--muted); font-size:16px;">Echte Preisstufen aus aktiven Wiederverkaufsangeboten, was den Preis eines Brawl-Stars-Accounts tatsächlich bestimmt, und die Betrugsmaschen, die man meiden sollte — mit Quellen, nicht geraten.</p>
+  <div class="g-badges">
   <p class="report-updated">Aktualisiert September 2026 anhand aktiver Marktangebote. Quellen am Seitenende.</p>
   <div class="fresh-badge">🌍 Frischeste Daten — live von KI über echte globale Marktplätze recherchiert, aktualisiert am 12. September 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Marktspanne: 3$ – 150$ (bis zu 300$+ für Top-Accounts)</div>
 <div class="fact-box">
   <span>📅 Globaler Launch <strong>12. Dezember 2018</strong> (Soft-Launch Juni 2017)</span>
   <span>👥 ~<strong>30-50 Mio.</strong> monatlich aktive Spieler</span>
   <span>📦 <strong>545 Mio.+</strong> Downloads insgesamt</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-brawl-stars" data-game="brawl-stars" data-title="Brawl Stars">
+  <div class="vc-title">🧮 Schnellrechner</div>
+  <div class="vc-subtitle">Eine grobe Schätzung aus den obigen Spannen — Regler bewegen. Der Bot liefert eine genaue Schätzung aus Screenshots. Es wird nichts eingegeben oder irgendwohin gesendet.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Kopiert!">Grobe Schätzung, keine genaue Bewertung</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Ergebnis teilen</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars&utm_campaign=brawl-stars&utm_content=de" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Geschätzten Wert deines Brawl-Stars-Accounts prüfen</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Preise</a>
   <a href="#value">📊 Was den Wert bestimmt</a>
@@ -264,22 +285,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Echte Marktpreise</h2>
 <h3>Wie viel ist ein Brawl-Stars-Account wert?</h3>
-<div class="price-range">Marktspanne: 3$ – 150$ (bis zu 300$+ für Top-Accounts)</div>
+
 <p>Live-Angebote auf Eldorado.gg reichen von 3$ (12.000 Trophäen, 55 Brawler) bis zu 35$ für die meistgezeigten Accounts der Seite (40.000+ Trophäen, 100+ Brawler). Ein größerer Gesamtmarkt (igitems.com, 1.147 aktive Angebote) zeigt, dass die meisten Accounts tatsächlich zwischen 15$-150$ gehandelt werden, mit einem durchschnittlichen Angebotspreis von 73$-101$ über 90 Tage und einer Top-Stufe von 34 Angeboten über 300$.</p>
 
-<div class="value-calc" id="vc-brawl-stars" data-game="brawl-stars" data-title="Brawl Stars">
-  <div class="vc-title">🧮 Schnellrechner</div>
-  <div class="vc-subtitle">Eine grobe Schätzung aus den obigen Spannen — Regler bewegen. Der Bot liefert eine genaue Schätzung aus Screenshots. Es wird nichts eingegeben oder irgendwohin gesendet.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Kopiert!">Grobe Schätzung, keine genaue Bewertung</span>
-    <button type="button" class="vc-share-btn">🔗 Ergebnis teilen</button>
-  </div>
-</div>
+
 
 <h3>Wie sehen die Preisstufen tatsächlich aus?</h3>
 <table class="tier-table">
@@ -293,8 +305,8 @@
 
 <h3>Zeigt ein forenbasierter Marktplatz andere Zahlen als die Storefront-Seiten oben?</h3>
 <p>Größtenteils dieselbe Spanne, mit einer Handvoll Ausreißern deutlich darüber. EpicNPC — ein Spieler-zu-Spieler-Handelsforum, getrennt von Eldorado.gg und igitems.com — zeigt, dass die meisten einzelnen Angebote innerhalb derselben Stufen liegen: ein Account mit 134.000 Trophäen für 199$, ein Account mit 121.000 Trophäen für 121$, und ein Account mit 53.110 Trophäen und 151 Skins für 35$. Aber es gibt auch gelegentliche Angebote weit über der 300$-Obergrenze dieser Seite, wie einen einzelnen Account mit dem expliziten Titel „Brawl Stars Account Valued at $1,700" (veröffentlicht Juni 2026) — gefunden über indexierte Suchergebnisse (EpicNPC blockiert direkten automatisierten Seitenzugriff, daher sind dies über die Suchindexierung angezeigte Angebotspreise, keine Seite, die wir direkt selbst abgerufen und zitiert haben). Ein Angebotspreis von 1.700$ ist nicht typisch — es ist die sichtbare Obergrenze eines Forums, keine neue Basislinie für den Wert dieser Accounts.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Was den Wert tatsächlich bestimmt</h2>
 <h3>Was bestimmt tatsächlich den Wert eines Brawl-Stars-Accounts?</h3>
 <p><strong>Direkt gegen die 10 teuersten Live-Angebote geprüft: Keines von ihnen nannte einen bestimmten seltenen Skin.</strong> Jedes der Top 10 war rein nach Trophäenzahl und Brawler-Anzahl betitelt (z. B. „104 BRAWLERS🔥51K🏆") — anders als bei Fortnite, Genshin oder Mobile Legends konzentriert sich der Wiederverkaufswert bei Brawl Stars nicht auf den Besitz bestimmter Kosmetika. Die eigentlichen Treiber sind:</p>
@@ -311,28 +323,28 @@
   <li>Zeitlich begrenzte Skins während Events priorisieren — sie sind nach Eventende nicht mehr erhältlich</li>
   <li>Den saisonalen Brawl Pass jede Saison abschließen statt Saisons auszulassen, da manche Kosmetika nicht zurückkehren</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Betrug &amp; Handelsrisiken</h2>
 <h3>Was sind die größten Betrugsmaschen beim Handel mit Brawl-Stars-Accounts?</h3>
 <div class="risk-box">
   <p>Gefälschte „Treuhand"-Mittelsmänner, die die Zahlung nehmen und nie Login-Daten liefern, sowie Chargeback-Betrug, bei dem ein Käufer zahlt, den Account erhält und dann die Zahlung über seine Bank oder PayPal rückgängig macht, nachdem der Verkäufer bereits Zugang gewährt hat. Beide sind häufig genug, dass die meisten etablierten Marktplätze inzwischen ihren eigenen Käufer-/Verkäuferschutz statt direkter Peer-Deals fördern.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Regeln &amp; Handelsrichtlinien</h2>
 <h3>Verstößt der Handel mit Brawl-Stars-Accounts gegen die Regeln?</h3>
 <p>Ja — Supercells Nutzungsbedingungen verbieten das Verkaufen, Kaufen oder Übertragen von Accounts. Accounts, bei denen ein Besitzerwechsel bestätigt wurde, können dauerhaft gesperrt werden, und der Supercell-Support stellt keinen bei einem Handelsbetrug verlorenen Zugang wieder her.</p>
 
 <h3>Woher stammen diese Angebote tatsächlich?</h3>
 <p>Eldorado.gg und igitems.com beherbergen beide öffentliche Verkäuferangebote mit Angebotspreisen — dies ist das Nächste an echten Marktdaten, das verfügbar ist, auch wenn es sich um Angebotspreise handelt, nicht um bestätigte abgeschlossene Verkäufe. igitems verfolgt zudem separat die Verkaufspreisbewegung, die zuletzt 6,8% über dem Angebotspreis lag, trotz fallender Angebotspreise — ein Zeichen, dass echte Käufer weiterhin mehr zahlen, selbst wenn Verkäufer vorsichtiger anbieten.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Spieler-Guide</h2>
 <h3>Spieler-Guide: Wie pusht man tatsächlich schneller Trophäen?</h3>
 <p>Dieser Abschnitt dient der Verbesserung deines eigenen Spiels, nicht des Wiederverkaufswerts deines Accounts. Ein Guide von <a href="https://trophycoach.com/brawl-stars/guides/how-to-get-better-brawl-stars" target="_blank" rel="noopener">TrophyCoach</a> aus Juli 2026 empfiehlt, sich pro Session auf einen Brawler festzulegen statt zu wechseln, da Siegesserien-Boni pro Brawler zurückgesetzt werden; den Kampf um Lane-Kontrolle in den ersten 15 Sekunden eines Matches zu gewinnen; mindestens einen Schuss/Munition in Reserve zu halten, außer bei einem sicheren Kill oder Ziel; und — speziell für Anfänger — mehrere Brawler auf moderate 300-500 Trophäen zu pushen, statt alles in einen Brawler über 900 hinaus zu stecken.</p>
 <p style="font-size:13px; color:var(--muted);">Eine Einzelquellen-Tierliste (mumuplayer.com, nicht unabhängig gegengeprüft) nennt <strong>Colette, Damian, Edgar, Crow, Otis, Chester, Starr Nova, Max</strong> und <strong>Surge</strong> als S-Tier für Juli 2026 — diese Liste mit mehr Vorsicht behandeln als die belegten Tipps oben. Im E-Sport gewann <strong>HMBLE</strong> 2026 zwei Brawl-Cup-Titel in Folge, und <strong>Crazy Raccoon</strong> waren die Weltmeister 2025. Brawl Stars ist kein zielgenauigkeitsbasiertes Spiel, daher gibt es keine relevante Sensitivitäts-Einstellungskultur wie bei Shootern.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars&utm_campaign=brawl-stars&utm_content=de" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Geschätzten Wert deines Brawl-Stars-Accounts prüfen</a></div>
@@ -388,6 +400,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

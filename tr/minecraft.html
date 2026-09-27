@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -235,6 +233,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -247,19 +247,40 @@
 <div class="back-btn"><a href="./">← Ana Sayfaya Dön</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ Minecraft Hesap Değeri</h1>
   <p style="color:var(--muted); font-size:16px;">İki ayrı pazar: normal hesaplar (rütbeler, pelerinler, sürümler) ve çok daha nadir kısa kullanıcı adı koleksiyoncu nişi — ikisi de gerçek, belgelenmiş fiyatlarla.</p>
+  <div class="g-badges">
   <p class="report-updated">Eylül 2026'da canlı pazar yeri ilanlarından güncellendi. Kaynaklar sayfanın altında listelenmiştir.</p>
   <div class="fresh-badge">🌍 En taze veriler — gerçek küresel pazar yerlerinde yapay zeka tarafından canlı araştırıldı, 12 Eylül 2026'da güncellendi</div>
+  </div>
 </section>
-
+<div class="price-range">Normal hesaplar: $0.50 – $632</div>
 <div class="fact-box">
   <span>📅 Tam çıkış <strong>18 Kasım 2011</strong></span>
   <span>👥 ~<strong>212M</strong> aylık aktif oyuncu (2026)</span>
   <span>📦 <strong>350M+</strong> satılan kopya — tüm zamanların en çok satan video oyunu (Mojang tarafından onaylandı)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
+  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copied!">Kaba bir tahmin, kesin bir değerleme değil</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Minecraft hesabının tahmini değerini kontrol et</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Fiyatlar</a>
   <a href="#value">📊 Değeri Ne Belirliyor</a>
@@ -278,22 +299,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Gerçek Pazar Fiyatları</h2>
 <h3>Normal bir Minecraft hesabı ne kadar eder?</h3>
-<div class="price-range">Normal hesaplar: $0.50 – $632</div>
+
 <p>Eldorado.gg'deki canlı ilanlar $0.50'den (sade bir Java Edition pelerin kodu) başlayıp "10 pelerinli MVP+" bir Hypixel hesabı için $120'a kadar çıkıyor. İkinci bir pazar yeri (igitems.com), Hypixel MVP+ rütbesi, birden fazla pelerin ve yüksek Skyblock seviyelerine sahip sade hesapları ~$632'ye kadar gösteriyor — buradaki değer kullanıcı adı değil, sunucu rütbesi ve pelerin sayısıyla ölçekleniyor.</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
-  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copied!">Kaba bir tahmin, kesin bir değerleme değil</span>
-    <button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button>
-  </div>
-</div>
+
 
 <h3>Nadir kısa kullanıcı adlı bir Minecraft hesabı ne kadar eder?</h3>
 <p>Bu tamamen ayrı, çok daha küçük bir koleksiyoncu nişidir — buradaki değer neredeyse tamamen sunucu rütbesi veya oyun içi ilerleme değil, <em>kullanıcı adının kendisiyle</em> ilgilidir. Topluluk pazar yerleri (PlayerUp gibi) kullanıcı adı uzunluğu ve karakter tipine göre tutarlı fiyatlandırma belgelemiştir; binlerce dolardan yüz binlerce dolara kadar — yukarıdaki normal hesaplardan tamamen farklı bir pazar.</p>
@@ -321,8 +333,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">Minecon 2011 pelerini</a></strong> — birden fazla bağımsız kaynakta en çok anılan nadir Minecraft kozmetik eşyası; "en nadir Minecraft pelerini" konusu her açıldığında tutarlı bir şekilde referans noktası</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Canlı pelerin pazar yeri fiyat sıralaması (mccapers.com, Eylül 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape her biri $3. MINECON katılımcı pelerinleri (2011-2016) ve Mojang çalışan pelerini bu normal sıralamanın dışında ayrı bir "müze kademesinde" yer alıyor — neredeyse hiç satışa çıkmıyorlar, bu yüzden Minecon 2011 en yüksek liste fiyatı değil, en çok referans gösterilen isim olmaya devam ediyor.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Değeri Gerçekte Ne Belirliyor</h2>
 <h3>Bir Minecraft hesabının değerini gerçekte ne belirliyor?</h3>
 <ul>
@@ -338,26 +350,26 @@
   <li>Microsoft'a geçirilen hesabınızın orijinal e-postasını değiştirmek yerine olduğu gibi koruyun, çünkü sahiplik geçmişi alıcı güveni için önemlidir</li>
   <li>Bir Minecon pelerininiz varsa, yeni bir hesaba aktarılamayacağını bilin — kalıcı olarak sizinkine bağlıdır</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Dolandırıcılıklar ve Ticaret Riskleri</h2>
 <h3>Minecraft kullanıcı adı ticaretindeki en büyük dolandırıcılıklar nelerdir?</h3>
 <div class="risk-box">
   <p>Bir satıcının belirli bir tarihte bir kullanıcı adını alıcının kapması için serbest bırakacağına söz verip sonra erken veya hiç serbest bırakmadığı "isim işgali" dolandırıcılıkları; ve emanet olmadan Discord pazar yerlerinde doğrudan ödeme-sonra-teslimat-yok dolandırıcılıkları. Minecraft hesap transferleri Mojang/Microsoft tarafından resmi olarak desteklenmediği için, bir işlem ters giderse anlaşmazlık çözümü yoktur.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Kurallar ve Ticaret Politikası</h2>
 <h3>Minecraft hesabı ticareti Mojang'ın kurallarına aykırı mı?</h3>
 <p>Evet — Minecraft'ın Kullanım Şartları, hesapları gerçek para karşılığında transfer etmeyi yasaklar ve Mojang/Microsoft, tespit edilen yetkisiz transferlere karışan hesapları askıya alabilir.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Oyuncu Rehberi</h2>
 <h3>Oyuncu rehberi: Minecraft için gerçek bir "nasıl daha iyi olurum" açısı var mı?</h3>
 <p>Bu bölüm, hesabınızın yeniden satış değerini değil kendi oyununuzu geliştirmek içindir. Tek bir sıralama sistemine sahip rekabetçi bir oyunun aksine, Minecraft kendi gerçek metalarına sahip gerçekten ayrı topluluklara ayrılır: hız koşusu (speedrun) ve rekabetçi PvP sunucuları.</p>
 <p>Hız koşusunun yetkili bir kaynağı vardır (speedrun.com'un liderlik tabloları), ancak kendi araştırmamız Any% Random Seed Glitchless (RSG) dünya rekorunu şu anda kimin elinde tuttuğu konusunda çelişkili ikincil raporlarla karşılaştı — bir kaynak "lowkey"i 6:50 ile gösterirken, başka bir kaynak "Skycrab"i 6:39 ile gösterdi — bu yüzden birini seçmek yerine, ikisini de kesin gerçek olarak sunmadan bu tutarsızlığı belirtiyoruz. Sağlam olan şey: kategori her zaman aynı gerçek rotayı izliyor — erken kaynaklar için bir köy veya batık gemi bulmak, blaze çubukları için Nether'e gitmek, Kaleyi bulmak ve End savaşını sırasıyla bitirmek.</p>
 <p>PvP tarafında, yerleşik 2026 topluluk rehberleri (<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>) saf ekipman yatırımından konumlandırma ve zamanlamaya doğru gerçek bir meta değişimini tanımlıyor; Crystal PvP ve Netherite Pot güncel seviye listelerinde S seviyesinde, UHC/Axe PvP ise A seviyesinde. Bunun için gerçek, aktif platformlar: Hypixel'in PvP modları (Bedwars, Skywars, Duels) ve Minemen Club'ın pratik modları (Nodebuff, Soup, UHC, Bridge).</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Minecraft hesabının tahmini değerini kontrol et</a></div>
@@ -415,6 +427,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

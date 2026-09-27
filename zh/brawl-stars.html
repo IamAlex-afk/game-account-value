@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-mythic">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,19 +197,40 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🐻 Brawl Stars账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">来自实时转售交易平台挂牌的真实价格分级，究竟是什么真正决定了Brawl Stars账号的价格，以及需要避开的诈骗手法——有出处，不是靠猜。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">市场价格区间：$3 ~ $150（顶级账号最高可达$300+）</div>
 <div class="fact-box">
   <span>📅 全球上线 <strong>2018年12月12日</strong>（2017年6月软启动）</span>
   <span>👥 约<strong>3,000万~5,000万</strong>月活跃玩家</span>
   <span>📦 累计下载 <strong>5.45亿+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-brawl-stars" data-game="brawl-stars" data-title="Brawl Stars">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars&utm_campaign=brawl-stars&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Brawl Stars账号估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#value">📊 价值决定因素</a>
@@ -228,22 +249,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>Brawl Stars账号值多少钱？</h3>
-<div class="price-range">市场价格区间：$3 ~ $150（顶级账号最高可达$300+）</div>
+
 <p>Eldorado.gg上的实时挂牌从$3(12,000奖杯，55个brawler)到网站展示的顶级账号$35(40,000+奖杯，100+brawler)不等。更大的集合市场(igitems.com，1,147个活跃挂牌)显示大多数账号实际交易价格在$15~$150之间，90天平均要价为$73~101，超过$300的顶级区间有34个挂牌。</p>
 
-<div class="value-calc" id="vc-brawl-stars" data-game="brawl-stars" data-title="Brawl Stars">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>价格区间实际是什么样的？</h3>
 <table class="tier-table">
@@ -259,8 +271,8 @@
 
 <h3>基于论坛的交易市场数字和上述店铺型网站有区别吗？</h3>
 <p>大体是同一区间，只有少数明显偏高的异常值。EpicNPC——一个玩家对玩家交易论坛，与Eldorado.gg和igitems.com不同——显示大多数个别挂牌都落在相同区间内：一个134,000奖杯的账号售价$199，一个121,000奖杯的账号售价$121，一个53,110奖杯、151个皮肤的账号售价$35。但它偶尔也会出现远超本页$300顶级区间的挂牌，比如一个明确标题为"Brawl Stars Account Valued at $1,700"的账号(2026年6月发布)——通过搜索引擎索引结果找到的(EpicNPC屏蔽了自动化直接访问页面，所以这些是通过搜索索引显示的要价，而不是我们自己直接抓取并引用的页面)。$1,700的要价并不典型——这是一个论坛的可见上限，而不是这类账号价值的新基准。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>什么实际决定了Brawl Stars账号的价值？</h3>
 <p><strong>直接对照最贵的10个实时挂牌：其中没有任何一个提到具体的稀有皮肤。</strong>前10名的标题全都纯粹由奖杯数和brawler数量组成(例如"104 BRAWLERS🔥51K🏆")——与Fortnite、Genshin或Mobile Legends不同，Brawl Stars的转售价值并不集中在拥有特定装饰品上。真正的驱动因素是：</p>
@@ -277,28 +289,28 @@
   <li>活动期间优先获取限时皮肤 — 活动结束后就无法再获得</li>
   <li>每个赛季都完成赛季Brawl Pass而不是跳过某些赛季，因为部分装饰品不会再次出现</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>诈骗与交易风险</h2>
 <h3>Brawl Stars账号交易中最大的诈骗是什么？</h3>
 <div class="risk-box">
   <p>虚假"担保"中间人收款后从不交付登录凭证，以及拒付诈骗——买家付款、收到账号后，在卖家已经交出账号访问权限之后，通过银行或PayPal撤销付款。这两种诈骗都足够常见，以至于大多数成熟交易平台现在都推出了自己的买卖双方保护机制，而不是直接的点对点交易。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>交易Brawl Stars账号违反规定吗？</h3>
 <p>是的——Supercell的服务条款禁止出售、购买或转让账号。被确认换手的账号可能被永久封禁，Supercell客服不会恢复因交易诈骗而失去的访问权限。</p>
 
 <h3>这些挂牌实际来自哪里？</h3>
 <p>Eldorado.gg和igitems.com都提供带有要价的公开卖家挂牌——这是目前能获得的最接近真实市场数据的信息，不过这些是要价，而非已确认完成的销售。igitems还单独追踪成交价走势，近期成交价比要价高出6.8%，尽管要价本身在下降——这表明即使卖家在更谨慎地定价，真实买家仍愿意加价购买。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>玩家指南</h2>
 <h3>玩家指南：实际上如何更快地冲奖杯？</h3>
 <p>这一部分是为了提升你自己的实力，而非账号的转售价值。<a href="https://trophycoach.com/brawl-stars/guides/how-to-get-better-brawl-stars" target="_blank" rel="noopener">TrophyCoach</a>在2026年7月发布的指南建议每局锁定使用一个brawler，而不是频繁切换，因为连胜奖励是按brawler单独计算并重置的；在对局前15秒内赢得走位控制权的争夺；除非有确定的击杀或目标，否则至少保留一发子弹/弹药；以及——特别是对新手而言——把好几个brawler推到300~500奖杯的适中水平，而不是把所有资源都砸在一个brawler上冲到900以上。</p>
 <p style="font-size:13px; color:var(--muted);">一份单一来源的梯度榜(mumuplayer.com，未经独立交叉验证)将Colette、Damian、Edgar、Crow、Otis、Chester、Starr Nova、Max和Surge列为2026年7月的S级——这份榜单应比上述有来源支撑的技巧更谨慎对待。电竞方面，<strong>HMBLE</strong>在2026年蝉联Brawl Cup冠军，<strong>Crazy Raccoon</strong>是2025年世界冠军。Brawl Stars不是一个依赖瞄准的游戏，所以不像射击类游戏那样存在有意义的灵敏度设置文化。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars&utm_campaign=brawl-stars&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Brawl Stars账号估值</a></div>
@@ -354,6 +366,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

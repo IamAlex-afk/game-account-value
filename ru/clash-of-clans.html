@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -219,6 +217,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -231,20 +231,41 @@
 <div class="back-btn"><a href="./">← На главную</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ Стоимость аккаунта Clash of Clans</h1>
   <p style="color:var(--muted); font-size:16px;">Реальные данные о ценах по уровню Ратуши и состоянию прогресса, с живых листингов маркетплейсов — а не придуманная оценка.</p>
+  <div class="g-badges">
   <p class="report-updated">Обновлено в сентябре 2026 по живым листингам маркетплейсов. Источники — в конце страницы.</p>
   <div class="fresh-badge">🌍 Самые свежие данные — собраны ИИ на реальных площадках по всему миру, обновлено 12 сентября 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Реальный диапазон на рынке: $10 – $260</div>
 <div class="fact-box">
   <span>📅 Выпущен <strong>2 августа 2012 года</strong> (iOS), Android — в 2013</span>
   <span>👥 <strong>65-100M+</strong> активных игроков в месяц (оценки разнятся по трекерам)</span>
   <span>📦 <strong>500M+</strong> суммарных загрузок</span>
   <span>🏰 Текущий максимальный уровень Ратуши: <strong>TH18</strong> (на сентябрь 2026)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 Быстрый калькулятор</div>
+  <div class="vc-subtitle">Прикидка по диапазонам выше — двигайте ползунки. Точную оценку по скриншотам даёт бот. Ничего не вводится и никуда не отправляется.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Скопировано!">Ориентировочно, не точная оценка</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Поделиться результатом</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=ru" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Оценить свой аккаунт Clash of Clans</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Цены</a>
   <a href="#value">📊 Ценность</a>
@@ -263,23 +284,14 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Реальные цены на рынке</h2>
 <h3>Сколько реально стоит аккаунт Clash of Clans?</h3>
-<div class="price-range">Реальный диапазон на рынке: $10 – $260</div>
+
 
 <p>Clash of Clans теперь дошла до 18 уровня Ратуши, и цена аккаунта напрямую зависит и от уровня Ратуши, и от того, насколько «раш» (прокачано неравномерно, с пропуском защиты/героев) или «полный макс» аккаунт. Раш-аккаунт TH13 продаётся примерно за $10, а по-настоящему полностью максимальный TH18 выставляется за $100-$260.</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 Быстрый калькулятор</div>
-  <div class="vc-subtitle">Прикидка по диапазонам выше — двигайте ползунки. Точную оценку по скриншотам даёт бот. Ничего не вводится и никуда не отправляется.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Скопировано!">Ориентировочно, не точная оценка</span>
-    <button type="button" class="vc-share-btn">🔗 Поделиться результатом</button>
-  </div>
-</div>
+
 
 <h3>Как выглядят реальные цены по уровню Ратуши?</h3>
 <table class="tier-table">
@@ -295,8 +307,8 @@
 
 <h3>Подтверждается ли этот диапазон на другом типе маркетплейса?</h3>
 <p>Да, примерно. EpicNPC — форум прямой торговли между игроками, а не витрина-маркетплейс вроде Eldorado.gg или igitems.com — показывает отдельные листинги TH17/TH18 по цене примерно от $98 до $340, проверено через индексацию поиска в сентябре 2026 (EpicNPC блокирует прямой автоматический доступ к страницам, так что это цены из поисковой индексации, а не страница, которую мы сами открыли и процитировали напрямую). Это та же общая картина, что и в таблице igitems.com выше — полностью прокачанные TH17/TH18 в районе нескольких сотен долларов — при этом самый высокий отдельный листинг EpicNPC немного превышает потолок igitems.com в $260, что логично: на форуме продавец может назначить любую цену, не конкурируя напрямую с другими листингами витрины.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Что реально определяет ценность</h2>
 <h3>Что реально определяет стоимость аккаунта Clash of Clans?</h3>
 <ul>
@@ -313,28 +325,28 @@
   <li>Стабильно заходить в Лигу Легенд, а не эпизодически — история сезонов накапливается</li>
   <li>Держать активным золотой пропуск / сезонный пропуск каждый сезон ради эксклюзивных косметических предметов, которые не возвращаются</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Обманы и риски торговли</h2>
 <h3>Какие самые частые обманы при торговле аккаунтами Clash of Clans?</h3>
 <div class="risk-box">
   <p>Фейковые скриншоты подтверждения оплаты, фишинговые ссылки «подтвердите аккаунт» в Discord, которые крадут данные Supercell ID, и покупатели, оспаривающие платёж через банк после получения доступа. Поскольку Supercell не выступает посредником в сделках с аккаунтами, процесса разрешения споров при обмане нет ни для одной стороны.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Правила и политика торговли</h2>
 <h3>Нарушает ли правила торговля аккаунтами Clash of Clans?</h3>
 <p>Да — условия использования Supercell запрещают продажу, покупку или передачу аккаунтов, а нарушения могут привести к безвозвратной блокировке.</p>
 
 <h3>Откуда реально берутся эти листинги?</h3>
 <p>Живой рыночный отчёт igitems.com (4 463 листинга с разбивкой по уровню Ратуши и состоянию прогресса) и публичные листинги Eldorado.gg — источники цифр выше: это реальные запрашиваемые цены, а не подтверждённые завершённые продажи.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Гайд для игроков</h2>
 <h3>Гайд для игроков: какой порядок прокачки реально рекомендуют опытные игроки?</h3>
 <p>Этот раздел — про улучшение своей базы, а не стоимость аккаунта на продажу. Опубликованная в 2026 году схема приоритетов прокачки от <a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a> и <a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a> формулирует общепринятый порядок так: сначала Лаборатория, затем Лагеря армии и Клан-крепость, затем Зал героев/Кузница, затем ключевые оборонительные здания, а стены — намеренно в самом конце. Обе схемы используют формулу «сначала атака, потом узкие места по времени, потом оборона, стены — последними». Контент по расстановке базы и прокачке от создателя <strong>Judo Sloth Gaming</strong> подробно разбирает тот же порядок приоритетов на 2026 год.</p>
 <p>Clash of Clans не завязан на прицеливание, поэтому вокруг него нет культуры «настроек чувствительности», как у шутеров.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=ru" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Оценить свой аккаунт Clash of Clans</a></div>
@@ -391,6 +403,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -190,6 +188,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-immortal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -202,20 +202,41 @@
 <div class="back-btn"><a href="./">← 홈으로</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🏆 모바일 레전드 계정 가치</h1>
   <p style="color:var(--muted); font-size:16px;">여러 지역의 실시간 마켓플레이스 매물에서 얻은 실제 가격 데이터와, 가격을 실제로 좌우하는 요인.</p>
+  <div class="g-badges">
   <p class="report-updated">2026년 9월, 실시간 마켓플레이스 매물 정보를 바탕으로 업데이트. 출처는 페이지 하단에 명시.</p>
   <div class="fresh-badge">🌍 최신 데이터 — AI가 실제 글로벌 마켓플레이스를 실시간 조사, 2026년 9월 12일 업데이트</div>
+  </div>
 </section>
-
+<div class="price-range">실제 마켓 가격대: 일반적으로 $0.50 ~ $300, 인도네시아에서는 최대 ~$605</div>
 <div class="fact-box">
   <span>📅 출시 <strong>2016년 7월 14일</strong>(Android), 2016년 11월(iOS)</span>
   <span>👥 월간 활성 사용자 <strong>4,000만~1억1,000만 명</strong>(출처마다 추정치 차이 큼)</span>
   <span>🌍 <strong>인도네시아, 필리핀, 말레이시아</strong>에서 가장 강세 — 동남아시아 전역 장악</span>
   <span>📦 <strong>139개국</strong> <strong>15억+</strong> 설치</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
+  <div class="vc-title">🧮 빠른 계산기</div>
+  <div class="vc-subtitle">스킨 최대 400개까지 커버 — 스킨 800개 이상의 "메가 컬렉터" 계정은 이 범위를 훨씬 웃돌며, 위 설명 참조. 아무것도 입력하거나 전송되지 않는다. 봇이 스크린샷으로 정확한 추정치를 제공한다.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 결과 공유</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 모바일 레전드 계정의 예상 가치 확인하기</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 가격</a>
   <a href="#value">📊 가치 결정 요인</a>
@@ -234,22 +255,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>실제 마켓 가격</h2>
 <h3>모바일 레전드 계정은 얼마의 가치가 있나요?</h3>
-<div class="price-range">실제 마켓 가격대: 일반적으로 $0.50 ~ $300, 인도네시아에서는 최대 ~$605</div>
+
 <p>Eldorado.gg의 실시간 매물은 $0.50(신규 레벨 3 스머프 계정)부터 스킨 605개를 보유한 "메가 컬렉터" 계정의 $250까지 폭넓다. 더 큰 집계 마켓(igitems.com, 매물 1,147건)도 비슷한 분포를 확인해준다: 현재 평균 희망가는 $68.61이며, 자체 구매 가이드에 따르면 스킨 300~400개를 보유한 "탄탄한 계정"은 $200~$300, 스킨 800개 이상의 최상위 컬렉터 계정은 $1,500 이상에 거래된다. 모바일 레전드의 단일 최대 시장인 인도네시아에서는 Tokopedia 매물("jual akun mobile legends")이 Rp80,000~Rp9,570,000(~$5~~$605)에 걸쳐 있다.</p>
 
-<div class="value-calc" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
-  <div class="vc-title">🧮 빠른 계산기</div>
-  <div class="vc-subtitle">스킨 최대 400개까지 커버 — 스킨 800개 이상의 "메가 컬렉터" 계정은 이 범위를 훨씬 웃돌며, 위 설명 참조. 아무것도 입력하거나 전송되지 않는다. 봇이 스크린샷으로 정확한 추정치를 제공한다.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
-    <button type="button" class="vc-share-btn">🔗 결과 공유</button>
-  </div>
-</div>
+
 
 <h3>가격대별 분포는 어떻게 되나요?</h3>
 <table class="tier-table">
@@ -269,8 +281,8 @@
   <li><strong>PRIME <a href="https://mobile-legends.fandom.com/wiki/Granger" target="_blank" rel="noopener">Granger</a></strong> — 독립된 매물 3건에서 이름이 언급됨, 상위 매물 간 반복이 확인된 유일한 스킨</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">한 번씩만 등장한(반복 확인되지 않은) 다른 스킨들: HxH Don, Yuji Itadori Yin, KOF Karina, Naruto Vale, Legend Lunox, Naruto Gusion Minato, Lightborn Granger, Annual-Star Hayabusa, Sanrio Floryn.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>실제 가치 결정 요인</h2>
 <h3>모바일 레전드 계정 가치를 실제로 결정하는 것은?</h3>
 <ul>
@@ -290,28 +302,28 @@
   <li>랭크를 시즌마다 꾸준히 올려라, 방치해서 떨어뜨리지 말 것 — Mythical Glory 이력이 가치를 지닌다</li>
   <li>소수 히어로에만 코스메틱을 집중 투자하기 전에 히어로 컬렉션의 폭을 넓혀라</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>사기와 거래 위험</h2>
 <h3>모바일 레전드 계정 거래에서 가장 큰 사기는?</h3>
 <div class="risk-box">
   <p>Facebook/Discord 그룹의 가짜 미들맨이 계정 대금을 받고 인증 정보를 넘기지 않는 경우, 그리고 "rent-to-buy" 사기 — 구매자에게 임시 접근권을 주고 대금을 받은 뒤 판매자가 연결된 이메일을 바꿔 잠가버리는 방식. Moonton은 계정 거래 분쟁을 중재하지 않는다.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>규정과 거래 정책</h2>
 <h3>모바일 레전드 계정 매매는 규정 위반인가요?</h3>
 <p>네 — Moonton 이용약관은 계정 판매와 양도를 금지하며, 거래가 확인되면 영구 정지될 수 있다.</p>
 
 <h3>이 매물들은 실제로 어디서 나오나요?</h3>
 <p>Eldorado.gg와 igitems.com은 글로벌 매물을 호스팅한다. Tokopedia(인도네시아 최대 마켓플레이스)는 모바일 레전드의 단일 최대 시장인 인도네시아 현지 통화로 동일한 패턴을 보여준다 — 모두 희망가이며 확인된 판매가 아니다.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>플레이어 가이드</h2>
 <h3>플레이어 가이드: 실제로 "프로 설정" 문화가 있나요? 현재 메타는?</h3>
 <p>이 섹션은 계정 재판매 가치가 아니라 실력 향상을 위한 것이다. Free Fire나 Fortnite와 달리, 2개 이상 출처로 뒷받침되는 특정 MLBB 프로 선수의 감도 설정은 찾지 못했다 — 발견한 설정 가이드(Advanced Targeting, 수동 기본 공격 타겟팅, 카메라 감도 약 60%, 자주 쓰는 스킬 버튼을 110~120%로 확대)는 특정 프로의 공개 설정이 아니라 커뮤니티의 일반적인 권장 사항이므로, 검증된 공식이 아닌 출발점 정도로만 참고할 것.</p>
 <p>확실히 출처가 있는 것: <strong>Team Liquid PH</strong>가 2026년 MPL 필리핀 시즌 17에서 우승 — 리그 3연패를 달성한 첫 팀이며, <strong>Sanford "Sanford" Vinuya</strong>가 결승 MVP로 선정됐다(출처: <a href="https://en.wikipedia.org/wiki/2026_MPL_Philippines_season" target="_blank" rel="noopener">Wikipedia, 2026 MPL Philippines season</a>). 2026년 8월 23일자 MLBB Hub 티어리스트 기준, 가장 강력한 정글 픽은 Hanzo, Nolan, Ling이었고, 로밍 픽 Chip은 드래프트에서 정글/로밍 조합을 재구성하는 픽으로 특히 가치가 높았다.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 모바일 레전드 계정의 예상 가치 확인하기</a></div>
@@ -367,6 +379,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

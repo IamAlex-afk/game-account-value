@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -219,6 +217,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-mythic">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -231,19 +231,40 @@
 <div class="back-btn"><a href="./">← На главную</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🐻 Стоимость аккаунта Brawl Stars</h1>
   <p style="color:var(--muted); font-size:16px;">Реальные ценовые корзины с живых маркетплейсов перепродажи, что реально влияет на цену аккаунта Brawl Stars, и каких обманов избегать.</p>
+  <div class="g-badges">
   <p class="report-updated">Обновлено в сентябре 2026 по живым листингам маркетплейсов. Источники — в конце страницы.</p>
   <div class="fresh-badge">🌍 Самые свежие данные — собраны ИИ на реальных площадках по всему миру, обновлено 12 сентября 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Диапазон на маркетплейсах: $3 – $150 (до $300+ для топовых аккаунтов)</div>
 <div class="fact-box">
   <span>📅 Глобальный запуск <strong>12 декабря 2018 года</strong> (мягкий запуск — июнь 2017)</span>
   <span>👥 ~<strong>30-50M</strong> активных игроков в месяц</span>
   <span>📦 <strong>545M+</strong> загрузок за всё время</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-brawl-stars" data-game="brawl-stars" data-title="Brawl Stars">
+  <div class="vc-title">🧮 Быстрый калькулятор</div>
+  <div class="vc-subtitle">Прикидка по диапазонам выше — двигайте ползунки. Точную оценку по скриншотам даёт бот. Ничего не вводится и никуда не отправляется.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Скопировано!">Ориентировочно, не точная оценка</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Поделиться результатом</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars&utm_campaign=brawl-stars&utm_content=ru" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Оценить свой аккаунт Brawl Stars</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Цены</a>
   <a href="#value">📊 Ценность</a>
@@ -262,23 +283,14 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Реальные цены на рынке</h2>
 <h3>Сколько реально стоит аккаунт Brawl Stars?</h3>
-<div class="price-range">Диапазон на маркетплейсах: $3 – $150 (до $300+ для топовых аккаунтов)</div>
+
 
 <p>Живые листинги на Eldorado.gg идут от $3 (12 000 кубков, 55 бойцов) до $35 за топовые показанные там аккаунты (40 000+ кубков, 100+ бойцов). Более крупный агрегированный рынок (igitems.com, 1 147 активных листингов) показывает, что большинство аккаунтов реально продаются между $15-$150, со средней запрашиваемой ценой за 90 дней $73-101, и верхней корзиной из 34 листингов дороже $300.</p>
 
-<div class="value-calc" id="vc-brawl-stars" data-game="brawl-stars" data-title="Brawl Stars">
-  <div class="vc-title">🧮 Быстрый калькулятор</div>
-  <div class="vc-subtitle">Прикидка по диапазонам выше — двигайте ползунки. Точную оценку по скриншотам даёт бот. Ничего не вводится и никуда не отправляется.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Скопировано!">Ориентировочно, не точная оценка</span>
-    <button type="button" class="vc-share-btn">🔗 Поделиться результатом</button>
-  </div>
-</div>
+
 
 <h3>Как выглядят реальные ценовые корзины?</h3>
 <table class="tier-table">
@@ -292,8 +304,8 @@
 
 <h3>Форумный маркетплейс показывает другие цифры, чем витрины выше?</h3>
 <p>В основном тот же диапазон, но с отдельными выбросами заметно выше. EpicNPC — форум прямой торговли между игроками, отдельный от Eldorado.gg и igitems.com — показывает, что большинство отдельных листингов укладываются в те же корзины: аккаунт с 134 000 кубков за $199, аккаунт с 121 000 кубков за $121 и аккаунт с 53 110 кубков и 151 скином за $35. Но там также встречаются отдельные листинги далеко выше верхней корзины этой страницы ($300): один аккаунт с названием прямо «Brawl Stars Account Valued at $1,700» (опубликован в июне 2026) — найден через индексацию поиска (EpicNPC блокирует прямой автоматический доступ к страницам, так что это цены из поисковой индексации, а не страница, которую мы сами открыли и процитировали напрямую). Цена $1,700 нетипична — это видимый потолок именно этого форума, а не новая база для стоимости таких аккаунтов.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Что реально определяет ценность</h2>
 <h3>Что реально определяет стоимость аккаунта Brawl Stars?</h3>
 <p><strong>Проверив напрямую топ-10 самых дорогих живых листингов: ни в одном из них не назван ни один конкретный редкий скин.</strong> Все топ-10 были озаглавлены исключительно количеством кубков и бойцов (например, «104 БОЙЦА🔥51K🏆») — в отличие от Fortnite, Genshin или Mobile Legends, стоимость перепродажи в Brawl Stars не концентрируется вокруг владения конкретной косметикой. Реальные факторы:</p>
@@ -310,28 +322,28 @@
   <li>Приоритизировать лимитированные скины во время событий — после окончания события их больше не получить</li>
   <li>Проходить сезонный Brawl Pass каждый сезон, а не пропускать сезоны — некоторые косметические предметы не возвращаются</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Обманы и риски торговли</h2>
 <h3>Какие самые частые обманы при торговле аккаунтами Brawl Stars?</h3>
 <div class="risk-box">
   <p>Фейковые «эскроу»-посредники, которые забирают оплату и никогда не передают доступ к аккаунту, и обман с возвратом платежа (чарджбэк), когда покупатель платит, получает аккаунт, а затем отменяет платёж через банк или PayPal после того, как продавец уже передал доступ. Оба вида распространены настолько, что большинство крупных маркетплейсов теперь предлагают собственную защиту покупателя/продавца вместо прямых сделок между людьми.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Правила и политика торговли</h2>
 <h3>Нарушает ли правила торговля аккаунтами Brawl Stars?</h3>
 <p>Да — условия использования Supercell запрещают продажу, покупку или передачу аккаунтов. Аккаунты, подтверждённо перешедшие из рук в руки, могут быть заблокированы навсегда, и поддержка Supercell не восстанавливает доступ, потерянный из-за обмана при сделке.</p>
 
 <h3>Откуда реально берутся эти листинги?</h3>
 <p>Eldorado.gg и igitems.com размещают публичные листинги продавцов с запрашиваемыми ценами — это ближайшее к реальным рыночным данным, что доступно, хотя это запрашиваемые цены, а не подтверждённые завершённые продажи. igitems также отдельно отслеживает движение цен продаж, которое недавно оказалось на 6.8% выше запрашиваемой цены, несмотря на её падение — знак того, что реальные покупатели всё ещё готовы платить больше, даже когда продавцы выставляют цены осторожнее.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Гайд для игроков</h2>
 <h3>Гайд для игроков: как реально быстрее поднимать трофеи?</h3>
 <p>Этот раздел — про улучшение своей игры, а не стоимость аккаунта на продажу. Гайд <a href="https://trophycoach.com/brawl-stars/guides/how-to-get-better-brawl-stars" target="_blank" rel="noopener">TrophyCoach</a> от июля 2026 рекомендует держаться одного бойца за сессию, а не переключаться между ними, поскольку бонус за победную серию сбрасывается по каждому бойцу отдельно; выигрывать контроль над линией в первые 15 секунд матча; всегда держать хотя бы один заряд/патрон в запасе, если нет подтверждённого килла или цели; и — специально для новичков — поднимать нескольких бойцов до умеренных 300-500 трофеев вместо того, чтобы вкладывать всё в одного бойца выше 900.</p>
 <p style="font-size:13px; color:var(--muted);">Тир-лист по одному источнику (mumuplayer.com, не подтверждён перекрёстно) называет Colette, Damian, Edgar, Crow, Otis, Chester, Starr Nova, Max и Surge S-тиром на июль 2026 — относитесь к этому списку с большей осторожностью, чем к советам с источниками выше. На киберспортивной стороне команда <strong>HMBLE</strong> выиграла Brawl Cup два раза подряд в 2026 году, а <strong>Crazy Raccoon</strong> были чемпионами мира 2025 года. Brawl Stars не завязан на прицеливание, поэтому вокруг него нет культуры «настроек чувствительности», как у шутеров.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_brawl_stars&utm_campaign=brawl-stars&utm_content=ru" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Оценить свой аккаунт Brawl Stars</a></div>
@@ -387,6 +399,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

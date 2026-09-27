@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -229,6 +227,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-immortal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -241,20 +241,41 @@
 <div class="back-btn"><a href="./">← Ana Sayfaya Dön</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🏆 Mobile Legends Hesap Değeri</h1>
   <p style="color:var(--muted); font-size:16px;">Birden fazla bölgedeki canlı pazar yeri ilanlarından gerçek fiyat verisi ve fiyatı gerçekte ne yukarı veya aşağı çektiği.</p>
+  <div class="g-badges">
   <p class="report-updated">Eylül 2026'da canlı pazar yeri ilanlarından güncellendi. Kaynaklar sayfanın altında listelenmiştir.</p>
   <div class="fresh-badge">🌍 En taze veriler — gerçek küresel pazar yerlerinde yapay zeka tarafından canlı araştırıldı, 12 Eylül 2026'da güncellendi</div>
+  </div>
 </section>
-
+<div class="price-range">Gerçek pazar aralığı: tipik olarak $0.50 – $300, Endonezya'da ~$605'e kadar</div>
 <div class="fact-box">
   <span>📅 Yayın tarihi <strong>14 Temmuz 2016</strong> (Android), Kasım 2016 (iOS)</span>
   <span>👥 Aylık <strong>40-110M</strong> aktif oyuncu (tahminler kaynağa göre büyük ölçüde değişir)</span>
   <span>🌍 En güçlü <strong>Endonezya, Filipinler, Malezya</strong>'da — Güneydoğu Asya'da baskın</span>
   <span>📦 139 ülkede <strong>1,5 Milyar+</strong> kurulum</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
+  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
+  <div class="vc-subtitle">400 skine kadar kapsar — 800+ skinli "mega koleksiyoncu" hesaplar bu aralığın çok üzerinde satılıyor, yukarıdaki nota bakın. Hiçbir şey girilmez veya hiçbir yere gönderilmez; bot ekran görüntülerinden kesin bir tahmin verir.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Mobile Legends hesabının tahmini değerini kontrol et</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Fiyatlar</a>
   <a href="#value">📊 Değeri Ne Belirliyor</a>
@@ -273,22 +294,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Gerçek Pazar Fiyatları</h2>
 <h3>Bir Mobile Legends hesabı ne kadar eder?</h3>
-<div class="price-range">Gerçek pazar aralığı: tipik olarak $0.50 – $300, Endonezya'da ~$605'e kadar</div>
+
 <p>Eldorado.gg'deki canlı ilanlar $0.50'den (yeni Seviye 3 smurf hesapları) 605 skinli bir "mega koleksiyoncu" hesabı için $250'ye kadar değişiyor. Daha büyük bir toplu pazar (igitems.com, 1.147 ilan) gerçek bir dağılımı doğruluyor: mevcut ortalama istek fiyatı $68.61 ve kendi satın alma rehberleri, 300-400 skinli "sağlam bir hesabın" $200-$300 aralığında olduğunu, 800+ kozmetikli üst koleksiyoncu hesaplarının ise $1.500+'a satıldığını belirtiyor. Endonezya'da — Mobile Legends'ın tek en büyük pazarı — Tokopedia ilanları ("jual akun mobile legends") Rp80.000'den Rp9.570.000'e (~$5'ten ~$605'e) kadar değişiyor.</p>
 
-<div class="value-calc" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
-  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
-  <div class="vc-subtitle">400 skine kadar kapsar — 800+ skinli "mega koleksiyoncu" hesaplar bu aralığın çok üzerinde satılıyor, yukarıdaki nota bakın. Hiçbir şey girilmez veya hiçbir yere gönderilmez; bot ekran görüntülerinden kesin bir tahmin verir.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
-    <button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button>
-  </div>
-</div>
+
 
 <h3>Fiyat dilimleri nasıl görünüyor?</h3>
 <table class="tier-table">
@@ -306,8 +318,8 @@
   <li><strong>PRIME <a href="https://mobile-legends.fandom.com/wiki/Granger" target="_blank" rel="noopener">Granger</a></strong> — 3 ayrı ilanda adı geçiyor, bağımsız üst ilanlar arasında tekrarlandığı doğrulanan tek skin</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Bir kez görülen diğer isimlendirilmiş skinler (tekrar olarak doğrulanmamış): HxH Don, Yuji Itadori Yin, KOF Karina, Naruto Vale, Legend Lunox, Naruto Gusion Minato, Lightborn Granger, Annual-Star Hayabusa, Sanrio Floryn.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Değeri Gerçekte Ne Belirliyor</h2>
 <h3>Bir Mobile Legends hesabının değerini gerçekte ne belirliyor?</h3>
 <ul>
@@ -327,28 +339,28 @@
   <li>Çürümesine izin vermek yerine her sezon istikrarlı bir şekilde rütbeyi itin, çünkü Mythical Glory geçmişi ağırlık taşıyor</li>
   <li>Sadece birkaç kahraman için kozmetiklere ağır yatırım yapmadan önce kahraman koleksiyonu genişliğini tamamlayın</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Dolandırıcılıklar ve Ticaret Riskleri</h2>
 <h3>Mobile Legends hesap ticaretindeki en büyük dolandırıcılıklar nelerdir?</h3>
 <div class="risk-box">
   <p>Facebook/Discord gruplarında bir hesap için ödeme alıp asla kimlik bilgilerini teslim etmeyen sahte aracılar ve bir alıcıya geçici erişim verilen, ödeme yapılan, ardından satıcının bağlı e-postayı değiştirip onları kilitlediği "kirala-satın-al" dolandırıcılıkları. Moonton hesap ticareti anlaşmazlıklarına aracılık etmez.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Kurallar ve Ticaret Politikası</h2>
 <h3>Mobile Legends hesaplarını takas etmek kurallara aykırı mı?</h3>
 <p>Evet — Moonton'un Kullanım Şartları hesap satışlarını ve transferlerini yasaklıyor ve doğrulanan ticaret kalıcı bir yasakla sonuçlanabilir.</p>
 
 <h3>Bu ilanlar gerçekte nereden geliyor?</h3>
 <p>Eldorado.gg ve igitems.com küresel ilanlar barındırıyor; Tokopedia (Endonezya'nın en büyük pazar yeri) özellikle Mobile Legends'ın tek en büyük pazarı için yerel para biriminde aynı deseni gösteriyor — hepsi istek fiyatları, doğrulanmış satışlar değil.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Oyuncu Rehberi</h2>
 <h3>Oyuncu rehberi: gerçek bir "profesyonel ayarlar" kültürü var mı ve mevcut meta nedir?</h3>
 <p>Bu bölüm, hesabınızın yeniden satış değeri değil, kendi oyununuzu geliştirmek içindir. Free Fire veya Fortnite'ın aksine, 2+ kaynakla desteklenen isimlendirilmiş bir MLBB profesyonelinden ayrı ayrı atfedilen hassasiyet ayarları bulamadık — bulduğumuz ayar rehberleri (Gelişmiş Hedefleme, Manuel Temel Saldırı hedeflemesi, ~%60 kamera hassasiyeti, sık kullanılan yetenek düğmelerini %110-120'ye büyütme) genel topluluk tavsiyeleri, belirli bir profesyonelin yayınlanmış ayarı değil, bu yüzden bunları kanıtlanmış bir formül yerine bir başlangıç noktası olarak değerlendirin.</p>
 <p>Sağlam bir şekilde kaynaklanmış olan: <strong>Team Liquid PH</strong>, 2026'da MPL Philippines Sezon 17'yi kazandı — ligi üç kez üst üste kazanan ilk takım — <strong>Sanford "Sanford" Vinuya</strong> Final MVP'si seçildi (kaynak: <a href="https://en.wikipedia.org/wiki/2026_MPL_Philippines_season" target="_blank" rel="noopener">Wikipedia, 2026 MPL Philippines sezonu</a>). 23 Ağustos 2026 tarihli MLBB Hub Tier List'e göre, en güçlü orman seçimleri Hanzo, Nolan ve Ling'di, roam seçimi Chip ise draft'ta orman/roam koordinasyonunu yeniden şekillendirmesiyle özellikle değerliydi.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Mobile Legends hesabının tahmini değerini kontrol et</a></div>
@@ -404,6 +416,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

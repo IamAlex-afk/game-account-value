@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,6 +219,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-royal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -233,19 +233,40 @@
 <div class="back-btn"><a href="./">← Ana Sayfaya Dön</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🃏 Clash Royale Hesap Değeri</h1>
   <p style="color:var(--muted); font-size:16px;">Canlı yeniden satış pazar yeri ilanlarından gerçek fiyat dilimleri, bir Clash Royale hesabının fiyatını gerçekte ne belirlediği ve birini takas etmenin riskleri.</p>
+  <div class="g-badges">
   <p class="report-updated">Eylül 2026'da canlı pazar yeri ilanlarından güncellendi. Kaynaklar sayfanın altında listelenmiştir.</p>
   <div class="fresh-badge">🌍 En taze veriler — gerçek küresel pazar yerlerinde yapay zeka tarafından canlı araştırıldı, 12 Eylül 2026'da güncellendi</div>
+  </div>
 </section>
-
+<div class="price-range">Gerçek pazar aralığı: $0.50 – $600+ (ortalama istek ~$82-107)</div>
 <div class="fact-box">
   <span>📅 <strong>2016</strong>'da başlatıldı</span>
   <span>👥 Aylık <strong>72,2M</strong>, günlük <strong>25M</strong> aktif oyuncu</span>
   <span>📦 <strong>450M+</strong> toplam indirme</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
+  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
+  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Clash Royale hesabının tahmini değerini kontrol et</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Fiyatlar</a>
   <a href="#value">📊 Değeri Ne Belirliyor</a>
@@ -264,22 +285,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Gerçek Pazar Fiyatları</h2>
 <h3>Bir Clash Royale hesabı ne kadar eder?</h3>
-<div class="price-range">Gerçek pazar aralığı: $0.50 – $600+ (ortalama istek ~$82-107)</div>
+
 <p>Eldorado.gg'deki canlı ilanlar, bir başlangıç hesabı için $0.50'den "full max" bir hesap için $600'e kadar değişiyor. Daha büyük bir toplu pazar (igitems.com, 852 ilan), ortalama istek fiyatının son zamanlarda $81.89'dan $107.20'ye — neredeyse %31 artışla — taşındığını gösteriyor, satılan fiyatlar ise istek fiyatının yaklaşık %21 altında seyretti, yani satıcılar daha fazla isterken alıcılar sıkı pazarlık yapıyor.</p>
 
-<div class="value-calc" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
-  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
-  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
-    <button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button>
-  </div>
-</div>
+
 
 <h3>Fiyat dilimleri nasıl görünüyor?</h3>
 <table class="tier-table">
@@ -293,8 +305,8 @@
 
 <h3>Forum tabanlı bir pazar yeri yukarıdaki mağaza sitelerinden farklı rakamlar gösteriyor mu?</h3>
 <p>Çoğunlukla aynı aralık, üstte net bir aykırı değerle birlikte. EpicNPC — Eldorado.gg ve igitems.com'dan farklı, oyuncudan oyuncuya bir ticaret forumu — bu sayfanın kendi dilimleri içine oturan ilanlara sahip, örneğin $150'ye 63 maksimum kartlı bir KT16 hesabı. Ancak bu sayfanın $300 üst diliminin çok üzerinde bir ilan da taşıyor: 30.000+ elmas, nadir bir 2019 rozet kombinasyonu, 15 Seviye 16 kart ve 21 evrimle "OG 2019" bir hesap, $1.500 istiyor — dizine eklenmiş arama sonuçları aracılığıyla bulundu (EpicNPC doğrudan otomatik sayfa erişimini engelliyor, bu yüzden bunlar bizim doğrudan getirip alıntıladığımız bir sayfa değil, arama dizinlemesiyle ortaya çıkan istek fiyatları). Sadece King Tower seviyesi değil, hesap yaşı ve nadir bir orijinal-kozmetik kombinasyonu bir ilanı tipik üst dilimin bu kadar üzerine iten şey.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Değeri Gerçekte Ne Belirliyor</h2>
 <h3>Bir Clash Royale hesabının değerini gerçekte ne belirliyor?</h3>
 <p><strong>En yüksek fiyatlı 10 canlı ilanla doğrudan karşılaştırıldığında: 9'u sıfır belirli kozmetik adı vermiyordu.</strong> Başlıklar tamamen King Tower seviyesi, kupa sayısı ve evrim sayısı etrafında kuruluydu (örn. "KT 16🏆13K🏆14 EVO+(4 OSK)🔮60 Emotes"). Sadece bir ilan belirli bir emote adı verdi ("Goblin Kiss Trophy"), tekrarlanan bir desen değil, tek bir bahis. Gerçek belirleyiciler:</p>
@@ -312,28 +324,28 @@
   <li>Her sezon mevsimsel Pass Royale ödüllerini alın — bazı skinler ve emote'lar geri gelmiyor</li>
   <li>Sadece sonunda değil, sezon sıfırlaması etrafında istikrarlı bir şekilde ladder sıralamasını itin</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Dolandırıcılıklar ve Ticaret Riskleri</h2>
 <h3>Clash Royale hesap ticaretindeki en büyük dolandırıcılıklar nelerdir?</h3>
 <div class="risk-box">
   <p>Ödemeden sonra kaybolan Discord'daki sahte emanet hizmetleri ve bir satıcının bir alıcının geçici olarak giriş yapmasına izin verdiği, ardından şifreyi geri değiştirdiği ve fonlarla ortadan kaybolduğu "satın almadan önce dene" dolandırıcılıkları. Supercell her iki kayıp türüne de aracılık etmez veya geri almaz.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Kurallar ve Ticaret Politikası</h2>
 <h3>Clash Royale hesaplarını takas etmek kurallara aykırı mı?</h3>
 <p>Evet — Supercell'in Kullanım Şartları hesap satışlarını ve transferlerini yasaklıyor ve tespit edilen ticaretler kalıcı, itiraz edilemez bir yasakla sonuçlanabilir.</p>
 
 <h3>Bu ilanlar gerçekte nereden geliyor?</h3>
 <p>Eldorado.gg ve igitems.com istek fiyatlarıyla halka açık satıcı ilanları barındırıyor — mevcut gerçek pazar fiyatlandırmasının en yakın yaklaşımı, ancak doğrulanmış satışlar değil istek fiyatları.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Oyuncu Rehberi</h2>
 <h3>Oyuncu rehberi: mevcut meta nedir ve gerçekte en üst düzeyde kim oynuyor?</h3>
 <p>Bu bölüm, hesabınızın yeniden satış değeri değil, kendi oyununuzu geliştirmek içindir. Ağustos 2026 itibarıyla, <a href="https://royaleapi.com/decks/popular?lang=en&amp;type=Ladder&amp;time=7d" target="_blank" rel="noopener">RoyaleAPI</a>'nin canlı ladder verisi ve topluluk rehberleri (Gaming ProMax, TrophyCoach), Evo Royal Giant Fisherman'ı (~%56 galibiyet oranı) ve PEKKA Bridge Spam'i (ilk 1.000'de ~%61+) önde gelen desteler olarak, Hog Cycle, Goblin Barrel Bait ve Elite Barbarians Evolution'un yanında gösteriyor; "Hog 2.6 Cycle" arketipi 2017'den beri metanın sürekli bir parçası olarak kaldı. Bu yıl iki gerçek denge değişikliği metayı yeniden şekillendirdi: Haziran 2026 yaması Fireball/Rocket/Arrows/Poison/Log üzerindeki taç kulesi hasarını azalttı (büyü-cips destelerini zayıflatarak) ve Ağustos 2026 yaması üç Spirit kartının tümünü zayıflattı, böylece hiçbiri tek başına bir kuleyi indiremiyor.</p>
 <p>En yüksek kazanan rekabetçi oyuncu, kariyer kazançlarında yaklaşık $960.000 ile 3 kez CRL Dünya Şampiyonu (2022, 2024, 2025) olan <strong><a href="https://en.wikipedia.org/wiki/Mohamed_Light" target="_blank" rel="noopener">Mohamed Light</a></strong>. Clash Royale nişan alma tabanlı değil bir dokunmatik ekran zamanlama oyunu, bu yüzden hassasiyet ayarları basitçe onun rekabetçi kültürünün bir parçası değil.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Clash Royale hesabının tahmini değerini kontrol et</a></div>
@@ -389,6 +401,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

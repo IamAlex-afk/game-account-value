@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -235,6 +233,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -247,19 +247,40 @@
 <div class="back-btn"><a href="./">← Torna alla Home</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ Valore Account Minecraft</h1>
   <p style="color:var(--muted); font-size:16px;">Due mercati separati: account regolari (rank, mantelli, edizioni) e la nicchia molto più rara dei collezionisti di username corti — entrambi con prezzi reali documentati.</p>
+  <div class="g-badges">
   <p class="report-updated">Aggiornato a settembre 2026 da inserzioni marketplace live. Fonti elencate in fondo alla pagina.</p>
   <div class="fresh-badge">🌍 Dati più freschi — ricercati live dall'AI su marketplace globali reali, aggiornati il 12 settembre 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Account regolari: $0.50 – $632</div>
 <div class="fact-box">
   <span>📅 Rilascio completo <strong>18 novembre 2011</strong></span>
   <span>👥 ~<strong>212M</strong> giocatori attivi mensili (2026)</span>
   <span>📦 <strong>350M+</strong> copie vendute — videogioco più venduto di tutti i tempi (confermato da Mojang)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 Calcolatore Rapido</div>
+  <div class="vc-subtitle">Una stima approssimativa dalle fasce sopra — muovi gli slider. Il bot fornisce una stima esatta dagli screenshot. Nulla viene inserito o inviato da nessuna parte.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copiato!">Stima approssimativa, non una valutazione esatta</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Condividi risultato</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=it" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Verifica il valore stimato del tuo account Minecraft</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Prezzi</a>
   <a href="#value">📊 Cosa Determina il Valore</a>
@@ -278,22 +299,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Prezzi Reali di Mercato</h2>
 <h3>Quanto vale un account Minecraft regolare?</h3>
-<div class="price-range">Account regolari: $0.50 – $632</div>
+
 <p>Le inserzioni live su Eldorado.gg vanno da $0.50 (un semplice codice mantello Java Edition) fino a $120 per un account Hypixel "10-cape MVP+". Un secondo marketplace (igitems.com) mostra account semplici fino a ~$632 per quelli con rank Hypixel MVP+, mantelli multipli, e alti livelli Skyblock — il valore qui scala con il rank del server e il numero di mantelli, non l'username.</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 Calcolatore Rapido</div>
-  <div class="vc-subtitle">Una stima approssimativa dalle fasce sopra — muovi gli slider. Il bot fornisce una stima esatta dagli screenshot. Nulla viene inserito o inviato da nessuna parte.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copiato!">Stima approssimativa, non una valutazione esatta</span>
-    <button type="button" class="vc-share-btn">🔗 Condividi risultato</button>
-  </div>
-</div>
+
 
 <h3>Quanto vale un account Minecraft con username raro e corto?</h3>
 <p>Questa è una nicchia collezionista completamente separata e molto più piccola — il valore qui riguarda quasi interamente lo <em>username stesso</em>, non il rank del server o il progresso in-game. I marketplace della community (come PlayerUp) hanno documentato pricing coerente per lunghezza dello username e tipo di carattere, che va da migliaia a centinaia di migliaia di dollari — un mercato completamente diverso dagli account regolari sopra.</p>
@@ -323,8 +335,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">mantello Minecon 2011</a></strong> — il singolo cosmetico Minecraft raro più citato tra più fonti indipendenti; costantemente il punto di riferimento ogni volta che si parla del "mantello Minecraft più raro"</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Classifica live del marketplace mantelli per prezzo (mccapers.com, sett. 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape $3 ciascuno. I mantelli partecipante MINECON (2011-2016) e il mantello staff Mojang si trovano in un "livello museo" separato fuori da questa classifica regolare — sono raramente in vendita del tutto, il che è esattamente perché Minecon 2011 rimane il nome più referenziato piuttosto che il prezzo di listino più alto.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Cosa Determina Davvero il Valore</h2>
 <h3>Cosa determina realmente il valore di un account Minecraft?</h3>
 <ul>
@@ -340,26 +352,26 @@
   <li>Mantieni l'email originale del tuo account migrato a Microsoft intatta invece di cambiarla, dato che la storia di proprietà conta per la fiducia dell'acquirente</li>
   <li>Se possiedi un mantello Minecon, capisci che non può essere trasferito a un nuovo account — è legato permanentemente al tuo</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Truffe e Rischi di Scambio</h2>
 <h3>Quali sono le truffe più grandi nello scambio di username Minecraft?</h3>
 <div class="risk-box">
   <p>Truffe di "name-squatting" dove un venditore promette di rilasciare uno username in una data specifica perché l'acquirente lo prenda, poi lo rilascia in anticipo o per niente; e semplici truffe paga-poi-nessuna-consegna su marketplace Discord senza escrow. Poiché i trasferimenti di account Minecraft non sono ufficialmente supportati da Mojang/Microsoft, non c'è risoluzione delle dispute se uno scambio va male.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Regole e Politica di Scambio</h2>
 <h3>Scambiare account Minecraft è contro le regole di Mojang?</h3>
 <p>Sì — i Termini di Utilizzo di Minecraft vietano il trasferimento di account per denaro reale, e Mojang/Microsoft può sospendere gli account coinvolti in trasferimenti non autorizzati rilevati.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Guida Giocatore</h2>
 <h3>Guida giocatore: esiste un vero angolo "come migliorare" per Minecraft?</h3>
 <p>Questa sezione riguarda il migliorare il tuo gioco, non il valore di rivendita del tuo account. A differenza di un gioco competitivo a ladder singola, Minecraft si divide in community realmente separate con i loro propri meta reali: speedrunning e server PvP competitivi.</p>
 <p>Lo speedrunning ha una fonte autorevole (le classifiche di speedrun.com), ma la nostra ricerca ha trovato report secondari contrastanti su chi detiene attualmente il record mondiale Any% Random Seed Glitchless (RSG) — una fonte citava "lowkey" a 6:50, un'altra citava "Skycrab" a 6:39 — quindi invece di sceglierne uno, segnaliamo la discrepanza invece di affermare uno dei due come fatto. Ciò che è solido: la categoria stessa segue sempre la stessa rotta reale — trova un villaggio o un relitto per risorse iniziali, raggiungi il Nether per le bacchette di blaze, localizza la Stronghold, e finisci il combattimento dell'End, in quest'ordine.</p>
 <p>Sul lato PvP, le guide della community 2026 affermate (<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>) descrivono un vero cambiamento di meta dall'investimento puro in equipaggiamento verso posizionamento e tempismo, con Crystal PvP e Netherite Pot classificati S-tier e UHC/Axe PvP classificati A-tier nella loro tier list attuale. Piattaforme reali e attive per questo: le modalità PvP di Hypixel (Bedwars, Skywars, Duels) e le modalità pratica di Minemen Club (Nodebuff, Soup, UHC, Bridge).</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=it" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Verifica il valore stimato del tuo account Minecraft</a></div>
@@ -417,6 +429,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

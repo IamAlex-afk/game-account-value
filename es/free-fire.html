@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,6 +219,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-diamond">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -233,20 +233,41 @@
 <div class="back-btn"><a href="./">← Volver al inicio</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🔫 Valor de cuenta de Free Fire</h1>
   <p style="color:var(--muted); font-size:16px;">Rangos de precio reales de anuncios de reventa en vivo en tres regiones, qué determina realmente el precio de una cuenta de Free Fire, y los riesgos de comerciar con una.</p>
+  <div class="g-badges">
   <p class="report-updated">Actualizado en septiembre de 2026 a partir de anuncios de mercado en vivo. Fuentes al final de la página.</p>
   <div class="fresh-badge">🌍 Datos más frescos — investigados en vivo por IA en marketplaces globales reales, actualizado el 12 de septiembre de 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Rango real de mercado: $0,73 – $250 típico, hasta ~$755 en Brasil</div>
 <div class="fact-box">
   <span>📅 Lanzado el <strong>8 de diciembre de 2017</strong></span>
   <span>👥 <strong>110M</strong> mensuales, <strong>33M</strong> jugadores activos diarios</span>
   <span>🌍 Más fuerte en <strong>India, Indonesia, Brasil</strong> — #1 juego móvil en Indonesia durante años</span>
   <span>📦 <strong>1.300M+</strong> descargas</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
+  <div class="vc-title">🧮 Calculadora Rápida</div>
+  <div class="vc-subtitle">Cubre promedios globales — el propio marketplace de Brasil corre significativamente más alto, hasta ~$755, ver la nota de arriba. No se envía ni se introduce nada; el bot da una estimación exacta a partir de capturas de pantalla.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="¡Copiado!">Estimación aproximada, no una valoración exacta</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Compartir resultado</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire&utm_content=es" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Comprueba el valor estimado de tu cuenta de Free Fire</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Precios</a>
   <a href="#value">📊 Qué Determina el Valor</a>
@@ -265,22 +286,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Precios Reales de Mercado</h2>
 <h3>¿Cuánto vale una cuenta de Free Fire?</h3>
-<div class="price-range">Rango real de mercado: $0,73 – $250 típico, hasta ~$755 en Brasil</div>
+
 <p>Los anuncios en vivo en Eldorado.gg van desde $0,73 (cuentas nuevas, sin rango) hasta $250 por una cuenta de alto nivel. Un mercado agregado más grande (igitems.com, 293 anuncios) muestra un precio medio pedido de $78,32, subiendo desde $56,95 en las 14 semanas anteriores. Brasil — uno de los mercados más grandes de Free Fire — tiene sus propios anuncios en MercadoLivre que alcanzan hasta R$4.000 (~$755) por las mejores cuentas.</p>
 
-<div class="value-calc" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
-  <div class="vc-title">🧮 Calculadora Rápida</div>
-  <div class="vc-subtitle">Cubre promedios globales — el propio marketplace de Brasil corre significativamente más alto, hasta ~$755, ver la nota de arriba. No se envía ni se introduce nada; el bot da una estimación exacta a partir de capturas de pantalla.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="¡Copiado!">Estimación aproximada, no una valoración exacta</span>
-    <button type="button" class="vc-share-btn">🔗 Compartir resultado</button>
-  </div>
-</div>
+
 
 <h3>¿Cómo se ven los rangos de precio?</h3>
 <table class="tier-table">
@@ -294,8 +306,8 @@
 
 <h3>¿Un marketplace basado en foro muestra números diferentes a los de las tiendas de arriba?</h3>
 <p>Algo más alto en el extremo superior. EpicNPC — un foro de negociación directa entre jugadores, distinto de Eldorado.gg e igitems.com — tiene anuncios individuales muy por encima del bracket superior de $150-$300+ de esta página: una cuenta de Nivel 69 con 10 armas Evo pidiendo $299, una cuenta de la región MENA a $350, y una cuenta "Prime 8" a $400, encontradas mediante resultados de búsqueda indexados en septiembre de 2026 (EpicNPC bloquea el acceso automatizado directo a sus páginas, así que estos son precios de anuncio tal como aparecen en la indexación de búsqueda, no páginas que nosotros mismos abrimos y citamos directamente). La mayoría de los anuncios que encontramos allí seguían cayendo en el mismo rango de $6-$250 que los datos de las tiendas de arriba — estos ejemplos nombrados son el extremo alto visible específicamente de ese foro, no un nuevo rango típico.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Qué Determina Realmente el Valor</h2>
 <h3>¿Qué determina realmente el valor de una cuenta de Free Fire?</h3>
 <ul>
@@ -312,23 +324,23 @@
   <li>Prioriza la amplitud de la colección de personajes en lugar de gastarlo todo en las skins de un solo personaje</li>
   <li>Guarda las compras de diamantes para bundles por tiempo limitado en lugar de cosméticos rutinarios</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Estafas y Riesgos de Comercio</h2>
 <h3>¿Cuáles son las mayores estafas en la compraventa de cuentas de Free Fire?</h3>
 <div class="risk-box">
   <p>Páginas falsas de reventa en redes sociales que cobran el pago vía código QR y nunca entregan, y compradores que usan métodos de pago robados para pagarle a un vendedor, provocando un contracargo semanas después que deja al vendedor sin dinero y sin la cuenta. Garena no media en las disputas de compraventa de cuentas.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Reglas y Política de Comercio</h2>
 <h3>¿Comerciar con cuentas de Free Fire va contra las reglas?</h3>
 <p>Sí — los Términos de Servicio de Garena prohíben la venta y transferencia de cuentas, y el comercio detectado puede resultar en un baneo permanente.</p>
 
 <h3>¿De dónde vienen realmente estos anuncios?</h3>
 <p>Eldorado.gg e igitems.com alojan anuncios globales con precios pedidos; MercadoLivre (el marketplace más grande de Brasil) muestra el mismo patrón en la moneda local específicamente para uno de los mercados más grandes de Free Fire — todos son precios pedidos, no ventas confirmadas.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Guía para Jugadores</h2>
 <h3>Guía para jugadores: ¿cómo configura su sensibilidad un pro de verdad?</h3>
 <p>Esta sección es para mejorar tu propio juego, no el valor de reventa de tu cuenta. <strong><a href="https://en.wikipedia.org/wiki/Two9" target="_blank" rel="noopener">Diogenes "Two9" Inácio</a></strong>, un pro brasileño conocido por sus mecánicas de trick-shot, publicó este desglose completo de configuración (fuente: <a href="https://escharts.com/news/mastering-two9-meta" target="_blank" rel="noopener">Esports Charts</a>):</p>
@@ -340,7 +352,7 @@
   <tr><td>Mirada libre</td><td>70</td></tr>
 </table>
 <p style="font-size:13px; color:var(--muted);">Esta es la configuración personal de un pro nombrado, no una fórmula universal — el propio Two9 dice <strong>"La sensi es 20%, el entrenamiento es 80%"</strong>. Sus otras técnicas citadas: un estilo de puntería "Wait-and-Flick", resetear el retroceso cambiando de arma en medio de un combate, y colocar Gloo Walls en forma de "V" o "U" para crear múltiples ángulos de asomo en lugar de un muro plano.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire&utm_content=es" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Comprueba el valor estimado de tu cuenta de Free Fire</a></div>
@@ -397,6 +409,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

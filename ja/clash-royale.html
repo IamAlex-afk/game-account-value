@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-royal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,19 +197,40 @@
 <div class="back-btn"><a href="./">← ホームに戻る</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🃏 クラッシュ・ロワイヤルのアカウント価値</h1>
   <p style="color:var(--muted); font-size:16px;">ライブ転売マーケットプレイスの出品情報からの実際の価格帯、クラッシュ・ロワイヤルのアカウント価格を実際に決めるもの、そして取引のリスク。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月、ライブマーケットプレイスの出品情報をもとに更新。出典はページ下部に記載。</p>
   <div class="fresh-badge">🌍 最新データ — AIが実際のグローバルマーケットプレイスをライブ調査、2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">実際のマーケットプライス帯：$0.50 〜 $600+（平均希望価格~$82〜107）</div>
 <div class="fact-box">
   <span>📅 <strong>2016年</strong>ローンチ</span>
   <span>👥 月間<strong>7,220万人</strong>、デイリー<strong>2,500万人</strong>のアクティブプレイヤー</span>
   <span>📦 累計ダウンロード数<strong>4億5,000万+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
+  <div class="vc-title">🧮 クイック計算機</div>
+  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 結果を共有</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のクラッシュ・ロワイヤルアカウントの推定価値をチェック</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 価格</a>
   <a href="#value">📊 価値を決めるもの</a>
@@ -228,22 +249,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>実際のマーケット価格</h2>
 <h3>クラッシュ・ロワイヤルのアカウントはいくらの価値がある？</h3>
-<div class="price-range">実際のマーケットプライス帯：$0.50 〜 $600+（平均希望価格~$82〜107）</div>
+
 <p>Eldorado.ggのライブ出品はスターターアカウントの$0.50から「full max」アカウントの$600まで幅がある。より大規模な集計マーケット（igitems.com、出品852件）では、平均希望価格が直近$81.89から$107.20へ — 約31%上昇した一方、成約価格は希望価格を約21%下回った。つまり売り手がより高い価格を求める一方で、買い手は強気に値切っているということだ。</p>
 
-<div class="value-calc" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
-  <div class="vc-title">🧮 クイック計算機</div>
-  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
-    <button type="button" class="vc-share-btn">🔗 結果を共有</button>
-  </div>
-</div>
+
 
 <h3>価格帯はどのようになっている？</h3>
 <table class="tier-table">
@@ -259,8 +271,8 @@
 
 <h3>フォーラム型マーケットプレイスは上記のストアフロント型サイトと違う数字を示すか？</h3>
 <p>ほとんどは同じレンジだが、上限に明確な外れ値が1件ある。EpicNPC — Eldorado.ggやigitems.comとは異なるプレイヤー間取引フォーラム — の出品は、このページ自体のブラケット内に収まっているものが多い。例えばKT16・マックス化カード63枚のアカウントが$150。しかし、このページのトップブラケット$300をはるかに超える出品も1件ある：ジェム30,000+、レアな2019年バッジの組み合わせ、レベル16カード15枚、Evolution 21種を持つ「OG 2019」アカウントで希望価格$1,500 — インデックス検索結果経由で発見（EpicNPCは自動での直接ページアクセスをブロックしているため、これらは検索インデックスに表示された希望価格であり、我々が直接取得・引用したページではない）。King Towerレベルだけでなく、アカウントの経過年数とレアなオリジナルコスメティックの組み合わせが、出品を典型的なトップブラケットをはるかに超える価格に押し上げている。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>価値を実際に決めるもの</h2>
 <h3>クラッシュ・ロワイヤルのアカウントの価値を実際に決めるものは？</h3>
 <p><strong>最も高額なライブ出品トップ10を直接確認したところ、そのうち9件は特定のコスメティックを1つも名指ししていなかった。</strong>タイトルはKing Towerレベル、トロフィー数、Evolution数だけで構成されていた（例：「KT 16🏆13K🏆14 EVO+(4 OSK)🔮60 Emotes」）。1件だけが特定のエモート（「Goblin Kiss Trophy」）を名指ししていたが、これは単発の言及であり、繰り返しのパターンではない。実際の決定要因は：</p>
@@ -278,28 +290,28 @@
   <li>一部のスキンやエモートは復刻しないため、毎シーズンのPass Royaleの報酬を取り逃さない</li>
   <li>シーズンの終わりだけでなく、シーズンリセット周辺で一貫してラダーランクを伸ばす</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>詐欺と取引リスク</h2>
 <h3>クラッシュ・ロワイヤルのアカウント取引における最大の詐欺は？</h3>
 <div class="risk-box">
   <p>支払い後に姿を消すDiscord上の偽エスクローサービスと、売り手が一時的にログインさせた後パスワードを元に戻して資金とともに姿を消す「購入前お試し」詐欺。Supercellはどちらの損失も仲介・取り消しをしない。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>ルールと取引ポリシー</h2>
 <h3>クラッシュ・ロワイヤルのアカウント取引は規約違反か？</h3>
 <p>はい — SupercellのTerms of Serviceはアカウントの販売・譲渡を禁止しており、検知された取引は異議申し立て不可能な永久BANとなる可能性がある。</p>
 
 <h3>これらの出品情報は実際どこから来ているのか？</h3>
 <p>Eldorado.ggとigitems.comはどちらも希望価格付きの公開出品者リストをホストしている — 入手可能な実際のマーケット価格に最も近い近似値だが、確認された成約価格ではなく希望価格である。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>プレイヤーガイド</h2>
 <h3>プレイヤーガイド：現在のメタは？実際にトップレベルでプレイしているのは誰？</h3>
 <p>このセクションは自分自身のプレイ向上のためのものであり、アカウントの転売価値のためではない。2026年8月時点、<a href="https://royaleapi.com/decks/popular?lang=en&amp;type=Ladder&amp;time=7d" target="_blank" rel="noopener">RoyaleAPI</a>のライブラダーデータとコミュニティガイド（Gaming ProMax、TrophyCoach）は、Evo Royal Giant Fisherman（勝率~56%）とPEKKA Bridge Spam（トップ1,000で~61%+）を主要デッキとして挙げており、Hog Cycle、Goblin Barrel Bait、Elite Barbarians Evolutionもそれに続く。「Hog 2.6 Cycle」アーキタイプは2017年から継続してメタの一部であり続けている。今年は2つの実際のバランス調整がメタを再編した：2026年6月のパッチでFireball/Rocket/Arrows/Poison/Logのクラウンタワーダメージが削減され（スペルチップデッキの弱体化）、2026年8月のパッチで3種類すべてのSpiritカードが弱体化され、単体でタワーを落とせなくなった。</p>
 <p>最も稼いでいる競技プレイヤーは<strong><a href="https://en.wikipedia.org/wiki/Mohamed_Light" target="_blank" rel="noopener">Mohamed Light</a></strong>で、CRL世界選手権を3回（2022年、2024年、2025年）制し、キャリア通算獲得賞金はおよそ$960,000。クラッシュ・ロワイヤルはエイムベースではなくタッチスクリーンのタップタイミングゲームのため、感度設定は競技文化の一部にはなっていない。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のクラッシュ・ロワイヤルアカウントの推定価値をチェック</a></div>
@@ -355,6 +367,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

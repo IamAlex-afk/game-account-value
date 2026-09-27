@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -189,6 +187,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-immortal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -201,20 +201,41 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🏆 Mobile Legends账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">来自多个地区实时交易平台挂牌的真实价格数据，以及究竟是什么真正拉高或拉低价格。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">真实市场价格区间：一般$0.50 ~ $300，印度尼西亚最高可达~$605</div>
 <div class="fact-box">
   <span>📅 发布日期 <strong>2016年7月14日</strong>(Android)，2016年11月(iOS)</span>
   <span>👥 <strong>4,000万~1.1亿</strong>月活跃玩家(不同来源估算差异很大)</span>
   <span>🌍 在<strong>印度尼西亚、菲律宾、马来西亚</strong>最强势 — 主导东南亚市场</span>
   <span>📦 覆盖139个国家，安装量 <strong>15亿+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">覆盖最多400个皮肤 — 拥有800+皮肤的"超级收藏家"账号价格远高于此区间，见上方说明。不会输入或发送任何内容；机器人通过截图给出精确估值。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Mobile Legends账号估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#value">📊 价值决定因素</a>
@@ -233,22 +254,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>Mobile Legends账号值多少钱？</h3>
-<div class="price-range">真实市场价格区间：一般$0.50 ~ $300，印度尼西亚最高可达~$605</div>
+
 <p>Eldorado.gg上的实时挂牌从$0.50(全新3级小号)到拥有605个皮肤的"超级收藏家"账号的$250不等。更大的集合市场(igitems.com，1,147个挂牌)证实了一个真实的分布：当前平均要价为$68.61，其自家购买指南指出拥有300~400个皮肤的"扎实账号"售价$200~$300，而拥有800+装饰品的顶级收藏家账号售价$1,500+。在印度尼西亚——Mobile Legends最大的单一市场——Tokopedia挂牌("jual akun mobile legends")价格从Rp80,000到Rp9,570,000(约$5到约$605)不等。</p>
 
-<div class="value-calc" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">覆盖最多400个皮肤 — 拥有800+皮肤的"超级收藏家"账号价格远高于此区间，见上方说明。不会输入或发送任何内容；机器人通过截图给出精确估值。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>价格区间是什么样的？</h3>
 <table class="tier-table">
@@ -268,8 +280,8 @@
   <li><strong>PRIME <a href="https://mobile-legends.fandom.com/wiki/Granger" target="_blank" rel="noopener">Granger</a></strong> — 在3个独立挂牌中被提及，是唯一在独立顶级挂牌间被确认重复的皮肤</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">其他只出现一次的皮肤(未确认重复)：HxH Don、Yuji Itadori Yin、KOF Karina、Naruto Vale、Legend Lunox、Naruto Gusion Minato、Lightborn Granger、Annual-Star Hayabusa、Sanrio Floryn。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>什么实际决定了Mobile Legends账号的价值？</h3>
 <ul>
@@ -289,28 +301,28 @@
   <li>每个赛季都持续稳定冲段位，而不是让其掉落，因为神话尊享历史有分量</li>
   <li>在把大量资源投入到仅少数几个英雄的装饰品之前，先扩充英雄收藏的广度</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>诈骗与交易风险</h2>
 <h3>Mobile Legends账号交易中最大的诈骗是什么？</h3>
 <div class="risk-box">
   <p>Facebook/Discord群组中的虚假中间人收取账号款项后从不交付凭证，以及"先租后买"诈骗——给买家临时访问权限、收款后，卖家更改绑定邮箱并将其锁在外面。Moonton不调解账号交易纠纷。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>交易Mobile Legends账号违反规定吗？</h3>
 <p>是的——Moonton的服务条款禁止账号销售和转让，被确认的交易可能导致永久封禁。</p>
 
 <h3>这些挂牌实际来自哪里？</h3>
 <p>Eldorado.gg和igitems.com提供全球挂牌；Tokopedia(印度尼西亚最大的交易平台)在当地货币中显示了Mobile Legends最大单一市场相同的模式——都是要价，而非已确认的销售。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>玩家指南</h2>
 <h3>玩家指南：真的有"职业设置"文化吗？当前的meta是什么？</h3>
 <p>这一部分是为了提升你自己的实力，而非账号的转售价值。与Free Fire或Fortnite不同，我们未能找到有2个以上来源支撑、归属于某位具名MLBB职业选手的个人灵敏度设置——我们找到的设置指南(高级锁定、手动普攻锁定、约60%的镜头灵敏度、常用技能按钮放大到110%~120%)都是社区的一般性建议，而非某位职业选手公开的设置，所以应把它们当作起点而非已验证的公式。</p>
 <p>有可靠来源的是：Team Liquid PH在2026年赢得MPL菲律宾赛季17冠军——是该联赛首支实现三连冠的战队，Sanford "Sanford" Vinuya当选总决赛MVP(来源：Wikipedia，2026 MPL Philippines season)。截至2026年8月23日的MLBB Hub梯度榜，最强的打野选择是Hanzo、Nolan和Ling，游走位Chip则因重塑打野/游走配合而被特别看重。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Mobile Legends账号估值</a></div>
@@ -366,6 +378,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

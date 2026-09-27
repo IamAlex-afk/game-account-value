@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -229,6 +227,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-immortal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -241,20 +241,41 @@
 <div class="back-btn"><a href="./">← Zurück zur Startseite</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🏆 Mobile Legends Account-Wert</h1>
   <p style="color:var(--muted); font-size:16px;">Echte Preisdaten aus aktiven Marktangeboten über mehrere Regionen hinweg, und was den Preis tatsächlich rauf oder runter treibt.</p>
+  <div class="g-badges">
   <p class="report-updated">Aktualisiert September 2026 anhand aktiver Marktangebote. Quellen am Seitenende.</p>
   <div class="fresh-badge">🌍 Frischeste Daten — live von KI über echte globale Marktplätze recherchiert, aktualisiert am 12. September 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Echte Marktspanne: 0,50$ – 300$ typisch, bis zu ~605$ in Indonesien</div>
 <div class="fact-box">
   <span>📅 Veröffentlicht <strong>14. Juli 2016</strong> (Android), November 2016 (iOS)</span>
   <span>👥 <strong>40-110 Mio.</strong> monatlich aktive Spieler (Schätzungen variieren stark je nach Quelle)</span>
   <span>🌍 Am stärksten in <strong>Indonesien, Philippinen, Malaysia</strong> — dominant in ganz Südostasien</span>
   <span>📦 <strong>1,5 Mrd.+</strong> Installationen in 139 Ländern</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
+  <div class="vc-title">🧮 Schnellrechner</div>
+  <div class="vc-subtitle">Deckt bis zu 400 Skins ab — „Mega-Collector"-Accounts mit 800+ Skins verkaufen deutlich über dieser Spanne, siehe Hinweis oben. Es wird nichts eingegeben oder irgendwohin gesendet; der Bot liefert eine genaue Schätzung aus Screenshots.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Kopiert!">Grobe Schätzung, keine genaue Bewertung</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Ergebnis teilen</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=de" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Geschätzten Wert deines Mobile-Legends-Accounts prüfen</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Preise</a>
   <a href="#value">📊 Was den Wert bestimmt</a>
@@ -273,22 +294,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Echte Marktpreise</h2>
 <h3>Wie viel ist ein Mobile-Legends-Account wert?</h3>
-<div class="price-range">Echte Marktspanne: 0,50$ – 300$ typisch, bis zu ~605$ in Indonesien</div>
+
 <p>Live-Angebote auf Eldorado.gg reichen von 0,50$ (frische Level-3-Smurf-Accounts) bis zu 250$ für einen 605-Skin-„Mega-Collector"-Account. Ein größerer Gesamtmarkt (igitems.com, 1.147 Angebote) bestätigt eine echte Verteilung: der aktuelle durchschnittliche Angebotspreis liegt bei 68,61$, und ihr eigener Kaufguide besagt, dass ein „solider Account" mit 300-400 Skins 200$-300$ kostet, während Top-Collector-Accounts mit 800+ Kosmetika für 1.500$+ verkaufen. In Indonesien — Mobile Legends' größtem einzelnen Markt — reichen Tokopedia-Angebote („jual akun mobile legends") von Rp80.000 bis Rp9.570.000 (~5$ bis ~605$).</p>
 
-<div class="value-calc" id="vc-mobile-legends" data-game="mobile-legends" data-title="Mobile Legends">
-  <div class="vc-title">🧮 Schnellrechner</div>
-  <div class="vc-subtitle">Deckt bis zu 400 Skins ab — „Mega-Collector"-Accounts mit 800+ Skins verkaufen deutlich über dieser Spanne, siehe Hinweis oben. Es wird nichts eingegeben oder irgendwohin gesendet; der Bot liefert eine genaue Schätzung aus Screenshots.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Kopiert!">Grobe Schätzung, keine genaue Bewertung</span>
-    <button type="button" class="vc-share-btn">🔗 Ergebnis teilen</button>
-  </div>
-</div>
+
 
 <h3>Wie sehen die Preisstufen aus?</h3>
 <table class="tier-table">
@@ -306,8 +318,8 @@
   <li><strong>PRIME <a href="https://mobile-legends.fandom.com/wiki/Granger" target="_blank" rel="noopener">Granger</a></strong> — genannt in 3 separaten Angeboten, der einzige Skin, der bestätigt über unabhängige Top-Angebote hinweg wiederkehrt</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Andere jeweils einmal gesehene benannte Skins (keine bestätigten Wiederholungen): HxH Don, Yuji Itadori Yin, KOF Karina, Naruto Vale, Legend Lunox, Naruto Gusion Minato, Lightborn Granger, Annual-Star Hayabusa, Sanrio Floryn.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Was den Wert tatsächlich bestimmt</h2>
 <h3>Was bestimmt tatsächlich den Wert eines Mobile-Legends-Accounts?</h3>
 <ul>
@@ -327,28 +339,28 @@
   <li>Rang konsequent jede Saison pushen statt ihn verfallen zu lassen, da Mythical-Glory-Historie Gewicht trägt</li>
   <li>Breite der Heldensammlung abschließen, bevor man stark in Kosmetika für nur wenige Helden investiert</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Betrug &amp; Handelsrisiken</h2>
 <h3>Was sind die größten Betrugsmaschen beim Handel mit Mobile-Legends-Accounts?</h3>
 <div class="risk-box">
   <p>Gefälschte Mittelsmänner in Facebook-/Discord-Gruppen, die Zahlung für einen Account nehmen und nie Zugangsdaten liefern, sowie „Rent-to-Buy"-Betrug, bei dem einem Käufer vorübergehender Zugang gewährt wird, er zahlt, und dann der Verkäufer die verknüpfte E-Mail ändert und ihn aussperrt. Moonton vermittelt keine Streitigkeiten beim Account-Handel.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Regeln &amp; Handelsrichtlinien</h2>
 <h3>Verstößt der Handel mit Mobile-Legends-Accounts gegen die Regeln?</h3>
 <p>Ja — Moontons Nutzungsbedingungen verbieten Account-Verkäufe und -Übertragungen, und bestätigter Handel kann zu einer dauerhaften Sperre führen.</p>
 
 <h3>Woher stammen diese Angebote tatsächlich?</h3>
 <p>Eldorado.gg und igitems.com beherbergen globale Angebote; Tokopedia (Indonesiens größter Marktplatz) zeigt dasselbe Muster in der Landeswährung speziell für Mobile Legends' größten einzelnen Markt — alle sind Angebotspreise, keine bestätigten Verkäufe.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Spieler-Guide</h2>
 <h3>Spieler-Guide: Gibt es eine echte „Profi-Einstellungen"-Kultur, und was ist die aktuelle Meta?</h3>
 <p>Dieser Abschnitt dient der Verbesserung deines eigenen Spiels, nicht des Wiederverkaufswerts deines Accounts. Anders als bei Free Fire oder Fortnite konnten wir keine individuell zugeschriebenen Sensitivitäts-Einstellungen von einem namentlich genannten MLBB-Profi finden, die durch 2+ Quellen belegt sind — die von uns gefundenen Einstellungsguides (Advanced Targeting, manuelles Basic-Attack-Targeting, ~60% Kamerasensitivität, Vergrößerung häufig genutzter Skill-Buttons auf 110-120%) sind allgemeine Community-Empfehlungen, kein veröffentlichtes Setup eines bestimmten Profis, daher als Ausgangspunkt behandeln, nicht als bewährte Formel.</p>
 <p>Solide belegt ist: <strong>Team Liquid PH</strong> gewann 2026 die MPL Philippines Season 17 — das erste Team mit einem Three-Peat der Liga — mit <strong>Sanford „Sanford" Vinuya</strong> als Finals-MVP (Quelle: <a href="https://en.wikipedia.org/wiki/2026_MPL_Philippines_season" target="_blank" rel="noopener">Wikipedia, 2026 MPL Philippines season</a>). Stand MLBB Hub Tier List vom 23. August 2026 waren die stärksten Jungle-Picks Hanzo, Nolan und Ling, wobei Roam-Pick Chip speziell für die Neugestaltung der Jungle-/Roam-Koordination im Draft geschätzt wurde.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_mobile_legends&utm_campaign=mobile-legends&utm_content=de" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Geschätzten Wert deines Mobile-Legends-Accounts prüfen</a></div>
@@ -404,6 +416,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

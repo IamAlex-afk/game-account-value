@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -190,6 +188,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -202,19 +202,40 @@
 <div class="back-btn"><a href="./">← กลับหน้าแรก</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚗️ มูลค่าบัญชี Genshin Impact</h1>
   <p style="color:var(--muted); font-size:16px;">ตลาดซื้อขายบัญชีจริงมีอยู่จริง — รวมถึงหมวด "whale account" เฉพาะทาง — บวกกับตัวเลขยอดใช้จ่ายตลอดชีพที่ยืนยันแล้วซึ่งเป็นคนละตัวเลขกับที่ผู้ซื้อจ่ายจริง</p>
+  <div class="g-badges">
   <p class="report-updated">อัปเดตกันยายน 2026 จากรายการขายจริงบนตลาดซื้อขาย แหล่งข้อมูลอยู่ด้านล่างหน้า</p>
   <div class="fresh-badge">🌍 ข้อมูลล่าสุด — AI วิจัยตลาดซื้อขายทั่วโลกจริงแบบเรียลไทม์ อัปเดต 12 กันยายน 2026</div>
+  </div>
 </section>
-
+<div class="price-range">บัญชีเริ่มต้น: $5 - $60 · บัญชี Whale: $30 - $9,000</div>
 <div class="fact-box">
   <span>📅 เปิดตัว <strong>28 กันยายน 2020</strong> — หนึ่งในการเปิดตัวทั่วโลกพร้อมกันที่ใหญ่ที่สุดในประวัติศาสตร์เกม</span>
   <span>👥 ผู้เล่นต่อเดือน <strong>16-24 ล้านคน</strong> (2026) รายได้ตลอดอายุ <strong>$4.8 พันล้าน</strong></span>
   <span>🌍 แข็งแกร่งสุดใน <strong>จีน ญี่ปุ่น เกาหลีใต้ รัสเซีย อินเดีย</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
+  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
+  <div class="vc-subtitle">ค่าประมาณคร่าวๆ จากช่วงราคาข้างต้น — เลื่อนแถบเลื่อน บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ ไม่มีการกรอกหรือส่งข้อมูลใดๆ</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Genshin Impact ของคุณ</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 ราคา</a>
   <a href="#value">📊 ปัจจัยกำหนดมูลค่า</a>
@@ -233,22 +254,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>ราคาตลาดจริง</h2>
 <h3>บัญชี Genshin Impact มีมูลค่าเท่าไหร่?</h3>
-<div class="price-range">บัญชีเริ่มต้น: $5 - $60 · บัญชี Whale: $30 - $9,000</div>
+
 <p>Genshin Impact มีตลาดซื้อขายบัญชีจริงที่ยังใช้งานอยู่ Eldorado.gg แยกเป็นสองหมวดหมู่: บัญชีทั่วไป/reroll (ได้ตัวละครเริ่มต้นผ่านการ reroll บัญชีใหม่ ราคา $5-$60 ตามภูมิภาคและ 5-star เริ่มต้น) และหมวด <em>whale account</em> เฉพาะทาง ซึ่งราคาอยู่ระหว่าง $30 ถึง $8,995 สำหรับรายการบนสุด (ตัวละคร C6 20 ตัว อาวุธ R5 8 ชิ้น) แหล่งข้อมูลรวมที่สาม (igitems.com 442 รายการ) แสดงว่าบัญชีทั่วไปมีราคาเฉลี่ยประมาณ $147 ในปัจจุบัน เพิ่มขึ้นอย่างรวดเร็วในช่วง 14 สัปดาห์ที่ผ่านมา</p>
 
-<div class="value-calc" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
-  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
-  <div class="vc-subtitle">ค่าประมาณคร่าวๆ จากช่วงราคาข้างต้น — เลื่อนแถบเลื่อน บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ ไม่มีการกรอกหรือส่งข้อมูลใดๆ</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
-    <button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button>
-  </div>
-</div>
+
 
 <h3>ราคาตลาดกับตัวเลข "สตรีมเมอร์จ่าย $100K" ต่างกันอย่างไร?</h3>
 <p>นี่คือตัวเลขสองแบบที่ตอบคำถามคนละคำถาม ราคารายการบนสุด $8,995 คือสิ่งที่ผู้ซื้อจ่ายจริงวันนี้เพื่อได้มาซึ่งบัญชี whale เฉพาะตัวในตลาดเปิด ในขณะที่ตัวเลข $100,000-$150,000 ด้านล่างคือยอดใช้จ่ายตลอดชีพที่รายงานเอง — ทุกอย่างที่ผู้เล่นทุ่มลงไปกับการสุ่มกาชาตลอดหลายปี — ซึ่งไม่เหมือนกับมูลค่าขายต่อ เพราะราคาขายต่อของบัญชีสะท้อนสิ่งที่ผู้ซื้อรายอื่นเต็มใจจ่ายในปัจจุบัน ไม่ใช่สิ่งที่ใช้จ่ายไปเพื่อสร้างมันขึ้นมา</p>
@@ -279,8 +291,8 @@
   <li><strong><a href="https://genshin-impact.fandom.com/wiki/Neuvillette" target="_blank" rel="noopener">Neuvillette</a>, <a href="https://genshin-impact.fandom.com/wiki/Nefer" target="_blank" rel="noopener">Nefer</a>, <a href="https://genshin-impact.fandom.com/wiki/Flins" target="_blank" rel="noopener">Flins</a>, <a href="https://genshin-impact.fandom.com/wiki/Yelan" target="_blank" rel="noopener">Yelan</a>, <a href="https://genshin-impact.fandom.com/wiki/Citlali" target="_blank" rel="noopener">Citlali</a></strong> — รายการละ 3 ครั้ง</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">นี่คือตัวละครตลาดบนสุดปัจจุบัน ไม่ใช่ลิสต์ถาวร — เมต้าของ Genshin เปลี่ยนตามแบนเนอร์ใหม่แต่ละครั้ง ควรตรวจสอบใหม่ก่อนสมมติว่าจะยังเหมือนเดิมในอีกหนึ่งปี</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>ปัจจัยที่กำหนดมูลค่าจริงๆ</h2>
 <h3>อะไรที่ทำให้บัญชี Genshin Impact แพงในการสร้าง?</h3>
 <ul>
@@ -297,25 +309,25 @@
   <li>เก็บ Primogem ไว้สำหรับแบนเนอร์ที่คุณอยากเล่นจริงๆ แทนที่จะสุ่มตามอารมณ์</li>
   <li>แบนเนอร์อาวุธมักให้ผลตอบแทนที่รับประกันได้ดีกว่าแบนเนอร์ตัวละคร หากคุณกำลังปรับมูลค่าต่อเพชรที่ใช้ให้คุ้มค่าที่สุด</li>
 </ul>
-
-<span id="risk" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="risk" class="anchor-target"></span>
 <h2>ความเสี่ยงนอกเหนือจากการเทรด</h2>
 <h3>ความเสี่ยงจริงๆ คืออะไรถ้าฉันพยายามซื้อหรือขายบัญชี Genshin Impact?</h3>
 <div class="risk-box">
   <p>ทีมความปลอดภัยบัญชีของ HoYoverse ตรวจจับการล็อกอินจากอุปกรณ์/สถานที่ใหม่หลังการโอนอย่างจริงจัง และสามารถระงับบัญชีถาวรได้ — โดยไม่มีการกู้คืน เพราะประวัติการชำระเงินที่เชื่อมโยงและการยืนยันตัวตนส่วนบุคคลทำให้การอุทธรณ์แทบเป็นไปไม่ได้เลยหากยืนยันว่ามีการโอน นี่เป็นการบังคับใช้ที่เข้มงวดกว่าเกมส่วนใหญ่ในรายงานนี้</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>กฎและนโยบายการเทรด</h2>
 <h3>การซื้อหรือขายบัญชี Genshin Impact ผิดกฎหรือไม่?</h3>
 <p>ใช่ ข้อกำหนดของ HoYoverse ห้ามการโอนบัญชีและการเทรดด้วยเงินจริงอย่างชัดเจน และกฎนี้ถูกบังคับใช้อย่างจริงจังกว่าเกมมือถือส่วนใหญ่</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>คู่มือผู้เล่น</h2>
 <h3>คู่มือผู้เล่น: ทีมคอมโปที่ผู้เล่นมีประสบการณ์แนะนำจริงๆ คืออะไร?</h3>
 <p>ส่วนนี้เพื่อพัฒนาการสร้างทีมของคุณเอง ไม่ใช่มูลค่าขายต่อของบัญชี นี่เป็นเกมแบบหมุนเวียน/ทีมคอมโปมากกว่าเกมเน้นการเล็ง ดังนั้นความรู้ "เมต้า" ที่มีประโยชน์คือเรื่องการจัดทีม สำหรับ <a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">Keqing</a> (GameWith, Genshin-Builds อัปเดตสิงหาคม 2026) ทีม Aggravate ที่เอื้อต่อผู้เล่นฟรีและมีการบันทึกไว้อย่างกว้างขวางจับคู่ Keqing (ดาเมจหลัก) กับ Fischl (Electro นอกสนาม) Collei (Dendro นอกสนาม) และ Zhongli (ซัพพอร์ตโล่) — ไม่มีตัวไหนใน 4 ตัวนี้ต้องการการลงทุนระดับ whale</p>
 <p>สำหรับ <a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">Mavuika</a> โดยเฉพาะ ที่เรากล่าวถึงมูลค่าข้างต้น ทีม whale-tier ที่ถูกอ้างถึงมากที่สุด (Icy Veins, GameWith) คือคอมโป Melt: Mavuika, Citlali (ซัพพอร์ต Cryo/ลด Pyro RES), Iansan และ Bennett ฝั่งผู้เล่นฟรี คู่มือหลายแหล่งระบุว่าร่าง Pyro ของ Traveler เป็นตัวแทนที่เล่นได้จริงในทีม Mavuika สไตล์ Overload — เป็นหลักฐานว่าคอมโปที่ "ดีพอ" สำหรับตัวละครเหล่านี้ไม่จำเป็นต้องมีซัพพอร์ต 5-star เสมอไป</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Genshin Impact ของคุณ</a></div>
@@ -372,6 +384,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

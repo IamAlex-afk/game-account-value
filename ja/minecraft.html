@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -196,6 +194,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -208,19 +208,40 @@
 <div class="back-btn"><a href="./">← ホームに戻る</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ マイクラのアカウント価値</h1>
   <p style="color:var(--muted); font-size:16px;">2つの別々の市場：通常アカウント（ランク、ケープ、エディション）と、はるかにレアな短いユーザー名のコレクターニッチ — どちらも実際に記録された価格を持つ。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月、ライブマーケットプレイスの出品情報をもとに更新。出典はページ下部に記載。</p>
   <div class="fresh-badge">🌍 最新データ — AIが実際のグローバルマーケットプレイスをライブ調査、2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">通常アカウント：$0.50 〜 $632</div>
 <div class="fact-box">
   <span>📅 正式リリース <strong>2011年11月18日</strong></span>
   <span>👥 月間アクティブプレイヤー約<strong>2億1,200万人</strong>（2026年）</span>
   <span>📦 累計販売本数<strong>3億5,000万本+</strong> — 史上最も売れたビデオゲーム（Mojang確認済み）</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 クイック計算機</div>
+  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 結果を共有</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のマイクラアカウントの推定価値をチェック</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 価格</a>
   <a href="#value">📊 価値を決めるもの</a>
@@ -239,22 +260,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>実際のマーケット価格</h2>
 <h3>通常のマイクラアカウントはいくらの価値がある？</h3>
-<div class="price-range">通常アカウント：$0.50 〜 $632</div>
+
 <p>Eldorado.ggのライブ出品は、$0.50（素のJava Editionケープコード）から「10ケープMVP+」Hypixelアカウントの$120まで幅がある。2つ目のマーケットプレイス（igitems.com）では、Hypixel MVP+ランク、複数ケープ、高いSkyblockレベルを持つ普通のアカウントが~$632まで見られる — ここでの価値はユーザー名ではなく、サーバーランクとケープ数に応じて変動する。</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 クイック計算機</div>
-  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
-    <button type="button" class="vc-share-btn">🔗 結果を共有</button>
-  </div>
-</div>
+
 
 <h3>レアな短いユーザー名のマイクラアカウントはいくらの価値がある？</h3>
 <p>これは完全に別の、はるかに小さいコレクターのニッチだ — ここでの価値はサーバーランクやゲーム内進行度ではなく、ほぼ完全に<em>ユーザー名自体</em>についてのものだ。コミュニティマーケットプレイス（PlayerUpなど）は、ユーザー名の長さと文字種による一貫した価格設定を記録しており、数千ドルから数十万ドルに及ぶ — 上記の通常アカウントとはまったく別の市場だ。</p>
@@ -284,8 +296,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">Minecon 2011ケープ</a></strong> — 複数の独立したソースを通じて最も引用されるレアなマイクラコスメティック。「最もレアなマイクラケープ」の話題が出るたび、一貫して基準点となる</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">ライブケープマーケットプレイスの価格ランキング（mccapers.com、2026年9月）：<a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a>（TwitchCon 2026）$873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape 各$3。MINECON参加者ケープ（2011〜2016年）とMojangスタッフケープは、この通常ランキングの外にある別枠の「博物館ティア」に位置する — ほとんど売りに出されることがなく、それこそがMinecon 2011が最高のリスト価格ではなく最も参照される名前であり続ける理由だ。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>価値を実際に決めるもの</h2>
 <h3>マイクラアカウントの価値を実際に決めるものは？</h3>
 <ul>
@@ -301,26 +313,26 @@
   <li>所有履歴が買い手の信頼にとって重要なため、Microsoft移行済みアカウントのオリジナルのメールアドレスを変更せずそのまま維持する</li>
   <li>Minecraftケープを所有している場合、それは新しいアカウントに移転できないことを理解しておく — 永久にあなたのアカウントに紐づいている</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>詐欺と取引リスク</h2>
 <h3>マイクラのユーザー名取引における最大の詐欺は？</h3>
 <div class="risk-box">
   <p>「Name-squatting」詐欺 — 売り手が特定の日にユーザー名を解放すると約束し買い手に取得させると言いながら、早めに他の誰かに解放するか、まったく解放しない。そして、エスクローなしのDiscordマーケットプレイスでの、支払い後に商品が届かないという単純な詐欺。マイクラのアカウント移転はMojang/Microsoftによって公式にサポートされていないため、取引がうまくいかなかった場合の紛争解決手段がない。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>ルールと取引ポリシー</h2>
 <h3>マイクラアカウントの取引はMojangの規約違反か？</h3>
 <p>はい — MinecraftのTerms of Useは実際の金銭でのアカウント移転を禁止しており、Mojang/Microsoftは検知された無許可の移転に関与したアカウントを停止できる。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>プレイヤーガイド</h2>
 <h3>プレイヤーガイド：マイクラに実際の「上達方法」はあるのか？</h3>
 <p>このセクションは自分自身のプレイ向上のためのものであり、アカウントの転売価値のためではない。単一のラダー型競技ゲームとは異なり、マイクラはそれぞれ本物のメタを持つ真に別々のコミュニティに分かれている：スピードランと競技PvPサーバーだ。</p>
 <p>スピードランには権威あるソース（speedrun.comのリーダーボード）があるが、我々自身の調査では、現在誰がAny% Random Seed Glitchless（RSG）の世界記録を保持しているかについて矛盾する二次報告に行き当たった — あるソースは「lowkey」が6:50、別のソースは「Skycrab」が6:39と引用していた — そこでどちらか一方を選ぶのではなく、事実として断言せずこの食い違いをそのまま示す。確かなのは：このカテゴリー自体は常に同じ実際のルートをたどる — 序盤資源のために村か難破船を見つけ、ブレイズロッドのためにネザーへ行き、要塞を見つけ、その順でエンドの戦いを終える。</p>
 <p>PvP側では、確立された2026年のコミュニティガイド（<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>）が、純粋なギア投資からポジショニングとタイミングへの本物のメタシフトを説明しており、現在のティアリストではCrystal PvPとNetherite PotがSティア、UHC/Axe PvPがAティアにランクされている。実際に稼働しているプラットフォーム：HypixelのPvPモード（Bedwars、Skywars、Duels）とMinemen Clubの練習モード（Nodebuff、Soup、UHC、Bridge）。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分のマイクラアカウントの推定価値をチェック</a></div>
@@ -378,6 +390,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>
