@@ -757,4 +757,9 @@ html body .article-body > h2:not(:first-child) { margin-top: 52px; }
   .wm-mine th { box-shadow: none; }
   .wm-mine { border-color: var(--line-hi) !important; }
 }
+.g-world h3 { margin-top: 34px !important; }
+.wm-small { min-width: 0; }
+.wm-rank { display: inline-block; min-width: 26px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.wm-miss { font-size: 15px !important; color: #FDE68A !important; margin: -6px 0 14px; }
+@media (max-width: 760px) { .wm-table.wm-small tr { display: grid; grid-template-columns: 1fr auto; } .wm-table.wm-small th { grid-column: 1 / -1; } }
 

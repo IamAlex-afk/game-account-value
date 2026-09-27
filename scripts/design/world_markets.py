@@ -10,6 +10,8 @@ Usage: python scripts/design/world_markets.py brawl-stars
 import os, re, sys, glob, collections, importlib.util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from world_extra import render_extra
 spec = importlib.util.spec_from_file_location('r', os.path.join(HERE, 'rollout.py'))
 R = importlib.util.module_from_spec(spec); spec.loader.exec_module(R)
 
@@ -194,7 +196,8 @@ def render(game, lang, game_name):
             '<p class="wm-intro">' + t['intro'] + '</p>\n'
             '<div class="wm-wrap"><table class="wm-table"><thead><tr><th scope="col">' + c[0] + '</th><th scope="col">' + c[1] + '</th><th scope="col">' + c[2] +
             '</th><th scope="col">' + c[3] + '</th><th scope="col">' + c[4] + '</th></tr></thead><tbody>' + rows + '</tbody></table></div>\n'
-            '<p class="wm-note">' + t['note'] + ' ' + t['checked'] + ': <time datetime="' + CHECKED + '">' + CHECKED + '</time>.</p>\n</section>\n')
+            '<p class="wm-note">' + t['note'] + ' ' + t['checked'] + ': <time datetime="' + CHECKED + '">' + CHECKED + '</time>.</p>\n' +
+            render_extra(game, lang, game_name) + '\n</section>\n')
 
 def apply(game):
     names = {'brawl-stars': 'Brawl Stars'}
