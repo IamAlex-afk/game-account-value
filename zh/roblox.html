@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -179,8 +177,10 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
-<body>
+<body class="theme-studs">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
@@ -191,20 +191,41 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🟦 Roblox账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">来自转售交易平台的真实挂牌信息、收藏级道具持有的独立世界，以及交易账号本身的风险。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">交易平台价格区间：$0.50 ~ $60（特定experience账号最高可达~$800）</div>
 <div class="fact-box">
   <span>📅 发布日期 <strong>2006年9月1日</strong></span>
   <span>👥 月活跃用户 <strong>3.818亿</strong>，日活跃 <strong>1.44亿</strong></span>
   <span>🌍 在<strong>亚太</strong>、<strong>欧洲</strong>、<strong>北美</strong>最强势</span>
   <span>📦 已注册账号 <strong>15亿+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-roblox" data-game="roblox" data-title="Roblox">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">包含下方3件稀有道具（Headless按Eldorado.gg真实挂牌计算；Korblox和Violet Valkyrie按当前Robux转售价折算其Robux成本；Robux余额也计入）。其他Dominus/稀有道具未建模——参见上方"Limiteds市场"。不会输入或发送任何内容；机器人通过截图给出精确估值。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Roblox账号估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#limiteds">🏆 Limiteds</a>
@@ -223,24 +244,15 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>Roblox账号实际值多少钱？</h3>
-<div class="price-range">交易平台价格区间：$0.50 ~ $60（特定experience账号最高可达~$800）</div>
+
 <p>尽管Roblox规则禁止，Roblox账号仍在第三方交易平台上实际交易。在Eldorado.gg上，实时挂牌价格从$0.50（2007~2015年注册、没有明显进度的普通账号）到干净4字母用户名的$59.99不等。在igitems.com上，围绕特定高需求experience构建的账号——比如满级的"Pet Simulator 99"或高级Blox Fruits账号——挂牌价可达~$800。大多数与特定稀有experience无关的挂牌，售价远低于$25。</p>
 
 <p>Headless Horseman是「低于$25」规律的最大例外。2026年9月26日，Eldorado.gg上有337个Headless账号挂牌；所显示挂牌的中间一半要价$400–700（多数也包含Korblox），另带Violet Valkyrie的账号挂牌价为$750–1,500。余额中的Robux也有转售价值：Eldorado.gg卖家的要价为每Robux $0.0065–0.0075，而Roblox官方DevEx兑现汇率为$0.0038。</p>
 
-<div class="value-calc" id="vc-roblox" data-game="roblox" data-title="Roblox">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">包含下方3件稀有道具（Headless按Eldorado.gg真实挂牌计算；Korblox和Violet Valkyrie按当前Robux转售价折算其Robux成本；Robux余额也计入）。其他Dominus/稀有道具未建模——参见上方"Limiteds市场"。不会输入或发送任何内容；机器人通过截图给出精确估值。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>人们实际在哪里买卖Roblox账号？</h3>
 <p>Eldorado.gg和igitems.com等第三方交易平台提供公开的账号挂牌信息，标明期望售价，并按账号年限、用户名、Robux余额，以及账号围绕哪个具体游戏/experience构建来排序。这直接反驳了"不存在交易市场"的说法——只是不如Steam自己的交易系统那么显眼，因为Roblox的服务条款禁止此类交易，这些平台作为第三方在Roblox控制范围之外运营。</p>
@@ -258,8 +270,8 @@
   <li><strong>Adopt Me的宠物和Bucks货币</strong> — 前10挂牌中2个完全围绕这一个experience的经济系统构建</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">在另一个平台(igitems.com)上，见过的单一最高价挂牌是一个Pet Simulator 99"终局"账号(~$800)——未在该平台前10挂牌中确认为重复模式，但是目前发现的最高experience专属数字。</p>
-
-<span id="limiteds" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="limiteds" class="anchor-target"></span>
 <h2>Limiteds市场</h2>
 <h3>什么是Limiteds市场，Limited实际如何定价？</h3>
 <p>Roblox有一个独立的、有数十年历史的"Limiteds"(不再新发售的装饰道具)交易经济体系，几乎完全独立于上述账号售卖交易平台之外运行。社区标准追踪工具Rolimons.com为同一件道具定义了三个不同数字——混淆它们是最常见的新手错误：</p>
@@ -284,8 +296,8 @@
 <div class="risk-box">
   <p><strong>网站提醒：</strong>本次调查中我们发现一个仿冒Rolimons名称和品牌的相似域名。只直接使用<strong>rolimons.com</strong>——绝不使用拼写相似的仿冒网站，尤其是通过广告或他人发送的链接访问到的。</p>
 </div>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>什么实际决定了Roblox账号的价值？</h3>
 <ul>
@@ -303,22 +315,22 @@
   <li>将价值分散到几件不同的Limiteds上，而不是集中在一件道具上，因为Roblox偶尔会下架或降低个别道具的价值</li>
   <li>把这当作有真实风险的收藏爱好，而非投资 — Limited道具价值流动性差，可能剧烈波动</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>诈骗与交易风险</h2>
 <h3>围绕Roblox账号和道具的最大诈骗是什么？</h3>
 <div class="risk-box">
   <p>账号和道具交易诈骗在Roblox社区中极为常见：虚假"中间人"交易服务、克隆Roblox登录页面窃取凭证的钓鱼网站，以及索要账号访问权限的"免费Robux生成器"诈骗。由于Roblox自身服务条款禁止账号转让，交易诈骗受害者没有追索途径——Roblox不会恢复被骗账号或撤销道具交易，如果Roblox检测到未经授权的转让，被骗账号本身也会保持封禁状态。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>买卖Roblox账号违反规定吗？</h3>
 <p>是的。Roblox服务条款明确禁止转让账号所有权及以真实货币交易账号。涉及被检测到的转让的账号可能被永久封禁，买卖双方均无申诉流程。</p>
 
 <h3>为什么Roblox账号价格看起来比其他游戏低这么多？</h3>
 <p>大多数Roblox账号没有像Clash of Clans或Free Fire那样驱动价值的"进度"——Roblox账号的价值集中在特定道具、特定experience的进度，或用户名上，而非整体等级。这就是为什么大部分挂牌都聚集在$25以下，只有一小部分特定账号(稀有用户名、高需求experience进度)能达到数百美元的长尾。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Roblox账号估值</a></div>
@@ -375,6 +387,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

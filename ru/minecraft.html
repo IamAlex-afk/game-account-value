@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -233,6 +231,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -245,19 +245,40 @@
 <div class="back-btn"><a href="./">← На главную</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ Стоимость аккаунта Minecraft</h1>
   <p style="color:var(--muted); font-size:16px;">Два отдельных рынка: обычные аккаунты (ранги, накидки, редакции) и намного более редкая коллекционная ниша коротких никнеймов — оба с реальными задокументированными ценами.</p>
+  <div class="g-badges">
   <p class="report-updated">Обновлено в сентябре 2026 по живым листингам маркетплейсов. Источники — в конце страницы.</p>
   <div class="fresh-badge">🌍 Самые свежие данные — собраны ИИ на реальных площадках по всему миру, обновлено 12 сентября 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Обычные аккаунты: $0.50 – $632</div>
 <div class="fact-box">
   <span>📅 Полный релиз <strong>18 ноября 2011 года</strong></span>
   <span>👥 <strong>~212M</strong> активных игроков в месяц (2026)</span>
   <span>📦 <strong>350M+</strong> проданных копий — самая продаваемая видеоигра всех времён (подтверждено Mojang)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 Быстрый калькулятор</div>
+  <div class="vc-subtitle">Прикидка по диапазонам выше — двигайте ползунки. Точную оценку по скриншотам даёт бот. Ничего не вводится и никуда не отправляется.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Скопировано!">Ориентировочно, не точная оценка</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Поделиться результатом</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ru" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Оценить свой аккаунт Minecraft</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Цены</a>
   <a href="#value">📊 Ценность</a>
@@ -276,23 +297,14 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Реальные цены на рынке</h2>
 <h3>Сколько реально стоит обычный аккаунт Minecraft?</h3>
-<div class="price-range">Обычные аккаунты: $0.50 – $632</div>
+
 
 <p>Живые листинги на Eldorado.gg идут от $0.50 (обычный код накидки для Java Edition) до $120 за аккаунт Hypixel с «10 накидками MVP+». Второй маркетплейс (igitems.com) показывает обычные аккаунты до ~$632 для тех, у кого ранг MVP+ на Hypixel, несколько накидок и высокий уровень Skyblock — стоимость здесь зависит от ранга на сервере и количества накидок, а не от никнейма.</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 Быстрый калькулятор</div>
-  <div class="vc-subtitle">Прикидка по диапазонам выше — двигайте ползунки. Точную оценку по скриншотам даёт бот. Ничего не вводится и никуда не отправляется.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Скопировано!">Ориентировочно, не точная оценка</span>
-    <button type="button" class="vc-share-btn">🔗 Поделиться результатом</button>
-  </div>
-</div>
+
 
 <h3>Сколько реально стоит редкий короткий никнейм Minecraft?</h3>
 <p>Это совершенно отдельная, гораздо меньшая коллекционная ниша — стоимость здесь почти полностью определяется самим <em>никнеймом</em>, а не рангом на сервере или игровым прогрессом. Комьюнити-маркетплейсы (например, PlayerUp) задокументировали стабильные цены по длине никнейма и типу символов — от тысяч до сотен тысяч долларов — совершенно другой рынок, отличный от обычных аккаунтов выше.</p>
@@ -320,8 +332,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">Накидка Minecon 2011</a></strong> — самый цитируемый редкий предмет Minecraft среди множества независимых источников; постоянно упоминается как эталон, когда речь заходит о «самой редкой накидке Minecraft»</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Живой рейтинг накидок по цене (mccapers.com, сентябрь 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape по $3. Накидки участников MINECON (2011-2016) и накидка сотрудников Mojang находятся в отдельном «музейном уровне» вне этого обычного рейтинга — их почти никогда не продают, именно поэтому Minecon 2011 остаётся самым упоминаемым именем, а не самой высокой ценой в списке.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Что реально определяет ценность</h2>
 <h3>Что реально определяет стоимость аккаунта Minecraft?</h3>
 <ul>
@@ -337,26 +349,26 @@
   <li>Не менять исходную почту мигрированного на Microsoft аккаунта — история владения важна для доверия покупателя</li>
   <li>Если у тебя есть накидка Minecon, помни, что её нельзя перенести на новый аккаунт — она навсегда привязана к твоему</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Обманы и риски торговли</h2>
 <h3>Какие самые частые обманы при торговле никнеймами Minecraft?</h3>
 <div class="risk-box">
   <p>Обман «захват никнейма», когда продавец обещает освободить никнейм в определённую дату для покупателя, а сам забирает его раньше или не освобождает вовсе; и простой обман «оплата без доставки» на Discord-маркетплейсах без эскроу. Поскольку передача аккаунтов Minecraft официально не поддерживается Mojang/Microsoft, разрешения споров при неудачной сделке нет.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Правила и политика торговли</h2>
 <h3>Нарушает ли правила Mojang торговля аккаунтами Minecraft?</h3>
 <p>Да — условия использования Minecraft запрещают передачу аккаунтов за реальные деньги, и Mojang/Microsoft может заблокировать аккаунты, замеченные в неавторизованной передаче.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Гайд для игроков</h2>
 <h3>Гайд для игроков: есть ли реальный угол «как играть лучше» для Minecraft?</h3>
 <p>Этот раздел — про улучшение своей игры, а не стоимость аккаунта на продажу. В отличие от игр с единой рейтинговой лестницей, Minecraft делится на по-настоящему отдельные сообщества со своей реальной метой: спидраннинг и конкурентные PvP-серверы.</p>
 <p>У спидраннинга есть авторитетный источник (таблицы лидеров speedrun.com), но в нашем собственном исследовании мы наткнулись на противоречащие друг другу второстепенные источники о том, кто реально держит текущий мировой рекорд в категории Any% Random Seed Glitchless (RSG) — один источник называет «lowkey» с 6:50, другой — «Skycrab» с 6:39 — поэтому вместо того чтобы выбрать один вариант, мы отмечаем это расхождение, а не выдаём один из них за факт. Что точно устойчиво: сам маршрут категории всегда один и тот же — найти деревню или обломки корабля для ранних ресурсов, попасть в Нижний мир за жезлами ифрита, найти Крепость и завершить бой в Энде, именно в этом порядке.</p>
 <p>Со стороны PvP авторитетные гайды сообщества 2026 года (<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>) описывают реальный сдвиг меты от чистых вложений в снаряжение к позиционированию и таймингу: Crystal PvP и Netherite Pot ранжированы как S-тир, а UHC/Axe PvP — как A-тир в их текущем тир-листе. Реальные, действующие платформы для этого: PvP-режимы Hypixel (Bedwars, Skywars, Duels) и практика-режимы Minemen Club (Nodebuff, Soup, UHC, Bridge).</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ru" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Оценить свой аккаунт Minecraft</a></div>
@@ -414,6 +426,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

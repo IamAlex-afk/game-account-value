@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -190,6 +188,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -202,19 +202,40 @@
 <div class="back-btn"><a href="./">← 홈으로</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚗️ 원신 계정 가치</h1>
   <p style="color:var(--muted); font-size:16px;">전용 "whale 계정" 카테고리를 포함한 실제 계정 마켓플레이스가 존재한다. 더불어 구매자가 실제로 지불하는 금액과는 완전히 별개인, 검증된 평생 과금액도 소개한다.</p>
+  <div class="g-badges">
   <p class="report-updated">2026년 9월, 실시간 마켓플레이스 매물 정보를 바탕으로 업데이트. 출처는 페이지 하단에 명시.</p>
   <div class="fresh-badge">🌍 최신 데이터 — AI가 실제 글로벌 마켓플레이스를 실시간 조사, 2026년 9월 12일 업데이트</div>
+  </div>
 </section>
-
+<div class="price-range">스타터 계정: $5 ~ $60 · whale 계정: $30 ~ $9,000</div>
 <div class="fact-box">
   <span>📅 출시 <strong>2020년 9월 28일</strong> — 게임 역사상 최대급 동시 글로벌 출시 중 하나</span>
   <span>👥 월간 <strong>1,600만~2,400만 명</strong> 플레이어(2026년), 누적 매출 <strong>48억 달러</strong></span>
   <span>🌍 <strong>중국, 일본, 한국, 러시아, 인도</strong>에서 가장 강세</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
+  <div class="vc-title">🧮 빠른 계산기</div>
+  <div class="vc-subtitle">위 범위 기반 대략적 추정치 — 슬라이더를 움직여보세요. 봇이 스크린샷으로 정확한 추정치를 제공한다. 아무것도 입력하거나 전송되지 않는다.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 결과 공유</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 원신 계정의 예상 가치 확인하기</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 가격</a>
   <a href="#value">📊 가치 결정 요인</a>
@@ -233,22 +254,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>실제 마켓 가격</h2>
 <h3>원신 계정은 얼마의 가치가 있나요?</h3>
-<div class="price-range">스타터 계정: $5 ~ $60 · whale 계정: $30 ~ $9,000</div>
+
 <p>원신에는 실제로 운영 중인 계정 마켓플레이스가 있다. Eldorado.gg는 두 개의 별도 카테고리를 운영한다: 레귤러/reroll 계정(프레시 계정을 reroll해서 시작 캐릭터를 얻으며, 지역과 시작 5성에 따라 $5~$60에 가격 책정)과, 전용 <em>"whale 계정"</em> 카테고리로 최상위 매물은 $30부터 $8,995(C6 캐릭터 20명, R5 무기 8개)까지 가격이 이른다. 세 번째 집계 출처(igitems.com, 매물 442건)에서는 현재 레귤러 계정 평균이 ~$147이며, 지난 14주간 급상승했다.</p>
 
-<div class="value-calc" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
-  <div class="vc-title">🧮 빠른 계산기</div>
-  <div class="vc-subtitle">위 범위 기반 대략적 추정치 — 슬라이더를 움직여보세요. 봇이 스크린샷으로 정확한 추정치를 제공한다. 아무것도 입력하거나 전송되지 않는다.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
-    <button type="button" class="vc-share-btn">🔗 결과 공유</button>
-  </div>
-</div>
+
 
 <h3>마켓플레이스 가격과 "스트리머 10만 달러 과금" 수치의 차이는?</h3>
 <p>이는 두 가지 다른 질문에 답하는 두 가지 다른 수치다. 최고 매물가 $8,995는 구매자가 오픈 마켓에서 특정 whale 계정을 얻기 위해 오늘 실제로 지불하는 금액이다. 아래의 $100,000~$150,000 수치는 자진 신고한 <em>평생 과금액</em> — 플레이어가 수년간 가챠에 쏟아부은 모든 것 — 이며, 이는 재판매 가치와 다르다. 계정의 재판매 가격은 그것을 만드는 데 원래 쓴 금액이 아니라, 다른 구매자가 현재 지불할 의향이 있는 금액을 반영하기 때문이다.</p>
@@ -279,8 +291,8 @@
   <li><strong><a href="https://genshin-impact.fandom.com/wiki/Neuvillette" target="_blank" rel="noopener">Neuvillette</a>, <a href="https://genshin-impact.fandom.com/wiki/Nefer" target="_blank" rel="noopener">Nefer</a>, <a href="https://genshin-impact.fandom.com/wiki/Flins" target="_blank" rel="noopener">Flins</a>, <a href="https://genshin-impact.fandom.com/wiki/Yelan" target="_blank" rel="noopener">Yelan</a>, <a href="https://genshin-impact.fandom.com/wiki/Citlali" target="_blank" rel="noopener">Citlali</a></strong> — 각각 3건</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">이들은 현재 마켓 최상위 캐릭터이며 영구적인 목록이 아니다 — 원신 메타는 새 배너마다 바뀌므로, 1년 후에도 그대로일 거라 가정하기 전에 다시 확인할 것.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>실제 가치 결정 요인</h2>
 <h3>원신 계정을 만드는 데 무엇이 비용을 크게 늘리나요?</h3>
 <ul>
@@ -297,25 +309,25 @@
   <li>반사적으로 가챠를 돌리기보다 실제로 플레이하고 싶은 배너를 위해 원석을 모아두라</li>
   <li>젬당 가치를 최적화하려면, 무기 배너가 캐릭터 배너보다 보장된 수익이 더 좋은 경우가 많다</li>
 </ul>
-
-<span id="risk" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="risk" class="anchor-target"></span>
 <h2>거래 외 위험</h2>
 <h3>그래도 원신 계정을 사고팔려 한다면 실제 위험은?</h3>
 <div class="risk-box">
   <p>HoYoverse의 계정 보안팀은 양도 후 새로운 기기/위치에서의 로그인을 적극적으로 플래그하며 계정을 영구 정지할 수 있다 — 연결된 결제 이력과 개인 ID 인증 때문에 양도가 확인되면 이의 제기는 거의 승산이 없어 복구가 불가능하다. 이는 이 리포트에 등장하는 다른 대부분의 게임보다 엄격한 집행이다.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>규정과 거래 정책</h2>
 <h3>원신 계정 매매는 규정 위반인가요?</h3>
 <p>네. HoYoverse 이용약관은 계정 양도와 실제 금전을 통한 거래를 명확히 금지하며, 이 규정은 대부분의 모바일 게임보다 적극적으로 집행된다.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>플레이어 가이드</h2>
 <h3>플레이어 가이드: 숙련된 플레이어가 실제로 추천하는 팀 구성은?</h3>
 <p>이 섹션은 본인 팀 구성 향상을 위한 것이며, 계정의 재판매 가치를 위한 것이 아니다. 조준 기반이 아니라 로테이션/팀 구성형 게임이므로 도움이 되는 "메타" 지식은 편성에 관한 것이다. <a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">Keqing</a>(GameWith, Genshin-Builds, 2026년 8월 업데이트)에 대해, 널리 소개되는 무과금 친화적 Aggravate 팀은 Keqing(메인 딜러)과 Fischl(필드 밖 Electro), Collei(필드 밖 Dendro), Zhongli(실드 서포터)를 조합한다 — 이 네 캐릭터 모두 whale급 투자가 필요 없다.</p>
 <p>위에서 가치를 소개한 <a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">Mavuika</a>에 대해서는, 가장 많이 인용되는 whale 티어 팀(Icy Veins, GameWith)은 Melt 조합으로, Mavuika, Citlali(Cryo 서포트/Pyro 내성 삭감), Iansan, Bennett이다. 무과금 측에서는 여러 가이드가 Traveler의 Pyro 폼을 Overload형 Mavuika 팀에서 실사용 가능한 서브로 꼽는다 — 이 캐릭터들에게 "충분한" 편성이 엄밀히 5성 서포터를 필요로 하지 않는다는 증거다.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 원신 계정의 예상 가치 확인하기</a></div>
@@ -372,6 +384,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-diamond">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,20 +197,41 @@
 <div class="back-btn"><a href="./">← 홈으로</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🔫 프리파이어 계정 가치</h1>
   <p style="color:var(--muted); font-size:16px;">3개 지역에 걸친 실시간 재판매 마켓플레이스 매물 정보로 얻은 실제 가격대, 프리파이어 계정 가격을 실제로 결정하는 것, 그리고 거래 위험.</p>
+  <div class="g-badges">
   <p class="report-updated">2026년 9월, 실시간 마켓플레이스 매물 정보를 바탕으로 업데이트. 출처는 페이지 하단에 명시.</p>
   <div class="fresh-badge">🌍 최신 데이터 — AI가 실제 글로벌 마켓플레이스를 실시간 조사, 2026년 9월 12일 업데이트</div>
+  </div>
 </section>
-
+<div class="price-range">실제 마켓 가격대: 전형적으로 $0.73 ~ $250, 브라질에서는 ~$755까지</div>
 <div class="fact-box">
   <span>📅 출시 <strong>2017년 12월 8일</strong></span>
   <span>👥 월간 <strong>1억 1,000만 명</strong>, 일간 <strong>3,300만 명</strong> 활성 플레이어</span>
   <span>🌍 <strong>인도, 인도네시아, 브라질</strong>에서 가장 강세, 인도네시아에서는 수년간 1위 모바일 게임</span>
   <span>📦 누적 다운로드 <strong>13억+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
+  <div class="vc-title">🧮 빠른 계산기</div>
+  <div class="vc-subtitle">글로벌 평균을 반영 — 브라질 자체 마켓플레이스는 훨씬 높아 위에 언급한 대로 ~$755까지 도달한다. 아무것도 입력하거나 전송되지 않는다. 봇이 스크린샷으로 정확한 추정치를 제공한다.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 결과 공유</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 프리파이어 계정의 예상 가치 확인하기</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 가격</a>
   <a href="#value">📊 가치 결정 요인</a>
@@ -229,22 +250,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>실제 마켓 가격</h2>
 <h3>프리파이어 계정은 얼마의 가치가 있나요?</h3>
-<div class="price-range">실제 마켓 가격대: 전형적으로 $0.73 ~ $250, 브라질에서는 ~$755까지</div>
+
 <p>Eldorado.gg의 실시간 매물은 $0.73(신규, 미랭크 계정)부터 하이엔드 계정 $250까지 폭이 넓다. 더 큰 집계 마켓(igitems.com, 매물 293건)에서는 평균 희망가가 $78.32이며, 최근 14주간 $56.95에서 상승했다. 브라질 — 프리파이어의 최대 시장 중 하나 — 에는 MercadoLivre에 자체 매물이 있으며, 최상위 계정은 R$4,000(~$755)까지 도달한다.</p>
 
-<div class="value-calc" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
-  <div class="vc-title">🧮 빠른 계산기</div>
-  <div class="vc-subtitle">글로벌 평균을 반영 — 브라질 자체 마켓플레이스는 훨씬 높아 위에 언급한 대로 ~$755까지 도달한다. 아무것도 입력하거나 전송되지 않는다. 봇이 스크린샷으로 정확한 추정치를 제공한다.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
-    <button type="button" class="vc-share-btn">🔗 결과 공유</button>
-  </div>
-</div>
+
 
 <h3>가격대는 어떻게 분포하나요?</h3>
 <table class="tier-table">
@@ -260,8 +272,8 @@
 
 <h3>포럼형 마켓플레이스는 위의 스토어형 사이트와 다른 수치를 보이나요?</h3>
 <p>상한선이 다소 높다. EpicNPC — Eldorado.gg나 igitems.com과 다른 플레이어 간 거래 포럼 — 에는 이 페이지의 $150~$300+ 최상위 브래킷을 훨씬 넘는 개별 매물이 있다: Evo 총 10정을 가진 레벨69 계정 희망가 $299, MENA 지역 계정이 $350, "Prime 8" 계정이 $400 — 2026년 9월 인덱스 검색 결과를 통해 발견(EpicNPC가 자동 직접 페이지 접근을 차단하므로, 이는 검색 인덱스에 노출된 희망가이며 직접 가져와 인용한 페이지는 아니다). 그곳에서 찾은 매물 대부분은 위 스토어형 데이터와 같은 $6~$250 범위에 들어가며, 이 명시된 예시들은 그 포럼 특유의 눈에 보이는 상한선이지 새로운 전형적 범위는 아니다.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>실제 가치 결정 요인</h2>
 <h3>프리파이어 계정 가치를 실제로 결정하는 것은?</h3>
 <ul>
@@ -278,23 +290,23 @@
   <li>한 캐릭터 스킨에 전부 쓰기보다 캐릭터 컬렉션의 폭을 우선하라</li>
   <li>일상적 코스메틱보다 기간 한정 번들을 위해 다이아를 아껴둬라</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>사기와 거래 위험</h2>
 <h3>프리파이어 계정 거래에서 가장 큰 사기는?</h3>
 <div class="risk-box">
   <p>SNS에서 QR코드로 결제를 받고 절대 상품을 넘기지 않는 가짜 리셀러 페이지와, 도난 결제수단으로 판매자에게 결제한 뒤 몇 주 후 차지백을 일으켜 판매자를 무대금+계정 상실 상태로 만드는 구매자. Garena는 계정 거래 분쟁을 중개하지 않는다.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>규정과 거래 정책</h2>
 <h3>프리파이어 계정 거래는 규정 위반인가요?</h3>
 <p>네 — Garena 이용약관은 계정 판매·양도를 금지하며, 감지된 거래는 영구 정지로 이어질 수 있다.</p>
 
 <h3>이 매물 정보는 실제로 어디서 오나요?</h3>
 <p>Eldorado.gg와 igitems.com은 희망가가 붙은 글로벌 매물을 호스팅한다. MercadoLivre(브라질 최대 마켓플레이스)는 프리파이어 최대 시장 중 하나에서 현지 통화로 비슷한 패턴을 보인다 — 모두 확인된 체결가가 아닌 희망가다.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>플레이어 가이드</h2>
 <h3>플레이어 가이드: 실제 프로는 감도를 어떻게 설정하나요?</h3>
 <p>이 섹션은 본인 플레이 실력 향상을 위한 것이며, 계정의 재판매 가치를 위한 것이 아니다. 트릭샷 기술로 유명한 브라질 프로 <strong><a href="https://en.wikipedia.org/wiki/Two9" target="_blank" rel="noopener">Diogenes "Two9" Inácio</a></strong>가 완전한 설정 내역을 공개했다(출처: <a href="https://escharts.com/news/mastering-two9-meta" target="_blank" rel="noopener">Esports Charts</a>):</p>
@@ -308,7 +320,7 @@
 </tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">이는 한 명의 명시된 프로의 개인 설정이며 만능 공식은 아니다 — Two9 본인이 <strong>"감도는 20%, 연습이 80%"</strong>라고 말했다. 그가 소개하는 다른 기법: "Wait-and-Flick"이라는 조준 스타일, 전투 중 무기를 바꿔 리코일을 리셋하는 것, 평평한 벽 하나가 아니라 여러 시야각을 만들기 위해 "V"자 또는 "U"자 형태로 Gloo Wall을 배치하는 것.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 프리파이어 계정의 예상 가치 확인하기</a></div>
@@ -365,6 +377,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

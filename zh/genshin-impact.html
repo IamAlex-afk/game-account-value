@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -190,6 +188,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -202,19 +202,40 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚗️ Genshin Impact账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">一个真实的账号交易市场确实存在——包括专门的"大佬账号"分类——外加与买家实际支付金额完全不同的、已验证的终身消费数字。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">萌新账号：$5 ~ $60 · 大佬(whale)账号：$30 ~ $9,000</div>
 <div class="fact-box">
   <span>📅 发布日期 <strong>2020年9月28日</strong> — 游戏史上最大规模的全球同步上线之一</span>
   <span>👥 <strong>1,600万~2,400万</strong>月活跃玩家(2026年)，终身收入 <strong>48亿美元</strong></span>
   <span>🌍 在<strong>中国、日本、韩国、俄罗斯、印度</strong>最强势</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Genshin Impact账号估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#value">📊 价值决定因素</a>
@@ -233,23 +254,14 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>Genshin Impact账号值多少钱？</h3>
-<div class="price-range">萌新账号：$5 ~ $60 · 大佬(whale)账号：$30 ~ $9,000</div>
+
 <p>原神有一个真实、活跃的账号交易市场。Eldorado.gg分为两个独立类别：普通/reroll账号(通过新号reroll获得起始角色，按地区和起始5星定价$5~$60)和专门的<em>whale账号</em>类别，价格从$30到顶级挂牌的$8,995(20个C6角色，8把R5武器)不等。第三个集合来源(igitems.com，442个挂牌)显示目前普通账号平均价约$147，过去14周内大幅上涨。</p>
 <p>中国境内的国内RMT平台"悠悠游戏(UU898.com)"上也真实存在原神账号交易分类——我们直接查看了该平台上的实际挂牌，价格从¥105.60到¥225.60不等，涵盖不同角色/圣遗物配置(例如包含纳西妲、菲谢尔、莫娜、七七的挂牌为¥180.00；包含纳西妲、那维莱特、菲谢尔、艾尔海森、迪希雅、七七及238原石的挂牌为¥225.60)，均标注了"终身找回包赔"和实名认证卖家标识(2026年9月核实)。这是国内玩家可以直接对照的本地价格参考，但我们只验证了原神这一个分类，不代表该平台上其他游戏也有类似的经核实的挂牌。</p>
 
-<div class="value-calc" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>交易平台价格和"10万美元主播氪金"数字有什么区别？</h3>
 <p>这是回答两个不同问题的两个不同数字。$8,995的顶级挂牌价是买家今天在公开市场上实际购买一个特定大佬账号要付的钱。下方的$100,000~$150,000数字是自述的<em>终身消费</em>——玩家多年来投入抽卡的所有花费——这与转售价值不是一回事，因为账号的转售价反映的是其他买家当前愿意支付的金额，而不是最初砸进去建号花了多少钱。</p>
@@ -280,8 +292,8 @@
   <li><strong><a href="https://genshin-impact.fandom.com/wiki/Neuvillette" target="_blank" rel="noopener">那维莱特(Neuvillette)</a>、<a href="https://genshin-impact.fandom.com/wiki/Nefer" target="_blank" rel="noopener">Nefer</a>、<a href="https://genshin-impact.fandom.com/wiki/Flins" target="_blank" rel="noopener">Flins</a>、<a href="https://genshin-impact.fandom.com/wiki/Yelan" target="_blank" rel="noopener">夜兰(Yelan)</a>、<a href="https://genshin-impact.fandom.com/wiki/Citlali" target="_blank" rel="noopener">Citlali</a></strong> — 各3个挂牌</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">这些是当前市场上最热门的角色，不是永久名单——原神的meta会随每个新卡池变化，所以在假设这一年后依然成立之前应重新核实。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>是什么让Genshin Impact账号变得昂贵？</h3>
 <ul>
@@ -298,25 +310,25 @@
   <li>把原石留给你真正想玩的卡池，而不是盲目抽卡</li>
   <li>如果你在优化每颗原石的性价比，武器池通常比角色池有更好的保底回报</li>
 </ul>
-
-<span id="risk" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="risk" class="anchor-target"></span>
 <h2>交易以外的风险</h2>
 <h3>如果我还是尝试买卖Genshin Impact账号，实际风险是什么？</h3>
 <div class="risk-box">
   <p>米哈游的账号安全团队会主动标记转让后来自新设备/新地点的登录，并可能永久封禁账号——且无法找回，因为一旦转让被确认，关联的付款历史和实名认证使申诉几乎不可能成功。这比本报告中大多数其他游戏的执行力度都更严格。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>买卖Genshin Impact账号违反规定吗？</h3>
 <p>是的。米哈游的服务条款明确禁止账号转让和以真实货币交易，而且这一规则的执行比大多数手游都更严格。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>玩家指南</h2>
 <h3>玩家指南：有经验的玩家实际推荐什么队伍配置？</h3>
 <p>这一部分是为了提升你自己的配队思路，而非账号的转售价值。这是一款轮转/配队向的游戏而非瞄准向游戏，所以有用的"meta"知识主要是阵容搭配。对于<a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">刻晴</a>(GameWith、Genshin-Builds，2026年8月更新)，一个被广泛记录、平民友好的感电队搭配刻晴(主C)与菲谢尔(挂机雷)、柯莱(挂机草)和钟离(护盾辅助)——这四人都不需要大佬级投入。</p>
 <p>而对于我们上面提到的<a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">那维莱特</a>，被引用最多的大佬级队伍(Icy Veins、GameWith)是一个融化队：那维莱特、Citlali(冰辅助/削减火抗)、Iansan和班尼特。在平民向的一边，多份攻略把旅行者的火之形态列为超载流那维莱特队中真正可用的替代品——这说明这些角色的"够用"阵容并不严格需要5星辅助。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Genshin Impact账号估值</a></div>
@@ -374,6 +386,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

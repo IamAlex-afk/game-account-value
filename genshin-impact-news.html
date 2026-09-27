@@ -28,8 +28,6 @@
 <link rel="icon" type="image/png" href="./favicon.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="manifest" href="./manifest.json">
-<link rel="preload" href="./assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/style.css">
 <script type="application/ld+json">
 {
@@ -137,6 +135,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -178,28 +178,28 @@
 
 <div class="article-body">
 
-<span id="rucis" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="rucis" class="anchor-target"></span>
 <h2>RU/CIS Market — FunPay</h2>
 <h3>What are Genshin Impact accounts actually selling for on FunPay?</h3>
 <div class="price-range">€0.14 – €1,284 (≈ $0.15 – $1,390)</div>
 <p>The cheapest listing was <strong>€0.142</strong> for an Adventure Rank 1 starter account. The most expensive was <strong>€1,284</strong> (~$1,390) — but that top listing is a <strong>bundled Genshin + Honkai Star Rail</strong> account, not pure Genshin, so it overstates a Genshin-only account's real ceiling. Most listings fall in the €5–€100 range.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://funpay.com/en/lots/696/" target="_blank" rel="noopener">funpay.com — Genshin Impact category</a>, checked 2026-09-21.</p>
-
-<span id="sea" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="sea" class="anchor-target"></span>
 <h2>Southeast Asia Market — igitems.com</h2>
 <h3>What are Genshin Impact accounts actually selling for in Southeast Asia?</h3>
 <div class="price-range">$16 – $200 (sampled)</div>
 <p>The cheapest listing fetched (<strong>₫399,282 ≈ $16</strong>) was AR10 with 5 legendary (5-star) characters. The most expensive fetched (<strong>₫5,008,436 ≈ $200</strong>) was AR59 with multiple 5-star characters. A separate search-result summary claimed a "$50.83–$149.17" typical band over 14 weeks — that's a different, narrower figure than the two listings actually fetched here, so it's treated as an unverified "typical" band, not the real min/max.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://igitems.com/genshinimpact-account" target="_blank" rel="noopener">igitems.com — Genshin Impact accounts</a>, checked 2026-09-21. Conversion used: ~25,000 VND = $1 USD.</p>
-
-<span id="global" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="global" class="anchor-target"></span>
 <h2>Global / Western Marketplaces</h2>
 <h3>Why is there no Global-platform price here?</h3>
 <div class="risk-box">
   <p>On 2026-09-21, <strong>playerauctions.com</strong>'s Genshin Impact page returned HTTP 403 Forbidden. iGVault, genshinaccounts.com, and IGGM also appeared in search results as Global marketplaces but were not fetched this pass. <strong>This is a real, disclosed data gap — not a guessed number.</strong> If you see a specific "current Global average price" quoted elsewhere without a live browser check, treat it with caution.</p>
 </div>
-
-<span id="findings" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="findings" class="anchor-target"></span>
 <h2>Notable Findings</h2>
 <h3>What's the biggest current risk, beyond price?</h3>
 <div class="reported-case">
@@ -211,7 +211,7 @@
   <p>A Genshin-specific scam pattern: sites/DMs that clone real HoYoverse login or top-up pages to harvest credentials (and sometimes deliver malware) rather than actually granting free currency.</p>
 </div>
 <p style="font-size:13px; color:var(--muted);">Streamer "Razerninjas" remains the most-cited documented whale account (over $100,000 spent, every weapon at max refinement) — this is a separate collector-spending case, not a marketplace sale price, and is kept as its own category rather than merged into the pricing above. A US age-verification requirement (effective from May 20, 2025, continuing through 2026) is relevant to trading since a bought/sold account may need re-verification under the new "owner"'s identity.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact_news" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Genshin Impact account's estimated value</a></div>

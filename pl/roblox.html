@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -179,8 +177,10 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
-<body>
+<body class="theme-studs">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
@@ -191,20 +191,41 @@
 <div class="back-btn"><a href="./">← Powrót na stronę główną</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🟦 Wartość konta Roblox</h1>
   <p style="color:var(--muted); font-size:16px;">Prawdziwe oferty z platform odsprzedaży, osobny świat posiadania kolekcjonerskich przedmiotów oraz ryzyko związane z handlem kontem.</p>
+  <div class="g-badges">
   <p class="report-updated">Zaktualizowano we wrześniu 2026 na podstawie ofert z platform handlowych na żywo. Źródła podane na dole strony.</p>
   <div class="fresh-badge">🌍 Najświeższe dane — AI zbadało w czasie rzeczywistym prawdziwe globalne platformy handlowe, aktualizacja 12 września 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Przedział cen na platformach handlowych: $0,50 ~ $60 (dla kont z konkretnym experience nawet do ~$800)</div>
 <div class="fact-box">
   <span>📅 Premiera <strong>1 września 2006</strong></span>
   <span>👥 <strong>381,8 mln</strong> użytkowników aktywnych miesięcznie, <strong>144 mln</strong> dziennie</span>
   <span>🌍 Najsilniejsza pozycja w <strong>Azji-Pacyfiku</strong>, <strong>Europie</strong>, <strong>Ameryce Północnej</strong></span>
   <span>📦 <strong>1,5 mld+</strong> zarejestrowanych kont</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-roblox" data-game="roblox" data-title="Roblox">
+  <div class="vc-title">🧮 Szybki kalkulator</div>
+  <div class="vc-subtitle">Obejmuje 3 rzadkie przedmioty poniżej (Headless według prawdziwych ofert Eldorado.gg; Korblox i Violet Valkyrie według ich kosztu w Robux przy dzisiejszej cenie odsprzedaży Robux; saldo Robux też się liczy). Pozostałe Dominusy/rzadkie przedmioty nie są modelowane — patrz "Rynek Limiteds" powyżej. Nic nie jest wpisywane ani wysyłane; bot podaje dokładny szacunek na podstawie zrzutów ekranu.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Skopiowano!">Przybliżony szacunek, nie dokładna wycena</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Udostępnij wynik</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=pl" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Sprawdź szacunkową wartość swojego konta Roblox</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Ceny</a>
   <a href="#limiteds">🏆 Limiteds</a>
@@ -223,25 +244,16 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Prawdziwe ceny rynkowe</h2>
 <h3>Ile faktycznie warte jest konto Roblox?</h3>
-<div class="price-range">Przedział cen na platformach handlowych: $0,50 ~ $60 (dla kont z konkretnym experience nawet do ~$800)</div>
+
 <p>Mimo że regulamin Roblox tego zabrania, konta Roblox faktycznie są sprzedawane na platformach zewnętrznych. Na Eldorado.gg oferty na żywo zaczynają się od $0,50 (podstawowe konta założone w latach 2007~2015, bez wyraźnego progresu) aż po $59,99 za czystą 4-literową nazwę użytkownika. Na igitems.com konta zbudowane wokół konkretnego, bardzo pożądanego experience — jak zmaksowany "Pet Simulator 99" czy konto Blox Fruits na wysokim poziomie — osiągają nawet ~$800. Większość ofert niezwiązanych z rzadkim experience sprzedaje się poniżej $25.</p>
 <p>Na polskiej platformie <strong>Allegro Lokalnie (allegrolokalnie.pl)</strong> w kategorii ofert dla hasła "konto roblox" widoczne są typowe konta za 29,99~39,99 PLN (kilka dolarów) — na przykład oferty typu "Steal An Egg | Konto". Jedno ogłoszenie z rzadkimi przedmiotami osiągnęło 25 000 PLN — to wyraźny wyjątek, a nie typowa cena rynkowa, podobnie jak "zgłoszony majątek" streamerów w sekcji poniżej różni się od realnych cen ofertowych. Łącznie w kategorii widniało 110 ofert w chwili sprawdzania (wrzesień 2026).</p>
 
 <p>Headless Horseman to wielki wyjątek od reguły poniżej $25. 26 września 2026 r. Eldorado.gg pokazywało 337 ofert kont z Headless; środkowa połowa wyświetlonych żądała $400–700 (większość zawiera też Korblox), a konta z dodatkową Violet Valkyrie wystawiano za $750–1 500. Robux na saldzie też ma wartość odsprzedaży: sprzedawcy na Eldorado.gg żądali $0,0065–0,0075 za Robux, wobec oficjalnego kursu wypłaty DevEx Robloxa wynoszącego $0,0038.</p>
 
-<div class="value-calc" id="vc-roblox" data-game="roblox" data-title="Roblox">
-  <div class="vc-title">🧮 Szybki kalkulator</div>
-  <div class="vc-subtitle">Obejmuje 3 rzadkie przedmioty poniżej (Headless według prawdziwych ofert Eldorado.gg; Korblox i Violet Valkyrie według ich kosztu w Robux przy dzisiejszej cenie odsprzedaży Robux; saldo Robux też się liczy). Pozostałe Dominusy/rzadkie przedmioty nie są modelowane — patrz "Rynek Limiteds" powyżej. Nic nie jest wpisywane ani wysyłane; bot podaje dokładny szacunek na podstawie zrzutów ekranu.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Skopiowano!">Przybliżony szacunek, nie dokładna wycena</span>
-    <button type="button" class="vc-share-btn">🔗 Udostępnij wynik</button>
-  </div>
-</div>
+
 
 <h3>Gdzie ludzie faktycznie kupują i sprzedają konta Roblox?</h3>
 <p>Platformy zewnętrzne takie jak Eldorado.gg i igitems.com mają publiczne oferty z jasno określoną ceną, posortowane według wieku konta, nazwy użytkownika, salda Robux oraz tego, wokół jakiej gry/experience konto zostało zbudowane. To bezpośrednio zaprzecza twierdzeniu, że "rynek nie istnieje" — po prostu nie jest tak widoczny jak własny system handlu Steam, ponieważ regulamin Roblox tego zabrania, a te platformy działają jako strony trzecie poza kontrolą Roblox. W Polsce podobne oferty konkretnie dla Roblox pojawiają się też na Allegro Lokalnie.</p>
@@ -259,8 +271,8 @@
   <li><strong>Zwierzaki i waluta Bucks z Adopt Me</strong> — 2 z 10 najlepszych ofert zbudowane całkowicie wokół ekonomii tego jednego experience</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Na innej platformie (igitems.com) najdroższą widzianą ofertą było konto "end-game" Pet Simulator 99 (~$800) — niepotwierdzone jako powtarzający się wzorzec w top 10 tej platformy, ale najwyższa dotąd znaleziona liczba specyficzna dla konkretnego experience.</p>
-
-<span id="limiteds" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="limiteds" class="anchor-target"></span>
 <h2>Rynek Limiteds</h2>
 <h3>Czym jest rynek Limiteds i jak faktycznie wycenia się Limited?</h3>
 <p>Roblox ma osobną, liczącą dekady ekonomię handlową dla "Limiteds" (przedmiotów kosmetycznych, które nie są już sprzedawane), działającą niemal całkowicie niezależnie od opisanych wyżej platform sprzedaży kont. Standardowe narzędzie śledzące społeczności, Rolimons.com, definiuje trzy różne liczby dla tego samego przedmiotu — mylenie ich to najczęstszy błąd początkujących:</p>
@@ -285,8 +297,8 @@
 <div class="risk-box">
   <p><strong>Ostrzeżenie:</strong> podczas tego badania znaleźliśmy domenę podszywającą się pod nazwę i markę Rolimons. Korzystaj wyłącznie bezpośrednio z <strong>rolimons.com</strong> — nigdy z podobnie brzmiącej kopii, zwłaszcza jeśli trafiłeś na nią przez reklamę lub link od kogoś innego.</p>
 </div>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Co faktycznie decyduje o wartości</h2>
 <h3>Co faktycznie decyduje o cenie konta Roblox?</h3>
 <ul>
@@ -304,22 +316,22 @@
   <li>Zamiast koncentrować wartość na jednym przedmiocie, dywersyfikuj między kilka różnych Limiteds, ponieważ Roblox czasami wycofuje lub obniża wartość pojedynczych przedmiotów</li>
   <li>Traktuj to jako hobby kolekcjonerskie z realnym ryzykiem, nie jako inwestycję — wartość przedmiotów Limited jest niepłynna i może się gwałtownie zmieniać</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Oszustwa i ryzyko handlu</h2>
 <h3>Jakie są największe oszustwa wokół kont i przedmiotów Roblox?</h3>
 <div class="risk-box">
   <p>Oszustwa związane z handlem kontami i przedmiotami są w społeczności Roblox bardzo powszechne: fałszywe usługi "pośredników" handlowych, strony phishingowe kopiujące stronę logowania Roblox w celu kradzieży danych, oraz oszustwa typu "generator darmowych Robux", które żądają dostępu do konta. Ponieważ regulamin Roblox całkowicie zabrania transferu kont, ofiary oszustw handlowych nie mają żadnej drogi odwoławczej — Roblox nie przywróci oszukanego konta ani nie cofnie transakcji przedmiotem, a jeśli Roblox wykryje nieautoryzowany transfer, oszukane konto również pozostaje zablokowane.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Zasady i polityka handlowa</h2>
 <h3>Czy kupowanie lub sprzedawanie kont Roblox łamie regulamin?</h3>
 <p>Tak. Regulamin Roblox jednoznacznie zabrania przenoszenia własności konta i handlu kontami za realne pieniądze. Konta zaangażowane w wykryty transfer mogą zostać trwale zablokowane, a ani kupujący, ani sprzedający nie ma procedury odwoławczej.</p>
 
 <h3>Dlaczego ceny kont Roblox wydają się dużo niższe niż w innych grach?</h3>
 <p>Większość kont Roblox nie ma takiego "progresu", jaki decyduje o wartości w grach takich jak Clash of Clans czy Free Fire — wartość konta Roblox koncentruje się na konkretnych przedmiotach, postępie w konkretnym experience lub nazwie użytkownika, a nie na ogólnym poziomie. Dlatego większość ofert mieści się poniżej $25, a tylko nieliczne konkretne konta (rzadka nazwa użytkownika, progres w bardzo pożądanym experience) osiągają setki dolarów.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=pl" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Sprawdź szacunkową wartość swojego konta Roblox</a></div>
@@ -377,6 +389,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

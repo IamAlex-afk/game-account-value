@@ -28,8 +28,6 @@
 <link rel="icon" type="image/png" href="./favicon.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="manifest" href="./manifest.json">
-<link rel="preload" href="./assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/style.css">
 <script type="application/ld+json">
 {
@@ -135,6 +133,8 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
+<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/glass.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -176,28 +176,28 @@
 
 <div class="article-body">
 
-<span id="rucis" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="rucis" class="anchor-target"></span>
 <h2>RU/CIS Market — FunPay</h2>
 <h3>What are Roblox accounts actually selling for on FunPay?</h3>
 <div class="price-range">€0.01 – €117 (≈ $0.01 – $127)</div>
 <p>FunPay has no single unified "Roblox account" category — it splits listings by specific experience, and <strong>Adopt Me</strong> is the flagship Roblox category there. The cheapest listing found was <strong>€0.0123</strong> for a bulk-registered, no-linked-email account with 100+ days of age. The most expensive was <strong>€117.14</strong> for a "No Potion Giraffe OG" — an original, unmodified legacy pet with collector value. Typical listings with a mix of age and pets cluster between €0.30 and €10.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://funpay.com/en/lots/927/" target="_blank" rel="noopener">funpay.com — Adopt Me category</a>, checked 2026-09-21.</p>
-
-<span id="sea" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="sea" class="anchor-target"></span>
 <h2>Southeast Asia Market — igitems.com</h2>
 <h3>Has the Southeast Asia price range changed since early September?</h3>
 <div class="price-range" style="color:var(--text); background:rgba(255,255,255,0.04);">🔁 Unchanged: $13.80 – $803.80 (re-checked, first reported Sept 12)</div>
 <p>No — re-checking on September 21 found the same range as September 12, confirming it's a stable pattern rather than a one-off, not a new finding. The cheapest active listing (<strong>₫345,687 ≈ $13.80</strong>) was a Blox Fruits build ("2550 Level | GodHuman | SoulGuitar | Magma V2"). The most expensive (<strong>₫20,095,375 ≈ $803.80</strong>) was a maxed-out Pet Simulator 99 account with "20 HUGES" and all passes. 540 total listings were live at check time — for the full context on this platform, see the main <a href="./roblox.html#pricing">Roblox report</a>.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://igitems.com/roblox-account" target="_blank" rel="noopener">igitems.com — Roblox accounts</a>, checked 2026-09-21. Conversion used: ~25,000 VND = $1 USD.</p>
-
-<span id="global" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="global" class="anchor-target"></span>
 <h2>Global / Western Marketplaces</h2>
 <h3>Why is there no G2G or PlayerAuctions price here?</h3>
 <div class="risk-box">
   <p>Because we couldn't get one honestly. On 2026-09-21, direct requests to <strong>g2g.com</strong> and <strong>playerauctions.com</strong> and <strong>playerup.com</strong> all returned HTTP 403 (bot-protection), and <strong>g2a.com</strong> timed out. A web search surfaced individual G2G listing titles (e.g. "150 Days Old Roblox Account") but not verifiable prices, since the pages themselves couldn't be opened. <strong>This is a real, disclosed data gap — not a guessed number.</strong> If you see a specific "current G2G average price" quoted elsewhere without a live browser check, treat it with caution.</p>
 </div>
-
-<span id="findings" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="findings" class="anchor-target"></span>
 <h2>Notable Findings</h2>
 <h3>What's the biggest current risk, beyond price?</h3>
 <div class="reported-case">
@@ -213,7 +213,7 @@
   <p>Targets people who already got scammed: fake "Roblox admins" offer to recover lost items or accounts for a fee — or for the victim's password. Always a scam; Roblox never needs your password to help you.</p>
 </div>
 <p style="font-size:13px; color:var(--muted);">No verified record of an actual third-party Roblox account <em>sale</em> price was found. Widely cited "million-dollar" figures (e.g. Simoon68's ~$2.45M) are collector-holdings valuations of in-platform Limited items, not a documented resale transaction.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox_news" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Roblox account's estimated value</a></div>

@@ -28,8 +28,6 @@
 <link rel="icon" type="image/png" href="./favicon.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="manifest" href="./manifest.json">
-<link rel="preload" href="./assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/style.css">
 <script type="application/ld+json">
 {
@@ -137,6 +135,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/glass.css">
 </head>
 <body class="theme-royal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -178,28 +178,28 @@
 
 <div class="article-body">
 
-<span id="rucis" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="rucis" class="anchor-target"></span>
 <h2>RU/CIS Market — FunPay</h2>
 <h3>What are Clash Royale accounts actually selling for on FunPay?</h3>
 <div class="price-range">€0.0127 – €1,082 (≈ $0.01 – $1,170)</div>
 <p>The cheapest listing was <strong>€0.0127</strong> for an empty starter account (Arena 1, 1 trophy, 8 cards). The most expensive was <strong>€1,082</strong> (~$1,170) for a fully maxed collector account — all evolutions, all heroes, 3 tournament finishes, Arena 32, 14,000 trophies, 121 cards including 21 legendaries. The real distribution is bottom-heavy: near-empty starter accounts dominate the cheap end.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://funpay.com/en/lots/149/" target="_blank" rel="noopener">funpay.com — Clash Royale category</a>, checked 2026-09-21.</p>
-
-<span id="sea" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="sea" class="anchor-target"></span>
 <h2>Southeast Asia Market — igitems.com</h2>
 <h3>What are Clash Royale accounts actually selling for in Southeast Asia?</h3>
 <div class="price-range">$27 – $965</div>
 <p>The cheapest listing (<strong>₫667,256 ≈ $27</strong>) had 11,240 trophies and Master tier, with 2 maxed cards. The most expensive (<strong>₫24,114,986 ≈ $965</strong>) was an "esports pure" account with all 41-41 evolutions, 120 maxed cards, and Ultimate Champion tier — its own listing cited a reported $12,000 invested. igitems' floor is much higher than FunPay's (~$27 vs ~$0.01) since it doesn't list near-empty starter accounts the way FunPay does.</p>
 <p style="font-size:13px; color:var(--muted);">Source: <a href="https://igitems.com/clashroyale-account" target="_blank" rel="noopener">igitems.com — Clash Royale accounts</a>, checked 2026-09-21. Conversion used: ~25,000 VND = $1 USD.</p>
-
-<span id="global" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="global" class="anchor-target"></span>
 <h2>Global / Western Marketplaces</h2>
 <h3>Why is there no Global-platform price here?</h3>
 <div class="risk-box">
   <p>On 2026-09-21, both <strong>g2g.com</strong> and <strong>playerauctions.com</strong>'s Clash Royale pages returned HTTP 403 Forbidden on direct fetch. Search-result summaries suggested G2G lists 6,000–9,000-trophy accounts and PlayerAuctions spans "$5 to $1,500+," but neither is a confirmed, sourced line item — those numbers are not used here. <strong>This is a real, disclosed data gap — not a guessed number.</strong> If you see a specific "current Global average price" quoted elsewhere without a live browser check, treat it with caution.</p>
 </div>
-
-<span id="findings" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="findings" class="anchor-target"></span>
 <h2>Notable Findings</h2>
 <h3>What's the biggest current risk, beyond price?</h3>
 <div class="reported-case">
@@ -211,7 +211,7 @@
   <p>Supercell explicitly reserves the right to ban any account that has been transferred, bought, sold, or shared — account sharing/"pushing" can get both the sharer's and the borrower's accounts banned, often permanently.</p>
 </div>
 <p style="font-size:13px; color:var(--muted);">In-game trading is effectively dead as of 2026: Trade Tokens became unobtainable around October 2025, so any third party currently claiming to sell Trade Tokens, gems, or cards is running a scam by definition. No unique record-sale item was found — value here is driven by aggregate collection completeness, not one standout rare item.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale_news" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Clash Royale account's estimated value</a></div>

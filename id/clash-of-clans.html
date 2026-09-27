@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -219,6 +217,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Lewati ke konten</a>
@@ -231,20 +231,41 @@
 <div class="back-btn"><a href="./">← Kembali ke Beranda</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ Nilai Akun Clash of Clans</h1>
   <p style="color:var(--muted); font-size:16px;">Data harga asli berdasarkan level Town Hall dan status progres, dari listing marketplace langsung — bukan perkiraan karangan.</p>
+  <div class="g-badges">
   <p class="report-updated">Diperbarui September 2026 dari listing marketplace langsung. Sumber tercantum di bagian bawah halaman.</p>
   <div class="fresh-badge">🌍 Data terbaru — diriset langsung oleh AI di marketplace global asli, diperbarui 12 September 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Rentang pasar asli: $10 – $260</div>
 <div class="fact-box">
   <span>📅 Dirilis <strong>2 Agustus 2012</strong> (iOS), Android tahun 2013</span>
   <span>👥 <strong>65-100 juta+</strong> pemain aktif bulanan (perkiraan bervariasi per sumber)</span>
   <span>📦 <strong>500 juta+</strong> total unduhan</span>
   <span>🏰 Town Hall maksimum saat ini: <strong>TH18</strong> (per September 2026)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 Kalkulator Cepat</div>
+  <div class="vc-subtitle">Perkiraan kasar dari rentang di atas — geser slider-nya. Bot memberikan estimasi akurat dari screenshot. Tidak ada yang diinput atau dikirim ke mana pun.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Disalin!">Perkiraan kasar, bukan estimasi pasti</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Bagikan hasil</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=id" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Cek estimasi nilai akun Clash of Clans kamu</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Harga</a>
   <a href="#value">📊 Penentu Nilai</a>
@@ -263,22 +284,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Harga Pasar Sungguhan</h2>
 <h3>Berapa harga akun Clash of Clans?</h3>
-<div class="price-range">Rentang pasar asli: $10 – $260</div>
+
 <p>Clash of Clans kini sudah mencapai Town Hall 18, dan harga akun berskala langsung dengan level Town Hall dan seberapa "rush" (dinaikkan tidak merata, melewati pertahanan/hero) atau "full max" akun tersebut. Akun TH13 yang rush terjual sekitar $10, sementara TH18 yang benar-benar full-max terdaftar seharga $100-$260.</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 Kalkulator Cepat</div>
-  <div class="vc-subtitle">Perkiraan kasar dari rentang di atas — geser slider-nya. Bot memberikan estimasi akurat dari screenshot. Tidak ada yang diinput atau dikirim ke mana pun.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Disalin!">Perkiraan kasar, bukan estimasi pasti</span>
-    <button type="button" class="vc-share-btn">🔗 Bagikan hasil</button>
-  </div>
-</div>
+
 
 <h3>Bagaimana harga asli terlihat berdasarkan level Town Hall?</h3>
 <table class="tier-table">
@@ -294,8 +306,8 @@
 
 <h3>Apakah rentang ini konsisten di jenis marketplace lain?</h3>
 <p>Ya, kurang lebih. EpicNPC — forum jual-beli langsung antar pemain, bukan marketplace toko seperti Eldorado.gg atau igitems.com — menunjukkan listing TH17/TH18 individual dengan harga sekitar $98 hingga $340, diperiksa lewat hasil pencarian terindeks pada September 2026 (EpicNPC memblokir akses halaman otomatis langsung, jadi ini adalah harga listing seperti yang muncul dari indeks pencarian, bukan halaman yang kami buka dan kutip langsung sendiri). Itu bentuk yang sama dengan tabel igitems.com di atas — akun full-max TH17/TH18 di kisaran ratusan dolar rendah — dengan listing individual tertinggi EpicNPC sedikit di atas batas atas igitems.com sebesar $260, sesuai dengan fakta bahwa di forum penjual bisa menetapkan harga berapa pun tanpa harus bersaing langsung dengan listing toko lain.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Apa yang Sebenarnya Menentukan Nilai</h2>
 <h3>Apa yang sebenarnya menentukan nilai akun Clash of Clans?</h3>
 <ul>
@@ -312,28 +324,28 @@
   <li>Dorong ke Legend League secara konsisten, bukan sesekali, karena riwayat musiman terakumulasi</li>
   <li>Jaga gold pass/season pass tetap aktif setiap musim untuk kosmetik eksklusif yang tidak kembali lagi</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Penipuan &amp; Risiko Perdagangan</h2>
 <h3>Apa penipuan terbesar dalam trading akun Clash of Clans?</h3>
 <div class="risk-box">
   <p>Screenshot bukti pembayaran palsu, tautan phishing "verifikasi akun kamu" yang dikirim lewat Discord untuk mencuri kredensial Supercell ID, dan pembeli yang membatalkan pembayaran lewat bank setelah menerima akses login. Karena Supercell tidak menengahi transaksi akun, tidak ada proses sengketa jika salah satu pihak tertipu.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Aturan &amp; Kebijakan Perdagangan</h2>
 <h3>Apakah memperdagangkan akun Clash of Clans melanggar aturan?</h3>
 <p>Ya — Ketentuan Layanan Supercell melarang menjual, membeli, atau mentransfer akun, dan pelanggaran bisa berujung pemblokiran permanen tanpa pemulihan.</p>
 
 <h3>Dari mana sebenarnya listing ini berasal?</h3>
 <p>Laporan pasar langsung igitems.com (4.463 listing, dirinci berdasarkan level Town Hall dan status progres) dan listing publik Eldorado.gg adalah sumber untuk angka-angka di atas — harga permintaan asli, bukan penjualan yang sudah pasti selesai.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Panduan Pemain</h2>
 <h3>Panduan pemain: urutan upgrade apa yang sebenarnya direkomendasikan pemain berpengalaman?</h3>
 <p>Bagian ini untuk meningkatkan base kamu sendiri, bukan nilai jual akun. Kerangka prioritas upgrade 2026 yang dipublikasikan oleh <a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a> dan <a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a> merangkum urutan yang umum direkomendasikan sebagai: Laboratory dulu, lalu Army Camps dan Clan Castle, lalu Hero Hall/Blacksmith, lalu pertahanan inti, dengan tembok sengaja di akhir — singkatan yang digunakan kedua panduan ini adalah "serangan dulu, hambatan waktu kedua, pertahanan ketiga, tembok terakhir." Konten tata letak base dan panduan upgrade dari kreator <strong>Judo Sloth Gaming</strong> membahas pendekatan prioritas 2026 yang sama secara lebih detail.</p>
 <p>Clash of Clans bukan game berbasis bidikan, jadi tidak ada budaya pengaturan sensitivitas yang berarti di sekitarnya seperti pada game tembak-menembak.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=id" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Cek estimasi nilai akun Clash of Clans kamu</a></div>
@@ -390,6 +402,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

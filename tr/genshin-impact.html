@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -229,6 +227,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -241,19 +241,40 @@
 <div class="back-btn"><a href="./">← Ana Sayfaya Dön</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚗️ Genshin Impact Hesap Değeri</h1>
   <p style="color:var(--muted); font-size:16px;">Özel bir "whale hesap" kategorisi dahil gerçek bir hesap pazarı gerçekten var — artı, bir alıcının gerçekte ödediğinden tamamen farklı bir rakam olan doğrulanmış ömür boyu harcama rakamları.</p>
+  <div class="g-badges">
   <p class="report-updated">Eylül 2026'da canlı pazar yeri ilanlarından güncellendi. Kaynaklar sayfanın altında listelenmiştir.</p>
   <div class="fresh-badge">🌍 En taze veriler — gerçek küresel pazar yerlerinde yapay zeka tarafından canlı araştırıldı, 12 Eylül 2026'da güncellendi</div>
+  </div>
 </section>
-
+<div class="price-range">Başlangıç hesapları: $5 – $60 · Whale hesapları: $30 – $9.000</div>
 <div class="fact-box">
   <span>📅 Yayın tarihi <strong>28 Eylül 2020</strong> — oyun tarihindeki en büyük eşzamanlı küresel lansmanlardan biri</span>
   <span>👥 Aylık <strong>16-24M</strong> oyuncu (2026), <strong>$4.8 Milyar</strong> ömür boyu gelir</span>
   <span>🌍 En güçlü <strong>Çin, Japonya, Güney Kore, Rusya, Hindistan</strong>'da</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
+  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
+  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Genshin Impact hesabının tahmini değerini kontrol et</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Fiyatlar</a>
   <a href="#value">📊 Değeri Ne Belirliyor</a>
@@ -272,22 +293,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Gerçek Pazar Fiyatları</h2>
 <h3>Bir Genshin Impact hesabı ne kadar eder?</h3>
-<div class="price-range">Başlangıç hesapları: $5 – $60 · Whale hesapları: $30 – $9.000</div>
+
 <p>Genshin Impact'ın gerçek, aktif bir hesap pazarı var. Eldorado.gg iki ayrı kategori işletiyor: normal/reroll hesaplar (yeni-hesap reroll'u aracılığıyla başlangıç karakterleri, bölgeye ve başlangıç 5-yıldızlarına göre $5-$60 fiyatlandırılmış) ve özel bir <em>whale hesap</em> kategorisi, burada fiyatlar en üst ilanlar için $30'dan $8.995'e kadar değişiyor (20 C6 karakter, 8 R5 silah). Üçüncü bir toplu kaynak (igitems.com, 442 ilan), normal hesapların şu anda ortalama ~$147 olduğunu gösteriyor, son 14 haftada keskin bir artışla.</p>
 
-<div class="value-calc" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
-  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
-  <div class="vc-subtitle">Yukarıdaki aralıklardan kaba bir tahmin — kaydırıcıları hareket ettirin. Bot ekran görüntülerinden kesin bir tahmin verir. Hiçbir şey girilmez veya hiçbir yere gönderilmez.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
-    <button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button>
-  </div>
-</div>
+
 
 <h3>Pazar fiyatı ile "$100K yayıncı harcaması" rakamları arasındaki fark nedir?</h3>
 <p>Bunlar iki farklı soruya cevap veren iki farklı rakam. $8.995'lik en üst ilan fiyatı, bir alıcının bugün açık piyasada belirli bir whale hesabını edinmek için gerçekten ödediği şey. Aşağıdaki $100.000-$150.000 rakamları kendi bildirdiği <em>ömür boyu harcama</em> — bir oyuncunun yıllar içinde gacha çekilişlerine koyduğu her şey — bu, yeniden satış değeriyle aynı değil, çünkü bir hesabın yeniden satış fiyatı, onu inşa etmek için başlangıçta ne harcandığını değil, diğer alıcıların şu anda ödemeye istekli olduğu şeyi yansıtır.</p>
@@ -316,8 +328,8 @@
   <li><strong><a href="https://genshin-impact.fandom.com/wiki/Neuvillette" target="_blank" rel="noopener">Neuvillette</a>, <a href="https://genshin-impact.fandom.com/wiki/Nefer" target="_blank" rel="noopener">Nefer</a>, <a href="https://genshin-impact.fandom.com/wiki/Flins" target="_blank" rel="noopener">Flins</a>, <a href="https://genshin-impact.fandom.com/wiki/Yelan" target="_blank" rel="noopener">Yelan</a>, <a href="https://genshin-impact.fandom.com/wiki/Citlali" target="_blank" rel="noopener">Citlali</a></strong> — her biri 3 ilan</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Bunlar mevcut üst-pazar karakterleri, kalıcı bir liste değil — Genshin'in metası her yeni banner ile değişiyor, bu yüzden bunun bir yıl sonra da geçerli olacağını varsaymadan önce tekrar kontrol edin.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Değeri Gerçekte Ne Belirliyor</h2>
 <h3>Bir Genshin Impact hesabını inşa etmek neden pahalı yapıyor?</h3>
 <ul>
@@ -334,25 +346,25 @@
   <li>Reaktif olarak çekmek yerine gerçekten oynamak istediğiniz banner'lar için Primogem biriktirin</li>
   <li>Harcanan mücevher başına değeri optimize ediyorsanız, silah banner'ları genellikle karakter banner'larından daha iyi garantili bir getiridir</li>
 </ul>
-
-<span id="risk" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="risk" class="anchor-target"></span>
 <h2>Ticaret Ötesindeki Riskler</h2>
 <h3>Yine de bir Genshin Impact hesabı satın almaya veya satmaya çalışırsam gerçek risk nedir?</h3>
 <div class="risk-box">
   <p>HoYoverse'in hesap güvenlik ekibi, bir transferden sonra yeni cihazlardan/konumlardan gelen girişleri aktif olarak işaretliyor ve hesabı kalıcı olarak askıya alabiliyor — kurtarma imkanı olmadan, çünkü bağlı ödeme geçmişi ve kişisel kimlik doğrulaması, bir transfer onaylanırsa itirazları kazanmayı esasen imkansız hale getiriyor. Bu, bu rapordaki çoğu diğer oyundan daha sıkı bir uygulama.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Kurallar ve Ticaret Politikası</h2>
 <h3>Bir Genshin Impact hesabı satın almak veya satmak kurallara aykırı mı?</h3>
 <p>Evet. HoYoverse'in Kullanım Şartları hesap transferlerini ve gerçek dünya parası için ticareti açıkça yasaklıyor ve bu kural çoğu mobil oyundan daha agresif bir şekilde uygulanıyor.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Oyuncu Rehberi</h2>
 <h3>Oyuncu rehberi: deneyimli oyuncular gerçekte hangi takım kompozisyonlarını tavsiye ediyor?</h3>
 <p>Bu bölüm, hesabınızın yeniden satış değeri değil, kendi takım kurmanızı geliştirmek içindir. Bu, nişan alma tabanlı olmaktan çok bir rotasyon/takım kompozisyonu oyunu, bu yüzden yararlı "meta" bilgisi kompozisyoneldir. <a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">Keqing</a> için (GameWith, Genshin-Builds, Ağustos 2026'da güncellendi), yaygın olarak belgelenmiş, ücretsiz-oyun-dostu bir Aggravate takımı Keqing'i (ana DPS) Fischl (saha dışı Electro), Collei (saha dışı Dendro) ve Zhongli (kalkan desteği) ile eşleştiriyor — bu dördünün hiçbiri whale seviyesinde yatırım gerektirmiyor.</p>
 <p>Yukarıda değerinden bahsettiğimiz <a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">Mavuika</a> için özellikle, en çok belirtilen whale-seviye takım (Icy Veins, GameWith) bir Melt kompozisyonu: Mavuika, Citlali (Cryo desteği/Pyro RES azaltma), Iansan ve Bennett. Ücretsiz-oyun tarafında, birden fazla rehber, Traveler'ın Pyro formunu Overload-tarzı Mavuika takımlarında gerçekten oynanabilir bir ikame olarak listeliyor — bu karakterler için "yeterince iyi" kompozisyonların kesinlikle 5-yıldız destekler gerektirmediğinin kanıtı.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Genshin Impact hesabının tahmini değerini kontrol et</a></div>
@@ -409,6 +421,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

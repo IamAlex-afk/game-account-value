@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -196,6 +194,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -208,19 +208,40 @@
 <div class="back-btn"><a href="./">← 홈으로</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ 마인크래프트 계정 가치</h1>
   <p style="color:var(--muted); font-size:16px;">두 개의 별개 시장: 일반 계정(등급, 케이프, 에디션)과 훨씬 희귀한 짧은-닉네임 수집 시장 — 둘 다 실제 문서화된 가격이 있다.</p>
+  <div class="g-badges">
   <p class="report-updated">2026년 9월, 실시간 마켓플레이스 매물 정보를 바탕으로 업데이트. 출처는 페이지 하단에 명시.</p>
   <div class="fresh-badge">🌍 최신 데이터 — AI가 실제 글로벌 마켓플레이스를 실시간 조사, 2026년 9월 12일 업데이트</div>
+  </div>
 </section>
-
+<div class="price-range">일반 계정: $0.50 ~ $632</div>
 <div class="fact-box">
   <span>📅 정식 출시 <strong>2011년 11월 18일</strong></span>
   <span>👥 월간 활성 사용자 <strong>약 2억1,200만 명</strong>(2026년)</span>
   <span>📦 <strong>3억5,000만+</strong> 판매 — 역대 최다 판매 비디오 게임(Mojang 확인)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 빠른 계산기</div>
+  <div class="vc-subtitle">위 범위를 기준으로 한 대략적인 추정치 — 슬라이더를 움직여보세요. 봇이 스크린샷으로 정확한 추정치를 제공합니다. 아무것도 입력하거나 전송되지 않습니다.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 결과 공유</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 마인크래프트 계정의 예상 가치 확인하기</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 가격</a>
   <a href="#value">📊 가치 결정 요인</a>
@@ -239,22 +260,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>실제 마켓 가격</h2>
 <h3>일반 마인크래프트 계정은 얼마의 가치가 있나요?</h3>
-<div class="price-range">일반 계정: $0.50 ~ $632</div>
+
 <p>Eldorado.gg의 실시간 매물은 $0.50(단순 Java Edition 케이프 코드)부터 "10케이프 MVP+" Hypixel 계정의 $120까지 폭넓다. 두 번째 마켓(igitems.com)에서는 Hypixel MVP+ 등급, 여러 케이프, 높은 Skyblock 레벨을 보유한 일반 계정이 ~$632까지 거래된다 — 여기서 가치는 닉네임이 아니라 서버 등급과 케이프 개수에 좌우된다.</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 빠른 계산기</div>
-  <div class="vc-subtitle">위 범위를 기준으로 한 대략적인 추정치 — 슬라이더를 움직여보세요. 봇이 스크린샷으로 정확한 추정치를 제공합니다. 아무것도 입력하거나 전송되지 않습니다.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
-    <button type="button" class="vc-share-btn">🔗 결과 공유</button>
-  </div>
-</div>
+
 
 <h3>희귀 짧은 닉네임 마인크래프트 계정은 얼마의 가치가 있나요?</h3>
 <p>이는 완전히 별개의, 훨씬 작은 수집 니치다 — 여기서 가치는 서버 등급이나 인게임 진행도가 아니라 거의 전적으로 <em>닉네임 자체</em>에 있다. PlayerUp 같은 커뮤니티 마켓플레이스는 닉네임 길이와 문자 유형에 따라 일관된 가격을 문서화해왔으며, 수천 달러부터 수십만 달러까지 — 위의 일반 계정과는 완전히 다른 시장이다.</p>
@@ -284,8 +296,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">Minecon 2011 케이프</a></strong> — 여러 독립된 출처에서 가장 많이 인용되는 희귀 마인크래프트 코스메틱으로, "가장 희귀한 마인크래프트 케이프"가 언급될 때마다 항상 기준점이 된다</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">실시간 케이프 마켓 가격 순위(mccapers.com, 2026년 9월): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a>(TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape 각 $3. MINECON 참가자 케이프(2011~2016)와 Mojang 직원 케이프는 이 일반 순위와 별개인 "박물관급" 카테고리에 속한다 — 거의 매물로 나오지 않으며, 바로 그 이유로 Minecon 2011이 최고 리스트 가격이 아님에도 가장 많이 언급되는 이름으로 남아 있다.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>실제 가치 결정 요인</h2>
 <h3>마인크래프트 계정 가치를 실제로 결정하는 것은?</h3>
 <ul>
@@ -301,26 +313,26 @@
   <li>Microsoft로 마이그레이션된 계정의 원본 이메일을 바꾸지 말고 유지하라 — 소유 이력이 구매자 신뢰에 중요하다</li>
   <li>Minecon 케이프를 보유하고 있다면, 새 계정으로 양도할 수 없다는 점을 알아둘 것 — 영구적으로 원래 계정에 묶여 있다</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>사기와 거래 위험</h2>
 <h3>마인크래프트 닉네임 거래에서 가장 큰 사기는?</h3>
 <div class="risk-box">
   <p>판매자가 특정 날짜에 닉네임을 풀겠다고 약속해놓고 미리 풀어버리거나 아예 풀지 않는 "네임 스쿼팅" 사기, 그리고 에스크로 없는 Discord 마켓에서의 단순한 선입금-미배송 사기. 마인크래프트 계정 양도는 Mojang/Microsoft가 공식적으로 지원하지 않기 때문에, 거래가 잘못되어도 분쟁 해결 수단이 없다.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>규정과 거래 정책</h2>
 <h3>마인크래프트 계정 매매는 Mojang 규정 위반인가요?</h3>
 <p>네 — 마인크래프트 이용약관은 실제 돈을 받고 계정을 양도하는 것을 금지하며, Mojang/Microsoft는 무단 양도가 감지된 계정을 정지할 수 있다.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>플레이어 가이드</h2>
 <h3>플레이어 가이드: 마인크래프트에도 실력 향상을 위한 진짜 접근법이 있나요?</h3>
 <p>이 섹션은 계정 재판매 가치가 아니라 실력 향상을 위한 것이다. 단일 랭킹 경쟁 게임과 달리, 마인크래프트는 각자 진짜 메타를 가진 완전히 별개의 커뮤니티로 나뉜다: 스피드런과 경쟁 PvP 서버.</p>
 <p>스피드런에는 권위 있는 출처(speedrun.com 리더보드)가 있지만, 자체 조사 과정에서 Any% Random Seed Glitchless(RSG) 세계 기록 보유자에 대해 엇갈리는 2차 보고를 발견했다 — 한 출처는 "lowkey"가 6:50을, 다른 출처는 "Skycrab"이 6:39를 기록했다고 인용했다 — 그래서 어느 한쪽을 사실로 단정하지 않고 불일치 자체를 명시한다. 확실한 것은: 이 카테고리 자체는 항상 같은 실제 루트를 따른다 — 초반 자원을 위해 마을이나 난파선을 찾고, 블레이즈 로드를 위해 네더로 가고, 스트롱홀드를 찾아, 엔드 전투를 순서대로 마친다.</p>
 <p>PvP 쪽에서는, 확립된 2026년 커뮤니티 가이드(<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>)가 순수 장비 투자에서 포지셔닝과 타이밍으로의 진짜 메타 변화를 설명하며, 현재 티어리스트에서 Crystal PvP와 Netherite Pot을 S티어, UHC/Axe PvP를 A티어로 매겼다. 실제 활성 플랫폼: Hypixel의 PvP 모드(Bedwars, Skywars, Duels)와 Minemen Club의 연습 모드(Nodebuff, Soup, UHC, Bridge).</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 마인크래프트 계정의 예상 가치 확인하기</a></div>
@@ -378,6 +390,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

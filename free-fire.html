@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="./favicon.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="manifest" href="./manifest.json">
-<link rel="preload" href="./assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/style.css">
 <script type="application/ld+json">
 {
@@ -239,6 +237,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/glass.css">
 </head>
 <body class="theme-diamond">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -251,20 +251,41 @@
 <div class="back-btn"><a href="./">← Back to Home</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🔫 Free Fire Account Value</h1>
   <p style="color:var(--muted); font-size:16px;">Real price brackets from live resale marketplace listings across three regions, what actually drives a Free Fire account's price, and the risks of trading one.</p>
+  <div class="g-badges">
   <p class="report-updated">Updated September 2026 from live marketplace listings. Sources listed at the bottom of the page.</p>
   <div class="fresh-badge">🌍 Freshest data — researched live by AI across real global marketplaces, updated September 12, 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Real market range: $0.73 – $250 typical, up to ~$755 in Brazil</div>
 <div class="fact-box">
   <span>📅 Released <strong>December 8, 2017</strong></span>
   <span>👥 <strong>110M</strong> monthly, <strong>33M</strong> daily active players</span>
   <span>🌍 Strongest in <strong>India, Indonesia, Brazil</strong> — #1 mobile game in Indonesia for years</span>
   <span>📦 <strong>1.3B+</strong> downloads</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
+  <div class="vc-title">🧮 Quick Calculator</div>
+  <div class="vc-subtitle">Covers global averages — Brazil's own marketplace runs meaningfully higher, up to ~$755, see the note above. Nothing is entered or sent anywhere; the bot gives an exact estimate from screenshots.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copied!">Rough estimate, not an exact valuation</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Share result</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Free Fire account's estimated value</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Prices</a>
   <a href="#value">📊 What Drives Value</a>
@@ -283,22 +304,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Real Market Prices</h2>
 <h3>How much is a Free Fire account worth?</h3>
-<div class="price-range">Real market range: $0.73 – $250 typical, up to ~$755 in Brazil</div>
+
 <p>Live listings on Eldorado.gg run from $0.73 (fresh, unranked accounts) up to $250 for a high-end account. A larger aggregate market (igitems.com, 293 listings) shows an average asking price of $78.32, up from $56.95 over the prior 14 weeks. Brazil — one of Free Fire's largest markets — has its own listings on MercadoLivre reaching as high as R$4,000 (~$755) for top accounts.</p>
 
-<div class="value-calc" id="vc-free-fire" data-game="free-fire" data-title="Free Fire">
-  <div class="vc-title">🧮 Quick Calculator</div>
-  <div class="vc-subtitle">Covers global averages — Brazil's own marketplace runs meaningfully higher, up to ~$755, see the note above. Nothing is entered or sent anywhere; the bot gives an exact estimate from screenshots.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copied!">Rough estimate, not an exact valuation</span>
-    <button type="button" class="vc-share-btn">🔗 Share result</button>
-  </div>
-</div>
+
 
 <h3>What do the price brackets look like?</h3>
 <table class="tier-table">
@@ -314,8 +326,8 @@
 
 <h3>Does a forum-based marketplace show different numbers than the storefront sites above?</h3>
 <p>Somewhat higher at the top end. EpicNPC — a peer-to-peer trading forum, distinct from Eldorado.gg and igitems.com — has individual listings well above this page's $150-$300+ top bracket: a Level 69 account with 10 Evo guns asking $299, a MENA-region account at $350, and a "Prime 8" account at $400, found via indexed search results in September 2026 (EpicNPC blocks direct automated page access, so these are asking prices as surfaced by search indexing, not pages we fetched and quoted directly ourselves). Most listings we found there still fell in the same $6-$250 range as the storefront data above — these named examples are the visible high end of that forum specifically, not a new typical range.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>What Actually Determines Value</h2>
 <h3>What actually determines a Free Fire account's value?</h3>
 <ul>
@@ -332,23 +344,23 @@
   <li>Prioritize character collection breadth over spending everything on one character's skins</li>
   <li>Keep diamond purchases for limited-time bundles rather than routine cosmetics</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Scams &amp; Trading Risks</h2>
 <h3>What are the biggest scams in Free Fire account trading?</h3>
 <div class="risk-box">
   <p>Fake reseller pages on social media that collect payment via QR code and never deliver, and buyers who use stolen payment methods to pay a seller, triggering a chargeback weeks later that leaves the seller both unpaid and without the account. Garena does not mediate account-trading disputes.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Rules &amp; Trading Policy</h2>
 <h3>Is trading Free Fire accounts against the rules?</h3>
 <p>Yes — Garena's Terms of Service prohibit account sales and transfers, and detected trading can result in a permanent ban.</p>
 
 <h3>Where do these listings actually come from?</h3>
 <p>Eldorado.gg and igitems.com host global listings with asking prices; MercadoLivre (Brazil's largest marketplace) shows the same pattern in the local currency for one of Free Fire's biggest markets specifically — all are asking prices, not confirmed sales.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Player Guide</h2>
 <h3>Player guide: how does an actual pro set up their sensitivity?</h3>
 <p>This section is for improving your own play, not your account's resale value. <strong><a href="https://en.wikipedia.org/wiki/Two9" target="_blank" rel="noopener">Diogenes "Two9" Inácio</a></strong>, a Brazilian pro known for trick-shot mechanics, published this full settings breakdown (source: <a href="https://escharts.com/news/mastering-two9-meta" target="_blank" rel="noopener">Esports Charts</a>):</p>
@@ -362,7 +374,7 @@
 </tbody>
 </table>
 <p style="font-size:13px; color:var(--muted);">This is one named pro's personal setup, not a universal formula — Two9 himself is quoted saying <strong>"Sensi is 20%, training is 80%"</strong>. His other cited techniques: a "Wait-and-Flick" aiming style, resetting recoil by switching weapons mid-fight, and placing Gloo Walls in a "V" or "U" shape to create multiple peek angles instead of one flat wall.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_free_fire&utm_campaign=free-fire" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Free Fire account's estimated value</a></div>
@@ -423,6 +435,7 @@
 
 <script src="./assets/cursor-trail.js" defer></script>
 <script src="./assets/calculators.js" defer></script>
+<script src="./assets/glass.js" defer></script>
 <script src="./assets/market-watch-button.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>

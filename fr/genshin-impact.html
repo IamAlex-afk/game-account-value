@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -228,6 +226,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -240,19 +240,40 @@
 <div class="back-btn"><a href="./">← Retour à l'accueil</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚗️ Valeur d'un compte Genshin Impact</h1>
   <p style="color:var(--muted); font-size:16px;">Un vrai marketplace de comptes existe bel et bien — incluant une catégorie dédiée « compte whale » — plus des chiffres de dépense de vie vérifiés qui sont un chiffre complètement différent de ce qu'un acheteur paie réellement.</p>
+  <div class="g-badges">
   <p class="report-updated">Mis à jour en septembre 2026 à partir d'annonces de marché en direct. Sources listées en bas de page.</p>
   <div class="fresh-badge">🌍 Données les plus fraîches — recherchées en direct par IA sur de vrais marketplaces mondiaux, mises à jour le 12 septembre 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Comptes débutants : 5 $ – 60 $ · Comptes whale : 30 $ – 9 000 $</div>
 <div class="fact-box">
   <span>📅 Sorti le <strong>28 septembre 2020</strong> — l'un des plus grands lancements mondiaux simultanés de l'histoire du jeu vidéo</span>
   <span>👥 <strong>16-24M</strong> joueurs mensuels (2026), <strong>4,8 Md$</strong> de revenus à vie</span>
   <span>🌍 Plus fort en <strong>Chine, Japon, Corée du Sud, Russie, Inde</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
+  <div class="vc-title">🧮 Calculateur Rapide</div>
+  <div class="vc-subtitle">Une estimation approximative à partir des fourchettes ci-dessus — déplacez les curseurs. Le bot donne une estimation exacte à partir de captures d'écran. Rien n'est saisi ni envoyé nulle part.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copié !">Estimation approximative, pas une valorisation exacte</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Partager le résultat</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Vérifiez la valeur estimée de votre compte Genshin Impact</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Prix</a>
   <a href="#value">📊 Ce Qui Détermine la Valeur</a>
@@ -271,22 +292,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Prix Réels du Marché</h2>
 <h3>Combien vaut un compte Genshin Impact ?</h3>
-<div class="price-range">Comptes débutants : 5 $ – 60 $ · Comptes whale : 30 $ – 9 000 $</div>
+
 <p>Genshin Impact a un marketplace de comptes réel et actif. Eldorado.gg gère deux catégories distinctes : les comptes réguliers/reroll (personnages de départ via un reroll de compte neuf, prix de 5-60 $ selon la région et les 5 étoiles de départ) et une catégorie dédiée <em>compte whale</em>, où les prix vont de 30 $ jusqu'à 8 995 $ pour les toutes meilleures annonces (20 personnages C6, 8 armes R5). Une troisième source agrégée (igitems.com, 442 annonces) montre que les comptes réguliers font actuellement une moyenne d'environ 147 $, en forte hausse sur les 14 dernières semaines.</p>
 
-<div class="value-calc" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
-  <div class="vc-title">🧮 Calculateur Rapide</div>
-  <div class="vc-subtitle">Une estimation approximative à partir des fourchettes ci-dessus — déplacez les curseurs. Le bot donne une estimation exacte à partir de captures d'écran. Rien n'est saisi ni envoyé nulle part.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copié !">Estimation approximative, pas une valorisation exacte</span>
-    <button type="button" class="vc-share-btn">🔗 Partager le résultat</button>
-  </div>
-</div>
+
 
 <h3>Quelle est la différence entre le prix de marketplace et les chiffres de « dépense de streamer à 100K $ » ?</h3>
 <p>Ce sont deux chiffres différents répondant à deux questions différentes. Le prix d'annonce le plus haut de 8 995 $ est ce qu'un acheteur paie réellement aujourd'hui pour acquérir un compte whale spécifique sur le marché ouvert. Les chiffres de 100 000-150 000 $ ci-dessous sont des <em>dépenses de vie</em> autodéclarées — tout ce qu'un joueur a mis dans les tirages gacha sur des années — ce qui n'est pas la même chose que la valeur de revente, puisque le prix de revente d'un compte reflète ce que d'autres acheteurs sont actuellement prêts à payer, pas ce qui a été initialement dépensé pour le construire.</p>
@@ -315,8 +327,8 @@
   <li><strong><a href="https://genshin-impact.fandom.com/wiki/Neuvillette" target="_blank" rel="noopener">Neuvillette</a>, <a href="https://genshin-impact.fandom.com/wiki/Nefer" target="_blank" rel="noopener">Nefer</a>, <a href="https://genshin-impact.fandom.com/wiki/Flins" target="_blank" rel="noopener">Flins</a>, <a href="https://genshin-impact.fandom.com/wiki/Yelan" target="_blank" rel="noopener">Yelan</a>, <a href="https://genshin-impact.fandom.com/wiki/Citlali" target="_blank" rel="noopener">Citlali</a></strong> — 3 annonces chacun</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Ce sont les personnages les plus demandés actuellement, pas une liste permanente — le méta de Genshin change à chaque nouveau bannière, donc revérifiez avant de supposer que cela tient encore dans un an.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Ce Qui Détermine Réellement la Valeur</h2>
 <h3>Qu'est-ce qui rend un compte Genshin Impact coûteux à construire ?</h3>
 <ul>
@@ -333,25 +345,25 @@
   <li>Gardez vos Primogems pour les bannières que vous voulez vraiment jouer plutôt que de tirer de façon réactive</li>
   <li>Les bannières d'armes sont généralement un meilleur retour garanti que les bannières de personnages si vous optimisez la valeur par gemme dépensée</li>
 </ul>
-
-<span id="risk" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="risk" class="anchor-target"></span>
 <h2>Risques Au-Delà du Commerce</h2>
 <h3>Quel est le risque réel si j'essaie quand même d'acheter ou de vendre un compte Genshin Impact ?</h3>
 <div class="risk-box">
   <p>L'équipe de sécurité des comptes de HoYoverse signale activement les connexions depuis de nouveaux appareils/emplacements après un transfert et peut suspendre le compte de façon permanente — sans recours, puisque l'historique de paiement lié et la vérification d'identité rendent tout appel pratiquement impossible à gagner si un transfert est confirmé. C'est l'application la plus stricte de tous les jeux de ce rapport.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Règles et Politique Commerciale</h2>
 <h3>Est-il contraire aux règles d'acheter ou de vendre un compte Genshin Impact ?</h3>
 <p>Oui. Les Conditions d'Utilisation de HoYoverse interdisent explicitement les transferts et le commerce de comptes pour de l'argent réel, et cette règle est appliquée plus agressivement que dans la plupart des jeux mobiles.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Guide Joueur</h2>
 <h3>Guide joueur : quelles compositions d'équipe les joueurs expérimentés recommandent-ils réellement ?</h3>
 <p>Cette section vise à améliorer votre propre construction d'équipe, pas la valeur de revente de votre compte. C'est un jeu de rotation/composition d'équipe plutôt que de visée, donc le savoir « méta » utile est de nature compositionnelle. Pour <a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">Keqing</a> (GameWith, Genshin-Builds, mis à jour en août 2026), une équipe Aggravate largement documentée et adaptée au free-to-play associe Keqing (DPS principal) à Fischl (Électro hors-champ), Collei (Dendro hors-champ), et Zhongli (soutien bouclier) — aucun de ces quatre ne nécessite un investissement de niveau whale.</p>
 <p>Pour <a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">Mavuika</a> spécifiquement, dont nous citons la valeur ci-dessus, l'équipe de niveau whale la plus citée (Icy Veins, GameWith) est une comp Fonte : Mavuika, Citlali (soutien Cryo/réduction RES Pyro), Iansan, et Bennett. Côté free-to-play, plusieurs guides listent la forme Pyro du Voyageur comme un substitut réellement jouable dans les équipes Mavuika de style Surcharge — preuve que les comps « suffisamment bonnes » pour ces personnages n'exigent pas strictement des soutiens 5 étoiles.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Vérifiez la valeur estimée de votre compte Genshin Impact</a></div>
@@ -408,6 +420,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

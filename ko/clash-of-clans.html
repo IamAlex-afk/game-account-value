@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,20 +197,41 @@
 <div class="back-btn"><a href="./">← 홈으로</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ 클래시오브클랜 계정 가치</h1>
   <p style="color:var(--muted); font-size:16px;">실시간 마켓플레이스 매물 정보로 얻은, Town Hall 레벨과 진행도별 실제 가격 데이터 — 상상으로 만든 추정치가 아니다.</p>
+  <div class="g-badges">
   <p class="report-updated">2026년 9월, 실시간 마켓플레이스 매물 정보를 바탕으로 업데이트. 출처는 페이지 하단에 명시.</p>
   <div class="fresh-badge">🌍 최신 데이터 — AI가 실제 글로벌 마켓플레이스를 실시간 조사, 2026년 9월 12일 업데이트</div>
+  </div>
 </section>
-
+<div class="price-range">실제 마켓 가격대: $10 ~ $260</div>
 <div class="fact-box">
   <span>📅 출시 <strong>2012년 8월 2일</strong>(iOS), Android는 2013년</span>
   <span>👥 월간 활성 플레이어 <strong>6,500만~1억+</strong>(출처마다 추정치 다름)</span>
   <span>📦 누적 다운로드 <strong>5억+</strong></span>
   <span>🏰 현재 최고 Town Hall: <strong>TH18</strong>(2026년 9월 기준)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 빠른 계산기</div>
+  <div class="vc-subtitle">위 범위 기반 대략적 추정치 — 슬라이더를 움직여보세요. 봇이 스크린샷으로 정확한 추정치를 제공한다. 아무것도 입력하거나 전송되지 않는다.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 결과 공유</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 클래시오브클랜 계정의 예상 가치 확인하기</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 가격</a>
   <a href="#value">📊 가치 결정 요인</a>
@@ -229,22 +250,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>실제 마켓 가격</h2>
 <h3>클래시오브클랜 계정은 얼마의 가치가 있나요?</h3>
-<div class="price-range">실제 마켓 가격대: $10 ~ $260</div>
+
 <p>클래시오브클랜은 현재 Town Hall 18까지 있으며, 계정 가격은 Town Hall 레벨과 계정이 "rushed"(방어시설/영웅을 건너뛰고 불균형하게 업그레이드)인지 "full max"인지 모두에 직접 연동된다. rushed TH13은 대략 $10에 팔리는 반면, 진짜 full max TH18은 $100~$260에 매물로 나온다.</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 빠른 계산기</div>
-  <div class="vc-subtitle">위 범위 기반 대략적 추정치 — 슬라이더를 움직여보세요. 봇이 스크린샷으로 정확한 추정치를 제공한다. 아무것도 입력하거나 전송되지 않는다.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="복사됨!">대략적인 추정치이며, 정확한 감정가가 아닙니다</span>
-    <button type="button" class="vc-share-btn">🔗 결과 공유</button>
-  </div>
-</div>
+
 
 <h3>Town Hall 레벨별 실제 가격은 어떻게 되나요?</h3>
 <table class="tier-table">
@@ -262,8 +274,8 @@
 
 <h3>이 가격대는 다른 유형의 마켓플레이스에서도 성립하나요?</h3>
 <p>대체로 성립한다. EpicNPC — Eldorado.gg나 igitems.com 같은 스토어형 마켓플레이스가 아닌 플레이어 간 거래 포럼 — 에서는 개별 TH17/TH18 매물이 대략 $98~$340에 가격이 매겨져 있으며, 2026년 9월 인덱스 검색 결과를 통해 확인했다(EpicNPC가 자동 직접 페이지 접근을 차단하므로, 이는 검색 인덱스에 노출된 희망가이며 직접 가져와 인용한 페이지는 아니다). 이는 위 igitems.com 표와 비슷한 경향으로, TH17/TH18 full-max 계정은 수백 달러 하한선 부근이다 — EpicNPC 개별 매물의 최고가는 igitems.com 상한선 $260을 다소 웃돌지만, 이는 포럼에서는 판매자가 스토어형 다른 매물과 경쟁하지 않고 임의의 희망가를 붙일 수 있다는 것과 일치한다.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>실제 가치 결정 요인</h2>
 <h3>클래시오브클랜 계정 가치를 실제로 결정하는 것은?</h3>
 <ul>
@@ -280,28 +292,28 @@
   <li>시즌 이력은 누적되므로 가끔이 아니라 꾸준히 Legend League를 노려라</li>
   <li>재등장하지 않는 한정 코스메틱을 위해 매 시즌 골드 패스/시즌 패스를 활성화해두어라</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>사기와 거래 위험</h2>
 <h3>클래시오브클랜 계정 거래에서 가장 큰 사기는?</h3>
 <div class="risk-box">
   <p>가짜 결제 증명 스크린샷, Discord로 전송되는 Supercell ID 인증 정보를 훔치는 "계정 확인" 피싱 링크, 로그인 접근 권한을 받은 후 은행을 통해 결제를 이의 제기하는 구매자. Supercell은 계정 거래를 중개하지 않으므로 어느 쪽이든 사기를 당해도 이의 제기 절차는 존재하지 않는다.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>규정과 거래 정책</h2>
 <h3>클래시오브클랜 계정 거래는 규정 위반인가요?</h3>
 <p>네 — Supercell 이용약관은 계정 판매·구매·양도를 금지하며, 위반 시 복구 불가능한 영구 정지로 이어질 수 있다.</p>
 
 <h3>이 매물 정보는 실제로 어디서 오나요?</h3>
 <p>igitems.com의 실시간 마켓 리포트(Town Hall 레벨×진행도별로 분류된 매물 4,463건)와 Eldorado.gg의 공개 매물이 위 수치의 출처이며, 이는 확인된 체결가가 아니라 실제 희망가다.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>플레이어 가이드</h2>
 <h3>플레이어 가이드: 숙련된 플레이어가 실제로 추천하는 업그레이드 순서는?</h3>
 <p>이 섹션은 본인 마을 발전을 위한 것이며, 계정의 재판매 가치를 위한 것이 아니다. <a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a>와 <a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a>가 공개한 2026년 업그레이드 우선순위 프레임워크는 일반적으로 권장되는 순서를 다음과 같이 정리한다: 먼저 연구소, 다음 막사와 클랜 성, 다음 영웅 홀/대장간, 다음 핵심 방어시설, 그리고 성벽은 의도적으로 마지막 — 두 가이드가 쓰는 약어는 "공격을 먼저, 시간 병목을 다음, 방어시설을 세 번째, 성벽은 마지막"이다. 크리에이터 <strong>Judo Sloth Gaming</strong>의 마을 배치와 업그레이드 가이드 콘텐츠도 같은 2026년 우선순위 접근법을 더 자세히 다룬다.</p>
 <p>클래시오브클랜은 조준 중심 게임이 아니므로 슈팅게임 같은 감도 설정 문화는 존재하지 않는다.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=ko" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">내 클래시오브클랜 계정의 예상 가치 확인하기</a></div>
@@ -358,6 +370,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

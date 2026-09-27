@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -179,8 +177,10 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
-<body>
+<body class="theme-studs">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
@@ -191,20 +191,41 @@
 <div class="back-btn"><a href="./">← กลับหน้าแรก</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🟦 มูลค่าบัญชี Roblox</h1>
   <p style="color:var(--muted); font-size:16px;">รายการขายจริงจากตลาดขายต่อ โลกแยกของการถือครองไอเทมสะสม และความเสี่ยงของการเทรดบัญชี</p>
+  <div class="g-badges">
   <p class="report-updated">อัปเดตกันยายน 2026 จากรายการขายจริงบนตลาดซื้อขาย แหล่งข้อมูลอยู่ด้านล่างหน้า</p>
   <div class="fresh-badge">🌍 ข้อมูลล่าสุด — AI วิจัยตลาดซื้อขายทั่วโลกจริงแบบเรียลไทม์ อัปเดต 12 กันยายน 2026</div>
+  </div>
 </section>
-
+<div class="price-range">ช่วงราคาตลาด: $0.50 - $60 (บัญชีที่ผูกกับ experience เฉพาะทางอาจสูงถึง ~$800)</div>
 <div class="fact-box">
   <span>📅 เปิดตัว <strong>1 กันยายน 2006</strong></span>
   <span>👥 ผู้ใช้งานต่อเดือน <strong>381.8 ล้านคน</strong>, ต่อวัน <strong>144 ล้านคน</strong></span>
   <span>🌍 แข็งแกร่งสุดใน <strong>เอเชียแปซิฟิก</strong>, <strong>ยุโรป</strong>, <strong>อเมริกาเหนือ</strong></span>
   <span>📦 บัญชีที่ลงทะเบียน <strong>1.5 พันล้าน+</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-roblox" data-game="roblox" data-title="Roblox">
+  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
+  <div class="vc-subtitle">ครอบคลุม 3 ไอเทมหายากด้านล่าง (Headless ตามรายการจริงบน Eldorado.gg ส่วน Korblox และ Violet Valkyrie ตามต้นทุน Robux ที่ราคาขายต่อ Robux ปัจจุบัน และนับยอด Robux ด้วย) Dominus/ไอเทมหายากอื่นๆ ยังไม่ถูกโมเดล — ดู "ตลาด Limiteds" ด้านบน ไม่มีการกรอกหรือส่งข้อมูลใดๆ บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Roblox ของคุณ</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 ราคา</a>
   <a href="#limiteds">🏆 Limiteds</a>
@@ -223,24 +244,15 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>ราคาตลาดจริง</h2>
 <h3>บัญชี Roblox มีมูลค่าจริงเท่าไหร่?</h3>
-<div class="price-range">ช่วงราคาตลาด: $0.50 - $60 (บัญชีที่ผูกกับ experience เฉพาะทางอาจสูงถึง ~$800)</div>
+
 <p>แม้ข้อกำหนดของ Roblox จะห้าม แต่บัญชี Roblox ก็ถูกซื้อขายจริงบนแพลตฟอร์มบุคคลที่สาม บน Eldorado.gg รายการขายสดเริ่มตั้งแต่ $0.50 (บัญชีพื้นฐานที่สมัครช่วงปี 2007-2015 ไม่มีความคืบหน้าเด่นชัด) ไปจนถึง $59.99 สำหรับชื่อผู้ใช้ 4 ตัวอักษรที่สวยงาม บน igitems.com บัญชีที่สร้างขึ้นรอบ experience ยอดนิยมเฉพาะทาง — เช่นบัญชี "Pet Simulator 99" ที่แม็กซ์แล้ว หรือบัญชี Blox Fruits เลเวลสูง — มีราคาสูงถึง ~$800 ส่วนรายการที่ไม่เกี่ยวข้องกับ experience หายากส่วนใหญ่ขายต่ำกว่า $25</p>
 
 <p>Headless Horseman คือข้อยกเว้นใหญ่ของกฎ “ต่ำกว่า $25” ณ วันที่ 26 กันยายน 2026 Eldorado.gg มีรายการบัญชี Headless 337 รายการ ครึ่งกลางของรายการที่แสดงตั้งราคา $400–700 (ส่วนใหญ่มี Korblox ด้วย) และบัญชีที่มี Violet Valkyrie เพิ่มตั้งราคา $750–1,500 Robux ในยอดคงเหลือก็มีมูลค่าขายต่อเช่นกัน: ผู้ขายบน Eldorado.gg ตั้งราคา $0.0065–0.0075 ต่อ Robux เทียบกับอัตราถอนเงิน DevEx อย่างเป็นทางการของ Roblox ที่ $0.0038</p>
 
-<div class="value-calc" id="vc-roblox" data-game="roblox" data-title="Roblox">
-  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
-  <div class="vc-subtitle">ครอบคลุม 3 ไอเทมหายากด้านล่าง (Headless ตามรายการจริงบน Eldorado.gg ส่วน Korblox และ Violet Valkyrie ตามต้นทุน Robux ที่ราคาขายต่อ Robux ปัจจุบัน และนับยอด Robux ด้วย) Dominus/ไอเทมหายากอื่นๆ ยังไม่ถูกโมเดล — ดู "ตลาด Limiteds" ด้านบน ไม่มีการกรอกหรือส่งข้อมูลใดๆ บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
-    <button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button>
-  </div>
-</div>
+
 
 <h3>คนซื้อขายบัญชี Roblox กันที่ไหนจริงๆ?</h3>
 <p>แพลตฟอร์มบุคคลที่สามอย่าง Eldorado.gg และ igitems.com มีรายการขายสาธารณะพร้อมราคาชัดเจน จัดเรียงตามอายุบัญชี ชื่อผู้ใช้ ยอดคงเหลือ Robux และเกม/experience ที่บัญชีถูกสร้างขึ้นมา สิ่งนี้ขัดแย้งโดยตรงกับความเชื่อที่ว่า "ตลาดไม่มีอยู่จริง" — เพียงแต่ไม่เด่นชัดเท่าระบบเทรดของ Steam เพราะข้อกำหนดของ Roblox ห้ามไว้ และแพลตฟอร์มเหล่านี้ดำเนินการในฐานะบุคคลที่สามนอกการควบคุมของ Roblox</p>
@@ -258,8 +270,8 @@
   <li><strong>สัตว์เลี้ยงและเงิน Bucks ของ Adopt Me</strong> — 2 จาก 10 รายการสร้างขึ้นจากเศรษฐกิจของ experience เดียวนี้ทั้งหมด</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">บนอีกแพลตฟอร์มหนึ่ง (igitems.com) รายการที่มีมูลค่าสูงสุดคือบัญชี Pet Simulator 99 ระดับ "end-game" (~$800) — ยังไม่ได้รับการยืนยันว่าเป็นรูปแบบที่ซ้ำในท็อป 10 ของแพลตฟอร์มนั้น แต่เป็นตัวเลขเฉพาะ experience ที่สูงที่สุดที่พบจนถึงตอนนี้</p>
-
-<span id="limiteds" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="limiteds" class="anchor-target"></span>
 <h2>ตลาด Limiteds</h2>
 <h3>ตลาด Limiteds คืออะไร และ Limited ถูกตั้งราคาอย่างไรจริงๆ?</h3>
 <p>Roblox มีเศรษฐกิจการเทรดแยกต่างหากที่มีมานานหลายทศวรรษสำหรับ "Limiteds" (ไอเทมคอสเมติกที่ไม่ขายใหม่แล้ว) ซึ่งดำเนินการแยกจากตลาดขายบัญชีข้างต้นเกือบทั้งหมด เครื่องมือติดตามมาตรฐานของคอมมูนิตี้ Rolimons.com กำหนดตัวเลขสามแบบที่แตกต่างกันสำหรับไอเทมเดียวกัน — การสับสนตัวเลขเหล่านี้เป็นความผิดพลาดที่พบบ่อยที่สุดของมือใหม่:</p>
@@ -284,8 +296,8 @@
 <div class="risk-box">
   <p><strong>คำเตือนเว็บไซต์:</strong> ระหว่างการวิจัยนี้เราพบโดเมนปลอมที่เลียนแบบชื่อและแบรนด์ของ Rolimons ใช้เฉพาะ <strong>rolimons.com</strong> โดยตรงเท่านั้น — อย่าใช้เว็บก๊อปปี้ที่ชื่อคล้ายกันเด็ดขาด โดยเฉพาะถ้าเจอผ่านโฆษณาหรือลิงก์ที่คนอื่นส่งมา</p>
 </div>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>ปัจจัยที่กำหนดมูลค่าจริงๆ</h2>
 <h3>อะไรที่กำหนดราคาบัญชี Roblox จริงๆ?</h3>
 <ul>
@@ -303,22 +315,22 @@
   <li>กระจายมูลค่าไปยัง Limiteds หลายตัวแทนที่จะกระจุกไว้ที่ไอเทมเดียว เพราะ Roblox บางครั้งถอดหรือลดมูลค่าไอเทมแต่ละตัว</li>
   <li>มองสิ่งนี้เป็นงานอดิเรกสะสมที่มีความเสี่ยงจริง ไม่ใช่การลงทุน — มูลค่า Limited item มีสภาพคล่องต่ำและเปลี่ยนแปลงเร็วได้</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>การโกงและความเสี่ยงในการเทรด</h2>
 <h3>การโกงที่ใหญ่ที่สุดเกี่ยวกับบัญชีและไอเทม Roblox คืออะไร?</h3>
 <div class="risk-box">
   <p>การโกงในการเทรดบัญชีและไอเทมพบได้ทั่วไปมากในคอมมูนิตี้ Roblox: บริการ "คนกลาง" ปลอม เว็บไซต์ฟิชชิ่งที่ก็อปปี้หน้าล็อกอิน Roblox เพื่อขโมยข้อมูลรับรอง และการโกงแบบ "free Robux generator" ที่ขอสิทธิ์เข้าถึงบัญชีโดยตรง เนื่องจากข้อกำหนดของ Roblox ห้ามการโอนบัญชีโดยสิ้นเชิง เหยื่อการโกงจากการเทรดจึงไม่มีทางเรียกร้องคืนได้ — Roblox จะไม่กู้คืนบัญชีที่โดนโกงหรือย้อนกลับการเทรดไอเทม และถ้า Roblox ตรวจพบการโอนที่ไม่ได้รับอนุญาต บัญชีที่โดนโกงเองก็ยังคงถูกระงับด้วย</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>กฎและนโยบายการเทรด</h2>
 <h3>การซื้อขายบัญชี Roblox ผิดกฎหรือไม่?</h3>
 <p>ใช่ ข้อกำหนดการใช้งานของ Roblox ห้ามการโอนความเป็นเจ้าของบัญชีและการซื้อขายบัญชีด้วยเงินจริงอย่างชัดเจน บัญชีที่เกี่ยวข้องกับการโอนที่ถูกตรวจพบอาจถูกระงับถาวร และทั้งผู้ซื้อและผู้ขายไม่มีกระบวนการอุทธรณ์</p>
 
 <h3>ทำไมราคาบัญชี Roblox ถึงดูต่ำกว่าเกมอื่นมาก?</h3>
 <p>บัญชี Roblox ส่วนใหญ่ไม่มี "ความคืบหน้า" แบบที่กำหนดมูลค่าในเกมอย่าง Clash of Clans หรือ Free Fire — มูลค่าบัญชี Roblox กระจุกตัวอยู่ที่ไอเทมเฉพาะ ความคืบหน้าใน experience เฉพาะ หรือชื่อผู้ใช้ ไม่ใช่เลเวลโดยรวม นี่คือเหตุผลที่รายการขายส่วนใหญ่อยู่ต่ำกว่า $25 และมีเพียงบัญชีเฉพาะบางตัว (ชื่อผู้ใช้หายาก ความคืบหน้าใน experience ที่เป็นที่ต้องการสูง) เท่านั้นที่ไปถึงหลักร้อยดอลลาร์</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Roblox ของคุณ</a></div>
@@ -375,6 +387,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

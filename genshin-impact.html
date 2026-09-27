@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="./favicon.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="manifest" href="./manifest.json">
-<link rel="preload" href="./assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/style.css">
 <script type="application/ld+json">
 {
@@ -247,6 +245,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -259,19 +259,40 @@
 <div class="back-btn"><a href="./">← Back to Home</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚗️ Genshin Impact Account Value</h1>
   <p style="color:var(--muted); font-size:16px;">A real account marketplace does exist — including a dedicated "whale account" category — plus verified lifetime-spending figures that are a different number entirely from what a buyer actually pays.</p>
+  <div class="g-badges">
   <p class="report-updated">Updated September 2026 from live marketplace listings. Sources listed at the bottom of the page.</p>
   <div class="fresh-badge">🌍 Freshest data — researched live by AI across real global marketplaces, updated September 12, 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Starter accounts: $5 – $60 · Whale accounts: $30 – $9,000</div>
 <div class="fact-box">
   <span>📅 Released <strong>September 28, 2020</strong> — one of the largest simultaneous global launches in gaming history</span>
   <span>👥 <strong>16-24M</strong> monthly players (2026), <strong>$4.8B</strong> lifetime revenue</span>
   <span>🌍 Strongest in <strong>China, Japan, South Korea, Russia, India</strong></span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
+  <div class="vc-title">🧮 Quick Calculator</div>
+  <div class="vc-subtitle">A rough estimate from the ranges above — move the sliders. The bot gives an exact estimate from screenshots. Nothing is entered or sent anywhere.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copied!">Rough estimate, not an exact valuation</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Share result</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Genshin Impact account's estimated value</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Prices</a>
   <a href="#value">📊 What Drives Value</a>
@@ -290,22 +311,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Real Market Prices</h2>
 <h3>How much is a Genshin Impact account worth?</h3>
-<div class="price-range">Starter accounts: $5 – $60 · Whale accounts: $30 – $9,000</div>
+
 <p>Genshin Impact has a real, active account marketplace. Eldorado.gg runs two separate categories: regular/reroll accounts (starting characters via a fresh-account reroll, priced $5-$60 by region and starting 5-stars) and a dedicated <em>whale account</em> category, where prices run from $30 up to $8,995 for the very top listings (20 C6 characters, 8 R5 weapons). A third aggregate source (igitems.com, 442 listings) shows regular accounts averaging around $147 currently, up sharply over the past 14 weeks.</p>
 
-<div class="value-calc" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
-  <div class="vc-title">🧮 Quick Calculator</div>
-  <div class="vc-subtitle">A rough estimate from the ranges above — move the sliders. The bot gives an exact estimate from screenshots. Nothing is entered or sent anywhere.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copied!">Rough estimate, not an exact valuation</span>
-    <button type="button" class="vc-share-btn">🔗 Share result</button>
-  </div>
-</div>
+
 
 <h3>What's the difference between the marketplace price and the "$100K streamer spend" figures?</h3>
 <p>These are two different numbers answering two different questions. The $8,995 top-listing price is what a buyer actually pays today to acquire a specific whale account on the open market. The $100,000-$150,000 figures below are self-reported <em>lifetime spending</em> — everything a player put into gacha pulls over years — which is not the same as resale value, since an account's resale price reflects what other buyers are currently willing to pay, not what was originally spent to build it.</p>
@@ -336,8 +348,8 @@
   <li><strong><a href="https://genshin-impact.fandom.com/wiki/Neuvillette" target="_blank" rel="noopener">Neuvillette</a>, <a href="https://genshin-impact.fandom.com/wiki/Nefer" target="_blank" rel="noopener">Nefer</a>, <a href="https://genshin-impact.fandom.com/wiki/Flins" target="_blank" rel="noopener">Flins</a>, <a href="https://genshin-impact.fandom.com/wiki/Yelan" target="_blank" rel="noopener">Yelan</a>, <a href="https://genshin-impact.fandom.com/wiki/Citlali" target="_blank" rel="noopener">Citlali</a></strong> — 3 listings each</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">These are current top-market characters, not a permanent list — Genshin's meta shifts with each new banner, so re-check before assuming this holds a year from now.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>What Actually Determines Value</h2>
 <h3>What makes a Genshin Impact account expensive to build?</h3>
 <ul>
@@ -354,25 +366,25 @@
   <li>Save Primogems for banners you actually want to play rather than pulling reactively</li>
   <li>Weapon banners are usually a better guaranteed return than character banners if you're optimizing value per gem spent</li>
 </ul>
-
-<span id="risk" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="risk" class="anchor-target"></span>
 <h2>Risks Beyond Trading</h2>
 <h3>What's the actual risk if I try to buy or sell a Genshin Impact account anyway?</h3>
 <div class="risk-box">
   <p>HoYoverse's account security team actively flags logins from new devices/locations after a transfer and can permanently suspend the account — with no recovery, since the linked payment history and personal ID verification make appeals essentially impossible to win if a transfer is confirmed. This is stricter enforcement than most other games in this report.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Rules &amp; Trading Policy</h2>
 <h3>Is it against the rules to buy or sell a Genshin Impact account?</h3>
 <p>Yes. HoYoverse's Terms of Service explicitly prohibit account transfers and trading for real-world money, and this rule is enforced more aggressively than in most mobile games.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Player Guide</h2>
 <h3>Player guide: what team comps do experienced players actually recommend?</h3>
 <p>This section is for improving your own team-building, not your account's resale value. This is a rotation/team-comp game rather than an aim-based one, so the useful "meta" knowledge is compositional. For <a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">Keqing</a> (GameWith, Genshin-Builds, updated August 2026), a widely-documented free-to-play-friendly Aggravate team pairs Keqing (main DPS) with Fischl (off-field Electro), Collei (off-field Dendro), and Zhongli (shield support) — none of those four require whale-level investment.</p>
 <p>For <a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">Mavuika</a> specifically, whose value we cite above, the top-cited whale-tier team (Icy Veins, GameWith) is a Melt comp: Mavuika, Citlali (Cryo support/Pyro RES shred), Iansan, and Bennett. On the free-to-play side, multiple guides list the Traveler's Pyro form as a genuinely playable substitute in Overload-style Mavuika teams — evidence that "good enough" comps for these characters don't strictly require 5-star supports.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Check your Genshin Impact account's estimated value</a></div>
@@ -433,6 +445,7 @@
 
 <script src="./assets/cursor-trail.js" defer></script>
 <script src="./assets/calculators.js" defer></script>
+<script src="./assets/glass.js" defer></script>
 <script src="./assets/market-watch-button.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>

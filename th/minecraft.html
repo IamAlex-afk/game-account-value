@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -196,6 +194,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -208,19 +208,40 @@
 <div class="back-btn"><a href="./">← กลับหน้าแรก</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ มูลค่าบัญชี Minecraft</h1>
   <p style="color:var(--muted); font-size:16px;">สองตลาดที่แยกกัน: บัญชีทั่วไป (แรงค์ เคป เอดิชั่น) และนิชคอลเลกเตอร์ยูสเซอร์เนมสั้นที่หายากกว่ามาก — ทั้งคู่มีราคาที่บันทึกไว้จริง</p>
+  <div class="g-badges">
   <p class="report-updated">อัปเดตกันยายน 2026 จากรายการขายจริงบนตลาดซื้อขาย แหล่งข้อมูลอยู่ด้านล่างหน้า</p>
   <div class="fresh-badge">🌍 ข้อมูลล่าสุด — AI วิจัยตลาดซื้อขายทั่วโลกจริงแบบเรียลไทม์ อัปเดต 12 กันยายน 2026</div>
+  </div>
 </section>
-
+<div class="price-range">บัญชีทั่วไป: $0.50 - $632</div>
 <div class="fact-box">
   <span>📅 วางจำหน่ายเต็มรูปแบบ <strong>18 พฤศจิกายน 2011</strong></span>
   <span>👥 ผู้เล่นต่อเดือน <strong>~212 ล้านคน</strong> (2026)</span>
   <span>📦 ยอดขาย <strong>350 ล้าน+</strong> ชุด — วิดีโอเกมขายดีที่สุดตลอดกาล (ยืนยันโดย Mojang)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
+  <div class="vc-subtitle">ค่าประมาณคร่าวๆ จากช่วงราคาข้างต้น — เลื่อนแถบเลื่อน บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ ไม่มีการกรอกหรือส่งข้อมูลใดๆ</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Minecraft ของคุณ</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 ราคา</a>
   <a href="#value">📊 ปัจจัยกำหนดมูลค่า</a>
@@ -239,22 +260,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>ราคาตลาดจริง</h2>
 <h3>บัญชี Minecraft ทั่วไปมีมูลค่าเท่าไหร่?</h3>
-<div class="price-range">บัญชีทั่วไป: $0.50 - $632</div>
+
 <p>รายการขายสดบน Eldorado.gg เริ่มตั้งแต่ $0.50 (โค้ด cape Java Edition เปล่าๆ) ไปจนถึง $120 สำหรับบัญชี Hypixel "10-cape MVP+" ตลาดที่สอง (igitems.com) แสดงบัญชีธรรมดาสูงถึง ~$632 สำหรับบัญชีที่มีแรงค์ Hypixel MVP+ เคปหลายอัน และเลเวล Skyblock สูง — มูลค่าที่นี่ปรับตามแรงค์เซิร์ฟเวอร์และจำนวนเคป ไม่ใช่ยูสเซอร์เนม</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 เครื่องคำนวณด่วน</div>
-  <div class="vc-subtitle">ค่าประมาณคร่าวๆ จากช่วงราคาข้างต้น — เลื่อนแถบเลื่อน บอทให้ค่าประมาณที่แม่นยำจากภาพหน้าจอ ไม่มีการกรอกหรือส่งข้อมูลใดๆ</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="คัดลอกแล้ว!">ค่าประมาณคร่าวๆ ไม่ใช่การประเมินมูลค่าที่แน่นอน</span>
-    <button type="button" class="vc-share-btn">🔗 แชร์ผลลัพธ์</button>
-  </div>
-</div>
+
 
 <h3>บัญชี Minecraft ที่มียูสเซอร์เนมสั้นหายากมีมูลค่าเท่าไหร่?</h3>
 <p>นี่คือนิชคอลเลกเตอร์ที่แยกจากกันโดยสิ้นเชิงและเล็กกว่ามาก — มูลค่าที่นี่แทบทั้งหมดขึ้นอยู่กับตัว<em>ยูสเซอร์เนมเอง</em> ไม่ใช่แรงค์เซิร์ฟเวอร์หรือความคืบหน้าในเกม ตลาดคอมมูนิตี้ (อย่าง PlayerUp) มีการบันทึกราคาที่สม่ำเสมอตามความยาวยูสเซอร์เนมและประเภทตัวอักษร ตั้งแต่หลักพันไปจนถึงหลักแสนดอลลาร์ — เป็นตลาดที่แตกต่างโดยสิ้นเชิงจากบัญชีทั่วไปข้างต้น</p>
@@ -284,8 +296,8 @@
   <li><strong><a href="https://minecraft.wiki/w/MINECON_2011_Cape" target="_blank" rel="noopener">Minecon 2011 cape</a></strong> — คอสเมติก Minecraft หายากที่ถูกอ้างถึงมากที่สุดในหลายแหล่งข้อมูลอิสระ เป็นจุดอ้างอิงเสมอเมื่อพูดถึง "เคป Minecraft ที่หายากที่สุด"</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">การจัดอันดับตลาด cape สดตามราคา (mccapers.com กันยายน 2026): <a href="https://minecraft.wiki/w/Crafter_Cape" target="_blank" rel="noopener">Crafter Cape</a> (TwitchCon 2026) $873 → <a href="https://minecraft.wiki/w/Follower's_Cape" target="_blank" rel="noopener">Follower's Cape</a> $300 → <a href="https://minecraft.wiki/w/Moonlight_Trail_Cape" target="_blank" rel="noopener">Moonlight Trail Cape</a> $116 → <a href="https://minecraft.wiki/w/Minecraft_Experience_Cape" target="_blank" rel="noopener">Minecraft Experience Cape</a> $55 → <a href="https://minecraft.wiki/w/Purple_Heart_Cape" target="_blank" rel="noopener">Purple Heart Cape</a> $11 → <a href="https://minecraft.wiki/w/Menace_Cape" target="_blank" rel="noopener">Menace Cape</a> $5 → <a href="https://minecraft.wiki/w/Copper_Cape" target="_blank" rel="noopener">Copper</a>/<a href="https://minecraft.wiki/w/Home_Cape" target="_blank" rel="noopener">Home</a>/<a href="https://minecraft.wiki/w/Builder_Cape" target="_blank" rel="noopener">Builder</a> Cape $3 แต่ละอัน cape ผู้เข้าร่วม MINECON (2011-2016) และ cape ทีมงาน Mojang อยู่ใน "museum tier" แยกต่างหากนอกการจัดอันดับปกตินี้ — แทบไม่มีขายเลย ซึ่งเป็นเหตุผลว่าทำไม Minecon 2011 ยังคงเป็นชื่อที่ถูกอ้างถึงมากที่สุด ไม่ใช่ราคาลิสต์สูงสุด</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>ปัจจัยที่กำหนดมูลค่าจริงๆ</h2>
 <h3>อะไรที่กำหนดมูลค่าบัญชี Minecraft จริงๆ?</h3>
 <ul>
@@ -301,26 +313,26 @@
   <li>รักษาอีเมลดั้งเดิมของบัญชีที่โยกย้าย Microsoft แล้วไว้แทนที่จะเปลี่ยน เพราะประวัติความเป็นเจ้าของมีผลต่อความเชื่อมั่นของผู้ซื้อ</li>
   <li>ถ้าคุณมี cape Minecon เข้าใจว่ามันไม่สามารถโอนไปยังบัญชีใหม่ได้ — มันผูกติดกับบัญชีของคุณถาวร</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>การโกงและความเสี่ยงในการเทรด</h2>
 <h3>การโกงที่ใหญ่ที่สุดในการเทรดยูสเซอร์เนม Minecraft คืออะไร?</h3>
 <div class="risk-box">
   <p>การโกงแบบ "name-squatting" ที่ผู้ขายสัญญาว่าจะปล่อยยูสเซอร์เนมในวันที่กำหนดให้ผู้ซื้อคว้า แล้วปล่อยก่อนกำหนดหรือไม่ปล่อยเลย และการโกงแบบจ่ายเงินแล้วไม่ส่งมอบตรงไปตรงมาบนตลาด Discord ที่ไม่มี escrow เนื่องจากการโอนบัญชี Minecraft ไม่ได้รับการสนับสนุนอย่างเป็นทางการจาก Mojang/Microsoft จึงไม่มีการแก้ไขข้อพิพาทหากการเทรดผิดพลาด</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>กฎและนโยบายการเทรด</h2>
 <h3>การเทรดบัญชี Minecraft ผิดกฎของ Mojang หรือไม่?</h3>
 <p>ใช่ — ข้อกำหนดการใช้งานของ Minecraft ห้ามการโอนบัญชีด้วยเงินจริง และ Mojang/Microsoft สามารถระงับบัญชีที่เกี่ยวข้องกับการโอนที่ไม่ได้รับอนุญาตที่ตรวจพบได้</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>คู่มือผู้เล่น</h2>
 <h3>คู่มือผู้เล่น: มีมุมมอง "วิธีเก่งขึ้น" จริงๆ สำหรับ Minecraft หรือไม่?</h3>
 <p>ส่วนนี้เพื่อพัฒนาฝีมือการเล่นของคุณเอง ไม่ใช่มูลค่าขายต่อของบัญชี ต่างจากเกมแข่งขันแบบลัดเดอร์เดียว Minecraft แยกเป็นคอมมูนิตี้ที่แยกจากกันจริงๆ พร้อมเมต้าจริงของตัวเอง: สปีดรันและเซิร์ฟเวอร์ PvP แข่งขัน</p>
 <p>สปีดรันมีแหล่งข้อมูลที่น่าเชื่อถือ (ลีดเดอร์บอร์ดของ speedrun.com) แต่การวิจัยของเราเองพบรายงานรองที่ขัดแย้งกันว่าใครถือสถิติโลก Any% Random Seed Glitchless (RSG) ปัจจุบัน — แหล่งหนึ่งอ้างว่า "lowkey" ที่ 6:50 อีกแหล่งอ้างว่า "Skycrab" ที่ 6:39 — ดังนั้นแทนที่จะเลือกหนึ่งเดียว เราขอชี้ให้เห็นความขัดแย้งแทนที่จะระบุว่าอันไหนเป็นข้อเท็จจริง สิ่งที่ชัดเจน: หมวดหมู่นี้ยังคงตามเส้นทางจริงเดียวกันเสมอ — หาหมู่บ้านหรือเรืออับปางเพื่อทรัพยากรช่วงต้น ไปที่ Nether เพื่อหา blaze rod หา Stronghold และจบการต่อสู้ End ตามลำดับนั้น</p>
 <p>ฝั่ง PvP คู่มือคอมมูนิตี้ปี 2026 ที่ก่อตั้งแล้ว (<a href="https://minecraft.how/blog/post/minecraft-competitive-pvp-meta" target="_blank" rel="noopener">Minecraft.How</a>) อธิบายการเปลี่ยนเมต้าจริงจากการลงทุนเกียร์ล้วนๆ ไปสู่การจัดตำแหน่งและจังหวะเวลา โดย Crystal PvP และ Netherite Pot อยู่ในอันดับ S-tier และ UHC/Axe PvP อยู่ในอันดับ A-tier ในทีอาร์ลิสต์ปัจจุบันของพวกเขา แพลตฟอร์มจริงที่ใช้งานอยู่สำหรับสิ่งนี้: โหมด PvP ของ Hypixel (Bedwars, Skywars, Duels) และโหมดฝึกซ้อมของ Minemen Club (Nodebuff, Soup, UHC, Bridge)</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=th" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">ตรวจสอบมูลค่าโดยประมาณของบัญชี Minecraft ของคุณ</a></div>
@@ -378,6 +390,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

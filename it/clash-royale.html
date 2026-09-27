@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,6 +219,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-royal">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -233,19 +233,40 @@
 <div class="back-btn"><a href="./">← Torna alla Home</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🃏 Valore Account Clash Royale</h1>
   <p style="color:var(--muted); font-size:16px;">Fasce di prezzo reali dalle inserzioni marketplace di rivendita live, cosa determina realmente il prezzo di un account Clash Royale, e i rischi di scambiarne uno.</p>
+  <div class="g-badges">
   <p class="report-updated">Aggiornato a settembre 2026 da inserzioni marketplace live. Fonti elencate in fondo alla pagina.</p>
   <div class="fresh-badge">🌍 Dati più freschi — ricercati live dall'AI su marketplace globali reali, aggiornati il 12 settembre 2026</div>
+  </div>
 </section>
-
+<div class="price-range">Fascia di mercato reale: $0.50 – $600+ (richiesta media ~$82-107)</div>
 <div class="fact-box">
   <span>📅 Lanciato nel <strong>2016</strong></span>
   <span>👥 <strong>72.2M</strong> mensili, <strong>25M</strong> giocatori attivi giornalieri</span>
   <span>📦 <strong>450M+</strong> download totali</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
+  <div class="vc-title">🧮 Calcolatore Rapido</div>
+  <div class="vc-subtitle">Una stima approssimativa dalle fasce sopra — muovi gli slider. Il bot fornisce una stima esatta dagli screenshot. Nulla viene inserito o inviato da nessuna parte.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Copiato!">Stima approssimativa, non una valutazione esatta</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Condividi risultato</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=it" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Verifica il valore stimato del tuo account Clash Royale</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Prezzi</a>
   <a href="#value">📊 Cosa Determina il Valore</a>
@@ -264,22 +285,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Prezzi Reali di Mercato</h2>
 <h3>Quanto vale un account Clash Royale?</h3>
-<div class="price-range">Fascia di mercato reale: $0.50 – $600+ (richiesta media ~$82-107)</div>
+
 <p>Le inserzioni live su Eldorado.gg vanno da $0.50 per un account starter fino a $600 per un account "full max". Un mercato aggregato più ampio (igitems.com, 852 inserzioni) mostra che il prezzo medio richiesto è recentemente passato da $81.89 a $107.20 — su quasi del 31% — mentre i prezzi venduti sono rimasti circa il 21% sotto il richiesto, il che significa che gli acquirenti negoziano duramente anche se i venditori chiedono di più.</p>
 
-<div class="value-calc" id="vc-clash-royale" data-game="clash-royale" data-title="Clash Royale">
-  <div class="vc-title">🧮 Calcolatore Rapido</div>
-  <div class="vc-subtitle">Una stima approssimativa dalle fasce sopra — muovi gli slider. Il bot fornisce una stima esatta dagli screenshot. Nulla viene inserito o inviato da nessuna parte.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Copiato!">Stima approssimativa, non una valutazione esatta</span>
-    <button type="button" class="vc-share-btn">🔗 Condividi risultato</button>
-  </div>
-</div>
+
 
 <h3>Come sono distribuite le fasce di prezzo?</h3>
 <table class="tier-table">
@@ -295,8 +307,8 @@
 
 <h3>Un marketplace basato su forum mostra numeri diversi rispetto ai siti storefront sopra?</h3>
 <p>Per lo più la stessa fascia, con un chiaro outlier in cima. EpicNPC — un forum di scambio player-to-player, distinto da Eldorado.gg e igitems.com — ha inserzioni che ricadono nelle fasce di questa pagina, come un account KT16 con 63 carte maxate a $150. Ma porta anche una inserzione ben oltre la fascia top di $300 di questa pagina: un account "OG 2019" con 30.000+ gemme, una rara combinazione badge 2019, 15 carte Livello 16, e 21 evoluzioni, richiesta $1.500 — trovato tramite risultati di ricerca indicizzati (EpicNPC blocca l'accesso diretto automatizzato alla pagina, quindi questi sono prezzi richiesti come emersi dall'indicizzazione dei motori di ricerca, non una pagina che abbiamo recuperato e citato direttamente noi stessi). L'età dell'account e una rara combinazione cosmetica originale, non solo il livello King Tower, è ciò che spinge un'inserzione così tanto sopra la fascia top tipica.</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Cosa Determina Davvero il Valore</h2>
 <h3>Cosa determina realmente il valore di un account Clash Royale?</h3>
 <p><strong>Controllato direttamente sulle 10 inserzioni live più costose: 9 di esse non nominavano nessun cosmetico specifico.</strong> I titoli erano costruiti interamente attorno al livello King Tower, al numero di trofei, e al numero di evoluzioni (es. "KT 16🏆13K🏆14 EVO+(4 OSK)🔮60 Emotes"). Solo un'inserzione nominava un'emote specifica ("Goblin Kiss Trophy"), una singola menzione, non un pattern ripetuto. I veri fattori sono:</p>
@@ -314,28 +326,28 @@
   <li>Prendi le ricompense stagionali di Pass Royale ogni stagione — alcune skin ed emote non tornano</li>
   <li>Spingi il rank in classifica costantemente attorno al reset stagionale invece che solo alla fine</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Truffe e Rischi di Scambio</h2>
 <h3>Quali sono le truffe più grandi nello scambio di account Clash Royale?</h3>
 <div class="risk-box">
   <p>Falsi servizi escrow su Discord che spariscono dopo il pagamento, e truffe "trial before you buy" dove un venditore lascia entrare temporaneamente un acquirente poi cambia il password e sparisce con i fondi. Supercell non media né inverte nessuno dei due tipi di perdita.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Regole e Politica di Scambio</h2>
 <h3>Scambiare account Clash Royale è contro le regole?</h3>
 <p>Sì — i Termini di Servizio di Supercell vietano vendita e trasferimento di account, e gli scambi rilevati possono risultare in un ban permanente senza appello.</p>
 
 <h3>Da dove vengono realmente queste inserzioni?</h3>
 <p>Eldorado.gg e igitems.com ospitano entrambi inserzioni pubbliche di venditori con prezzi richiesti — la cosa più vicina a un pricing di mercato reale disponibile, anche se sono prezzi richiesti piuttosto che vendite confermate.</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>Guida Giocatore</h2>
 <h3>Guida giocatore: qual è il meta attuale, e chi gioca realmente al top livello?</h3>
 <p>Questa sezione riguarda il migliorare il tuo gioco, non il valore di rivendita del tuo account. A partire da agosto 2026, i dati ladder live di <a href="https://royaleapi.com/decks/popular?lang=en&amp;type=Ladder&amp;time=7d" target="_blank" rel="noopener">RoyaleAPI</a> e le guide della community (Gaming ProMax, TrophyCoach) citano Evo Royal Giant Fisherman (~56% win rate) e PEKKA Bridge Spam (~61%+ nei top 1.000) come mazzi principali, insieme a Hog Cycle, Goblin Barrel Bait, ed Elite Barbarians Evolution; l'archetipo "Hog 2.6 Cycle" è rimasto parte del meta continuamente dal 2017. Due veri cambiamenti di bilanciamento hanno rimodellato il meta quest'anno: una patch di giugno 2026 ha tagliato il danno alla torre corona di Fireball/Rocket/Arrows/Poison/Log (indebolendo i mazzi spell-chip), e una patch di agosto 2026 ha nerfato tutte e tre le carte Spirit così che nessuna possa fare solo-torre.</p>
 <p>Il giocatore competitivo con il maggior guadagno è <strong><a href="https://en.wikipedia.org/wiki/Mohamed_Light" target="_blank" rel="noopener">Mohamed Light</a></strong>, 3 volte campione mondiale CRL (2022, 2024, 2025) con circa $960.000 di guadagni in carriera. Clash Royale è un gioco di tempismo touchscreen piuttosto che basato sulla mira, quindi le impostazioni di sensibilità semplicemente non fanno parte della sua cultura competitiva.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_royale&utm_campaign=clash-royale&utm_content=it" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Verifica il valore stimato del tuo account Clash Royale</a></div>
@@ -391,6 +403,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

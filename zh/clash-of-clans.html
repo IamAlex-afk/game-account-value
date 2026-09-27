@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -185,6 +183,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-bronze">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -197,20 +197,41 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚔️ Clash of Clans账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">按大本营等级和进度状态划分的真实价格数据，来自实时交易平台挂牌——而非凭空估算。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">真实市场价格区间：$10 ~ $260</div>
 <div class="fact-box">
   <span>📅 发布日期 <strong>2012年8月2日</strong>(iOS)，2013年安卓版</span>
   <span>👥 <strong>6,500万~1亿+</strong>月活跃玩家(不同来源估算有差异)</span>
   <span>📦 累计下载 <strong>5亿+</strong></span>
   <span>🏰 当前最高大本营等级：<strong>TH18</strong>(截至2026年9月)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Clash of Clans账号估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#value">📊 价值决定因素</a>
@@ -229,22 +250,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>Clash of Clans账号值多少钱？</h3>
-<div class="price-range">真实市场价格区间：$10 ~ $260</div>
+
 <p>Clash of Clans目前已到大本营18级，账号价格直接与大本营等级以及账号是"rushed"(升级不均衡，跳过防御/英雄)还是"满级"(full max)挂钩。一个rushed的TH13售价约$10，而真正满级的TH18挂牌价为$100~$260。</p>
 
-<div class="value-calc" id="vc-clash-of-clans" data-game="clash-of-clans" data-title="Clash of Clans">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>按大本营等级划分，真实价格是什么样的？</h3>
 <table class="tier-table">
@@ -262,8 +274,8 @@
 
 <h3>这个价格区间在其他类型的交易平台上成立吗？</h3>
 <p>大致成立。EpicNPC——一个玩家对玩家交易论坛，而非Eldorado.gg或igitems.com那样的店铺型交易平台——显示个别TH17/TH18挂牌价格从约$98到$340不等，通过搜索引擎索引结果在2026年9月核实（EpicNPC屏蔽自动化直接访问页面，所以这些是通过搜索索引显示的要价，而非我们直接抓取并引用的页面）。这与上方igitems.com表格的大体形态一致——TH17/TH18满级账号价格在几百美元区间——EpicNPC个别最高挂牌略高于igitems.com的$260上限，这与论坛允许卖家自行标价、而非与店铺其他挂牌竞争的特点相符。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>什么实际决定了Clash of Clans账号的价值？</h3>
 <ul>
@@ -280,28 +292,28 @@
   <li>持续稳定冲传奇联赛而不是偶尔冲，因为赛季历史会累积</li>
   <li>每个赛季都保持金色通行证/赛季通行证有效，以获取不会再次出现的专属装饰品</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>诈骗与交易风险</h2>
 <h3>Clash of Clans账号交易中最大的诈骗是什么？</h3>
 <div class="risk-box">
   <p>虚假付款凭证截图、通过Discord发送的"验证你的账号"钓鱼链接(用于窃取Supercell ID凭证)，以及在收到登录权限后向银行申请拒付的买家。由于Supercell不调解账号交易纠纷，任何一方被骗都没有申诉流程。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>交易Clash of Clans账号违反规定吗？</h3>
 <p>是的——Supercell的服务条款禁止出售、购买或转让账号，违规可能导致永久封禁且无法恢复。</p>
 
 <h3>这些挂牌实际来自哪里？</h3>
 <p>上述数字来源于igitems.com的实时市场报告(4,463个挂牌，按大本营等级和进度状态细分)以及Eldorado.gg的公开挂牌——都是真实要价，而非已确认完成的销售。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>玩家指南</h2>
 <h3>玩家指南：有经验的玩家实际推荐什么升级顺序？</h3>
 <p>这一部分是为了提升你自己的基地，而非账号的转售价值。<a href="https://www.clashos.in/guides/clash-of-clans-upgrade-guide" target="_blank" rel="noopener">ClashOS</a>和<a href="https://www.clashvault.app/guides/upgrade-order-priority-framework" target="_blank" rel="noopener">ClashVault</a>在2026年发布的升级优先级框架将常见推荐顺序总结为：先实验室，然后是军营和部落城堡，接着是英雄殿/铁匠铺，再是核心防御，城墙刻意放在最后——两份指南都用"进攻优先，时间瓶颈其次，防御第三，城墙最后"来概括。创作者<strong>Judo Sloth Gaming</strong>的基地布局和升级指南内容更详细地介绍了同样的2026年优先级思路。</p>
 <p>Clash of Clans不是一个依赖瞄准的游戏，所以不像射击类游戏那样存在有意义的灵敏度设置文化。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_clash_of_clans&utm_campaign=clash-of-clans&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Clash of Clans账号估值</a></div>
@@ -358,6 +370,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

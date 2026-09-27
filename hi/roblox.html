@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,8 +219,10 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
-<body>
+<body class="theme-studs">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
@@ -233,20 +233,41 @@
 <div class="back-btn"><a href="./">← होम पर वापस जाएं</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🟦 Roblox अकाउंट की कीमत</h1>
   <p style="color:var(--muted); font-size:16px;">रीसेल मार्केटप्लेस की असली लिस्टिंग, कलेक्टर item-होल्डिंग की अलग दुनिया, और अकाउंट ट्रेड करने के रिस्क।</p>
+  <div class="g-badges">
   <p class="report-updated">सितंबर 2026 में लाइव मार्केटप्लेस लिस्टिंग से अपडेट किया गया। सोर्सेज़ पेज के नीचे दिए गए हैं।</p>
   <div class="fresh-badge">🌍 सबसे फ्रेश डेटा — AI ने असली ग्लोबल मार्केटप्लेस पर लाइव रिसर्च किया, 12 सितंबर 2026 को अपडेट किया गया</div>
+  </div>
 </section>
-
+<div class="price-range">मार्केटप्लेस रेंज: $0.50 – $60 (कुछ खास experience के लिए ~$800 तक)</div>
 <div class="fact-box">
   <span>📅 रिलीज़ <strong>1 सितंबर 2006</strong></span>
   <span>👥 <strong>38.18 करोड़</strong> मंथली एक्टिव यूज़र, <strong>14.4 करोड़</strong> डेली</span>
   <span>🌍 सबसे मज़बूत <strong>एशिया-पैसिफिक</strong>, <strong>यूरोप</strong>, <strong>नॉर्थ अमेरिका</strong> में</span>
   <span>📦 <strong>150 करोड़+</strong> रजिस्टर्ड अकाउंट</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-roblox" data-game="roblox" data-title="Roblox">
+  <div class="vc-title">🧮 क्विक कैलकुलेटर</div>
+  <div class="vc-subtitle">नीचे बताए गए 3 रेयर items शामिल हैं (Headless असली Eldorado.gg लिस्टिंग्स से; Korblox और Violet Valkyrie आज की Robux रीसेल कीमत पर उनकी Robux लागत से; Robux बैलेंस भी गिना जाता है)। बाकी Dominus/रेयर items मॉडल नहीं किए गए हैं — ऊपर "Limiteds मार्केट" देखें। कुछ भी कहीं एंटर या भेजा नहीं जाता; बॉट स्क्रीनशॉट से सटीक एस्टिमेट देता है।</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="कॉपी हो गया!">अनुमानित कीमत, सटीक वैल्यूएशन नहीं</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 रिज़ल्ट शेयर करें</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=hi" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">अपने Roblox अकाउंट की अनुमानित कीमत चेक करें</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 प्राइस</a>
   <a href="#limiteds">🏆 Limiteds</a>
@@ -265,24 +286,15 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>असली मार्केट प्राइस</h2>
 <h3>Roblox अकाउंट असल में कितने का होता है?</h3>
-<div class="price-range">मार्केटप्लेस रेंज: $0.50 – $60 (कुछ खास experience के लिए ~$800 तक)</div>
+
 <p>Roblox अकाउंट थर्ड-पार्टी मार्केटप्लेस पर ट्रेड होते हैं, भले ही Roblox के नियम इसके खिलाफ हों। Eldorado.gg पर लाइव लिस्टिंग $0.50 (2007-2015 के प्लेन अकाउंट, कोई खास प्रोग्रेस नहीं) से लेकर एक क्लीन 4-लेटर यूज़रनेम के लिए $59.99 तक जाती हैं। igitems.com पर, किसी खास हाई-डिमांड experience पर बने अकाउंट — जैसे मैक्स्ड "Pet Simulator 99" या हाई-लेवल Blox Fruits अकाउंट — ~$800 तक लिस्ट हुए हैं। जिन लिस्टिंग का किसी रेयर experience से कनेक्शन नहीं है, वो ज़्यादातर $25 से कम में बिकती हैं।</p>
 
 <p>Headless Horseman '$25 से कम' वाले नियम का सबसे बड़ा अपवाद है। 26 सितंबर 2026 को Eldorado.gg पर Headless अकाउंट्स की 337 लिस्टिंग्स थीं; दिखाई गई लिस्टिंग्स का बीच वाला आधा हिस्सा $400–700 मांग रहा था (ज़्यादातर में Korblox भी है), और Violet Valkyrie जोड़ने वाले अकाउंट्स $750–1,500 पर लिस्ट थे। बैलेंस में पड़े Robux की भी रीसेल वैल्यू है: Eldorado.gg के सेलर्स प्रति Robux $0.0065–0.0075 मांग रहे थे, जबकि Roblox का ऑफिशियल DevEx कैश-आउट रेट $0.0038 है।</p>
 
-<div class="value-calc" id="vc-roblox" data-game="roblox" data-title="Roblox">
-  <div class="vc-title">🧮 क्विक कैलकुलेटर</div>
-  <div class="vc-subtitle">नीचे बताए गए 3 रेयर items शामिल हैं (Headless असली Eldorado.gg लिस्टिंग्स से; Korblox और Violet Valkyrie आज की Robux रीसेल कीमत पर उनकी Robux लागत से; Robux बैलेंस भी गिना जाता है)। बाकी Dominus/रेयर items मॉडल नहीं किए गए हैं — ऊपर "Limiteds मार्केट" देखें। कुछ भी कहीं एंटर या भेजा नहीं जाता; बॉट स्क्रीनशॉट से सटीक एस्टिमेट देता है।</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="कॉपी हो गया!">अनुमानित कीमत, सटीक वैल्यूएशन नहीं</span>
-    <button type="button" class="vc-share-btn">🔗 रिज़ल्ट शेयर करें</button>
-  </div>
-</div>
+
 
 <h3>लोग असल में Roblox अकाउंट कहाँ खरीदते-बेचते हैं?</h3>
 <p>Eldorado.gg और igitems.com जैसे थर्ड-पार्टी मार्केटप्लेस पर पब्लिक लिस्टिंग होती हैं, साफ़ प्राइस के साथ, जो अकाउंट की उम्र, यूज़रनेम, Robux बैलेंस, और किस खास गेम/experience पर बना है — इन सबके हिसाब से सॉर्ट होती हैं। इससे साफ़ पता चलता है कि मार्केटप्लेस मौजूद है — बस यह Steam के अपने ट्रेडिंग सिस्टम जितना दिखने वाला नहीं है, क्योंकि Roblox की Terms of Service इसे मना करती है और ये प्लेटफॉर्म Roblox के कंट्रोल से बाहर थर्ड-पार्टी की तरह काम करते हैं।</p>
@@ -300,8 +312,8 @@
   <li><strong>Adopt Me के pets और Bucks करेंसी</strong> — टॉप 10 में से 2 लिस्टिंग पूरी तरह इसी experience की इकॉनमी पर बनी हैं</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">एक दूसरे प्लेटफॉर्म (igitems.com) पर, सबसे ज़्यादा वैल्यू वाली लिस्टिंग एक Pet Simulator 99 "end-game" अकाउंट थी (~$800) — यह उस प्लेटफॉर्म के टॉप 10 में दोहराया जाने वाला पैटर्न कन्फर्म नहीं है, लेकिन यह अब तक मिला सबसे ज़्यादा experience-specific नंबर है।</p>
-
-<span id="limiteds" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="limiteds" class="anchor-target"></span>
 <h2>Limiteds मार्केट</h2>
 <h3>Limiteds मार्केट क्या है, और एक Limited की कीमत असल में कैसे तय होती है?</h3>
 <p>Roblox का एक अलग, दशकों पुराना ट्रेडिंग इकॉनमी है "Limiteds" (cosmetic items जो अब नए नहीं बिकते) के लिए, जो ऊपर बताए गए अकाउंट-सेल मार्केटप्लेस से लगभग पूरी तरह अलग चलता है। कम्युनिटी का स्टैंडर्ड ट्रैकर Rolimons.com एक ही item के लिए तीन अलग नंबर डिफाइन करता है — इन्हें मिक्स करना सबसे कॉमन बिगिनर मिस्टेक है:</p>
@@ -326,8 +338,8 @@
 <div class="risk-box">
   <p><strong>साइट वॉर्निंग:</strong> इस रिसर्च के दौरान हमें Rolimons के नाम और ब्रांडिंग की नकल करने वाला एक लुकअलाइक डोमेन मिला। सिर्फ़ <strong>rolimons.com</strong> का ही डायरेक्ट इस्तेमाल करें — किसी मिलते-जुलते नाम वाली कॉपी का कभी नहीं, ख़ासकर अगर वो किसी ऐड या किसी और के भेजे लिंक से मिले।</p>
 </div>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>कीमत असल में क्या तय करती है</h2>
 <h3>Roblox अकाउंट की कीमत असल में क्या तय करता है?</h3>
 <ul>
@@ -345,22 +357,22 @@
   <li>एक item में वैल्यू केंद्रित करने के बजाय कुछ अलग-अलग Limiteds में डाइवर्सिफाई करें, क्योंकि Roblox ने कभी-कभी individual items को डीलिस्ट या डीवैल्यू किया है</li>
   <li>इसे एक असली रिस्क वाला कलेक्टिंग हॉबी समझें, इन्वेस्टमेंट नहीं — Limited item की वैल्यू इल्लिक्विड होती है और तेज़ी से बदल सकती है</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>स्कैम और ट्रेडिंग रिस्क</h2>
 <h3>Roblox अकाउंट और items के आस-पास सबसे बड़े स्कैम कौन से हैं?</h3>
 <div class="risk-box">
   <p>Roblox कम्युनिटी में अकाउंट और item ट्रेडिंग स्कैम बेहद कॉमन हैं: फ़ेक "middleman" ट्रेड सर्विस, फ़िशिंग साइट जो Roblox के लॉगिन पेज की कॉपी बनाकर क्रेडेंशियल चुराती हैं, और "free Robux generator" स्कैम जो अकाउंट एक्सेस मांगते हैं। चूंकि Roblox की अपनी Terms of Service अकाउंट ट्रांसफ़र को मना करती है, ट्रेड स्कैम के शिकार लोगों के पास कोई रिकोर्स नहीं होता — Roblox किसी स्कैम्ड अकाउंट को रिस्टोर नहीं करेगा या item ट्रेड को रिवर्स नहीं करेगा, और अगर Roblox को अनऑथराइज़्ड ट्रांसफ़र का पता चलता है तो स्कैम्ड अकाउंट खुद भी बैन रहता है।</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>नियम और ट्रेडिंग पॉलिसी</h2>
 <h3>क्या Roblox अकाउंट खरीदना या बेचना नियमों के खिलाफ़ है?</h3>
 <p>हाँ। Roblox की Terms of Service साफ़ तौर पर अकाउंट ओनरशिप ट्रांसफ़र करने और असली पैसों में अकाउंट ट्रेड करने को मना करती हैं। डिटेक्ट किए गए ट्रांसफ़र में शामिल अकाउंट परमानेंटली सस्पेंड किए जा सकते हैं, और खरीदने या बेचने वाले, दोनों के लिए कोई अपील प्रोसेस नहीं है।</p>
 
 <h3>Roblox अकाउंट के प्राइस बाकी गेम्स से इतने कम क्यों दिखते हैं?</h3>
 <p>ज़्यादातर Roblox अकाउंट में वैसा "प्रोग्रेस" नहीं होता जो Clash of Clans या Free Fire जैसे गेम्स में वैल्यू तय करता है — Roblox अकाउंट की वैल्यू खास items, किसी खास experience की प्रोग्रेस, या यूज़रनेम में केंद्रित होती है, न कि ओवरऑल लेवल में। यही वजह है कि ज़्यादातर लिस्टिंग $25 से कम में रहती हैं, और कुछ ख़ास अकाउंट (रेयर यूज़रनेम, हाई-डिमांड experience प्रोग्रेस) सैकड़ों डॉलर तक पहुंच जाते हैं।</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=hi" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">अपने Roblox अकाउंट की अनुमानित कीमत चेक करें</a></div>
@@ -417,6 +429,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

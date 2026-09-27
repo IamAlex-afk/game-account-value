@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -196,6 +194,8 @@
     border-radius: 6px;
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-overworld">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -208,19 +208,40 @@
 <div class="back-btn"><a href="./">← 返回首页</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⛏️ Minecraft账号价值</h1>
   <p style="color:var(--muted); font-size:16px;">两个独立市场：普通账号(段位、披风、版本)以及规模小得多的稀有短用户名收藏市场——两者都有真实记录的价格。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月根据实时交易平台挂牌信息更新。来源列于页面底部。</p>
   <div class="fresh-badge">🌍 最新数据 — AI在真实全球交易平台上实时调研，2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">普通账号：$0.50 ~ $632</div>
 <div class="fact-box">
   <span>📅 正式发布 <strong>2011年11月18日</strong></span>
   <span>👥 约<strong>2.12亿</strong>月活跃玩家(2026年)</span>
   <span>📦 销量 <strong>3.5亿+</strong>份 — 史上最畅销的电子游戏(Mojang确认)</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
+  <div class="vc-title">🧮 快速计算器</div>
+  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 分享结果</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Minecraft用户名估值</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 价格</a>
   <a href="#value">📊 价值决定因素</a>
@@ -239,22 +260,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>真实市场价格</h2>
 <h3>普通Minecraft账号值多少钱？</h3>
-<div class="price-range">普通账号：$0.50 ~ $632</div>
+
 <p>Eldorado.gg上的实时挂牌从$0.50(一个纯粹的Java版披风兑换码)到"10个披风MVP+"Hypixel账号的$120不等。第二个交易平台(igitems.com)显示拥有Hypixel MVP+段位、多个披风和高Skyblock等级的普通账号最高可达约$632——这里的价值随服务器段位和披风数量增长，而与用户名无关。</p>
 
-<div class="value-calc" id="vc-minecraft" data-game="minecraft" data-title="Minecraft">
-  <div class="vc-title">🧮 快速计算器</div>
-  <div class="vc-subtitle">基于上述区间的粗略估算 — 拖动滑块。机器人通过截图给出精确估值。不会输入或发送任何内容。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="已复制！">粗略估算，非精确估值</span>
-    <button type="button" class="vc-share-btn">🔗 分享结果</button>
-  </div>
-</div>
+
 
 <h3>稀有短用户名Minecraft账号值多少钱？</h3>
 <p>这是一个完全独立、规模小得多的收藏市场——这里的价值几乎完全取决于用户名本身，而与服务器段位或游戏内进度无关。社区交易平台(如PlayerUp)记录了按用户名长度和字符类型定价的一致规律，从数千美元到数十万美元不等——这与上述普通账号完全是不同的市场。</p>
@@ -278,8 +290,8 @@
 <h3>哪个具体披风实际被公认为最有价值？</h3>
 <p>直接查看实时披风价格排名和新闻报道，有一个披风被提及的次数比其他任何披风都更一致：<strong>2011年Minecon披风</strong>——在多个独立来源中都是被引用最多的稀有Minecraft装饰品；每当提到"最稀有的Minecraft披风"时，它始终是那个参照点。</p>
 <p style="font-size:13px; color:var(--muted);">实时披风交易平台价格排名(<a href="https://mccapers.com/blog-minecraft-capes-ranked.html" target="_blank" rel="noopener">mccapers.com</a>，2026年9月)：Crafter Cape(TwitchCon 2026)$873 → Follower's Cape $300 → Moonlight Trail Cape $116 → Minecraft Experience Cape $55 → Purple Heart Cape $11 → Menace Cape $5 → Copper/Home/Builder Cape 各$3。MINECON与会者披风(2011~2016)和Mojang员工披风属于这个常规排名之外的独立"博物馆级"——它们几乎从不出售，这正是为什么2011年Minecon仍然是被提及最多的名字，而不是清单上标价最高的那个。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>实际决定价值的因素</h2>
 <h3>什么实际决定了Minecraft账号的价值？</h3>
 <ul>
@@ -295,25 +307,25 @@
   <li>保持微软迁移账号的原始邮箱不变，而不是更改它，因为所有权历史对买家信任很重要</li>
   <li>如果你拥有Minecon披风，要明白它无法转移到新账号 — 它永久绑定在你的账号上</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>诈骗与交易风险</h2>
 <h3>Minecraft用户名交易中最大的诈骗是什么？</h3>
 <div class="risk-box">
   <p>"占名"诈骗——卖家承诺在特定日期释放一个用户名供买家抢注，然后提前释放或干脆不释放；以及在没有担保的Discord交易平台上直接付款却不交货的诈骗。由于Mojang/微软并不官方支持Minecraft账号转让，一旦交易出问题就没有纠纷解决渠道。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>规则与交易政策</h2>
 <h3>交易Minecraft账号违反Mojang的规定吗？</h3>
 <p>是的——Minecraft的使用条款禁止以真实货币转让账号，Mojang/微软可以封禁涉及被检测到的未经授权转让的账号。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>玩家指南</h2>
 <h3>玩家指南：Minecraft真的有"如何变强"这个角度吗？</h3>
 <p>这一部分是为了提升你自己的实力，而非账号的转售价值。与单一天梯的竞技游戏不同，Minecraft分裂成了真正独立、各自有自己meta的社区：速通和竞技PvP服务器。速通有一个权威来源(speedrun.com的排行榜)，但我们自己的调研发现了关于谁目前保持Any% Random Seed Glitchless(RSG)世界纪录的二手报告相互矛盾——一个来源提到"lowkey"用时6:50，另一个提到"Skycrab"用时6:39——所以我们没有选择其中一个，而是标注出这个分歧，而非把任何一方当作事实陈述。可以确定的是：该分类本身始终遵循同一条真实路线——先找村庄或沉船获取早期资源，前往下界获取烈焰棒，定位要塞，然后完成末地之战，顺序如此。</p>
 <p>在PvP方面，成熟的2026年社区指南(Minecraft.How)描述了一次真实的meta转变——从纯粹的装备投入转向走位和时机把握，在他们当前的梯度榜上Crystal PvP和Netherite Pot被列为S级，UHC/斧头PvP被列为A级。这方面真实、活跃的平台：Hypixel的PvP模式(Bedwars、Skywars、Duels)和Minemen Club的练习模式(Nodebuff、Soup、UHC、Bridge)。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_minecraft&utm_campaign=minecraft&utm_content=zh" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">查看我的Minecraft用户名估值</a></div>
@@ -370,6 +382,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

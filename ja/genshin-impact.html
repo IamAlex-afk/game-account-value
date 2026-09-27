@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -190,6 +188,8 @@
     box-shadow: 0 0 20px rgba(255,157,46,0.22);
   }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
 <body class="theme-gacha">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -202,19 +202,40 @@
 <div class="back-btn"><a href="./">← ホームに戻る</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>⚗️ 原神のアカウント価値</h1>
   <p style="color:var(--muted); font-size:16px;">専用の「whaleアカウント」カテゴリを含む実際のアカウントマーケットプレイスが存在する。さらに、買い手が実際に支払う金額とはまったく別の、検証済みの生涯課金額も紹介する。</p>
+  <div class="g-badges">
   <p class="report-updated">2026年9月、ライブマーケットプレイスの出品情報をもとに更新。出典はページ下部に記載。</p>
   <div class="fresh-badge">🌍 最新データ — AIが実際のグローバルマーケットプレイスをライブ調査、2026年9月12日更新</div>
+  </div>
 </section>
-
+<div class="price-range">スターターアカウント：$5 〜 $60 ・ whaleアカウント：$30 〜 $9,000</div>
 <div class="fact-box">
   <span>📅 リリース <strong>2020年9月28日</strong> — ゲーミング史上最大級の同時世界ローンチの1つ</span>
   <span>👥 月間<strong>1,600万〜2,400万人</strong>のプレイヤー（2026年）、累計収益<strong>48億ドル</strong></span>
   <span>🌍 <strong>中国、日本、韓国、ロシア、インド</strong>で最も強い</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
+  <div class="vc-title">🧮 クイック計算機</div>
+  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 結果を共有</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分の原神アカウントの推定価値をチェック</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 価格</a>
   <a href="#value">📊 価値を決めるもの</a>
@@ -233,22 +254,13 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>実際のマーケット価格</h2>
 <h3>原神のアカウントはいくらの価値がある？</h3>
-<div class="price-range">スターターアカウント：$5 〜 $60 ・ whaleアカウント：$30 〜 $9,000</div>
+
 <p>原神には実際に稼働しているアカウントマーケットプレイスがある。Eldorado.ggは2つの別カテゴリを運用している：レギュラー/rerollアカウント（フレッシュアカウントのrerollでスタート時キャラクターを獲得、地域とスタート5スターにより$5〜$60で価格付け）と、専用の<em>「whaleアカウント」</em>カテゴリで、最上位出品では$30から$8,995（C6キャラクター20体、R5武器8本）まで価格が及ぶ。3つ目の集計ソース（igitems.com、出品442件）では、現在レギュラーアカウントの平均が~$147で、過去14週間で急上昇している。</p>
 
-<div class="value-calc" id="vc-genshin-impact" data-game="genshin-impact" data-title="Genshin Impact">
-  <div class="vc-title">🧮 クイック計算機</div>
-  <div class="vc-subtitle">上記のレンジからの概算 — スライダーを動かしてください。ボットはスクリーンショットから正確な見積もりを提供する。何も入力・送信されない。</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="コピーしました！">概算であり、正確な査定ではありません</span>
-    <button type="button" class="vc-share-btn">🔗 結果を共有</button>
-  </div>
-</div>
+
 
 <h3>マーケットプレイス価格と「配信者の$10万課金」という数字の違いは？</h3>
 <p>これらは2つの異なる質問に答える2つの異なる数字だ。トップ出品価格の$8,995は、買い手がオープンマーケットで特定のwhaleアカウントを取得するために今日実際に支払う金額だ。下記の$100,000〜$150,000という数字は自己申告の<em>生涯課金額</em> — プレイヤーが何年もかけてガチャに注ぎ込んだすべて — であり、これは転売価値とは異なる。アカウントの転売価格は、それを作るために元々使われた金額ではなく、他の買い手が現在支払う意思のある金額を反映しているからだ。</p>
@@ -279,8 +291,8 @@
   <li><strong><a href="https://genshin-impact.fandom.com/wiki/Neuvillette" target="_blank" rel="noopener">Neuvillette</a>、<a href="https://genshin-impact.fandom.com/wiki/Nefer" target="_blank" rel="noopener">Nefer</a>、<a href="https://genshin-impact.fandom.com/wiki/Flins" target="_blank" rel="noopener">Flins</a>、<a href="https://genshin-impact.fandom.com/wiki/Yelan" target="_blank" rel="noopener">Yelan</a>、<a href="https://genshin-impact.fandom.com/wiki/Citlali" target="_blank" rel="noopener">Citlali</a></strong> — それぞれ3件</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">これらは現在のトップマーケットキャラクターであり、恒久的なリストではない — 原神のメタは新バナーごとに変わるため、1年後にもこれが当てはまると想定する前に再確認すること。</p>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>価値を実際に決めるもの</h2>
 <h3>原神のアカウントを構築するのに高くつくものは何か？</h3>
 <ul>
@@ -297,25 +309,25 @@
   <li>反射的にガチャを引くのではなく、実際にプレイしたいバナーのために原石を貯めておく</li>
   <li>1ジェムあたりの価値を最適化するなら、武器バナーはキャラクターバナーより保証されたリターンが良いことが多い</li>
 </ul>
-
-<span id="risk" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="risk" class="anchor-target"></span>
 <h2>取引以外のリスク</h2>
 <h3>それでも原神のアカウントを売買しようとした場合の実際のリスクは？</h3>
 <div class="risk-box">
   <p>HoYoverseのアカウントセキュリティチームは、移転後の新しいデバイス/場所からのログインを積極的にフラグし、アカウントを永久停止できる — 紐づいた支払い履歴と個人ID認証により、移転が確認された場合の異議申し立てはほぼ勝ち目がないため、復元は不可能だ。これは本レポートに登場する他のほとんどのゲームより厳格なエンフォースメントだ。</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>ルールと取引ポリシー</h2>
 <h3>原神のアカウントを売買するのは規約違反か？</h3>
 <p>はい。HoYoverseのTerms of Serviceはアカウントの移転と実際の金銭での取引を明確に禁止しており、このルールはほとんどのモバイルゲームより積極的に施行されている。</p>
-
-<span id="tips" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="tips" class="anchor-target"></span>
 <h2>プレイヤーガイド</h2>
 <h3>プレイヤーガイド：経験豊富なプレイヤーが実際に推奨するチーム編成は？</h3>
 <p>このセクションは自分自身のチーム編成の向上のためのものであり、アカウントの転売価値のためではない。これはエイムベースではなくローテーション/チーム編成型のゲームなので、役立つ「メタ」知識は編成に関するものだ。<a href="https://genshin-builds.com/en/teams/keqing" target="_blank" rel="noopener">Keqing</a>（GameWith、Genshin-Builds、2026年8月更新）については、広く紹介されている無課金フレンドリーなAggravateチームは、Keqing（メインDPS）とFischl（フィールド外Electro）、Collei（フィールド外Dendro）、Zhongli（シールドサポート）を組み合わせる — これら4体のいずれもwhaleレベルの投資を必要としない。</p>
 <p>上記で価値を紹介した<a href="https://www.icy-veins.com/genshin-impact/mavuika-team-guide" target="_blank" rel="noopener">Mavuika</a>については、最も引用されるwhaleティアのチーム（Icy Veins、GameWith）はMeltコンプで、Mavuika、Citlali（Cryoサポート/Pyro耐性削り）、Iansan、Bennettだ。無課金側では、複数のガイドがTravelerのPyroフォームをOverload型Mavuikaチームで本当に使えるサブとして挙げている — これらのキャラクターに「十分な」編成が厳密には5スターサポートを必要としないことの証拠だ。</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_genshin_impact&utm_campaign=genshin-impact&utm_content=ja" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">自分の原神アカウントの推定価値をチェック</a></div>
@@ -372,6 +384,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>

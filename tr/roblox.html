@@ -46,8 +46,6 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<link rel="preload" href="../assets/fonts/serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -221,8 +219,10 @@
   .sources-list li { margin-bottom: 6px; }
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/glass.css">
 </head>
-<body>
+<body class="theme-studs">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <nav>
@@ -233,20 +233,41 @@
 <div class="back-btn"><a href="./">← Ana Sayfaya Dön</a></div>
 
 <main>
+
+
+
+
+<div class="g-hero">
+<div class="g-left">
 <section class="report-hero" id="main-content">
   <h1>🟦 Roblox Hesap Değeri</h1>
   <p style="color:var(--muted); font-size:16px;">Yeniden satış pazar yerlerinden gerçek ilanlar, koleksiyoncu eşya varlıklarının ayrı dünyası ve bir hesabı takas etmenin riskleri.</p>
+  <div class="g-badges">
   <p class="report-updated">Eylül 2026'da canlı pazar yeri ilanlarından güncellendi. Kaynaklar sayfanın altında listelenmiştir.</p>
   <div class="fresh-badge">🌍 En taze veriler — gerçek küresel pazar yerlerinde yapay zeka tarafından canlı araştırıldı, 12 Eylül 2026'da güncellendi</div>
+  </div>
 </section>
-
+<div class="price-range">Pazar yeri aralığı: $0.50 – $60 (belirli deneyimler için ~$800'e kadar)</div>
 <div class="fact-box">
   <span>📅 Yayın tarihi <strong>1 Eylül 2006</strong></span>
   <span>👥 Aylık <strong>381,8M</strong> aktif kullanıcı, günlük <strong>144M</strong></span>
   <span>🌍 En güçlü <strong>Asya-Pasifik</strong>, <strong>Avrupa</strong>, <strong>Kuzey Amerika</strong>'da</span>
   <span>📦 <strong>1,5 Milyar+</strong> kayıtlı hesap</span>
 </div>
-
+</div>
+<div class="g-right">
+<div class="value-calc" data-stable="1" id="vc-roblox" data-game="roblox" data-title="Roblox">
+  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
+  <div class="vc-subtitle">Aşağıdaki 3 isimli nadir eşyayı içerir (Headless gerçek Eldorado.gg ilanlarından; Korblox ve Violet Valkyrie, bugünkü Robux yeniden satış fiyatıyla Robux maliyetlerinden; Robux bakiyesi de sayılır). Diğer Dominus/nadir eşyalar modellenmemiştir — yukarıdaki "Limiteds Pazarı"na bakın. Hiçbir şey girilmez veya hiçbir yere gönderilmez; bot ekran görüntülerinden kesin bir tahmin verir.</div>
+  <div class="vc-sliders"></div>
+  <div class="vc-result">
+    <strong class="vc-result-value"><span class="vc-lo">—</span> – <span class="vc-hi">—</span></strong><div class="vc-scale" aria-hidden="true"><div class="vc-scale-fill"></div></div><div class="vc-meta"><span class="vc-tier"></span><span class="vc-confidence"></span></div>
+    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
+    <div class="g-actions"><button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button></div><div class="g-exact" data-g-slot="result"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Roblox hesabının tahmini değerini kontrol et</a></div>
+  </div>
+</div>
+</div>
+</div>
 <div class="section-nav">
   <a href="#pricing">💰 Fiyatlar</a>
   <a href="#limiteds">🏆 Limiteds</a>
@@ -265,24 +286,15 @@
 
 <div class="article-body">
 
-<span id="pricing" class="anchor-target"></span>
+<section class="g-card g-news-card"><span id="pricing" class="anchor-target"></span>
 <h2>Gerçek Pazar Fiyatları</h2>
 <h3>Bir Roblox hesabı gerçekte ne kadar eder?</h3>
-<div class="price-range">Pazar yeri aralığı: $0.50 – $60 (belirli deneyimler için ~$800'e kadar)</div>
+
 <p>Roblox'un kurallarına aykırı olmasına rağmen Roblox hesapları üçüncü taraf pazar yerlerinde alınıp satılıyor. Eldorado.gg'de canlı ilanlar, 2007-2015 yıllarından kalma hiçbir belirgin ilerlemesi olmayan çıplak hesaplar için $0.50'den, temiz 4 harfli bir kullanıcı adı için $59.99'a kadar değişiyor. igitems.com'da, maksimum seviye bir "Pet Simulator 99" veya yüksek seviyeli bir Blox Fruits hesabı gibi belirli yüksek talepli deneyimler etrafında kurulmuş hesaplar ~$800'e kadar listelenmiş. Belirli nadir bir deneyime bağlı olmayan ilanların çoğu $25'in oldukça altında satılıyor.</p>
 
 <p>Headless Horseman, $25 altı kuralının büyük istisnasıdır. 26 Eylül 2026'da Eldorado.gg'de 337 Headless hesap ilanı vardı; gösterilenlerin ortadaki yarısı $400–700 istiyordu (çoğunda Korblox da var), Violet Valkyrie ekleyen hesaplar ise $750–1,500 aralığında listelenmişti. Bakiyedeki Robux'un da yeniden satış değeri var: Eldorado.gg satıcıları Robux başına $0.0065–0.0075 istiyordu; Roblox'un resmi DevEx nakde çevirme kuru ise $0.0038.</p>
 
-<div class="value-calc" id="vc-roblox" data-game="roblox" data-title="Roblox">
-  <div class="vc-title">🧮 Hızlı Hesaplayıcı</div>
-  <div class="vc-subtitle">Aşağıdaki 3 isimli nadir eşyayı içerir (Headless gerçek Eldorado.gg ilanlarından; Korblox ve Violet Valkyrie, bugünkü Robux yeniden satış fiyatıyla Robux maliyetlerinden; Robux bakiyesi de sayılır). Diğer Dominus/nadir eşyalar modellenmemiştir — yukarıdaki "Limiteds Pazarı"na bakın. Hiçbir şey girilmez veya hiçbir yere gönderilmez; bot ekran görüntülerinden kesin bir tahmin verir.</div>
-  <div class="vc-sliders"></div>
-  <div class="vc-result">
-    <strong class="vc-result-value">—</strong>
-    <span class="vc-result-note" data-copied="Kopyalandı!">Kabaca bir tahmin, kesin bir değerleme değil</span>
-    <button type="button" class="vc-share-btn">🔗 Sonucu paylaş</button>
-  </div>
-</div>
+
 
 <h3>İnsanlar Roblox hesaplarını gerçekte nerede alıp satıyor?</h3>
 <p>Eldorado.gg ve igitems.com gibi üçüncü taraf pazar yerleri, hesap yaşı, kullanıcı adı, Robux bakiyesi ve hesabın hangi belirli oyun/deneyim etrafında kurulduğuna göre sıralanmış görünür fiyatlarla halka açık hesap ilanları barındırıyor. Bu, hiçbir pazar yerinin var olmadığı fikrine doğrudan aykırı — sadece Steam'in kendi ticaret sistemi kadar görünür değil, çünkü Roblox'un Kullanım Şartları bunu yasaklıyor ve platformlar Roblox'un kontrolü dışında üçüncü taraflar olarak çalışıyor.</p>
@@ -300,8 +312,8 @@
   <li><strong>Adopt Me evcil hayvanları ve Bucks para birimi</strong> — en üst 10 ilanın 2'si tamamen bu tek deneyimin ekonomisi etrafında kurulmuş</li>
 </ul>
 <p style="font-size:13px; color:var(--muted);">Farklı bir platformda (igitems.com), görülen tek en yüksek değerli ilan bir Pet Simulator 99 "oyun sonu" hesabıydı (~$800) — bir platformun en üst 10'u içinde tekrarlanan bir desen olarak doğrulanmadı, ancak bulunan en yüksek deneyime özgü rakam.</p>
-
-<span id="limiteds" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="limiteds" class="anchor-target"></span>
 <h2>Limiteds Pazarı</h2>
 <h3>Limiteds pazarı nedir ve bir Limited gerçekte nasıl fiyatlandırılır?</h3>
 <p>Roblox'un, yukarıdaki hesap satış pazar yerlerinin neredeyse tamamen dışında çalışan, artık yeni satılmayan kozmetik eşyalar için ayrı, on yıllık bir ticaret ekonomisi var: "Limiteds". Topluluğun standart takipçisi Rolimons.com, aynı eşya için üç farklı rakam tanımlıyor — bunları karıştırmak en yaygın başlangıç hatası:</p>
@@ -326,8 +338,8 @@
 <div class="risk-box">
   <p><strong>Site uyarısı:</strong> bu araştırma sırasında Rolimons'un adını ve markasını taklit eden sahte bir alan adı bulduk. Yalnızca doğrudan <strong>rolimons.com</strong>'u kullanın — asla benzer yazılmış bir kopyayı, özellikle bir reklam veya başka biri tarafından gönderilen bir bağlantı aracılığıyla ulaşılan birini kullanmayın.</p>
 </div>
-
-<span id="value" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="value" class="anchor-target"></span>
 <h2>Değeri Gerçekte Ne Belirliyor</h2>
 <h3>Bir Roblox hesabının değerini gerçekte ne belirliyor?</h3>
 <ul>
@@ -345,22 +357,22 @@
   <li>Değeri tek bir eşyada yoğunlaştırmak yerine birkaç farklı Limited arasında çeşitlendirin, çünkü Roblox bazen tek tek eşyaları listeden kaldırdı veya değersizleştirdi</li>
   <li>Bunu bir yatırım değil, gerçek riski olan bir koleksiyon hobisi olarak ele alın — Limited eşya değerleri likit değildir ve sert bir şekilde dalgalanabilir</li>
 </ul>
-
-<span id="scams" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="scams" class="anchor-target"></span>
 <h2>Dolandırıcılıklar ve Ticaret Riskleri</h2>
 <h3>Roblox hesapları ve eşyaları etrafındaki en büyük dolandırıcılıklar nelerdir?</h3>
 <div class="risk-box">
   <p>Hesap ve eşya ticareti dolandırıcılıkları Roblox topluluğunda son derece yaygın: sahte "aracı" ticaret hizmetleri, kimlik bilgilerini çalmak için Roblox giriş sayfasını klonlayan kimlik avı siteleri ve hesap erişimi isteyen "ücretsiz Robux üretici" dolandırıcılıkları. Roblox'un kendi Kullanım Şartları hesap transferlerini yasakladığından, bir ticaret dolandırıcılığı kurbanının hiçbir başvuru hakkı yok — Roblox dolandırılan bir hesabı geri yüklemeyecek veya bir eşya takasını tersine çevirmeyecek ve Roblox yetkisiz transferi tespit ederse dolandırılan hesabın kendisi yasaklı kalır.</p>
 </div>
-
-<span id="rules" class="anchor-target"></span>
+</section>
+<section class="g-card g-news-card"><span id="rules" class="anchor-target"></span>
 <h2>Kurallar ve Ticaret Politikası</h2>
 <h3>Bir Roblox hesabı satın almak veya satmak kurallara aykırı mı?</h3>
 <p>Evet. Roblox'un Kullanım Şartları, hesap sahipliğini transfer etmeyi ve hesapları gerçek dünya parası için takas etmeyi açıkça yasaklıyor. Tespit edilen transferlere karışan hesaplar, alıcı veya satıcı için hiçbir itiraz süreci olmadan kalıcı olarak askıya alınabilir.</p>
 
 <h3>Roblox hesap fiyatları neden diğer oyunlardan çok daha düşük görünüyor?</h3>
 <p>Çoğu Roblox hesabı, Clash of Clans veya Free Fire gibi oyunlarda değeri belirleyen türden bir "ilerleme" taşımıyor — bir Roblox hesabının değeri, genel bir seviye yerine belirli eşyalarda, belirli bir deneyimin ilerlemesinde veya kullanıcı adında yoğunlaşıyor. Bu yüzden ilanların büyük çoğunluğu $25'in altında kümeleniyor, yüzlere ulaşan belirli hesapların (nadir kullanıcı adları, yüksek talepli deneyim ilerlemesi) uzun ince bir kuyruğu ile birlikte.</p>
-
+</section>
 </div>
 
 <div class="report-cta"><a href="https://t.me/GameAccountValue_Bot?start=game_roblox&utm_campaign=roblox&utm_content=tr" class="btn-primary" data-event="cta_to_bot" rel="noopener noreferrer">Roblox hesabının tahmini değerini kontrol et</a></div>
@@ -417,6 +429,7 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
+<script src="../assets/glass.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 </body>
 </html>
