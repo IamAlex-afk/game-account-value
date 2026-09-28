@@ -449,6 +449,9 @@ body:has(.g-tool) .sticky-cta { display: none; }
 body:has(.g-tool) { padding-bottom: 0; }
 html body .g-panel .value-calc { overflow: visible; }   /* style.css sets hidden, which made it the sticky scroll box */
 
+/* Slider value (e.g. "0 R$") keeps its own direction inside RTL labels */
+.vc-field-val { unicode-bidi: plaintext; }
+
 
 /* ============================================================
    Cyber-Luxe layer: depth, restraint, expensive glow.
