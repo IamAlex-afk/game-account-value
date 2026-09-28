@@ -18,10 +18,10 @@ the Telegram bot), audience styling is "gamer, not kiddy" (site is 18+).
   grain, dark glass panels with hairline borders; neon only on accents
   (buttons, key numbers, Live status). Font: self-hosted Inter (the CSP only
   allows `font-src 'self'`).
-- **Homepage = the tool** (en/id/pt/ru, the locales that have the
-  calculator): 1 game tiles → 2 sliders → 3 sticky result with the bot CTA
-  directly under it. Other locales: same hero art (city + GAV-AI robot),
-  no calculator.
+- **Homepage = the tool** (all 17 full locales; the other 13 were added by
+  `scripts/design/add_home_tool.py`): 1 game tiles → 2 sliders → 3 sticky
+  result with the bot CTA directly under it. The 7 old-format locales keep
+  the hero art (city + GAV-AI robot) without a calculator.
 - **Game pages:** hero split — title, badges, market range, facts left;
   compact calculator right with the bot CTA under the result. Article
   sections are glass cards.
