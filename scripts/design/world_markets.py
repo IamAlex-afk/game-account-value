@@ -12,6 +12,7 @@ import os, re, sys, glob, collections, importlib.util
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from world_extra import render_extra
+sys.path.insert(0, HERE)
 from world_data import MARKETS, N
 spec = importlib.util.spec_from_file_location('r', os.path.join(HERE, 'rollout.py'))
 R = importlib.util.module_from_spec(spec); spec.loader.exec_module(R)

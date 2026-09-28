@@ -262,3 +262,11 @@ TW_ONLY = {
  'pl': 'Tylko Twitch — w wielu krajach te gry transmituje się głównie na innych platformach.',
  'zh': '仅统计Twitch——在许多国家，这些游戏主要在其他平台直播。',
 }
+
+
+# second research round: JP / CN / KR / TR rows
+from world_data2 import ROWS as _ROWS, N2 as _N2
+for _g, _rows in _ROWS.items():
+    MARKETS[_g].update(_rows)
+for _l, _notes in _N2.items():
+    N[_l].update(_notes)

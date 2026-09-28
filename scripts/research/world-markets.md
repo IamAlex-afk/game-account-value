@@ -38,3 +38,13 @@ Genshin: not listed (no esports). TwitchMetrics (avg viewers 30 days, updated 20
 Genshin China row: UU898 ¥105.60–¥225.60 (from zh/genshin-impact.html research, Sep 2026).
 Markets for the 8 games: global = game-page market range; CIS = FunPay, SEA = igitems (news pages, 2026-09-21).
 Data lives in scripts/design/world_data.py (MARKETS, EXTRA, N notes, TW_ONLY).
+
+## Round 2 (2026-09-28): JP / CN / KR / TR for the other games
+- JP GameTrade: Genshin 119,857 listings, real range ¥3,000–¥2,500,000 (top: 8 C6 chars, "total spend ¥3M+"); ¥888,888/¥999,999 placeholders excluded.
+  Clash Royale 4,461 listings ¥2,500–¥180,000; Clash of Clans 4,496 listings ¥1,280–¥248,000 (TH18). Fortnite JP section is mostly
+  "Brainrot" creative-mode item trading, not accounts → not shown.
+- CN 交易猫: Genshin 成品号 ¥118–¥7,500 (123 five-stars); 部落冲突 ¥210–¥12,888 (mostly TH18); 皇室战争 no listings visible.
+- KR 저팔계: Genshin (game_code=89) ₩50,000–₩2,500,000; other games' codes not discoverable → gap.
+- TR GameSatış: Fortnite 400–11,000₺; CoC 100–19,000₺ (top = rare name "Constantine"); CR 100–29,999₺; Roblox 50–18,000₺ (Headless+Korblox);
+  Genshin 500–25,000₺ (118 five-stars); Free Fire 450–15,000₺ (Prime 8); MLBB 250–50,000₺ (807 skins). Minecraft 404.
+Data: scripts/design/world_data2.py
