@@ -65,3 +65,8 @@ in search (301 migration, normal lag).
 4. SEO/AI audit: update llms.txt; Event JSON-LD only for in-person events;
    owner to add the site to Bing Webmaster Tools (AI Performance report).
 5. LCP 2.4–2.9 s → target ≤ 2.5 s.
+
+## 2026-09-28 (late)
+- DONE: tool-first homepage calculator on all 17 full locales (a500cff, deploy success, IndexNow 200).
+- OPEN (owner): Cloudflare proxy for security headers; Bing Webmaster Tools; Search Console check of 301 migration.
+- NEXT: monthly refresh of prices/events/streamers/earnings (~2026-10-28).
