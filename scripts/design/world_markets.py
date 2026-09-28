@@ -11,7 +11,9 @@ import os, re, sys, glob, collections, importlib.util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from world_extra import render_extra
+from world_extra import render_extra, NAMES as _NAMES
+from world_events import render_events
+from world_results import render_results
 sys.path.insert(0, HERE)
 from world_data import MARKETS, N
 spec = importlib.util.spec_from_file_location('r', os.path.join(HERE, 'rollout.py'))
@@ -204,7 +206,7 @@ def render(game, lang, game_name):
             '<div class="wm-wrap"><table class="wm-table"><thead><tr><th scope="col">' + c[0] + '</th><th scope="col">' + c[1] + '</th><th scope="col">' + c[2] +
             '</th><th scope="col">' + c[3] + '</th><th scope="col">' + c[4] + '</th></tr></thead><tbody>' + rows + '</tbody></table></div>\n'
             '<p class="wm-note">' + t['note'] + ' ' + t['checked'] + ': <time datetime="' + CHECKED + '">' + CHECKED + '</time>.</p>\n' +
-            render_extra(game, lang, game_name) + '\n</section>\n')
+            render_events(game, lang, _NAMES) + render_results(game, lang, _NAMES) + render_extra(game, lang, game_name) + '\n</section>\n')
 
 def apply(game):
     names = {'brawl-stars': 'Brawl Stars', 'roblox': 'Roblox', 'clash-of-clans': 'Clash of Clans', 'clash-royale': 'Clash Royale', 'free-fire': 'Free Fire',
@@ -221,6 +223,9 @@ def apply(game):
         s = s[:j] + block + s[j:]
         m = re.search(r'(<div class="section-nav">\s*<a href="#pricing">[^<]*</a>)', s)
         s = s[:m.end()] + '\n  <a href="#world">' + T[lang]['nav'] + '</a>' + s[m.end():]
+        if 'class="ev-list"' in s and 'assets/events.js' not in s:   # timeline needs the countdown script
+            k = s.rindex('</body>')
+            s = s[:k] + '<script src="' + ('../' if lang != 'en' else './') + 'assets/events.js" defer></script>\n' + s[k:]
         open(f, 'w', encoding='utf-8', newline='').write(s)
         n += 1
     print(game, 'pages updated:', n)

@@ -46,6 +46,12 @@ name in `apply()` names → run script → screenshot → commit.
 **All 9 games DONE (world section on 153 pages):** markets, esports by country,
 top earners, Twitch streamers; data in `scripts/design/world_data.py`.
 
+**Events + recent champions (2026-09-28):** `scripts/design/world_events.py` (EVENTS, publisher
+sources only), `world_results.py` (RESULTS), dates via `node scripts/design/build_event_dates.js`
+(CLDR, 17 langs; Thai uses Buddhist year = native norm). events.js labels localized via data-l-*.
+Not shown (unverified officially): CRL 2026 World Finals, CoC 2026 finals date, Genshin version dates.
+Refresh monthly: prices, events, streamers (TwitchMetrics), esports totals.
+
 ## Next steps
 1. Deepen markets for the other 8 games (CN/JP/KR/TR marketplaces, like Brawl Stars).
 2. Rarest/most valuable items per game & country; YouTube creators need a verifiable source.
