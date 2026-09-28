@@ -762,4 +762,8 @@ html body .article-body > h2:not(:first-child) { margin-top: 52px; }
 .wm-rank { display: inline-block; min-width: 26px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .wm-miss { font-size: 15px !important; color: #FDE68A !important; margin: -6px 0 14px; }
 @media (max-width: 760px) { .wm-table.wm-small tr { display: grid; grid-template-columns: 1fr auto; } .wm-table.wm-small th { grid-column: 1 / -1; } }
+.wm-results th { white-space: normal !important; min-width: 220px; }
+.wm-results .ev-where { font-weight: 500; font-size: 13px; }
+.ev-where { display: block; font-size: 15px; color: var(--muted); margin-top: 2px; }
+.g-world .ev-list { margin-bottom: 8px; }
 
