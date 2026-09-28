@@ -12,7 +12,7 @@ import os, re, sys, glob, collections, importlib.util
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from world_extra import render_extra, NAMES as _NAMES
-from world_events import render_events
+from world_events import render_events, render_event_ld
 from world_results import render_results
 sys.path.insert(0, HERE)
 from world_data import MARKETS, N
@@ -52,8 +52,8 @@ T = {
    reg=dict(global_='Global / Western sites', cis='Russia & CIS', cn='China', jp='Japan', kr='South Korea', tr='Türkiye', sea='Southeast Asia', br='Brazil'),
    dem=dict(global_='Trophies and brawler count — the highest-priced listings name no rare skin', cis='Fully maxed accounts: all hypercharges, coins', cn='Cosmetics: retired and zodiac skins, wings; Master rank; account age', jp='Master rank, national ranking, first-owner accounts', kr='National ranking and prestige; very large skin collections', tr='Trophy count, costume count, transferable email / Supercell ID', sea='Trophies and maxed brawlers; many listings, asking prices falling')),
  'ru': dict(title='Цены на аккаунты {game} в мире', nav='🌍 Мир',
-   intro='Цены в объявлениях на открытых площадках разных стран, проверенные в один день. Сначала — ваш рынок, дальше — что больше всего ценят игроки в других странах.',
-   your='Ваш рынок', others='Другие рынки', cols=('Рынок', 'Где', 'Цены в объявлениях', '≈ USD', 'Что там ценят больше всего'),
+   intro='Цены в объявлениях на открытых площадках разных стран, проверенные в один день. Сначала — твой рынок, дальше — что больше всего ценят игроки в других странах.',
+   your='Твой рынок', others='Другие рынки', cols=('Рынок', 'Где', 'Цены в объявлениях', '≈ USD', 'Что там ценят больше всего'),
    nv='Пока не проверено — основные площадки блокируют автоматическую проверку.',
    note='Это цены объявлений, а не завершённых сделок. Пересчёт в USD по курсам на 25–27 сентября 2026. Только описание рынка — не совет покупать или продавать; торговля аккаунтами может нарушать правила игры.',
    checked='Проверено',
@@ -76,16 +76,16 @@ T = {
    reg=dict(global_='Sites globais / ocidentais', cis='Rússia e CEI', cn='China', jp='Japão', kr='Coreia do Sul', tr='Turquia', sea='Sudeste Asiático', br='Brasil'),
    dem=dict(global_='Troféus e número de brawlers — os anúncios mais caros não citam nenhuma skin rara', cis='Contas no máximo: todas as hipercargas, moedas', cn='Cosméticos: skins retiradas e do zodíaco, asas; rank Mestre; idade da conta', jp='Rank Mestre, ranking nacional, contas de primeiro dono', kr='Ranking nacional e prestígio; coleções de skins enormes', tr='Troféus, número de trajes, e-mail / Supercell ID transferível', sea='Troféus e brawlers no máximo; muitos anúncios, preços pedidos em queda')),
  'id': dict(title='Harga akun {game} di seluruh dunia', nav='🌍 Dunia',
-   intro='Harga yang diminta di marketplace publik berbagai negara, dicek pada hari yang sama. Pasar Anda ditampilkan pertama; sisanya menunjukkan apa yang paling dihargai pemain di tempat lain.',
-   your='Pasar Anda', others='Pasar lain', cols=('Pasar', 'Di mana', 'Harga yang diminta', '≈ USD', 'Paling dihargai di sana'),
+   intro='Harga yang diminta di marketplace publik berbagai negara, dicek pada hari yang sama. Pasar kamu ditampilkan pertama; sisanya menunjukkan apa yang paling dihargai pemain di tempat lain.',
+   your='Pasar kamu', others='Pasar lain', cols=('Pasar', 'Di mana', 'Harga yang diminta', '≈ USD', 'Paling dihargai di sana'),
    nv='Belum terverifikasi — marketplace utama di sana memblokir pengecekan otomatis.',
    note='Harga yang diminta, bukan penjualan yang selesai. Dikonversi ke USD dengan kurs 25–27 September 2026. Hanya deskriptif — bukan saran membeli atau menjual; jual beli akun dapat melanggar aturan game.',
    checked='Dicek',
    reg=dict(global_='Situs global / Barat', cis='Rusia & CIS', cn='Tiongkok', jp='Jepang', kr='Korea Selatan', tr='Turki', sea='Asia Tenggara', br='Brasil'),
    dem=dict(global_='Trofi dan jumlah brawler — listing termahal tidak menyebut skin langka', cis='Akun maksimal: semua hypercharge, koin', cn='Kosmetik: skin yang sudah ditarik dan skin zodiak, sayap; rank Master; umur akun', jp='Rank Master, peringkat nasional, akun pemilik pertama', kr='Peringkat nasional dan prestige; koleksi skin sangat besar', tr='Jumlah trofi, jumlah kostum, email / Supercell ID yang bisa dipindah', sea='Trofi dan brawler maksimal; banyak listing, harga yang diminta turun')),
  'tr': dict(title='Dünyada {game} hesap fiyatları', nav='🌍 Dünya',
-   intro='Farklı ülkelerdeki açık pazar yerlerinde istenen fiyatlar, hepsi aynı gün kontrol edildi. Önce sizin pazarınız; ardından diğer ülkelerdeki oyuncuların en çok değer verdikleri.',
-   your='Sizin pazarınız', others='Diğer pazarlar', cols=('Pazar', 'Nerede', 'İstenen fiyatlar', '≈ USD', 'Orada en çok değer verilen'),
+   intro='Farklı ülkelerdeki açık pazar yerlerinde istenen fiyatlar, hepsi aynı gün kontrol edildi. Önce senin pazarın; ardından diğer ülkelerdeki oyuncuların en çok değer verdikleri.',
+   your='Senin pazarın', others='Diğer pazarlar', cols=('Pazar', 'Nerede', 'İstenen fiyatlar', '≈ USD', 'Orada en çok değer verilen'),
    nv='Henüz doğrulanmadı — oradaki başlıca pazar yerleri otomatik kontrolü engelliyor.',
    note='İstenen fiyatlardır, tamamlanmış satışlar değil. 25–27 Eylül 2026 kurlarıyla USD\'ye çevrildi. Yalnızca açıklayıcıdır — alım ya da satım tavsiyesi değildir; hesap ticareti oyunun kurallarını ihlal edebilir.',
    checked='Kontrol',
@@ -206,7 +206,7 @@ def render(game, lang, game_name):
             '<div class="wm-wrap"><table class="wm-table"><thead><tr><th scope="col">' + c[0] + '</th><th scope="col">' + c[1] + '</th><th scope="col">' + c[2] +
             '</th><th scope="col">' + c[3] + '</th><th scope="col">' + c[4] + '</th></tr></thead><tbody>' + rows + '</tbody></table></div>\n'
             '<p class="wm-note">' + t['note'] + ' ' + t['checked'] + ': <time datetime="' + CHECKED + '">' + CHECKED + '</time>.</p>\n' +
-            render_events(game, lang, _NAMES) + render_results(game, lang, _NAMES) + render_extra(game, lang, game_name) + '\n</section>\n')
+            render_events(game, lang, _NAMES) + render_event_ld(game) + render_results(game, lang, _NAMES) + render_extra(game, lang, game_name) + '\n</section>\n')
 
 def apply(game):
     names = {'brawl-stars': 'Brawl Stars', 'roblox': 'Roblox', 'clash-of-clans': 'Clash of Clans', 'clash-royale': 'Clash Royale', 'free-fire': 'Free Fire',

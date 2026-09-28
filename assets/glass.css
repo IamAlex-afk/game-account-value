@@ -721,6 +721,11 @@ html body .article-body > h2:not(:first-child) { margin-top: 52px; }
   -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
 .feature, .game-card, .step, details, .stat, .g-card, .fact-box > span, .g-news-card { background-color: rgba(15,23,42,.82); }
 
+/* below-the-fold article cards: skip rendering until scrolled near (Baseline 2024);
+   contain-intrinsic-size keeps the scrollbar stable (no layout shift) */
+.article-body .g-news-card, .other-games, .sources-list, footer { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+.article-body .g-news-card:first-child { content-visibility: visible; }
+
 
 /* ============================================================
    "Prices around the world" (game pages): table on desktop,

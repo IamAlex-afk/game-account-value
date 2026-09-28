@@ -36,7 +36,7 @@ L = {
    k=dict(esports='Esports', ingame='In-game event', anniv='Anniversary'), s=dict(ok='Confirmed', tba='Announced · date TBA', fact='Date fact'),
    anniv='{n} years since launch', tba='TBA', src='Source', online='Online',
    c=dict(days='In {n} days', tomorrow='Tomorrow', live='Live now', month='This month', done='Finished')),
- 'ru': dict(h='Ближайшие официальные события', i='Турниры и события, объявленные самими издателями. Если дата ещё не объявлена, стоит пометка «уточняется». Отсчёт считается в вашем браузере.',
+ 'ru': dict(h='Ближайшие официальные события', i='Турниры и события, объявленные самими издателями. Если дата ещё не объявлена, стоит пометка «уточняется». Отсчёт считается в твоём браузере.',
    k=dict(esports='Киберспорт', ingame='Событие в игре', anniv='Годовщина'), s=dict(ok='Подтверждено', tba='Объявлено · дата уточняется', fact='Дата-факт'),
    anniv='{n} лет с запуска', tba='уточняется', src='Источник', online='Онлайн',
    c=dict(days='Через {n} дн.', tomorrow='Завтра', live='Идёт сейчас', month='В этом месяце', done='Завершено')),
@@ -48,11 +48,11 @@ L = {
    k=dict(esports='Esports', ingame='Evento no jogo', anniv='Aniversário'), s=dict(ok='Confirmado', tba='Anunciado · data a confirmar', fact='Data'),
    anniv='{n} anos desde o lançamento', tba='a confirmar', src='Fonte', online='Online',
    c=dict(days='Em {n} dias', tomorrow='Amanhã', live='Acontecendo agora', month='Este mês', done='Encerrado')),
- 'id': dict(h='Acara resmi mendatang', i='Turnamen dan acara yang diumumkan langsung oleh penerbit. Tanggal yang belum diumumkan ditandai "belum diumumkan". Hitung mundur dihitung di browser Anda.',
+ 'id': dict(h='Acara resmi mendatang', i='Turnamen dan acara yang diumumkan langsung oleh penerbit. Tanggal yang belum diumumkan ditandai "belum diumumkan". Hitung mundur dihitung di browser kamu.',
    k=dict(esports='Esports', ingame='Event dalam game', anniv='Ulang tahun'), s=dict(ok='Terkonfirmasi', tba='Diumumkan · tanggal menyusul', fact='Tanggal'),
    anniv='{n} tahun sejak rilis', tba='belum diumumkan', src='Sumber', online='Online',
    c=dict(days='{n} hari lagi', tomorrow='Besok', live='Sedang berlangsung', month='Bulan ini', done='Selesai')),
- 'tr': dict(h='Yaklaşan resmi etkinlikler', i='Yayıncıların kendilerinin duyurduğu turnuvalar ve etkinlikler. Henüz açıklanmayan tarihler "açıklanacak" olarak işaretlenir. Geri sayım tarayıcınızda hesaplanır.',
+ 'tr': dict(h='Yaklaşan resmi etkinlikler', i='Yayıncıların kendilerinin duyurduğu turnuvalar ve etkinlikler. Henüz açıklanmayan tarihler "açıklanacak" olarak işaretlenir. Geri sayım tarayıcında hesaplanır.',
    k=dict(esports='Espor', ingame='Oyun içi etkinlik', anniv='Yıl dönümü'), s=dict(ok='Onaylandı', tba='Duyuruldu · tarih açıklanacak', fact='Tarih'),
    anniv='Çıkışından bu yana {n} yıl', tba='açıklanacak', src='Kaynak', online='Çevrimiçi',
    c=dict(days='{n} gün sonra', tomorrow='Yarın', live='Şu an sürüyor', month='Bu ay', done='Bitti')),
@@ -132,3 +132,28 @@ def render_events(game, lang, names):
                      '<div class="ev-body"><p class="ev-tags"><span class="ev-kind">' + t['k'][e['kind']] + '</span><span class="ev-status ' + st_cls + '">' + t['s'][e['status']] +
                      '</span><span class="ev-count"></span></p><h3>' + title + '</h3>' + where + src + '</div></li>')
     return ('<h3>📅 ' + t['h'] + '</h3><p class="wm-intro">' + t['i'] + '</p><ol class="ev-list" ' + attrs + '>' + ''.join(items) + '</ol>')
+
+
+# ---- schema.org Event (Google event rich results) ------------------------
+# Only in-person events with a confirmed start date (Google excludes
+# virtual-only and undated events). Mirrors the visible timeline.
+VENUE = {'bs-lcq': ('Guangzhou', 'Guangzhou', 'CN'), 'bs-wf': ('Tokyo Metropolitan Gymnasium', 'Tokyo', 'JP'),
+         'ml-enc': ('Riyadh', 'Riyadh', 'SA'), 'ff-wsgf': ('Bangkok', 'Bangkok', 'TH')}
+
+def render_event_ld(game):
+    out = []
+    for e in EVENTS.get(game, []):
+        if e['id'] not in VENUE or not e.get('start') or e['status'] != 'ok':
+            continue
+        name, city, cc = VENUE[e['id']]
+        ev = {'@context': 'https://schema.org', '@type': 'Event', 'name': e['title'].split(' · $')[0],
+              'startDate': e['start'], 'eventStatus': 'https://schema.org/EventScheduled',
+              'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
+              'location': {'@type': 'Place', 'name': name, 'address': {'@type': 'PostalAddress', 'addressLocality': city, 'addressCountry': cc}},
+              'organizer': {'@type': 'Organization', 'name': e['src'][1]}, 'url': e['src'][0]}
+        if e.get('end'):
+            ev['endDate'] = e['end']
+        out.append(ev)
+    if not out:
+        return ''
+    return '<script type="application/ld+json">' + json.dumps(out if len(out) > 1 else out[0], ensure_ascii=False) + '</script>'
