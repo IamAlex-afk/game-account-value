@@ -52,7 +52,13 @@ sources only), `world_results.py` (RESULTS), dates via `node scripts/design/buil
 Not shown (unverified officially): CRL 2026 World Finals, CoC 2026 finals date, Genshin version dates.
 Refresh monthly: prices, events, streamers (TwitchMetrics), esports totals.
 
+**Audit 2026-09-28:** audit_site.py clean (only 404 noindex, intended); register fixed
+(ru/tr/id); Event JSON-LD for 4 in-person events; privacy.html 'This Website'; llms.txt
+updated; sitemap lastmod refreshed + IndexNow 280 URLs -> 200. Old github.io URLs still show
+in search (301 migration, normal lag).
+
 ## Next steps
+0. Owner: Cloudflare proxy for security headers (HSTS etc.); Bing Webmaster Tools.
 1. Deepen markets for the other 8 games (CN/JP/KR/TR marketplaces, like Brawl Stars).
 2. Rarest/most valuable items per game & country; YouTube creators need a verifiable source.
 3. Events timelines for the other 8 games (official sources only).
