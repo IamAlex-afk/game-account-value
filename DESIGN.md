@@ -48,6 +48,13 @@ the Telegram bot), audience styling is "gamer, not kiddy" (site is 18+).
   de du, es/it tú, fr/pt vous/você, pl ty, vi bạn, hi आप).
 - **Performance:** below-the-fold cards use `content-visibility: auto`.
 - **Audit:** `python scripts/audit_site.py` must stay clean before a push.
+- **Brand (2026-09-29, `scripts/design/brand_rollout.py`):** GAV emblem
+  (`assets/emblem.webp`) is the logo mark in the nav and on the homepage
+  robot's chest; inner pages use breadcrumbs `Home › page` (+ BreadcrumbList
+  JSON-LD) instead of a back button; every calculator has a robot note
+  (`.g-why`) next to the result saying what it can't see, per game and per
+  language. Social previews: `og/<game>.jpg` + `og/default.jpg`, built by
+  `scripts/design/make_og.py` (update prices there when the pages change).
 
 The sections below describe the previous Aurora-glass skin and remain as
 background for `style.css`.
