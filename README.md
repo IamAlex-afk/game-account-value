@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="og-image.jpg" alt="GameAccountValue — AI-powered game account appraisal" width="500">
+  <img src="og/*.jpg" alt="GameAccountValue — AI-powered game account appraisal" width="500">
 </p>
 
 <h1 align="center">GameAccountValue</h1>
@@ -61,7 +61,7 @@ market-report.html           cross-game hub
 privacy.html, terms.html     legal pages
 robots.txt, sitemap.xml      SEO (scripts/sitemap_lastmod.py, scripts/indexnow.py)
 llms.txt, ai.txt             structured info for AI crawlers/agents (JSON-LD also embedded inline)
-manifest.json, favicon.ico/-192.png, og-image.jpg   PWA manifest and social preview
+manifest.json, favicon.ico/-192.png, og/*.jpg   PWA manifest and social preview
 .well-known/security.txt, SECURITY.md
 sw.js                        service worker — offline support, installable PWA
 assets/calculators.js        per-game quick calculator + joystick/D-pad UI; every price anchor
