@@ -869,9 +869,15 @@
       shareBtn.addEventListener("click", function () {
         var text = els.lo.textContent + " – " + els.hi.textContent;
         var title = root.getAttribute("data-title") || "GameAccountValue";
-        var shareText = title + ": " + text + " — https://t.me/GameAccountValue_Bot";
+        // Link to this site's page, not the bot: the page's canonical URL, or
+        // from the homepage the chosen game's page in the same language.
+        var canon = document.querySelector('link[rel="canonical"]');
+        var url = canon ? canon.href : location.href.split("#")[0].split("?")[0];
+        var game = root.getAttribute("data-game");
+        if (root.id === "vc-home" && GAMES[game]) url = new URL(game + ".html", url).href;
+        var shareText = title + ": " + text + " — " + url;
         if (navigator.share) {
-          navigator.share({ text: shareText }).catch(function () {});
+          navigator.share({ text: title + ": " + text, url: url }).catch(function () {});
         } else if (navigator.clipboard) {
           navigator.clipboard.writeText(shareText).then(function () {
             var original = shareBtn.textContent;
