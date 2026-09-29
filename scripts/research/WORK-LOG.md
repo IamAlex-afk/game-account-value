@@ -70,3 +70,9 @@ in search (301 migration, normal lag).
 - DONE: tool-first homepage calculator on all 17 full locales (a500cff, deploy success, IndexNow 200).
 - OPEN (owner): Cloudflare proxy for security headers; Bing Webmaster Tools; Search Console check of 301 migration.
 - NEXT: monthly refresh of prices/events/streamers/earnings (~2026-10-28).
+
+## 2026-09-29 acceptance pass
+- Live Lighthouse (mobile): 97-99 perf, 100 a11y/BP/SEO.
+- Fixed: dead links (Wikipedia Mohamed Light/Two9 -> Liquipedia; zh Eldorado/igitems; clashos .html), WCAG 2.5.3 label-in-name (4840a57).
+- OPEN: zleague.gg genshin-whale-cost article deleted by publisher (37 pages cite it next to Kotaku) - needs a replacement primary source, not removed blindly.
+- OPEN (owner): Cloudflare security headers + caching; Bing Webmaster Tools; GSC daily requests.
