@@ -3,6 +3,7 @@ Text is only the game name, the price range and the domain, so one image
 serves all languages. Usage: python scripts/design/make_og.py [game ...]
 Writes og/<game>.jpg via headless Chrome (fresh profile each run)."""
 import os, sys, subprocess, tempfile, uuid
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -62,7 +63,8 @@ def render(game, out_dir):
     title, a, b, price, top = GAMES[game]
     tmp = tempfile.mkdtemp()
     emblem = os.path.join(tmp, 'emblem.png')
-    Image.open(os.path.join(ROOT, 'favicon.png')).convert('RGBA').crop((110, 82, 394, 366)).save(emblem)
+    import emblem as em_mod
+    em_mod.emblem(192).save(emblem)
     city = open(os.path.join(HERE, 'city.svg'), encoding='utf-8').read()
     import importlib.util as iu
     sp = iu.spec_from_file_location('br', os.path.join(HERE, 'brand_rollout.py')); br = iu.module_from_spec(sp); sp.loader.exec_module(br)
