@@ -371,4 +371,8 @@
   <url><loc>https://gameaccountvalue.com/ky/glossary.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gameaccountvalue.com/privacy.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://gameaccountvalue.com/terms.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url>
+    <loc>https://gameaccountvalue.com/news.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
 </urlset>

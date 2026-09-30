@@ -62,6 +62,41 @@
   .g-fx .g-rain { display: none; }
   .g-panel, .g-calc-card { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(15,23,42,.94); }
 }
+/* ---- site-wide header menu: Games / Guides / News + language (nav_menu.py) ---- */
+.lang-dropdown { position: absolute; top: calc(100% + 6px); left: 0; max-width: calc(100vw - 32px); padding: 6px; min-width: 190px;
+  max-height: min(70vh, 420px); overflow-y: auto; box-shadow: 0 16px 40px rgba(0,0,0,.6); z-index: 200; display: none;
+  background: #0F172A; border: 1px solid var(--line); border-radius: 14px; }
+.lang-selector.open .lang-dropdown { display: block; }
+nav:not(.crumbs) { z-index: 300; }   /* the breadcrumb bar is also a <nav>; keep header dropdowns above it */
+nav .nav-menu { display: flex; align-items: center; gap: 8px; margin-right: auto; margin-left: 18px; }
+nav .nav-dd .lang-btn, nav .nav-news { padding: 8px 13px; border-radius: 10px; font-size: 14px; font-weight: 700; color: var(--text, #E2E8F0);
+  background: rgba(255,255,255,.04); border: 1px solid var(--line); text-decoration: none; white-space: nowrap; line-height: 1.2; }
+nav .nav-dd .lang-btn:hover, nav .nav-news:hover { border-color: rgba(34,211,238,.55); background: rgba(34,211,238,.08); }
+nav .nav-news { color: #FDE68A; border-color: rgba(253,230,138,.35); }
+nav .nav-dd .lang-dropdown a { font-size: 15px; }
+[dir="rtl"] nav .nav-menu { margin-left: auto; margin-right: 18px; }
+[dir="rtl"] .lang-dropdown { left: auto; right: 0; }
+@media (max-width: 860px) {
+  nav { position: relative; }            /* 3-row header on phones: don't pin it over the content */
+  nav .nav-menu { order: 3; flex: 1 1 100%; margin: 0; gap: 6px; }
+  nav .nav-menu > * { flex: 1 1 0; }
+  nav .nav-dd .lang-btn, nav .nav-news { width: 100%; justify-content: center; text-align: center; padding: 9px 6px; font-size: 13px; }
+  nav .nav-right { order: 2; }
+}
+@media (max-width: 560px) {
+  nav .nav-menu { order: 2; }
+  nav .nav-right { order: 3; }
+  nav .nav-dd:last-of-type .lang-dropdown { left: auto; right: 0; }
+}
+/* ---- news hub (news.html) ---- */
+.news-grid { max-width: 1100px; margin: 0 auto 60px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+.news-card { display: flex; flex-direction: column; gap: 8px; padding: 20px; border-radius: 18px; text-decoration: none; color: var(--text, #E2E8F0);
+  background: linear-gradient(160deg, rgba(34,211,238,.07), rgba(15,23,42,.85)); border: 1px solid var(--line); transition: transform .2s, border-color .2s; }
+.news-card:hover { transform: translateY(-3px); border-color: rgba(34,211,238,.55); }
+.news-card strong { font-size: 19px; line-height: 1.25; color: #fff; }
+.news-date { font-size: 13px; color: #FDE68A; font-weight: 700; }
+.news-lead { font-size: 15px; line-height: 1.55; color: var(--muted, #94A3B8); }
+.news-more { margin-top: auto; font-weight: 700; color: var(--cyan, #22D3EE); }
 /* start the flying icons only after the page has loaded (keeps first paint light on phones) */
 html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
 @media (max-width: 360px) {
