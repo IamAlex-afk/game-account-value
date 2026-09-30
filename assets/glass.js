@@ -159,3 +159,13 @@ window.addEventListener("load", function () { setTimeout(function () { document.
   var start = cards.findIndex(function (c) { return c.dataset.k === "diamond"; });
   requestAnimationFrame(function () { center(start < 0 ? 0 : start, false); mark(); setTimeout(function () { cards[cur].classList.add("play"); }, 600); });
 })();
+
+/* Robot animations: eye glow on the hero cyborg, rocking robot on the result bar, joystick wiggle when it scrolls into view. */
+(function () {
+  var cy = document.querySelector(".g-cyborg");
+  if (cy && !cy.querySelector(".an-eye")) { var e = document.createElement("span"); e.className = "an-eye"; cy.appendChild(e); }
+  var sit = document.querySelector(".g-sit img");
+  if (sit && !sit.parentNode.classList.contains("an-wrap")) { var w = document.createElement("span"); w.className = "an-wrap"; sit.parentNode.insertBefore(w, sit); w.appendChild(sit); }
+  var joy = document.querySelector(".g-joystick");
+  if (joy && "IntersectionObserver" in window) new IntersectionObserver(function (es, o) { es.forEach(function (x) { if (x.isIntersecting) { joy.classList.add("an-in"); o.disconnect(); } }); }, { threshold: .6 }).observe(joy);
+})();
