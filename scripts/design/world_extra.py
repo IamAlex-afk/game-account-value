@@ -244,3 +244,20 @@ X['tk'] = {'esp': 'Ýurtlar boýunça kibersport baýrak pullary',
  'top_c': ('Oýunçy', 'Ýurt', 'Baýrak puly'),
  'upd': '{d} täzelendi',
  'yours': 'Siziň ýurduňyz'}
+
+# tl
+LANG_COUNTRY['tl'] = 'PH'
+X['tl'] = {'esp': 'Premyo sa esports ayon sa bansa',
+ 'esp_c': ('Bansa', 'Premyo', 'Mga player'),
+ 'esp_i': 'Kabuuang premyong napanalunan ng mga player mula sa bawat bansa sa mga torneo ng {game}.',
+ 'not_top': 'Wala pa ang {c} sa top 15 ayon sa premyo.',
+ 'rec': 'mga torneong naitala {span}',
+ 'src': 'Source: {s}',
+ 'st': 'Pinakapinapanood na live streamer ngayon',
+ 'st_c': ('Channel', 'Wika', 'Avg na manonood'),
+ 'st_i': 'Mga Twitch channel na niranggo ayon sa average na manonood sa nakaraang 30 araw. Nauuna ang mga stream sa iyong wika.',
+ 'st_none': 'Walang stream sa iyong wika sa top 15 ngayon.',
+ 'top': 'Pinakamalaking kumita sa buong mundo',
+ 'top_c': ('Player', 'Bansa', 'Premyo'),
+ 'upd': 'na-update {d}',
+ 'yours': 'Iyong bansa'}

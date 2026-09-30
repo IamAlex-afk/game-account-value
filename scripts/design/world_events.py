@@ -226,3 +226,15 @@ L['tk'] = {'anniv': 'çykanyna {n} ýyl',
  's': {'fact': 'Sene maglumaty', 'ok': 'Tassyklandy', 'tba': 'Yglan edildi · senesi TBA'},
  'src': 'Çeşme',
  'tba': 'TBA'}
+
+# tl
+L['tl'] = {'anniv': '{n} taon mula nang ilabas',
+ 'c': {'days': 'Sa loob ng {n} araw', 'done': 'Tapos na', 'live': 'Live ngayon', 'month': 'Ngayong buwan', 'tomorrow': 'Bukas'},
+ 'h': 'Mga paparating na opisyal na event',
+ 'i': 'Mga torneo at event na inanunsyo mismo ng mga publisher. Naka-mark bilang TBA ang mga petsang hindi pa inaanunsyo. Kinakalkula ang countdown sa iyong '
+      'browser.',
+ 'k': {'anniv': 'Anibersaryo', 'esports': 'Esports', 'ingame': 'In-game na event'},
+ 'online': 'Online',
+ 's': {'fact': 'Petsa', 'ok': 'Kumpirmado', 'tba': 'Inanunsyo · petsa TBA'},
+ 'src': 'Source',
+ 'tba': 'TBA'}

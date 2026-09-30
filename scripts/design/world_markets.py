@@ -385,5 +385,36 @@ T['tk'] = {'checked': 'Barlandy',
  'title': 'Dünýä boýunça {game} hasap bahalary',
  'your': 'Siziň bazaryňyz'}
 
+
+# tl (auto, finish_locale.py)
+LANGS.append('tl')
+LOCAL['tl'] = 'sea'
+T['tl'] = {'checked': 'Sinuri',
+ 'cols': ('Merkado', 'Saan', 'Nakitang hinihinging presyo', '≈ USD', 'Pinakapinahahalagahan doon'),
+ 'dem': {'cis': 'Mga fully maxed na account: lahat ng hypercharge, coin',
+         'cn': 'Cosmetic: retired at zodiac na skin, pakpak; Master rank; edad ng account',
+         'global_': 'Trophy at bilang ng brawler — walang binabanggit na rare skin ang mga pinakamahal na listing',
+         'jp': 'Master rank, pambansang ranking, account mula sa unang may-ari',
+         'kr': 'Pambansang ranking at prestihiyo; napakalaking koleksyon ng skin',
+         'sea': 'Trophy at maxed na brawler; maraming listing, bumababa ang hinihinging presyo',
+         'tr': 'Bilang ng trophy, bilang ng costume, maililipat na email / Supercell ID'},
+ 'intro': "Mga hinihinging presyo sa mga pampublikong marketplace sa iba't ibang bansa, lahat sinuri sa iisang araw. Nauuna ang iyong merkado; ipinapakita ng "
+          'iba kung ano ang pinakapinahahalagahan ng mga player sa ibang lugar.',
+ 'nav': '🌍 Mundo',
+ 'note': 'Hinihinging presyo, hindi natapos na benta. Na-convert sa USD ayon sa palitan noong Setyembre 25–27, 2026. Paglalarawan lang — hindi payo para '
+         'bumili o magbenta; puwedeng labag sa patakaran ng laro ang bentahan ng account.',
+ 'nv': 'Hindi pa na-verify — hinaharangan ng mga pangunahing marketplace doon ang awtomatikong pagsuri.',
+ 'others': 'Ibang merkado',
+ 'reg': {'br': 'Brazil',
+         'cis': 'Russia at CIS',
+         'cn': 'China',
+         'global_': 'Global / Western na site',
+         'jp': 'Japan',
+         'kr': 'Timog Korea',
+         'sea': 'Timog-Silangang Asya',
+         'tr': 'Türkiye'},
+ 'title': 'Presyo ng {game} account sa buong mundo',
+ 'your': 'Iyong merkado'}
+
 if __name__ == '__main__':
     apply(sys.argv[1] if len(sys.argv) > 1 else 'brawl-stars')

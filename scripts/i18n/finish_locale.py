@@ -27,26 +27,32 @@ def run(args, cwd=ROOT):
         sys.exit(f"FAILED {args}:\n{r.stdout}\n{r.stderr}")
     return r.stdout
 
-# 1) merge
-segs = list(json.load(open(ROOT + f"scripts/i18n/{lang}/todo.json", encoding="utf-8")))
-tr = {}
-for f in sorted(glob.glob(os.path.join(chunk_dir, "t*.json"))):
-    for k, v in json.load(open(f, encoding="utf-8")).items():
-        tr[int(k)] = v
-ref = json.load(open(ROOT + "scripts/i18n/ms/done.json", encoding="utf-8"))
-done, miss = {}, []
-sys.path.insert(0, ROOT + "scripts/i18n")
-from numfmt import local_numbers
-for i, s in enumerate(segs):
-    done[s] = tr.get(i, s)
-    if cfg.get("numfmt") and i in tr:
-        done[s] = local_numbers(done[s])
-    if i not in tr and ref.get(s, s) != s:
-        miss.append((i, s[:70]))
-if miss:
-    sys.exit(f"untranslated vs ms reference: {miss[:10]}")
-json.dump(done, open(ROOT + f"scripts/i18n/{lang}/done.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-print("merged", len(tr))
+# 1) merge (SKIP_MERGE=1 reuses an existing done.json, e.g. after segments build
+#    rewrote todo.json with only the leftover segments)
+def merge():
+    segs = list(json.load(open(ROOT + f"scripts/i18n/{lang}/todo.json", encoding="utf-8")))
+    tr = {}
+    for f in sorted(glob.glob(os.path.join(chunk_dir, "t*.json"))):
+        for k, v in json.load(open(f, encoding="utf-8")).items():
+            tr[int(k)] = v
+    ref = json.load(open(ROOT + "scripts/i18n/ms/done.json", encoding="utf-8"))
+    done, miss = {}, []
+    sys.path.insert(0, ROOT + "scripts/i18n")
+    from numfmt import local_numbers
+    for i, s in enumerate(segs):
+        done[s] = tr.get(i, s)
+        if cfg.get("numfmt") and i in tr:
+            done[s] = local_numbers(done[s])
+        if i not in tr and ref.get(s, s) != s:
+            miss.append((i, s[:70]))
+    if miss:
+        sys.exit(f"untranslated vs ms reference: {miss[:10]}")
+    json.dump(done, open(ROOT + f"scripts/i18n/{lang}/done.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    print("merged", len(tr))
+
+if not os.environ.get("SKIP_MERGE"):
+    merge()
+done = json.load(open(ROOT + f"scripts/i18n/{lang}/done.json", encoding="utf-8"))
 
 # 2) keywords + build + from_en
 fe = ROOT + "scripts/i18n/from_en.py"

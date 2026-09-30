@@ -96,3 +96,9 @@ RL['tk'] = {'c': ('Ýaryş', 'Ýeňiji', 'Nireden', 'Ýeňijiniň baýragy', 'Ba
  'cis': 'Gündogar Ýewropa we Merkezi Aziýa',
  'h': 'Soňky çempionlar',
  'latam': 'Latyn Amerikasy'}
+
+# tl
+RL['tl'] = {'c': ('Torneo', 'Nanalo', 'Mula sa', 'Premyo ng nanalo', 'Prize pool'),
+ 'cis': 'Silangang Europa at Gitnang Asya',
+ 'h': 'Mga kamakailang kampeon',
+ 'latam': 'Latin America'}
