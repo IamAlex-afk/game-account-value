@@ -1020,6 +1020,25 @@ h1 { view-transition-name: page-title; }
   .gc-arrow { width: 42px; height: 42px; font-size: 20px; top: 45%; }
 }
 @media (prefers-reduced-motion: reduce) { .gc-card, .gc-card.on, .gc-card.on::after, .gc-card.on.play { animation: none !important; transition: none; } }
+/* ---- robot animations (preview 2026-09-30, GPU-only: transform/opacity) ---- */
+.g-cyborg img { animation: an-float 6s ease-in-out infinite; }
+@keyframes an-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.g-cyborg .an-eye { position: absolute; left: 27.9%; top: 44.6%; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, #fff 0 12%, #00F0FF 30%, rgba(0,240,255,0) 70%); mix-blend-mode: screen; animation: an-eye 2.4s ease-in-out infinite; }
+@keyframes an-eye { 0%, 100% { opacity: .35; transform: translateY(0) scale(.7); } 50% { opacity: 1; transform: translateY(-4px) scale(1.2); } }
+.g-sit .an-wrap { position: absolute; right: 6px; width: var(--w, 92px); top: calc(var(--w, 92px) * -1.30 - 8px); transform-origin: 50% 64%; animation: an-rock 3.2s ease-in-out infinite; }
+.g-sit .an-wrap img { position: static; width: 100%; display: block; }
+@media (max-width: 560px) { .g-sit .an-wrap { --w: 70px; right: 2px; } }
+@keyframes an-rock { 0%, 100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
+.g-joystick { transform-origin: 50% 80%; }
+.g-joystick.an-in { animation: an-wiggle 1.4s ease-in-out 2; }
+@keyframes an-wiggle { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-7deg); } 45% { transform: rotate(6deg); } 70% { transform: rotate(-3deg); } }
+.g-18 { animation: an-bob 5s ease-in-out infinite; }
+@keyframes an-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.g-head h1 { animation: an-glitch .9s steps(2) 1 .3s; }
+@keyframes an-glitch { 0% { text-shadow: 3px 0 #FF2E88, -3px 0 #00F0FF; transform: translateX(2px); } 25% { text-shadow: -4px 0 #FF2E88, 4px 0 #00F0FF; transform: translateX(-3px) skewX(-4deg); }
+  50% { text-shadow: 2px 0 #FF2E88, -2px 0 #00F0FF; } 100% { text-shadow: none; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .g-cyborg img, .g-cyborg .an-eye, .g-sit .an-wrap, .g-joystick.an-in, .g-18, .g-head h1 { animation: none !important; } }
 /* start the flying icons only after the page has loaded (keeps first paint light on phones) */
 html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
 @media (max-width: 360px) {
