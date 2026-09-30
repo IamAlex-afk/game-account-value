@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -435,6 +435,17 @@
       confidencePrefix: "Ishonch: ",
       copiedFallback: "Nusxalandi!",
       gamepad: { up: "Oldingi maydon", down: "Keyingi maydon", left: "Kamaytirish", right: "Oshirish", a: "Barcha maydonlarni tiklash", b: "Natijani ulashish", resetCaption: "TIKLASH", shareCaption: "ULASHISH" }
+    },
+    kk: {
+      sliders: {"brawl-stars": {"trophies": "Кубоктар", "maxed": "Power Level 11-дегі бравлерлер"}, "clash-of-clans": {"th": "Town Hall деңгейі"}, "clash-royale": {"kt": "King Tower деңгейі", "maxed": "Максималды деңгейдегі карталар"}, "free-fire": {"rank": "Ранг", "bundles": "Сирек бандлдар/пет-тер"}, "genshin-impact": {"fivestars": "5★ кейіпкерлер", "c6": "C6 кейіпкерлер"}, "mobile-legends": {"skins": "Барлық скиндер", "rank": "Ранг"}, "fortnite": {"skins": "Барлық скиндер", "ogItems": "Сирек OG заттар"}, "minecraft": {"type": "Аккаунт түрі"}, "roblox": {"age": "Аккаунт жасы", "robux": "Robux балансы", "limiteds": "Қарапайым Limited заттар (аталған сирек заттар емес)"}},
+      select: {"clash-of-clans": {"label": "Жақсарту түрі", "options": [["full", "Full Max"], ["standard", "Стандарт"], ["rushed", "Rushed"]]}},
+      ageUnit: function (v) { return v + " жыл"; },
+      minecraftTypes: ["Қарапайым аккаунт", "MVP+/Hypixel, сирек плащ", "Minecon плащының иесі", "2 таңбалы ат (әріп+цифр)"],
+      checkboxHeading: "Аталған сирек заттар (міндетті емес):",
+      confidence: {"low": "Төмен", "medium": "Орташа", "high": "Жоғары"},
+      confidencePrefix: "Сенімділік: ",
+      copiedFallback: "Көшірілді!",
+      gamepad: {"up": "Алдыңғы өріс", "down": "Келесі өріс", "left": "Азайту", "right": "Көбейту", "a": "Барлық өрістерді тазарту", "b": "Нәтижемен бөлісу", "resetCaption": "ТАЗАРТУ", "shareCaption": "БӨЛІСУ"}
     }
   };
   var T = STR[LANG];
