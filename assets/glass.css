@@ -365,7 +365,7 @@ html body .g-head h1 { font-family: var(--body-font); font-variation-settings: n
   font-size: clamp(36px, 5vw, 64px); line-height: 1.03; letter-spacing: -.035em; margin: 0; max-width: 820px; }
 html body .g-head h1 br { display: none; }
 html body .g-head h1 span { background: linear-gradient(95deg, var(--cyan), #A5B4FC 55%, var(--em-l)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: none; }
-.g-tool .g-robot { position: relative; top: auto; right: auto; width: 150px; }
+.g-tool .g-robot { position: relative; top: auto; right: auto; width: 210px; }
 
 /* the big glass panel that holds the whole tool */
 .g-panel { position: relative; overflow: hidden; padding: clamp(18px,2.4vw,30px); border-radius: 24px; background: rgba(15,23,42,.7);
@@ -423,14 +423,14 @@ html body .g-about p { max-width: 860px; margin: 0 auto; text-align: center; fon
 @media (max-width: 860px) {
   html body .g-panel .value-calc { grid-template-columns: 1fr; grid-template-areas: "r" "s"; }
   html body .g-panel .value-calc .vc-result { position: relative; top: 0; }
-  .g-tool .g-robot { width: 96px; }
+  .g-tool .g-robot { width: 130px; }
 }
 @media (max-width: 560px) {
   .g-pick { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .g-pick-btn { min-height: 84px; font-size: 12px; }
   .g-pick-wrap .g-num { display: none; }
-  .g-head { grid-template-columns: 1fr 72px; }
-  .g-tool .g-robot { width: 72px; }
+  .g-head { grid-template-columns: 1fr 96px; }
+  .g-tool .g-robot { width: 96px; }
 }
 @media (prefers-reduced-motion: reduce) { .g-panel::after, .g-head .hero-badge::before { animation: none; } }
 
