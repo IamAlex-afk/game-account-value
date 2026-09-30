@@ -238,3 +238,15 @@ L['tl'] = {'anniv': '{n} taon mula nang ilabas',
  's': {'fact': 'Petsa', 'ok': 'Kumpirmado', 'tba': 'Inanunsyo · petsa TBA'},
  'src': 'Source',
  'tba': 'TBA'}
+
+# sw
+L['sw'] = {'anniv': 'miaka {n} tangu uzinduzi',
+ 'c': {'days': 'Baada ya siku {n}', 'done': 'Imekwisha', 'live': 'Inaendelea sasa', 'month': 'Mwezi huu', 'tomorrow': 'Kesho'},
+ 'h': 'Matukio rasmi yajayo',
+ 'i': 'Mashindano na matukio yaliyotangazwa na wachapishaji wenyewe. Tarehe ambazo bado hazijatangazwa zimewekwa alama TBA. Muda uliobaki unahesabiwa kwenye '
+      'kivinjari chako.',
+ 'k': {'anniv': 'Maadhimisho', 'esports': 'Esports', 'ingame': 'Tukio ndani ya mchezo'},
+ 'online': 'Mtandaoni',
+ 's': {'fact': 'Ukweli wa tarehe', 'ok': 'Imethibitishwa', 'tba': 'Imetangazwa · tarehe TBA'},
+ 'src': 'Chanzo',
+ 'tba': 'TBA'}

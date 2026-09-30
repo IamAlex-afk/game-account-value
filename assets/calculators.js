@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk", "ky", "tk", "tl"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk", "ky", "tk", "tl", "sw"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -479,6 +479,17 @@
       confidencePrefix: "Katiyakan: ",
       copiedFallback: "Nakopya na!",
       gamepad: {"up": "Nakaraang field", "down": "Susunod na field", "left": "Bawasan", "right": "Dagdagan", "a": "I-reset ang lahat ng field", "b": "I-share ang resulta", "resetCaption": "I-RESET", "shareCaption": "I-SHARE"}
+    },
+    sw: {
+      sliders: {"brawl-stars": {"trophies": "Trophies", "maxed": "Brawlers wa Power Level 11"}, "clash-of-clans": {"th": "Kiwango cha Town Hall"}, "clash-royale": {"kt": "Kiwango cha King Tower", "maxed": "Kadi za kiwango cha juu"}, "free-fire": {"rank": "Rank", "bundles": "Bundles/pets adimu"}, "genshin-impact": {"fivestars": "Wahusika wa 5★", "c6": "Wahusika wa C6"}, "mobile-legends": {"skins": "Jumla ya skins", "rank": "Rank"}, "fortnite": {"skins": "Jumla ya skins", "ogItems": "Vitu adimu vya OG"}, "minecraft": {"type": "Aina ya akaunti"}, "roblox": {"age": "Umri wa akaunti", "robux": "Salio la Robux", "limiteds": "Vitu vya kawaida vya Limited (si vile adimu vyenye majina)"}},
+      select: {"clash-of-clans": {"label": "Aina ya maboresho", "options": [["full", "Full Max"], ["standard", "Kawaida"], ["rushed", "Rushed"]]}},
+      ageUnit: function (v) { return (v == 1 ? "mwaka " : "miaka ") + v; },
+      minecraftTypes: ["Akaunti ya kawaida", "MVP+/Hypixel, cape adimu", "Mmiliki wa cape ya Minecon", "Jina la herufi 2 (herufi+namba)"],
+      checkboxHeading: "Vitu adimu vyenye majina (si lazima):",
+      confidence: {"low": "Chini", "medium": "Wastani", "high": "Juu"},
+      confidencePrefix: "Uhakika: ",
+      copiedFallback: "Imenakiliwa!",
+      gamepad: {"up": "Sehemu iliyotangulia", "down": "Sehemu inayofuata", "left": "Punguza", "right": "Ongeza", "a": "Futa sehemu zote", "b": "Shiriki matokeo", "resetCaption": "FUTA", "shareCaption": "SHIRIKI"}
     }
   };
   var T = STR[LANG];

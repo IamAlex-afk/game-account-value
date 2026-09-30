@@ -416,5 +416,36 @@ T['tl'] = {'checked': 'Sinuri',
  'title': 'Presyo ng {game} account sa buong mundo',
  'your': 'Iyong merkado'}
 
+
+# sw (auto, finish_locale.py)
+LANGS.append('sw')
+LOCAL['sw'] = 'global'
+T['sw'] = {'checked': 'Imeangaliwa',
+ 'cols': ('Soko', 'Wapi', 'Bei zinazoombwa zilizoonekana', '≈ USD', 'Kinachothaminiwa zaidi huko'),
+ 'dem': {'cis': 'Akaunti zilizofikia kiwango cha juu kabisa: hypercharges zote, coins',
+         'cn': 'Mapambo: skins zilizostaafishwa na za nyota za unajimu, mbawa; rank ya Master; umri wa akaunti',
+         'global_': 'Trophies na idadi ya brawlers — matangazo ya bei ya juu zaidi hayataji skin yoyote adimu',
+         'jp': 'Rank ya Master, nafasi ya kitaifa, akaunti za mmiliki wa kwanza',
+         'kr': 'Nafasi ya kitaifa na hadhi; makusanyo makubwa sana ya skins',
+         'sea': 'Trophies na brawlers waliofikia kiwango cha juu; matangazo mengi, bei zinazoombwa zinashuka',
+         'tr': 'Idadi ya trophies, idadi ya mavazi, barua pepe inayoweza kuhamishwa / Supercell ID'},
+ 'intro': 'Bei zinazoombwa kwenye masoko ya wazi katika nchi tofauti, zote zimeangaliwa siku moja. Soko lako linakuja kwanza; mengine yanaonyesha wachezaji wa '
+          'maeneo mengine wanathamini nini zaidi.',
+ 'nav': '🌍 Dunia',
+ 'note': 'Bei zinazoombwa, si mauzo yaliyokamilika. Zimebadilishwa kuwa USD kwa viwango vya 25–27 Septemba 2026. Maelezo tu — si ushauri wa kununua au kuuza; '
+         'biashara ya akaunti inaweza kukiuka sheria za mchezo.',
+ 'nv': 'Bado haijathibitishwa — masoko makuu huko yanazuia ukaguzi wa kiotomatiki.',
+ 'others': 'Masoko mengine',
+ 'reg': {'br': 'Brazil',
+         'cis': 'Urusi na CIS',
+         'cn': 'China',
+         'global_': 'Tovuti za kimataifa / za Magharibi',
+         'jp': 'Japani',
+         'kr': 'Korea Kusini',
+         'sea': 'Kusini-Mashariki mwa Asia',
+         'tr': 'Uturuki'},
+ 'title': 'Bei za akaunti za {game} duniani kote',
+ 'your': 'Soko lako'}
+
 if __name__ == '__main__':
     apply(sys.argv[1] if len(sys.argv) > 1 else 'brawl-stars')

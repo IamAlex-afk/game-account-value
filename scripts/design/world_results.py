@@ -102,3 +102,9 @@ RL['tl'] = {'c': ('Torneo', 'Nanalo', 'Mula sa', 'Premyo ng nanalo', 'Prize pool
  'cis': 'Silangang Europa at Gitnang Asya',
  'h': 'Mga kamakailang kampeon',
  'latam': 'Latin America'}
+
+# sw
+RL['sw'] = {'c': ('Mashindano', 'Mshindi', 'Kutoka', 'Tuzo ya mshindi', 'Jumla ya zawadi'),
+ 'cis': 'Ulaya Mashariki na Asia ya Kati',
+ 'h': 'Mabingwa wa karibuni',
+ 'latam': 'Amerika ya Kusini'}

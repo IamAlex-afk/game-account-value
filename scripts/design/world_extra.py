@@ -261,3 +261,20 @@ X['tl'] = {'esp': 'Premyo sa esports ayon sa bansa',
  'top_c': ('Player', 'Bansa', 'Premyo'),
  'upd': 'na-update {d}',
  'yours': 'Iyong bansa'}
+
+# sw
+LANG_COUNTRY['sw'] = 'KE'
+X['sw'] = {'esp': 'Pesa za zawadi za esports kwa nchi',
+ 'esp_c': ('Nchi', 'Pesa za zawadi', 'Wachezaji'),
+ 'esp_i': 'Jumla ya pesa za zawadi zilizoshindwa na wachezaji kutoka kila nchi katika mashindano ya {game}.',
+ 'not_top': '{c} bado haimo kwenye 15 bora kwa pesa za zawadi.',
+ 'rec': 'mashindano yaliyorekodiwa {span}',
+ 'src': 'Chanzo: {s}',
+ 'st': 'Wanaotiririsha moja kwa moja wanaotazamwa zaidi sasa',
+ 'st_c': ('Chaneli', 'Lugha', 'Wastani wa watazamaji'),
+ 'st_i': 'Chaneli za Twitch zimepangwa kwa wastani wa watazamaji katika siku 30 zilizopita. Matangazo kwa lugha yako yanakuja kwanza.',
+ 'st_none': 'Hakuna matangazo kwa lugha yako kwenye 15 bora kwa sasa.',
+ 'top': 'Walioshinda zaidi duniani',
+ 'top_c': ('Mchezaji', 'Nchi', 'Pesa za zawadi'),
+ 'upd': 'imesasishwa {d}',
+ 'yours': 'Nchi yako'}

@@ -22,6 +22,7 @@ from segments import PAGES
 
 SITE = "https://gameaccountvalue.com/"
 KEYWORDS = {
+    "sw": "thamani ya akaunti ya roblox, thamani ya akaunti ya fortnite, thamani ya akaunti ya free fire, bei ya akaunti ya mchezo, tathmini ya AI, bot ya telegram",
     "tl": "halaga ng roblox account, halaga ng fortnite account, halaga ng mobile legends account, presyo ng game account, magkano ang account ko, AI appraisal, telegram bot",
     "tk": "roblox hasap bahasy, fortnite hasap bahasy, genshin impact hasap bahasy, clash of clans hasap bahasy, oýun hasabyny bahalandyrmak, AI bahalandyryş, ýygyndy bahasy, telegram bot",
     "ky": "roblox аккаунт баасы, fortnite аккаунт баасы, genshin impact аккаунт баасы, clash of clans аккаунт баасы, оюн аккаунтун баалоо, AI баалоо, жыйнактын баасы, telegram бот",
