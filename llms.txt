@@ -9,7 +9,7 @@ GameAccountValue accepts screenshots of game accounts, analyzes them with Google
 - A market value estimate (USD range, shown alongside the user's local currency)
 - A value tier badge (9-tier ladder: Wood / Iron / Bronze / Silver / Gold / Platinum / Emerald / Diamond / Whale, based on the dollar estimate) and an internal quality tier (Starter / Casual / Pro / Collector, based on item rarity)
 - Liquidity rating (how fast the account could realistically sell)
-- A procedurally generated PDF certificate with QR verification code, a sequential collector's certificate number, and clickable links to both the bot and the website
+- A procedurally generated PDF collector card with QR verification code: foil colour by value tier (matte WOOD to holographic WHALE), a sequential collection number from #1 (#1-100 GENESIS, #101-1000 FOUNDER editions), a 3D tilt video for paid audits, and clickable links to both the bot and the website. The number and edition are part of the checksummed card, so an edited PDF does not match the QR verification
 - A public Telegraph landing page for sharing
 
 Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 screenshot full audit with the PDF certificate, priced in Telegram Stars.

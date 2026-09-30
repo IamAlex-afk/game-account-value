@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="og/*.jpg" alt="GameAccountValue — AI-powered game account appraisal" width="500">
+  <img src="og/default.jpg" alt="GameAccountValue — AI-powered game account appraisal" width="500">
 </p>
 
 <h1 align="center">GameAccountValue</h1>
@@ -24,8 +24,8 @@ Landing page for **[@GameAccountValue_Bot](https://t.me/GameAccountValue_Bot)**,
 Supported games: Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, Mobile Legends, Fortnite, Minecraft.
 
 <p align="center">
-  <img src="certificate-sample.jpg" alt="Example GameAccountValue PDF certificate" width="480">
-  <br><em>Example certificate — sample data</em>
+  <img src="assets/cards/en/diamond.webp" alt="Example GameAccountValue collector card — DIAMOND tier" width="480">
+  <br><em>Collector card (DIAMOND foil) — sample data. 9 foil tiers; #1–100 GENESIS, #101–1000 FOUNDER</em>
 </p>
 
 ## What it's not
@@ -91,3 +91,7 @@ python -m http.server 8080
 ## License
 
 GPL-3.0 — see [LICENSE](LICENSE). © 2026 Aleksei Bitkin.
+
+## Working standard
+
+Every change follows [SITE-STANDARD.md](SITE-STANDARD.md): full translation in all 24 languages, one-command check (`python scripts/site_check.py` must report 0 errors), screenshots at 390/1280 px, push → GitHub Pages run success → live check, Lighthouse mobile ≥ 90.
