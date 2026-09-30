@@ -1,4 +1,5 @@
 """Social preview images (1200x630) in the Cyber-Glass style.
+Right side: the homepage cyborg (assets/cyborg.webp).
 Text is only the game name, the price range and the domain, so one image
 serves all languages. Usage: python scripts/design/make_og.py [game ...]
 Writes og/<game>.jpg via headless Chrome (fresh profile each run)."""
@@ -22,7 +23,7 @@ GAMES = {
     'fortnite': ('Fortnite', '#B98BFF', '#4DB0FF', '$10.90 – $6,200', ''),
     'minecraft': ('Minecraft', '#7BD34F', '#C0925E', '$0.50 – $632', ''),
     # site-wide image (homepages, resource pages)
-    'default': ('Game Account Value', '#22D3EE', '#A78BFA', '9 games', '17 languages'),
+    'default': ('Game Account Value', '#22D3EE', '#A78BFA', '9 games', '24 languages'),
 }
 
 TPL = '''<!doctype html><meta charset=utf-8><style>
@@ -42,7 +43,8 @@ h1 span{background:linear-gradient(90deg,%%A%%,%%B%%);-webkit-background-clip:te
 .price{max-width:690px;flex-wrap:wrap;display:flex;align-items:baseline;gap:22px;margin-top:18px}
 .price b{font-size:%%PB%%px;font-weight:900;color:%%A%%;text-shadow:0 0 34px color-mix(in srgb,%%A%% 50%,transparent);letter-spacing:-.02em}
 .price i{font-style:normal;font-size:34px;color:#cfd5e6;font-weight:700}
-.bot{position:absolute;right:56px;top:60px;width:320px;height:320px;filter:drop-shadow(0 0 40px color-mix(in srgb,%%B%% 55%,transparent))}.bot svg{width:100%;height:100%}
+.bot{position:absolute;right:0;bottom:0;height:440px;width:auto;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 98%);mask-image:linear-gradient(to bottom,#000 72%,transparent 98%);filter:drop-shadow(0 0 40px color-mix(in srgb,%%B%% 45%,transparent))}
+.age,.top,.foot span{position:relative;z-index:2}
 .foot{display:flex;align-items:center;justify-content:space-between;font-size:28px;font-weight:700}
 .bar{height:10px;border-radius:6px;background:linear-gradient(90deg,%%A%%,%%B%%);width:420px;box-shadow:0 0 24px color-mix(in srgb,%%B%% 60%,transparent)}
 </style>
@@ -50,7 +52,7 @@ h1 span{background:linear-gradient(90deg,%%A%%,%%B%%);-webkit-background-clip:te
 <div class=card>
  <div class=top><img src="%%EMBLEM%%">GameAccountValue<span class=age>18+</span></div>
  <div><h1><span>%%TITLE%%</span></h1><div class=price><b>%%PRICE%%</b>%%TOPEND%%</div></div>
- <div class=bot>%%BOT%%</div>
+ <img class=bot src="%%BOT%%">
  <div class=foot><div class=bar></div><span>gameaccountvalue.com</span></div>
 </div>'''
 
@@ -66,10 +68,8 @@ def render(game, out_dir):
     import emblem as em_mod
     em_mod.emblem(192).save(emblem)
     city = open(os.path.join(HERE, 'city.svg'), encoding='utf-8').read()
-    import importlib.util as iu
-    sp = iu.spec_from_file_location('br', os.path.join(HERE, 'brand_rollout.py')); br = iu.module_from_spec(sp); sp.loader.exec_module(br)
-    bot = open(os.path.join(HERE, 'bot.svg'), encoding='utf-8').read()
-    bot = bot.replace(br.ROBOT_LINE, br.ROBOT_EMBLEM.replace('{P}assets/emblem.webp', file_url(os.path.join(ROOT, 'assets', 'emblem.webp')))).replace(br.ROBOT_TEXT, br.ROBOT_TEXT_NEW)
+    # hero cyborg render (owner-supplied Gemini art, black keyed out) — same as the homepage
+    bot = file_url(os.path.join(ROOT, 'assets', 'cyborg.webp'))
     h1 = 96 if len(title) <= 12 else (78 if len(title) <= 15 else 72)
     pb = 80 if len(price) <= 11 else 66
     html = (TPL.replace('%%FONT%%', file_url(os.path.join(ROOT, 'assets', 'fonts', 'inter-latin.woff2')))
