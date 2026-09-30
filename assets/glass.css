@@ -1039,6 +1039,13 @@ h1 { view-transition-name: page-title; }
 @keyframes an-glitch { 0% { text-shadow: 3px 0 #FF2E88, -3px 0 #00F0FF; transform: translateX(2px); } 25% { text-shadow: -4px 0 #FF2E88, 4px 0 #00F0FF; transform: translateX(-3px) skewX(-4deg); }
   50% { text-shadow: 2px 0 #FF2E88, -2px 0 #00F0FF; } 100% { text-shadow: none; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .g-cyborg img, .g-cyborg .an-eye, .g-sit .an-wrap, .g-joystick.an-in, .g-18, .g-head h1 { animation: none !important; } }
+/* ---- latest-news block on game pages (news_pages.py) ---- */
+.g-fresh { max-width: 900px; margin: 18px auto; padding: 16px 18px; border: 1px solid rgba(34,211,238,.35); border-radius: 14px; background: rgba(34,211,238,.05); }
+.g-fresh h2 { font-size: 18px; margin: 0 0 8px; }
+.g-fresh a { color: inherit; }
+.g-fresh p { margin: 4px 0; font-size: 15px; }
+.g-fresh p a[href$="-news.html"] { color: #A5F3FC; }
+
 /* ---- card teasers: hero chip + mini card under every bot CTA (card_teaser.py) ---- */
 .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .hero-chips .hero-badge { margin-bottom: 0 !important; }
