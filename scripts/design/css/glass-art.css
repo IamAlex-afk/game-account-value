@@ -1,0 +1,51 @@
+/* Art pass (2026-09-30): raster cyborg characters from owner-supplied Gemini renders.
+   Hero cyborg with scanning beam + game icons, robot sitting on the result bar,
+   18+ girl above the footer notice, joystick above the final CTA. */
+.g-tool .g-robot.g-cyborg { width: 270px; --travel: -190px; }
+.g-cyborg { position: relative; filter: none; }
+.g-cyborg img { display: block; width: 100%; height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 96%); mask-image: linear-gradient(to bottom, #000 70%, transparent 96%); }
+.g-cyborg .cy-beam { position: absolute; right: 71%; top: 44.6%; width: 170px; height: 3px; border-radius: 3px;
+  background: linear-gradient(to left, #fff, #00F0FF 20%, rgba(0,240,255,0)); filter: drop-shadow(0 0 6px #00F0FF);
+  transform-origin: right center; animation: cy-beam 2.4s ease-in-out infinite; }
+.g-cyborg .cy-ico { position: absolute; right: 70.5%; top: calc(44.6% - 12px); width: 24px; height: 24px; border-radius: 6px;
+  display: grid; place-items: center; background: rgba(5,12,24,.9); border: 1px solid currentColor; box-shadow: 0 0 10px currentColor;
+  opacity: 0; animation: cy-fly 4.5s linear infinite; animation-delay: calc(var(--i) * -.5s); }
+.g-cyborg .cy-ico svg { width: 16px; height: 16px; }
+@keyframes cy-fly { 0% { transform: translate(0,0) scale(.2); opacity: 0; } 12% { opacity: 1; } 80% { opacity: .9; }
+  100% { transform: translate(var(--travel), var(--dy)) scale(1); opacity: 0; } }
+@keyframes cy-beam { 0%, 100% { opacity: .35; transform: scaleX(.6); } 50% { opacity: 1; transform: scaleX(1); } }
+
+.g-sit { position: relative; height: 0; z-index: 4; pointer-events: none; }
+.g-sit img { position: absolute; right: 6px; --w: 92px; width: var(--w); height: auto; top: calc(var(--w) * -1.30 - 8px);
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.55)); }
+.g-sit img.blink { animation: sit-blink .6s ease; }
+@keyframes sit-blink { 0% { filter: drop-shadow(0 0 0 #00F0FF); } 40% { filter: drop-shadow(0 0 18px #00F0FF); } 100% { filter: drop-shadow(0 6px 14px rgba(0,0,0,.55)); } }
+.value-calc .vc-meta { padding-right: 100px; }
+
+.g-18 { display: block; width: 190px; height: auto; margin: 0 auto -34px; position: relative; z-index: 1;
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent); mask-image: linear-gradient(to bottom, #000 82%, transparent);
+  filter: drop-shadow(0 10px 30px rgba(255,46,136,.22)); }
+.g-joystick { display: block; width: 220px; height: auto; margin: 0 auto 18px; filter: drop-shadow(0 10px 30px rgba(0,240,255,.18)); }
+
+@media (max-width: 860px) {
+  .g-tool .g-robot.g-cyborg { width: 160px; --travel: -110px; }
+  .g-cyborg .cy-beam { width: 100px; }
+}
+@media (max-width: 560px) {
+  .g-head { grid-template-columns: 1fr 120px; }
+  .g-tool .g-robot.g-cyborg { width: 120px; --travel: -44px; }
+  .g-cyborg .cy-beam { width: 60px; }
+  .g-cyborg .cy-ico { width: 16px; height: 16px; top: calc(44.6% - 8px); border-radius: 4px; }
+  .g-cyborg .cy-ico svg { width: 11px; height: 11px; }
+  .g-sit img { --w: 70px; right: 2px; }
+  .value-calc .vc-meta { padding-right: 74px; }
+  .g-18 { width: 150px; margin-bottom: -26px; }
+  .g-joystick { width: 170px; }
+  /* header: language + bot button fill the second row instead of hugging the left */
+  nav .nav-right { flex: 1 1 100%; flex-wrap: nowrap; gap: 10px; }
+  nav .nav-right .lang-selector { flex: 0 0 auto; }
+  nav .nav-right .nav-cta { flex: 1 1 auto; justify-content: center; text-align: center; }
+  nav > .nav-cta { flex: 1 1 100%; justify-content: center; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) { .g-cyborg .cy-ico, .g-cyborg .cy-beam, .g-sit img.blink { animation: none; } }
