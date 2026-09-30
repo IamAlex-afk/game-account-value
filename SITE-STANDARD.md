@@ -44,8 +44,8 @@ canonical to itself · hreflang to all existing translations · valid JSON-LD ·
   user understands); English stays the reference version.
 
 ## Plan (2026-09-30 → in order; tick when pushed)
-- [ ] 1. This standard + `scripts/site_check.py`; README/llms.txt fixed (broken og image, cards)
-- [ ] 2. privacy + terms in 23 languages (+ hreflang, sitemap, menu)
+- [x] 1. This standard + `scripts/site_check.py`; README/llms.txt fixed (broken og image, cards)
+- [x] 2. privacy + terms in 23 languages (+ hreflang, sitemap, menu)
 - [ ] 3. about page in 24 languages (E-E-A-T)
 - [ ] 4. News: refresh from official publisher sources → one article per real fact, NewsArticle LD;
       news hub + articles in 24 languages
