@@ -1,7 +1,7 @@
 {
   "name": "GameAccountValue",
   "short_name": "GAV",
-  "description": "AI-powered estimate of what your game account is worth. Send screenshots, get a price range and a PDF certificate.",
+  "description": "AI-powered estimate of what your game account is worth. Send screenshots, get a price range and a numbered PDF collector card. 24 languages.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
