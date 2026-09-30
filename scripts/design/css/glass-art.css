@@ -29,7 +29,7 @@
 .g-joystick { display: block; width: 220px; height: auto; margin: 0 auto 18px; filter: drop-shadow(0 10px 30px rgba(0,240,255,.18)); }
 
 @media (max-width: 860px) {
-  .g-tool .g-robot.g-cyborg { width: 160px; --travel: -110px; }
+  .g-tool .g-robot.g-cyborg { width: 160px; --travel: -64px; }
   .g-cyborg .cy-beam { width: 100px; }
 }
 @media (max-width: 560px) {
@@ -64,4 +64,8 @@
 }
 /* start the flying icons only after the page has loaded (keeps first paint light on phones) */
 html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
+@media (max-width: 360px) {
+  .g-head { grid-template-columns: 1fr 100px; }
+  .g-tool .g-robot.g-cyborg { width: 100px; --travel: -36px; }
+}
 @media (prefers-reduced-motion: reduce) { .g-cyborg .cy-ico, .g-cyborg .cy-beam, .g-sit img.blink { animation: none; } }
