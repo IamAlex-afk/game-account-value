@@ -354,5 +354,36 @@ T['ky'] = {'checked': 'Текшерилди',
  'title': 'Дүйнө боюнча {game} аккаунт баалары',
  'your': 'Сиздин рыногуңуз'}
 
+
+# tk (auto, finish_locale.py)
+LANGS.append('tk')
+LOCAL['tk'] = 'cis'
+T['tk'] = {'checked': 'Barlandy',
+ 'cols': ('Bazar', 'Nirede', 'Görlen soralan bahalar', '≈ USD', 'Ol ýerde iň gymmatlysy'),
+ 'dem': {'cis': 'Doly iň ýokary hasaplar: ähli giperzarýadlar, teňňeler',
+         'cn': 'Kosmetika: satuwdan aýrylan we zodiak skinleri, ganatlar; Master rangy; hasabyň ýaşy',
+         'global_': 'Kuboklar we brawlerleriň sany — iň gymmat bildirişlerde hiç bir seýrek skin agzalmaýar',
+         'jp': 'Master rangy, ýurt reýtingi, ilkinji eýeden hasaplar',
+         'kr': 'Ýurt reýtingi we abraý; örän uly skin ýygyndylary',
+         'sea': 'Kuboklar we iň ýokary brawlerler; bildirişler köp, soralan bahalar peselýär',
+         'tr': 'Kubok sany, kostýum sany, geçirilýän email / Supercell ID'},
+ 'intro': 'Dürli ýurtlardaky açyk söwda meýdançalarynda soralan bahalar, hemmesi bir günde barlandy. Ilki siziň bazaryňyz; galanlary beýleki ýerlerdäki '
+          'oýunçylaryň nämä has köp baha berýändigini görkezýär.',
+ 'nav': '🌍 Dünýä',
+ 'note': 'Soralan bahalar, tamamlanan söwdalar däl. 2026-njy ýylyň 25–27-nji sentýabryndaky kurs boýunça USD-ä öwrüldi. Diňe beýan — satyn almak ýa-da satmak '
+         'boýunça maslahat däl; hasap söwdasy oýun düzgünlerini bozup biler.',
+ 'nv': 'Entek barlanmady — ol ýerdäki esasy meýdançalar awtomatik barlagy petikleýär.',
+ 'others': 'Beýleki bazarlar',
+ 'reg': {'br': 'Braziliýa',
+         'cis': 'Russiýa we GDA',
+         'cn': 'Hytaý',
+         'global_': 'Global / Günbatar saýtlary',
+         'jp': 'Ýaponiýa',
+         'kr': 'Günorta Koreýa',
+         'sea': 'Günorta-Gündogar Aziýa',
+         'tr': 'Türkiye'},
+ 'title': 'Dünýä boýunça {game} hasap bahalary',
+ 'your': 'Siziň bazaryňyz'}
+
 if __name__ == '__main__':
     apply(sys.argv[1] if len(sys.argv) > 1 else 'brawl-stars')

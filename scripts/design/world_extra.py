@@ -227,3 +227,20 @@ X['ky'] = {'esp': 'Өлкөлөр боюнча киберспорт сыйлык
  'top_c': ('Оюнчу', 'Өлкө', 'Сыйлык акчасы'),
  'upd': '{d} жаңыртылды',
  'yours': 'Сиздин өлкөңүз'}
+
+# tk
+LANG_COUNTRY['tk'] = 'TM'
+X['tk'] = {'esp': 'Ýurtlar boýunça kibersport baýrak pullary',
+ 'esp_c': ('Ýurt', 'Baýrak puly', 'Oýunçylar'),
+ 'esp_i': '{game} ýaryşlarynda her ýurduň oýunçylarynyň gazanan jemi baýrak puly.',
+ 'not_top': '{c} baýrak puly boýunça entek top-15-e girmedi.',
+ 'rec': '{span} aralygynda hasaba alnan ýaryşlar',
+ 'src': 'Çeşme: {s}',
+ 'st': 'Häzir iň köp tomaşa edilýän strimçiler',
+ 'st_c': ('Kanal', 'Dil', 'Ort. tomaşaçy'),
+ 'st_i': 'Soňky 30 günüň ortaça tomaşaçylary boýunça tertiplenen Twitch kanallary. Siziň diliňizdäki strimler ilki görkezilýär.',
+ 'st_none': 'Häzir top-15-de siziň diliňizdäki strim ýok.',
+ 'top': 'Dünýäde iň köp gazananlar',
+ 'top_c': ('Oýunçy', 'Ýurt', 'Baýrak puly'),
+ 'upd': '{d} täzelendi',
+ 'yours': 'Siziň ýurduňyz'}

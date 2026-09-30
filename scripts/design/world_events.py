@@ -202,3 +202,14 @@ L['ky'] = {'anniv': 'чыкканына {n} жыл',
  's': {'fact': 'Дата фактысы', 'ok': 'Тастыкталган', 'tba': 'Жарыяланган · датасы TBA'},
  'src': 'Булак',
  'tba': 'TBA'}
+
+# tk
+L['tk'] = {'anniv': 'çykanyna {n} ýyl',
+ 'c': {'days': '{n} günden soň', 'done': 'Tamamlandy', 'live': 'Häzir efirde', 'month': 'Şu aý', 'tomorrow': 'Ertir'},
+ 'h': 'Ýakynlaşýan resmi çäreler',
+ 'i': 'Neşirçileriň özleriniň yglan eden ýaryşlary we çäreleri. Entek yglan edilmedik seneler TBA diýip bellenýär. Ters hasap brauzeriňizde hasaplanýar.',
+ 'k': {'anniv': 'Ýubileý', 'esports': 'Kibersport', 'ingame': 'Oýun içindäki çäre'},
+ 'online': 'Onlaýn',
+ 's': {'fact': 'Sene maglumaty', 'ok': 'Tassyklandy', 'tba': 'Yglan edildi · senesi TBA'},
+ 'src': 'Çeşme',
+ 'tba': 'TBA'}

@@ -90,3 +90,9 @@ RL['ky'] = {'c': ('Турнир', 'Жеңүүчү', 'Кайдан', 'Жеңүү�
  'cis': 'Чыгыш Европа жана Борбордук Азия',
  'h': 'Акыркы чемпиондор',
  'latam': 'Латын Америкасы'}
+
+# tk
+RL['tk'] = {'c': ('Ýaryş', 'Ýeňiji', 'Nireden', 'Ýeňijiniň baýragy', 'Baýrak gazna'),
+ 'cis': 'Gündogar Ýewropa we Merkezi Aziýa',
+ 'h': 'Soňky çempionlar',
+ 'latam': 'Latyn Amerikasy'}

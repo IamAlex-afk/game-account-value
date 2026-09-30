@@ -110,3 +110,5 @@ in search (301 migration, normal lag).
 - Sitemap 319. Remaining thin: ky, tk, tl, sw.
 
 - ky full locale (2026-09-30, "сиз", CIS, KG); sitemap 332. Remaining thin: tk, tl, sw.
+
+- tk full locale (2026-09-30, "siz", CIS, TM); sitemap 345. Remaining thin: tl, sw.
