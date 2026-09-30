@@ -168,3 +168,14 @@ L['ms'] = {'anniv': '{n} tahun sejak pelancaran',
  's': {'fact': 'Fakta tarikh', 'ok': 'Disahkan', 'tba': 'Diumumkan · tarikh TBA'},
  'src': 'Sumber',
  'tba': 'TBA'}
+
+# Uzbek (2026-09-30)
+L['uz'] = {'anniv': 'chiqqaniga {n} yil',
+ 'c': {'days': '{n} kundan keyin', 'done': 'Yakunlangan', 'live': 'Hozir efirda', 'month': 'Shu oy', 'tomorrow': 'Ertaga'},
+ 'h': 'Yaqinlashayotgan rasmiy tadbirlar',
+ 'i': 'Noshirlarning oʻzlari eʼlon qilgan turnirlar va tadbirlar. Hali eʼlon qilinmagan sanalar TBA deb belgilangan. Teskari sanoq brauzeringizda hisoblanadi.',
+ 'k': {'anniv': 'Yubiley', 'esports': 'Kibersport', 'ingame': 'Oʻyin ichidagi tadbir'},
+ 'online': 'Onlayn',
+ 's': {'fact': 'Sana fakti', 'ok': 'Tasdiqlangan', 'tba': 'Eʼlon qilingan · sana TBA'},
+ 'src': 'Manba',
+ 'tba': 'TBA'}

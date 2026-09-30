@@ -95,3 +95,10 @@ in search (301 migration, normal lag).
 - segments.py fix: text right after an <svg> icon was left untranslated (e.g. "Get Exact Estimate via Bot").
 - Checks: audit clean, 32 JSON-LD blocks parse, 0 English leftovers, 390px screenshots index/roblox OK.
 - Next locale per PLAN.md: uz (base: Russian pages per plan, or EN with from_en.py).
+
+## 2026-09-30 Uzbek (uz) full locale
+- Same recipe as ms (base EN, 1,565 segments, "siz" register, official Latin oʻ/gʻ with U+02BB; CLDR
+  names/dates normalised to ʻ). World section: market CIS first, country Uzbekistan (UZ added to names).
+- hreflang uz on 13 pages × 19 locales; sitemap 306. Checks: audit clean, 32 JSON-LD OK, 0 English leftovers,
+  390px screenshots OK. ms event JSON-LD back to generator's compact form (content unchanged).
+- Next: kk, ky, tk, tl, sw (PLAN.md).

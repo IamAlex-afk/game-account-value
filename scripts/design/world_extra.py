@@ -176,3 +176,20 @@ X['ms'] = {'esp': 'Wang hadiah e-sukan mengikut negara',
  'top_c': ('Pemain', 'Negara', 'Wang hadiah'),
  'upd': 'dikemas kini {d}',
  'yours': 'Negara anda'}
+
+# Uzbek (2026-09-30)
+LANG_COUNTRY['uz'] = 'UZ'
+X['uz'] = {'esp': 'Mamlakatlar boʻyicha kibersport mukofot pullari',
+ 'esp_c': ('Mamlakat', 'Mukofot puli', 'Oʻyinchilar'),
+ 'esp_i': '{game} turnirlarida har bir mamlakat oʻyinchilari yutgan jami mukofot pullari.',
+ 'not_top': '{c} hali mukofot pullari boʻyicha top-15 ga kirmagan.',
+ 'rec': '{span} davrida qayd etilgan turnirlar',
+ 'src': 'Manba: {s}',
+ 'st': 'Hozir eng koʻp tomosha qilinayotgan striminglar',
+ 'st_c': ('Kanal', 'Til', 'Oʻrt. tomoshabin'),
+ 'st_i': 'Oxirgi 30 kundagi oʻrtacha tomoshabinlar boʻyicha saralangan Twitch kanallari. Sizning tilingizdagi striminglar birinchi koʻrsatiladi.',
+ 'st_none': 'Hozir top-15 da sizning tilingizdagi strim yoʻq.',
+ 'top': 'Dunyodagi eng koʻp yutganlar',
+ 'top_c': ('Oʻyinchi', 'Mamlakat', 'Mukofot puli'),
+ 'upd': '{d} da yangilangan',
+ 'yours': 'Sizning mamlakatingiz'}

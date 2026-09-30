@@ -72,3 +72,9 @@ RL['ms'] = {'c': ('Kejohanan', 'Pemenang', 'Dari', 'Hadiah pemenang', 'Kumpulan 
  'cis': 'Eropah Timur & Asia Tengah',
  'h': 'Juara terkini',
  'latam': 'Amerika Latin'}
+
+# Uzbek (2026-09-30)
+RL['uz'] = {'c': ('Turnir', 'Gʻolib', 'Qayerdan', 'Gʻolib mukofoti', 'Mukofot jamgʻarmasi'),
+ 'cis': 'Sharqiy Yevropa va Markaziy Osiyo',
+ 'h': 'Soʻnggi chempionlar',
+ 'latam': 'Lotin Amerikasi'}

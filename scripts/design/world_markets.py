@@ -261,5 +261,36 @@ T['ms'] = {'checked': 'Disemak',
  'title': 'Harga akaun {game} di seluruh dunia',
  'your': 'Pasaran anda'}
 
+
+# Uzbek (2026-09-30): strings from scripts/i18n/uz/done.json
+LANGS.append('uz')
+LOCAL['uz'] = 'cis'
+T['uz'] = {'checked': 'Tekshirilgan',
+ 'cols': ('Bozor', 'Qayerda', 'Koʻrilgan soʻralgan narxlar', '≈ USD', 'U yerda eng qadrlanadigani'),
+ 'dem': {'cis': 'Toʻliq maksimal akkauntlar: barcha hypercharge lar, tangalar',
+         'cn': 'Kosmetika: sotuvdan olingan va zodiak skinlari, qanotlar; Master rank; akkaunt yoshi',
+         'global_': 'Kuboklar va brawlerlar soni — eng qimmat eʼlonlarda birorta noyob skin tilga olinmaydi',
+         'jp': 'Master rank, mamlakat reytingi, birinchi egadan akkauntlar',
+         'kr': 'Mamlakat reytingi va obroʻ; juda katta skin kolleksiyalari',
+         'sea': 'Kuboklar va maksimal brawlerlar; eʼlonlar koʻp, soʻralgan narxlar pasaymoqda',
+         'tr': 'Kuboklar soni, kostyumlar soni, oʻtkaziladigan email / Supercell ID'},
+ 'intro': 'Turli mamlakatlardagi ochiq savdo maydonchalarida soʻralgan narxlar, barchasi bir kunda tekshirilgan. Avval sizning bozoringiz; qolganlari boshqa '
+          'joylardagi oʻyinchilar nimani koʻproq qadrlashini koʻrsatadi.',
+ 'nav': '🌍 Dunyo',
+ 'note': 'Soʻralgan narxlar, yakunlangan savdolar emas. 2026-yil 25–27-sentyabr kurslari boʻyicha USD ga oʻtkazilgan. Faqat tavsif — sotib olish yoki sotish '
+         'boʻyicha maslahat emas; akkaunt savdosi oʻyin qoidalarini buzishi mumkin.',
+ 'nv': 'Hali tekshirilmagan — u yerdagi asosiy maydonchalar avtomatik tekshiruvni bloklaydi.',
+ 'others': 'Boshqa bozorlar',
+ 'reg': {'br': 'Braziliya',
+         'cis': 'Rossiya va MDH',
+         'cn': 'Xitoy',
+         'global_': 'Global / Gʻarb saytlari',
+         'jp': 'Yaponiya',
+         'kr': 'Janubiy Koreya',
+         'sea': 'Janubi-Sharqiy Osiyo',
+         'tr': 'Türkiye'},
+ 'title': 'Dunyo boʻylab {game} akkaunt narxlari',
+ 'your': 'Sizning bozoringiz'}
+
 if __name__ == '__main__':
     apply(sys.argv[1] if len(sys.argv) > 1 else 'brawl-stars')

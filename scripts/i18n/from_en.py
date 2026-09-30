@@ -24,6 +24,8 @@ SITE = "https://gameaccountvalue.com/"
 KEYWORDS = {
     "ms": "nilai akaun roblox, harga akaun fortnite, nilai akaun genshin impact, nilai akaun clash of clans, "
           "penilaian akaun permainan, penilaian AI, nilai koleksi, bot telegram",
+    "uz": "roblox akkaunt narxi, fortnite akkaunt qiymati, genshin impact akkaunt narxi, clash of clans akkaunt qiymati, "
+          "oʻyin akkauntini baholash, AI baholash, kolleksiya qiymati, telegram bot",
 }
 
 
