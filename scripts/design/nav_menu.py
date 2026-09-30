@@ -94,7 +94,7 @@ def build(lang, slug, logo, cta):
             f'  </div>\n'
             f'  <div class="nav-right">\n'
             f'    <div class="lang-selector">\n'
-            f'      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="{sel}">🌐 {lang.upper()} <span class="lang-arrow">▾</span></button>\n'
+            f'      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="{lang.upper()} — {sel}">🌐 {lang.upper()} <span class="lang-arrow">▾</span></button>\n'
             f'      <div class="lang-dropdown" id="lang-menu" role="menu">{langs}\n      </div>\n    </div>\n'
             f'    {cta}\n  </div>\n</nav>')
 
