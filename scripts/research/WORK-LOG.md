@@ -112,3 +112,18 @@ in search (301 migration, normal lag).
 - ky full locale (2026-09-30, "сиз", CIS, KG); sitemap 332. Remaining thin: tk, tl, sw.
 
 - tk full locale (2026-09-30, "siz", CIS, TM); sitemap 345. Remaining thin: tl, sw.
+
+## 2026-09-30 (evening) — art, navigation, collection cards
+Pushed: tl+sw locales (all 24 bot langs full); raster cyborg hero + visual pack (rays, cables, holo cards,
+view transitions, slot roll, scroll reveal) + robot animations; og share cards (logo-first, calc robot, ?v=3,
+baseline JPEG); mobile perf (srcset, no rain/backdrop blur on phones, SW shell-only precache, network-first
+CSS/JS); site-wide menu (Games/Guides/News) + same-page language switcher (nav_menu.py); news.html hub;
+homepage "Everything on the site" hub (home_hub.py); methodology plain headings, FAQPage LD dropped;
+card collection carousel on 24 homepages (card_collection.py, 11 cards x 24 langs from the bot drawer);
+CTA hierarchy (bot = primary); consistency.py (18+ card, joystick, market-report crumbs/CTA, 404/legal header).
+Bot f7fe786: collection numbering from #1 (card_seq), GENESIS 1-100 / FOUNDER 101-1000, tier foil, tilt video.
+OPEN: owner runs `bash /opt/gavbot/app/deploy/install.sh`; news are Sept-21 and EN-only (next: official-source
+news articles, 24 langs, NewsArticle LD); NO automated scraping (Eldorado ToS 3.1 forbids); Eldorado affiliate
+application + data-access letter (owner decision); founders /gift + public card counter + rules page; footer
+section links + "fresh for this game" block; PageSpeed (Google API quota hit 09-30) re-check; WhatsApp preview
+test by owner; optional PDF digital signature; GitHub repo research for ideas.
