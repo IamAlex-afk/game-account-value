@@ -103,7 +103,7 @@ def main():
     n = 0
     for f in glob.glob(ROOT + '**/*.html', recursive=True):
         rp = os.path.relpath(f, ROOT).replace(os.sep, '/')
-        if rp.startswith(('scripts/', '_', 'node_modules/', 'google')) or rp in ('404.html',):
+        if rp.startswith(('scripts/', '_', 'node_modules/', 'google')):
             continue
         parts = rp.split('/')
         lang = parts[0] if len(parts) == 2 else 'en'

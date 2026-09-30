@@ -11,24 +11,90 @@
 <style>
 :root{--bg:#0A0C14;--accent:#D4AF37;--text:#E0E0E0;--dim:#8a8a8a}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
-.code{font-size:6rem;font-weight:800;color:var(--accent);font-family:monospace;margin-bottom:1rem}
-h1{font-size:1.4rem;margin-bottom:.75rem}
-p{color:var(--dim);margin-bottom:2rem;font-size:.95rem;line-height:1.6}
-a{display:inline-block;background:var(--accent);color:#0A0C14;padding:.75rem 2rem;border-radius:3rem;font-weight:700;text-decoration:none}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.e404{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
+.e404 .code{font-size:6rem;font-weight:800;color:var(--accent);font-family:monospace;margin-bottom:1rem}
+.e404 h1{font-size:1.4rem;margin-bottom:.75rem}
+.e404 p{color:var(--dim);margin-bottom:2rem;font-size:.95rem;line-height:1.6}
+.e404 a{display:inline-block;background:var(--accent);color:#0A0C14;padding:.75rem 2rem;border-radius:3rem;font-weight:700;text-decoration:none}
 </style>
-<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./assets/glass.css">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/glass.css">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 </head>
 <body>
-<div>
+<nav>
+  <a href="/" class="logo">GameAccountValue</a>
+  <div class="nav-menu">
+    <div class="lang-selector nav-dd">
+      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-games">Games <span class="lang-arrow">▾</span></button>
+      <div class="lang-dropdown" id="nav-games" role="menu">
+        <a href="/roblox.html">Roblox</a>
+        <a href="/brawl-stars.html">Brawl Stars</a>
+        <a href="/clash-of-clans.html">Clash of Clans</a>
+        <a href="/clash-royale.html">Clash Royale</a>
+        <a href="/free-fire.html">Free Fire</a>
+        <a href="/genshin-impact.html">Genshin Impact</a>
+        <a href="/mobile-legends.html">Mobile Legends</a>
+        <a href="/fortnite.html">Fortnite</a>
+        <a href="/minecraft.html">Minecraft</a>
+      </div>
+    </div>
+    <div class="lang-selector nav-dd">
+      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-guides">Guides <span class="lang-arrow">▾</span></button>
+      <div class="lang-dropdown" id="nav-guides" role="menu">
+        <a href="/market-report.html">📊 Market report</a>
+        <a href="/which-game-accounts-are-most-valuable.html">⚖️ Compare All Games</a>
+        <a href="/account-trading-safety.html">🛡️ Scam &amp; Safety Guide</a>
+        <a href="/glossary.html">📖 Terms Glossary</a>
+        <a href="/methodology.html">🔬 Our Methodology</a>
+      </div>
+    </div>
+    <a class="nav-news" href="https://gameaccountvalue.com/news.html">📰 News</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-selector">
+      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Select language">🌐 EN <span class="lang-arrow">▾</span></button>
+      <div class="lang-dropdown" id="lang-menu" role="menu">
+        <a href="https://gameaccountvalue.com/404.html" class="lang-current" hreflang="en">🇺🇸 English</a>
+        <a href="https://gameaccountvalue.com/ru/" hreflang="ru">🇷🇺 Русский</a>
+        <a href="https://gameaccountvalue.com/es/" hreflang="es">🇪🇸 Español</a>
+        <a href="https://gameaccountvalue.com/pt/" hreflang="pt">🇧🇷 Português</a>
+        <a href="https://gameaccountvalue.com/id/" hreflang="id">🇮🇩 Indonesia</a>
+        <a href="https://gameaccountvalue.com/tr/" hreflang="tr">🇹🇷 Türkçe</a>
+        <a href="https://gameaccountvalue.com/ar/" hreflang="ar">🇸🇦 العربية</a>
+        <a href="https://gameaccountvalue.com/vi/" hreflang="vi">🇻🇳 Tiếng Việt</a>
+        <a href="https://gameaccountvalue.com/hi/" hreflang="hi">🇮🇳 हिन्दी</a>
+        <a href="https://gameaccountvalue.com/fr/" hreflang="fr">🇫🇷 Français</a>
+        <a href="https://gameaccountvalue.com/de/" hreflang="de">🇩🇪 Deutsch</a>
+        <a href="https://gameaccountvalue.com/it/" hreflang="it">🇮🇹 Italiano</a>
+        <a href="https://gameaccountvalue.com/ja/" hreflang="ja">🇯🇵 日本語</a>
+        <a href="https://gameaccountvalue.com/ko/" hreflang="ko">🇰🇷 한국어</a>
+        <a href="https://gameaccountvalue.com/th/" hreflang="th">🇹🇭 ภาษาไทย</a>
+        <a href="https://gameaccountvalue.com/pl/" hreflang="pl">🇵🇱 Polski</a>
+        <a href="https://gameaccountvalue.com/zh/" hreflang="zh">🇨🇳 中文</a>
+        <a href="https://gameaccountvalue.com/tl/" hreflang="tl">🇵🇭 Filipino</a>
+        <a href="https://gameaccountvalue.com/sw/" hreflang="sw">🇰🇪 Kiswahili</a>
+        <a href="https://gameaccountvalue.com/ms/" hreflang="ms">🇲🇾 Bahasa Melayu</a>
+        <a href="https://gameaccountvalue.com/uz/" hreflang="uz">🇺🇿 O'zbekcha</a>
+        <a href="https://gameaccountvalue.com/kk/" hreflang="kk">🇰🇿 Қазақша</a>
+        <a href="https://gameaccountvalue.com/tk/" hreflang="tk">🇹🇲 Türkmençe</a>
+        <a href="https://gameaccountvalue.com/ky/" hreflang="ky">🇰🇬 Кыргызча</a>
+      </div>
+    </div>
+    <a href="https://t.me/GameAccountValue_Bot?start=landing_home&utm_source=website&utm_medium=landing&utm_campaign=404" aria-label="Open Bot" class="nav-cta" data-event="cta_to_bot" rel="noopener noreferrer">🤖 Open Bot</a>
+  </div>
+</nav>
+
+<div class="e404">
 <div class="code">404</div>
 <h1>Page not found</h1>
 <p>The valuation tool lives in the Telegram bot, not on this page.</p>
 <a href="/">← Back to GameAccountValue</a>
 </div>
 <script defer src="/assets/analytics-placeholder.js"></script>
+<script type="module" src="/assets/nav.js" defer></script>
 </body>
 </html>
