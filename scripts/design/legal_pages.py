@@ -12,8 +12,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://gameaccountvalue.com/'
 LANGS = ['en', 'ru', 'es', 'pt', 'id', 'tr', 'ar', 'vi', 'hi', 'fr', 'de', 'it', 'ja', 'ko', 'th', 'pl', 'zh', 'tl', 'sw', 'ms', 'uz', 'kk', 'tk', 'ky']
 TEXT = {}
-for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'legal_text_*.py'))):
-    TEXT.update(importlib.import_module(os.path.basename(f)[:-3]).TEXT)
+for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), '*_text_*.py'))):
+    for _L, _v in importlib.import_module(os.path.basename(f)[:-3]).TEXT.items():
+        TEXT.setdefault(_L, {}).update(_v)
+SLUGS = ('privacy', 'terms', 'about')
+PERSON = {'@type': 'Person', 'name': 'Aleksei Bitkin', 'url': 'https://github.com/IamAlex-afk',
+          'sameAs': ['https://orcid.org/0009-0002-7986-3812', 'https://github.com/IamAlex-afk',
+                     'https://iamalex-afk.github.io/human-os-patch-33-protocols/']}
 
 CSS = ('<style>.legal { max-width: 760px; margin: 0 auto; padding: 0 24px 48px; }'
        '.legal h2 { font-size: 21px; margin: 32px 0 10px; }'
@@ -49,13 +54,13 @@ def build(lang, slug):
         s = re.sub(pat, lambda m, v=val: v, s, count=1)
     s = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">\n?', '', s)
     alts = f'<link rel="alternate" hreflang="x-default" href="{url("en", slug)}">\n' + ''.join(
-        f'<link rel="alternate" hreflang="{L}" href="{url(L, slug)}">\n' for L in LANGS if L in TEXT)
+        f'<link rel="alternate" hreflang="{L}" href="{url(L, slug)}">\n' for L in LANGS if slug in TEXT.get(L, {}))
     s = s.replace(f'<link rel="canonical" href="{me}">', f'<link rel="canonical" href="{me}">\n' + alts.rstrip('\n'), 1)
     home_name = strip(re.search(r'<nav class="crumbs"[^>]*><ol><li><a href="\./">(.*?)</a>', s, re.S).group(1)).strip()
     ld = {'@context': 'https://schema.org', '@graph': [
-        {'@type': 'WebPage', '@id': me, 'url': me, 'name': P['title'], 'description': P['desc'], 'inLanguage': lang,
-         'dateModified': '2026-09-30', 'isPartOf': {'@type': 'WebSite', 'name': 'GameAccountValue', 'url': SITE},
-         'publisher': {'@type': 'Person', 'name': 'Aleksei Bitkin'}},
+        {'@type': 'AboutPage' if slug == 'about' else 'WebPage', '@id': me, 'url': me, 'name': P['title'], 'description': P['desc'], 'inLanguage': lang,
+         'dateModified': '2026-10-01' if slug == 'about' else '2026-09-30', 'isPartOf': {'@type': 'WebSite', 'name': 'GameAccountValue', 'url': SITE},
+         'publisher': PERSON, **({'mainEntity': PERSON} if slug == 'about' else {})},
         {'@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': home_name, 'item': SITE + ('' if lang == 'en' else lang + '/')},
             {'@type': 'ListItem', 'position': 2, 'name': P['title'], 'item': me}]}]}
@@ -64,25 +69,39 @@ def build(lang, slug):
     s = re.sub(r'(<nav class="crumbs"[^>]*><ol>.*?<li aria-current="page">)[^<]*(</li>)', lambda m: m.group(1) + P['title'] + m.group(2), s, count=1, flags=re.S)
     body = ''.join(f'<h2>{h}</h2>\n{b}\n' for h, b in P['sec'])
     main = (f'<main>\n<section class="report-hero" id="main-content">\n  <h1>{P["h1"]}</h1>\n'
-            f'  <p style="color:var(--muted); font-size:16px;">{P["lead"]}</p>\n  <p class="report-updated">{T["updated"]}</p>\n</section>\n'
-            f'<div class="legal">\n{body}<p class="legal-ref">{T["ref"]}</p>\n</div>\n</main>')
+            f'  <p style="color:var(--muted); font-size:16px;">{P["lead"]}</p>\n'
+            + (f'  <p class="report-updated">{T["updated"]}</p>\n' if slug != 'about' else '') + '</section>\n'
+            f'<div class="legal">\n{body}' + (f'<p class="legal-ref">{T["ref"]}</p>\n' if slug != 'about' else '') + '</div>\n</main>')
     s = re.sub(r'<main>.*?</main>', lambda m: main, s, count=1, flags=re.S)
     s = s.replace('utm_campaign=glossary', f'utm_campaign={slug}')
     out = ROOT + ('' if lang == 'en' else lang + '/') + slug + '.html'
     open(out, 'w', encoding='utf-8', newline='').write(s)
 
 
+ABOUT = {'en': 'About', 'ru': 'О проекте', 'es': 'Sobre el proyecto', 'pt': 'Sobre o projeto', 'id': 'Tentang', 'tr': 'Hakkında',
+         'ar': 'من نحن', 'vi': 'Giới thiệu', 'hi': 'हमारे बारे में', 'fr': 'À propos', 'de': 'Über uns', 'it': 'Chi siamo',
+         'ja': '運営者情報', 'ko': '소개', 'zh': '关于我们', 'th': 'เกี่ยวกับเรา', 'pl': 'O projekcie', 'tl': 'Tungkol sa amin',
+         'sw': 'Kutuhusu', 'ms': 'Tentang kami', 'uz': 'Loyiha haqida', 'kk': 'Жоба туралы', 'tk': 'Taslama barada', 'ky': 'Долбоор жөнүндө'}
+
+
 def footers():
+    """Footer legal links -> the reader's own language; add the About link."""
     n = 0
-    for L in LANGS[1:]:
+    for f in glob.glob(ROOT + '**/*.html', recursive=True):
+        rel = os.path.relpath(f, ROOT).replace(os.sep, '/')
+        if rel.startswith(('scripts/', '_', 'node_modules/', 'google')):
+            continue
+        L = rel.split('/')[0] if rel.count('/') == 1 else 'en'
         if L not in TEXT:
             continue
-        for f in glob.glob(ROOT + L + '/*.html'):
-            s = open(f, encoding='utf-8').read()
-            t = s.replace('href="../privacy.html"', 'href="./privacy.html"').replace('href="../terms.html"', 'href="./terms.html"')
-            if t != s:
-                open(f, 'w', encoding='utf-8', newline='').write(t)
-                n += 1
+        s = t = open(f, encoding='utf-8').read()
+        if L != 'en':
+            t = t.replace('href="../privacy.html"', 'href="./privacy.html"').replace('href="../terms.html"', 'href="./terms.html"')
+        if 'about' in TEXT[L] and 'about.html">' not in t:
+            t = re.sub(r'(<footer[^>]*>.*?)(<a href="(?:\./)?privacy\.html")', lambda m: m.group(1) + f'<a href="./about.html">{ABOUT[L]}</a>\n    ' + m.group(2), t, count=1, flags=re.S)
+        if t != s:
+            open(f, 'w', encoding='utf-8', newline='').write(t)
+            n += 1
     return n
 
 
@@ -91,9 +110,9 @@ def sitemap():
     s = open(p, encoding='utf-8').read()
     add = ''
     for L in LANGS:
-        for slug in ('privacy', 'terms'):
+        for slug in SLUGS:
             u = url(L, slug)
-            if L in TEXT and f'<loc>{u}</loc>' not in s:
+            if slug in TEXT.get(L, {}) and f'<loc>{u}</loc>' not in s:
                 add += f'  <url><loc>{u}</loc><lastmod>2026-09-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>\n'
     if add:
         s = s.replace('</urlset>', add + '</urlset>')
@@ -103,7 +122,10 @@ def sitemap():
 
 if __name__ == '__main__':
     only = sys.argv[1:] or [L for L in LANGS if L in TEXT]
+    n = 0
     for L in only:
-        for slug in ('privacy', 'terms'):
-            build(L, slug)
-    print('built', len(only) * 2, 'footers', footers(), 'sitemap +', sitemap())
+        for slug in SLUGS:
+            if slug in TEXT[L]:
+                build(L, slug)
+                n += 1
+    print('built', n, 'footers', footers(), 'sitemap +', sitemap())

@@ -53,7 +53,7 @@ Each game has its own page: calculator, dated price ranges with sources, what ra
 
 English, Русский, Español, Português, Bahasa Indonesia, Türkçe, العربية, Tiếng Việt, हिन्दी, Français, Deutsch, Italiano, 日本語, 한국어, ภาษาไทย, Polski, 中文, Filipino, Kiswahili, Bahasa Melayu, Oʻzbekcha, Қазақша, Türkmençe, Кыргызча.
 
-Every language has the same **17 pages** (home, 9 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, privacy policy, terms), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
+Every language has the same **18 pages** (home, 9 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, about, privacy policy, terms), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
 
 English additionally has the news section (hub + 9 game news pages). Its translation is in progress — see the plan in [SITE-STANDARD.md](SITE-STANDARD.md).
 
@@ -71,7 +71,7 @@ Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.h
 | Check | Result (2026-09-30) |
 |---|---|
 | Lighthouse mobile, live homepage | Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100 |
-| `python scripts/site_check.py` | 419 pages, 0 errors (links, JSON-LD, canonical, hreflang, required blocks) |
+| `python scripts/site_check.py` | 443 pages, 0 errors (links, JSON-LD, canonical, hreflang, required blocks) |
 | Layout | no horizontal scroll at 360 / 390 / 768 / 1280 px, including right-to-left Arabic |
 | Security headers | strict CSP (`script-src 'self'`), [security.txt](.well-known/security.txt), [SECURITY.md](SECURITY.md) |
 
@@ -85,7 +85,7 @@ index.html, {game}.html          English homepage + 9 game reports
 market-report.html, methodology.html, glossary.html,
 account-trading-safety.html, which-game-accounts-are-most-valuable.html
 news.html, {game}-news.html      news hub + per-game news (English for now)
-{lang}/                          the same 17 pages in each of the 23 other languages
+{lang}/                          the same 18 pages in each of the 23 other languages
 assets/glass.css                 design system, built from scripts/design/css/*.css
 assets/calculators.js            per-game calculators; every price anchor is sourced in a comment
 assets/cards/{lang}/             collector card samples rendered by the bot's own card drawer
