@@ -872,6 +872,7 @@ nav .nav-dd .lang-btn, nav .nav-news { padding: 8px 13px; border-radius: 10px; f
 nav .nav-dd .lang-btn:hover, nav .nav-news:hover { border-color: rgba(34,211,238,.55); background: rgba(34,211,238,.08); }
 nav .nav-news { color: #FDE68A; border-color: rgba(253,230,138,.35); }
 nav .nav-dd .lang-dropdown a { font-size: 15px; }
+[dir="rtl"] .g-cyborg { transform: scaleX(-1); }   /* face the text in right-to-left languages */
 [dir="rtl"] nav .nav-menu { margin-left: auto; margin-right: 18px; }
 [dir="rtl"] .lang-dropdown { left: auto; right: 0; }
 @media (max-width: 860px) {
@@ -895,6 +896,16 @@ nav .nav-dd .lang-dropdown a { font-size: 15px; }
 .news-date { font-size: 13px; color: #FDE68A; font-weight: 700; }
 .news-lead { font-size: 15px; line-height: 1.55; color: var(--muted, #94A3B8); }
 .news-more { margin-top: auto; font-weight: 700; color: var(--cyan, #22D3EE); }
+/* ---- homepage "Everything on the site" hub (home_hub.py) ---- */
+.hub-grid { max-width: 1100px; margin: 26px auto 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.hub-card { display: grid; grid-template-columns: 46px 1fr; grid-template-rows: auto auto; column-gap: 14px; row-gap: 3px; align-items: center;
+  padding: 18px; border-radius: 18px; text-decoration: none; background: rgba(15,23,42,.72); border: 1px solid var(--line); transition: transform .2s, border-color .2s; }
+.hub-card:hover { transform: translateY(-3px); border-color: rgba(34,211,238,.55); }
+.hub-card .hub-ico { grid-row: span 2; width: 46px; height: 46px; display: grid; place-items: center; font-size: 24px; border-radius: 12px; background: rgba(34,211,238,.1); }
+.hub-card strong { color: #fff; font-size: 17px; }
+.hub-card span:last-child { color: var(--muted, #94A3B8); font-size: 14px; line-height: 1.45; }
+.hub-card:first-child { border-color: rgba(253,230,138,.45); background: linear-gradient(135deg, rgba(253,230,138,.08), rgba(15,23,42,.8)); }
+@media (max-width: 560px) { .hub-grid { grid-template-columns: 1fr; } }
 /* start the flying icons only after the page has loaded (keeps first paint light on phones) */
 html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
 @media (max-width: 360px) {
