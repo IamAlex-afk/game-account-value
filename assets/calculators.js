@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk", "ky", "tk"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk", "ky", "tk", "tl"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -468,6 +468,17 @@
       confidencePrefix: "Ynamlylyk: ",
       copiedFallback: "Göçürildi!",
       gamepad: {"up": "Öňki meýdan", "down": "Indiki meýdan", "left": "Azaltmak", "right": "Köpeltmek", "a": "Ähli meýdanlary arassalamak", "b": "Netije bilen paýlaşmak", "resetCaption": "ARASSALAMAK", "shareCaption": "PAÝLAŞMAK"}
+    },
+    tl: {
+      sliders: {"brawl-stars": {"trophies": "Trophies", "maxed": "Mga brawler sa Power Level 11"}, "clash-of-clans": {"th": "Town Hall level"}, "clash-royale": {"kt": "King Tower level", "maxed": "Mga card sa max level"}, "free-fire": {"rank": "Rank", "bundles": "Rare na bundle/pet"}, "genshin-impact": {"fivestars": "5★ na karakter", "c6": "C6 na karakter"}, "mobile-legends": {"skins": "Kabuuang skin", "rank": "Rank"}, "fortnite": {"skins": "Kabuuang skin", "ogItems": "Rare na OG item"}, "minecraft": {"type": "Uri ng account"}, "roblox": {"age": "Edad ng account", "robux": "Robux balance", "limiteds": "Karaniwang Limited item (hindi ang pinangalanang rare)"}},
+      select: {"clash-of-clans": {"label": "Uri ng upgrade", "options": [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]]}},
+      ageUnit: function (v) { return v + " taon"; },
+      minecraftTypes: ["Regular na account", "MVP+/Hypixel, rare na cape", "May Minecon cape", "2-character na pangalan (letra+numero)"],
+      checkboxHeading: "Pinangalanang rare item (opsyonal):",
+      confidence: {"low": "Mababa", "medium": "Katamtaman", "high": "Mataas"},
+      confidencePrefix: "Katiyakan: ",
+      copiedFallback: "Nakopya na!",
+      gamepad: {"up": "Nakaraang field", "down": "Susunod na field", "left": "Bawasan", "right": "Dagdagan", "a": "I-reset ang lahat ng field", "b": "I-share ang resulta", "resetCaption": "I-RESET", "shareCaption": "I-SHARE"}
     }
   };
   var T = STR[LANG];
