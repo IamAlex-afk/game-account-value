@@ -76,3 +76,15 @@ in search (301 migration, normal lag).
 - Fixed: dead links (Wikipedia Mohamed Light/Two9 -> Liquipedia; zh Eldorado/igitems; clashos .html), WCAG 2.5.3 label-in-name (4840a57).
 - OPEN: zleague.gg genshin-whale-cost article deleted by publisher (37 pages cite it next to Kotaku) - needs a replacement primary source, not removed blindly.
 - OPEN (owner): Cloudflare security headers + caching; Bing Webmaster Tools; GSC daily requests.
+
+## 2026-09-30 check
+- audit_site.py clean (281 pages, sitemap 280, only 404 noindex).
+- External links: 470 unique, no 404/410. 403/429/405 = bot protection only
+  (Fandom, Liquipedia, minecraft.wiki, Kotaku, PCGamesN, FunPay, Sportskeeda —
+  sportskeeda blocks even its own section page; FF article archived 2022-12-28).
+  YouTube Zy0x video alive (oEmbed 200). Not bypassed (rule).
+- Mobile 390px (iframe, fresh profile): en/ar/th/ms fit, no horizontal scroll.
+  Note: headless --window-size below ~500px crops — use an iframe for phone checks.
+- Bot prices recalibrated to Eldorado 2026-09-29 (bot repo docs/item-status-sources.md).
+- Status of languages: en 26 pages; 16 full locales 15 pages (no news/privacy/terms);
+  7 thin locales (ms uz kk ky tk tl sw) 2 pages — plan in scripts/i18n/PLAN.md.
