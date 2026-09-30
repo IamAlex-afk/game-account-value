@@ -75,9 +75,9 @@ def build(lang, slug, logo, cta):
     guides = f'\n        <a href="{rel("market-report")}"{CUR if slug == "market-report" else ""}>{mr}</a>'
     for k in GUIDES[1:]:
         guides += f'\n        <a href="{rel(k)}"{CUR if k == slug else ""}>{gl.get(k, k)}</a>'
-    # News: English-only pages for now; the game's own news page from a game page.
+    # News in the reader's language; the game's own news page from a game page.
     news_slug = (slug.replace('-news', '') + '-news') if slug in dict(GAMES) or slug.endswith('-news') else 'news'
-    news_href = SITE + news_slug + '.html'
+    news_href = url(lang, news_slug) if page_exists(lang, news_slug) else url('en', news_slug)
     langs = ''
     for code, name in LANG_NAMES:
         target = url(code, slug) if page_exists(code, slug) else url(code, 'index')

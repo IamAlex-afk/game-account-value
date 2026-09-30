@@ -47,4 +47,5 @@ def main():
     print('news.html:', len(cards), 'cards, newest', newest)
 
 if __name__ == '__main__':
+    raise SystemExit('SUPERSEDED by news_pages.py (2026-10-01): running this would overwrite the multilingual news hub.')
     main()

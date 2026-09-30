@@ -47,9 +47,12 @@ canonical to itself · hreflang to all existing translations · valid JSON-LD ·
 - [x] 1. This standard + `scripts/site_check.py`; README/llms.txt fixed (broken og image, cards)
 - [x] 2. privacy + terms in 23 languages (+ hreflang, sitemap, menu)
 - [x] 3. about page in 24 languages (E-E-A-T)
-- [ ] 4. News: refresh from official publisher sources → one article per real fact, NewsArticle LD;
+- [x] 4. News: refresh from official publisher sources → one article per real fact, NewsArticle LD;
       news hub + articles in 24 languages
 - [ ] 5. Game pages: honest "pros & cons of valuing this account" block, 24 languages
 - [ ] 6. Footer section links (Games · Guides · News · About · Privacy · Terms) on every page
+- News refresh routine: add facts to scripts/research/news-YYYY-MM.md (publisher sources only), new entries in
+      news_data.ARTICLES + TEXT for all 24 languages (news_text_*.py), then `python scripts/design/news_pages.py`
+      and `nav_menu.py`; our datePublished = publish day, publisher date shown separately.
 - [ ] Owner actions: bot server `bash /opt/gavbot/app/deploy/install.sh`; WhatsApp preview test;
       Eldorado affiliate/data-permission decision; founders /gift + public counter + rules page (needs "да")
