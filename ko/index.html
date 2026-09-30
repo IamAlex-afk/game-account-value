@@ -404,43 +404,82 @@
   <div class="g-head"><div><div class="hero-badge">⭐ AI 기반 · PDF 즉시 발급</div>
 <h1>내 게임 계정의 <span>가치를 확인해보세요</span></h1></div><div class="g-robot" aria-hidden="true"><svg viewBox="0 0 460 520">
         <defs>
-          <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D1B3A"/><stop offset="1" stop-color="#0C0B1C"/></linearGradient>
-          <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05121A"/><stop offset="1" stop-color="#0A2530"/></linearGradient>
-          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00F0FF" stop-opacity="0"/><stop offset=".5" stop-color="#00F0FF" stop-opacity=".9"/><stop offset="1" stop-color="#00F0FF" stop-opacity="0"/></linearGradient>
-          <clipPath id="vclip"><rect x="120" y="200" width="220" height="74" rx="30"/></clipPath>
+          <linearGradient id="gr-metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A4160"/><stop offset=".45" stop-color="#1A1D33"/><stop offset="1" stop-color="#0A0B18"/></linearGradient>
+          <linearGradient id="gr-dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B1E34"/><stop offset="1" stop-color="#07080F"/></linearGradient>
+          <linearGradient id="gr-shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".32"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+          <linearGradient id="gr-visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#021018"/><stop offset=".6" stop-color="#062A36"/><stop offset="1" stop-color="#0B3B48"/></linearGradient>
+          <linearGradient id="gr-beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00F0FF" stop-opacity="0"/><stop offset=".5" stop-color="#00F0FF" stop-opacity=".9"/><stop offset="1" stop-color="#00F0FF" stop-opacity="0"/></linearGradient>
+          <linearGradient id="gr-shade" x1="0" y1="0" x2="0" y2="1"><stop offset=".35" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></linearGradient>
+          <linearGradient id="gr-cable" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5B2A99"/><stop offset=".5" stop-color="#B07CFF"/><stop offset="1" stop-color="#5B2A99"/></linearGradient>
+          <pattern id="gr-hazard" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#0A0A0A"/><rect width="7" height="14" fill="#FCEE0A"/></pattern>
+          <pattern id="gr-scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#00F0FF" fill-opacity=".18"/></pattern>
+          <clipPath id="gr-vclip"><path d="M116 204h228l-10 72H126z"/></clipPath>
         </defs>
         <!-- holo rings -->
         <g class="ring" fill="none" stroke="#00F0FF" stroke-opacity=".35" stroke-width="2"><circle cx="230" cy="250" r="205" stroke-dasharray="4 14"/></g>
         <g class="ring2" fill="none" stroke="#FF2E88" stroke-opacity=".35" stroke-width="2"><circle cx="230" cy="250" r="180" stroke-dasharray="60 30 10 30"/></g>
-        <!-- antenna -->
-        <line x1="230" y1="92" x2="230" y2="50" stroke="#00F0FF" stroke-width="4"/>
-        <circle class="ant" cx="230" cy="44" r="10" fill="#FF2E88" style="filter:drop-shadow(0 0 10px #FF2E88)"/>
-        <!-- neck + cables -->
-        <path d="M190 380h80l12 60h-104z" fill="#12112A" stroke="#00F0FF" stroke-opacity=".5" stroke-width="2"/>
-        <path d="M200 390c-30 40-60 60-110 80M260 390c30 40 60 60 110 80" fill="none" stroke="#9D5CFF" stroke-width="5" stroke-linecap="round" opacity=".8"/>
-        <!-- shoulders -->
-        <path d="M60 520c10-60 60-90 170-92 110 2 160 32 170 92z" fill="url(#shell)" stroke="#00F0FF" stroke-opacity=".6" stroke-width="2"/>
-        <rect x="196" y="436" width="68" height="68" rx="14" fill="#080B11" stroke="#00F0FF" stroke-opacity=".6" stroke-width="2"/><image href="../assets/emblem.webp" x="200" y="440" width="60" height="60"/>
-        <text x="310" y="480" text-anchor="start" font-family="JetBrains Mono, monospace" font-size="14" fill="#00F0FF" letter-spacing="3">GAV-AI</text>
-        <!-- ears -->
-        <rect x="84" y="200" width="30" height="90" rx="10" fill="#15132E" stroke="#FF2E88" stroke-width="3"/>
-        <rect x="346" y="200" width="30" height="90" rx="10" fill="#15132E" stroke="#FF2E88" stroke-width="3"/>
-        <!-- head -->
-        <path d="M130 100h200q40 0 44 40l8 150q2 70-62 90H140q-64-20-62-90l8-150q4-40 44-40z" fill="url(#shell)" stroke="#00F0FF" stroke-width="3"/>
-        <path d="M150 120h160" stroke="#00F0FF" stroke-opacity=".35" stroke-width="2"/>
-        <path d="M108 160l14-6M352 154l14 6" stroke="#FCEE0A" stroke-width="3"/>
-        <!-- visor -->
-        <rect x="120" y="200" width="220" height="74" rx="30" fill="url(#visor)" stroke="#00F0FF" stroke-width="3"/>
-        <g clip-path="url(#vclip)">
-          <rect class="visor-sweep" x="170" y="200" width="120" height="74" fill="url(#beam)" opacity=".35"/>
-          <rect class="eye" x="160" y="222" width="46" height="30" rx="6" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
-          <rect class="eye" x="254" y="222" width="46" height="30" rx="6" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
+        <!-- antenna mast -->
+        <path d="M262 98l10-40h8l-6 40z" fill="url(#gr-metal)" stroke="#00F0FF" stroke-opacity=".7" stroke-width="2"/>
+        <path d="M272 58l18-16" stroke="#00F0FF" stroke-width="3"/>
+        <circle class="ant" cx="292" cy="40" r="8" fill="#FF2E88" style="filter:drop-shadow(0 0 10px #FF2E88)"/>
+        <!-- back cables -->
+        <path d="M196 372c-34 34-70 52-128 70M264 372c34 34 70 52 128 70" fill="none" stroke="url(#gr-cable)" stroke-width="9" stroke-linecap="round"/>
+        <path d="M206 380c-22 30-50 48-96 64M254 380c22 30 50 48 96 64" fill="none" stroke="#FF2E88" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+        <!-- torso armor -->
+        <path d="M34 520l26-72q14-30 70-38h200q56 8 70 38l26 72z" fill="url(#gr-metal)" stroke="#00F0FF" stroke-opacity=".7" stroke-width="2"/>
+        <path d="M60 448q14-30 70-38h200" fill="none" stroke="url(#gr-shine)" stroke-width="6"/>
+        <!-- shoulder pads with hazard stripes -->
+        <path d="M40 504l22-58q10-22 42-30l-4 88z" fill="url(#gr-hazard)" stroke="#FCEE0A" stroke-width="2" opacity=".9"/>
+        <path d="M420 504l-22-58q-10-22-42-30l4 88z" fill="url(#gr-hazard)" stroke="#FCEE0A" stroke-width="2" opacity=".9"/>
+        <!-- neck hydraulics -->
+        <rect x="196" y="360" width="68" height="62" rx="6" fill="#07080F" stroke="#00F0FF" stroke-opacity=".5" stroke-width="2"/>
+        <g fill="url(#gr-metal)" stroke="#00F0FF" stroke-opacity=".35"><rect x="202" y="366" width="56" height="10" rx="3"/><rect x="202" y="382" width="56" height="10" rx="3"/><rect x="202" y="398" width="56" height="10" rx="3"/></g>
+        <path d="M184 368l-8 52M276 368l8 52" stroke="#9AA3C7" stroke-width="5" stroke-linecap="round"/>
+        <!-- chest plate: site name -->
+        <text x="230" y="440" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#FCEE0A" letter-spacing="3">// AI APPRAISER v2</text>
+        <path d="M112 450h236l-8 56H120z" fill="#05070D" stroke="#00F0FF" stroke-width="2.5"/>
+        <path d="M112 450h236l-8 56H120z" fill="url(#gr-scan)"/>
+        <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle">
+          <text x="228" y="488" fill="#FF2E88" opacity=".75" textLength="212" lengthAdjust="spacingAndGlyphs">GameAccountValue</text>
+          <text x="232" y="488" fill="#00F0FF" opacity=".75" textLength="212" lengthAdjust="spacingAndGlyphs">GameAccountValue</text>
+          <text x="230" y="488" fill="#F2FDFF" textLength="212" lengthAdjust="spacingAndGlyphs">GameAccountValue</text>
         </g>
-        <!-- mouth grille -->
-        <g stroke="#00F0FF" stroke-width="3" stroke-linecap="round" opacity=".8"><path d="M190 318h80M196 332h68M204 346h52"/></g>
+        <!-- side ear modules -->
+        <path d="M92 196l-20 8v84l20 8z" fill="url(#gr-dark)" stroke="#FF2E88" stroke-width="2.5"/>
+        <path d="M368 196l20 8v84l-20 8z" fill="url(#gr-dark)" stroke="#FF2E88" stroke-width="2.5"/>
+        <path d="M80 220v52M380 220v52" stroke="#00F0FF" stroke-width="3" stroke-dasharray="6 4" style="filter:drop-shadow(0 0 4px #00F0FF)"/>
+        <!-- helmet -->
+        <path d="M150 96h160l48 36 14 118-14 82-58 42H160l-58-42-14-82 14-118z" fill="url(#gr-metal)" stroke="#00F0FF" stroke-width="3"/>
+        <path d="M150 96h160l48 36 6 50c-40-30-90-44-134-44s-94 14-134 44l6-50z" fill="url(#gr-shine)"/>
+        <path d="M150 96h160l48 36 14 118-14 82-58 42H160l-58-42-14-82 14-118z" fill="url(#gr-shade)"/>
+        <path d="M102 132l-14 118 14 82 26-30-10-124z" fill="#000" fill-opacity=".3"/>
+        <path d="M358 132l14 118-14 82-26-30 10-124z" fill="#000" fill-opacity=".38"/>
+        <path d="M150 96h160l48 36" fill="none" stroke="#BFF8FF" stroke-width="2" stroke-opacity=".6"/>
+        <!-- panel seams + bolts -->
+        <g fill="none" stroke="#00F0FF" stroke-opacity=".3" stroke-width="1.5"><path d="M230 96v74M150 96l-10 70M310 96l10 70M102 290l58 30M358 290l-58 30"/></g>
+        <g fill="#9AA3C7"><circle cx="122" cy="146" r="3"/><circle cx="338" cy="146" r="3"/><circle cx="118" cy="318" r="3"/><circle cx="342" cy="318" r="3"/></g>
+        <!-- forehead vents -->
+        <g stroke="#05070D" stroke-width="4" stroke-linecap="round"><path d="M196 124h68M200 136h60M204 148h52"/></g>
+        <path d="M108 160l14-6M352 154l14 6" stroke="#FCEE0A" stroke-width="3"/>
+        <!-- neon circuit implant -->
+        <path d="M322 182h18l10 14v40M340 196h-12" fill="none" stroke="#FF2E88" stroke-width="2" style="filter:drop-shadow(0 0 5px #FF2E88)"/>
+        <circle cx="350" cy="240" r="3" fill="#FF2E88"/>
+        <!-- visor -->
+        <path d="M116 204h228l-10 72H126z" fill="url(#gr-visor)" stroke="#00F0FF" stroke-width="3"/>
+        <g clip-path="url(#gr-vclip)">
+          <rect x="110" y="200" width="240" height="80" fill="url(#gr-scan)"/>
+          <rect class="visor-sweep" x="170" y="200" width="120" height="80" fill="url(#gr-beam)" opacity=".35"/>
+          <path class="eye" d="M156 226h50l-4 24h-46z" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
+          <path class="eye" d="M254 226h50v24h-46z" fill="#FCEE0A" style="filter:drop-shadow(0 0 12px #FCEE0A)"/>
+          <text x="140" y="219" font-family="JetBrains Mono, monospace" font-size="8" fill="#00F0FF" opacity=".8">SCAN 98%</text>
+          <path d="M300 264h26M306 270h20" stroke="#00F0FF" stroke-width="2" opacity=".7"/>
+        </g>
+        <!-- jaw + mouth grille -->
+        <path d="M172 300h116l-12 44h-92z" fill="#07080F" stroke="#00F0FF" stroke-opacity=".6" stroke-width="2"/>
+        <g stroke="#00F0FF" stroke-width="3" stroke-linecap="round" opacity=".85"><path d="M196 310v24M212 310v26M230 310v28M248 310v26M264 310v24"/></g>
         <!-- cheek lights -->
-        <circle cx="140" cy="320" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
-        <circle cx="320" cy="320" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
+        <circle cx="140" cy="312" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
+        <circle cx="320" cy="312" r="5" fill="#39FF88" style="filter:drop-shadow(0 0 6px #39FF88)"/>
       </svg></div></div>
   <div class="g-panel">
     <div class="g-intro"><h2 class="section-title">무료로 가치 추정 — 바로 여기서</h2><p class="section-sub">가입 없음. 아무것도 입력하거나 전송하지 않습니다 — 모든 계산은 브라우저 안에서 이루어집니다.</p></div>
