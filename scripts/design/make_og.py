@@ -35,25 +35,25 @@ body{width:1200px;height:630px;overflow:hidden;background:#080B11;font-family:In
 .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:40px 40px}
 .city{position:absolute;left:0;right:0;bottom:0;height:340px;opacity:.6}.city svg{width:100%;height:100%}
 .card{position:absolute;inset:64px;border:1px solid rgba(255,255,255,.14);border-radius:36px;background:linear-gradient(135deg,rgba(20,24,38,.9),rgba(12,14,24,.72));box-shadow:0 30px 80px rgba(0,0,0,.5);padding:52px 64px;display:flex;flex-direction:column;justify-content:space-between}
-.top{display:flex;align-items:center;gap:18px;font-weight:800;font-size:32px}
-.top img{width:68px;height:68px;border-radius:16px}
-.age{margin-left:auto;font-size:22px;font-weight:800;padding:8px 16px;border-radius:12px;border:2px solid rgba(255,255,255,.35);color:#cfd5e6}
-h1{font-size:%%H1%%px;max-width:690px;font-weight:900;letter-spacing:-.03em;line-height:1.05}
+.top{display:flex;align-items:center;gap:26px;font-weight:900;font-size:60px;letter-spacing:-.02em}
+.top img{width:132px;height:132px;border-radius:28px;box-shadow:0 0 40px color-mix(in srgb,%%A%% 45%,transparent)}
+.age{font-style:normal;margin-right:14px;font-size:22px;font-weight:800;padding:8px 16px;border-radius:12px;border:2px solid rgba(255,255,255,.35);color:#cfd5e6}
+h1{font-size:calc(%%H1%%px * .62);max-width:690px;font-weight:900;letter-spacing:-.03em;line-height:1.05}
 h1 span{background:linear-gradient(90deg,%%A%%,%%B%%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .price{max-width:690px;flex-wrap:wrap;display:flex;align-items:baseline;gap:22px;margin-top:18px}
-.price b{font-size:%%PB%%px;font-weight:900;color:%%A%%;text-shadow:0 0 34px color-mix(in srgb,%%A%% 50%,transparent);letter-spacing:-.02em}
-.price i{font-style:normal;font-size:34px;color:#cfd5e6;font-weight:700}
-.bot{position:absolute;right:0;bottom:0;height:440px;width:auto;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 98%);mask-image:linear-gradient(to bottom,#000 72%,transparent 98%);filter:drop-shadow(0 0 40px color-mix(in srgb,%%B%% 45%,transparent))}
+.price b{font-size:calc(%%PB%%px * .7);font-weight:900;color:%%A%%;text-shadow:0 0 34px color-mix(in srgb,%%A%% 50%,transparent);letter-spacing:-.02em}
+.price i{font-style:normal;font-size:28px;color:#cfd5e6;font-weight:700}
+.bot{position:absolute;right:28px;bottom:-6px;height:%%BH%%px;width:auto;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 98%);mask-image:linear-gradient(to bottom,#000 72%,transparent 98%);filter:drop-shadow(0 0 40px color-mix(in srgb,%%B%% 45%,transparent))}
 .age,.top,.foot span{position:relative;z-index:2}
 .foot{display:flex;align-items:center;justify-content:space-between;font-size:28px;font-weight:700}
 .bar{height:10px;border-radius:6px;background:linear-gradient(90deg,%%A%%,%%B%%);width:420px;box-shadow:0 0 24px color-mix(in srgb,%%B%% 60%,transparent)}
 </style>
 <div class=g1></div><div class=g2></div><div class=grid></div><div class=city>%%CITY%%</div>
 <div class=card>
- <div class=top><img src="%%EMBLEM%%">GameAccountValue<span class=age>18+</span></div>
+ <div class=top><img src="%%EMBLEM%%">GameAccountValue</div>
  <div><h1><span>%%TITLE%%</span></h1><div class=price><b>%%PRICE%%</b>%%TOPEND%%</div></div>
  <img class=bot src="%%BOT%%">
- <div class=foot><div class=bar></div><span>gameaccountvalue.com</span></div>
+ <div class=foot><div class=bar></div><span><em class=age>18+</em> gameaccountvalue.com</span></div>
 </div>'''
 
 
@@ -69,11 +69,12 @@ def render(game, out_dir):
     em_mod.emblem(192).save(emblem)
     city = open(os.path.join(HERE, 'city.svg'), encoding='utf-8').read()
     # hero cyborg render (owner-supplied Gemini art, black keyed out) — same as the homepage
-    bot = file_url(os.path.join(ROOT, 'assets', 'cyborg.webp'))
+    art = os.environ.get('OG_ART', 'robot')
+    bot = file_url(os.path.join(ROOT, 'assets', 'robot-calc.webp')) if art == 'robot' else ''
     h1 = 96 if len(title) <= 12 else (78 if len(title) <= 15 else 72)
     pb = 80 if len(price) <= 11 else 66
     html = (TPL.replace('%%FONT%%', file_url(os.path.join(ROOT, 'assets', 'fonts', 'inter-latin.woff2')))
-            .replace('%%CITY%%', city).replace('%%BOT%%', bot).replace('%%H1%%', str(h1)).replace('%%PB%%', str(pb)).replace('%%EMBLEM%%', file_url(emblem)).replace('%%TITLE%%', title)
+            .replace('%%CITY%%', city).replace('<img class=bot src="%%BOT%%">', '<img class=bot src="' + bot + '">' if bot else '').replace('%%BH%%', '430').replace('%%H1%%', str(h1)).replace('%%PB%%', str(pb)).replace('%%EMBLEM%%', file_url(emblem)).replace('%%TITLE%%', title)
             .replace('%%PRICE%%', price).replace('%%TOPEND%%', '<i>/ ' + top + '</i>' if top else '').replace('%%A%%', a).replace('%%B%%', b))
     page = os.path.join(tmp, 'og.html')
     open(page, 'w', encoding='utf-8').write(html)
