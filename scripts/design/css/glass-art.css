@@ -48,4 +48,6 @@
   nav .nav-right .nav-cta { flex: 1 1 auto; justify-content: center; text-align: center; }
   nav > .nav-cta { flex: 1 1 100%; justify-content: center; text-align: center; }
 }
+/* start the flying icons only after the page has loaded (keeps first paint light on phones) */
+html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .g-cyborg .cy-ico, .g-cyborg .cy-beam, .g-sit img.blink { animation: none; } }
