@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk", "ky"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -446,6 +446,17 @@
       confidencePrefix: "Сенімділік: ",
       copiedFallback: "Көшірілді!",
       gamepad: {"up": "Алдыңғы өріс", "down": "Келесі өріс", "left": "Азайту", "right": "Көбейту", "a": "Барлық өрістерді тазарту", "b": "Нәтижемен бөлісу", "resetCaption": "ТАЗАРТУ", "shareCaption": "БӨЛІСУ"}
+    },
+    ky: {
+      sliders: {"brawl-stars": {"trophies": "Кубоктор", "maxed": "Power Level 11деги бравлерлер"}, "clash-of-clans": {"th": "Town Hall деңгээли"}, "clash-royale": {"kt": "King Tower деңгээли", "maxed": "Максималдуу деңгээлдеги карталар"}, "free-fire": {"rank": "Ранг", "bundles": "Сейрек бандлдар/пет-тер"}, "genshin-impact": {"fivestars": "5★ каармандар", "c6": "C6 каармандар"}, "mobile-legends": {"skins": "Бардык скиндер", "rank": "Ранг"}, "fortnite": {"skins": "Бардык скиндер", "ogItems": "Сейрек OG буюмдар"}, "minecraft": {"type": "Аккаунттун түрү"}, "roblox": {"age": "Аккаунттун жашы", "robux": "Robux балансы", "limiteds": "Жөнөкөй Limited буюмдар (аталган сейректер эмес)"}},
+      select: {"clash-of-clans": {"label": "Жакшыртуу түрү", "options": [["full", "Full Max"], ["standard", "Стандарт"], ["rushed", "Rushed"]]}},
+      ageUnit: function (v) { return v + " жыл"; },
+      minecraftTypes: ["Жөнөкөй аккаунт", "MVP+/Hypixel, сейрек плащ", "Minecon плащынын ээси", "2 белгилүү ат (тамга+цифра)"],
+      checkboxHeading: "Аталган сейрек буюмдар (милдеттүү эмес):",
+      confidence: {"low": "Төмөн", "medium": "Орточо", "high": "Жогору"},
+      confidencePrefix: "Ишенимдүүлүк: ",
+      copiedFallback: "Көчүрүлдү!",
+      gamepad: {"up": "Мурунку талаа", "down": "Кийинки талаа", "left": "Азайтуу", "right": "Көбөйтүү", "a": "Бардык талааларды тазалоо", "b": "Жыйынтык менен бөлүшүү", "resetCaption": "ТАЗАЛОО", "shareCaption": "БӨЛҮШҮҮ"}
     }
   };
   var T = STR[LANG];

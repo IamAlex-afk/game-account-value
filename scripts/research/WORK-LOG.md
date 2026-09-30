@@ -108,3 +108,5 @@ in search (301 migration, normal lag).
 - kk full locale (15 pages, "сіз", CIS market, KZ), built with scripts/i18n/finish_locale.py.
 - Local number style (numfmt.py) for uz/kk: 1 147 (NBSP), 17,8% — money kept as in source, like ru.
 - Sitemap 319. Remaining thin: ky, tk, tl, sw.
+
+- ky full locale (2026-09-30, "сиз", CIS, KG); sitemap 332. Remaining thin: tk, tl, sw.

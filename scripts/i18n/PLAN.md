@@ -28,7 +28,7 @@ tl "ka/mo" casual-neutral, sw neutral); no fabricated local marketplace
 sources — local sources only if checked live, otherwise the global ones.
 
 ## Status
-- [x] ms (2026-09-30)  - [x] uz (2026-09-30)  - [x] kk (2026-09-30)  - [ ] ky  - [ ] tk  - [ ] tl  - [ ] sw
+- [x] ms (2026-09-30)  - [x] uz (2026-09-30)  - [x] kk (2026-09-30)  - [x] ky (2026-09-30)  - [ ] tk  - [ ] tl  - [ ] sw
 
 ## How ms was built (repeat for the next locale)
 1. `segments.py extract en <lang>` → translate todo.json (done in chunks) → merge into done.json.
