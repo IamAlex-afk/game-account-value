@@ -57,73 +57,7 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
 <link rel="stylesheet" href="../assets/style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "@id": "https://gameaccountvalue.com/ja/methodology.html#article",
-      "headline": "私たちの調査手法",
-      "description": "公開前にゲームアカウント価格データをどう調査・検証しているか。",
-      "author": { "@id": "https://gameaccountvalue.com/#author" },
-      "publisher": { "@type": "Organization", "name": "GameAccountValue", "url": "https://t.me/GameAccountValue_Bot" },
-      "datePublished": "2026-09-16",
-      "dateModified": "2026-09-16",
-      "inLanguage": "ja",
-      "mainEntityOfPage": "https://gameaccountvalue.com/ja/methodology.html"
-    },
-    {
-      "@type": "Person",
-      "@id": "https://gameaccountvalue.com/#author",
-      "name": "Aleksei Bitkin",
-      "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
-      "sameAs": ["https://orcid.org/0009-0002-7986-3812", "https://doi.org/10.5281/zenodo.17972301"]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://gameaccountvalue.com/ja/methodology.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "価格データは実際どこから来ているのか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "古い記事やフォーラムでの主張に頼るのではなく、稼働中のサードパーティマーケットプレイスの生きた出品ページを価格順に確認している。ゲームごとの主なソース：Eldorado.gg — Roblox、Fortnite、Genshin Impact、Clash Royale、Clash of Clans、Brawl Stars、Mobile Legends、Free Fireの価格順（最高値・最安値）ライブ出品。igitems.com — 出品数付きの価格帯分布を示す集計マーケットレポートページ（例：「$0–$15：1,147件中57件」）。MercadoLivre.com.br — ブラジル比重の高いゲーム（Free Fire）の地域クロスチェック。Tokopedia — インドネシア比重の高いゲーム（Mobile Legends）の地域クロスチェック。ゲームトレード（GameTrade.jp）— 日本国内のRMTプラットフォームで、Robloxアカウント/アイテムの実際の出品を直接確認（円建ての価格、2026年9月確認）。Minecraftは例外だ：レアユーザー名の販売は単一のマーケットプレイスではなく、コミュニティ報告を通じて記録されている。そのニッチが非公式に取引されているためだ。" }
-        },
-        {
-          "@type": "Question",
-          "name": "「確認済み反復」ルールとは何か、なぜ重要なのか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "特定のアイテム、スキン、キャラクターを本物の価値決定要因として公開するのは、それが2件以上の独立したトップ価格出品に登場する場合のみだ。1回だけの言及では基準を満たさない — 内部的に未確認とフラグされ、我々が事実として述べるものからは除外される。だからこそ、例えば我々のFortniteページはIKONIKを特別に名指ししている（確認したトップ10出品のうち4件で繰り返された）が、1回しか見なかった他のスキンは価値決定要因として名指ししていない。" }
-        },
-        {
-          "@type": "Question",
-          "name": "まったく反復が見つからない場合はどうするのか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "我々は、推測しなければならない「トップスキン」リストを作るのではなく、価値がスタッツによって決まると率直に述べる。特にBrawl Stars、Clash of Clans、Clash Royale、Free Fireについては、我々のトップ10価格リサーチではネーム付きスキンの反復がゼロだった — 確認した最高額出品の中で、同じスキンやコスメティックが2回登場することはなかった。そのためこれら4ページは代わりに、トロフィー、Town Hall/King Towerレベル、ランクを実際の価値決定要因として指し示している。" }
-        },
-        {
-          "@type": "Question",
-          "name": "このデータはどのくらいの頻度で更新されるのか、フレッシュネスバッジは何を意味するのか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "各ページの見出しの下にあるバッジは、そのページのデータが最後にライブ出品と照合された日付を示す。これは永久的な保証ではない — マーケットプレイス価格は変動する — が、「トップアカウント」という主張が今月のものか3年前のものかを推測させるのではなく、読んでいる数字がどれくらい古いかを正確に伝える（クロスゲーム比較ページのFortnite比較は、まさにこの区別がなぜ重要かを示している）。" }
-        },
-        {
-          "@type": "Question",
-          "name": "簡単にできるはずなのに、あえてやらないことは？",
-          "acceptedAnswer": { "@type": "Answer", "text": "一握りのハイエンド出品からゲームの典型的な価格帯を外挿することはしない。ある地域で見つかった価格を地域クロスチェックなしにグローバルに適用されるものとして再利用することはしない。このサイトの以前のバージョンからの数字を、現在の出品と照合して再検証せずにそのまま引き継ぐこともしない。" }
-        },
-        {
-          "@type": "Question",
-          "name": "調査中に見つけたサードパーティの「アカウント価値計算機」ツールをどう扱っているか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "実際のマーケットプレイス出品とは異なる扱いをする。計算機サイトのアイテムごとのドル換算重みは、そのツール自身の内部的な仮定であり、確認された成約や生きた希望価格ではない — そのため、アイテムの実際の公式ゲーム内通貨コストと照合するなど、別の方法で独立して検証できない限り、それらの数字を事実として公開しない。計算機の数字がその方法で検証できない場合、リサーチ済みであるかのように未確認の重みを提示するのではなく、除外する。" }
-        },
-        {
-          "@type": "Question",
-          "name": "公開する数字を単一のソースだけに頼ることはあるか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "確認済みの事実として述べるものについては一切ない。このサイトのすべての価格帯は、少なくとも1つのライブマーケットプレイスと直接照合されている。ある数字が本当の外れ値である場合 — 記録的な成約、自己申告の生涯課金総額、単一プラットフォームの例示的な出品 — それを通常のマーケットレンジに混ぜるのではなく、明示的にその独自のカテゴリーとしてラベル付けする（例えばRobloxページの報告済み保有資産の注記を参照）。" }
-        }
-      ]
-    }
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://gameaccountvalue.com/ja/methodology.html#article", "headline": "私たちの調査手法", "description": "公開前にゲームアカウント価格データをどう調査・検証しているか。", "author": {"@id": "https://gameaccountvalue.com/#author"}, "publisher": {"@type": "Organization", "name": "GameAccountValue", "url": "https://t.me/GameAccountValue_Bot"}, "datePublished": "2026-09-16", "dateModified": "2026-09-16", "inLanguage": "ja", "mainEntityOfPage": "https://gameaccountvalue.com/ja/methodology.html"}, {"@type": "Person", "@id": "https://gameaccountvalue.com/#author", "name": "Aleksei Bitkin", "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/", "sameAs": ["https://orcid.org/0009-0002-7986-3812", "https://doi.org/10.5281/zenodo.17972301"]}]}</script>
 <style>
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
   h1 { font-size: clamp(30px, 5vw, 46px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
@@ -242,7 +176,7 @@
 
 <div class="article-body">
 
-<h3>価格データは実際どこから来ているのか？</h3>
+<h3>価格データの出どころ</h3>
 <p>古い記事やフォーラムでの主張に頼るのではなく、稼働中のサードパーティマーケットプレイスの生きた出品ページを価格順に確認している。ゲームごとの主なソース：</p>
 <table class="source-table">
 <tbody>
@@ -256,22 +190,22 @@
 </table>
 <p>Minecraftは例外だ：レアユーザー名の販売は単一のマーケットプレイスではなく、コミュニティ報告を通じて記録されている。そのニッチが非公式に取引されているためだ。</p>
 
-<h3>「確認済み反復」ルールとは何か、なぜ重要なのか？</h3>
+<h3>「2件ルール」：アイテムが価値を左右すると判断する条件</h3>
 <p>特定のアイテム、スキン、キャラクターを本物の価値決定要因として公開するのは、それが<strong>2件以上の独立したトップ価格出品</strong>に登場する場合のみだ。1回だけの言及では基準を満たさない — 内部的に未確認とフラグされ、我々が事実として述べるものからは除外される。だからこそ、例えば我々のFortniteページはIKONIKを特別に名指ししている（確認したトップ10出品のうち4件で繰り返された）が、1回しか見なかった他のスキンは価値決定要因として名指ししていない。</p>
 
-<h3>まったく反復が見つからない場合はどうするのか？</h3>
+<h3>繰り返しが見つからない場合は数値で価格が決まる</h3>
 <p>我々は、推測しなければならない「トップスキン」リストを作るのではなく、価値がスタッツによって決まると率直に述べる。特にBrawl Stars、Clash of Clans、Clash Royale、Free Fireについては、我々のトップ10価格リサーチではネーム付きスキンの反復がゼロだった — 確認した最高額出品の中で、同じスキンやコスメティックが2回登場することはなかった。そのためこれら4ページは代わりに、トロフィー、Town Hall/King Towerレベル、ランクを実際の価値決定要因として指し示している。</p>
 
-<h3>このデータはどのくらいの頻度で更新されるのか、フレッシュネスバッジは何を意味するのか？</h3>
+<h3>再確認の頻度と日付バッジの意味</h3>
 <p>各ページの見出しの下にあるバッジは、そのページのデータが最後にライブ出品と照合された日付を示す。これは永久的な保証ではない — マーケットプレイス価格は変動する — が、「トップアカウント」という主張が今月のものか3年前のものかを推測させるのではなく、読んでいる数字がどれくらい古いかを正確に伝える（<a href="./which-game-accounts-are-most-valuable.html">クロスゲーム比較ページ</a>のFortnite比較は、まさにこの区別がなぜ重要かを示している）。</p>
 
-<h3>簡単にできるはずなのに、あえてやらないことは？</h3>
+<h3>数値について私たちが決してしないこと</h3>
 <p>一握りのハイエンド出品からゲームの典型的な価格帯を外挿することはしない。ある地域で見つかった価格を地域クロスチェックなしにグローバルに適用されるものとして再利用することはしない。このサイトの以前のバージョンからの数字を、現在の出品と照合して再検証せずにそのまま引き継ぐこともしない。</p>
 
-<h3>調査中に見つけたサードパーティの「アカウント価値計算機」ツールをどう扱っているか？</h3>
+<h3>他の査定ツールの数値をそのまま使わない理由</h3>
 <p>実際のマーケットプレイス出品とは異なる扱いをする。計算機サイトのアイテムごとのドル換算重みは、そのツール自身の内部的な仮定であり、確認された成約や生きた希望価格ではない — そのため、アイテムの実際の公式ゲーム内通貨コストと照合するなど、別の方法で独立して検証できない限り、それらの数字を事実として公開しない。計算機の数字がその方法で検証できない場合、リサーチ済みであるかのように未確認の重みを提示するのではなく、除外する。</p>
 
-<h3>公開する数字を単一のソースだけに頼ることはあるか？</h3>
+<h3>1つの数値に必要な情報源の数</h3>
 <p>確認済みの事実として述べるものについては一切ない。このサイトのすべての価格帯は、少なくとも1つのライブマーケットプレイスと直接照合されている。ある数字が本当の外れ値である場合 — 記録的な成約、自己申告の生涯課金総額、単一プラットフォームの例示的な出品 — それを通常のマーケットレンジに混ぜるのではなく、明示的にその独自のカテゴリーとしてラベル付けする（例えばRobloxページの報告済み保有資産の注記を参照）。</p>
 
 </div>
