@@ -140,17 +140,30 @@ def render_events(game, lang, names):
 VENUE = {'bs-lcq': ('Guangzhou', 'Guangzhou', 'CN'), 'bs-wf': ('Tokyo Metropolitan Gymnasium', 'Tokyo', 'JP'),
          'ml-enc': ('Riyadh', 'Riyadh', 'SA'), 'ff-wsgf': ('Bangkok', 'Bangkok', 'TH')}
 
+# Search Console (2026-09-30) listed description, image, organizer.url,
+# performer and offers as optional Event improvements. description, image and
+# organizer.url are filled from facts we hold; performer (qualified teams) and
+# offers (ticketing) are left out until the publisher announces them — never guessed.
+ORG_URL = {'Supercell': 'https://supercell.com/', 'MOONTON': 'https://en.moonton.com/', 'Garena': 'https://ff.garena.com/'}
+COUNTRY_EN = {'CN': 'China', 'JP': 'Japan', 'SA': 'Saudi Arabia', 'TH': 'Thailand'}
+
 def render_event_ld(game):
     out = []
     for e in EVENTS.get(game, []):
         if e['id'] not in VENUE or not e.get('start') or e['status'] != 'ok':
             continue
         name, city, cc = VENUE[e['id']]
-        ev = {'@context': 'https://schema.org', '@type': 'Event', 'name': e['title'].split(' · $')[0],
+        title = e['title'].split(' · $')[0]
+        org = {'@type': 'Organization', 'name': e['src'][1]}
+        if e['src'][1] in ORG_URL:
+            org['url'] = ORG_URL[e['src'][1]]
+        ev = {'@context': 'https://schema.org', '@type': 'Event', 'name': title,
+              'description': f"{title}: official in-person esports event in {city}, {COUNTRY_EN.get(cc, cc)}, announced by {e['src'][1]}.",
+              'image': f'https://gameaccountvalue.com/og/{game}.jpg',
               'startDate': e['start'], 'eventStatus': 'https://schema.org/EventScheduled',
               'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
               'location': {'@type': 'Place', 'name': name, 'address': {'@type': 'PostalAddress', 'addressLocality': city, 'addressCountry': cc}},
-              'organizer': {'@type': 'Organization', 'name': e['src'][1]}, 'url': e['src'][0]}
+              'organizer': org, 'url': e['src'][0]}
         if e.get('end'):
             ev['endDate'] = e['end']
         out.append(ev)
