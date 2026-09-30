@@ -906,6 +906,120 @@ nav .nav-dd .lang-dropdown a { font-size: 15px; }
 .hub-card span:last-child { color: var(--muted, #94A3B8); font-size: 14px; line-height: 1.45; }
 .hub-card:first-child { border-color: rgba(253,230,138,.45); background: linear-gradient(135deg, rgba(253,230,138,.08), rgba(15,23,42,.8)); }
 @media (max-width: 560px) { .hub-grid { grid-template-columns: 1fr; } }
+/* ---- button hierarchy (2026-09-30): one primary action per screen ----
+   Primary = the bot CTA (filled, largest, glowing); share = outline; reset = ghost.
+   Touch targets >= 48px (Google/WCAG). */
+html body .g-exact .btn-primary, html body .g-exact .btn-secondary { position: relative; display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%;
+  min-height: 60px; border-radius: 14px; font-size: 17px; font-weight: 800; letter-spacing: .01em; color: #fff; border: 0; text-decoration: none;
+  background: linear-gradient(135deg, #0E7490, #6D28D9); box-shadow: 0 10px 30px -8px rgba(124,58,237,.65); animation: cta-glow 2.4s ease-in-out infinite; }  /* white text >= 5.4:1 on both ends */
+html body .g-hero .g-exact .btn-primary, html body .g-tool .g-exact .btn-primary, html body .g-exact .btn-primary, html body .g-exact .btn-secondary {
+  background: linear-gradient(135deg, #0E7490, #6D28D9) !important; color: #fff !important; font-size: 17px; font-weight: 800; min-height: 60px; }
+@keyframes cta-glow { 0%, 100% { box-shadow: 0 8px 24px -8px rgba(109,40,217,.6), 0 0 0 rgba(34,211,238,0); } 50% { box-shadow: 0 8px 28px -6px rgba(109,40,217,.8), 0 0 22px rgba(34,211,238,.45); } }
+html body .g-exact .btn-primary:hover, html body .g-exact .btn-secondary:hover { transform: translateY(-2px); }
+html body .value-calc .vc-share-btn, html body .value-calc .vc-share-btn:hover { color: #A5F3FC !important; }
+.value-calc .vc-share-btn { background: transparent !important; color: #A5F3FC !important; border: 1.5px solid rgba(34,211,238,.6) !important; box-shadow: none !important; }
+.value-calc .vc-share-btn:hover { background: rgba(34,211,238,.1) !important; }
+.g-reset { background: transparent; color: var(--muted, #94A3B8); border-color: rgba(148,163,184,.25); }
+.section-nav a, nav .nav-dd .lang-btn, nav .nav-news, nav .lang-btn { min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 560px) { html body .g-exact .btn-primary, html body .g-exact .btn-secondary { min-height: 58px; font-size: 16px; } nav .nav-cta { min-height: 48px; } }
+/* ---- visual pack (preview approved 2026-09-30): rays, cables, holo cards, page transitions, slot roll, scroll reveal ---- */
+/* 0. light rays behind the cyborg */
+.g-cyborg::before { content:""; position:absolute; left:50%; top:42%; width:180%; aspect-ratio:1; translate:-50% -50%; z-index:-1; pointer-events:none;
+  background: repeating-conic-gradient(from 0deg, rgba(0,240,255,.16) 0 4deg, transparent 4deg 16deg, rgba(255,46,136,.12) 16deg 19deg, transparent 19deg 30deg);
+  -webkit-mask: radial-gradient(closest-side, #000 20%, transparent 72%); mask: radial-gradient(closest-side, #000 20%, transparent 72%);
+  animation: vis-spin 40s linear infinite; }
+@keyframes vis-spin { to { rotate: 360deg; } }
+
+/* 1. neon cables hanging from the cyborg into the calculator */
+.vis-cables { position:absolute; left:0; top:80%; width:100%; height:150px; overflow:visible; pointer-events:none; z-index:6; }
+.vis-cables .c { fill:none; stroke:#2B3252; stroke-width:8; stroke-linecap:round; filter: drop-shadow(0 3px 4px rgba(0,0,0,.7)); }
+.vis-cables .h { fill:none; stroke:rgba(190,205,255,.35); stroke-width:1.5; stroke-linecap:round; transform: translate(-1.5px,-1.5px); }
+.vis-cables .plug { fill:#1B2033; stroke:#00F0FF; stroke-width:2; filter: drop-shadow(0 0 6px #00F0FF); }
+.vis-cables .p { fill:none; stroke-width:2.5; stroke-linecap:round; stroke-dasharray:36 150; animation: vis-pulse 2.6s linear infinite; filter: drop-shadow(0 0 5px currentColor); }
+.vis-cables .p1 { stroke:#00F0FF; color:#00F0FF; }
+.vis-cables .p2 { stroke:#FF2E88; color:#FF2E88; animation-delay:-.9s; animation-duration:3.1s; }
+.vis-cables .p3 { stroke:#FCEE0A; color:#FCEE0A; animation-delay:-1.7s; animation-duration:3.6s; }
+@keyframes vis-pulse { from { stroke-dashoffset: 178; } to { stroke-dashoffset: 0; } }
+.vis-hot .vis-cables .p { animation-duration: .7s !important; stroke-width: 3.5; }
+
+/* 2. holographic game cards */
+.game-card, .g-pick-btn { position: relative; overflow: hidden; }
+.game-card::after, .g-pick-btn::after { content:""; position:absolute; inset:0; pointer-events:none; border-radius:inherit; opacity:.0; mix-blend-mode: color-dodge;
+  background: linear-gradient(115deg, transparent 20%, rgba(255,46,136,.55) 36%, rgba(252,238,10,.5) 44%, rgba(0,240,255,.55) 52%, rgba(157,92,255,.5) 60%, transparent 76%);
+  background-size: 250% 250%; background-position: var(--hx, 50%) var(--hy, 50%); transition: opacity .25s; }
+.game-card:hover::after, .g-pick-btn:hover::after { opacity:.45; }
+.g-pick-btn[aria-pressed="true"]::after, .g-pick-btn.active::after { opacity:.22; }
+@media (pointer: coarse) { .game-card::after { opacity:.28; animation: vis-holo 5s ease-in-out infinite alternate; } }
+@keyframes vis-holo { from { background-position: 0% 0%; } to { background-position: 100% 100%; } }
+
+/* 3. smooth page-to-page transitions (Chrome/Edge/Safari 18+) */
+@view-transition { navigation: auto; }
+h1 { view-transition-name: page-title; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .35s; }
+
+/* 4. slot-machine roll of the estimate */
+.vc-result-value.vis-roll .vc-lo, .vc-result-value.vis-roll .vc-hi { display:inline-block; animation: vis-roll .55s cubic-bezier(.2,.8,.2,1.2); }
+.vc-result-value.vis-roll .vc-hi { animation-delay: .08s; }
+@keyframes vis-roll { 0% { transform: translateY(-70%); filter: blur(6px); opacity:0; } 60% { filter: blur(0); opacity:1; } 100% { transform: none; } }
+
+/* 5. scroll reveal with a glitch */
+@supports (animation-timeline: view()) {
+  .section .feature, .section .step, .section .faq details, .section .game-card, .section .section-title, .hub-card, .cert-sample {
+    animation: vis-reveal linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+  @keyframes vis-reveal { 0% { opacity:0; transform: translateY(40px); filter: hue-rotate(90deg) blur(4px); } 60% { opacity:1; filter:none; } 100% { opacity:1; transform:none; } }
+}
+@media (max-width:860px) { .vis-cables { height: 110px; } }
+@media (prefers-reduced-motion: reduce) { html body .g-exact .btn-primary, html body .g-exact .btn-secondary, .g-cyborg::before, .vis-cables .p, .game-card::after, .vc-result-value.vis-roll *, .section *, .hub-card { animation: none !important; } }
+/* ---- card collection carousel (homepages) ---- */
+.gc-sec { max-width: 1200px; margin: 0 auto; padding: 70px 0 40px; }
+.gc-intro { max-width: 820px; margin: 0 auto 26px; padding: 0 20px; text-align: center; }
+.gc-intro h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; margin: 0 0 12px; background: linear-gradient(90deg,#FDE68A,#F0ABFC,#67E8F9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.gc-intro p { font-size: 17px; line-height: 1.6; color: #CBD5E1; margin: 0 0 14px; }
+.gc-points { list-style: none; padding: 0; margin: 0 auto; display: grid; gap: 8px; max-width: 700px; text-align: left; }
+.gc-points li { padding: 10px 14px; border-radius: 12px; background: rgba(15,23,42,.72); border: 1px solid rgba(148,163,184,.18); color: #E2E8F0; font-size: 15px; }
+.gc-points b { color: #fff; }
+.gc-stage { position: relative; margin-top: 26px; }
+.gc-track { direction: ltr; display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 30px calc(50% - 280px); scrollbar-width: none; perspective: 1400px; }
+.gc-track::-webkit-scrollbar { display: none; }
+.gc-card { flex: 0 0 560px; scroll-snap-align: center; position: relative; border-radius: 16px; cursor: pointer; transform: scale(.82); opacity: .5; filter: saturate(.7);
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .45s, filter .45s; transform-style: preserve-3d; }
+.gc-card img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 26px 60px rgba(0,0,0,.6); pointer-events: none; }
+.gc-card.on { transform: scale(1); opacity: 1; filter: none; }
+.gc-card::after { content: ""; position: absolute; inset: 0; border-radius: 16px; pointer-events: none; mix-blend-mode: color-dodge; opacity: 0;
+  background: linear-gradient(115deg, transparent 30%, var(--sh1) 45%, var(--sh2) 50%, var(--sh3) 55%, transparent 70%); background-size: 260% 260%; background-position: 100% 0; }
+.gc-card { --sh1: rgba(255,255,255,.35); --sh2: rgba(0,240,255,.25); --sh3: rgba(255,46,136,.22); animation: gc-idle 6s ease-in-out infinite; }
+.gc-card:nth-child(2n) { animation-delay: -2s; } .gc-card:nth-child(3n) { animation-delay: -4s; }
+.gc-card.on { animation: gc-tilt 4.2s ease-in-out infinite; }
+.gc-card.on::after { animation: gc-sheen 4.2s ease-in-out infinite; }
+.gc-card.on.play { animation: gc-tilt 2.2s ease-in-out 1, gc-tilt 4.2s ease-in-out 2.2s infinite; }
+@keyframes gc-idle { 0%,100% { transform: scale(.82) rotateY(-4deg); } 50% { transform: scale(.82) rotateY(4deg) translateY(-4px); } }
+.gc-card[data-k="wood"] { --sh1: rgba(255,220,170,.18); --sh2: rgba(210,150,90,.14); --sh3: rgba(255,200,140,.1); }
+.gc-card[data-k="iron"] { --sh1: rgba(230,236,245,.3); --sh2: rgba(160,170,185,.25); --sh3: rgba(255,255,255,.15); }
+.gc-card[data-k="bronze"] { --sh1: rgba(255,200,150,.35); --sh2: rgba(230,140,80,.3); --sh3: rgba(255,220,180,.2); }
+.gc-card[data-k="silver"] { --sh1: rgba(255,255,255,.45); --sh2: rgba(200,210,225,.35); --sh3: rgba(255,255,255,.25); }
+.gc-card[data-k="gold"], .gc-card[data-k="founder"] { --sh1: rgba(255,240,170,.45); --sh2: rgba(255,200,60,.35); --sh3: rgba(255,255,220,.25); }
+.gc-card[data-k="platinum"] { --sh1: rgba(235,248,255,.45); --sh2: rgba(150,210,255,.35); --sh3: rgba(255,255,255,.25); }
+.gc-card[data-k="emerald"] { --sh1: rgba(190,255,220,.4); --sh2: rgba(40,220,130,.32); --sh3: rgba(220,255,240,.2); }
+.gc-card[data-k="whale"], .gc-card[data-k="genesis"] { --sh1: rgba(255,255,255,.35); --sh2: rgba(160,90,255,.32); --sh3: rgba(0,240,255,.3); }
+@keyframes gc-tilt { 0% { transform: scale(1) rotateY(0) rotateX(0); } 25% { transform: scale(1.03) rotateY(-10deg) rotateX(4deg); } 55% { transform: scale(1.03) rotateY(10deg) rotateX(-3deg); } 80% { transform: scale(1.01) rotateY(-3deg); } 100% { transform: scale(1) rotateY(0) rotateX(0); } }
+@keyframes gc-sheen { 0% { opacity: 0; background-position: 100% 0; } 20% { opacity: .9; } 80% { opacity: .9; } 100% { opacity: 0; background-position: 0 100%; } }
+.gc-arrow { position: absolute; top: 50%; translate: 0 -50%; z-index: 3; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(34,211,238,.5);
+  background: rgba(10,14,23,.85); color: #fff; font-size: 26px; cursor: pointer; box-shadow: 0 0 20px rgba(34,211,238,.25); }
+.gc-arrow:hover { background: rgba(34,211,238,.18); }
+.gc-prev { left: 12px; } .gc-next { right: 12px; }
+.gc-cap { text-align: center; margin-top: 4px; min-height: 64px; padding: 0 20px; }
+.gc-cap strong { display: block; font-size: 22px; color: #fff; }
+.gc-cap span { color: #94A3B8; font-size: 15px; }
+.gc-dots { display: flex; justify-content: center; gap: 7px; margin-top: 12px; }
+.gc-dots i { width: 8px; height: 8px; border-radius: 50%; background: rgba(148,163,184,.35); }
+.gc-dots i.on { background: #22D3EE; box-shadow: 0 0 8px #22D3EE; }
+.gc-note { max-width: 760px; margin: 18px auto 0; padding: 0 20px; text-align: center; font-size: 13px; color: #94A3B8; }
+@media (max-width: 700px) {
+  .gc-track { padding: 20px 9%; gap: 10px; }
+  .gc-card { flex-basis: 82%; }
+  .gc-arrow { width: 42px; height: 42px; font-size: 20px; top: 45%; }
+}
+@media (prefers-reduced-motion: reduce) { .gc-card, .gc-card.on, .gc-card.on::after, .gc-card.on.play { animation: none !important; transition: none; } }
 /* start the flying icons only after the page has loaded (keeps first paint light on phones) */
 html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
 @media (max-width: 360px) {
