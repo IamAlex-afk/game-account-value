@@ -22,6 +22,7 @@ from segments import PAGES
 
 SITE = "https://gameaccountvalue.com/"
 KEYWORDS = {
+    "kk": "roblox аккаунт бағасы, fortnite аккаунт құны, genshin impact аккаунт бағасы, clash of clans аккаунт құны, ойын аккаунтын бағалау, AI бағалау, жинақ құны, telegram бот",
     "ms": "nilai akaun roblox, harga akaun fortnite, nilai akaun genshin impact, nilai akaun clash of clans, "
           "penilaian akaun permainan, penilaian AI, nilai koleksi, bot telegram",
     "uz": "roblox akkaunt narxi, fortnite akkaunt qiymati, genshin impact akkaunt narxi, clash of clans akkaunt qiymati, "

@@ -1,7 +1,7 @@
 // Pre-format event date labels for all 17 languages with CLDR (Intl).
 // Output: scripts/design/event_dates.json  { eventId: { lang: "label" } }
 const fs = require('fs');
-const LANGS = ['en','ru','es','pt','id','tr','ar','vi','hi','fr','de','it','ja','ko','th','pl','zh','ms','uz'];
+const LANGS = ['en','ru','es','pt','id','tr','ar','vi','hi','fr','de','it','ja','ko','th','pl','zh','ms','uz','kk'];
 const EV = {
   'bs-bow': { month: '2026-10' }, 'bs-lcq': { start: '2026-10-17', end: '2026-10-18' }, 'bs-wf': { start: '2026-11-20', end: '2026-11-22' },
   'bs-8y': { start: '2026-12-12' }, 'ml-enc': { start: '2026-11-23', end: '2026-11-29' }, 'ml-m8': { month: '2027-01' },

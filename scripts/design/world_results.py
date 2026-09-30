@@ -78,3 +78,9 @@ RL['uz'] = {'c': ('Turnir', 'Gʻolib', 'Qayerdan', 'Gʻolib mukofoti', 'Mukofot 
  'cis': 'Sharqiy Yevropa va Markaziy Osiyo',
  'h': 'Soʻnggi chempionlar',
  'latam': 'Lotin Amerikasi'}
+
+# kk
+RL['kk'] = {'c': ('Турнир', 'Жеңімпаз', 'Қайдан', 'Жеңімпаз жүлдесі', 'Жүлде қоры'),
+ 'cis': 'Шығыс Еуропа және Орталық Азия',
+ 'h': 'Соңғы чемпиондар',
+ 'latam': 'Латын Америкасы'}

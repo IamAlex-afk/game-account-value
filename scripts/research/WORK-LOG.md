@@ -102,3 +102,9 @@ in search (301 migration, normal lag).
 - hreflang uz on 13 pages × 19 locales; sitemap 306. Checks: audit clean, 32 JSON-LD OK, 0 English leftovers,
   390px screenshots OK. ms event JSON-LD back to generator's compact form (content unchanged).
 - Next: kk, ky, tk, tl, sw (PLAN.md).
+
+## 2026-09-30 older locales levelled + Kazakh
+- bc5cafb: roblox manipulation subsection in 16 locales; pt/id glossary +11 terms; zh fortnite sources.
+- kk full locale (15 pages, "сіз", CIS market, KZ), built with scripts/i18n/finish_locale.py.
+- Local number style (numfmt.py) for uz/kk: 1 147 (NBSP), 17,8% — money kept as in source, like ru.
+- Sitemap 319. Remaining thin: ky, tk, tl, sw.

@@ -28,7 +28,7 @@ tl "ka/mo" casual-neutral, sw neutral); no fabricated local marketplace
 sources — local sources only if checked live, otherwise the global ones.
 
 ## Status
-- [x] ms (2026-09-30)  - [x] uz (2026-09-30)  - [ ] kk  - [ ] ky  - [ ] tk  - [ ] tl  - [ ] sw
+- [x] ms (2026-09-30)  - [x] uz (2026-09-30)  - [x] kk (2026-09-30)  - [ ] ky  - [ ] tk  - [ ] tl  - [ ] sw
 
 ## How ms was built (repeat for the next locale)
 1. `segments.py extract en <lang>` → translate todo.json (done in chunks) → merge into done.json.
@@ -40,3 +40,9 @@ sources — local sources only if checked live, otherwise the global ones.
    add <lang> to build_event_dates.js and country_names.json (Node Intl, CLDR); run world_markets.py per game.
 5. hreflang <lang> on the 13 pages in every locale; sitemap; audit_site.py; JSON-LD parse check;
    English-leftover scan; phone screenshots via same-origin iframe (local server).
+
+## One-command finish (from kk on)
+`python scripts/i18n/finish_locale.py <lang> <chunk_dir> <prev_lang> <config.json>` after the
+translation chunks t00..t14.json exist (indices = scripts/i18n/<lang>/todo.json order).
+config: keywords, numfmt (space thousands + decimal comma for counts/percents; money unchanged),
+market (LOCAL), country (LANG_COUNTRY), calc (calculators.js STR), world_extra (17 world strings).
