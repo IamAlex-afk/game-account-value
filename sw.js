@@ -1,14 +1,12 @@
 /* GameAccountValue Service Worker — offline + PWA install */
-const CACHE = 'gav-landing-2026-27';
+const CACHE = 'gav-landing-2026-30';
+// Only the shell: other languages' homepages are NOT precached any more — on a
+// phone that was ~1.5 MB of background download competing with the page.
 const PRECACHE = [
-  './', './index.html', './404.html', './manifest.json',
+  './', './404.html', './manifest.json',
   './favicon.png', './favicon.ico', './favicon-192.png', './apple-touch-icon.png',
-  './icon-192.png', './icon-512-maskable.png', './icon-192-maskable.png',
-  './assets/style.css', './assets/glass.css', './assets/glass.js', './assets/fonts/inter-latin.woff2', './assets/nav.js', './assets/cursor-trail.js', './assets/tilt.js',
-  './assets/interactions.js', './assets/counter.js',
-  './ru/', './de/', './es/', './fr/', './it/', './ja/', './ko/', './pt/',
-  './th/', './tr/', './vi/', './ar/', './hi/', './id/', './zh/', './pl/',
-  './tl/', './sw/', './ms/', './uz/', './kk/', './tk/', './ky/',
+  './assets/style.css', './assets/glass.css', './assets/glass.js', './assets/nav.js',
+  './assets/calculators.js', './assets/fonts/inter-latin.woff2',
 ];
 
 self.addEventListener('install', e => {
@@ -39,9 +37,23 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // Stale-while-revalidate: answer from cache instantly, refresh the cached
-  // copy in the background, so an edited JS/CSS file reaches returning
-  // visitors on their next load without needing a CACHE version bump.
+  // CSS/JS: network first, cache only as the offline fallback. Stale-while-
+  // revalidate served the previous deploy's CSS with the new HTML on the first
+  // visit after every update (shifted buttons, missing art). Images/fonts keep
+  // cache-first-then-refresh since they never change under the same name.
+  const isCode = /\.(css|js)(\?|$)/.test(e.request.url);
+  if (isCode) {
+    e.respondWith(
+      fetch(e.request).then(res => {
+        if (res && res.status === 200 && res.type === 'basic') {
+          const copy = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, copy));
+        }
+        return res;
+      }).catch(() => caches.match(e.request))
+    );
+    return;
+  }
   e.respondWith(
     caches.match(e.request).then(cached => {
       const network = fetch(e.request).then(res => {
@@ -55,7 +67,7 @@ self.addEventListener('fetch', e => {
         e.waitUntil(network.catch(() => {}));
         return cached;
       }
-      return network.catch(() => caches.match('./index.html'));
+      return network.catch(() => caches.match('./404.html'));
     })
   );
 });
