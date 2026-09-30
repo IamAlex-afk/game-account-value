@@ -241,6 +241,26 @@ h1 { view-transition-name: page-title; }
 @keyframes an-glitch { 0% { text-shadow: 3px 0 #FF2E88, -3px 0 #00F0FF; transform: translateX(2px); } 25% { text-shadow: -4px 0 #FF2E88, 4px 0 #00F0FF; transform: translateX(-3px) skewX(-4deg); }
   50% { text-shadow: 2px 0 #FF2E88, -2px 0 #00F0FF; } 100% { text-shadow: none; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .g-cyborg img, .g-cyborg .an-eye, .g-sit .an-wrap, .g-joystick.an-in, .g-18, .g-head h1 { animation: none !important; } }
+/* ---- card teasers: hero chip + mini card under every bot CTA (card_teaser.py) ---- */
+.hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-chips .hero-badge { margin-bottom: 0 !important; }
+.hero-card-chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px;
+  color: #FDE68A; background: linear-gradient(135deg, rgba(253,230,138,.12), rgba(240,171,252,.1)); border: 1px solid rgba(253,230,138,.45); }
+.hero-card-chip:hover { border-color: #FDE68A; }
+.gc-teaser { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; margin-top: 14px; padding: 12px; border-radius: 14px; text-decoration: none;
+  background: linear-gradient(135deg, rgba(253,230,138,.07), rgba(34,211,238,.06)); border: 1px solid rgba(253,230,138,.35); color: #E2E8F0; }
+.gc-teaser:hover { border-color: #FDE68A; }
+.gc-teaser .t-card { position: relative; width: 96px; border-radius: 8px; overflow: hidden; transform: rotate(-4deg); box-shadow: 0 8px 18px rgba(0,0,0,.5); animation: t-tilt 4s ease-in-out infinite; }
+.gc-teaser .t-card img { display: block; width: 100%; height: auto; }
+.gc-teaser .t-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,.55) 48%, rgba(0,240,255,.35) 52%, transparent 65%);
+  background-size: 250% 250%; mix-blend-mode: color-dodge; animation: t-sheen 3s ease-in-out infinite; }
+.gc-teaser strong { display: block; font-size: 15px; color: #fff; line-height: 1.35; }
+.gc-teaser span { display: block; font-size: 13px; color: #94A3B8; margin-top: 3px; }
+.gc-teaser em { font-style: normal; color: #FDE68A; font-weight: 700; }
+@keyframes t-tilt { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(3deg) translateY(-2px); } }
+@keyframes t-sheen { 0% { background-position: 100% 0; } 100% { background-position: 0 100%; } }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { .gc-teaser .t-card, .gc-teaser .t-card::after { animation: none; } html { scroll-behavior: auto; } }
 /* start the flying icons only after the page has loaded (keeps first paint light on phones) */
 html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
 @media (max-width: 360px) {
