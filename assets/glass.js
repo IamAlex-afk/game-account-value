@@ -99,3 +99,6 @@
   new MutationObserver(function () { img.classList.remove("blink"); void img.offsetWidth; img.classList.add("blink"); })
     .observe(val, { subtree: true, characterData: true, childList: true });
 })();
+
+/* Hero icons start flying after load, so they do not compete with first paint. */
+window.addEventListener("load", function () { setTimeout(function () { document.documentElement.classList.add("gav-ld"); }, 400); });
