@@ -91,3 +91,11 @@
     });
   });
 })();
+
+/* Robot sitting on the result bar flashes when the estimate changes. */
+(function () {
+  var img = document.querySelector(".g-sit img"), val = document.querySelector(".vc-result-value");
+  if (!img || !val || !window.MutationObserver) return;
+  new MutationObserver(function () { img.classList.remove("blink"); void img.offsetWidth; img.classList.add("blink"); })
+    .observe(val, { subtree: true, characterData: true, childList: true });
+})();
