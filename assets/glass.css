@@ -846,6 +846,20 @@ html body .logo::before { width: 32px; height: 32px; background: url("emblem.web
   nav .nav-right .nav-cta { flex: 1 1 auto; justify-content: center; text-align: center; }
   nav > .nav-cta { flex: 1 1 100%; justify-content: center; text-align: center; }
 }
+/* ---- performance (2026-09-30): phones repainted the whole hero every frame ----
+   rain: background-position -> transform (GPU layer); scan line: top -> transform;
+   phones: no rain and no backdrop blur (re-blurring a big panel over moving rain
+   every frame was the main CPU/GPU cost). */
+.g-fx .g-rain { background-position: 0 0; animation: g-rain-t .6s linear infinite; will-change: transform; }
+@keyframes g-rain-t { from { transform: translateY(-180px); } to { transform: translateY(0); } }
+.g-calc-card::after, .g-panel::after { top: 0; bottom: 0; height: auto; box-shadow: none;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent) bottom / 100% 2px no-repeat;
+  filter: drop-shadow(0 0 6px rgba(34,211,238,.8)); animation-name: g-scan-t; will-change: transform, opacity; }
+@keyframes g-scan-t { 0% { transform: translateY(-100%); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(0); opacity: 0; } }
+@media (max-width: 860px), (pointer: coarse) {
+  .g-fx .g-rain { display: none; }
+  .g-panel, .g-calc-card { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(15,23,42,.94); }
+}
 /* start the flying icons only after the page has loaded (keeps first paint light on phones) */
 html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .g-cyborg .cy-ico, .g-cyborg .cy-beam, .g-sit img.blink { animation: none; } }
