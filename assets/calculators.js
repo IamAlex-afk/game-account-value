@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -414,6 +414,27 @@
       confidencePrefix: "Keyakinan: ",
       copiedFallback: "Disalin!",
       gamepad: { up: "Medan sebelumnya", down: "Medan seterusnya", left: "Kurangkan", right: "Tambah", a: "Set semula semua medan", b: "Kongsi keputusan", resetCaption: "SET SEMULA", shareCaption: "KONGSI" }
+    },
+    uz: {
+      sliders: {
+        "brawl-stars": { trophies: "Kuboklar", maxed: "Power Level 11 dagi brawlerlar" },
+        "clash-of-clans": { th: "Town Hall darajasi" },
+        "clash-royale": { kt: "King Tower darajasi", maxed: "Maksimal darajadagi kartalar" },
+        "free-fire": { rank: "Rank", bundles: "Noyob bundle/pet lar" },
+        "genshin-impact": { fivestars: "5★ personajlar", c6: "C6 personajlar" },
+        "mobile-legends": { skins: "Jami skinlar", rank: "Rank" },
+        "fortnite": { skins: "Jami skinlar", ogItems: "Noyob OG buyumlar" },
+        "minecraft": { type: "Akkaunt turi" },
+        "roblox": { age: "Akkaunt yoshi", robux: "Robux balansi", limiteds: "Oddiy Limited buyumlar (nomli noyoblar emas)" }
+      },
+      select: { "clash-of-clans": { label: "Yaxshilash turi", options: [["full", "Full Max"], ["standard", "Standart"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " yil"; },
+      minecraftTypes: ["Oddiy akkaunt", "MVP+/Hypixel, noyob plash", "Minecon plashi egasi", "2 belgili nom (harf+raqam)"],
+      checkboxHeading: "Nomli noyob buyumlar (ixtiyoriy):",
+      confidence: { low: "Past", medium: "Oʻrta", high: "Yuqori" },
+      confidencePrefix: "Ishonch: ",
+      copiedFallback: "Nusxalandi!",
+      gamepad: { up: "Oldingi maydon", down: "Keyingi maydon", left: "Kamaytirish", right: "Oshirish", a: "Barcha maydonlarni tiklash", b: "Natijani ulashish", resetCaption: "TIKLASH", shareCaption: "ULASHISH" }
     }
   };
   var T = STR[LANG];
