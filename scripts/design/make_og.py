@@ -83,7 +83,7 @@ def render(game, out_dir):
                    capture_output=True, timeout=60)
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, game + '.jpg')
-    Image.open(shot).convert('RGB').save(out, quality=88, optimize=True, progressive=True)
+    Image.open(shot).convert('RGB').save(out, quality=86, optimize=True, progressive=False)
     return out
 
 
