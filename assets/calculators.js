@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk", "ky"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms", "uz", "kk", "ky", "tk"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -457,6 +457,17 @@
       confidencePrefix: "Ишенимдүүлүк: ",
       copiedFallback: "Көчүрүлдү!",
       gamepad: {"up": "Мурунку талаа", "down": "Кийинки талаа", "left": "Азайтуу", "right": "Көбөйтүү", "a": "Бардык талааларды тазалоо", "b": "Жыйынтык менен бөлүшүү", "resetCaption": "ТАЗАЛОО", "shareCaption": "БӨЛҮШҮҮ"}
+    },
+    tk: {
+      sliders: {"brawl-stars": {"trophies": "Kuboklar", "maxed": "Power Level 11-däki brawlerler"}, "clash-of-clans": {"th": "Town Hall derejesi"}, "clash-royale": {"kt": "King Tower derejesi", "maxed": "Iň ýokary derejedäki kartlar"}, "free-fire": {"rank": "Rang", "bundles": "Seýrek bundle/pet-ler"}, "genshin-impact": {"fivestars": "5★ gahrymanlar", "c6": "C6 gahrymanlar"}, "mobile-legends": {"skins": "Jemi skinler", "rank": "Rang"}, "fortnite": {"skins": "Jemi skinler", "ogItems": "Seýrek OG zatlar"}, "minecraft": {"type": "Hasabyň görnüşi"}, "roblox": {"age": "Hasabyň ýaşy", "robux": "Robux balansy", "limiteds": "Adaty Limited zatlar (atly seýrekler däl)"}},
+      select: {"clash-of-clans": {"label": "Gowulandyryş görnüşi", "options": [["full", "Full Max"], ["standard", "Standart"], ["rushed", "Rushed"]]}},
+      ageUnit: function (v) { return v + " ýyl"; },
+      minecraftTypes: ["Adaty hasap", "MVP+/Hypixel, seýrek plaş", "Minecon plaşynyň eýesi", "2 nyşanly at (harp+san)"],
+      checkboxHeading: "Atly seýrek zatlar (hökmany däl):",
+      confidence: {"low": "Pes", "medium": "Orta", "high": "Ýokary"},
+      confidencePrefix: "Ynamlylyk: ",
+      copiedFallback: "Göçürildi!",
+      gamepad: {"up": "Öňki meýdan", "down": "Indiki meýdan", "left": "Azaltmak", "right": "Köpeltmek", "a": "Ähli meýdanlary arassalamak", "b": "Netije bilen paýlaşmak", "resetCaption": "ARASSALAMAK", "shareCaption": "PAÝLAŞMAK"}
     }
   };
   var T = STR[LANG];
