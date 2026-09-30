@@ -230,5 +230,36 @@ def apply(game):
         n += 1
     print(game, 'pages updated:', n)
 
+
+# Malay (2026-09-30): strings from scripts/i18n/ms/done.json
+LANGS.append('ms')
+LOCAL['ms'] = 'sea'
+T['ms'] = {'checked': 'Disemak',
+ 'cols': ('Pasaran', 'Di mana', 'Harga diminta yang dilihat', '≈ USD', 'Paling dihargai di sana'),
+ 'dem': {'cis': 'Akaun yang dimaksimumkan sepenuhnya: semua hypercharge, syiling',
+         'cn': 'Kosmetik: skin yang dihentikan dan skin zodiak, sayap; rank Master; umur akaun',
+         'global_': 'Trofi dan bilangan brawler — iklan berharga tertinggi tidak menyebut sebarang skin jarang',
+         'jp': 'Rank Master, kedudukan kebangsaan, akaun pemilik pertama',
+         'kr': 'Kedudukan kebangsaan dan prestij; koleksi skin yang sangat besar',
+         'sea': 'Trofi dan brawler yang dimaksimumkan; banyak iklan, harga diminta menurun',
+         'tr': 'Bilangan trofi, bilangan kostum, e-mel / Supercell ID yang boleh dipindahkan'},
+ 'intro': 'Harga yang diminta di pasaran awam di pelbagai negara, semuanya disemak pada hari yang sama. Pasaran anda dipaparkan dahulu; yang lain menunjukkan '
+          'apa yang paling dihargai pemain di tempat lain.',
+ 'nav': '🌍 Dunia',
+ 'note': 'Harga yang diminta, bukan jualan yang selesai. Ditukar ke USD pada kadar 25–27 September 2026. Deskriptif sahaja — bukan nasihat untuk membeli atau '
+         'menjual; jual beli akaun mungkin melanggar peraturan permainan.',
+ 'nv': 'Belum disahkan — pasaran utama di sana menyekat semakan automatik.',
+ 'others': 'Pasaran lain',
+ 'reg': {'br': 'Brazil',
+         'cis': 'Rusia & CIS',
+         'cn': 'China',
+         'global_': 'Laman global / Barat',
+         'jp': 'Jepun',
+         'kr': 'Korea Selatan',
+         'sea': 'Asia Tenggara',
+         'tr': 'Türkiye'},
+ 'title': 'Harga akaun {game} di seluruh dunia',
+ 'your': 'Pasaran anda'}
+
 if __name__ == '__main__':
     apply(sys.argv[1] if len(sys.argv) > 1 else 'brawl-stars')

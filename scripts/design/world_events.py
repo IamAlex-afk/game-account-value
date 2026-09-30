@@ -157,3 +157,14 @@ def render_event_ld(game):
     if not out:
         return ''
     return '<script type="application/ld+json">' + json.dumps(out if len(out) > 1 else out[0], ensure_ascii=False) + '</script>'
+
+# Malay (2026-09-30)
+L['ms'] = {'anniv': '{n} tahun sejak pelancaran',
+ 'c': {'days': 'Dalam {n} hari', 'done': 'Selesai', 'live': 'Sedang berlangsung', 'month': 'Bulan ini', 'tomorrow': 'Esok'},
+ 'h': 'Acara rasmi akan datang',
+ 'i': 'Kejohanan dan acara yang diumumkan oleh penerbit sendiri. Tarikh yang belum diumumkan ditanda TBA. Kiraan detik dikira dalam pelayar anda.',
+ 'k': {'anniv': 'Ulang tahun', 'esports': 'E-sukan', 'ingame': 'Acara dalam permainan'},
+ 'online': 'Dalam talian',
+ 's': {'fact': 'Fakta tarikh', 'ok': 'Disahkan', 'tba': 'Diumumkan · tarikh TBA'},
+ 'src': 'Sumber',
+ 'tba': 'TBA'}

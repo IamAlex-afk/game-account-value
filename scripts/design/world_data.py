@@ -270,3 +270,43 @@ for _g, _rows in _ROWS.items():
     MARKETS[_g].update(_rows)
 for _l, _notes in _N2.items():
     N[_l].update(_notes)
+
+# Malay (2026-09-30)
+N['ms'] = {'coc_c': 'Harga rendah; iklan tertinggi untuk permainan ini €252',
+ 'coc_cn': 'Town Hall 18 dengan wira, pertahanan dan equipment dimaksimumkan',
+ 'coc_g': 'Tahap Town Hall, wira, pingat CWL',
+ 'coc_jp': 'Town Hall 18, wira dimaksimumkan, permata',
+ 'coc_s': 'Akaun Town Hall yang dimaksimumkan',
+ 'coc_tr': 'Nama dalam permainan yang jarang; Town Hall 18 dimaksimumkan',
+ 'cr_c': 'Akaun pengumpul yang dimaksimumkan: semua evolusi dan wira',
+ 'cr_g': 'Evolusi kad, kad maksimum, champion',
+ 'cr_jp': 'Tahap akaun, kad legendary, permata, lencana cabaran 20 kemenangan',
+ 'cr_s': 'Akaun "sedia e-sukan": semua evolusi, kad maksimum',
+ 'cr_tr': 'Akaun yang dimaksimumkan sepenuhnya, champion, evolusi, permata',
+ 'ff_c': 'Akaun pengumpul tahap tinggi dengan rank Heroic',
+ 'ff_g': 'Bundle jarang, berlian, sejarah Elite Pass',
+ 'ff_s': 'Akaun OG: Elite Pass awal, 1,500 item fesyen',
+ 'ff_tr': 'Tahap Prime 8, senjata EVO',
+ 'fn_c': 'Akaun era 2018 dengan 800+ skin',
+ 'fn_g': 'Skin OG Chapter 1 (Renegade Raider, Black Knight)',
+ 'fn_s': '700+ skin termasuk Renegade Raider dan kolaborasi',
+ 'fn_tr': 'Akaun OG dan bilangan skin',
+ 'gi_c': 'Iklan teratas dijual bersama Honkai: Star Rail',
+ 'gi_cn': 'Binaan permulaan dengan watak popular (Nahida, Neuvillette); "jaminan pemulihan seumur hidup"',
+ 'gi_cn2': 'Dari akaun permulaan hingga koleksi 100+ watak lima bintang; "pengesahan rasmi", jaminan seumur hidup',
+ 'gi_g': 'Watak 5★, constellation (C6), refinement senjata',
+ 'gi_jp': 'Akaun permulaan reroll dengan 48,000+ Primogem; teratas: beberapa watak C6',
+ 'gi_kr': 'Watak dan senjata lima bintang dengan constellation penuh (C6)',
+ 'gi_s': 'AR59 dengan beberapa watak 5★',
+ 'gi_tr': 'Bilangan watak lima bintang (teratas: 118), AR60',
+ 'mc_c': 'Kebanyakannya rank pelayan persendirian, bukan akaun rasmi',
+ 'mc_g': 'Jenis akaun (Java), cape jarang, nama pendek',
+ 'mc_s': 'Bilangan dan kejarangan cape',
+ 'ml_g': 'Rank, bilangan wira dan skin (skin Collector / Legend)',
+ 'ml_s': 'Rank Immortal, 130 wira, 552 skin',
+ 'ml_tr': 'Bilangan skin dan mata koleksi (teratas: 807 skin)',
+ 'rbx_c': 'Kebanyakannya akaun berharga rendah; iklan tertinggi €117',
+ 'rbx_g': 'Item Limited (Headless, Korblox), Robux, umur akaun',
+ 'rbx_s': 'Akaun yang berkaitan dengan experience tertentu (tertinggi ≈ $803)',
+ 'rbx_tr': 'Headless dan Korblox'}
+TW_ONLY['ms'] = 'Twitch sahaja — di banyak negara permainan ini kebanyakannya distrim di platform lain.'

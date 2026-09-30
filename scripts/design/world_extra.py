@@ -159,3 +159,20 @@ def render_extra(game, lang, game_name):
                '<div class="wm-wrap"><table class="wm-table wm-small"><thead><tr><th scope="col">' + '</th><th scope="col">'.join(x['st_c']) +
                '</th></tr></thead><tbody>' + rows + '</tbody></table></div><p class="wm-note">' + x['src'].format(s=link(st['src'])) + ', ' + x['upd'].format(d=st['date']) + '. ' + TW_ONLY[lang] + '</p>')
     return '\n'.join(out)
+
+# Malay (2026-09-30)
+LANG_COUNTRY['ms'] = 'MY'
+X['ms'] = {'esp': 'Wang hadiah e-sukan mengikut negara',
+ 'esp_c': ('Negara', 'Wang hadiah', 'Pemain'),
+ 'esp_i': 'Jumlah wang hadiah yang dimenangi pemain dari setiap negara dalam kejohanan {game}.',
+ 'not_top': '{c} belum berada dalam 15 teratas mengikut wang hadiah.',
+ 'rec': 'kejohanan yang direkodkan {span}',
+ 'src': 'Sumber: {s}',
+ 'st': 'Penstrim langsung paling ramai ditonton sekarang',
+ 'st_c': ('Saluran', 'Bahasa', 'Purata penonton'),
+ 'st_i': 'Saluran Twitch disusun mengikut purata penonton dalam 30 hari lepas. Strim dalam bahasa anda dipaparkan dahulu.',
+ 'st_none': 'Tiada strim dalam bahasa anda dalam 15 teratas buat masa ini.',
+ 'top': 'Pemenang wang tertinggi di dunia',
+ 'top_c': ('Pemain', 'Negara', 'Wang hadiah'),
+ 'upd': 'dikemas kini {d}',
+ 'yours': 'Negara anda'}

@@ -66,3 +66,9 @@ def render_results(game, lang, names):
                  '<td data-l="' + c[3] + '" class="wm-num">' + (e['prize'] or '—') + '</td><td data-l="' + c[4] + '" class="wm-num">' + (e['pool'] or '—') + '</td></tr>')
     return ('<h3>🏆 ' + r['h'] + '</h3><div class="wm-wrap"><table class="wm-table wm-small wm-results"><thead><tr><th scope="col">' +
             '</th><th scope="col">'.join(c) + '</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
+
+# Malay (2026-09-30)
+RL['ms'] = {'c': ('Kejohanan', 'Pemenang', 'Dari', 'Hadiah pemenang', 'Kumpulan hadiah'),
+ 'cis': 'Eropah Timur & Asia Tengah',
+ 'h': 'Juara terkini',
+ 'latam': 'Amerika Latin'}

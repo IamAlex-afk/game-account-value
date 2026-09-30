@@ -88,3 +88,10 @@ in search (301 migration, normal lag).
 - Bot prices recalibrated to Eldorado 2026-09-29 (bot repo docs/item-status-sources.md).
 - Status of languages: en 26 pages; 16 full locales 15 pages (no news/privacy/terms);
   7 thin locales (ms uz kk ky tk tl sw) 2 pages — plan in scripts/i18n/PLAN.md.
+
+## 2026-09-30 Malay (ms) full locale
+- 15 pages built from EN (1,565 segments translated, register "anda"); calculator STR.ms; world section
+  for ms (LOCAL sea, country MY, CLDR dates/names); hreflang ms on 13 pages × 18 locales; sitemap +13 (293).
+- segments.py fix: text right after an <svg> icon was left untranslated (e.g. "Get Exact Estimate via Bot").
+- Checks: audit clean, 32 JSON-LD blocks parse, 0 English leftovers, 390px screenshots index/roblox OK.
+- Next locale per PLAN.md: uz (base: Russian pages per plan, or EN with from_en.py).

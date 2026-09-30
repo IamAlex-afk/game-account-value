@@ -3,7 +3,7 @@
 
   var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th"].indexOf(LANG) === -1) LANG = "en";
+  if (["en", "ru", "id", "pt", "es", "fr", "ar", "de", "tr", "vi", "hi", "it", "ja", "ko", "zh", "pl", "th", "ms"].indexOf(LANG) === -1) LANG = "en";
 
   function lerp(t, a, b) { return a + (b - a) * t; }
 
@@ -393,6 +393,27 @@
       confidencePrefix: "ความมั่นใจ: ",
       copiedFallback: "คัดลอกแล้ว!",
       gamepad: { up: "ฟิลด์ก่อนหน้า", down: "ฟิลด์ถัดไป", left: "ลด", right: "เพิ่ม", a: "รีเซ็ตทั้งหมด", b: "แชร์ผลลัพธ์", resetCaption: "รีเซ็ต", shareCaption: "แชร์" }
+    },
+    ms: {
+      sliders: {
+        "brawl-stars": { trophies: "Trofi", maxed: "Brawler Power Level 11" },
+        "clash-of-clans": { th: "Tahap Town Hall" },
+        "clash-royale": { kt: "Tahap King Tower", maxed: "Kad tahap maksimum" },
+        "free-fire": { rank: "Rank", bundles: "Bundle/pet jarang" },
+        "genshin-impact": { fivestars: "Watak 5★", c6: "Watak dengan C6" },
+        "mobile-legends": { skins: "Jumlah skin", rank: "Rank" },
+        "fortnite": { skins: "Jumlah skin", ogItems: "Item OG jarang" },
+        "minecraft": { type: "Jenis akaun" },
+        "roblox": { age: "Umur akaun", robux: "Baki Robux", limiteds: "Item Limited biasa (bukan item jarang bernama)" }
+      },
+      select: { "clash-of-clans": { label: "Jenis naik taraf", options: [["full", "Full Max"], ["standard", "Standard"], ["rushed", "Rushed"]] } },
+      ageUnit: function (v) { return v + " tahun"; },
+      minecraftTypes: ["Akaun biasa", "MVP+/Hypixel, cape jarang", "Pemegang cape Minecon", "Nama 2 aksara (huruf+nombor)"],
+      checkboxHeading: "Item jarang bernama (pilihan):",
+      confidence: { low: "Rendah", medium: "Sederhana", high: "Tinggi" },
+      confidencePrefix: "Keyakinan: ",
+      copiedFallback: "Disalin!",
+      gamepad: { up: "Medan sebelumnya", down: "Medan seterusnya", left: "Kurangkan", right: "Tambah", a: "Set semula semua medan", b: "Kongsi keputusan", resetCaption: "SET SEMULA", shareCaption: "KONGSI" }
     }
   };
   var T = STR[LANG];
