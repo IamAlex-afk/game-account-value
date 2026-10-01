@@ -149,10 +149,15 @@ section links + "fresh for this game" block; PageSpeed (Google API quota hit 09-
 test by owner; optional PDF digital signature; GitHub repo research for ideas.
 
 ## 2026-10-01 external audit pass (owner's 12-point prompt)
-- Fixed: CoC TH17 rushed [30,55] -> [30,35] in assets/calculators.js (rushed could outprice standard) (bd55d6ab).
+- CoC TH17 rushed: changed to [30,35] (bd55d6ab), then REVERTED to [30,55]. Not a bug: the calculator mirrors the page's
+  "Real Market Prices" table (igitems.com report), and igitems on 2026-10-01 still shows TH17 rushed $25-$55 vs standard
+  $30-$50. Rule: never "fix" a calculator number by pattern - check the page table and its source first.
 - Game pages: "Latest <game> news" lists the 3 newest articles + hub (news_pages.GAME_BLOCK_ARTICLES), dates
   bidi-isolated for ar; Organization sameAs + GitHub repo on the 8 homepages that carry it (f12e06e8). IndexNow 224 URLs -> 200.
 - Audit claims that were false (tool did not see <head>/JSON-LD): hreflang, NewsArticle/BreadcrumbList LD, llms.txt,
   news source links (576/576 articles link the publisher). Zenodo DOI is the owner's paper -> stays on Person, not Organization.
-- OPEN (owner): Cloudflare proxy is OFF (A records = GitHub) -> HSTS/X-Frame-Options/Referrer-Policy need proxy + Transform Rule.
-- OPEN: TH17 rushed lower bound 30 > TH18 rushed lower 20; _snapw.html/_snapy.html are tracked and live (screenshot leftovers).
+- Cloudflare proxy ON (owner, 2026-10-01): HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy live.
+  Note: Cloudflare sets browser cache 4h on assets (was 600s) - owner may switch to "Respect Existing Headers".
+- Removed tracked screenshot leftovers _snapw.html/_snapy.html.
+- NEXT refresh (~2026-10-28): igitems CoC table moved slightly (TH18 100-250/50-115/20-30, TH17 55-180/30-50/25-55,
+  TH16 40-95, TH13 15-35) - update page table (24 langs) and calculators.js together.
