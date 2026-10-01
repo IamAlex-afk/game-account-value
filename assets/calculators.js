@@ -598,7 +598,7 @@
       compute: function (v) {
         var table = {
           18: { full: [100, 260], standard: [45, 120], rushed: [20, 35] },
-          17: { full: [55, 185], standard: [30, 50], rushed: [30, 55] },
+          17: { full: [55, 185], standard: [30, 50], rushed: [30, 35] },
           16: { full: [40, 100], standard: [20, 35], rushed: [15, 25] },
           15: { full: [30, 65], standard: [15, 25], rushed: [15, 20] },
           14: { full: [25, 50], standard: [15, 25], rushed: [10, 20] },
