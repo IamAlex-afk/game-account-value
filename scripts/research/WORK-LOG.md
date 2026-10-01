@@ -18,6 +18,24 @@ screenshot scan lives in the Telegram bot, not on the site.
 - All 17 full languages get new content (en ru es pt id tr ar vi hi fr de it ja ko th pl zh).
 - Verify live (screenshots / Lighthouse / curl), then commit → push → `gh run list`.
 
+## Done 2026-09-30 / 10-01 (read SITE-STANDARD.md first — it is the working prompt)
+- SITE-STANDARD.md + scripts/site_check.py (0 errors gate) + scripts/deep_audit.py (page-by-page report).
+- Privacy/terms/about in 24 languages (scripts/design/legal_pages.py, legal_text_*.py, about_text_*.py),
+  matched to what the bot stores; About link in every footer.
+- News in 24 languages: 10 articles from official publisher announcements (scripts/design/news_pages.py,
+  news_data.py, news_text_*.py; sources in research/news-2026-09.md). Game news hubs are noindex,follow
+  until 3 articles (MIN_HUB_ARTICLES). Old English market-watch news pages replaced; their events
+  timeline and regional prices still live on the game pages (#world).
+- Freshness badge rewritten (no 'researched live by AI' — contradicted methodology), HowTo LD removed.
+- Card teasers (hero chip + mini card under every calculator), carousel on the 2nd screen.
+- Bot: /delete erases fingerprints + feedback, fingerprints expire after 90 days; legal links in the
+  user's language. Needs server deploy: bash /opt/gavbot/app/deploy/install.sh
+- Decided NOT to add templated "pros & cons" blocks (game pages already have evidence, comparison,
+  value drivers, risks, rules, sources) nor a sitemap-style footer (menu links are crawlable).
+- Search Console: domain property (sc-domain) -> sitemap must be submitted as the full URL.
+  Resubmitted 2026-10-01. Bing ~54 pages indexed; Google ~180 via site: query.
+- Next: monthly price refresh 2026-10-28; add news so game hubs reach 3 articles; brand mentions/backlinks.
+
 ## Done (2026-09-27/28)
 - Cyber-Glass redesign on all 281 pages — commits 9907ac8, 6346f88.
   Build sources: `scripts/design/` (css parts, rollout.py, stabilize.py,
