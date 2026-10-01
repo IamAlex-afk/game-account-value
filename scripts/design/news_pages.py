@@ -14,10 +14,14 @@ import news_data as D
 
 SITE = 'https://gameaccountvalue.com/'
 LANGS = ['en', 'ru', 'es', 'pt', 'id', 'tr', 'ar', 'vi', 'hi', 'fr', 'de', 'it', 'ja', 'ko', 'th', 'pl', 'zh', 'tl', 'sw', 'ms', 'uz', 'kk', 'tk', 'ky']
-TEXT = dict(D.TEXT)
+TEXT = {L: {'ui': dict(v['ui']), 'a': dict(v['a'])} for L, v in D.TEXT.items()}
 for f in sorted(glob.glob(os.path.join(HERE, 'news_text_*.py'))):
-    TEXT.update(importlib.import_module(os.path.basename(f)[:-3]).TEXT)
-READY = [L for L in LANGS if L in TEXT]
+    for L, v in importlib.import_module(os.path.basename(f)[:-3]).TEXT.items():
+        T = TEXT.setdefault(L, {'ui': {}, 'a': {}})
+        T['ui'].update(v.get('ui', {}))
+        T['a'].update(v.get('a', {}))
+# a language is built only when it has the UI strings and every article
+READY = [L for L in LANGS if L in TEXT and TEXT[L]['ui'] and all(a[0] in TEXT[L]['a'] for a in D.ARTICLES)]
 AUTHOR = {'@type': 'Person', 'name': 'Aleksei Bitkin', 'url': SITE + 'about.html'}
 PUBLISHER = {'@type': 'Organization', 'name': 'GameAccountValue', 'url': SITE,
              'logo': {'@type': 'ImageObject', 'url': SITE + 'favicon-192.png'}}

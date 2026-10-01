@@ -31,6 +31,37 @@ ARTICLES = [
    ('https://www.fortnite.com/battle-pass', 'Epic Games', None)]),
 ]
 
+ARTICLES += [
+ ('mc-d2', 'minecraft', 'news-minecraft-2026-09-dungeons-ii-launch', '2026-09-29',
+  [('https://www.minecraft.net/en-us/article/minecraft-dungeons-ii-is-live', 'Mojang Studios', '2026-09-29')]),
+ ('cr-mt-oct', 'clash-royale', 'news-clash-royale-2026-09-merge-tactics-october', '2026-09-30',
+  [('https://supercell.com/en/games/clashroyale/blog/release-notes/merge-tactics-season-11-october-changes/', 'Supercell', '2026-09-30')]),
+ ('ml-mplph', 'mobile-legends', 'news-mobile-legends-2026-09-mpl-ph-s18-playoffs', '2026-09-26',
+  [('https://en.moonton.com/news/377.html', 'MOONTON Games', '2026-09-26')]),
+ ('cr-bal-sep', 'clash-royale', 'news-clash-royale-2026-09-balance-changes', '2026-09-23',
+  [('https://supercell.com/en/games/clashroyale/blog/release-notes/september-balance-changes-2027/', 'Supercell', '2026-09-23')]),
+ ('gi-wish71', 'genshin-impact', 'news-genshin-impact-2026-09-version-7-1-event-wishes', '2026-09-21',
+  [('https://genshin.hoyoverse.com/en/news/detail/166228', 'HoYoverse', '2026-09-21')]),
+ ('bs-duo', 'brawl-stars', 'news-brawl-stars-2026-09-duolingo-event', '2026-09-19',
+  [('https://supercell.com/en/games/brawlstars/blog/community/brawl-stars-x-duolingo/', 'Supercell', '2026-09-19')]),
+ ('ff-naruto', 'free-fire', 'news-free-fire-2026-09-naruto-shippuden', '2026-09-15',
+  [('https://ff.garena.com/en/article/1718/', 'Garena', '2026-09-15')]),
+ ('ml-mtc8', 'mobile-legends', 'news-mobile-legends-2026-09-mtc-season-8-m8', '2026-09-10',
+  [('https://en.moonton.com/news/374.html', 'MOONTON Games', '2026-09-10')]),
+ ('coc-blast', 'clash-of-clans', 'news-clash-of-clans-2026-09-equipment-blast', '2026-09-09',
+  [('https://supercell.com/en/games/clashofclans/blog/news/equipment-blast-medal-event/', 'Supercell', '2026-09-09')]),
+ ('mc-wild', 'minecraft', 'news-minecraft-2026-09-wilderness-bound', '2026-09-05',
+  [('https://www.minecraft.net/en-us/article/drop-3-2026-name-announce', 'Mojang Studios', '2026-09-05')]),
+ ('ff-award', 'free-fire', 'news-free-fire-2026-09-pocket-gamer-award', '2026-09-03',
+  [('https://ff.garena.com/en/article/1701/', 'Garena', '2026-09-03')]),
+ ('rbx-fall', 'roblox', 'news-roblox-2026-09-fall-games-preview', '2026-09-02',
+  [('https://about.roblox.com/newsroom/2026/09/roblox-fall-games-preview', 'Roblox', '2026-09-02')]),
+ ('coc-wwe', 'clash-of-clans', 'news-clash-of-clans-2026-09-wwe-skins', '2026-09-01',
+  [('https://supercell.com/en/games/clashofclans/blog/news/wwe-search-for-cena-steps-into-the-ring/', 'Supercell', '2026-09-01')]),
+ ('bs-bsc27', 'brawl-stars', 'news-brawl-stars-2026-08-bsc-2027-first-look', '2026-08-24',
+  [('https://supercell.com/en/games/brawlstars/blog/esports/first-look-at-bsc-2027/', 'Supercell', '2026-08-24')]),
+]
+
 TEXT = {'en': {
  'ui': {
   'news': 'News', 'news_title': 'Game news that affects account value',
