@@ -22,6 +22,14 @@ AUTHOR = {'@type': 'Person', 'name': 'Aleksei Bitkin', 'url': SITE + 'about.html
 PUBLISHER = {'@type': 'Organization', 'name': 'GameAccountValue', 'url': SITE,
              'logo': {'@type': 'ImageObject', 'url': SITE + 'favicon-192.png'}}
 ARTS = sorted(D.ARTICLES, key=lambda a: a[3], reverse=True)
+# Google: keep thin pages out of the index. A game's news hub is indexed only once it lists
+# MIN_HUB_ARTICLES articles; until then it is 'noindex, follow' (crawlable, links followed),
+# without hreflang and outside the sitemap. Opens automatically as articles are added.
+MIN_HUB_ARTICLES = 3
+
+
+def hub_indexable(game):
+    return sum(1 for a in ARTS if a[1] == game) >= MIN_HUB_ARTICLES
 
 CSS = ('<style>.news-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px 40px; }'
        '.news-wrap h2 { font-size: 21px; margin: 30px 0 10px; } .news-wrap li { margin: 7px 0; } .news-wrap ul { padding-inline-start: 22px; }'
@@ -55,7 +63,7 @@ def esc(v):
     return html.escape(v, quote=True)
 
 
-def shell(L, slug, title, desc, crumbs, ld, main, og_type='website', image=None):
+def shell(L, slug, title, desc, crumbs, ld, main, og_type='website', image=None, index=True):
     s = open(ROOT + ('glossary.html' if L == 'en' else L + '/glossary.html'), encoding='utf-8').read()
     me = url(L, slug + '.html')
     full = f'{title} | GameAccountValue'
@@ -73,7 +81,10 @@ def shell(L, slug, title, desc, crumbs, ld, main, og_type='website', image=None)
     s = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">\n?', '', s)
     alts = f'<link rel="alternate" hreflang="x-default" href="{url("en", slug + ".html")}">\n' + ''.join(
         f'<link rel="alternate" hreflang="{x}" href="{url(x, slug + ".html")}">\n' for x in READY)
-    s = s.replace(f'<link rel="canonical" href="{me}">', f'<link rel="canonical" href="{me}">\n' + alts.rstrip('\n'), 1)
+    if index:
+        s = s.replace(f'<link rel="canonical" href="{me}">', f'<link rel="canonical" href="{me}">\n' + alts.rstrip('\n'), 1)
+    else:
+        s = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex, follow">', s, count=1)
     s = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', s, flags=re.S)
     s = s.replace('</head>', '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>\n' + CSS + '\n</head>', 1)
     home_img = re.search(r'<nav class="crumbs"[^>]*><ol><li><a href="\./">(<img[^>]*>)', s).group(1)
@@ -143,7 +154,7 @@ def game_hub(L, game):
             f'<div class="news-wrap">\n<ul class="news-list">' + ''.join(card(L, a) for a in items) + '</ul>\n'
             f'<div class="news-links"><a href="./{game}.html">{U["calc"].format(game=G)}</a><a href="./news.html">{U["all"]}</a></div>\n'
             f'<p class="news-note">{U["note"]}</p>\n</div>\n<!--CTA-->')
-    shell(L, game + '-news', title, lead, [('./', home_name(L)), ('./news.html', U['news']), (None, G)], ld, main)
+    shell(L, game + '-news', title, lead, [('./', home_name(L)), ('./news.html', U['news']), (None, G)], ld, main, index=hub_indexable(game))
 
 
 def news_hub(L):
@@ -181,19 +192,23 @@ def game_block(L, game):
 
 
 def sitemap():
+    """Indexable news URLs in, noindex game hubs out (Google: list only URLs you want in Search)."""
     p = ROOT + 'sitemap.xml'
     s = open(p, encoding='utf-8').read()
-    add = ''
+    add, removed = '', 0
     for L in READY:
-        for name in ['news.html'] + [g + '-news.html' for g in D.GAMES] + [a[2] + '.html' for a in ARTS]:
+        for g in D.GAMES:
+            if not hub_indexable(g):
+                s, n = re.subn(r'\s*<url><loc>' + re.escape(url(L, g + '-news.html')) + r'</loc>.*?</url>', '', s)
+                removed += n
+        names = ['news.html'] + [g + '-news.html' for g in D.GAMES if hub_indexable(g)] + [a[2] + '.html' for a in ARTS]
+        for name in names:
             u = url(L, name)
-            if f'<loc>{u}</loc>' in s:
-                s = re.sub(rf'(<loc>{re.escape(u)}</loc><lastmod>)[^<]*', rf'\g<1>{D.PUBLISHED}', s)
-            else:
+            if f'<loc>{u}</loc>' not in s:
                 add += f'  <url><loc>{u}</loc><lastmod>{D.PUBLISHED}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n'
     s = s.replace('</urlset>', add + '</urlset>')
     open(p, 'w', encoding='utf-8', newline='\n').write(s)
-    return add.count('<url>')
+    return f'+{add.count("<url>")} -{removed}'
 
 
 if __name__ == '__main__':

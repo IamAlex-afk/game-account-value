@@ -40,14 +40,17 @@ for p in pages:
     lang = re.search(r'<html[^>]*\blang="([^"]+)"', s)
     if not lang: issues['no html lang'].append(p)
     elif folder != 'en' and not lang.group(1).lower().startswith(folder): issues['lang != folder'].append(p + ' ' + lang.group(1))
-    if re.search(r'<meta[^>]+name="robots"[^>]+noindex', s, re.I): issues['NOINDEX'].append(p)
+    # noindex is intentional for thin pages (news_pages.MIN_HUB_ARTICLES) and 404; it is an
+    # error only when such a page is also listed in the sitemap (Google: list indexable URLs only).
+    noindex = bool(re.search(r'<meta[^>]+name="robots"[^>]+noindex', s, re.I))
+    if noindex and url_of(p) in sm_urls: issues['NOINDEX page listed in sitemap'].append(p)
     if not re.search(r'<title>[^<]{5,}</title>', s): issues['no/short title'].append(p)
     if not re.search(r'<meta name="description" content="[^"]{30,}"', s): issues['no/short meta description'].append(p)
     can = re.search(r'<link rel="canonical" href="([^"]+)"', s)
     if p != '404.html':
         if not can: issues['no canonical'].append(p)
         elif can.group(1) != url_of(p): issues['canonical != own URL'].append(p + ' -> ' + can.group(1))
-        if url_of(p) not in sm_urls and p not in ('404.html',): issues['not in sitemap'].append(p)
+        if not noindex and url_of(p) not in sm_urls: issues['indexable page not in sitemap'].append(p)
     for h in re.findall(r'<link rel="alternate" hreflang="[^"]+" href="([^"]+)"', s):
         t = local_target(p, h)
         if t and not os.path.exists(t): issues['hreflang -> missing page'].append(p + ' -> ' + h)

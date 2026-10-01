@@ -32,6 +32,13 @@ Site header menu (Games/Guides/News + same-page language switcher) · breadcrumb
 one primary action (bot CTA) with the card teaser under calculators · 18+ card + notice in the footer ·
 canonical to itself · hreflang to all existing translations · valid JSON-LD · unique title/description.
 
+## Indexing rules
+- Thin pages stay out of the index: a game's news hub is `noindex, follow`, without hreflang and outside the
+  sitemap until it lists 3 articles (`news_pages.MIN_HUB_ARTICLES`); it reopens automatically on rebuild.
+- The sitemap lists only indexable canonical URLs; `<lastmod>` comes from git (`scripts/sitemap_lastmod.py`)
+  so it changes only when the page itself changed.
+- `scripts/audit_site.py` must print NO ISSUES (noindex + sitemap conflict, missing canonical, hreflang return links).
+
 ## Page types — what Google's guides ask for
 - **Game page (tool + report):** calculator, real price ranges with sources and dates, what raises/
   lowers value, comparison links, honest pros & cons, scam risks, rules, FAQ, sources list.
