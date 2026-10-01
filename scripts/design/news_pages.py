@@ -66,7 +66,7 @@ def esc(v):
 def shell(L, slug, title, desc, crumbs, ld, main, og_type='website', image=None, index=True):
     s = open(ROOT + ('glossary.html' if L == 'en' else L + '/glossary.html'), encoding='utf-8').read()
     me = url(L, slug + '.html')
-    full = f'{title} | GameAccountValue'
+    full = title if len(title) > 55 else f'{title} | GameAccountValue'  # long titles: site name is shown by Google anyway
     for pat, val in ((r'<title>.*?</title>', f'<title>{esc(full)}</title>'),
                      (r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(desc)}">'),
                      (r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(full)}">'),
