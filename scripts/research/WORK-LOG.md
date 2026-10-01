@@ -147,3 +147,12 @@ news articles, 24 langs, NewsArticle LD); NO automated scraping (Eldorado ToS 3.
 application + data-access letter (owner decision); founders /gift + public card counter + rules page; footer
 section links + "fresh for this game" block; PageSpeed (Google API quota hit 09-30) re-check; WhatsApp preview
 test by owner; optional PDF digital signature; GitHub repo research for ideas.
+
+## 2026-10-01 external audit pass (owner's 12-point prompt)
+- Fixed: CoC TH17 rushed [30,55] -> [30,35] in assets/calculators.js (rushed could outprice standard) (bd55d6ab).
+- Game pages: "Latest <game> news" lists the 3 newest articles + hub (news_pages.GAME_BLOCK_ARTICLES), dates
+  bidi-isolated for ar; Organization sameAs + GitHub repo on the 8 homepages that carry it (f12e06e8). IndexNow 224 URLs -> 200.
+- Audit claims that were false (tool did not see <head>/JSON-LD): hreflang, NewsArticle/BreadcrumbList LD, llms.txt,
+  news source links (576/576 articles link the publisher). Zenodo DOI is the owner's paper -> stays on Person, not Organization.
+- OPEN (owner): Cloudflare proxy is OFF (A records = GitHub) -> HSTS/X-Frame-Options/Referrer-Policy need proxy + Transform Rule.
+- OPEN: TH17 rushed lower bound 30 > TH18 rushed lower 20; _snapw.html/_snapy.html are tracked and live (screenshot leftovers).
