@@ -34,6 +34,8 @@ screenshot scan lives in the Telegram bot, not on the site.
   value drivers, risks, rules, sources) nor a sitemap-style footer (menu links are crawlable).
 - Search Console: domain property (sc-domain) -> sitemap must be submitted as the full URL.
   Resubmitted 2026-10-01. Bing ~54 pages indexed; Google ~180 via site: query.
+- News batch 2 (2026-10-01): +14 articles x 24; hubs open for Roblox, Brawl Stars, CoC, CR, Free Fire, MLBB,
+  Minecraft; Genshin (2) and Fortnite (1, site bot-protected) stay noindex. 1249 pages, sitemap 1200.
 - Next: monthly price refresh 2026-10-28; add news so game hubs reach 3 articles; brand mentions/backlinks.
 
 ## Done (2026-09-27/28)
