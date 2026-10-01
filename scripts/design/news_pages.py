@@ -30,6 +30,8 @@ ARTS = sorted(D.ARTICLES, key=lambda a: a[3], reverse=True)
 # MIN_HUB_ARTICLES articles; until then it is 'noindex, follow' (crawlable, links followed),
 # without hreflang and outside the sitemap. Opens automatically as articles are added.
 MIN_HUB_ARTICLES = 3
+# newest articles listed in the "Latest <game> news" block on the game page
+GAME_BLOCK_ARTICLES = 3
 
 
 def hub_indexable(game):
@@ -180,11 +182,12 @@ def game_block(L, game):
     p = ROOT + ('' if L == 'en' else L + '/') + game + '.html'
     s = open(p, encoding='utf-8').read()
     U, G = TEXT[L]['ui'], D.GAMES[game]
-    a = next(x for x in ARTS if x[1] == game)
-    T = TEXT[L]['a'][a[0]]
-    d = DATES[L][a[4][0][2]] if a[4][0][2] else a[4][0][1]
+    items = ''
+    for a in [x for x in ARTS if x[1] == game][:GAME_BLOCK_ARTICLES]:
+        d = DATES[L][a[4][0][2]] if a[4][0][2] else a[4][0][1]
+        items += f'<p><a href="./{a[2]}.html"><strong>{TEXT[L]["a"][a[0]]["title"]}</strong></a> <span style="color:var(--muted);unicode-bidi:isolate">· {d}</span></p>'
     block = (f'<section class="g-fresh" aria-label="{esc(U["latest"].format(game=G))}"><h2>📰 {U["latest"].format(game=G)}</h2>'
-             f'<p><a href="./{a[2]}.html"><strong>{T["title"]}</strong></a></p><p style="color:var(--muted)">{d} · <a href="./{game}-news.html">{U["more"].format(game=G)} →</a></p></section>')
+             f'{items}<p><a href="./{game}-news.html">{U["more"].format(game=G)} →</a></p></section>')
     s = re.sub(r'<section class="g-fresh".*?</section>\n?', '', s, flags=re.S)
     j = s.find('data-g-slot="result"')
     i = s.find('<section class="g-card', j) if j >= 0 else -1

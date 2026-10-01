@@ -336,7 +336,7 @@ def org_logo():
         return
     ld = {"@context": "https://schema.org", "@type": "Organization", "@id": SITE + "#organization",
           "name": "GameAccountValue", "url": SITE, "logo": SITE + "favicon-192.png",
-          "sameAs": ["https://t.me/GameAccountValue_Bot"]}
+          "sameAs": ["https://t.me/GameAccountValue_Bot", "https://github.com/IamAlex-afk/game-account-value"]}
     s = s.replace('</head>', '<script type="application/ld+json">' + json.dumps(ld) + '</script>\n</head>', 1)
     open(p, 'w', encoding='utf-8', newline='').write(s)
 
