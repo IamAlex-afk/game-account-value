@@ -1,3 +1,21 @@
+// Phone header: one row (logo · bot · burger); the burger opens the menu + language.
+(function () {
+  var nav = document.querySelector('nav:not(.crumbs)');
+  var burger = nav && nav.querySelector('.nav-burger');
+  if (!burger) return;
+  function setOpen(open) {
+    nav.classList.toggle('nav-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  burger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(!nav.classList.contains('nav-open'));
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setOpen(false); burger.focus(); }
+  });
+})();
+
 document.querySelectorAll('.lang-selector').forEach(function (sel) {
   var btn = sel.querySelector('.lang-btn');
   btn.addEventListener('click', function (e) {

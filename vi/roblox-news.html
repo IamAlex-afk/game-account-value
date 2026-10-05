@@ -84,7 +84,7 @@
   hr.report-divider { border: none; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
 </style>
 <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/glass.css">
+<link rel="stylesheet" href="../assets/glass.css?v=20261005">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "@id": "https://gameaccountvalue.com/vi/roblox-news.html", "url": "https://gameaccountvalue.com/vi/roblox-news.html", "name": "Tin tức Roblox", "description": "Các cập nhật chính thức của Roblox ảnh hưởng đến giá trị tài khoản. Mỗi bài đều dẫn link thông báo của nhà phát hành.", "inLanguage": "vi", "hasPart": [{"@type": "NewsArticle", "headline": "Roblox 20 \"The Hunt\": vật phẩm UGC giới hạn và quà độc quyền Roblox Plus (17–28/9)", "url": "https://gameaccountvalue.com/vi/news-roblox-2026-09-the-hunt-roblox-20.html"}, {"@type": "NewsArticle", "headline": "RDC 2026: nhà sáng tạo Roblox kiếm khoảng 1,7 tỷ USD trong một năm; ra mắt Roblox Wallet", "url": "https://gameaccountvalue.com/vi/news-roblox-2026-09-rdc-2026-creator-earnings.html"}, {"@type": "NewsArticle", "headline": "Giới thiệu game mùa thu của Roblox: 10 trải nghiệm ra mắt trong tháng 9 và 10", "url": "https://gameaccountvalue.com/vi/news-roblox-2026-09-fall-games-preview.html"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://gameaccountvalue.com/vi/"}, {"@type": "ListItem", "position": 2, "name": "Tin tức", "item": "https://gameaccountvalue.com/vi/news.html"}, {"@type": "ListItem", "position": 3, "name": "Tin tức Roblox", "item": "https://gameaccountvalue.com/vi/roblox-news.html"}]}]}</script>
 <style>.news-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px 40px; }.news-wrap h2 { font-size: 21px; margin: 30px 0 10px; } .news-wrap li { margin: 7px 0; } .news-wrap ul { padding-inline-start: 22px; }.news-meta { color: var(--muted); font-size: 14px; margin-top: 10px; }.news-chip { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; border: 1px solid rgba(34,211,238,.45); color: #A5F3FC; text-decoration: none; }.news-src { margin-top: 26px; padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; font-size: 14px; }.news-src a { word-break: break-word; } .news-note { color: var(--muted); font-size: 13px; margin-top: 18px; }.news-list { list-style: none; padding: 0 !important; display: grid; gap: 14px; }.news-card { display: block; padding: 16px 18px; border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: inherit; background: rgba(255,255,255,.02); }.news-card:hover { border-color: rgba(34,211,238,.6); } .news-card strong { display: block; font-size: 17px; line-height: 1.35; margin: 6px 0; color: #fff; }.news-card span { color: var(--muted); font-size: 14px; } .news-card em { font-style: normal; color: #A5F3FC; font-weight: 700; }.news-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; } .news-links a { padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; font-size: 14px; }</style>
 </head>
@@ -93,7 +93,8 @@
 
 <nav>
   <a href="./" class="logo">GameAccountValue</a>
-  <div class="nav-menu">
+  <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-panel" aria-label="Trò chơi · Hướng dẫn · Tin tức · VI"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="nb-open" d="M4 7h16M4 12h16M4 17h16"/><path class="nb-close" d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="nav-menu" id="nav-panel">
     <div class="lang-selector nav-dd">
       <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-games">Trò chơi <span class="lang-arrow">▾</span></button>
       <div class="lang-dropdown" id="nav-games" role="menu">
@@ -199,6 +200,6 @@
 
 <script src="../assets/cursor-trail.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
-<script type="module" src="../assets/nav.js" defer></script>
+<script type="module" src="../assets/nav.js?v=20261005" defer></script>
 </body>
 </html>
