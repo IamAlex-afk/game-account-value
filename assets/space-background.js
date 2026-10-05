@@ -263,7 +263,7 @@
   // whichever comes first. The scene must never compete with the page's own startup work.
   var started = false;
   function go() { if (started) return; started = true; EV.forEach(function (n) { removeEventListener(n, go); }); start(); }
-  var EV = ["pointermove", "scroll", "touchstart", "keydown"];
+  var EV = ["pointermove", "pointerdown", "touchstart", "keydown", "wheel"];   // real input only: browsers fire "scroll" on their own (anchors, restore)
   EV.forEach(function (n) { addEventListener(n, go, { passive: true, once: true }); });
   function later() {
     var idle = function () { setTimeout(go, phone ? 5000 : 6000); };
