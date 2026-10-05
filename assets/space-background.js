@@ -93,7 +93,10 @@
     });
   }
 
+  var lastPlace = "";
   function place(sy) {
+    var key = mouse.x.toFixed(3) + "," + mouse.y.toFixed(3) + "," + W + "," + H;
+    if (key === lastPlace) return; lastPlace = key;
     sky.style.transform = "translate3d(" + (-mouse.x * 6) + "px," + (-mouse.y * 6) + "px,0) scale(1.03)";
     far.style.transform = "translate3d(" + (-mouse.x * 10) + "px," + (-mouse.y * 10) + "px,0)";
     near.style.transform = "translate3d(" + (-mouse.x * 30) + "px," + (-mouse.y * 30) + "px,0)";
@@ -232,19 +235,25 @@
     if (reduce) cancelAnimationFrame(raf);
   }
 
+  // start-up is split into short steps so no single task blocks the page (body transparency and
+  // hiding the old skyline are done in glass.css, so nothing here forces a full-page repaint)
+  function step(fn) { if (window.requestIdleCallback) requestIdleCallback(fn, { timeout: 500 }); else setTimeout(fn, 16); }
   function start() {
     var body = document.body;
     var skySrc = phone ? "sky-phone.webp" : innerWidth > 1400 ? "sky-1920.webp" : "sky-1280.webp";
     sky = el("div", "position:fixed;left:-2%;top:-2%;width:104%;height:104vh;height:104lvh;z-index:-6;pointer-events:none;will-change:transform;background:#03050b url(" + BASE + skySrc + ") " + VIEW.pos + " / cover no-repeat;filter:hue-rotate(" + VIEW.hue + "deg)");
-    far = el("canvas", "position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:-5;pointer-events:none;will-change:transform");
-    near = el("canvas", "position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:-3;pointer-events:none;will-change:transform");
-    body.insertBefore(near, body.firstChild); body.insertBefore(far, body.firstChild); body.insertBefore(sky, body.firstChild);
-    body.style.background = "transparent";               // let the fixed layers show; <html> keeps the base colour
-    // the hero's old skyline layer (city, rain and its dark gradient overlay) is hidden only while the space scene runs — the markup stays
-    [].forEach.call(document.querySelectorAll(".g-fx"), function (e) { e.style.display = "none"; });
-    fx = far.getContext("2d"); nx = near.getContext("2d");
-    OBJECTS.forEach(function (o) { if ((!phone || o.phone) && !(o.home && GAME)) img(o.src); });
-    build(); t0 = performance.now(); nextComet = t0 + 2500; nextEgg = t0 + (phone ? 1500 : 4000); nextUfo = t0 + 20000; nextPhone = t0 + (phone ? 4000 : 6000);
+    body.insertBefore(sky, body.firstChild);
+    step(function () {
+      far = el("canvas", "position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:-5;pointer-events:none;will-change:transform");
+      near = el("canvas", "position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:-3;pointer-events:none;will-change:transform");
+      body.insertBefore(near, sky.nextSibling); body.insertBefore(far, near);
+      fx = far.getContext("2d"); nx = near.getContext("2d");
+      build();
+      step(function () { OBJECTS.forEach(function (o) { if ((!phone || o.phone) && !(o.home && GAME)) img(o.src); }); step(run); });
+    });
+  }
+  function run() {
+    t0 = performance.now(); nextComet = t0 + 2500; nextEgg = t0 + (phone ? 1500 : 4000); nextUfo = t0 + 20000; nextPhone = t0 + (phone ? 4000 : 6000);
     if (finePointer && !phone && !reduce) {
       addEventListener("pointermove", function (e) { mouse.tx = e.clientX / W * 2 - 1; mouse.ty = e.clientY / H * 2 - 1; }, { passive: true });
       addEventListener("pointerdown", function (e) { if (e.pointerType === "mouse") waves.push({ x: e.clientX, y: e.clientY, t: last }); }, { passive: true });
@@ -253,7 +262,7 @@
     var rt, lastW = innerWidth;
     addEventListener("resize", function () {
       if (phone && innerWidth === lastW) return;          // height-only change = URL bar, ignore
-      lastW = innerWidth; H = 0; clearTimeout(rt); rt = setTimeout(build, 200);
+      lastW = innerWidth; H = 0; clearTimeout(rt); rt = setTimeout(function () { build(); lastPlace = ""; }, 200);
     });
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) cancelAnimationFrame(raf); else if (!reduce) { last = 0; raf = requestAnimationFrame(frame); }

@@ -92,11 +92,20 @@
   });
 })();
 
+/* Restart a one-shot CSS animation without a forced synchronous layout: reading offsetWidth here
+   re-laid-out the whole page (~450 ms on a mid phone, measured 2026-10-06). Drop the class, re-add it two
+   frames later. Changes before the page has loaded (the calculator's first value) don't animate. */
+function gavReplay(el, cls) {
+  if (document.readyState !== "complete") return;
+  el.classList.remove(cls);
+  requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add(cls); }); });
+}
+
 /* Robot sitting on the result bar flashes when the estimate changes. */
 (function () {
   var img = document.querySelector(".g-sit img"), val = document.querySelector(".vc-result-value");
   if (!img || !val || !window.MutationObserver) return;
-  new MutationObserver(function () { img.classList.remove("blink"); void img.offsetWidth; img.classList.add("blink"); })
+  new MutationObserver(function () { gavReplay(img, "blink"); })
     .observe(val, { subtree: true, characterData: true, childList: true });
 })();
 
@@ -128,7 +137,7 @@ window.addEventListener("load", function () { setTimeout(function () { document.
     });
   });
   var val = document.querySelector(".vc-result-value");
-  if (val && window.MutationObserver) new MutationObserver(function () { val.classList.remove("vis-roll"); void val.offsetWidth; val.classList.add("vis-roll"); })
+  if (val && window.MutationObserver) new MutationObserver(function () { gavReplay(val, "vis-roll"); })
     .observe(val, { subtree: true, characterData: true, childList: true });
 })();
 
@@ -153,7 +162,7 @@ window.addEventListener("load", function () { setTimeout(function () { document.
   cards.forEach(function (c, i) {
     c.addEventListener("click", function () {
       if (i !== cur) { center(i, true); return; }
-      c.classList.remove("play"); void c.offsetWidth; c.classList.add("play");
+      gavReplay(c, "play");
     });
   });
   var start = cards.findIndex(function (c) { return c.dataset.k === "diamond"; });

@@ -495,3 +495,8 @@ html body .btn-primary:hover::after, html body[class] .nav-cta:hover::after { tr
   .feature::before, .stat::before, .step::before, .hub-card::before, .game-card::before, .g-quick a::before { background-size: 14px 2px, 2px 14px, 14px 2px, 2px 14px !important; }
 }
 @media (max-width: 380px) { .hero-badge, .hero-card-chip { white-space: normal; } }
+/* ---- 2026-10-06: the deep-space scene (space-background.js) sits behind every page:
+   body is transparent from the first paint (html keeps the base colour) and the old hero skyline is retired,
+   so starting the scene never forces a full-page restyle/repaint ---- */
+html body { background: transparent !important; }
+.g-fx { display: none !important; }
