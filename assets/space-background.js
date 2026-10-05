@@ -266,7 +266,7 @@
   var EV = ["pointermove", "scroll", "touchstart", "keydown"];
   EV.forEach(function (n) { addEventListener(n, go, { passive: true, once: true }); });
   function later() {
-    var idle = function () { setTimeout(go, phone ? 2500 : 6000); };
+    var idle = function () { setTimeout(go, phone ? 5000 : 6000); };
     if (window.requestIdleCallback) requestIdleCallback(idle, { timeout: 3000 }); else idle();
   }
   if (document.readyState === "complete") later(); else addEventListener("load", later);
