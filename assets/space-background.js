@@ -70,7 +70,9 @@
 
   function build() {
     dpr = Math.min(window.devicePixelRatio || 1, phone ? 1 : 1.5);
-    W = innerWidth; H = innerHeight;
+    // phones: size to the LARGE viewport (URL bar hidden) and never shrink, so the browser bar
+    // sliding in/out while scrolling does not rescale the scene
+    W = innerWidth; H = phone ? Math.max(H || 0, innerHeight, document.documentElement.clientHeight) : innerHeight;
     [far, near].forEach(function (c) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); c.getContext("2d").setTransform(dpr, 0, 0, dpr, 0, 0); });
     var n = Math.round(Math.min(phone ? 60 : 160, W * H / 10000) * VIEW.st);
     stars = [];
@@ -224,7 +226,7 @@
     raf = requestAnimationFrame(frame);
     if (phone && now - last < 33) return;
     var dt = Math.min(64, now - (last || now)); last = now;
-    var t = now - t0, sy = window.scrollY || 0;
+    var t = now - t0, sy = phone ? 0 : (window.scrollY || 0);   // no scroll-linked motion on phones (it lags native scrolling)
     mouse.x += (mouse.tx - mouse.x) * 0.05; mouse.y += (mouse.ty - mouse.y) * 0.05;
     place(sy); drawFar(t, dt, sy); drawNear(t, dt, sy);
     if (reduce) cancelAnimationFrame(raf);
@@ -233,9 +235,9 @@
   function start() {
     var body = document.body;
     var skySrc = phone ? "sky-phone.webp" : innerWidth > 1400 ? "sky-1920.webp" : "sky-1280.webp";
-    sky = el("div", "position:fixed;inset:-2%;z-index:-6;pointer-events:none;will-change:transform;background:#03050b url(" + BASE + skySrc + ") " + VIEW.pos + " / cover no-repeat;filter:hue-rotate(" + VIEW.hue + "deg)");
-    far = el("canvas", "position:fixed;inset:0;width:100%;height:100%;z-index:-5;pointer-events:none;will-change:transform");
-    near = el("canvas", "position:fixed;inset:0;width:100%;height:100%;z-index:-3;pointer-events:none;will-change:transform");
+    sky = el("div", "position:fixed;left:-2%;top:-2%;width:104%;height:104vh;height:104lvh;z-index:-6;pointer-events:none;will-change:transform;background:#03050b url(" + BASE + skySrc + ") " + VIEW.pos + " / cover no-repeat;filter:hue-rotate(" + VIEW.hue + "deg)");
+    far = el("canvas", "position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:-5;pointer-events:none;will-change:transform");
+    near = el("canvas", "position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:-3;pointer-events:none;will-change:transform");
     body.insertBefore(near, body.firstChild); body.insertBefore(far, body.firstChild); body.insertBefore(sky, body.firstChild);
     body.style.background = "transparent";               // let the fixed layers show; <html> keeps the base colour
     // the hero's old skyline layer (city, rain and its dark gradient overlay) is hidden only while the space scene runs — the markup stays
@@ -248,7 +250,11 @@
       addEventListener("pointerdown", function (e) { if (e.pointerType === "mouse") waves.push({ x: e.clientX, y: e.clientY, t: last }); }, { passive: true });
     }
     raf = requestAnimationFrame(frame);
-    var rt; addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(build, 200); });
+    var rt, lastW = innerWidth;
+    addEventListener("resize", function () {
+      if (phone && innerWidth === lastW) return;          // height-only change = URL bar, ignore
+      lastW = innerWidth; H = 0; clearTimeout(rt); rt = setTimeout(build, 200);
+    });
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) cancelAnimationFrame(raf); else if (!reduce) { last = 0; raf = requestAnimationFrame(frame); }
     });
