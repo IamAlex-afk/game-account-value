@@ -1,0 +1,9 @@
+# Commits that touched page HTML without changing what the page says
+# (site-wide template, tracking/meta tags). scripts/sitemap_lastmod.py skips
+# them, so <lastmod> moves only when a page's own content changes.
+# Google: lastmod should reflect the last significant update of the page.
+# One full hash per line; add new template-only commits here.
+2533d9e24bd4fab05ababec61fecb4259ceaa8e3  footer section links on every page
+4e3285b969cb9c5ebb62170b7d1d811ce67774a2  Yandex Metrica removed, CSP restored
+a0cec21030610dd1e407ff135db81d92a49006a8  Yandex verification meta tag
+8b80ea089bc2ef18d87da6d064ac183b533f2983  Yandex Metrica counter added

@@ -161,3 +161,13 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - Removed tracked screenshot leftovers _snapw.html/_snapy.html.
 - NEXT refresh (~2026-10-28): igitems CoC table moved slightly (TH18 100-250/50-115/20-30, TH17 55-180/30-50/25-55,
   TH16 40-95, TH13 15-35) - update page table (24 langs) and calculators.js together.
+
+## 2026-10-05 audit phase A + P1
+- Phase A (read-only): prod vs repo conflict found - Cloudflare Web Analytics beacon injected into every page (blocked by
+  CSP -> console error) and Yandex Metrica (webvisor, 3rd-party cookies) on / contradicting the 24-language privacy policy.
+  Owner: Metrica removed (4e3285b9, CSP restored byte-for-byte), Cloudflare Web Analytics disabled. Live: neither present.
+- Lighthouse mobile live / after removal, 3 sequential runs: Perf 87/91/90, A11y 100, BP 100, SEO 100 (earlier 62/82 = noise).
+- Footer section links on 1,248 pages (footer_nav.py, 2533d9e2). CoC "estimate limits" pilot EN+RU (9fa50484) - awaits owner OK.
+- Twitch/champion table links 24px targets (eabaa010): local A11y 100 on 3 pages.
+- sitemap lastmod skips template-only commits (scripts/lastmod-ignore-revs.txt): 1198 x 2026-10-01, CoC en/ru 2026-10-05.
+- OPEN (owner): Cloudflare Browser Cache TTL -> "Respect Existing Headers" (assets still max-age=14400); GSC Pages report per language.
