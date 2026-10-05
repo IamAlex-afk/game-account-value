@@ -82,8 +82,13 @@ def build(lang, slug, logo, cta):
     for code, name in LANG_NAMES:
         target = url(code, slug) if page_exists(code, slug) else url(code, 'index')
         langs += f'\n        <a href="{target}"{CUR if code == lang else ""} hreflang="{code}">{name}</a>'
-    return (f'<nav>\n  {logo}\n'
-            f'  <div class="nav-menu">\n'
+    # Phones: one header row (logo · bot · ☰); the burger opens Games/Guides/News + language.
+    # Its label reuses the menu's own words, so no new string to translate.
+    burger = (f'  <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-panel" '
+              f'aria-label="{g} · {gd} · {news} · {lang.upper()}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+              f'<path class="nb-open" d="M4 7h16M4 12h16M4 17h16"/><path class="nb-close" d="M6 6l12 12M18 6 6 18"/></svg></button>\n')
+    return (f'<nav>\n  {logo}\n{burger}'
+            f'  <div class="nav-menu" id="nav-panel">\n'
             f'    <div class="lang-selector nav-dd">\n'
             f'      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-games">{g} <span class="lang-arrow">▾</span></button>\n'
             f'      <div class="lang-dropdown" id="nav-games" role="menu">{games}\n      </div>\n    </div>\n'

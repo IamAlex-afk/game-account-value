@@ -286,14 +286,15 @@
   .step-num { font-size: 36px; font-weight: 800; color: var(--gold); opacity: 0.4; margin-bottom: 12px; }
 </style>
 <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/glass.css">
+<link rel="stylesheet" href="../assets/glass.css?v=20261005">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
 <nav>
   <a href="./" class="logo">GameAccountValue</a>
-  <div class="nav-menu">
+  <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-panel" aria-label="Jogos · Guias · Notícias · PT"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="nb-open" d="M4 7h16M4 12h16M4 17h16"/><path class="nb-close" d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="nav-menu" id="nav-panel">
     <div class="lang-selector nav-dd">
       <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-games">Jogos <span class="lang-arrow">▾</span></button>
       <div class="lang-dropdown" id="nav-games" role="menu">
@@ -430,6 +431,7 @@
 </div>
   <div class="g-head"><div><div class="hero-chips"><div class="hero-badge">⭐ Com IA · PDF instantâneo</div><a class="hero-card-chip" href="#cards">🎴 + carta holo colecionável</a></div>
 <h1>Descubra quanto vale <span>sua conta de jogo</span></h1></div><div class="g-robot g-cyborg" aria-hidden="true"><img src="../assets/cyborg.webp" srcset="../assets/cyborg-240.webp 240w, ../assets/cyborg-340.webp 340w, ../assets/cyborg.webp 540w" sizes="(max-width: 560px) 120px, (max-width: 860px) 160px, 270px" width="540" height="561" alt="" decoding="async"><span class="cy-beam"></span><span class="cy-ico" style="--i:0;--dy:-46px;color:#FCEE0A"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><rect x="12" y="8" width="24" height="22"/><rect x="17" y="15" width="4" height="4" fill="currentColor"/><rect x="27" y="15" width="4" height="4" fill="currentColor"/><path d="M19 24h10M16 30v10h16V30"/></svg></span><span class="cy-ico" style="--i:1;--dy:-18px;color:#FF2E88"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M14 6h20v10a10 10 0 0 1-20 0z"/><path d="M14 10H6c0 8 4 11 9 11M34 10h8c0 8-4 11-9 11M24 26v8M16 42h16l-2-8H18z"/></svg></span><span class="cy-ico" style="--i:2;--dy:-60px;color:#FF9F1C"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 42V18h6v-6h6v6h8v-6h6v6h6v24z"/><path d="M20 42v-9a4 4 0 0 1 8 0v9"/></svg></span><span class="cy-ico" style="--i:3;--dy:10px;color:#9D8CFF"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 16l9 8 9-14 9 14 9-8-4 22H10z"/><path d="M10 42h28"/></svg></span><span class="cy-ico" style="--i:4;--dy:-32px;color:#FF5A36"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M24 4c3 9 12 13 12 24a12 12 0 0 1-24 0c0-6 3-9 6-12 0 5 2 7 4 8 0-8 0-14 2-20z"/></svg></span><span class="cy-ico" style="--i:5;--dy:34px;color:#22D3EE"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M24 4l4 16 16 4-16 4-4 16-4-16-16-4 16-4z"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg></span><span class="cy-ico" style="--i:6;--dy:-8px;color:#FF4D6D"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 8l24 24M40 8 16 32"/><path d="M28 36l8-8M20 36l-8-8M34 34l6 6M14 34l-6 6"/></svg></span><span class="cy-ico" style="--i:7;--dy:52px;color:#B07CFF"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 20C8 10 16 5 24 5s16 5 18 15"/><path d="M6 20c4-3 8-3 12 0 4-3 8-3 12 0 4-3 8-3 12 0"/><path d="M8 21l14 17M40 21 26 38M24 20v18"/><rect x="20" y="37" width="8" height="7"/></svg></span><span class="cy-ico" style="--i:8;--dy:-40px;color:#39FF88"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 14c10-8 22-8 32 0l-4 4c-7-5-17-5-24 0z"/><path d="M24 12v30"/><rect x="21" y="38" width="6" height="6"/></svg></span></div></div>
+<!--quick--><div class="g-quick" role="navigation" aria-label="Jogos · Guias · Notícias · Sobre o projeto"><a href="#games"><span aria-hidden="true">🎮</span>Jogos</a><a href="#hub"><span aria-hidden="true">📊</span>Guias</a><a href="./news.html"><span aria-hidden="true">📰</span>Notícias</a><a href="./about.html"><span aria-hidden="true">ℹ️</span>Sobre o projeto</a></div><!--/quick-->
   <div class="g-panel">
     <div class="g-intro"><h2 class="section-title">Estime de graça — direto aqui</h2><p class="section-sub">Sem cadastro. Nada é digitado ou enviado — todo o cálculo roda no seu navegador.</p></div>
     <div class="g-pick-wrap"><span class="g-num" aria-hidden="true">1</span><div class="g-pick" role="group" aria-label="Escolher um jogo"><button type="button" class="g-pick-btn g-roblox" data-g="roblox" aria-pressed="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="12" y="8" width="24" height="22"/><rect x="17" y="15" width="4" height="4" fill="currentColor"/><rect x="27" y="15" width="4" height="4" fill="currentColor"/><path d="M19 24h10M16 30v10h16V30"/></svg><span>Roblox</span></button><button type="button" class="g-pick-btn g-brawl-stars" data-g="brawl-stars" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 6h20v10a10 10 0 0 1-20 0z"/><path d="M14 10H6c0 8 4 11 9 11M34 10h8c0 8-4 11-9 11M24 26v8M16 42h16l-2-8H18z"/></svg><span>Brawl Stars</span></button><button type="button" class="g-pick-btn g-clash-of-clans" data-g="clash-of-clans" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 42V18h6v-6h6v6h8v-6h6v6h6v24z"/><path d="M20 42v-9a4 4 0 0 1 8 0v9"/></svg><span>Clash of Clans</span></button><button type="button" class="g-pick-btn g-clash-royale" data-g="clash-royale" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 16l9 8 9-14 9 14 9-8-4 22H10z"/><path d="M10 42h28"/></svg><span>Clash Royale</span></button><button type="button" class="g-pick-btn g-free-fire" data-g="free-fire" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M24 4c3 9 12 13 12 24a12 12 0 0 1-24 0c0-6 3-9 6-12 0 5 2 7 4 8 0-8 0-14 2-20z"/></svg><span>Free Fire</span></button><button type="button" class="g-pick-btn g-genshin-impact" data-g="genshin-impact" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M24 4l4 16 16 4-16 4-4 16-4-16-16-4 16-4z"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><span>Genshin Impact</span></button><button type="button" class="g-pick-btn g-mobile-legends" data-g="mobile-legends" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 8l24 24M40 8 16 32"/><path d="M28 36l8-8M20 36l-8-8M34 34l6 6M14 34l-6 6"/></svg><span>Mobile Legends</span></button><button type="button" class="g-pick-btn g-fortnite" data-g="fortnite" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 20C8 10 16 5 24 5s16 5 18 15"/><path d="M6 20c4-3 8-3 12 0 4-3 8-3 12 0 4-3 8-3 12 0"/><path d="M8 21l14 17M40 21 26 38M24 20v18"/><rect x="20" y="37" width="8" height="7"/></svg><span>Fortnite</span></button><button type="button" class="g-pick-btn g-minecraft" data-g="minecraft" aria-pressed="false"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 14c10-8 22-8 32 0l-4 4c-7-5-17-5-24 0z"/><path d="M24 12v30"/><rect x="21" y="38" width="6" height="6"/></svg><span>Minecraft</span></button></div></div>
@@ -490,7 +492,7 @@
 </section>
 
 <!-- GAMES -->
-<section class="section">
+<section class="section" id="games">
   <h2 class="section-title">9 jogos suportados</h2>
   <p class="section-sub">Apenas estimativa independente — não é uma cotação real de mercado</p>
   <div class="games-grid">
@@ -510,7 +512,7 @@
 
 
 <!-- SITE HUB -->
-<section class="section g-hub">
+<section class="section g-hub" id="hub">
   <h2 class="section-title">Tudo no site</h2>
   <p class="section-sub">Preços frescos, guias e as regras por trás de cada número</p>
   <div class="hub-grid">
@@ -674,7 +676,7 @@
   </p>
 </footer>
 
-<script type="module" src="../assets/nav.js" defer></script>
+<script type="module" src="../assets/nav.js?v=20261005" defer></script>
 <script src="../assets/cursor-trail.js" defer></script>
 <script src="../assets/calculators.js" defer></script>
 <script src="../assets/glass.js" defer></script>

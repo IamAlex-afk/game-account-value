@@ -175,6 +175,13 @@ footer > div[style] { background: var(--glass) !important; border: 1px solid var
 footer a { color: var(--body); text-decoration: underline; text-underline-offset: 3px; }
 footer strong[style] { color: var(--cyan) !important; }
 .footer-logo { font-family: var(--body-font); font-variation-settings: normal; color: var(--white); }
+/* footer section links (scripts/design/footer_nav.py) */
+.foot-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 12px 16px; align-items: start; max-width: 900px; margin: 0 auto 32px; text-align: start; }
+.foot-nav li { margin: 0; padding: 0; }
+.foot-h { margin: 0 0 6px; color: var(--white); font-weight: 700; font-size: 15px; }
+.foot-nav ul { list-style: none; margin: 0; padding: 0; }
+.foot-nav a { display: inline-block; margin: 0; padding: 5px 0; color: var(--body); text-decoration: none; font-size: 14px; }
+.foot-nav a:hover, .foot-nav a[aria-current] { color: var(--cyan); }
 .skip-link { background: var(--cyan); border-radius: 0 0 8px 0; }
 
 /* ---------- responsive ---------- */

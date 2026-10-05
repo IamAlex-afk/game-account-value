@@ -11,6 +11,7 @@
 .wm-table tbody th { color: var(--white); font-weight: 700; white-space: nowrap; }
 .wm-table td { color: var(--body); }
 .wm-table a { color: var(--cyan); }
+.wm-table th a { display: inline-block; min-height: 24px; line-height: 24px; }   /* WCAG 2.5.8 target size (streamer/champion names) */
 .wm-num { color: var(--white) !important; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; direction: ltr; unicode-bidi: isolate; }
 .wm-flag { margin-inline-end: 8px; }
 .wm-mine { background: linear-gradient(90deg, color-mix(in srgb, var(--cyan) 14%, transparent), transparent); }

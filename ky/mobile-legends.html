@@ -254,7 +254,7 @@
   }
 </style>
 <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/glass.css">
+<link rel="stylesheet" href="../assets/glass.css?v=20261005">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -278,7 +278,8 @@
 
 <nav>
   <a href="./" class="logo">GameAccountValue</a>
-  <div class="nav-menu">
+  <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-panel" aria-label="Оюндар · Колдонмолор · Жаңылыктар · KY"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="nb-open" d="M4 7h16M4 12h16M4 17h16"/><path class="nb-close" d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="nav-menu" id="nav-panel">
     <div class="lang-selector nav-dd">
       <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-games">Оюндар <span class="lang-arrow">▾</span></button>
       <div class="lang-dropdown" id="nav-games" role="menu">
@@ -538,6 +539,6 @@
 <script src="../assets/market-watch-button.js" defer></script>
 <script defer src="/assets/analytics-placeholder.js"></script>
 <script src="../assets/events.js" defer></script>
-<script type="module" src="../assets/nav.js" defer></script>
+<script type="module" src="../assets/nav.js?v=20261005" defer></script>
 </body>
 </html>
