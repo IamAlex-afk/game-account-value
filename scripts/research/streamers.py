@@ -306,7 +306,7 @@ if __name__ == "__main__":
                 try:
                     youtube(g, l, store)
                 except urllib.error.HTTPError as e:
-                    if e.code == 403:
+                    if e.code in (403, 429):    # daily quota: YouTube answers 403 or 429 ("Search Queries per day")
                         print("YouTube quota reached — continue tomorrow"); a.twitch_only = True; break
                     raise
         json.dump(store, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
