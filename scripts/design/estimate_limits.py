@@ -12,6 +12,26 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 # TEXT[lang][game] = (heading, intro, solid_title, [solid...], limits_title, [limits...])
 TEXT = {
  'en': {
+  'clash-royale': (
+   "What an estimate can and can't tell you",
+   'The calculator above and the bot both turn what they can see into a price range. '
+   'Here is where that range stands on firm ground and where it doesn&rsquo;t.',
+   'Where it holds up',
+   ['It rests on real listings: Eldorado.gg (from $0.50 for a starter account to $600 for a full max one) and '
+    '852 igitems.com listings broken into price brackets (September 2026).',
+    'In the 10 highest-priced listings checked, 9 named no cosmetics at all &mdash; titles were built on King Tower level, '
+    'trophies and evolutions, the same things the estimate is built on.',
+    'The quick calculator asks only King Tower level and max-level cards. The bot&rsquo;s screenshot check also reads '
+    'evolutions, champions, heroes, tower skins, rare emotes, trophies, gems, Pass Royale, a CRL badge and global tournament wins.'],
+   'Where it falls short',
+   ['These are asking prices. On igitems.com sold prices ran about 21% below asking &mdash; what a buyer finally pays is '
+    'usually lower than the listing.',
+    'The market moves fast: the average asking price there rose from $81.89 to $107.20 in a few months. The figures are '
+    'from September 2026 and change with every season and balance update.',
+    'Two accounts at the same King Tower level can differ a lot in value: evolutions and card levels matter, and the '
+    'quick calculator cannot see them.',
+    'A price is not a permission. Supercell&rsquo;s Terms of Service prohibit selling or transferring accounts, and a traded '
+    'account can be banned for good &mdash; the range describes the market, it does not say anyone could or should sell.']),
   'clash-of-clans': (
    "What an estimate can and can't tell you",
    'The calculator above and the bot both turn what they can see into a price range. '
@@ -33,6 +53,27 @@ TEXT = {
     'or should sell.']),
  },
  'ru': {
+  'clash-royale': (
+   'Что оценка может и чего не может сказать',
+   'И калькулятор выше, и бот превращают то, что видят, в диапазон цен. '
+   'Вот где этот диапазон надёжен, а где нет.',
+   'На что можно опираться',
+   ['В основе реальные объявления: Eldorado.gg (от $0.50 за стартовый аккаунт до $600 за «полностью максимальный») и '
+    '852 объявления igitems.com с разбивкой по ценовым корзинам (сентябрь 2026).',
+    'В 10 самых дорогих проверенных объявлениях 9 не назвали ни одного косметического предмета &mdash; заголовки строились '
+    'на уровне Королевской башни, кубках и эволюциях, то есть на том же, на чём строится оценка.',
+    'Быстрый калькулятор спрашивает только уровень King Tower и число карт максимального уровня. Бот по скриншотам '
+    'дополнительно читает эволюции, чемпионов, героев, скины башен, редкие эмоции, кубки, гемы, Pass Royale, значок CRL '
+    'и победы в глобальных турнирах.'],
+   'Где у оценки пределы',
+   ['Это цены в объявлениях. На igitems.com реальные продажи шли примерно на 21% ниже запрашиваемых цен &mdash; '
+    'покупатель в итоге обычно платит меньше, чем написано в объявлении.',
+    'Рынок быстро меняется: средняя запрашиваемая цена там выросла с $81.89 до $107.20 за несколько месяцев. Цифры '
+    'собраны в сентябре 2026 и меняются с каждым сезоном и балансным обновлением.',
+    'Два аккаунта с одинаковым уровнем King Tower могут стоить очень по-разному: важны эволюции и уровни карт, а быстрый '
+    'калькулятор их не видит.',
+    'Цена &mdash; не разрешение. Условия использования Supercell запрещают продавать и передавать аккаунты, а проданный '
+    'аккаунт могут заблокировать навсегда. Диапазон описывает рынок и не означает, что аккаунт можно или стоит продавать.']),
   'clash-of-clans': (
    'Что оценка может и чего не может сказать',
    'И калькулятор выше, и бот превращают то, что видят, в диапазон цен. '
