@@ -91,8 +91,19 @@ def _num(n, lang):
     return f"{n:,}".replace(",", SEP.get(lang, ","))
 
 
+MAX_AGE_DAYS = 30   # YouTube API Services Developer Policies: delete or refresh stored API data within 30 days
+
+
+def _fresh(r):
+    import datetime
+    try:
+        return (datetime.date.today() - datetime.date.fromisoformat(r["checked"])).days <= MAX_AGE_DAYS
+    except (KeyError, ValueError):
+        return False
+
+
 def _rank(d, key, k=10):
-    return sorted(d.values(), key=lambda r: -(r.get(key) or 0))[:k]
+    return sorted((r for r in d.values() if _fresh(r)), key=lambda r: -(r.get(key) or 0))[:k]
 
 
 def _a(r):
@@ -120,7 +131,10 @@ def render_creators(game, lang, game_name):
                        f'<td data-l="{cols[2]}">{r["checked"]}</td></tr>' for r in rows)
         out.append(f'<h4>{title}</h4><div class="wm-wrap"><table class="wm-table wm-small"><thead><tr>' +
                    "".join(f'<th scope="col">{c}</th>' for c in cols) + f"</tr></thead><tbody>{body}</tbody></table></div>")
-    out.append(f'<p class="wm-note">{t["rules"].format(game=game_name)}</p>')
+    src = []   # attribution required by the YouTube API Services policies
+    if yt: src.append('<a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a> (YouTube Data API)')
+    if tw: src.append('<a href="https://www.twitch.tv/" target="_blank" rel="noopener">Twitch</a> (Twitch API)')
+    out.append(f'<p class="wm-note">{t["rules"].format(game=game_name)} · ' + " · ".join(src) + "</p>")
     return "".join(out)
 
 

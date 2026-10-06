@@ -125,8 +125,21 @@ if __name__ == "__main__":
     ap.add_argument("--langs", default=",".join(LANGS))
     ap.add_argument("--twitch-only", action="store_true")
     ap.add_argument("--youtube-only", action="store_true")
+    ap.add_argument("--refresh", action="store_true",
+                    help="re-read statistics of every stored channel (cheap: 1 unit per 50 channels); run at least every 30 days")
     a = ap.parse_args()
     store = json.load(open(OUT, encoding="utf-8")) if os.path.exists(OUT) else {}
+    if a.refresh:   # YouTube policy: stored statistics must be refreshed (or deleted) within 30 days
+        ids = [cid for g in store.values() for l in g.values() for cid in l.get("youtube", {})]
+        for i in range(0, len(ids), 50):
+            for c in yt("channels", part="statistics", id=",".join(ids[i:i + 50])).get("items", []):
+                for g in store.values():
+                    for l in g.values():
+                        r = l.get("youtube", {}).get(c["id"])
+                        if r and not c["statistics"].get("hiddenSubscriberCount"):
+                            r.update(subscribers=int(c["statistics"]["subscriberCount"]), checked=TODAY)
+        json.dump(store, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print("refreshed", len(ids), "channels"); raise SystemExit
     games, langs = a.games.split(","), a.langs.split(",")
     for g in games:
         if not a.youtube_only:
