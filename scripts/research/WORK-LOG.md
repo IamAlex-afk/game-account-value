@@ -242,3 +242,7 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - NEXT news candidates: Clash Royale October balance changes (2026-10-06); moonton / minecraft.net / hoyoverse lists were
   not readable on 2026-10-06 - retry; Fortnite stays unreadable (403).
 - Lighthouse from this PC: ru homepage perf 59, vi/roblox 78, a11y/BP/SEO 100; PSI quota exhausted - re-measure before acting.
+- Batch 4 (same night): 3 more articles x 24 langs - Clash Royale October balance (Supercell 10-06), MLBB Asian Games gold
+  for Myanmar (MOONTON 10-01, en.moonton.com/news/378.html - the list page 404s, article ids are sequential), Minecraft
+  final 2026 game drop testing (Mojang 09-30; minecraft.net answers curl with a browser User-Agent, WebFetch times out).
+  Site now: 1,417 pages, 31 news articles per language. Numbers of every translation checked against the English text.
