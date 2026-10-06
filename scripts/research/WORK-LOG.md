@@ -246,3 +246,21 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   for Myanmar (MOONTON 10-01, en.moonton.com/news/378.html - the list page 404s, article ids are sequential), Minecraft
   final 2026 game drop testing (Mojang 09-30; minecraft.net answers curl with a browser User-Agent, WebFetch times out).
   Site now: 1,417 pages, 31 news articles per language. Numbers of every translation checked against the English text.
+
+## 2026-10-06 Google guidance re-read (developers.google.com/search/docs)
+- Helpful content (page updated 2026-10-05): "Who" - is it self-evident who authored; "How" - is the use of automation,
+  including AI-generation, self-evident through disclosures; no preferred word count; do not change dates without
+  substantial change; warning sign = content produced primarily to attract search visits.
+  -> AI disclosure sentence restored on About x24 (a3769043). Author stays in the footer + news byline + Person LD.
+- Spam policies (2026-08-28): scaled content abuse includes generative-AI pages "without adding value" and automated
+  transformations like translating where little value is provided; "stitching or combining content from different web
+  pages without adding value". RISK FOR OUR NEWS: 7 articles x 24 languages in one day, AI-written and AI-translated.
+  What keeps them on the right side: one primary source per article, our own "what it means for account value"
+  paragraph, real demand per language. Do NOT raise the pace or add news that has nothing to say about accounts.
+- FAQ rich results: shown only for well-known government and health sites - our FAQPage markup earns no rich result;
+  it only has to match the visible questions (it does).
+- Article markup (2026-09-08): no required properties; recommended author / datePublished / dateModified / headline /
+  image; images in 16x9, 4x3 and 1x1, at least 50K pixels. We give one image per article - optional improvement.
+- NOT rolled out: "what an estimate can and can't tell you" block (pilot on CoC en+ru). It repeats the asking-price
+  note and the ToS warning already on the page - conflicts with the owner's no-duplicates rule; owner decides.
+- One-shot reminder set in the session for 2026-10-07 14:17 local (quota reset): vi creators for 6 games + PSI re-measure.
