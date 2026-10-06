@@ -51,8 +51,12 @@ CSS = ('<style>.news-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px 40
        '</style>')
 
 
+def pub(aid):
+    return getattr(D, 'PUBLISHED_AT', {}).get(aid, D.PUBLISHED)
+
+
 def dates():
-    ds = sorted({D.PUBLISHED} | {s[2] for a in D.ARTICLES for s in a[4] if s[2]})
+    ds = sorted({D.PUBLISHED} | set(getattr(D, 'PUBLISHED_AT', {}).values()) | {s[2] for a in D.ARTICLES for s in a[4] if s[2]})
     js = ('const L=%s,D=%s,o={};for(const l of L){o[l]={};for(const d of D)o[l][d]=new Intl.DateTimeFormat(l,{dateStyle:"long",timeZone:"UTC"}).format(new Date(d+"T00:00:00Z"))}console.log(JSON.stringify(o))'
           % (json.dumps(LANGS), json.dumps(ds)))
     return json.loads(subprocess.run(['node', '-e', js], capture_output=True, text=True, encoding='utf-8', check=True).stdout)
@@ -130,14 +134,14 @@ def article(L, a):
     img = f'{SITE}og/{game}.jpg?v=3'
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'NewsArticle', '@id': me + '#article', 'mainEntityOfPage': me, 'headline': T['title'][:110], 'description': T['desc'],
-         'image': [img], 'datePublished': D.PUBLISHED + 'T09:00:00+00:00', 'dateModified': D.PUBLISHED + 'T09:00:00+00:00',
+         'image': [img], 'datePublished': pub(aid) + 'T09:00:00+00:00', 'dateModified': pub(aid) + 'T09:00:00+00:00',
          'inLanguage': L, 'author': AUTHOR, 'publisher': PUBLISHER, 'about': {'@type': 'VideoGame', 'name': G},
          'isBasedOn': [s[0] for s in srcs]},
         bc(L, [(home_name(L), url(L, '')), (U['news'], url(L, 'news.html')), (U['game_title'].format(game=G), url(L, game + '-news.html')), (T['title'], me)])]}
     src = '<br>'.join(f'<a href="{u}" rel="noopener">{esc(u.split("//")[1].split("/")[0])}</a> — {U["by_on"].format(pub=p, date=DATES[L][d]) if d else p}' for u, p, d in srcs)
     main = (f'<section class="report-hero" id="main-content">\n  <a class="news-chip" href="./{game}-news.html">{G}</a>\n  <h1>{T["title"]}</h1>\n'
             f'  <p style="color:var(--muted); font-size:16px;">{T["lead"]}</p>\n'
-            f'  <p class="news-meta">{U["published"]}: <time datetime="{D.PUBLISHED}">{DATES[L][D.PUBLISHED]}</time> · Aleksei Bitkin</p>\n</section>\n'
+            f'  <p class="news-meta">{U["published"]}: <time datetime="{pub(aid)}">{DATES[L][pub(aid)]}</time> · Aleksei Bitkin</p>\n</section>\n'
             f'<div class="news-wrap">\n<h2>{U["whats_new"]}</h2>\n<ul>' + ''.join(f'<li>{x}</li>' for x in T['new']) + '</ul>\n'
             f'<h2>{U["impact"]}</h2>\n<p>{T["impact"]}</p>\n'
             f'<div class="news-src"><strong>{U["source"]}</strong><br>{src}</div>\n'
@@ -209,10 +213,11 @@ def sitemap():
                 s, n = re.subn(r'\s*<url><loc>' + re.escape(url(L, g + '-news.html')) + r'</loc>.*?</url>', '', s)
                 removed += n
         names = ['news.html'] + [g + '-news.html' for g in D.GAMES if hub_indexable(g)] + [a[2] + '.html' for a in ARTS]
+        when = {a[2] + '.html': pub(a[0]) for a in ARTS}
         for name in names:
             u = url(L, name)
             if f'<loc>{u}</loc>' not in s:
-                add += f'  <url><loc>{u}</loc><lastmod>{D.PUBLISHED}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n'
+                add += f'  <url><loc>{u}</loc><lastmod>{when.get(name, D.PUBLISHED)}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n'
     s = s.replace('</urlset>', add + '</urlset>')
     open(p, 'w', encoding='utf-8', newline='\n').write(s)
     return f'+{add.count("<url>")} -{removed}'

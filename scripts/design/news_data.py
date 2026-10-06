@@ -1,11 +1,21 @@
 # News articles (SITE-STANDARD step 4). Facts: scripts/research/news-2026-09.md — publisher
 # sources only. Our datePublished = the day we publish; the publisher's date is shown separately.
 PUBLISHED = '2026-10-01'
+# articles added after the first batch carry their own publication day (older ones keep PUBLISHED)
+PUBLISHED_AT = {'cr-shock': '2026-10-06', 'coc-ore': '2026-10-06', 'coc-cosmic': '2026-10-06', 'bs-path27': '2026-10-06'}
 GAMES = {'roblox': 'Roblox', 'brawl-stars': 'Brawl Stars', 'clash-of-clans': 'Clash of Clans', 'clash-royale': 'Clash Royale',
          'free-fire': 'Free Fire', 'genshin-impact': 'Genshin Impact', 'mobile-legends': 'Mobile Legends',
          'fortnite': 'Fortnite', 'minecraft': 'Minecraft'}
 # id, game, slug, sort date (publisher date), sources [(url, publisher, date or None)]
 ARTICLES = [
+ ('cr-shock', 'clash-royale', 'news-clash-royale-2026-10-shocktober-season', '2026-10-05',
+  [('https://supercell.com/en/games/clashroyale/blog/release-notes/new-season-shocktober/', 'Supercell', '2026-10-05')]),
+ ('coc-ore', 'clash-of-clans', 'news-clash-of-clans-2026-10-ore-gem-prices', '2026-10-02',
+  [('https://supercell.com/en/games/clashofclans/blog/news/more-ore-for-your-gems/', 'Supercell', '2026-10-02')]),
+ ('coc-cosmic', 'clash-of-clans', 'news-clash-of-clans-2026-10-cosmic-curse-portal-panic', '2026-10-01',
+  [('https://supercell.com/en/games/clashofclans/blog/news/cosmic-curse-portal-panic-teleports-in/', 'Supercell', '2026-10-01')]),
+ ('bs-path27', 'brawl-stars', 'news-brawl-stars-2026-10-path-to-bsc-2027', '2026-10-01',
+  [('https://supercell.com/en/games/brawlstars/blog/esports/your-path-to-bsc-2027/', 'Supercell', '2026-10-01')]),
  ('gi71', 'genshin-impact', 'news-genshin-impact-2026-09-version-7-1', '2026-09-23',
   [('https://genshin.hoyoverse.com/en/news/detail/166383', 'HoYoverse', '2026-09-23'),
    ('https://genshin.hoyoverse.com/en/news/detail/166086', 'HoYoverse', '2026-09-12')]),
