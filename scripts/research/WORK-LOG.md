@@ -216,3 +216,14 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   on homepages 0 clicks / 7 impressions (most queries are hidden by Google). Game pages answer the question in full.
   RE-CHECK homepage impressions in GSC around 2026-10-20..11-03.
 - Owner rule (2026-10-06): no duplicated content anywhere - text already in the footer or elsewhere on the page goes.
+
+## 2026-10-06 (night) autonomous fix loop (owner: fix -> verify -> push -> verify live, no confirmations)
+- Homepage: nine per-game FAQ entries removed (1084a6c2).
+- Game pages 9 x 24: calculator note said "ranges/note/Limiteds Market above" though the calculator is at the top (85d95ad0).
+- Game pages 192: FAQPage JSON-LD still had the removed "make your account more valuable" Q&A; synced to the visible
+  checklist question; Roblox "price manipulation on Limiteds" synced too (08738159).
+- site_check.py now fails on FAQ markup questions that are not visible and on in-page anchors without a target.
+- Audits that came back clean (1,249 pages): duplicate titles/descriptions per language, broken anchors and links,
+  img alt/size, single h1, exact repeated text inside a page.
+- Translation memory scripts/i18n/*/done.json was NOT updated for the "above -> below" fix (strings stored differently);
+  if a locale is ever rebuilt from it, re-run the fix.

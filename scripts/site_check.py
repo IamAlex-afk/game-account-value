@@ -26,6 +26,20 @@ def lang_of(rel):
     return p[0] if len(p) == 2 and p[0] in LANGS else 'en'
 
 
+def squash(t):
+    return re.sub(r'\W+', '', html.unescape(re.sub(r'<[^>]+>', '', t)).lower())
+
+
+def questions(o):
+    if isinstance(o, dict):
+        if o.get('@type') == 'Question':
+            yield o
+        o = list(o.values())
+    if isinstance(o, list):
+        for v in o:
+            yield from questions(v)
+
+
 def main():
     files = pages()
     exist = set(files)
@@ -55,11 +69,24 @@ def main():
             if not os.path.exists(ROOT + p):
                 errors.append(f'{rel}: broken link {h}')
         # JSON-LD
+        visible = None
         for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
             try:
-                json.loads(b)
+                ld = json.loads(b)
             except ValueError as e:
                 errors.append(f'{rel}: invalid JSON-LD ({e})')
+                continue
+            # FAQ markup must repeat questions the reader can see on the page (Google's FAQPage guideline)
+            for q in questions(ld):
+                if visible is None:
+                    visible = squash(re.sub(r'<script.*?</script>|<style.*?</style>', '', s[s.find('<body'):], flags=re.S))
+                if squash(q.get('name', '')) not in visible:
+                    errors.append(f'{rel}: FAQ markup question not visible on the page: {q.get("name", "")[:70]}')
+        # in-page anchors
+        ids = set(re.findall(r'\bid="([^"]+)"', s))
+        for h in re.findall(r'<a\b[^>]*\bhref="#([^"]+)"', s):
+            if h not in ids:
+                errors.append(f'{rel}: anchor #{h} has no target on the page')
         # canonical
         if not noindex and rel != '404.html':
             c = re.search(r'<link rel="canonical" href="([^"]+)"', s)

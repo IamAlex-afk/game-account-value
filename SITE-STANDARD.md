@@ -27,6 +27,11 @@ glossary · methodology · news hub + 9 game news · privacy · terms · about.
 Translation = adapted human-quality (local number/date formats, local examples, correct register),
 never machine-dumped; English leftovers only for brand/game/item names.
 
+## No repeated content (owner rule, 2026-10-06)
+A page does not say twice what its footer or another block already says (author, not-a-marketplace notice,
+the same feature card, near-identical FAQ entries). FAQ JSON-LD always equals the questions visible on the page
+(`site_check.py` enforces it). Words like "above/below" must point the right way after a block is moved.
+
 ## Every page
 Site header menu (Games/Guides/News + same-page language switcher) · breadcrumbs (except home) ·
 one primary action (bot CTA) with the card teaser under calculators · 18+ card + notice in the footer ·
@@ -58,7 +63,9 @@ spam policies 2026-08-28):
 - **News article:** its own URL, headline from a real fact, visible "Published/Updated", NewsArticle
   JSON-LD (headline, image, datePublished, dateModified, author), sources (official publishers only —
   no marketplace scraping: Eldorado ToS §3.1), links to the game page, homepage and bot.
-- **About:** who runs it (Aleksei Bitkin), how estimates are made, what we never do (trade/collect data),
+- **About:** how estimates are made, what we never do, how the project is paid for, contact route. Who runs it
+  (Aleksei Bitkin) is stated once, in the footer author block of every page and in Person JSON-LD — the owner
+  (2026-10-06) does not want it repeated in the page body. Old wording kept for reference: who runs it, what we never do (trade/collect data),
   contact route (Telegram bot / GitHub), links to methodology, privacy, terms.
 - **Legal (privacy/terms):** full translation in each language (GDPR: information in a language the
   user understands); English stays the reference version.
