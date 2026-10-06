@@ -15,6 +15,14 @@ TEXT = {}
 for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), '*_text_*.py'))):
     for _L, _v in importlib.import_module(os.path.basename(f)[:-3]).TEXT.items():
         TEXT.setdefault(_L, {}).update(_v)
+# opt-in /top leaderboard paragraph, appended to the privacy section about the public card page
+from legal_top import TOP as _TOP
+for _L, _t in _TOP.items():
+    if _L in TEXT and 'privacy' in TEXT[_L]:
+        _sec = TEXT[_L]['privacy']['sec']
+        _h, _b = _sec[5]
+        if '/top' not in _b:
+            _sec[5] = (_h, _b + _t)
 SLUGS = ('privacy', 'terms', 'about')
 PERSON = {'@type': 'Person', 'name': 'Aleksei Bitkin', 'url': 'https://github.com/IamAlex-afk',
           'sameAs': ['https://orcid.org/0009-0002-7986-3812', 'https://github.com/IamAlex-afk',
