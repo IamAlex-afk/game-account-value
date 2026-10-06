@@ -206,3 +206,13 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - BUG to fix: world_markets.py writes a raw "&" where pages have "&amp;" (e.g. vi "Nga &amp; SNG", also en/de/id/ms).
   Running it for a game touches those pages; reverted by hand this time.
 - Pages build for 6b6cb972 errored once on GitHub's side; the next push built fine and carried the change.
+
+## 2026-10-06 (evening) homepage de-duplication, generator fix
+- world_markets.py / world_results.py: '&' escaped in region labels and winners (acf9b533); a full re-run for 9 games is a no-op.
+- Homepage, 24 langs (6e28fd07): dropped 4 repeated cards from "Why players love it" (screenshot-only, verifiable PDF,
+  not-a-marketplace, instant delivery) and the FAQ entry "What exactly is this service?" (page + FAQPage JSON-LD).
+- Homepage, 24 langs: dropped the nine near-identical "how much is my <game> account worth" FAQ entries (page + JSON-LD,
+  5 questions left). Search Console 2026-09-07..10-04: homepages 22 clicks / 282 impressions, visible game-named queries
+  on homepages 0 clicks / 7 impressions (most queries are hidden by Google). Game pages answer the question in full.
+  RE-CHECK homepage impressions in GSC around 2026-10-20..11-03.
+- Owner rule (2026-10-06): no duplicated content anywhere - text already in the footer or elsewhere on the page goes.
