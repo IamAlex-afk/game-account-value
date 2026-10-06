@@ -2,12 +2,19 @@
 # sources only. Our datePublished = the day we publish; the publisher's date is shown separately.
 PUBLISHED = '2026-10-01'
 # articles added after the first batch carry their own publication day (older ones keep PUBLISHED)
-PUBLISHED_AT = {'cr-shock': '2026-10-06', 'coc-ore': '2026-10-06', 'coc-cosmic': '2026-10-06', 'bs-path27': '2026-10-06'}
+PUBLISHED_AT = {'cr-shock': '2026-10-06', 'coc-ore': '2026-10-06', 'coc-cosmic': '2026-10-06', 'bs-path27': '2026-10-06',
+                'cr-bal-oct': '2026-10-06', 'ml-asiad': '2026-10-06', 'mc-drop4': '2026-10-06'}
 GAMES = {'roblox': 'Roblox', 'brawl-stars': 'Brawl Stars', 'clash-of-clans': 'Clash of Clans', 'clash-royale': 'Clash Royale',
          'free-fire': 'Free Fire', 'genshin-impact': 'Genshin Impact', 'mobile-legends': 'Mobile Legends',
          'fortnite': 'Fortnite', 'minecraft': 'Minecraft'}
 # id, game, slug, sort date (publisher date), sources [(url, publisher, date or None)]
 ARTICLES = [
+ ('cr-bal-oct', 'clash-royale', 'news-clash-royale-2026-10-october-balance-changes', '2026-10-06',
+  [('https://supercell.com/en/games/clashroyale/blog/release-notes/october-balance-changes-2026/', 'Supercell', '2026-10-06')]),
+ ('ml-asiad', 'mobile-legends', 'news-mobile-legends-2026-10-asian-games-myanmar-gold', '2026-10-01',
+  [('https://en.moonton.com/news/378.html', 'MOONTON Games', '2026-10-01')]),
+ ('mc-drop4', 'minecraft', 'news-minecraft-2026-09-final-game-drop-testing', '2026-09-30',
+  [('https://www.minecraft.net/en-us/article/drop-4-2026-testing', 'Mojang Studios', '2026-09-30')]),
  ('cr-shock', 'clash-royale', 'news-clash-royale-2026-10-shocktober-season', '2026-10-05',
   [('https://supercell.com/en/games/clashroyale/blog/release-notes/new-season-shocktober/', 'Supercell', '2026-10-05')]),
  ('coc-ore', 'clash-of-clans', 'news-clash-of-clans-2026-10-ore-gem-prices', '2026-10-02',
