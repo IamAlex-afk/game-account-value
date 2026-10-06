@@ -171,3 +171,16 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - Twitch/champion table links 24px targets (eabaa010): local A11y 100 on 3 pages.
 - sitemap lastmod skips template-only commits (scripts/lastmod-ignore-revs.txt): 1198 x 2026-10-01, CoC en/ru 2026-10-05.
 - OPEN (owner): Cloudflare Browser Cache TTL -> "Respect Existing Headers" (assets still max-age=14400); GSC Pages report per language.
+
+## 2026-10-05/06 visual system + space scene
+- assets/space-background.js on all 1,248 pages (scripts/design/space_rollout.py, bump V on script change):
+  photoreal sky, Mars + gas giant, comets, satellite, skeleton astronaut, android (home), UFO, 6-step phone
+  evolution, per-game view + loot set (assets/space/g-<game>-N.webp) on game pages / game news.
+  Assets generated with Gemini (gemini-3-pro-image) - no logos, look-alikes of real brands dropped.
+- glass.css: typed visual system (instrument calculator, gold estimate exhibit, hairline cards with corner
+  brackets), JetBrains Mono headings (OFL, font-display optional), phone typography, one-row phone header,
+  homepage quick tiles. CSS parts in scripts/design/css kept byte-identical with the build.
+- Perf: glass.js forced reflows (void offsetWidth) removed - 455 ms layout at load. Local Lighthouse today
+  unreliable (host CPU busy: baseline commit also dropped 85 -> 59-74); PSI quota exhausted - owner to re-check PSI.
+- OPEN: bot fixes (fp_done order, TimedOut), morning summary + Stars revenue (owner "да" pending);
+  CoC estimate-limits block for other games; Cloudflare Browser Cache TTL.
