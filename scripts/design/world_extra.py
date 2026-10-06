@@ -148,6 +148,13 @@ def render_extra(game, lang, game_name):
                    '</td><td data-l="' + x['top_c'][2] + '" class="wm-num">' + m + '</td></tr>' for p, c, m in pl['rows'])
     if pl: out.append('<h3>🥇 ' + x['top'] + '</h3><div class="wm-wrap"><table class="wm-table wm-small"><thead><tr><th scope="col">' + '</th><th scope="col">'.join(x['top_c']) +
                '</th></tr></thead><tbody>' + rows + '</tbody></table></div><p class="wm-note">' + x['src'].format(s=link(pl['src'])) + '.</p>')
+    # creators: verified per-language YouTube/Twitch data (creators.py) when available, else the old global Twitch table
+    from creators import render_creators
+    cr = render_creators(game, lang, game_name)
+    if cr:
+        out.append(cr)
+        return '
+'.join(out)
     # streamers: reader's language first
     st = e['streams']
     rs = sorted(st['rows'], key=lambda r: (r[1] != lang, -r[2]))
