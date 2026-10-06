@@ -23,6 +23,14 @@ for _L, _t in _TOP.items():
         _h, _b = _sec[5]
         if '/top' not in _b:
             _sec[5] = (_h, _b + _t)
+# Cloudflare + browser-storage paragraph, appended to the privacy section 'This website'
+from legal_site import SITE as _SITE
+for _L, _t in _SITE.items():
+    if _L in TEXT and 'privacy' in TEXT[_L]:
+        _sec = TEXT[_L]['privacy']['sec']
+        _h, _b = _sec[1]
+        if 'Cloudflare' not in _b:
+            _sec[1] = (_h, _b + _t)
 SLUGS = ('privacy', 'terms', 'about')
 PERSON = {'@type': 'Person', 'name': 'Aleksei Bitkin', 'url': 'https://github.com/IamAlex-afk',
           'sameAs': ['https://orcid.org/0009-0002-7986-3812', 'https://github.com/IamAlex-afk',
