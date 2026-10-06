@@ -17,7 +17,11 @@
   "use strict";
   var me = document.currentScript && document.currentScript.src;
   var BASE = me ? me.replace(/space-background\.js.*$/, "space/") : "/assets/space/";
-  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var sysReduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var userStill = false;
+  try { userStill = localStorage.getItem("gavMotion") === "off"; } catch (e) {}
+  var reduce = sysReduce || userStill;
+  if (userStill) document.documentElement.classList.add("gav-still");
   var finePointer = window.matchMedia && matchMedia("(pointer: fine)").matches;
   var phone = Math.min(screen.width, screen.height) < 600;
   var TAU = Math.PI * 2, rnd = Math.random;
@@ -268,6 +272,42 @@
       if (document.hidden) cancelAnimationFrame(raf); else if (!reduce) { last = 0; raf = requestAnimationFrame(frame); }
     });
   }
+  // ---- WCAG 2.2.2: an on-page control to stop / resume all looping motion (footer, page language) ----
+  var PAUSE = {
+    en: ["Pause animation", "Play animation"], ru: ["Остановить анимацию", "Включить анимацию"],
+    es: ["Pausar animación", "Reanudar animación"], pt: ["Pausar animação", "Retomar animação"],
+    id: ["Jeda animasi", "Putar animasi"], tr: ["Animasyonu durdur", "Animasyonu başlat"],
+    ar: ["إيقاف الحركة", "تشغيل الحركة"], vi: ["Tạm dừng hiệu ứng", "Bật hiệu ứng"],
+    hi: ["एनिमेशन रोकें", "एनिमेशन चलाएँ"], fr: ["Mettre l’animation en pause", "Relancer l’animation"],
+    de: ["Animation anhalten", "Animation abspielen"], it: ["Metti in pausa l’animazione", "Riprendi l’animazione"],
+    ja: ["アニメーションを停止", "アニメーションを再生"], ko: ["애니메이션 멈추기", "애니메이션 재생"],
+    th: ["หยุดภาพเคลื่อนไหว", "เล่นภาพเคลื่อนไหว"], pl: ["Zatrzymaj animację", "Wznów animację"],
+    zh: ["暂停动画", "播放动画"], tl: ["I-pause ang animation", "I-play ang animation"],
+    sw: ["Simamisha uhuishaji", "Endesha uhuishaji"], ms: ["Jeda animasi", "Mainkan animasi"],
+    uz: ["Animatsiyani to‘xtatish", "Animatsiyani yoqish"], kk: ["Анимацияны тоқтату", "Анимацияны қосу"],
+    tk: ["Animasiýany saklamak", "Animasiýany goşmak"], ky: ["Анимацияны токтотуу", "Анимацияны күйгүзүү"]
+  };
+  function motionButton() {
+    var foot = document.querySelector("footer"); if (!foot || sysReduce) return;
+    var lang = (document.documentElement.lang || "en").slice(0, 2), L = PAUSE[lang] || PAUSE.en;
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "gav-motion";
+    function label() { b.textContent = (userStill ? "▶ " : "⏸ ") + L[userStill ? 1 : 0]; b.setAttribute("aria-pressed", userStill ? "true" : "false"); }
+    label();
+    b.addEventListener("click", function () {
+      userStill = !userStill; reduce = userStill;
+      try { localStorage.setItem("gavMotion", userStill ? "off" : "on"); } catch (e) {}
+      document.documentElement.classList.toggle("gav-still", userStill);
+      if (userStill) { cancelAnimationFrame(raf); }
+      else if (!started) { go(); }
+      else { last = 0; raf = requestAnimationFrame(frame); }
+      label();
+    });
+    var p = document.createElement("p"); p.className = "gav-motion-wrap"; p.appendChild(b);
+    foot.insertBefore(p, foot.querySelector(".footer-logo") || foot.firstChild);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", motionButton); else motionButton();
+
   // start on the visitor's first move / scroll / touch, or 6 s after the page is loaded and idle —
   // whichever comes first. The scene must never compete with the page's own startup work.
   var started = false;

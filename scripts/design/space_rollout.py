@@ -5,15 +5,16 @@ Run: python scripts/design/space_rollout.py"""
 import glob, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + os.sep
-V = "20261006c"
+V = "20261006d"
 
 n = 0
 for f in glob.glob(ROOT + "**/*.html", recursive=True):
     rp = os.path.relpath(f, ROOT).replace(os.sep, "/")
-    if rp.startswith(("scripts/", "_", "node_modules/", "google")) or rp == "404.html":
+    if rp.startswith(("scripts/", "_", "node_modules/", "google")):
         continue
     s = open(f, encoding="utf-8").read()
-    pre = "../" if "/" in rp else "./"
+    # 404.html is served for any missing URL at any depth, so it needs an absolute path
+    pre = "/" if rp == "404.html" else ("../" if "/" in rp else "./")
     tag = f'<script src="{pre}assets/space-background.js?v={V}" defer></script>'
     t = re.sub(r'<script src="[^"]*assets/space-background\.js[^"]*" defer></script>\n?', "", s)
     t = t.replace("</body>", tag + "\n</body>", 1)

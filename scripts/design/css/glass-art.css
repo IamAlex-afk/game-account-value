@@ -511,3 +511,10 @@ html body { background: transparent !important; }
   html body[class] nav .nav-cta, nav .nav-cta { padding: 0 12px !important; font-size: 14px !important; min-height: 44px !important; }
   nav .nav-burger { width: 44px !important; height: 44px !important; }
 }
+/* ---- WCAG 2.2.2: footer control that stops all looping motion (space-background.js), remembered per browser ---- */
+.gav-motion-wrap { margin: 0 auto 22px; text-align: center; }
+.gav-motion { min-height: 44px; padding: 0 18px; border-radius: 999px; cursor: pointer; font: 600 15px var(--body-font);
+  color: var(--body); background: rgba(10,16,32,.72); border: 1px solid color-mix(in srgb, var(--cyan) 35%, transparent); }
+.gav-motion:hover, .gav-motion:focus-visible { border-color: var(--cyan); color: #fff; }
+.gav-motion:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+html.gav-still *, html.gav-still *::before, html.gav-still *::after { animation-play-state: paused !important; }
