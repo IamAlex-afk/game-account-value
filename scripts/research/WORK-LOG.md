@@ -227,3 +227,18 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   img alt/size, single h1, exact repeated text inside a page.
 - Translation memory scripts/i18n/*/done.json was NOT updated for the "above -> below" fix (strings stored differently);
   if a locale is ever rebuilt from it, re-run the fix.
+
+## 2026-10-06/07 "popular content with few competitors" -> news batch 3
+- Search Console 90-day pull (data exists for ~28 days: 129 clicks / 4,030 impressions; most queries hidden). Findings:
+  valuation queries already sit at positions 7-10 in fr/it/pt/es/ru with titles that match them (nothing to fix);
+  marketplace-intent queries ("hesap satin al", "vendita account", "mua acc") are NOT ours to chase;
+  news articles reach page 1 quickly in ko/ja/id where few pages compete -> fresh official news is the lever.
+- Batch 3 (a001fa5e, 48fa5975): 4 articles x 24 langs from Supercell pages of Oct 1-5 (scripts/research/news-2026-10.md,
+  texts news_text_b3_*.py). news_data.PUBLISHED_AT gives new articles their own publication day; old ones unchanged.
+- BUILD ORDER (learned the hard way): all 24 languages must have texts BEFORE running news_pages.py - a partial build
+  drops hreflang to the missing languages on every old article. After news_pages.py always run nav_menu.py,
+  footer_nav.py, consistency.py, then check `git diff --ignore-cr-at-eol --name-only` shows no old article.
+  Commit pages first, then sitemap_lastmod.py (it needs the commit), then commit the sitemaps.
+- NEXT news candidates: Clash Royale October balance changes (2026-10-06); moonton / minecraft.net / hoyoverse lists were
+  not readable on 2026-10-06 - retry; Fortnite stays unreadable (403).
+- Lighthouse from this PC: ru homepage perf 59, vi/roblox 78, a11y/BP/SEO 100; PSI quota exhausted - re-measure before acting.
