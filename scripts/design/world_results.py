@@ -55,14 +55,14 @@ def render_results(game, lang, names):
         if not o:
             origin = '—'
         elif o in ('latam', 'cis'):
-            origin = r[o]
+            origin = r[o].replace('&', '&amp;')
         else:
             origin = '<span class="wm-flag" aria-hidden="true">' + flag(o) + '</span>' + names['countries'][lang][o]
         date = DATES.get(e['id'], {}).get(lang, '')
         place = e['where'][0] + ', ' + names['countries'][lang][e['where'][1]]
         rows += ('<tr><th scope="row">' + e['title'] + '<span class="ev-where">' + date + ' · ' + place +
                  ' · <a href="' + e['src'][0] + '" target="_blank" rel="noopener">' + e['src'][1] + '</a></span></th>'
-                 '<td data-l="' + c[1] + '"><strong>🏆 ' + e['winner'] + '</strong></td><td data-l="' + c[2] + '">' + origin + '</td>'
+                 '<td data-l="' + c[1] + '"><strong>🏆 ' + e['winner'].replace('&', '&amp;') + '</strong></td><td data-l="' + c[2] + '">' + origin + '</td>'
                  '<td data-l="' + c[3] + '" class="wm-num">' + (e['prize'] or '—') + '</td><td data-l="' + c[4] + '" class="wm-num">' + (e['pool'] or '—') + '</td></tr>')
     return ('<h3>🏆 ' + r['h'] + '</h3><div class="wm-wrap"><table class="wm-table wm-small wm-results"><thead><tr><th scope="col">' +
             '</th><th scope="col">'.join(c) + '</th></tr></thead><tbody>' + rows + '</tbody></table></div>')

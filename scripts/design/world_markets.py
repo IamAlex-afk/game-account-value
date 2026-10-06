@@ -183,7 +183,7 @@ T = {
 
 def render(game, lang, game_name):
     t = T[lang]; data = DATA[game]; local = LOCAL[lang]
-    reg = lambda k: t['reg']['global_' if k == 'global' else k]
+    reg = lambda k: t['reg']['global_' if k == 'global' else k].replace('&', '&amp;')   # labels like 'Russia & CIS' go into HTML
     def dem(k):
         if k is None: return '—'
         key = 'global_' if k == 'global' else k
