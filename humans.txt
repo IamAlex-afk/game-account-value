@@ -3,6 +3,6 @@ Developer: Aleksei Bitkin
 Contact: https://t.me/GameAccountValue_Bot
 
 /* SITE */
-Last update: 2026/09/14
-Language: English, Russian, Indonesian, Portuguese (+ 20 more)
+Last update: 2026/10/06
+Language: 24 languages (English reference; Russian, Spanish, Portuguese, Indonesian, Turkish, Arabic, Vietnamese, Hindi, French, German, Italian, Japanese, Korean, Thai, Polish, Chinese, Filipino, Swahili, Malay, Uzbek, Kazakh, Turkmen, Kyrgyz)
 Doctype: HTML5

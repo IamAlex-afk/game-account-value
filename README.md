@@ -10,7 +10,7 @@
   <a href="https://gameaccountvalue.com/"><img src="https://img.shields.io/badge/site-gameaccountvalue.com-0E7490" alt="Website"></a>
   <a href="https://t.me/GameAccountValue_Bot"><img src="https://img.shields.io/badge/Telegram-@GameAccountValue__Bot-26A5E4?logo=telegram&logoColor=white" alt="Telegram bot"></a>
   <img src="https://img.shields.io/badge/languages-24-brightgreen" alt="24 languages">
-  <img src="https://img.shields.io/badge/Lighthouse%20mobile-96%20%C2%B7%20100%20%C2%B7%20100%20%C2%B7%20100-success" alt="Lighthouse 96/100/100/100">
+  <img src="https://img.shields.io/badge/Lighthouse%20mobile%20(2026--09--30)-96%20%C2%B7%20100%20%C2%B7%20100%20%C2%B7%20100-success" alt="Lighthouse 96/100/100/100 on 2026-09-30">
   <img src="https://img.shields.io/badge/stack-vanilla%20HTML%2FCSS%2FJS-yellow" alt="No framework">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue" alt="GPL-3.0"></a>
 </p>
@@ -53,7 +53,7 @@ Each game has its own page: calculator, dated price ranges with sources, what ra
 
 English, Русский, Español, Português, Bahasa Indonesia, Türkçe, العربية, Tiếng Việt, हिन्दी, Français, Deutsch, Italiano, 日本語, 한국어, ภาษาไทย, Polski, 中文, Filipino, Kiswahili, Bahasa Melayu, Oʻzbekcha, Қазақша, Türkmençe, Кыргызча.
 
-Every language has the same **38 pages** (home, 9 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, about, privacy policy, terms, plus the news section: a hub, 9 game news pages and 10 articles from official publisher announcements), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
+Every language has the same **52 pages** (home, 9 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, about, privacy policy, terms, plus the news section: a hub, 9 game news pages and 24 articles from official publisher announcements), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
 
 
 ## Privacy in plain words
@@ -61,18 +61,20 @@ Every language has the same **38 pages** (home, 9 game reports, market report, m
 - The site calculator runs **entirely in your browser**.
 - The bot processes screenshots **in memory only** and discards them after the analysis.
 - Telegram user IDs are **stored as SHA-256 hashes**, never raw.
-- No third-party analytics are wired up; CTA buttons carry a no-op `data-event` hook only.
+- No cookies, no analytics or tracking, no ads, no registration; CTA buttons carry a no-op `data-event` hook only.
+- The bot's `/top` leaderboard is opt-in after a paid audit (name on the card or card number only) and removed by `/delete`.
 
 Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.html](https://gameaccountvalue.com/terms.html)
 
 ## Quality, measured
 
-| Check | Result (2026-09-30) |
+| Check | Result |
 |---|---|
-| Lighthouse mobile, live homepage | Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100 |
-| `python scripts/site_check.py` | 913 pages, 0 errors (links, JSON-LD, canonical, hreflang, required blocks) |
+| Lighthouse mobile, live homepage | 2026-09-30: Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100 (to re-measure after the 2026-10 visual update) |
+| `python scripts/site_check.py` | 1,249 pages, 0 errors (links, JSON-LD, canonical, hreflang, required blocks) — 2026-10-06 |
+| `html-validate` (root pages, `.htmlvalidate.json`) | 0 errors — 2026-10-06 |
 | Layout | no horizontal scroll at 360 / 390 / 768 / 1280 px, including right-to-left Arabic |
-| Security headers | strict CSP (`script-src 'self'`), [security.txt](.well-known/security.txt), [SECURITY.md](SECURITY.md) |
+| Security headers | strict CSP (`script-src 'self'`); HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy via Cloudflare; [SECURITY.md](SECURITY.md) |
 
 ## Tech
 
@@ -84,11 +86,14 @@ index.html, {game}.html          English homepage + 9 game reports
 market-report.html, methodology.html, glossary.html,
 account-trading-safety.html, which-game-accounts-are-most-valuable.html
 news.html, {game}-news.html      news hub + per-game news; news-{game}-{yyyy-mm}-{slug}.html articles
-{lang}/                          the same 38 pages in each of the 23 other languages
+{lang}/                          the same 52 pages in each of the 23 other languages
 assets/glass.css                 design system, built from scripts/design/css/*.css
 assets/calculators.js            per-game calculators; every price anchor is sourced in a comment
+assets/space-background.js       decorative deep-space scene (per-game view and loot set), starts after load
+assets/space/                    scene images (sky, planets, objects, game items, phones; no logos)
 assets/cards/{lang}/             collector card samples rendered by the bot's own card drawer
-sitemap.xml, robots.txt          SEO; llms.txt, ai.txt — plain-text summary for AI assistants
+sitemap.xml, robots.txt          SEO; sitemaps/sitemap-{lang}.xml per-language copies for Search Console
+llms.txt, ai.txt                 plain-text summary for AI assistants
 scripts/site_check.py            one-command quality gate
 ```
 
@@ -101,7 +106,7 @@ python -m http.server 8080
 
 ## Publishing a new page
 
-1. Add it to `sitemap.xml`, commit, then `python scripts/sitemap_lastmod.py` (lastmod from git history).
+1. Add it to `sitemap.xml`, commit, then `python scripts/sitemap_lastmod.py` (lastmod from git history, skipping template-only commits in `scripts/lastmod-ignore-revs.txt`; also refreshes `sitemaps/`).
 2. `python scripts/site_check.py` must report **0 errors**.
 3. After the GitHub Pages run succeeds: `python scripts/indexnow.py https://gameaccountvalue.com/<page>.html` (Bing, Yandex and other IndexNow members) and URL Inspection in Google Search Console.
 
