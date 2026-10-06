@@ -74,7 +74,7 @@ def main():
                 if p not in exist:
                     errors.append(f'{rel}: hreflang to missing {href}')
         # required blocks
-        if '<nav>' not in s or 'nav-menu' not in s:
+        if not re.search(r'<nav(?: aria-label="[^"]*")?>', s) or 'nav-menu' not in s:
             errors.append(f'{rel}: no site menu')
         base = os.path.basename(rel)
         if '<footer>' in s and 'class="g-18"' not in s:

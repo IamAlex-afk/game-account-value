@@ -45,7 +45,7 @@ def main():
                 title = re.sub(r'<[^>]+>', '', re.search(r'<h1>(.*?)</h1>', s, re.S).group(1)).strip()
                 crumbs = (f'\n<nav class="crumbs" aria-label="{cm.group(1)}"><ol><li><a href="./">{cm.group(2)}{cm.group(3)}</a></li>'
                           f'<li aria-current="page">{title}</li></ol></nav>\n')
-                s = re.sub(r'(<nav>.*?</nav>)', lambda m: m.group(1) + crumbs, s, count=1, flags=re.S)
+                s = re.sub(r'(<nav(?: aria-label="[^"]*")?>.*?</nav>)', lambda m: m.group(1) + crumbs, s, count=1, flags=re.S)
                 home = SITE + ('' if lang == 'en' else lang + '/')
                 ld = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
                     {'@type': 'ListItem', 'position': 1, 'name': cm.group(3), 'item': home},
@@ -64,7 +64,7 @@ def main():
                            lambda m: f'<img class="g-joystick" src="{P}assets/joystick.webp" width="480" height="435" alt="" loading="lazy" decoding="async">\n' + m.group(1), s, count=1)
             stats['joy'] += n
         # 4) header skeleton for pages without one
-        if rel in ('404.html', 'privacy.html', 'terms.html') and '<nav>' not in s:
+        if rel in ('404.html', 'privacy.html', 'terms.html') and '<nav' not in s:
             skel = (f'<nav>\n  <a href="./" class="logo">GameAccountValue</a>\n  <div class="nav-right">\n'
                     f'    <a href="{BOT}?start=landing_home&utm_source=website&utm_medium=landing&utm_campaign={rel[:-5]}" aria-label="Open Bot" class="nav-cta" data-event="cta_to_bot" rel="noopener noreferrer">🤖 Open Bot</a>\n  </div>\n</nav>\n')
             s = s.replace('<body>', '<body>\n' + skel, 1)

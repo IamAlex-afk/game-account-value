@@ -23,8 +23,8 @@ def build(lang, slug, about):
     guides = li('market-report', plain(mr)) + ''.join(li(k, plain(gl.get(k, k))) for k in N.GUIDES[1:])
     site = li('news', news) + (li('about', about) if about else '')
     col = lambda h, items: f'<div class="foot-col"><p class="foot-h">{h}</p><ul>{items}</ul></div>'
-    # a <div role="navigation">, not <nav>: the site styles every <nav> as the sticky header bar
-    return (f'<!--foot-nav--><div class="foot-nav" role="navigation" aria-label="GameAccountValue">'
+    # a plain <div> inside <footer> (every <nav> here is styled as the sticky header bar)
+    return (f'<!--foot-nav--><div class="foot-nav">'
             f'{col(g, games)}{col(gd, guides)}{col("GameAccountValue", site)}</div><!--/foot-nav-->')
 
 

@@ -87,7 +87,8 @@ def build(lang, slug, logo, cta):
     burger = (f'  <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-panel" '
               f'aria-label="{g} · {gd} · {news} · {lang.upper()}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
               f'<path class="nb-open" d="M4 7h16M4 12h16M4 17h16"/><path class="nb-close" d="M6 6l12 12M18 6 6 18"/></svg></button>\n')
-    return (f'<nav>\n  {logo}\n{burger}'
+    # several <nav> landmarks per page (header, breadcrumbs): give the header an accessible name
+    return (f'<nav aria-label="{g} · {gd} · {news}">\n  {logo}\n{burger}'
             f'  <div class="nav-menu" id="nav-panel">\n'
             f'    <div class="lang-selector nav-dd">\n'
             f'      <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-games">{g} <span class="lang-arrow">▾</span></button>\n'
@@ -116,7 +117,7 @@ def main():
             continue
         slug = parts[-1][:-5]
         s = open(f, encoding='utf-8').read()
-        m = re.search(r'<nav>.*?</nav>', s, re.S)
+        m = re.search(r'<nav(?: aria-label="[^"]*")?>.*?</nav>', s, re.S)
         if not m:
             continue
         old = m.group(0)
