@@ -194,3 +194,15 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - Search Console API read-only via ~/.gav-gsc.json (siteRestrictedUser). Rules in SITE-STANDARD.md.
 - Brawl Stars 24 langs: "make account more valuable" FAQ replaced with pre-estimate checklist (02d308e1).
   Same FAQ on the other 8 games -> replace (owner approved) + add calculator options only with sources.
+
+## 2026-10-06 (later) About cleanup, Vietnamese creators
+- About page, all 24 langs (f0e7d8d4, 81bed07f, 6b6cb972): owner wants no repeated content. Removed the author section
+  (footer already names the author), the two "never do" bullets the footer notice states, the second "no ads" sentence,
+  and the author line from meta description / lead. Source text in scripts/design/about_text_[a-d].py edited to match.
+- Creators vi (39816103): Roblox, Clash of Clans, Free Fire + vi homepage block. YouTube "Search Queries per day" quota
+  ran out (HTTP 429, not 403 - streamers.py only handles 403 and crashes before add_manual/apply_exclude).
+  STILL TO COLLECT for vi: clash-royale (0 passed), genshin-impact, mobile-legends, fortnite, minecraft; brawl-stars found
+  only two tiny channels (820 and 6 subscribers) - dropped from the store, not published.
+- BUG to fix: world_markets.py writes a raw "&" where pages have "&amp;" (e.g. vi "Nga &amp; SNG", also en/de/id/ms).
+  Running it for a game touches those pages; reverted by hand this time.
+- Pages build for 6b6cb972 errored once on GitHub's side; the next push built fine and carried the change.
