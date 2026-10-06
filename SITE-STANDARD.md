@@ -39,6 +39,19 @@ canonical to itself · hreflang to all existing translations · valid JSON-LD ·
   so it changes only when the page itself changed.
 - `scripts/audit_site.py` must print NO ISSUES (noindex + sitemap conflict, missing canonical, hreflang return links).
 
+## Working from Search Console data (read-only API, `~/.gav-gsc.json`, since 2026-10-06)
+Google's own guides (title links, upd. 2025-12-10; snippets 2026-04-20; helpful content 2026-10-05;
+spam policies 2026-08-28):
+- Improve a page for its readers, not for a query: add real, sourced information; never repeat keywords
+  in titles/descriptions or on the page (keyword stuffing), never make near-duplicate pages per query
+  (doorway / scaled content abuse).
+- Title = short, unique, describes the page, in the page's language; description = a specific summary of
+  that page with its real data (ranges, dates). No boilerplate shared across pages.
+- Never change dates without a substantial change (`lastmod` comes from git for this reason).
+- Do not chase other sites' brand queries (e.g. a marketplace name): people want that site, not ours.
+- Most queries are hidden by Google for privacy; do not rewrite a title from 1–3 visible queries.
+- Priority: pages at positions 8–20 with real impressions → improve content; recheck 2–4 weeks later.
+
 ## Page types — what Google's guides ask for
 - **Game page (tool + report):** calculator, real price ranges with sources and dates, what raises/
   lowers value, comparison links, honest pros & cons, scam risks, rules, FAQ, sources list.
