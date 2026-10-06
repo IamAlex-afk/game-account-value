@@ -184,3 +184,13 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   unreliable (host CPU busy: baseline commit also dropped 85 -> 59-74); PSI quota exhausted - owner to re-check PSI.
 - OPEN: bot fixes (fp_done order, TimedOut), morning summary + Stars revenue (owner "да" pending);
   CoC estimate-limits block for other games; Cloudflare Browser Cache TTL.
+
+## 2026-10-06 creators, Search Console, Brawl Stars FAQ
+- Owner report (Russian, read first in a new session): Desktop\ПЛНАН КАПКАН ЗИП\GAV-ОТЧЁТ.md
+- Creators by language: streamers.py (YouTube Data API v3; keys ~/.gav-keys.json), creators.py, home_creators.py.
+  Live: Clash Royale pt + ar. Topic rule: game in title/tags of >= 6 of last 10 uploads, >= 2 titles, no other
+  tracked game named in more titles; official game channels excluded; one game per channel; language from uploads.
+  30-day YouTube policy enforced in renderer; --refresh / --recheck modes.
+- Search Console API read-only via ~/.gav-gsc.json (siteRestrictedUser). Rules in SITE-STANDARD.md.
+- Brawl Stars 24 langs: "make account more valuable" FAQ replaced with pre-estimate checklist (02d308e1).
+  Same FAQ on the other 8 games -> replace (owner approved) + add calculator options only with sources.

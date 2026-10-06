@@ -59,6 +59,34 @@ WORDS = {
 }
 
 
+OFFICIAL = ("garena", "supercell", "roblox", "mojang", "minecraft official", "epic games", "fortnite", "hoyoverse",
+            "genshin impact", "moonton", "mobile legends: bang bang", "brawl stars", "clash royale", "clash of clans", "free fire")
+
+
+def about_game(v, kws):
+    sn = v["snippet"]
+    return any(k in (sn["title"] + " " + " ".join(sn.get("tags", []))).lower() for k in kws)
+
+
+def _in_title(v, kws):
+    return any(k in v["snippet"]["title"].lower() for k in kws)
+
+
+def on_topic(last, game):
+    """>= 6 of the last 10 uploads name the game in title or tags, >= 2 titles name it, and no other tracked game
+    is named in more titles (tags are often stuffed with other games, titles are not)."""
+    kw = lambda g: GAMES[g][1] + ([AR_NAME[g]] if g in AR_NAME else [])
+    if sum(about_game(v, kw(game)) for v in last) < 6:
+        return False
+    mine = sum(_in_title(v, kw(game)) for v in last)
+    return mine >= 2 and all(sum(_in_title(v, kw(g)) for v in last) <= mine for g in GAMES if g != game)
+
+
+def is_official(name):
+    n = name.lower().strip()
+    return any(n == o or n.startswith(o + " ") for o in OFFICIAL)
+
+
 def title_lang(title, lang):
     t = title.lower()
     if lang in SCRIPT:
@@ -121,16 +149,17 @@ def youtube(game, lang, store):
         st, sn = c["statistics"], c["snippet"]
         if st.get("hiddenSubscriberCount"):
             continue
+        if is_official(sn["title"]):
+            continue
         langs = set(audio.get(c["id"], set())) | {(sn.get("defaultLanguage") or "").split("-")[0].lower()}
         langs.discard("")
         up = c["contentDetails"]["relatedPlaylists"]["uploads"]
         items = yt("playlistItems", part="snippet", playlistId=up, maxResults=10).get("items", [])
         titles = [i["snippet"]["title"] for i in items]
         last = yt("videos", part="snippet", id=",".join(i["snippet"]["resourceId"]["videoId"] for i in items)).get("items", []) if items else []
-        # "about the game": the game named in the title, description or tags of the upload
-        about = sum(any(k in (v["snippet"]["title"] + " " + v["snippet"].get("description", "") + " " + " ".join(v["snippet"].get("tags", []))).lower()
-                        for k in kws) for v in last)
-        if about < 6:
+        # "about the game": the game named in the upload's own title
+        about = sum(about_game(v, kws) for v in last)
+        if not on_topic(last, game):
             continue
         up_lang = [(v["snippet"].get("defaultAudioLanguage") or "").split("-")[0].lower() for v in last]
         in_lang = sum(title_lang(t, lang) for t in titles)
@@ -186,10 +215,38 @@ if __name__ == "__main__":
     ap.add_argument("--langs", default=",".join(LANGS))
     ap.add_argument("--twitch-only", action="store_true")
     ap.add_argument("--youtube-only", action="store_true")
+    ap.add_argument("--recheck", action="store_true", help="re-apply the topic rules to stored channels")
     ap.add_argument("--refresh", action="store_true",
                     help="re-read statistics of every stored channel (cheap: 1 unit per 50 channels); run at least every 30 days")
     a = ap.parse_args()
     store = json.load(open(OUT, encoding="utf-8")) if os.path.exists(OUT) else {}
+    if a.recheck:   # re-apply topic / official / one-game rules to stored YouTube channels (2 units per channel)
+        owner = {}
+        for g, byl in store.items():
+            _, kws, _ = GAMES[g]
+            kws = kws + [AR_NAME[g]] if g in AR_NAME else kws
+            for L, d in byl.items():
+                for cid, r in list(d.get("youtube", {}).items()):
+                    if is_official(r["name"]):
+                        del d["youtube"][cid]; print("official", g, L, r["name"]); continue
+                    ch = yt("channels", part="contentDetails", id=cid).get("items", [])
+                    if not ch:
+                        del d["youtube"][cid]; continue
+                    it = yt("playlistItems", part="snippet", playlistId=ch[0]["contentDetails"]["relatedPlaylists"]["uploads"], maxResults=10).get("items", [])
+                    last = yt("videos", part="snippet", id=",".join(i["snippet"]["resourceId"]["videoId"] for i in it)).get("items", []) if it else []
+                    n = sum(about_game(v, kws) for v in last)
+                    r["about_game_last10"] = n
+                    if not on_topic(last, g):
+                        del d["youtube"][cid]; print("off-topic", g, L, r["name"], n); continue
+                    owner.setdefault((L, cid), []).append((n, g))
+        for (L, cid), lst in owner.items():   # a channel is listed under one game only: the one most of its uploads are about
+            if len(lst) > 1:
+                best = max(lst)[1]
+                for n, g in lst:
+                    if g != best:
+                        print("dup", L, store[g][L]["youtube"][cid]["name"], g, "->", best); del store[g][L]["youtube"][cid]
+        json.dump(store, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        raise SystemExit
     if a.refresh:   # YouTube policy: stored statistics must be refreshed (or deleted) within 30 days
         ids = [cid for g in store.values() for l in g.values() for cid in l.get("youtube", {})]
         for i in range(0, len(ids), 50):
