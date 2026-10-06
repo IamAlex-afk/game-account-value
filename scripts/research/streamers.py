@@ -34,6 +34,43 @@ GAMES = {  # page slug: (YouTube search query, title keywords, Twitch category n
     "minecraft": ("Minecraft", ["minecraft", "майнкрафт", "マイクラ", "마인크래프트"], "Minecraft"),
 }
 # order = priority: fewer competing pages first (owner, 2026-10-06), English last
+# per-language search hints: region + words that make the query itself be in that language
+HINT = {
+    "pt": ("BR", "{g} melhor deck"), "es": ("MX", "{g} mejor mazo"), "ar": ("SA", "{g} {ar}"), "id": ("ID", "{g} terbaik"),
+    "tr": ("TR", "{g} en iyi"), "vi": ("VN", "{g} hay nhất"), "hi": ("IN", "{g} हिंदी"), "th": ("TH", "{g} ไทย"),
+    "ru": ("RU", "{g} лучшая колода"), "fr": ("FR", "{g} meilleur deck"), "de": ("DE", "{g} bestes deck"), "it": ("IT", "{g} miglior mazzo"),
+    "ja": ("JP", "{g} 最強"), "ko": ("KR", "{g} 공략"), "pl": ("PL", "{g} najlepszy"), "zh": ("TW", "{g} 攻略"),
+}
+AR_NAME = {"roblox": "روبلوكس", "brawl-stars": "براول ستارز", "clash-of-clans": "كلاش اوف كلانس", "clash-royale": "كلاش رويال",
+           "free-fire": "فري فاير", "genshin-impact": "جينشن", "mobile-legends": "موبايل ليجند", "fortnite": "فورتنايت", "minecraft": "ماين كرافت"}
+# title-based language evidence (used only when YouTube gives no language): script or exclusive common words
+import unicodedata
+SCRIPT = {"ar": "ARABIC", "hi": "DEVANAGARI", "th": "THAI", "ru": "CYRILLIC", "ja": "HIRAGANA", "ko": "HANGUL", "zh": "CJK"}
+WORDS = {
+    "pt": {"não", "você", "melhor", "com", "é", "nunca", "meu", "esse", "essa", "jogando", "joguei", "muito", "mais", "pra", "jogo"},
+    "es": {"el", "mejor", "mazo", "con", "nunca", "este", "jugando", "muy", "más", "los", "las", "cómo", "juego"},
+    "id": {"yang", "dan", "ini", "aku", "main", "terbaik", "banget", "gak", "bisa", "akun", "cara", "dengan"},
+    "tr": {"ve", "bir", "bu", "için", "ile", "iyi", "oynadım", "nasıl", "çok", "hesap", "oyun"},
+    "vi": {"và", "của", "nhất", "chơi", "cách", "là", "không", "những", "này", "tôi"},
+    "fr": {"le", "la", "les", "avec", "et", "est", "meilleur", "jamais", "mon", "pour", "comment"},
+    "de": {"der", "die", "das", "und", "mit", "ist", "bestes", "nie", "mein", "wie", "für"},
+    "it": {"il", "gli", "con", "è", "miglior", "mai", "mio", "come", "per", "della", "questo"},
+    "pl": {"jest", "najlepszy", "nie", "mój", "jak", "dla", "się", "jestem", "gram"},
+}
+
+
+def title_lang(title, lang):
+    t = title.lower()
+    if lang in SCRIPT:
+        names = [unicodedata.name(ch, "") for ch in t if ch.isalpha()]
+        hits = sum(SCRIPT[lang] in n for n in names)
+        return hits >= 3
+    if lang in WORDS:
+        toks = set(re.findall(r"[^\W\d_]+", t))
+        return len(toks & WORDS[lang]) >= 2      # two distinct marker words, so one shared word is not enough
+    return False
+
+
 LANGS = ["pt", "ar", "es", "id", "tr", "vi", "hi", "th", "ru", "fr", "de", "it", "ja", "ko", "pl", "zh", "tl", "sw", "ms", "uz", "kk", "tk", "ky", "en"]
 
 
@@ -55,38 +92,62 @@ def yt(path, **q):
 
 def youtube(game, lang, store):
     query, kws, _ = GAMES[game]
+    kws = kws + [AR_NAME[game]] if game in AR_NAME else kws      # Arabic titles spell the game in Arabic
     since = (datetime.datetime.utcnow() - datetime.timedelta(days=120)).strftime("%Y-%m-%dT00:00:00Z")
-    found = yt("search", part="snippet", type="video", q=query, relevanceLanguage=lang, order="viewCount",
-               publishedAfter=since, maxResults=50)
-    vids = [i["id"]["videoId"] for i in found.get("items", [])]
+    region, tpl = HINT.get(lang, (None, "{g}"))
+    q = tpl.format(g=query, ar=AR_NAME.get(game, ""))
+    params = dict(part="snippet", type="video", q=q, relevanceLanguage=lang, order="relevance", publishedAfter=since, maxResults=50)
+    if region:
+        params["regionCode"] = region
+    vids = []
+    for order in ("relevance", "viewCount"):          # two searches: active creators + biggest recent videos
+        params["order"] = order
+        vids += [i["id"]["videoId"] for i in yt("search", **params).get("items", []) if i["id"]["videoId"] not in vids]
     if not vids:
         return
-    vmeta = yt("videos", part="snippet", id=",".join(vids)).get("items", [])
+    vmeta = []
+    for i in range(0, len(vids), 50):
+        vmeta += yt("videos", part="snippet", id=",".join(vids[i:i + 50])).get("items", [])
     audio = {}
     for v in vmeta:
         sn = v["snippet"]; l = (sn.get("defaultAudioLanguage") or sn.get("defaultLanguage") or "").split("-")[0].lower()
         audio.setdefault(sn["channelId"], set()).add(l)
-    ids = list(audio)[:50]
-    chans = yt("channels", part="snippet,statistics,contentDetails", id=",".join(ids)).get("items", [])
+    ids = list(audio)
+    chans = []
+    for i in range(0, len(ids), 50):
+        chans += yt("channels", part="snippet,statistics,contentDetails", id=",".join(ids[i:i + 50])).get("items", [])
     rows = store.setdefault(game, {}).setdefault(lang, {}).setdefault("youtube", {})
     for c in chans:
         st, sn = c["statistics"], c["snippet"]
         if st.get("hiddenSubscriberCount"):
             continue
         langs = set(audio.get(c["id"], set())) | {(sn.get("defaultLanguage") or "").split("-")[0].lower()}
-        if lang not in langs:
-            continue
+        langs.discard("")
         up = c["contentDetails"]["relatedPlaylists"]["uploads"]
         items = yt("playlistItems", part="snippet", playlistId=up, maxResults=10).get("items", [])
-        titles = [i["snippet"]["title"].lower() for i in items]
-        about = sum(any(k in t for k in kws) for t in titles)
+        titles = [i["snippet"]["title"] for i in items]
+        last = yt("videos", part="snippet", id=",".join(i["snippet"]["resourceId"]["videoId"] for i in items)).get("items", []) if items else []
+        # "about the game": the game named in the title, description or tags of the upload
+        about = sum(any(k in (v["snippet"]["title"] + " " + v["snippet"].get("description", "") + " " + " ".join(v["snippet"].get("tags", []))).lower()
+                        for k in kws) for v in last)
         if about < 6:
             continue
+        up_lang = [(v["snippet"].get("defaultAudioLanguage") or "").split("-")[0].lower() for v in last]
+        in_lang = sum(title_lang(t, lang) for t in titles)
+        own = sum(l == lang for l in up_lang)          # uploads YouTube marks as this language
+        other = sum(bool(l) and l != lang for l in up_lang)
+        chan_lang = (sn.get("defaultLanguage") or "").split("-")[0].lower()
+        # language evidence comes from the uploads themselves (a channel-level language setting alone is not enough:
+        # e.g. an English-speaking channel with defaultLanguage=pt): most recent uploads marked in this language by
+        # YouTube, or titles written in it with few uploads marked as another language
+        if not (own >= 6 or (other <= 2 and in_lang >= 4)):
+            continue
+        langs = {x for x in (("channel" if chan_lang == lang else ""), (f"{own}/10 uploads" if own else ""), (f"{in_lang}/10 titles" if in_lang else "")) if x}
         rows[c["id"]] = {
             "name": sn["title"], "url": "https://www.youtube.com/channel/" + c["id"],
             "handle": sn.get("customUrl"), "country": sn.get("country"),
             "subscribers": int(st["subscriberCount"]), "videos": int(st.get("videoCount", 0)),
-            "about_game_last10": about, "language_evidence": sorted(l for l in langs if l),
+            "about_game_last10": about, "titles_in_language_last10": in_lang, "language_evidence": sorted(l for l in langs if l),
             "source": "YouTube Data API v3 (channels.list statistics)", "checked": TODAY,
         }
 

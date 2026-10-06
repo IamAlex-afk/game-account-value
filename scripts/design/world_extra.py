@@ -153,8 +153,7 @@ def render_extra(game, lang, game_name):
     cr = render_creators(game, lang, game_name)
     if cr:
         out.append(cr)
-        return '
-'.join(out)
+        return '\n'.join(out)
     # streamers: reader's language first
     st = e['streams']
     rs = sorted(st['rows'], key=lambda r: (r[1] != lang, -r[2]))
