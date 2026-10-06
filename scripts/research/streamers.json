@@ -2,34 +2,19 @@
  "clash-royale": {
   "pt": {
    "youtube": {
-    "UCkRS7QutRV0M1AyplT5xbyw": {
-     "name": "Adr11annn",
-     "url": "https://www.youtube.com/channel/UCkRS7QutRV0M1AyplT5xbyw",
-     "handle": "@adr11annn",
+    "UCCXR1oSwEjJgD10Q_wFmf2A": {
+     "name": "KENNEDY CLASH",
+     "url": "https://www.youtube.com/channel/UCCXR1oSwEjJgD10Q_wFmf2A",
+     "handle": "@kennedyclash_",
      "country": "BR",
-     "subscribers": 50100,
-     "videos": 363,
-     "about_game_last10": 8,
-     "titles_in_language_last10": 2,
+     "subscribers": 574000,
+     "videos": 2008,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 1,
      "language_evidence": [
+      "1/10 titles",
       "10/10 uploads",
-      "2/10 titles"
-     ],
-     "source": "YouTube Data API v3 (channels.list statistics)",
-     "checked": "2026-10-06"
-    },
-    "UCTkZFtIFpbODLyIeheV-A7w": {
-     "name": "LucasXGamer",
-     "url": "https://www.youtube.com/channel/UCTkZFtIFpbODLyIeheV-A7w",
-     "handle": "@lucasxgamercr",
-     "country": null,
-     "subscribers": 164000,
-     "videos": 1119,
-     "about_game_last10": 10,
-     "titles_in_language_last10": 6,
-     "language_evidence": [
-      "10/10 uploads",
-      "6/10 titles"
+      "channel"
      ],
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
@@ -50,38 +35,6 @@
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
     },
-    "UCtGTfdYlG-B6SgeRiaf61CA": {
-     "name": "Artube Clash",
-     "url": "https://www.youtube.com/channel/UCtGTfdYlG-B6SgeRiaf61CA",
-     "handle": "@artubeclash",
-     "country": "BR",
-     "subscribers": 864000,
-     "videos": 3942,
-     "about_game_last10": 8,
-     "titles_in_language_last10": 2,
-     "language_evidence": [
-      "10/10 uploads",
-      "2/10 titles"
-     ],
-     "source": "YouTube Data API v3 (channels.list statistics)",
-     "checked": "2026-10-06"
-    },
-    "UCBbmBFZivq6OyT85__X188w": {
-     "name": "Bielvinis CR",
-     "url": "https://www.youtube.com/channel/UCBbmBFZivq6OyT85__X188w",
-     "handle": "@bielviniscr",
-     "country": "BR",
-     "subscribers": 125000,
-     "videos": 3596,
-     "about_game_last10": 10,
-     "titles_in_language_last10": 2,
-     "language_evidence": [
-      "10/10 uploads",
-      "2/10 titles"
-     ],
-     "source": "YouTube Data API v3 (channels.list statistics)",
-     "checked": "2026-10-06"
-    },
     "UCBAXLTEby1yN6yTB4ewJvww": {
      "name": "Allan Franzotti - Clash Royale",
      "url": "https://www.youtube.com/channel/UCBAXLTEby1yN6yTB4ewJvww",
@@ -89,7 +42,7 @@
      "country": "BR",
      "subscribers": 325000,
      "videos": 1549,
-     "about_game_last10": 10,
+     "about_game_last10": 9,
      "titles_in_language_last10": 1,
      "language_evidence": [
       "1/10 titles",
@@ -98,35 +51,31 @@
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
     },
-    "UCCXR1oSwEjJgD10Q_wFmf2A": {
-     "name": "KENNEDY CLASH",
-     "url": "https://www.youtube.com/channel/UCCXR1oSwEjJgD10Q_wFmf2A",
-     "handle": "@kennedyclash_",
-     "country": "BR",
-     "subscribers": 574000,
-     "videos": 2008,
+    "UCTkZFtIFpbODLyIeheV-A7w": {
+     "name": "LucasXGamer",
+     "url": "https://www.youtube.com/channel/UCTkZFtIFpbODLyIeheV-A7w",
+     "handle": "@lucasxgamercr",
+     "country": null,
+     "subscribers": 164000,
+     "videos": 1119,
      "about_game_last10": 10,
-     "titles_in_language_last10": 1,
+     "titles_in_language_last10": 6,
      "language_evidence": [
-      "1/10 titles",
       "10/10 uploads",
-      "channel"
+      "6/10 titles"
      ],
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
     },
-    "UCPJJ03ginLOLyS_QVkIQMLA": {
-     "name": "BREAKER",
-     "url": "https://www.youtube.com/channel/UCPJJ03ginLOLyS_QVkIQMLA",
-     "handle": "@breaker.splashyard",
+    "UCtGTfdYlG-B6SgeRiaf61CA": {
+     "name": "Artube Clash",
+     "url": "https://www.youtube.com/channel/UCtGTfdYlG-B6SgeRiaf61CA",
+     "handle": "@artubeclash",
      "country": "BR",
-     "subscribers": 171000,
-     "videos": 615,
-     "about_game_last10": 10,
-     "titles_in_language_last10": 4,
+     "subscribers": 864000,
+     "videos": 3942,
      "language_evidence": [
-      "3/10 uploads",
-      "4/10 titles"
+      "manual: all recent uploads are Clash Royale gameplay (heroes, challenges, cards); titles omit the game name"
      ],
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
@@ -135,6 +84,22 @@
   },
   "ar": {
    "youtube": {
+    "UC1AVDGSmXxb8kGLcuxpsU7g": {
+     "name": "سينور",
+     "url": "https://www.youtube.com/channel/UC1AVDGSmXxb8kGLcuxpsU7g",
+     "handle": "@senorx1",
+     "country": "SA",
+     "subscribers": 22800,
+     "videos": 86,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "1/10 uploads",
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
     "UC5ED7NjBns1dNZSjVVSNINw": {
      "name": "LORD X",
      "url": "https://www.youtube.com/channel/UC5ED7NjBns1dNZSjVVSNINw",
@@ -142,7 +107,7 @@
      "country": "JO",
      "subscribers": 357000,
      "videos": 1469,
-     "about_game_last10": 10,
+     "about_game_last10": 9,
      "titles_in_language_last10": 10,
      "language_evidence": [
       "10/10 titles",
@@ -166,19 +131,2089 @@
      ],
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "roblox": {
+  "pt": {
+   "youtube": {
+    "UCYN9N1Jzyy6iOYeDrfAYizQ": {
+     "name": "SUB4RU",
+     "url": "https://www.youtube.com/channel/UCYN9N1Jzyy6iOYeDrfAYizQ",
+     "handle": "@sub4ru",
+     "country": "BR",
+     "subscribers": 200000,
+     "videos": 1981,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 4,
+     "language_evidence": [
+      "10/10 uploads",
+      "4/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
     },
-    "UC1AVDGSmXxb8kGLcuxpsU7g": {
-     "name": "سينور",
-     "url": "https://www.youtube.com/channel/UC1AVDGSmXxb8kGLcuxpsU7g",
-     "handle": "@senorx1",
+    "UCQ7CoTQZ-3xyA41HLA8XL0A": {
+     "name": "Feupes Games",
+     "url": "https://www.youtube.com/channel/UCQ7CoTQZ-3xyA41HLA8XL0A",
+     "handle": "@feupesgames",
+     "country": "BR",
+     "subscribers": 1770,
+     "videos": 167,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "9/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCEOGSdXwcXcNfcuDGbjmgOw": {
+     "name": "Julia MineGirl",
+     "url": "https://www.youtube.com/channel/UCEOGSdXwcXcNfcuDGbjmgOw",
+     "handle": "@juliaminegirl",
+     "country": "BR",
+     "subscribers": 12600000,
+     "videos": 2661,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCdK8veAN0I3-9gs2Xqa7v9A": {
+     "name": "Amy Scarletona",
+     "url": "https://www.youtube.com/channel/UCdK8veAN0I3-9gs2Xqa7v9A",
+     "handle": "@amyscarletona",
+     "country": null,
+     "subscribers": 4090000,
+     "videos": 1027,
+     "about_game_last10": 7,
+     "titles_in_language_last10": 2,
+     "language_evidence": [
+      "10/10 uploads",
+      "2/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCTxL6leken7iKH5PE4OTvxA": {
+     "name": "Guizera",
+     "url": "https://www.youtube.com/channel/UCTxL6leken7iKH5PE4OTvxA",
+     "handle": "@guizerayt",
+     "country": "BR",
+     "subscribers": 93800,
+     "videos": 870,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCMMs1NZH-U0XHfJFPPqXGcA": {
+     "name": "خنافيشو | Khnafisho",
+     "url": "https://www.youtube.com/channel/UCMMs1NZH-U0XHfJFPPqXGcA",
+     "handle": "@khnafisho",
      "country": "SA",
-     "subscribers": 22800,
-     "videos": 86,
+     "subscribers": 734000,
+     "videos": 236,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC9PDfIE4OpHzhD20oQVt61Q": {
+     "name": "✨Abeer Games✨",
+     "url": "https://www.youtube.com/channel/UC9PDfIE4OpHzhD20oQVt61Q",
+     "handle": "@abeergames451",
+     "country": null,
+     "subscribers": 46700,
+     "videos": 106,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "1/10 uploads",
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCgndjUsEWFDhkq1759Jrybw": {
+     "name": "Mazen",
+     "url": "https://www.youtube.com/channel/UCgndjUsEWFDhkq1759Jrybw",
+     "handle": "@mazen-y1",
+     "country": "EG",
+     "subscribers": 531000,
+     "videos": 310,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "3/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCv047QYzSzRaeuz_hL0mSGA": {
+     "name": "بـانـيـكـس",
+     "url": "https://www.youtube.com/channel/UCv047QYzSzRaeuz_hL0mSGA",
+     "handle": "@banyx11",
+     "country": null,
+     "subscribers": 228000,
+     "videos": 123,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCV5ZVvsnqXniOnI4yydz8pQ": {
+     "name": "لانا و رورو",
+     "url": "https://www.youtube.com/channel/UCV5ZVvsnqXniOnI4yydz8pQ",
+     "handle": "@lana-roro",
+     "country": null,
+     "subscribers": 3120000,
+     "videos": 501,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "2/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCU1e8-QHvGH980bx6CBu3ZQ": {
+     "name": "PINK Y - بينكواي",
+     "url": "https://www.youtube.com/channel/UCU1e8-QHvGH980bx6CBu3ZQ",
+     "handle": "@pinkyy4",
+     "country": "SA",
+     "subscribers": 161000,
+     "videos": 196,
+     "about_game_last10": 7,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC3ROKWG9R1SY3EUBOLxWtAg": {
+     "name": "LoloTuber",
+     "url": "https://www.youtube.com/channel/UC3ROKWG9R1SY3EUBOLxWtAg",
+     "handle": "@lolotuber5098",
+     "country": null,
+     "subscribers": 147000,
+     "videos": 296,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "6/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCqBLKRq8nHgea02AxGE4t5Q": {
+     "name": "لونا و ليا",
+     "url": "https://www.youtube.com/channel/UCqBLKRq8nHgea02AxGE4t5Q",
+     "handle": "@itslunalea",
+     "country": null,
+     "subscribers": 74200,
+     "videos": 59,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCRq7-vgPTA3olansqb-Qr4w": {
+     "name": "اصحاب سخطون",
+     "url": "https://www.youtube.com/channel/UCRq7-vgPTA3olansqb-Qr4w",
+     "handle": "@s56on",
+     "country": null,
+     "subscribers": 42900,
+     "videos": 233,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCtOELvd5tPS5dgLSqCAj3-w": {
+     "name": "شايق [⭐️]",
+     "url": "https://www.youtube.com/channel/UCtOELvd5tPS5dgLSqCAj3-w",
+     "handle": "@shayq170",
+     "country": "SA",
+     "subscribers": 2050000,
+     "videos": 1460,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCvfhFMO5qNx7SoSIWRRzLiA": {
+     "name": "تركي | Rev  ",
+     "url": "https://www.youtube.com/channel/UCvfhFMO5qNx7SoSIWRRzLiA",
+     "handle": "@reved6",
+     "country": null,
+     "subscribers": 1120000,
+     "videos": 219,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "2/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCnBC4iIgRaVg48XmVDzaI0Q": {
+     "name": "ساسوكي العراقي",
+     "url": "https://www.youtube.com/channel/UCnBC4iIgRaVg48XmVDzaI0Q",
+     "handle": "@hawryable",
+     "country": "IQ",
+     "subscribers": 635000,
+     "videos": 380,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCGj5e73Jx-5uEA5QbZPlrXQ": {
+     "name": "Saudi Roblox",
+     "url": "https://www.youtube.com/channel/UCGj5e73Jx-5uEA5QbZPlrXQ",
+     "handle": "@saudiroblox",
+     "country": "SA",
+     "subscribers": 951000,
+     "videos": 729,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "3/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCPam9r5p7ofWwvZ-RSUVkdA": {
+     "name": "نومي قيمر ",
+     "url": "https://www.youtube.com/channel/UCPam9r5p7ofWwvZ-RSUVkdA",
+     "handle": "@nomi_gmaing",
+     "country": null,
+     "subscribers": 106000,
+     "videos": 2009,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCt_TMP-mnrA6CvcnfMq6wcg": {
+     "name": "لـولـو 💫",
+     "url": "https://www.youtube.com/channel/UCt_TMP-mnrA6CvcnfMq6wcg",
+     "handle": "@lolorobloxtv",
+     "country": null,
+     "subscribers": 503000,
+     "videos": 243,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCshPc5wJWpnr7WYJ8ZomHAg": {
+     "name": "ياسو بلايز - Yaso Plays",
+     "url": "https://www.youtube.com/channel/UCshPc5wJWpnr7WYJ8ZomHAg",
+     "handle": "@ياسو_بلايز",
+     "country": "EG",
+     "subscribers": 61000,
+     "videos": 284,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "7/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCe7ymgZ3LfddPVm2uk49njg": {
+     "name": "سلستيال Celestial ",
+     "url": "https://www.youtube.com/channel/UCe7ymgZ3LfddPVm2uk49njg",
+     "handle": "@celestial_sa",
+     "country": "AE",
+     "subscribers": 381000,
+     "videos": 813,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "brawl-stars": {
+  "pt": {
+   "youtube": {
+    "UCgoi2le6lhgM32c3AO_mfiA": {
+     "name": "Minty Uau",
+     "url": "https://www.youtube.com/channel/UCgoi2le6lhgM32c3AO_mfiA",
+     "handle": "@minty_uau",
+     "country": "BR",
+     "subscribers": 261000,
+     "videos": 748,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCNE0EJZbsAUKfBD1T2MC6sg": {
+     "name": "SKINS +",
+     "url": "https://www.youtube.com/channel/UCNE0EJZbsAUKfBD1T2MC6sg",
+     "handle": "@skinsjogos",
+     "country": "BR",
+     "subscribers": 27600,
+     "videos": 413,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC-guMNzQDFL5ZUnURNNIQVA": {
+     "name": "Canal 14Bits",
+     "url": "https://www.youtube.com/channel/UC-guMNzQDFL5ZUnURNNIQVA",
+     "handle": "@canal14bits",
+     "country": "BR",
+     "subscribers": 18500,
+     "videos": 438,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCmCO9IW5TcJOAGslIeq_30Q": {
+     "name": "CODE~JACKSON",
+     "url": "https://www.youtube.com/channel/UCmCO9IW5TcJOAGslIeq_30Q",
+     "handle": "@mj1gg",
+     "country": "SA",
+     "subscribers": 423,
+     "videos": 34,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "4/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCwZNg-ZdDKA_mcP8aBK2gsg": {
+     "name": "LOKA-BrawlStars",
+     "url": "https://www.youtube.com/channel/UCwZNg-ZdDKA_mcP8aBK2gsg",
+     "handle": "@loka_brawl_stars",
+     "country": "SE",
+     "subscribers": 11300,
+     "videos": 172,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCBwBwyo0PraNRKjnrN-zj3Q": {
+     "name": "SABO - سابو",
+     "url": "https://www.youtube.com/channel/UCBwBwyo0PraNRKjnrN-zj3Q",
+     "handle": "@sabobs_ace",
+     "country": "MA",
+     "subscribers": 11600,
+     "videos": 243,
+     "about_game_last10": 7,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCi-HlbNi7Mdl9oZN7jFpI3A": {
+     "name": "MORRO",
+     "url": "https://www.youtube.com/channel/UCi-HlbNi7Mdl9oZN7jFpI3A",
+     "handle": "@morro1212",
+     "country": null,
+     "subscribers": 4480,
+     "videos": 87,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "2/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "clash-of-clans": {
+  "pt": {
+   "youtube": {
+    "UCh7zSTaswFSf_L5TBGxbg1w": {
+     "name": "Bruno - SAD BOY",
+     "url": "https://www.youtube.com/channel/UCh7zSTaswFSf_L5TBGxbg1w",
+     "handle": "@brunosadboy",
+     "country": "BR",
+     "subscribers": 14300,
+     "videos": 257,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 3,
+     "language_evidence": [
+      "10/10 uploads",
+      "3/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCl-a_C5HsFNBDoIZHqjosDA": {
+     "name": "HoLoWiWi",
+     "url": "https://www.youtube.com/channel/UCl-a_C5HsFNBDoIZHqjosDA",
+     "handle": "@holowiwi",
+     "country": "BR",
+     "subscribers": 255000,
+     "videos": 4229,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCh3pDUKg-GyN8dlk3LoY2Iw": {
+     "name": "Penna Clash",
+     "url": "https://www.youtube.com/channel/UCh3pDUKg-GyN8dlk3LoY2Iw",
+     "handle": "@pennaclash",
+     "country": "BR",
+     "subscribers": 55000,
+     "videos": 1803,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCmg3EpR3cGBvcHYQGNIo5sw": {
+     "name": "Abo-Fhd",
+     "url": "https://www.youtube.com/channel/UCmg3EpR3cGBvcHYQGNIo5sw",
+     "handle": "@abo-fhd-l2p",
+     "country": null,
+     "subscribers": 8290,
+     "videos": 973,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC5R2kvbTCxRlR5otzcCnPmw": {
+     "name": "ABO FAHAD",
+     "url": "https://www.youtube.com/channel/UC5R2kvbTCxRlR5otzcCnPmw",
+     "handle": "@abofahadcoc",
+     "country": "US",
+     "subscribers": 170000,
+     "videos": 1202,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCEVo8ZkDESoOpPvdeHUvbBA": {
+     "name": "ترانز - Tranz",
+     "url": "https://www.youtube.com/channel/UCEVo8ZkDESoOpPvdeHUvbBA",
+     "handle": "@tranz",
+     "country": "SA",
+     "subscribers": 411000,
+     "videos": 456,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC570q1c6RZsLvvFLvfF7bMA": {
+     "name": "بربريتة ",
+     "url": "https://www.youtube.com/channel/UC570q1c6RZsLvvFLvfF7bMA",
+     "handle": "@tf.virgil",
+     "country": null,
+     "subscribers": 3760,
+     "videos": 48,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "1/10 uploads",
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCHcNPWNKtU-bd1LXMe6FjTg": {
+     "name": "شجرة الضفادع ",
+     "url": "https://www.youtube.com/channel/UCHcNPWNKtU-bd1LXMe6FjTg",
+     "handle": "@coc_tf",
+     "country": null,
+     "subscribers": 4760,
+     "videos": 57,
      "about_game_last10": 9,
      "titles_in_language_last10": 10,
      "language_evidence": [
       "1/10 uploads",
       "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "free-fire": {
+  "pt": {
+   "youtube": {
+    "UCP7GV0jiiuCzY5Fq9xuuhCg": {
+     "name": "O Moraes",
+     "url": "https://www.youtube.com/channel/UCP7GV0jiiuCzY5Fq9xuuhCg",
+     "handle": "@omoraesclips",
+     "country": "BR",
+     "subscribers": 6530,
+     "videos": 55,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 4,
+     "language_evidence": [
+      "10/10 uploads",
+      "4/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCZgdQp2iRbkbF9n28-7ELdQ": {
+     "name": "LDR",
+     "url": "https://www.youtube.com/channel/UCZgdQp2iRbkbF9n28-7ELdQ",
+     "handle": "@ldr.fe97",
+     "country": null,
+     "subscribers": 15200,
+     "videos": 551,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "8/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC9lhl2zViaCtkU8WWTu7cfA": {
+     "name": "POBRE Lk",
+     "url": "https://www.youtube.com/channel/UC9lhl2zViaCtkU8WWTu7cfA",
+     "handle": "@pobrelk",
+     "country": "BR",
+     "subscribers": 2380000,
+     "videos": 2693,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCRb9RdYyBUYexNYBhG-76BA": {
+     "name": "K7👑",
+     "url": "https://www.youtube.com/channel/UCRb9RdYyBUYexNYBhG-76BA",
+     "handle": "@k7_ff",
+     "country": "BR",
+     "subscribers": 259000,
+     "videos": 1265,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 3,
+     "language_evidence": [
+      "3/10 titles",
+      "6/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCuOz5Uk1hlyWqDQQyxF5G1g": {
+     "name": "SKULL TxT",
+     "url": "https://www.youtube.com/channel/UCuOz5Uk1hlyWqDQQyxF5G1g",
+     "handle": "@skull333ofc",
+     "country": "BR",
+     "subscribers": 160000,
+     "videos": 516,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCAKHK0c9lc_IrbFsXjAGMHQ": {
+     "name": "Yusuke Tv",
+     "url": "https://www.youtube.com/channel/UCAKHK0c9lc_IrbFsXjAGMHQ",
+     "handle": "@yusuke_tv",
+     "country": "BR",
+     "subscribers": 85500,
+     "videos": 261,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 5,
+     "language_evidence": [
+      "10/10 uploads",
+      "5/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCCT89GZdU17sh1iHUk5AqlA": {
+     "name": "dak calvo",
+     "url": "https://www.youtube.com/channel/UCCT89GZdU17sh1iHUk5AqlA",
+     "handle": "@dakcalvoo",
+     "country": "BR",
+     "subscribers": 333000,
+     "videos": 213,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "7/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCW3PWxWDLi6CujVuW7UDFlA": {
+     "name": "Galahad Play",
+     "url": "https://www.youtube.com/channel/UCW3PWxWDLi6CujVuW7UDFlA",
+     "handle": "@galahadplay",
+     "country": "BR",
+     "subscribers": 253000,
+     "videos": 1846,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 2,
+     "language_evidence": [
+      "10/10 uploads",
+      "2/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC--aLn9T-2Sq54B_8LfVTkw": {
+     "name": "K7 FF",
+     "url": "https://www.youtube.com/channel/UC--aLn9T-2Sq54B_8LfVTkw",
+     "handle": "@k7_ttk",
+     "country": "BR",
+     "subscribers": 110000,
+     "videos": 2154,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCeHBhT29wQ3C5AXQjNaURZQ": {
+     "name": "SVN",
+     "url": "https://www.youtube.com/channel/UCeHBhT29wQ3C5AXQjNaURZQ",
+     "handle": "@svnff1",
+     "country": null,
+     "subscribers": 87200,
+     "videos": 211,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC4vJpTaBo23OjDZw72WYTJw": {
+     "name": "Bzu777 YT",
+     "url": "https://www.youtube.com/channel/UC4vJpTaBo23OjDZw72WYTJw",
+     "handle": "@bzu777yt",
+     "country": "MA",
+     "subscribers": 10600,
+     "videos": 113,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCvB7ajZdtz3komoXL3bU4Ew": {
+     "name": "ahmad ff",
+     "url": "https://www.youtube.com/channel/UCvB7ajZdtz3komoXL3bU4Ew",
+     "handle": "@ahmadff-l3d",
+     "country": null,
+     "subscribers": 27300,
+     "videos": 734,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "7/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC2qdrMpLKn3GgeCwN65SX_Q": {
+     "name": "SA7RAWI Gaming",
+     "url": "https://www.youtube.com/channel/UC2qdrMpLKn3GgeCwN65SX_Q",
+     "handle": "@sa7rawigaming",
+     "country": "SA",
+     "subscribers": 2280000,
+     "videos": 895,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "9/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCOIk8c6rJtSdu78k77xSEUQ": {
+     "name": "dabdob ff",
+     "url": "https://www.youtube.com/channel/UCOIk8c6rJtSdu78k77xSEUQ",
+     "handle": "@dabdobff",
+     "country": "EG",
+     "subscribers": 357000,
+     "videos": 228,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC_8O2A6UhVfygyjPbbx6a1w": {
+     "name": "M10 FF",
+     "url": "https://www.youtube.com/channel/UC_8O2A6UhVfygyjPbbx6a1w",
+     "handle": "@m10_ff60",
+     "country": "DZ",
+     "subscribers": 1250000,
+     "videos": 755,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCU4zQJcdIM6RVHwCK5jKWKQ": {
+     "name": "Slayer Gaming",
+     "url": "https://www.youtube.com/channel/UCU4zQJcdIM6RVHwCK5jKWKQ",
+     "handle": "@slayergaming5",
+     "country": "FR",
+     "subscribers": 340000,
+     "videos": 753,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "2/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UClU9P32q0dZSdmnA9NadPTQ": {
+     "name": "أبو تيم | ABO TEM",
+     "url": "https://www.youtube.com/channel/UClU9P32q0dZSdmnA9NadPTQ",
+     "handle": "@abo_tem_1",
+     "country": null,
+     "subscribers": 61300,
+     "videos": 78,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "1/10 uploads",
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCUdxTqjcb4EYs07wSU6RJgQ": {
+     "name": "Dragunov YT",
+     "url": "https://www.youtube.com/channel/UCUdxTqjcb4EYs07wSU6RJgQ",
+     "handle": "@dragunovff",
+     "country": "JO",
+     "subscribers": 4020000,
+     "videos": 732,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCG_hQ3GKiRpdgI93kHHDM8w": {
+     "name": "ZUXOX YT",
+     "url": "https://www.youtube.com/channel/UCG_hQ3GKiRpdgI93kHHDM8w",
+     "handle": "@zuxox291",
+     "country": "IN",
+     "subscribers": 117000,
+     "videos": 352,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 9,
+     "language_evidence": [
+      "1/10 uploads",
+      "9/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC7X9ZVIH9g1yKvwnoS-iHrg": {
+     "name": " ايديتار | Editar ",
+     "url": "https://www.youtube.com/channel/UC7X9ZVIH9g1yKvwnoS-iHrg",
+     "handle": "@editarfreefire",
+     "country": "JO",
+     "subscribers": 76100,
+     "videos": 6,
+     "about_game_last10": 7,
+     "titles_in_language_last10": 7,
+     "language_evidence": [
+      "7/10 titles",
+      "7/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCxznGWe1ZxhX1Y0IVmLVyiA": {
+     "name": "ساكورا الغلابة",
+     "url": "https://www.youtube.com/channel/UCxznGWe1ZxhX1Y0IVmLVyiA",
+     "handle": "@sakura_gaming430",
+     "country": "EG",
+     "subscribers": 761000,
+     "videos": 783,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCyjyyhmvSyc-z8KPR6IlC7A": {
+     "name": "NO NAME FF GAMER",
+     "url": "https://www.youtube.com/channel/UCyjyyhmvSyc-z8KPR6IlC7A",
+     "handle": "@nonameffgamer",
+     "country": "PT",
+     "subscribers": 65800,
+     "videos": 202,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCV9mNfCUC_JLo_fbpm4Nrmg": {
+     "name": "FAZIL GAMER ",
+     "url": "https://www.youtube.com/channel/UCV9mNfCUC_JLo_fbpm4Nrmg",
+     "handle": "@fazilgamerdz",
+     "country": null,
+     "subscribers": 30100,
+     "videos": 162,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCJhAZAK6t92znGV9tMuy7eQ": {
+     "name": "Ali Omar",
+     "url": "https://www.youtube.com/channel/UCJhAZAK6t92znGV9tMuy7eQ",
+     "handle": "@aliomaryt",
+     "country": "DE",
+     "subscribers": 6390000,
+     "videos": 872,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCMAcSBASS678fRPsnGcO4Yg": {
+     "name": "HEZZ YT",
+     "url": "https://www.youtube.com/channel/UCMAcSBASS678fRPsnGcO4Yg",
+     "handle": "@hezz291",
+     "country": "US",
+     "subscribers": 109000,
+     "videos": 291,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "4/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCNSaq_QIf2KKiyDxIU8_nAg": {
+     "name": "LFLA777",
+     "url": "https://www.youtube.com/channel/UCNSaq_QIf2KKiyDxIU8_nAg",
+     "handle": "@lfla777",
+     "country": "MA",
+     "subscribers": 928,
+     "videos": 54,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 9,
+     "language_evidence": [
+      "10/10 uploads",
+      "9/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCjHq0FqdRB0JP-1CcokW3-w": {
+     "name": "SA7RAWI",
+     "url": "https://www.youtube.com/channel/UCjHq0FqdRB0JP-1CcokW3-w",
+     "handle": "@sa7rawi",
+     "country": "SA",
+     "subscribers": 4940000,
+     "videos": 1944,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCrg58uki_ttbZs-Fi0lHeIA": {
+     "name": "ابو اللوت",
+     "url": "https://www.youtube.com/channel/UCrg58uki_ttbZs-Fi0lHeIA",
+     "handle": "@aboloot",
+     "country": "QA",
+     "subscribers": 53800,
+     "videos": 182,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC9qgXuPlua13m7Aw-Ib0H4g": {
+     "name": "YOURISHI FF",
+     "url": "https://www.youtube.com/channel/UC9qgXuPlua13m7Aw-Ib0H4g",
+     "handle": "@yourishi",
+     "country": "MA",
+     "subscribers": 52300,
+     "videos": 413,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC1memd14PKaV7sHcKPwBAnw": {
+     "name": "Zixm FF",
+     "url": "https://www.youtube.com/channel/UC1memd14PKaV7sHcKPwBAnw",
+     "handle": "@zixmfreefire",
+     "country": "PT",
+     "subscribers": 50300,
+     "videos": 148,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "genshin-impact": {
+  "pt": {
+   "youtube": {
+    "UC6nLi8rQLQt1V2WNZ_b9WZg": {
+     "name": "Odinzada",
+     "url": "https://www.youtube.com/channel/UC6nLi8rQLQt1V2WNZ_b9WZg",
+     "handle": "@odinzada",
+     "country": "BR",
+     "subscribers": 27500,
+     "videos": 572,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 3,
+     "language_evidence": [
+      "10/10 uploads",
+      "3/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCu3EzeklhG4qxPtMip0Daig": {
+     "name": "Nisoo",
+     "url": "https://www.youtube.com/channel/UCu3EzeklhG4qxPtMip0Daig",
+     "handle": "@nisoo_0",
+     "country": "SA",
+     "subscribers": 19800,
+     "videos": 1702,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC3ffxSiFmwnXX9H7bW12uRA": {
+     "name": "Hani_A1",
+     "url": "https://www.youtube.com/channel/UC3ffxSiFmwnXX9H7bW12uRA",
+     "handle": "@hani_a1",
+     "country": "SA",
+     "subscribers": 80100,
+     "videos": 1530,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "mobile-legends": {
+  "pt": {
+   "youtube": {
+    "UCOkBLXQGdyL1xWzdTRRF-Ig": {
+     "name": "Zikzira",
+     "url": "https://www.youtube.com/channel/UCOkBLXQGdyL1xWzdTRRF-Ig",
+     "handle": "@zikzira",
+     "country": "BR",
+     "subscribers": 317000,
+     "videos": 5761,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 8,
+     "language_evidence": [
+      "10/10 uploads",
+      "8/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCMmAcM-lhBlMjvMRkK6WKPA": {
+     "name": "Mosama MLBB",
+     "url": "https://www.youtube.com/channel/UCMmAcM-lhBlMjvMRkK6WKPA",
+     "handle": "@mosamamlbb",
+     "country": "DE",
+     "subscribers": 11700,
+     "videos": 94,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC8vltgDV3h-gKMFXt15yyIg": {
+     "name": "Melody /ميلودي",
+     "url": "https://www.youtube.com/channel/UC8vltgDV3h-gKMFXt15yyIg",
+     "handle": "@mlbbar",
+     "country": "IQ",
+     "subscribers": 77600,
+     "videos": 976,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC7umQlW1Tf9PA3mkAEUIAdQ": {
+     "name": "sts21",
+     "url": "https://www.youtube.com/channel/UC7umQlW1Tf9PA3mkAEUIAdQ",
+     "handle": "@sts21",
+     "country": "IQ",
+     "subscribers": 88700,
+     "videos": 781,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UComv9gL_XSyXqO0DyubQhWQ": {
+     "name": "Ahmed MLBB",
+     "url": "https://www.youtube.com/channel/UComv9gL_XSyXqO0DyubQhWQ",
+     "handle": "@ahmedmlbb1",
+     "country": "DE",
+     "subscribers": 4810,
+     "videos": 37,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCL2lkxWZ6B7eyVSZ2fgJDKw": {
+     "name": "Waleed11 Shorts",
+     "url": "https://www.youtube.com/channel/UCL2lkxWZ6B7eyVSZ2fgJDKw",
+     "handle": "@waleed11shorts",
+     "country": null,
+     "subscribers": 14300,
+     "videos": 412,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCOr1j0lapb8QHyRbqsOBz1A": {
+     "name": "Neon Clan",
+     "url": "https://www.youtube.com/channel/UCOr1j0lapb8QHyRbqsOBz1A",
+     "handle": "@neonclan",
+     "country": "EG",
+     "subscribers": 10700,
+     "videos": 1275,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCL9wjAIKiefzbLlL5andjdA": {
+     "name": "Al - Kyuubi",
+     "url": "https://www.youtube.com/channel/UCL9wjAIKiefzbLlL5andjdA",
+     "handle": "@alkyuubi",
+     "country": "IQ",
+     "subscribers": 115000,
+     "videos": 1555,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCrKZxgtZu18tolNXj2zmqCQ": {
+     "name": "knight gusion",
+     "url": "https://www.youtube.com/channel/UCrKZxgtZu18tolNXj2zmqCQ",
+     "handle": "@knightgusion",
+     "country": "SA",
+     "subscribers": 37100,
+     "videos": 847,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC8Ard8ok_6cJRgJSd0uedHg": {
+     "name": "ASTRO _ Mobile legend ",
+     "url": "https://www.youtube.com/channel/UC8Ard8ok_6cJRgJSd0uedHg",
+     "handle": "@glindezer_0",
+     "country": null,
+     "subscribers": 80,
+     "videos": 23,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCuI_2YwEi7Pt7GA2y05XXJA": {
+     "name": "KING STIEN",
+     "url": "https://www.youtube.com/channel/UCuI_2YwEi7Pt7GA2y05XXJA",
+     "handle": "@kingstien",
+     "country": "IQ",
+     "subscribers": 20300,
+     "videos": 437,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCfVaspE3fqnRXV_LzGbi5Uw": {
+     "name": "Mr App مستر تطبيقات ",
+     "url": "https://www.youtube.com/channel/UCfVaspE3fqnRXV_LzGbi5Uw",
+     "handle": "@xapp_pro",
+     "country": "MA",
+     "subscribers": 2610,
+     "videos": 133,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "3/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "fortnite": {
+  "pt": {
+   "youtube": {
+    "UC3OEyUVycZn9e5_Tl7pPlWg": {
+     "name": "Blucker",
+     "url": "https://www.youtube.com/channel/UC3OEyUVycZn9e5_Tl7pPlWg",
+     "handle": "@blucker210",
+     "country": "BR",
+     "subscribers": 1510000,
+     "videos": 2203,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "7/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC-Q36Qyh5FuvAzw1wldap6Q": {
+     "name": "MamuteLIVE",
+     "url": "https://www.youtube.com/channel/UC-Q36Qyh5FuvAzw1wldap6Q",
+     "handle": "@mamutelive",
+     "country": "BR",
+     "subscribers": 135000,
+     "videos": 4444,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 2,
+     "language_evidence": [
+      "10/10 uploads",
+      "2/10 titles",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCObzGLMZ2gwaVafapOXNL0Q": {
+     "name": "Hise",
+     "url": "https://www.youtube.com/channel/UCObzGLMZ2gwaVafapOXNL0Q",
+     "handle": "@hisefn",
+     "country": "BR",
+     "subscribers": 157000,
+     "videos": 1133,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCF9XqNchoMSxsk-jXpe8IOQ": {
+     "name": "Macaco Gamer",
+     "url": "https://www.youtube.com/channel/UCF9XqNchoMSxsk-jXpe8IOQ",
+     "handle": "@macacogamer1",
+     "country": "BR",
+     "subscribers": 30000,
+     "videos": 2369,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 4,
+     "language_evidence": [
+      "10/10 uploads",
+      "4/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCWGe1C67xdgERjweX6dh4gw": {
+     "name": "NadirOX",
+     "url": "https://www.youtube.com/channel/UCWGe1C67xdgERjweX6dh4gw",
+     "handle": "@nadirox",
+     "country": "DZ",
+     "subscribers": 163000,
+     "videos": 1374,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCaS6yH7_ls8sA4_brvPh79Q": {
+     "name": "Dior | ديور",
+     "url": "https://www.youtube.com/channel/UCaS6yH7_ls8sA4_brvPh79Q",
+     "handle": "@xd25_dior",
+     "country": "AE",
+     "subscribers": 2820,
+     "videos": 508,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "8/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCq6k72MM50j2Uso1xXGQPfA": {
+     "name": "KhaledQx2",
+     "url": "https://www.youtube.com/channel/UCq6k72MM50j2Uso1xXGQPfA",
+     "handle": "@khaledqx2",
+     "country": null,
+     "subscribers": 996000,
+     "videos": 2270,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "5/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCYDtt8wkpA6kgJ_bSL_Kd5w": {
+     "name": "dxheroleaks",
+     "url": "https://www.youtube.com/channel/UCYDtt8wkpA6kgJ_bSL_Kd5w",
+     "handle": "@dxheroleaks",
+     "country": null,
+     "subscribers": 4710,
+     "videos": 358,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UChRtzcgsD0h0g3B1Ks2iK-g": {
+     "name": "ايطاليانـو ",
+     "url": "https://www.youtube.com/channel/UChRtzcgsD0h0g3B1Ks2iK-g",
+     "handle": "@o0vw9",
+     "country": "JO",
+     "subscribers": 82600,
+     "videos": 329,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "3/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCeJJMpDAaOkFRcnzEtbu8Dw": {
+     "name": "ابو تي | Abu Ti",
+     "url": "https://www.youtube.com/channel/UCeJJMpDAaOkFRcnzEtbu8Dw",
+     "handle": "@mnpdh..i",
+     "country": null,
+     "subscribers": 5910,
+     "videos": 196,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "4/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCMiJimnOGrCIHVHFzZxHrfA": {
+     "name": "سلوم - S1L",
+     "url": "https://www.youtube.com/channel/UCMiJimnOGrCIHVHFzZxHrfA",
+     "handle": "@slooms1l",
+     "country": "SA",
+     "subscribers": 14900,
+     "videos": 763,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCe6Y25Hv7IPkrhIYYQg2Zag": {
+     "name": "استاذ صلاح",
+     "url": "https://www.youtube.com/channel/UCe6Y25Hv7IPkrhIYYQg2Zag",
+     "handle": "@sloo1h",
+     "country": "SA",
+     "subscribers": 92100,
+     "videos": 479,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "3/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCGbvGO3OG-QOT7FrON495Vg": {
+     "name": "3ABOSH",
+     "url": "https://www.youtube.com/channel/UCGbvGO3OG-QOT7FrON495Vg",
+     "handle": "@3abosh",
+     "country": "DE",
+     "subscribers": 137000,
+     "videos": 1818,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCq3J_BD8_COEtcUDlmR8nYQ": {
+     "name": "صلاح SEG",
+     "url": "https://www.youtube.com/channel/UCq3J_BD8_COEtcUDlmR8nYQ",
+     "handle": "@1seg",
+     "country": "EG",
+     "subscribers": 12800,
+     "videos": 552,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC_ILg8s7lUBGfrLgtXodNkw": {
+     "name": "killerhashem I هاشم",
+     "url": "https://www.youtube.com/channel/UC_ILg8s7lUBGfrLgtXodNkw",
+     "handle": "@killerhashem",
+     "country": "SA",
+     "subscribers": 269000,
+     "videos": 937,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCNGZF9ZVTD61Xa9SyaOA-CA": {
+     "name": "game gg434u",
+     "url": "https://www.youtube.com/channel/UCNGZF9ZVTD61Xa9SyaOA-CA",
+     "handle": "@gamegg434u2",
+     "country": null,
+     "subscribers": 685,
+     "videos": 269,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "4/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCtAwpiAURdQE3XxBEB7K88Q": {
+     "name": "3bdullah",
+     "url": "https://www.youtube.com/channel/UCtAwpiAURdQE3XxBEB7K88Q",
+     "handle": "@3bduliah",
+     "country": "SA",
+     "subscribers": 373000,
+     "videos": 299,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCQnfTbLt6GHvSrRE87v0MkQ": {
+     "name": "عزوز مان",
+     "url": "https://www.youtube.com/channel/UCQnfTbLt6GHvSrRE87v0MkQ",
+     "handle": "@azdman",
+     "country": "SA",
+     "subscribers": 389000,
+     "videos": 507,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC4pfDOE8PICrx2JjS5AIu_g": {
+     "name": "Bador - BWR",
+     "url": "https://www.youtube.com/channel/UC4pfDOE8PICrx2JjS5AIu_g",
+     "handle": "@badorbwr",
+     "country": "SA",
+     "subscribers": 98800,
+     "videos": 988,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  }
+ },
+ "minecraft": {
+  "pt": {
+   "youtube": {
+    "UCtv9X4qaECUGsPD2LGZ4uHw": {
+     "name": "ϟ Major_Zapper",
+     "url": "https://www.youtube.com/channel/UCtv9X4qaECUGsPD2LGZ4uHw",
+     "handle": "@major_zapper",
+     "country": "BR",
+     "subscribers": 236000,
+     "videos": 211,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCBmBea7IUgFaytgHQ9FNOlw": {
+     "name": "Hey Vordex",
+     "url": "https://www.youtube.com/channel/UCBmBea7IUgFaytgHQ9FNOlw",
+     "handle": "@heyvordex",
+     "country": "BR",
+     "subscribers": 745000,
+     "videos": 6297,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "8/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCK84vnYwh9AuRI90hY_795g": {
+     "name": "HangsCW",
+     "url": "https://www.youtube.com/channel/UCK84vnYwh9AuRI90hY_795g",
+     "handle": "@hangscw",
+     "country": "BR",
+     "subscribers": 125000,
+     "videos": 667,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 3,
+     "language_evidence": [
+      "10/10 uploads",
+      "3/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "ar": {
+   "youtube": {
+    "UCw0Tw78MS1r3azuIVL12p7g": {
+     "name": "Gray | رمادي",
+     "url": "https://www.youtube.com/channel/UCw0Tw78MS1r3azuIVL12p7g",
+     "handle": "@gray_r0",
+     "country": "SA",
+     "subscribers": 224000,
+     "videos": 92,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCzz26hlpuGxYu1l0_wKgKMw": {
+     "name": "Solly",
+     "url": "https://www.youtube.com/channel/UCzz26hlpuGxYu1l0_wKgKMw",
+     "handle": "@sollyoh",
+     "country": "DZ",
+     "subscribers": 62000,
+     "videos": 104,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCauPJgtN0zUERWCHgR1EWyA": {
+     "name": "DARK | دارك",
+     "url": "https://www.youtube.com/channel/UCauPJgtN0zUERWCHgR1EWyA",
+     "handle": "@darknull06",
+     "country": null,
+     "subscribers": 151000,
+     "videos": 48,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "1/10 uploads",
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCb_EI1fQF1Hb-jG_RUgm94w": {
+     "name": "Jero-Tube",
+     "url": "https://www.youtube.com/channel/UCb_EI1fQF1Hb-jG_RUgm94w",
+     "handle": "@jero_tube",
+     "country": "EG",
+     "subscribers": 93200,
+     "videos": 485,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC_qOIxzrUmXL5KpHyZiV2SA": {
+     "name": "ألعاب تحت المجهر 🎮",
+     "url": "https://www.youtube.com/channel/UC_qOIxzrUmXL5KpHyZiV2SA",
+     "handle": "@meghar58953",
+     "country": "EG",
+     "subscribers": 7730,
+     "videos": 1763,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC_vvH5uc96CoQHs8e0OLjdg": {
+     "name": "Ali Hashem علي هاشم",
+     "url": "https://www.youtube.com/channel/UC_vvH5uc96CoQHs8e0OLjdg",
+     "handle": "@alihashemyt",
+     "country": "IT",
+     "subscribers": 3460000,
+     "videos": 262,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCwPPUw4YUD5hCxV5nzypRZg": {
+     "name": "TURKI",
+     "url": "https://www.youtube.com/channel/UCwPPUw4YUD5hCxV5nzypRZg",
+     "handle": "@tr-k",
+     "country": null,
+     "subscribers": 113000,
+     "videos": 50,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "1/10 uploads",
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCrWj6JcsYl1L_9ZQtqbxXwA": {
+     "name": "امرلد | Emerald",
+     "url": "https://www.youtube.com/channel/UCrWj6JcsYl1L_9ZQtqbxXwA",
+     "handle": "@ewarld",
+     "country": "SA",
+     "subscribers": 28500,
+     "videos": 208,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "2/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCVgZpLI9weAUFk9Y3OOtdyg": {
+     "name": "PMN Extra",
+     "url": "https://www.youtube.com/channel/UCVgZpLI9weAUFk9Y3OOtdyg",
+     "handle": "@pmnextra",
+     "country": "AE",
+     "subscribers": 3170000,
+     "videos": 300,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC0lRs6wIw5vp6dqxOHiCZyA": {
+     "name": "سبيد - SPEED",
+     "url": "https://www.youtube.com/channel/UC0lRs6wIw5vp6dqxOHiCZyA",
+     "handle": "@iispeed95ii",
+     "country": "SA",
+     "subscribers": 1690000,
+     "videos": 1432,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCgJmIUgEqFjAJXvfZZHSzvg": {
+     "name": "عموري - ii3Mory",
+     "url": "https://www.youtube.com/channel/UCgJmIUgEqFjAJXvfZZHSzvg",
+     "handle": "@ii3mory",
+     "country": "SA",
+     "subscribers": 261000,
+     "videos": 54,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "9/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCmXzQChwTk47ahkLtxF7F4w": {
+     "name": "AMCraft - عمار",
+     "url": "https://www.youtube.com/channel/UCmXzQChwTk47ahkLtxF7F4w",
+     "handle": "@amcraft-1",
+     "country": "EG",
+     "subscribers": 35000,
+     "videos": 366,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UClzZD8LR9HXXc_JqrffkmSw": {
+     "name": "Voidz",
+     "url": "https://www.youtube.com/channel/UClzZD8LR9HXXc_JqrffkmSw",
+     "handle": "@voidz_yt1",
+     "country": "GB",
+     "subscribers": 16200,
+     "videos": 33,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCqyewqL8rHOCZ_mJxfBaRgA": {
+     "name": "Joe Fadl | چوو فضل",
+     "url": "https://www.youtube.com/channel/UCqyewqL8rHOCZ_mJxfBaRgA",
+     "handle": "@joefadl",
+     "country": null,
+     "subscribers": 396000,
+     "videos": 153,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "2/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCk9IHytTrGwrgx4bGH25oeQ": {
+     "name": "ذياب Theyab",
+     "url": "https://www.youtube.com/channel/UCk9IHytTrGwrgx4bGH25oeQ",
+     "handle": "@theyab",
+     "country": "SA",
+     "subscribers": 885000,
+     "videos": 1243,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCMzLHxAsEPsxfhjKFr-EX5g": {
+     "name": "ZetrexExtra",
+     "url": "https://www.youtube.com/channel/UCMzLHxAsEPsxfhjKFr-EX5g",
+     "handle": "@zetrexextraa",
+     "country": "AE",
+     "subscribers": 217000,
+     "videos": 49,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "4/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCTaZp419938wzn4iavhXaHA": {
+     "name": "MasonX",
+     "url": "https://www.youtube.com/channel/UCTaZp419938wzn4iavhXaHA",
+     "handle": "@masonxmcas",
+     "country": null,
+     "subscribers": 7860,
+     "videos": 68,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "5/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC5QNQ9IOdDuX1YmpyQaWUXA": {
+     "name": "Zerw",
+     "url": "https://www.youtube.com/channel/UC5QNQ9IOdDuX1YmpyQaWUXA",
+     "handle": "@realzerwyt",
+     "country": "JO",
+     "subscribers": 994000,
+     "videos": 922,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC5LhGFqOBuPNg8_J1xa8CwA": {
+     "name": "Rest رست",
+     "url": "https://www.youtube.com/channel/UC5LhGFqOBuPNg8_J1xa8CwA",
+     "handle": "@restt_",
+     "country": "AE",
+     "subscribers": 645000,
+     "videos": 110,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 8,
+     "language_evidence": [
+      "10/10 uploads",
+      "8/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCXP1zeVT35oImNvvc8qanYg": {
+     "name": "القرصان saad",
+     "url": "https://www.youtube.com/channel/UCXP1zeVT35oImNvvc8qanYg",
+     "handle": "@القرصان-سعد",
+     "country": "MA",
+     "subscribers": 71500,
+     "videos": 175,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC8YgDqcc4_KR-lopDVewgCA": {
+     "name": "ArGames Hub",
+     "url": "https://www.youtube.com/channel/UC8YgDqcc4_KR-lopDVewgCA",
+     "handle": "@argameshub",
+     "country": "SA",
+     "subscribers": 2760,
+     "videos": 83,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC3CFqU4KlktVPPJ1Km87pRg": {
+     "name": "مصطفى GAME OVER",
+     "url": "https://www.youtube.com/channel/UC3CFqU4KlktVPPJ1Km87pRg",
+     "handle": "@mustafago",
+     "country": "AE",
+     "subscribers": 13000000,
+     "videos": 1352,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "10/10 uploads"
      ],
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"

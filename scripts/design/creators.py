@@ -150,8 +150,8 @@ def render_home_creators(lang):
         yt = _rank(data.get(g, {}).get(lang, {}).get("youtube", {}), "subscribers", 1)
         if yt:
             r = yt[0]
-            rows.append(f'<tr><th scope="row"><a href="./{g}.html#world">{gname}</a></th><td>{_a(r)}</td>'
-                        f'<td class="wm-num">{_num(r["subscribers"], lang)}</td><td>{r["checked"]}</td></tr>')
+            rows.append(f'<tr><th scope="row"><a href="./{g}.html#world">{gname}</a></th><td data-l="{t["c"][0]}">{_a(r)}</td>'
+                        f'<td data-l="{t["c"][1]}" class="wm-num">{_num(r["subscribers"], lang)}</td><td data-l="{t["c"][2]}">{r["checked"]}</td></tr>')
     if len(rows) < 3:
         return ""
     import nav_menu

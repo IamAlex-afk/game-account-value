@@ -122,8 +122,9 @@ def cname(lang, c):
 
 def render_extra(game, lang, game_name):
     e = EXTRA.get(game)
-    if not e:
-        return ''
+    if not e:   # no esports/streams data for this game (Roblox): verified creators only, when there are any
+        from creators import render_creators
+        return render_creators(game, lang, game_name)
     x = X[lang]; mine = LANG_COUNTRY[lang]
     link = lambda s: '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + '</a>'
     out = []

@@ -63,6 +63,42 @@ OFFICIAL = ("garena", "supercell", "roblox", "mojang", "minecraft official", "ep
             "genshin impact", "moonton", "mobile legends: bang bang", "brawl stars", "clash royale", "clash of clans", "free fire")
 
 
+# channels confirmed by hand when their titles rarely name the game (stats still come from the API):
+# channel id -> (game, lang, reason, date)
+MANUAL = {
+    "UCtGTfdYlG-B6SgeRiaf61CA": ("clash-royale", "pt", "all recent uploads are Clash Royale gameplay (heroes, challenges, cards); titles omit the game name", "2026-10-06"),
+}
+
+
+# channels rejected by hand after checking their latest uploads: channel id -> reason
+EXCLUDE = {
+    "UCOnPKIzb7jft0bjN0pNRljg": "latest uploads are Roblox (checked 2026-10-06)",
+    "UCTe_xC0SLkr3WuoYpCz4l4A": "latest uploads are Piggy / football shorts (checked 2026-10-06)",
+}
+
+
+def apply_exclude(store):
+    for g in store.values():
+        for l in g.values():
+            for cid in list(l.get("youtube", {})):
+                if cid in EXCLUDE:
+                    del l["youtube"][cid]
+
+
+def add_manual(store):
+    if not MANUAL:
+        return
+    for c in yt("channels", part="snippet,statistics", id=",".join(MANUAL)).get("items", []):
+        g, l, why, d = MANUAL[c["id"]]
+        st, sn = c["statistics"], c["snippet"]
+        if st.get("hiddenSubscriberCount"):
+            continue
+        store.setdefault(g, {}).setdefault(l, {}).setdefault("youtube", {})[c["id"]] = {
+            "name": sn["title"], "url": "https://www.youtube.com/channel/" + c["id"], "handle": sn.get("customUrl"),
+            "country": sn.get("country"), "subscribers": int(st["subscriberCount"]), "videos": int(st.get("videoCount", 0)),
+            "language_evidence": ["manual: " + why], "source": "YouTube Data API v3 (channels.list statistics)", "checked": TODAY}
+
+
 def about_game(v, kws):
     sn = v["snippet"]
     return any(k in (sn["title"] + " " + " ".join(sn.get("tags", []))).lower() for k in kws)
@@ -130,7 +166,7 @@ def youtube(game, lang, store):
     vids = []
     for order in ("relevance", "viewCount"):          # two searches: active creators + biggest recent videos
         params["order"] = order
-        vids += [i["id"]["videoId"] for i in yt("search", **params).get("items", []) if i["id"]["videoId"] not in vids]
+        vids += [i["id"]["videoId"] for i in yt("search", **params).get("items", []) if i["id"].get("videoId") and i["id"]["videoId"] not in vids]
     if not vids:
         return
     vmeta = []
@@ -274,3 +310,7 @@ if __name__ == "__main__":
                     raise
         json.dump(store, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print(g, {l: (len(store.get(g, {}).get(l, {}).get("youtube", {})), len(store.get(g, {}).get(l, {}).get("twitch", {}))) for l in langs})
+    if not a.twitch_only:
+        add_manual(store)
+        apply_exclude(store)
+        json.dump(store, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
