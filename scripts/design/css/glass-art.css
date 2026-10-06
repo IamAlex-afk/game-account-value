@@ -291,16 +291,20 @@ html:not(.gav-ld) .g-cyborg .cy-ico, html:not(.gav-ld) .g-cyborg .cy-beam { anim
   nav .nav-right { display: contents; }
   nav .logo { order: 1; margin-right: auto; }
   nav .nav-right .nav-cta { order: 2; flex: 0 1 auto; min-height: 44px; }
-  nav .nav-burger { order: 3; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  nav .nav-burger { order: 4; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
     width: 46px; height: 46px; padding: 0; border-radius: 12px; cursor: pointer;
     background: rgba(255,255,255,.04); border: 1px solid var(--line); color: var(--white); }
   nav .nav-burger svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
   nav .nav-burger .nb-close, nav.nav-open .nav-burger .nb-open { display: none; }
   nav.nav-open .nav-burger .nb-close { display: inline; }
   nav .nav-menu { order: 4; flex: 1 1 100%; margin: 0; }
-  nav .nav-right .lang-selector { order: 5; flex: 1 1 100%; }
-  nav .nav-right .lang-selector > .lang-btn { width: 100%; justify-content: center; padding: 9px 6px; font-size: 13px; }
-  nav:not(.nav-open) .nav-menu, nav:not(.nav-open) .nav-right .lang-selector { display: none; }
+  nav .nav-right .lang-selector { order: 2; flex: 0 0 auto; }   /* language stays in the header row on phones */
+  nav .nav-right .lang-selector > .lang-btn { min-height: 44px; padding: 0 10px; font-size: 14px; border-radius: 12px; }
+  nav .nav-right .lang-selector > .lang-btn .lang-arrow { display: none; }
+  nav .nav-right .lang-selector .lang-dropdown { left: auto; right: 0; }
+  [dir="rtl"] nav .nav-right .lang-selector .lang-dropdown { right: auto; left: 0; }
+  nav .nav-right .nav-cta { order: 3 !important; }
+  nav:not(.nav-open) .nav-menu { display: none; }
   [dir="rtl"] nav .logo { margin-right: 0; margin-left: auto; }
 }
 @media (max-width: 560px) {
@@ -500,3 +504,10 @@ html body .btn-primary:hover::after, html body[class] .nav-cta:hover::after { tr
    so starting the scene never forces a full-page restyle/repaint ---- */
 html body { background: transparent !important; }
 .g-fx { display: none !important; }
+/* phone header with the language button in the row: fit logo · RU · bot · burger on 360px screens */
+@media (max-width: 420px) {
+  nav:not(.crumbs) { gap: 8px !important; padding-inline: 12px !important; column-gap: 6px !important; }
+  nav .nav-right .lang-selector > .lang-btn { padding: 0 8px !important; gap: 4px !important; }
+  html body[class] nav .nav-cta, nav .nav-cta { padding: 0 12px !important; font-size: 14px !important; min-height: 44px !important; }
+  nav .nav-burger { width: 44px !important; height: 44px !important; }
+}
