@@ -74,6 +74,7 @@ MANUAL = {
 EXCLUDE = {
     "UCOnPKIzb7jft0bjN0pNRljg": "latest uploads are Roblox (checked 2026-10-06)",
     "UCTe_xC0SLkr3WuoYpCz4l4A": "latest uploads are Piggy / football shorts (checked 2026-10-06)",
+    "UCDaL37-r1oNauxikcFcDV4Q": "uploads promote a third-party site with free-code / item-exchange offers, not gameplay (checked 2026-10-06)",
 }
 
 

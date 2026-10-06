@@ -492,6 +492,340 @@
      "checked": "2026-10-06"
     }
    }
+  },
+  "vi": {
+   "youtube": {
+    "UCShbxhjQwcbyk_Tuy2Ypp0w": {
+     "name": "KemD Roblox",
+     "url": "https://www.youtube.com/channel/UCShbxhjQwcbyk_Tuy2Ypp0w",
+     "handle": "@kemdroblox_official",
+     "country": "VN",
+     "subscribers": 923000,
+     "videos": 1052,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 3,
+     "language_evidence": [
+      "10/10 uploads",
+      "3/10 titles",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC32wFHgGaSBr0yoyu2YBBjA": {
+     "name": "Đỗ Phước",
+     "url": "https://www.youtube.com/channel/UC32wFHgGaSBr0yoyu2YBBjA",
+     "handle": "@dophuocreal",
+     "country": "VN",
+     "subscribers": 508000,
+     "videos": 2333,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCKHGKR_8mQcCuSOoagfpdBA": {
+     "name": "Bi Huỳnh Gaming",
+     "url": "https://www.youtube.com/channel/UCKHGKR_8mQcCuSOoagfpdBA",
+     "handle": "@bihuynhroblox",
+     "country": "VN",
+     "subscribers": 1920000,
+     "videos": 319,
+     "about_game_last10": 7,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCTj-KdOLC78CGcPwXpS3Xzw": {
+     "name": "JayGray Roblox",
+     "url": "https://www.youtube.com/channel/UCTj-KdOLC78CGcPwXpS3Xzw",
+     "handle": "@jaygrayroblox",
+     "country": "VN",
+     "subscribers": 1370000,
+     "videos": 955,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCdArq8bYEV7IWo-RxtF1hiQ": {
+     "name": "Huy Huỳnh Roblox",
+     "url": "https://www.youtube.com/channel/UCdArq8bYEV7IWo-RxtF1hiQ",
+     "handle": "@huyhuynhgaming",
+     "country": "VN",
+     "subscribers": 2360,
+     "videos": 45,
+     "about_game_last10": 7,
+     "titles_in_language_last10": 2,
+     "language_evidence": [
+      "10/10 uploads",
+      "2/10 titles",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCP_CEiG5My88vlNJFy2keuA": {
+     "name": "Hast Roblox",
+     "url": "https://www.youtube.com/channel/UCP_CEiG5My88vlNJFy2keuA",
+     "handle": "@hast0711",
+     "country": null,
+     "subscribers": 21300,
+     "videos": 207,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "6/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC4TVAyl1t7cd4Bm4ZRgHcGw": {
+     "name": "Du Hạo",
+     "url": "https://www.youtube.com/channel/UC4TVAyl1t7cd4Bm4ZRgHcGw",
+     "handle": "@duhao155",
+     "country": "VN",
+     "subscribers": 159000,
+     "videos": 339,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCGTSdDZzdG7QtojmzPKQlsw": {
+     "name": "JayGrayVN",
+     "url": "https://www.youtube.com/channel/UCGTSdDZzdG7QtojmzPKQlsw",
+     "handle": "@jaygray",
+     "country": "VN",
+     "subscribers": 5230000,
+     "videos": 3070,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCcdS6FC9cm9dK4QFh4j543w": {
+     "name": "HoànMM",
+     "url": "https://www.youtube.com/channel/UCcdS6FC9cm9dK4QFh4j543w",
+     "handle": "@hoanmm",
+     "country": "VN",
+     "subscribers": 278000,
+     "videos": 117,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "9/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCTxgt397fhQsM_n2clCngIA": {
+     "name": "Aysa ",
+     "url": "https://www.youtube.com/channel/UCTxgt397fhQsM_n2clCngIA",
+     "handle": "@aysatv",
+     "country": "VN",
+     "subscribers": 15800,
+     "videos": 9,
+     "about_game_last10": 8,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "9/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCuoMvVoKlLtk_rrzBateLWQ": {
+     "name": "Bảo Khum Quạo",
+     "url": "https://www.youtube.com/channel/UCuoMvVoKlLtk_rrzBateLWQ",
+     "handle": "@baokhumquao",
+     "country": "VN",
+     "subscribers": 127000,
+     "videos": 264,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 6,
+     "language_evidence": [
+      "3/10 uploads",
+      "6/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCXpswcYvB3GU4qUhdZAYlgQ": {
+     "name": "Serin",
+     "url": "https://www.youtube.com/channel/UCXpswcYvB3GU4qUhdZAYlgQ",
+     "handle": "@serinofficialne",
+     "country": "VN",
+     "subscribers": 42400,
+     "videos": 124,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC8qYDAN8Ii7W1U6m4m6R7iQ": {
+     "name": "PH Play",
+     "url": "https://www.youtube.com/channel/UC8qYDAN8Ii7W1U6m4m6R7iQ",
+     "handle": "@phplaygg",
+     "country": "VN",
+     "subscribers": 127000,
+     "videos": 594,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCRccLLkJa8SQcA04k4pBcJw": {
+     "name": "RBau Gaming",
+     "url": "https://www.youtube.com/channel/UCRccLLkJa8SQcA04k4pBcJw",
+     "handle": "@rbaugaming",
+     "country": "VN",
+     "subscribers": 58700,
+     "videos": 391,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 2,
+     "language_evidence": [
+      "10/10 uploads",
+      "2/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCyQfyat66CGBehUfCT3sT1A": {
+     "name": "bo 💫",
+     "url": "https://www.youtube.com/channel/UCyQfyat66CGBehUfCT3sT1A",
+     "handle": "@qbo2842",
+     "country": "VN",
+     "subscribers": 234000,
+     "videos": 615,
+     "about_game_last10": 6,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UClIUtenTyg9SongHhGAq0hw": {
+     "name": "Luna Roblox",
+     "url": "https://www.youtube.com/channel/UClIUtenTyg9SongHhGAq0hw",
+     "handle": "@dungcoii",
+     "country": "VN",
+     "subscribers": 96400,
+     "videos": 192,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCkQRakSDQB_gq-EW-rUAK_g": {
+     "name": "fufu roblox",
+     "url": "https://www.youtube.com/channel/UCkQRakSDQB_gq-EW-rUAK_g",
+     "handle": "@fufuroblox-24",
+     "country": "VN",
+     "subscribers": 157000,
+     "videos": 629,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCTDMci1EbdGAD-7INJdvNEA": {
+     "name": "Bobaconboi",
+     "url": "https://www.youtube.com/channel/UCTDMci1EbdGAD-7INJdvNEA",
+     "handle": "@realbobacon",
+     "country": "VN",
+     "subscribers": 215000,
+     "videos": 209,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCrRnBjmfzJ7_fbv4v3bSVmg": {
+     "name": "QLH Roblox",
+     "url": "https://www.youtube.com/channel/UCrRnBjmfzJ7_fbv4v3bSVmg",
+     "handle": "@qlhroblox",
+     "country": null,
+     "subscribers": 23400,
+     "videos": 96,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 10,
+     "language_evidence": [
+      "10/10 titles",
+      "2/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCPTefa609nWA6MhI4A7VKxA": {
+     "name": "Tuan Anh",
+     "url": "https://www.youtube.com/channel/UCPTefa609nWA6MhI4A7VKxA",
+     "handle": "@namnunvippro",
+     "country": "US",
+     "subscribers": 12600,
+     "videos": 77,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "6/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC9qLfasPEL7ym62ZWqlktjQ": {
+     "name": "GấuCận Blox🐼",
+     "url": "https://www.youtube.com/channel/UC9qLfasPEL7ym62ZWqlktjQ",
+     "handle": "@bearbloxfui",
+     "country": "VN",
+     "subscribers": 48000,
+     "videos": 732,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "8/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
   }
  },
  "brawl-stars": {
@@ -744,6 +1078,72 @@
      "language_evidence": [
       "1/10 uploads",
       "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "vi": {
+   "youtube": {
+    "UCNPRKJw03spZsPr2ea9jB4Q": {
+     "name": "Ibo-Coc",
+     "url": "https://www.youtube.com/channel/UCNPRKJw03spZsPr2ea9jB4Q",
+     "handle": "@bnn_213",
+     "country": "VN",
+     "subscribers": 2890,
+     "videos": 171,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 3,
+     "language_evidence": [
+      "10/10 uploads",
+      "3/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCTZWE8D9vS5GAA3oz1IH7ng": {
+     "name": "SClash COC",
+     "url": "https://www.youtube.com/channel/UCTZWE8D9vS5GAA3oz1IH7ng",
+     "handle": "@sclashcoc",
+     "country": null,
+     "subscribers": 2730,
+     "videos": 178,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCulXNTFImA9IFFQubdEp1Kw": {
+     "name": "Phin Gaming",
+     "url": "https://www.youtube.com/channel/UCulXNTFImA9IFFQubdEp1Kw",
+     "handle": "@phingaming24",
+     "country": "VN",
+     "subscribers": 2450,
+     "videos": 199,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCcOsD3jivt066WJVgC2SRUA": {
+     "name": "Akari Gaming",
+     "url": "https://www.youtube.com/channel/UCcOsD3jivt066WJVgC2SRUA",
+     "handle": "@akarigaming",
+     "country": "VN",
+     "subscribers": 309000,
+     "videos": 7575,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
      ],
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
@@ -1228,6 +1628,197 @@
      "titles_in_language_last10": 10,
      "language_evidence": [
       "10/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    }
+   }
+  },
+  "vi": {
+   "youtube": {
+    "UChIpmJ0hPpboONn2cfO0gkw": {
+     "name": "Bun Sát Thủ",
+     "url": "https://www.youtube.com/channel/UChIpmJ0hPpboONn2cfO0gkw",
+     "handle": "@bunstytb",
+     "country": "VN",
+     "subscribers": 28200,
+     "videos": 30,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 4,
+     "language_evidence": [
+      "1/10 uploads",
+      "4/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCLzrvNjxX71fk3JkRsHkKAA": {
+     "name": "Tuna FF ",
+     "url": "https://www.youtube.com/channel/UCLzrvNjxX71fk3JkRsHkKAA",
+     "handle": "@tunaytff",
+     "country": "VN",
+     "subscribers": 49900,
+     "videos": 1197,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCmctkDy9XYzR-RGL4vs8Pwg": {
+     "name": "HĐTP ",
+     "url": "https://www.youtube.com/channel/UCmctkDy9XYzR-RGL4vs8Pwg",
+     "handle": "@thienphucvjppro",
+     "country": "VN",
+     "subscribers": 17800,
+     "videos": 549,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads",
+      "channel"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCn76RI4IfmNrLYAC7GLMUag": {
+     "name": "Đức Má Phính FF",
+     "url": "https://www.youtube.com/channel/UCn76RI4IfmNrLYAC7GLMUag",
+     "handle": "@ducmaphinhff",
+     "country": "VN",
+     "subscribers": 150000,
+     "videos": 920,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 1,
+     "language_evidence": [
+      "1/10 titles",
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC8HwBG-fp_hDTFHXe4-Mduw": {
+     "name": "Tử Hoạ 🖼️",
+     "url": "https://www.youtube.com/channel/UC8HwBG-fp_hDTFHXe4-Mduw",
+     "handle": "@tuhoaffgaming",
+     "country": "VN",
+     "subscribers": 5660,
+     "videos": 160,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCtoQIhoNoQeXeSJuzNdW7Sw": {
+     "name": "Việt Tiger TV",
+     "url": "https://www.youtube.com/channel/UCtoQIhoNoQeXeSJuzNdW7Sw",
+     "handle": "@viettigertv",
+     "country": null,
+     "subscribers": 19600,
+     "videos": 131,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCKSjvKAoAmszeU6EraF278Q": {
+     "name": "Vâu Gaming",
+     "url": "https://www.youtube.com/channel/UCKSjvKAoAmszeU6EraF278Q",
+     "handle": "@vaugamingk12",
+     "country": "VN",
+     "subscribers": 9240,
+     "videos": 47,
+     "about_game_last10": 7,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC_coIb00SBBAJSqoR-1cnVA": {
+     "name": "MTH-GAMER",
+     "url": "https://www.youtube.com/channel/UC_coIb00SBBAJSqoR-1cnVA",
+     "handle": "@mthgamerff999",
+     "country": null,
+     "subscribers": 290000,
+     "videos": 451,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 2,
+     "language_evidence": [
+      "10/10 uploads",
+      "2/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCLAfWV_39ULiPPh9eCkQMNw": {
+     "name": "Hiếu Hiểu Hông FF",
+     "url": "https://www.youtube.com/channel/UCLAfWV_39ULiPPh9eCkQMNw",
+     "handle": "@hieuhieuhong-nc",
+     "country": null,
+     "subscribers": 57600,
+     "videos": 301,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "6/10 uploads"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCTS_sq3ghD6wwFzHWriCs5A": {
+     "name": "THÁI GAMING",
+     "url": "https://www.youtube.com/channel/UCTS_sq3ghD6wwFzHWriCs5A",
+     "handle": "@thaigamingff96",
+     "country": "VN",
+     "subscribers": 409000,
+     "videos": 454,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 4,
+     "language_evidence": [
+      "4/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UC8_FE_F6y-bNCWjp6ZBsfUw": {
+     "name": "Noyw Gaming ",
+     "url": "https://www.youtube.com/channel/UC8_FE_F6y-bNCWjp6ZBsfUw",
+     "handle": "@noywgaming",
+     "country": "VN",
+     "subscribers": 111000,
+     "videos": 674,
+     "about_game_last10": 9,
+     "titles_in_language_last10": 3,
+     "language_evidence": [
+      "10/10 uploads",
+      "3/10 titles"
+     ],
+     "source": "YouTube Data API v3 (channels.list statistics)",
+     "checked": "2026-10-06"
+    },
+    "UCajdlhfUcaOuPYGq27ZEzuA": {
+     "name": "Khám Phá Free Fire",
+     "url": "https://www.youtube.com/channel/UCajdlhfUcaOuPYGq27ZEzuA",
+     "handle": "@khamphafreefire",
+     "country": "VN",
+     "subscribers": 41300,
+     "videos": 178,
+     "about_game_last10": 10,
+     "titles_in_language_last10": 0,
+     "language_evidence": [
+      "10/10 uploads",
+      "channel"
      ],
      "source": "YouTube Data API v3 (channels.list statistics)",
      "checked": "2026-10-06"
