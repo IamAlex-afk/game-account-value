@@ -26,3 +26,7 @@ s, n = re.subn(r"<loc>([^<]*)</loc>(\s*)<lastmod>[^<]*</lastmod>",
                lambda m: f"<loc>{m.group(1)}</loc>{m.group(2)}<lastmod>{last_commit_date(m.group(1))}</lastmod>", s)
 open("sitemap.xml", "w", encoding="utf-8", newline="").write(s)
 print(n, "entries updated")
+
+# keep the per-language sitemaps (Search Console monitoring) in sync
+import subprocess as _sp, sys as _sys
+_sp.run([_sys.executable, "scripts/sitemap_split.py"], check=True)

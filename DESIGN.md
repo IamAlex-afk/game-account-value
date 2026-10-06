@@ -5,6 +5,22 @@ reference instead of improvised per prompt. Read this before making any
 visual change (colors, layout, new page themes). It captures both the
 site's existing base tokens and the working method for extending them.
 
+## 2026-10 update: space lab / archive
+
+- **Backdrop:** `assets/space-background.js` on every page (`scripts/design/space_rollout.py`): photoreal sky,
+  Mars + gas giant at the screen edges, stars, rare comets, satellite, skeleton astronaut, android (home only),
+  UFO, a 6-step phone evolution (generic designs), and on game pages / game news that game's own view
+  (sky crop, tint, planet layout, star density, comet rate) and loot set (`assets/space/g-<game>-N.webp`).
+  No logos or look-alikes of real products. The old hero skyline (`.g-fx`) is retired in CSS.
+  Starts on first input or after idle; never forces a full-page restyle at start.
+- **Typed visual system** (instead of one frame everywhere): calculator panel = the instrument (the only
+  moving frame), estimate = gold exhibit corners (gold only where value lives), cards = hairline in the page
+  accent + corner brackets, controls quiet until hover, one primary action with a light sweep.
+- **Type:** Inter for reading text (18.5-20 px), JetBrains Mono (OFL, self-hosted, `font-display: optional`)
+  for headings, numbers and buttons; phones: no reading text under 16 px.
+- **Phone header:** one row — emblem · language · bot · burger (menu behind the burger).
+- **No forced reflows:** restart CSS animations with `gavReplay()` in `glass.js`, never `void el.offsetWidth`.
+
 ## Current system: Cyber-Glass (since 2026-09-28)
 
 `assets/glass.css` is loaded on every page **after** `style.css` and the
@@ -18,10 +34,9 @@ the Telegram bot), audience styling is "gamer, not kiddy" (site is 18+).
   grain, dark glass panels with hairline borders; neon only on accents
   (buttons, key numbers, Live status). Font: self-hosted Inter (the CSP only
   allows `font-src 'self'`).
-- **Homepage = the tool** (all 17 full locales; the other 13 were added by
-  `scripts/design/add_home_tool.py`): 1 game tiles → 2 sliders → 3 sticky
-  result with the bot CTA directly under it. The 7 old-format locales keep
-  the hero art (city + GAV-AI robot) without a calculator.
+- **Homepage = the tool** (all 24 locales): 1 game tiles → 2 sliders → 3 sticky
+  result with the bot CTA directly under it; four section tiles (Games · Guides ·
+  News · About, `scripts/design/home_quick.py`) sit under the hero.
 - **Game pages:** hero split — title, badges, market range, facts left;
   compact calculator right with the bot CTA under the result. Article
   sections are glass cards.

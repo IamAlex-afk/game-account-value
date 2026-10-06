@@ -7,3 +7,13 @@
 4e3285b969cb9c5ebb62170b7d1d811ce67774a2  Yandex Metrica removed, CSP restored
 a0cec21030610dd1e407ff135db81d92a49006a8  Yandex verification meta tag
 8b80ea089bc2ef18d87da6d064ac183b533f2983  Yandex Metrica counter added
+d310bc832ac95db8b0a34ee9458a05b5cf1b3a8c  phone header + homepage section tiles
+d9256592e9fd8812d9c78efcd009320f37beff21  space scene preview, visual system, fonts
+98de16a218569f83d8543ec04a1614a5a4a15985  phone layout pass
+b565df2bde9cba89f21e3dedaf116c0f71f0eb1c  space scene jitter fix (script version)
+5051f8b2739481b20ecd5a1ed9aa3cacaba5f4bc  space backdrop on every page
+b78cbbcb79436478b7a995ee2228fe17f25da080  space scene phone start delay
+43f8df831bdb56b26015a0a755b744eb288b721c  space scene triggers, cyrillic font preload
+0074dac85c8446df72c9a424e0dcdf81cc31a2ad  forced reflows removed, script versions
+5ba86d941e1cf3804b7d7a8f338b84969547fa44  phone header language button
+ce63aed60a9dbcec1d211bb0ab3646a722e03165  HTML hygiene (nav label, &amp;, void tags)
