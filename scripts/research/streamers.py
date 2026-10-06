@@ -141,6 +141,8 @@ if __name__ == "__main__":
         json.dump(store, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print("refreshed", len(ids), "channels"); raise SystemExit
     games, langs = a.games.split(","), a.langs.split(",")
+    if not (KEYS.get("twitch_client_id") and KEYS.get("twitch_client_secret")):
+        a.youtube_only = True            # Twitch keys are optional; YouTube alone is enough to start
     for g in games:
         if not a.youtube_only:
             twitch(g, langs, store)
