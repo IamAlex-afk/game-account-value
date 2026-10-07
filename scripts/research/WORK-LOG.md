@@ -279,3 +279,11 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   only be spot-checked by hand in the owner's Chrome (extension was not connected on 2026-10-06/07).
 - How to re-run this check: compare each game's hero range with market-report cards / price-range lines and the
   comparison table (see the 2026-10-07 session); calculators.js brackets must equal the page table.
+- Market report hub for the 13 legacy languages (e676f582): scripts/design/market_report_hub.py rebuilds <main> as nine
+  cards with the game pages' headline figures, drops FAQPage LD, sets the hub meta description. Idempotent. When a game's
+  headline range changes, update RANGE there AND the cards in the 11 hand-made hubs (en ru pt id tl sw ms uz kk tk ky).
+- Minecraft calculator (3afc46d9): five named capes as checkboxes, prices = the mccapers.com ranking already quoted on
+  minecraft.html (Sept 2026). Page note, checklist and FAQ LD updated in 24 langs. Refresh with the page (~2026-10-28).
+- Structure check across languages (h2/h3/table/li counts per page type): only expected differences left - pilot
+  "estimate limits" block on CoC and Clash Royale (en+ru), creators blocks (pt ar vi), local-market sources (zh ja ko pl),
+  Roblox Limiteds top-5 as a table in en vs a list elsewhere.
