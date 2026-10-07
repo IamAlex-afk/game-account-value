@@ -68,7 +68,7 @@
   var eggs = [], nextEgg = 0, eggIdx = Math.floor(rnd() * EGGS.length), ufo = null, nextUfo = 0;
   var images = {};
 
-  function img(src) { if (!images[src]) { var i = new Image(); i.decoding = "async"; i.src = BASE + src + "?v=4"; images[src] = i; } return images[src]; }
+  function img(src) { if (!images[src]) { var i = new Image(); i.decoding = "async"; i.src = BASE + src + "?v=5"; images[src] = i; } return images[src]; }
   function ready(i) { return i && i.complete && i.naturalWidth > 0; }
   function el(tag, css) { var e = document.createElement(tag); e.setAttribute("aria-hidden", "true"); e.style.cssText = css; return e; }
 
