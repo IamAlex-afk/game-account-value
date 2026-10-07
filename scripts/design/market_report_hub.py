@@ -15,7 +15,7 @@ NAME = {'roblox': 'Roblox', 'brawl-stars': 'Brawl Stars', 'clash-of-clans': 'Cla
         'fortnite': 'Fortnite', 'minecraft': 'Minecraft'}
 # headline figures: the same as market-report.html (English) and each game page's own range, 2026-10-07
 RANGE = {'brawl-stars': ('3', '300+'), 'clash-of-clans': ('10', '260'), 'clash-royale': ('0.50', '600+'),
-         'free-fire': ('0.73', '755'), 'mobile-legends': ('0.50', '605+'), 'fortnite': ('10.90', '6200'),
+         'free-fire': ('0.73', '755'), 'mobile-legends': ('0.50', '2500'), 'fortnite': ('10.90', '6200'),
          'minecraft': ('0.50', '200000')}
 # number style per language: (decimal mark, thousands mark, '$' before the number?)
 FMT = {'es': (',', '.', True), 'tr': (',', '.', False), 'ar': ('.', ',', False), 'vi': ('.', ',', True), 'hi': ('.', ',', True),
