@@ -311,3 +311,7 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - News published 2026-10-06 is still "URL is unknown to Google" a day later - normal; re-check in a week.
 - The API cannot request indexing or submit sitemaps; only sitemap.xml is submitted (it lists all 1,368 URLs).
 - RE-RUN gsc_check.py --index around 2026-10-21 and compare: indexed count, crawled-not-indexed list, news impressions.
+- Crawled-not-indexed pages examined (31): same text volume as the indexed ones (0.8-1.2x English), fully translated,
+  HTTP 200 for a Googlebot user agent, robots "index, follow", self canonical, correct lang/dir. NO page-level defect
+  found - most were crawled 09-27..10-03, in the first week of a new domain. Do not rewrite them on a guess; re-check
+  with `gsc_check.py --index` around 2026-10-21. Only lever available now: the owner's manual "Request indexing".
