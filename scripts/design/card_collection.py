@@ -285,7 +285,7 @@ def section(lang: str, prefix: str) -> str:
     title, lead, p1, p2, p3, note, prev, nxt, flav, gen, fou = T[lang]
     descs = [f'{RANGES[i]} · {flav[i]}' for i in range(9)] + [f'{RANGES[9]} · {gen}', f'{RANGES[10]} · {fou}']
     esc = lambda s: s.replace('"', '&quot;')
-    items = ''.join(f'<div class="gc-card" data-k="{k}" data-t="{NAMES[i]}" data-d="{esc(descs[i])}"><img src="{prefix}assets/cards/{lang}/{k}.webp" '
+    items = ''.join(f'<div class="gc-card" data-k="{k}" data-t="{NAMES[i]}" data-d="{esc(descs[i])}"><img src="{prefix}assets/cards/{lang}/{k}.webp?v=2" '
                     f'width="540" height="360" alt="{NAMES[i]}" loading="lazy" decoding="async"></div>' for i, k in enumerate(KEYS))
     return (f'<!-- CARD COLLECTION -->\n<section class="gc-sec" id="cards">\n  <div class="gc-intro">\n    <h2>{title}</h2>\n    <p>{lead}</p>\n'
             f'    <ul class="gc-points">\n      <li>{p1}</li>\n      <li>{p2}</li>\n      <li>{p3}</li>\n    </ul>\n  </div>\n'

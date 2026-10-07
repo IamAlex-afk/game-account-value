@@ -19,3 +19,4 @@ b78cbbcb79436478b7a995ee2228fe17f25da080  space scene phone start delay
 ce63aed60a9dbcec1d211bb0ab3646a722e03165  HTML hygiene (nav label, &amp;, void tags)
 67365833319eb8053e1160197ce3c726577af769  motion pause control, script/style versions
 becef28a30281bd1be0c8702f43e7e255dec4679  space-background.js version bump on all pages
+cd9d3088550f0ea8bdeb4034379abe7a67e08b98  space-background.js version bump on all pages

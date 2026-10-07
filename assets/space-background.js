@@ -68,7 +68,7 @@
   var eggs = [], nextEgg = 0, eggIdx = Math.floor(rnd() * EGGS.length), ufo = null, nextUfo = 0;
   var images = {};
 
-  function img(src) { if (!images[src]) { var i = new Image(); i.decoding = "async"; i.src = BASE + src + "?v=5"; images[src] = i; } return images[src]; }
+  function img(src) { if (!images[src]) { var i = new Image(); i.decoding = "async"; i.src = BASE + src + "?v=6"; images[src] = i; } return images[src]; }
   function ready(i) { return i && i.complete && i.naturalWidth > 0; }
   function el(tag, css) { var e = document.createElement(tag); e.setAttribute("aria-hidden", "true"); e.style.cssText = css; return e; }
 
@@ -119,23 +119,36 @@
       fx.fillStyle = "#fff"; fx.beginPath(); fx.arc(s.x, y, s.r, 0, TAU); fx.fill();
     }
     fx.globalAlpha = 1;
-    // comets: rare, from the sun's side, fast, soft tail
+    // comets: two kinds — a big slow one (rare) and a small quick one — entering from any edge and heading
+    // across the screen. Each lights its path: a wide faint glow stays behind the head and fades in ~2 s.
     if (last > nextComet) {
-      nextComet = last + ((phone ? 9000 : 5000) + rnd() * 7000) * VIEW.cm;
-      var v = 0.45 + rnd() * 0.35;
-      comets.push({ x: W * (0.15 + rnd() * 0.5), y: -40, vx: v * (0.6 + rnd() * 0.6), vy: v * (0.45 + rnd() * 0.35), len: 160 + rnd() * 200, a: 0 });
+      var big = rnd() < 0.3;
+      nextComet = last + ((phone ? 22000 : 14000) + rnd() * 14000) * VIEW.cm;
+      var edge = rnd(), sx, sy0;
+      if (edge < 0.45) { sx = rnd() * W; sy0 = -30; } else if (edge < 0.65) { sx = -30; sy0 = rnd() * H * 0.7; }
+      else if (edge < 0.85) { sx = W + 30; sy0 = rnd() * H * 0.7; } else { sx = rnd() * W; sy0 = H + 30; }
+      var ax = W * (0.2 + rnd() * 0.6) - sx, ay = H * (0.2 + rnd() * 0.5) - sy0, an = Math.hypot(ax, ay) || 1;
+      var v = big ? 0.3 + rnd() * 0.12 : 0.55 + rnd() * 0.3;
+      comets.push({ x: sx, y: sy0, x0: sx, y0: sy0, vx: ax / an * v, vy: ay / an * v, v: v, k: big ? 1 : 0.55,
+                    len: big ? 260 + rnd() * 120 : 120 + rnd() * 70, glow: big ? 2400 : 1500, a: 0, warm: rnd() < 0.5 });
     }
-    fx.globalCompositeOperation = "lighter";
+    fx.globalCompositeOperation = "lighter"; fx.lineCap = "round";
     for (i = comets.length - 1; i >= 0; i--) {
-      var c = comets[i]; c.x += c.vx * dt; c.y += c.vy * dt; c.a = Math.min(1, c.a + dt / 400);
-      var fade = c.y > H * 0.75 ? Math.max(0, 1 - (c.y - H * 0.75) / (H * 0.25)) : 1;
-      if (c.x > W + 300 || c.y > H + 100) { comets.splice(i, 1); continue; }
-      var k = Math.hypot(c.vx, c.vy), tx = c.x - c.vx / k * c.len, ty = c.y - c.vy / k * c.len, al = c.a * fade;
-      var g = fx.createLinearGradient(c.x, c.y, tx, ty);
-      g.addColorStop(0, "rgba(255,250,240," + 0.9 * al + ")"); g.addColorStop(0.2, "rgba(186,230,253," + 0.35 * al + ")"); g.addColorStop(1, "rgba(186,230,253,0)");
-      fx.strokeStyle = g; fx.lineWidth = 1.8; fx.lineCap = "round"; fx.beginPath(); fx.moveTo(c.x, c.y); fx.lineTo(tx, ty); fx.stroke();
-      var h = fx.createRadialGradient(c.x, c.y, 0, c.x, c.y, 7); h.addColorStop(0, "rgba(255,255,255," + al + ")"); h.addColorStop(1, "rgba(255,255,255,0)");
-      fx.fillStyle = h; fx.beginPath(); fx.arc(c.x, c.y, 7, 0, TAU); fx.fill();
+      var c = comets[i]; c.x += c.vx * dt; c.y += c.vy * dt; c.a = Math.min(1, c.a + dt / 500);
+      var ux = c.vx / c.v, uy = c.vy / c.v, run = Math.hypot(c.x - c.x0, c.y - c.y0), gl = Math.min(run, c.v * c.glow);
+      var gx = c.x - ux * gl, gy = c.y - uy * gl;                       // where the lit path has already gone dark
+      if ((gx < -60 || gx > W + 60 || gy < -60 || gy > H + 60) && run > 200) { comets.splice(i, 1); continue; }
+      var al = c.a, tint = c.warm ? "255,226,190" : "186,230,253";
+      var g = fx.createLinearGradient(c.x, c.y, gx, gy);                 // the lit path
+      g.addColorStop(0, "rgba(" + tint + "," + 0.2 * al + ")"); g.addColorStop(0.35, "rgba(" + tint + "," + 0.07 * al + ")"); g.addColorStop(1, "rgba(" + tint + ",0)");
+      fx.strokeStyle = g; fx.lineWidth = 9 * c.k; fx.beginPath(); fx.moveTo(c.x, c.y); fx.lineTo(gx, gy); fx.stroke();
+      var tl = Math.min(run, c.len), tx = c.x - ux * tl, ty = c.y - uy * tl;
+      g = fx.createLinearGradient(c.x, c.y, tx, ty);                     // the bright tail
+      g.addColorStop(0, "rgba(255,250,240," + 0.95 * al + ")"); g.addColorStop(0.18, "rgba(" + tint + "," + 0.45 * al + ")"); g.addColorStop(1, "rgba(" + tint + ",0)");
+      fx.strokeStyle = g; fx.lineWidth = 2.6 * c.k; fx.beginPath(); fx.moveTo(c.x, c.y); fx.lineTo(tx, ty); fx.stroke();
+      var hr = 12 * c.k, h = fx.createRadialGradient(c.x, c.y, 0, c.x, c.y, hr);   // the head
+      h.addColorStop(0, "rgba(255,255,255," + al + ")"); h.addColorStop(0.3, "rgba(" + tint + "," + 0.5 * al + ")"); h.addColorStop(1, "rgba(" + tint + ",0)");
+      fx.fillStyle = h; fx.beginPath(); fx.arc(c.x, c.y, hr, 0, TAU); fx.fill();
     }
     fx.globalCompositeOperation = "source-over";
   }
@@ -257,7 +270,7 @@
     });
   }
   function run() {
-    t0 = performance.now(); nextComet = t0 + 2500; nextEgg = t0 + (phone ? 1500 : 4000); nextUfo = t0 + 20000; nextPhone = t0 + (phone ? 4000 : 6000);
+    t0 = performance.now(); nextComet = t0 + 6000; nextEgg = t0 + (phone ? 1500 : 4000); nextUfo = t0 + 20000; nextPhone = t0 + (phone ? 4000 : 6000);
     if (finePointer && !phone && !reduce) {
       addEventListener("pointermove", function (e) { mouse.tx = e.clientX / W * 2 - 1; mouse.ty = e.clientY / H * 2 - 1; }, { passive: true });
       addEventListener("pointerdown", function (e) { if (e.pointerType === "mouse") waves.push({ x: e.clientX, y: e.clientY, t: last }); }, { passive: true });

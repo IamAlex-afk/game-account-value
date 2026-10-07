@@ -57,7 +57,7 @@ def main():
         P = '../' if len(parts) == 2 else './'
         home = parts[-1] == 'index.html'
         if 'class="gc-teaser"' not in s and 'data-g-slot="result"' in s:
-            img = f'{P}assets/cards/{lang}/{"diamond" if home else "gold"}.webp'
+            img = f'{P}assets/cards/{lang}/{"diamond" if home else "gold"}.webp?v=2'
             s, n = re.subn(r'(<div class="g-exact" data-g-slot="result"><a [^>]*>.*?</a>)',
                            lambda m: m.group(1) + teaser(lang, '#cards' if home else './#cards', img), s, count=1, flags=re.S)
             st['teaser'] += n

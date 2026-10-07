@@ -15,3 +15,4 @@ Originals are the files as of commit dcaea901 (`git show dcaea901:assets/space/<
 
 After changing any scene image: raise `?v=` in assets/space-background.js (function img) and the script
 version in the pages (`V` in space_rollout.py), otherwise the service worker keeps serving the old file.
+    phone-5:12:1::36
