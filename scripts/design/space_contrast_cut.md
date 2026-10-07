@@ -17,3 +17,15 @@ After changing any scene image: raise `?v=` in assets/space-background.js (funct
 version in the pages (`V` in space_rollout.py), otherwise the service worker keeps serving the old file.
     phone-5:12:1::36
     item-potion:30:::70
+
+Second review (side by side with the previous files, 44 pairs):
+
+    g-brawl-stars-1:28:::60  g-clash-of-clans-3:28:::60  g-clash-of-clans-4:28:::60  g-clash-royale-4:28:::60
+    g-genshin-impact-1:28:::60  g-genshin-impact-2:28:::60  g-mobile-legends-3:28:::60
+    g-brawl-stars-3:28:::40  g-clash-royale-1:28:::45  g-fortnite-1:28:::40  g-fortnite-3:28:::40  g-fortnite-6:28:::40
+    g-free-fire-4:24:::36  g-genshin-impact-4:28:::48  g-minecraft-5:28:::44  g-mobile-legends-2:22:::55
+    g-mobile-legends-6:24:::36  g-minecraft-3:30:::70
+
+Left as they are after comparison (the contrast cut damaged them): item-chest, item-coins, item-crystal,
+item-lootcrate, item-sword, phone-1/2/3, g-brawl-stars-4/5/6, g-clash-of-clans-5/6, g-clash-royale-2/5/6,
+g-fortnite-4/5, g-free-fire-3/6, g-genshin-impact-3/5/6, g-roblox-1/2/3.
