@@ -1,5 +1,5 @@
 /* GameAccountValue Service Worker — offline + PWA install */
-const CACHE = 'gav-landing-2026-38';
+const CACHE = 'gav-landing-2026-39';
 // Only the shell: other languages' homepages are NOT precached any more — on a
 // phone that was ~1.5 MB of background download competing with the page.
 const PRECACHE = [
