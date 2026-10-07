@@ -974,11 +974,14 @@ h1 { view-transition-name: page-title; }
 @keyframes vis-roll { 0% { transform: translateY(-70%); filter: blur(6px); opacity:0; } 60% { filter: blur(0); opacity:1; } 100% { transform: none; } }
 
 /* 5. scroll reveal with a glitch */
-@supports (animation-timeline: view()) {
-  .section .feature, .section .step, .section .faq details, .section .game-card, .section .section-title, .hub-card, .cert-sample {
-    animation: vis-reveal linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
-  @keyframes vis-reveal { 0% { opacity:0; transform: translateY(40px); filter: hue-rotate(90deg) blur(4px); } 60% { opacity:1; filter:none; } 100% { opacity:1; transform:none; } }
-}
+/* Reveal on scroll. The start state (hidden) is set by nav.js only, and only for blocks below the first screen;
+   nav.js reveals each one when it enters the screen, with a sweep as a safety net. Without JS, with reduced
+   motion or in a browser where anything goes wrong, the content is simply visible. (Until 2026-10-08 this was a
+   scroll-driven CSS animation: in browsers that claim support but do not run it, blocks stayed invisible.) */
+.rv { opacity: 0; }
+.rv.rv-in { opacity: 1; animation: vis-reveal .7s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes vis-reveal { 0% { opacity:0; transform: translateY(40px); filter: hue-rotate(90deg) blur(4px); } 60% { opacity:1; filter:none; } 100% { opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1 !important; animation: none !important; } }
 @media (max-width:860px) { .vis-cables { height: 110px; } }
 @media (prefers-reduced-motion: reduce) { html body .g-exact .btn-primary, html body .g-exact .btn-secondary, .g-cyborg::before, .vis-cables .p, .game-card::after, .vc-result-value.vis-roll *, .section *, .hub-card { animation: none !important; } }
 /* ---- card collection carousel (homepages) ---- */

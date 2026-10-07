@@ -123,7 +123,7 @@
     // across the screen. Each lights its path: a wide faint glow stays behind the head and fades in ~2 s.
     if (last > nextComet) {
       var big = rnd() < 0.3;
-      nextComet = last + ((phone ? 22000 : 14000) + rnd() * 14000) * VIEW.cm;
+      nextComet = last + ((phone ? 15000 : 14000) + rnd() * 12000) * VIEW.cm;
       var edge = rnd(), sx, sy0;
       if (edge < 0.45) { sx = rnd() * W; sy0 = -30; } else if (edge < 0.65) { sx = -30; sy0 = rnd() * H * 0.7; }
       else if (edge < 0.85) { sx = W + 30; sy0 = rnd() * H * 0.7; } else { sx = rnd() * W; sy0 = H + 30; }
