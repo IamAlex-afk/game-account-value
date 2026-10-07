@@ -16,11 +16,12 @@ os.makedirs(OUT, exist_ok=True)
 
 # T: pixels darker than this, connected to the outside, are background. Lower for objects that are dark themselves.
 DARK = {"robot": 26, "astronaut": 22,
-        "phone-4": 14, "phone-5": 14, "phone-6": 14, "g-fortnite-5": 14, "g-free-fire-2": 16, "g-minecraft-4": 16, "item-lootcrate": 18,
+        "phone-4": 21, "phone-5": 14, "phone-6": 14, "g-fortnite-5": 14, "g-free-fire-2": 16, "g-minecraft-4": 16, "item-lootcrate": 18,
         "item-headset": 15, "item-backpack": 18, "g-free-fire-5": 18, "g-fortnite-2": 18, "g-clash-of-clans-2": 20, "item-gamepad": 20,
         "g-mobile-legends-5": 20, "phone-1": 20, "g-mobile-legends-2": 26, "phone-2": 20, "item-helmet": 22, "g-free-fire-1": 20, "item-airdrop": 20}
 TOP = {"robot": (90, 70), "astronaut": (112, 26)}
-ENCLOSED = {"item-headset"}
+ENCLOSED = {"item-headset", "phone-4"}
+HULL_A = {"phone-4": 0.10}          # outline taken from the faint parts too: the old mask had made the front of the body see-through
 ROUGH = {"item-helmet": 30, "g-free-fire-5": 30}   # restore only smooth areas here: the rest under the old mask is noise          # also remove big black areas fully surrounded by the object
 RESTORE = {"item-backpack", "g-minecraft-4", "phone-4", "g-mobile-legends-5"}
 NO_GLOW = {"item-helmet", "g-free-fire-2", "g-free-fire-5", "item-backpack"}   # faint leftovers of the old cut are not light: drop them
@@ -48,7 +49,7 @@ def fix(path):
     # 1. restore object parts the old mask cut out: non-black pixels inside the object's own outline
     if name in RESTORE:
         r = max(6, int(0.11 * max(h, w)))
-        pad = np.pad(core, r)
+        pad = np.pad(a0 > HULL_A.get(name, 0.55), r)
         hull = ndi.binary_erosion(ndi.binary_dilation(pad, iterations=r), iterations=r)[r:-r, r:-r]
         cand = hull & ~core & (lum > max(T, 24)) & (rough < ROUGH.get(name, 999))
         cand = ndi.binary_opening(cand, iterations=2)
@@ -108,8 +109,8 @@ files = sorted(glob.glob(SRC + "/item-*.webp") + glob.glob(SRC + "/phone-*.webp"
 BIG = ["robot", "astronaut"]               # the two figures had a dark block of the old backdrop above the head
 files += [os.path.join(SRC, n + ".webp") for n in BIG]
 only = sys.argv[3:]
-# these six look right on the dark sky as they are (their soft parts are the object itself); rebuilding made them worse
-SKIP = {"item-helmet", "item-backpack", "g-free-fire-2", "g-free-fire-5", "g-minecraft-4", "phone-4"}
+# these five look right on the dark sky as they are (their soft parts are the object itself); rebuilding made them worse
+SKIP = {"item-helmet", "item-backpack", "g-free-fire-2", "g-free-fire-5", "g-minecraft-4"}
 files = [f for f in files if os.path.basename(f)[:-5] not in SKIP]
 for f in files:
     if only and os.path.basename(f)[:-5] not in only:
