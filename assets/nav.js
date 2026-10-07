@@ -77,27 +77,37 @@ if ('serviceWorker' in navigator) {
 }
 
 // Reveal on scroll (was a scroll-driven CSS animation; see glass.css). Blocks below the first screen start hidden
-// and appear as they enter the screen. Three safety nets so nothing can stay invisible: an observer, a sweep after
-// every scroll pause and timers, and a final "show everything" if the observer is missing.
+// and appear as they enter the screen. Nothing is measured while the page loads: the observer itself reports where
+// each block is (no forced layout), and a sweep after every scroll pause is the safety net.
 (function () {
   var sel = '.section .feature, .section .step, .section .faq details, .section .game-card, .section .section-title, .hub-card, .cert-sample, .step, .feature';
   if (!('IntersectionObserver' in window) || !document.querySelectorAll) return;
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = [].slice.call(document.querySelectorAll(sel)).filter(function (e) { return e.getBoundingClientRect().top > innerHeight * 0.92; });
-  if (!els.length) return;
+  var hidden = [];
   function show(e) {
     if (e.classList.contains('rv-in')) return;
     e.classList.add('rv-in');
-    e.addEventListener('animationend', function () { e.classList.remove('rv', 'rv-in'); }, { once: true });
-    setTimeout(function () { e.classList.remove('rv', 'rv-in'); }, 1200);
+    var k = hidden.indexOf(e); if (k >= 0) hidden.splice(k, 1);
+    setTimeout(function () { e.classList.remove('rv', 'rv-in'); }, 900);
   }
   var io = new IntersectionObserver(function (es) {
-    es.forEach(function (x) { if (x.isIntersecting) { show(x.target); io.unobserve(x.target); } });
+    es.forEach(function (x) {
+      var e = x.target;
+      if (!e.rvSeen) {                       // first report: hide only what lies below the screen
+        e.rvSeen = 1;
+        var h = x.rootBounds ? x.rootBounds.height : innerHeight;
+        if (!x.isIntersecting && x.boundingClientRect.top > h) { e.classList.add('rv'); hidden.push(e); }
+        else io.unobserve(e);
+        return;
+      }
+      if (x.isIntersecting) { show(e); io.unobserve(e); }
+    });
   }, { rootMargin: '0px 0px -5% 0px' });
-  els.forEach(function (e) { e.classList.add('rv'); io.observe(e); });
-  function sweep() { els.forEach(function (e) { if (e.classList.contains('rv') && e.getBoundingClientRect().top < innerHeight) show(e); }); }
+  function init() { [].forEach.call(document.querySelectorAll(sel), function (e) { io.observe(e); }); }
+  if (window.requestIdleCallback) requestIdleCallback(init, { timeout: 1500 }); else setTimeout(init, 300);
+  function sweep() { hidden.slice().forEach(function (e) { if (e.getBoundingClientRect().top < innerHeight) show(e); }); }
   var t = 0;
-  addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(sweep, 200); }, { passive: true });
-  addEventListener('resize', sweep); addEventListener('pageshow', sweep);
-  setInterval(sweep, 1500);
+  function soon() { if (!hidden.length) return; clearTimeout(t); t = setTimeout(sweep, 200); }
+  addEventListener('scroll', soon, { passive: true }); addEventListener('touchend', soon, { passive: true });
+  addEventListener('resize', soon); addEventListener('pageshow', soon);
 })();

@@ -5,7 +5,7 @@
 2. New versions of style.css, glass.css and nav.js in the pages (scroll reveal moved from CSS to nav.js)."""
 import io, os, re
 COVER = "https://gameaccountvalue.com/og-image.jpg?v=4"
-V = "20261008a"
+V = "20261008b"
 n = 0
 for root, dirs, files in os.walk("."):
     dirs[:] = [d for d in dirs if d not in (".git", "scripts", "_tmp_check", "node_modules")]
