@@ -27,3 +27,4 @@ b40151c63996b5ff5b2753a063d2db435e069032  structured-data cover image on news an
 6c9fb53b7a4a69976bba7a9ebe8200e88cdf9d94  cover as og:image, asset versions on all pages (template)
 b6dda81c89349c23f0eba4a9476a31902b75cf73  space-background.js version bump on all pages
 6d86b754d6d80b40473e19fb5596b0100759bcf5  space-background.js version bump on all pages
+64197f1948356f2b26a869615ce583fca7c0c0b5  nav.js version bump on all pages
