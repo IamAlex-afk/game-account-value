@@ -264,3 +264,18 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - NOT rolled out: "what an estimate can and can't tell you" block (pilot on CoC en+ru). It repeats the asking-price
   note and the ToS warning already on the page - conflicts with the owner's no-duplicates rule; owner decides.
 - One-shot reminder set in the session for 2026-10-07 14:17 local (quota reset): vi creators for 6 games + PSI re-measure.
+
+## 2026-10-07 cross-page number consistency
+- Comparison + market-report (24 langs, 5b2e748a): Mobile Legends ceiling "$2,500" was never on the ML page -> "~$605
+  (Indonesia)" (row moved below Free Fire); Free Fire typical "$150" -> "$250". Table + FAQ JSON-LD together.
+- Market report, older long-form version (13 langs: es tr ar vi hi fr de it ja ko th pl zh): Free Fire 150 -> 250,
+  Minecraft 630 -> 632 in headline, paragraph and JSON-LD.
+- OPEN, larger: those 13 languages still carry the old long-form market report (about 48 KB, own paragraphs per game,
+  FAQPage LD) while en/ru/pt/id and the 7 newer locales have the short card hub (24 KB). The long form repeats the game
+  pages and drifts out of date (still there: Clash Royale "typical $0.50-$150" vs comparison table "$0.50-$300";
+  Genshin "$15-$300" vs game page "starter $5-$60"). Proper fix: rebuild the 13 pages as the card hub
+  (about 18 short strings per language to translate). Not done yet.
+- Calculators: every sourced figure on the game pages is already used; new fields need per-item listing data that can
+  only be spot-checked by hand in the owner's Chrome (extension was not connected on 2026-10-06/07).
+- How to re-run this check: compare each game's hero range with market-report cards / price-range lines and the
+  comparison table (see the 2026-10-07 session); calculators.js brackets must equal the page table.
