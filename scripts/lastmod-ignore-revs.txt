@@ -24,3 +24,4 @@ ff316b9c67199276c6175777921ab07636b62349  space-background.js and card image ver
 2cb297e4afee0f7079a7839006dd5e3c6c30b222  structured-data image on all article pages (template)
 d564ca1cbb09b24b20f97a8ccd79e2dd6692e992  structured-data cover image (template)
 b40151c63996b5ff5b2753a063d2db435e069032  structured-data cover image on news and service pages (template)
+6c9fb53b7a4a69976bba7a9ebe8200e88cdf9d94  cover as og:image, asset versions on all pages (template)
