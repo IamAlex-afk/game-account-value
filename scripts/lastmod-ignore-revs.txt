@@ -23,3 +23,4 @@ cd9d3088550f0ea8bdeb4034379abe7a67e08b98  space-background.js version bump on al
 ff316b9c67199276c6175777921ab07636b62349  space-background.js and card image version bump on all pages
 2cb297e4afee0f7079a7839006dd5e3c6c30b222  structured-data image on all article pages (template)
 d564ca1cbb09b24b20f97a8ccd79e2dd6692e992  structured-data cover image (template)
+b40151c63996b5ff5b2753a063d2db435e069032  structured-data cover image on news and service pages (template)
