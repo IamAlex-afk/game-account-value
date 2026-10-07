@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Declare the page's cover (og:image) as its image in the structured data of pages that did not say so,
-so search engines stop picking a decorative picture (the joystick) as the page thumbnail."""
+"""Structured-data image of the game pages and homepages (Article / SoftwareApplication):
+the site cover (og-image.jpg: the gamepad with the site name) first, the page's own share card second.
+Search engines then have one and the same cover for every page; nothing is removed, og:image is untouched."""
 import io, os, re, json
+COVER = "https://gameaccountvalue.com/og-image.jpg"
 n = 0; bad = []
 for root, dirs, files in os.walk("."):
     dirs[:] = [d for d in dirs if d not in (".git", "scripts", "_tmp_check", "node_modules")]
@@ -11,10 +13,10 @@ for root, dirs, files in os.walk("."):
         s = io.open(p, encoding="utf-8", newline="").read()
         og = re.search(r'property="og:image" content="([^"]+)"', s)
         if not og: continue
+        want = '"image": ["' + COVER + '", "' + og.group(1) + '"],'
         def add(m):
-            if re.match(r'\s*"image"', s[m.end():m.end() + 40]): return m.group(0)
-            return m.group(0) + m.group(1) + '"image": "' + og.group(1) + '",' + m.group(3)
-        s2 = re.sub(r'([ \t]*)"@type": "(Article|SoftwareApplication)",(\r?\n)', add, s)
+            return m.group(1) + '"@type": "' + m.group(2) + '",' + m.group(3) + m.group(1) + want + m.group(3)
+        s2 = re.sub(r'([ \t]*)"@type": "(Article|SoftwareApplication)",(\r?\n)(?:[ \t]*"image": [^\n]*\n)?', add, s)
         if s2 != s:
             for blk in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s2, re.S):
                 try: json.loads(blk)
