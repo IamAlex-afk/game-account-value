@@ -315,3 +315,18 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   HTTP 200 for a Googlebot user agent, robots "index, follow", self canonical, correct lang/dir. NO page-level defect
   found - most were crawled 09-27..10-03, in the first week of a new domain. Do not rewrite them on a guess; re-check
   with `gsc_check.py --index` around 2026-10-21. Only lever available now: the owner's manual "Request indexing".
+
+## 2026-10-07 global error sweep (1,417 pages)
+- CORRECTION of my own earlier change: Mobile Legends "$2,500" IS sourced - calculators.js comment, Eldorado.gg listing with
+  1,000 skins / 39 Collector skins, checked 2026-09-26. Restored in the comparison table, its JSON-LD and all market-report
+  cards (30aeac29); the ML page now cites that listing in 24 langs so page, calculator and hubs agree.
+  RULE (again): before calling a number unsourced, read the comments in assets/calculators.js and scripts/research/*.md,
+  not only the page and its git history.
+- Clean: text garbage (undefined / NaN / unreplaced {placeholders} / double-escaped entities / mojibake), foreign-script
+  leftovers, http:// links, html lang/dir, og:url vs canonical, dates in the future, dateModified < datePublished,
+  asset version drift, service-worker/manifest references, console errors in a real browser (21 page types x en/ru/ar),
+  calculators rendered in 24 langs x 4 page types (no broken labels, results present), hero ranges and every price table
+  number across 24 langs, calculator brackets vs page tables.
+- Not errors, left as is: 506 news titles over 75 chars and 145 descriptions over 200 (Google truncates, no penalty);
+  og:description is a deliberately shorter text on 6 page types; marketplace names in CJK on non-CJK pages are sources.
+- README counts updated (59 pages per language, 1,417 pages, 31 articles).
