@@ -538,6 +538,19 @@
     { key: "ghoul", name: "Ghoul Trooper · OG 2017", lo: 1150, hi: 2500, og: true }
   ];
 
+  // Minecraft named capes: the cape price ranking quoted on minecraft.html
+  // (mccapers.com, checked September 2026) — one listed price per cape, so
+  // lo = hi. Capes cheaper than $10 on that ranking are left out. MINECON
+  // attendee capes are not here: they are the "Minecon cape holder" account
+  // type above, priced from account listings.
+  var MINECRAFT_CAPES = [
+    { key: "crafter", name: "Crafter Cape (TwitchCon 2026)", lo: 873, hi: 873 },
+    { key: "follower", name: "Follower's Cape", lo: 300, hi: 300 },
+    { key: "moonlight", name: "Moonlight Trail Cape", lo: 116, hi: 116 },
+    { key: "experience", name: "Minecraft Experience Cape", lo: 55, hi: 55 },
+    { key: "purpleheart", name: "Purple Heart Cape", lo: 11, hi: 11 }
+  ];
+
   function sumChecked(items, v) {
     var lo = 0, hi = 0, og = false, any = false;
     items.forEach(function (item) {
@@ -686,10 +699,12 @@
     "minecraft": {
       name: "Minecraft",
       choices: [{ key: "type", label: T.sliders["minecraft"].type, options: T.minecraftTypes.map(function (name, i) { return [String(i + 1), name]; }) }],
+      checkboxes: MINECRAFT_CAPES,
       score: function (v) { return norm(v.type, 1, 4); },
       compute: function (v) {
         var table = { 1: [0.5, 25], 2: [25, 632], 3: [2000, 5000], 4: [25000, 50000] };
-        return table[v.type];
+        var capes = sumChecked(MINECRAFT_CAPES, v);
+        return [table[v.type][0] + capes.lo, table[v.type][1] + capes.hi];
       }
     },
     "roblox": {
@@ -859,7 +874,7 @@
         var cbId = root.id + "-cb-" + item.key;
         cbHtml += '<label class="vc-checkbox" for="' + cbId + '">' +
           '<input type="checkbox" id="' + cbId + '">' +
-          '<span>' + item.name + ' (' + (cfg.checkboxFloor ? '≈' : '+') + formatMoney(item.lo) + '–' + formatMoney(item.hi) + ')</span>' +
+          '<span>' + item.name + ' (' + (cfg.checkboxFloor ? '≈' : '+') + formatMoney(item.lo) + (item.hi === item.lo ? '' : '–' + formatMoney(item.hi)) + ')</span>' +
           '</label>';
       });
       cbField.innerHTML = cbHtml;
