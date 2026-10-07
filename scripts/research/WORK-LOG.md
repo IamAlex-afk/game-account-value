@@ -287,3 +287,12 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - Structure check across languages (h2/h3/table/li counts per page type): only expected differences left - pilot
   "estimate limits" block on CoC and Clash Royale (en+ru), creators blocks (pt ar vi), local-market sources (zh ja ko pl),
   Roblox Limiteds top-5 as a table in en vs a list elsewhere.
+- External links (120 publisher / news / wiki URLs checked once): no 404; 40 answer 403 to scripts (fandom, liquipedia,
+  minecraft.wiki, kotaku, doi.org, fortnite.com) - bot protection, not dead links.
+- Reference links added where three pages lacked them: zh Minecraft (10 capes), zh Fortnite (8 skins), ar Genshin (4).
+- MISTAKE to avoid: b25fe121 went out with invalid JSON-LD on zh/minecraft.html for ~5 minutes - the edit matched the first
+  occurrence of a sentence, which was the FAQ answer inside JSON-LD, and the push was not gated on the checker
+  (fixed in 32013fe9). Rules: (1) when editing visible text, search from '<main', never from the top of the file;
+  (2) push only if `site_check.py` prints exactly "ERRORS: 0" - gate the command on it, do not just print it.
+- Official Discord links: only Clash of Clans and Minecraft publish one in their own site HTML; Brawl Stars and Clash Royale
+  list Facebook / Instagram / Reddit / TikTok / X / YouTube, no Discord. Not enough for a block - not added.
