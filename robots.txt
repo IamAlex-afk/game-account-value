@@ -74,4 +74,14 @@ Allow: /
 User-agent: DoubaoBot
 Allow: /
 
+# Decorative art (scene objects, characters, the joystick) is not what a page is about. Keeping the image
+# crawler away from it stops search results from showing the joystick as a page's thumbnail; each page
+# declares its cover (og:image, structured data "image") instead. Page rendering is not affected.
+User-agent: Googlebot-Image
+Disallow: /assets/joystick.webp
+Disallow: /assets/cyborg
+Disallow: /assets/robot-calc
+Disallow: /assets/cyber-18.webp
+Disallow: /assets/space/
+
 Sitemap: https://gameaccountvalue.com/sitemap.xml
