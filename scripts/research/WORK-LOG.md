@@ -296,3 +296,18 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   (2) push only if `site_check.py` prints exactly "ERRORS: 0" - gate the command on it, do not just print it.
 - Official Discord links: only Clash of Clans and Minecraft publish one in their own site HTML; Brawl Stars and Clash Royale
   list Facebook / Instagram / Reddit / TikTok / X / YouTube, no Discord. Not enough for a block - not added.
+
+## 2026-10-07 Search Console snapshot (scripts/research/gsc_check.py, add --index for index status)
+- The domain only started to show in Google on 2026-09-27. Daily impressions 134 -> 950 within a week; last 7 full days
+  149 clicks / 4,627 impressions vs 36 / 994 the week before. Mobile 73% of impressions.
+- Countries by impressions: Brazil 1,107, Italy 453, USA 400 (CTR 1.2%), Russia 272, France 232, India 156, Turkey 146,
+  Japan 139, Poland 137, Germany 108.
+- Index status of 408 main pages (17 page types x 24 langs): 294 indexed (72%), 60 discovered-not-crawled, 31 crawled but
+  NOT indexed, 23 unknown. Weakest: guides (market-report / comparison / safety: 8 of 24 each), Minecraft 14, languages
+  tl 6, tk 6, kk 9, ar 10, vi 10, pl 10. Fully indexed: en, ja; homepages 24/24; Mobile Legends 24/24.
+  Crawled-not-indexed (Google's own quality signal): ar x7, kk x6, tl x3, ms x3, es x2, id x2, uz x2 ...
+- Low CTR at good position: pt/free-fire (339 impressions, 2 clicks; visible queries are a marketplace brand
+  "gamemarket ff" - not ours to chase), minecraft.html (204 / 2), pt/brawl-stars (164 / 1).
+- News published 2026-10-06 is still "URL is unknown to Google" a day later - normal; re-check in a week.
+- The API cannot request indexing or submit sitemaps; only sitemap.xml is submitted (it lists all 1,368 URLs).
+- RE-RUN gsc_check.py --index around 2026-10-21 and compare: indexed count, crawled-not-indexed list, news impressions.
