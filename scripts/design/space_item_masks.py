@@ -15,9 +15,11 @@ SRC, OUT = sys.argv[1], sys.argv[2]
 os.makedirs(OUT, exist_ok=True)
 
 # T: pixels darker than this, connected to the outside, are background. Lower for objects that are dark themselves.
-DARK = {"phone-4": 14, "phone-5": 14, "phone-6": 14, "g-fortnite-5": 14, "g-free-fire-2": 16, "g-minecraft-4": 16, "item-lootcrate": 18,
+DARK = {"robot": 26, "astronaut": 22,
+        "phone-4": 14, "phone-5": 14, "phone-6": 14, "g-fortnite-5": 14, "g-free-fire-2": 16, "g-minecraft-4": 16, "item-lootcrate": 18,
         "item-headset": 15, "item-backpack": 18, "g-free-fire-5": 18, "g-fortnite-2": 18, "g-clash-of-clans-2": 20, "item-gamepad": 20,
         "g-mobile-legends-5": 20, "phone-1": 20, "g-mobile-legends-2": 26, "phone-2": 20, "item-helmet": 22, "g-free-fire-1": 20, "item-airdrop": 20}
+TOP = {"robot": (90, 70), "astronaut": (112, 26)}
 ENCLOSED = {"item-headset"}
 ROUGH = {"item-helmet": 30, "g-free-fire-5": 30}   # restore only smooth areas here: the rest under the old mask is noise          # also remove big black areas fully surrounded by the object
 RESTORE = {"item-backpack", "g-minecraft-4", "phone-4", "g-mobile-legends-5"}
@@ -57,6 +59,9 @@ def fix(path):
 
     # 2. black leftovers: dark pixels connected to the outside (or big enclosed ones where asked)
     dark = lum < T
+    if name in TOP:                                            # a leftover block of the old backdrop above the head
+        t2, rows = TOP[name]
+        dark[:rows] |= lum[:rows] < t2
     outside = ~core
     lab, n = ndi.label(dark | outside)
     ids = np.unique(lab[outside])
@@ -100,6 +105,8 @@ def fix(path):
 
 
 files = sorted(glob.glob(SRC + "/item-*.webp") + glob.glob(SRC + "/phone-*.webp") + glob.glob(SRC + "/g-*.webp"))
+BIG = ["robot", "astronaut"]               # the two figures had a dark block of the old backdrop above the head
+files += [os.path.join(SRC, n + ".webp") for n in BIG]
 only = sys.argv[3:]
 # these six look right on the dark sky as they are (their soft parts are the object itself); rebuilding made them worse
 SKIP = {"item-helmet", "item-backpack", "g-free-fire-2", "g-free-fire-5", "g-minecraft-4", "phone-4"}
