@@ -123,13 +123,13 @@
     // across the screen. Each lights its path: a wide faint glow stays behind the head and fades in ~2 s.
     if (last > nextComet) {
       var big = rnd() < 0.3;
-      nextComet = last + ((phone ? 15000 : 14000) + rnd() * 12000) * VIEW.cm;
+      nextComet = last + (phone ? 7000 + rnd() * 7000 : (14000 + rnd() * 12000) * VIEW.cm);   // phones: the sky has little else moving
       var edge = rnd(), sx, sy0;
       if (edge < 0.45) { sx = rnd() * W; sy0 = -30; } else if (edge < 0.65) { sx = -30; sy0 = rnd() * H * 0.7; }
       else if (edge < 0.85) { sx = W + 30; sy0 = rnd() * H * 0.7; } else { sx = rnd() * W; sy0 = H + 30; }
       var ax = W * (0.2 + rnd() * 0.6) - sx, ay = H * (0.2 + rnd() * 0.5) - sy0, an = Math.hypot(ax, ay) || 1;
       var v = big ? 0.3 + rnd() * 0.12 : 0.55 + rnd() * 0.3;
-      comets.push({ x: sx, y: sy0, x0: sx, y0: sy0, vx: ax / an * v, vy: ay / an * v, v: v, k: big ? 1 : 0.55,
+      comets.push({ x: sx, y: sy0, x0: sx, y0: sy0, vx: ax / an * v, vy: ay / an * v, v: v, k: (big ? 1 : 0.55) * (phone ? 1.7 : 1), b: phone ? 1.8 : 1,   // b: brightness, phones show the sky only between cards
                     len: big ? 260 + rnd() * 120 : 120 + rnd() * 70, glow: big ? 2400 : 1500, a: 0, warm: rnd() < 0.5 });
     }
     fx.globalCompositeOperation = "lighter"; fx.lineCap = "round";
@@ -140,11 +140,11 @@
       if ((gx < -60 || gx > W + 60 || gy < -60 || gy > H + 60) && run > 200) { comets.splice(i, 1); continue; }
       var al = c.a, tint = c.warm ? "255,226,190" : "186,230,253";
       var g = fx.createLinearGradient(c.x, c.y, gx, gy);                 // the lit path
-      g.addColorStop(0, "rgba(" + tint + "," + 0.2 * al + ")"); g.addColorStop(0.35, "rgba(" + tint + "," + 0.07 * al + ")"); g.addColorStop(1, "rgba(" + tint + ",0)");
+      g.addColorStop(0, "rgba(" + tint + "," + Math.min(1, 0.2 * al * c.b) + ")"); g.addColorStop(0.35, "rgba(" + tint + "," + Math.min(1, 0.07 * al * c.b) + ")"); g.addColorStop(1, "rgba(" + tint + ",0)");
       fx.strokeStyle = g; fx.lineWidth = 9 * c.k; fx.beginPath(); fx.moveTo(c.x, c.y); fx.lineTo(gx, gy); fx.stroke();
       var tl = Math.min(run, c.len), tx = c.x - ux * tl, ty = c.y - uy * tl;
       g = fx.createLinearGradient(c.x, c.y, tx, ty);                     // the bright tail
-      g.addColorStop(0, "rgba(255,250,240," + 0.95 * al + ")"); g.addColorStop(0.18, "rgba(" + tint + "," + 0.45 * al + ")"); g.addColorStop(1, "rgba(" + tint + ",0)");
+      g.addColorStop(0, "rgba(255,250,240," + 0.95 * al + ")"); g.addColorStop(0.18, "rgba(" + tint + "," + Math.min(1, 0.45 * al * c.b) + ")"); g.addColorStop(1, "rgba(" + tint + ",0)");
       fx.strokeStyle = g; fx.lineWidth = 2.6 * c.k; fx.beginPath(); fx.moveTo(c.x, c.y); fx.lineTo(tx, ty); fx.stroke();
       var hr = 12 * c.k, h = fx.createRadialGradient(c.x, c.y, 0, c.x, c.y, hr);   // the head
       h.addColorStop(0, "rgba(255,255,255," + al + ")"); h.addColorStop(0.3, "rgba(" + tint + "," + 0.5 * al + ")"); h.addColorStop(1, "rgba(" + tint + ",0)");
