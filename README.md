@@ -61,7 +61,7 @@ Every language has the same **59 pages** (home, 9 game reports, market report, m
 - The site calculator runs **entirely in your browser**.
 - The bot processes screenshots **in memory only** and discards them after the analysis.
 - Telegram user IDs are **stored as SHA-256 hashes**, never raw.
-- No cookies, no analytics or tracking, no ads, no registration; CTA buttons carry a no-op `data-event` hook only.
+- No cookies, no analytics or tracking, no ads, no registration; the `data-event` attributes on CTA buttons are inert markup that no script reads.
 - The bot's `/top` leaderboard is opt-in after a paid audit (name on the card or card number only) and removed by `/delete`.
 
 Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.html](https://gameaccountvalue.com/terms.html)

@@ -955,13 +955,12 @@ html body .value-calc .vc-share-btn, html body .value-calc .vc-share-btn:hover {
 
 /* 2. holographic game cards */
 .game-card, .g-pick-btn { position: relative; overflow: hidden; }
-.game-card::after, .g-pick-btn::after { content:""; position:absolute; inset:0; pointer-events:none; border-radius:inherit; opacity:.0; mix-blend-mode: color-dodge;
+.g-pick-btn::after { content:""; position:absolute; inset:0; pointer-events:none; border-radius:inherit; opacity:.0; mix-blend-mode: color-dodge;
   background: linear-gradient(115deg, transparent 20%, rgba(255,46,136,.55) 36%, rgba(252,238,10,.5) 44%, rgba(0,240,255,.55) 52%, rgba(157,92,255,.5) 60%, transparent 76%);
   background-size: 250% 250%; background-position: var(--hx, 50%) var(--hy, 50%); transition: opacity .25s; }
-.game-card:hover::after, .g-pick-btn:hover::after { opacity:.45; }
+.g-pick-btn:hover::after { opacity:.45; }
+.game-card::after { mix-blend-mode: color-dodge; }
 .g-pick-btn[aria-pressed="true"]::after, .g-pick-btn.active::after { opacity:.22; }
-@media (pointer: coarse) { .game-card::after { opacity:.28; animation: vis-holo 5s ease-in-out infinite alternate; } }
-@keyframes vis-holo { from { background-position: 0% 0%; } to { background-position: 100% 100%; } }
 
 /* 3. smooth page-to-page transitions (Chrome/Edge/Safari 18+) */
 @view-transition { navigation: auto; }
