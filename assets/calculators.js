@@ -35,7 +35,7 @@
 
   // --- i18n --------------------------------------------------------------
   // Only UI text is localized here. All scoring/pricing math below is
-  // language-independent and identical across en/ru/id/pt.
+  // language-independent and identical across all 24 languages.
   var STR = {
     en: {
       sliders: {

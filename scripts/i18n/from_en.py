@@ -97,6 +97,7 @@ def process(lang):
             return 'href="' + u + ("&" if "?" in u else "?") + f'utm_content={lang}"'
         s = re.sub(r'href="(https://t\.me/GameAccountValue_Bot[^"]*)"', utm, s)
         s = re.sub(r'(?s)\s*<a href="[^"]*-news\.html" class="fresh-news-fab".*?</a>', "", s)
+        s = re.sub(r'\s*<script src="[^"]*market-watch-button\.js" defer></script>', "", s)
         s = re.sub(r'\s*<meta name="google-site-verification" content="DFpki1t_QAVQIUVjut75ixmRHQke0Q7i9VDaP8Y4bxo">', "", s)
         s = s.replace(f'<a href="{SITE}" class="lang-current">', f'<a href="{SITE}">')
         s = s.replace(f'<a href="{SITE}{lang}/">', f'<a href="{SITE}{lang}/" class="lang-current">')

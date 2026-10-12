@@ -162,7 +162,6 @@ def do_home(p):
         extra_links = ('<div class="cta-group g-about-cta">' + ''.join(keep) + '</div>') if keep else ''
         notice = grab(hero, '<p class="ai-notice">', '</p>')
         tool = ('<section class="g-tool" id="main-content">\n'
-                '  <div class="g-fx" aria-hidden="true">' + CITY + '<div class="g-rain"></div></div>\n'
                 '  <div class="g-head"><div>' + badge + '\n' + h1 + '</div><div class="g-robot" aria-hidden="true">' + BOT + '</div></div>\n'
                 '  <div class="g-panel">\n    <div class="g-intro">' + h2 + sub + '</div>\n'
                 '    <div class="g-pick-wrap"><span class="g-num" aria-hidden="true">1</span><div class="g-pick" role="group" aria-label="' + pick_label + '"></div></div>\n'
@@ -176,7 +175,6 @@ def do_home(p):
         hero = p.cut(hero_start, '</section>')
         inner = hero[len(hero_start):-len('</section>')].strip()
         new = ('<section class="g-hero g-home g-home-plain" id="main-content">\n'
-               '  <div class="g-fx" aria-hidden="true">' + CITY + '<div class="g-rain"></div></div>\n'
                '  <div class="g-left">\n' + inner + '\n  </div>\n'
                '  <div class="g-robot" aria-hidden="true">' + BOT + '</div>\n</section>')
         m = re.search(r'<main>\s*', p.s)

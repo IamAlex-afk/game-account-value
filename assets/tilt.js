@@ -43,7 +43,7 @@
 
   // Wrap each target in a positioned container and inject the sheen + iris
   // layers — done here in JS (not in each language's index.html) so this
-  // ships to all 8 full-language homepages from this one shared file, no
+  // ships to all 24 homepages from this one shared file, no
   // per-page markup edits needed.
   function addSheen(el) {
     var parent = el.parentElement;

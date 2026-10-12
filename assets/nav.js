@@ -14,6 +14,9 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setOpen(false); burger.focus(); }
   });
+  document.addEventListener('click', function (e) {
+    if (nav.classList.contains('nav-open') && !nav.contains(e.target)) setOpen(false);
+  });
 })();
 
 document.querySelectorAll('.lang-selector').forEach(function (sel) {
@@ -40,6 +43,7 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     document.querySelectorAll('.lang-selector.open').forEach(function (sel) {
       sel.classList.remove('open');
+      sel.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
     });
   }
 });

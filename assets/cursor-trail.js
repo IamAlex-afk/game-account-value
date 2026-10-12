@@ -20,9 +20,12 @@
   var colors = ['212,175,55', '18,184,146', '45,212,191']; // gold, emerald, accent — same brand palette as :root
   var particles = [];
   var lastX = null, lastY = null;
+  var running = false;
+  function still() { return document.documentElement.classList.contains('gav-still'); }
 
   document.addEventListener('pointermove', function (e) {
     if (e.pointerType && e.pointerType !== 'mouse') return;
+    if (still()) return;
     var dx = lastX === null ? 0 : e.clientX - lastX;
     var dy = lastY === null ? 0 : e.clientY - lastY;
     var dist = Math.sqrt(dx * dx + dy * dy);
@@ -42,10 +45,12 @@
       });
     }
     if (particles.length > 200) particles.splice(0, particles.length - 200);
+    if (!running) { running = true; requestAnimationFrame(tick); }
   }, { passive: true });
 
   function tick() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (still()) particles.length = 0;
     for (var i = particles.length - 1; i >= 0; i--) {
       var p = particles[i];
       p.life -= 0.025;
@@ -61,7 +66,6 @@
       ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
       ctx.fill();
     }
-    requestAnimationFrame(tick);
+    if (particles.length) requestAnimationFrame(tick); else running = false;
   }
-  requestAnimationFrame(tick);
 })();
