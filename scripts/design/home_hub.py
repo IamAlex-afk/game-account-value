@@ -90,7 +90,7 @@ def block(lang):
     g, gd, news, mr, _ = nm.L[lang]
     gl = nm.guide_labels(lang)
     strip = lambda s: re.sub(r'^\W+\s*', '', s)
-    items = [(nm.SITE + 'news.html', news), ('./market-report.html', strip(mr)),
+    items = [('./news.html', news), ('./market-report.html', strip(mr)),
              ('./which-game-accounts-are-most-valuable.html', strip(gl.get('which-game-accounts-are-most-valuable', ''))),
              ('./account-trading-safety.html', strip(gl.get('account-trading-safety', ''))),
              ('./glossary.html', strip(gl.get('glossary', ''))), ('./methodology.html', strip(gl.get('methodology', '')))]
