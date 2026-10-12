@@ -57,7 +57,7 @@ def build(lang, slug):
     shell = ROOT + ('glossary.html' if lang == 'en' else lang + '/glossary.html')
     s = open(shell, encoding='utf-8').read()
     me = url(lang, slug)
-    title = f'{P["title"]} | GameAccountValue'
+    title = P["title"] if 'GameAccountValue' in P["title"] else f'{P["title"]} | GameAccountValue'
     esc = lambda v: html.escape(v, quote=True)
     s = re.sub(r'<title>.*?</title>', lambda m: f'<title>{esc(title)}</title>', s, count=1, flags=re.S)
     for pat, val in ((r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(P["desc"])}">'),
