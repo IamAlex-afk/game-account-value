@@ -81,6 +81,60 @@ H = {
 }
 
 
+# First sentence of the 'other value calculators' section: it used to answer a question heading, so after the
+# headings became statements it was left as a fragment. (old fragment, full sentence) per language.
+FIRST = {
+ 'en': ('Differently from a real marketplace listing.',
+        'We treat a number from another value calculator differently from a real marketplace listing.'),
+ 'ru': ('Иначе, чем к реальному листингу маркетплейса.',
+        'К цифре из чужого калькулятора мы относимся иначе, чем к реальному листингу маркетплейса.'),
+ 'es': ('De forma diferente a un anuncio de marketplace real.',
+        'Tratamos una cifra de otra calculadora de forma diferente a un anuncio real de marketplace.'),
+ 'pt': ('De forma diferente de um anúncio real de marketplace.',
+        'Tratamos um número de outra calculadora de forma diferente de um anúncio real de marketplace.'),
+ 'id': ('Berbeda dari listing marketplace sungguhan.',
+        'Kami memperlakukan angka dari kalkulator lain secara berbeda dari listing marketplace sungguhan.'),
+ 'tr': ('Gerçek bir pazar yeri ilanından farklı olarak.',
+        'Başka bir hesaplayıcıdan gelen rakamı, gerçek bir pazar yeri ilanından farklı değerlendiririz.'),
+ 'ar': ('بشكل مختلف عن إعلان سوق حقيقي.',
+        'نتعامل مع الرقم المأخوذ من حاسبة أخرى بشكل مختلف عن إعلان حقيقي في السوق.'),
+ 'vi': ('Khác với một tin đăng chợ thực tế.',
+        'Chúng tôi xử lý con số từ một máy tính khác theo cách khác với một tin đăng thực tế trên chợ.'),
+ 'hi': ('असली मार्केटप्लेस लिस्टिंग से अलग तरीके से।',
+        'दूसरे कैलकुलेटर के आँकड़े को हम असली मार्केटप्लेस लिस्टिंग से अलग तरीके से देखते हैं।'),
+ 'fr': ("Différemment d'une vraie annonce de marketplace.",
+        "Nous traitons un chiffre issu d'un autre calculateur différemment d'une vraie annonce de marketplace."),
+ 'de': ('Anders als ein echtes Marktplatz-Angebot.',
+        'Eine Zahl aus einem anderen Rechner behandeln wir anders als ein echtes Marktplatz-Angebot.'),
+ 'it': ("In modo diverso da un'inserzione marketplace reale.",
+        "Trattiamo un numero di un altro calcolatore in modo diverso da un'inserzione reale di marketplace."),
+ 'ja': ('実際のマーケットプレイス出品とは異なる扱いをする。',
+        '他の査定ツールの数値は、実際のマーケットプレイス出品とは異なる扱いをする。'),
+ 'ko': ('실제 마켓플레이스 매물과는 다르게 다룬다.',
+        '다른 계산기의 숫자는 실제 마켓플레이스 매물과는 다르게 다룬다.'),
+ 'th': ('แตกต่างจากรายการขายบนตลาดจริง',
+        'เราปฏิบัติต่อตัวเลขจากเครื่องคำนวณอื่นแตกต่างจากรายการขายบนตลาดจริง'),
+ 'pl': ('Inaczej niż prawdziwą ofertę rynkową.',
+        'Liczbę z innego kalkulatora traktujemy inaczej niż prawdziwą ofertę rynkową.'),
+ 'zh': ('与真实交易平台挂牌的对待方式不同。',
+        '我们对待其他估值计算器的数字，与对待真实交易平台挂牌的方式不同。'),
+ 'tl': ('Iba sa tunay na marketplace listing.',
+        'Iba ang trato namin sa numero mula sa ibang calculator kaysa sa tunay na marketplace listing.'),
+ 'sw': ('Tofauti na tangazo halisi la soko.',
+        'Namba kutoka kikokotoo kingine tunaichukulia tofauti na tangazo halisi la soko.'),
+ 'ms': ('Secara berbeza daripada iklan pasaran sebenar.',
+        'Kami melayan angka daripada kalkulator lain secara berbeza daripada iklan pasaran sebenar.'),
+ 'uz': ('Haqiqiy bozor eʼlonidan farqli ravishda.',
+        'Boshqa kalkulyatordagi raqamga biz haqiqiy bozor eʼlonidan farqli munosabatda boʻlamiz.'),
+ 'kk': ('Нақты нарық хабарландыруынан өзгеше.',
+        'Басқа калькулятордағы санға біз нақты нарық хабарландыруынан өзгеше қараймыз.'),
+ 'tk': ('Hakyky bazar bildirişinden başgaça.',
+        'Başga kalkulýatoryň sanyna biz hakyky bazar bildirişinden başgaça garaýarys.'),
+ 'ky': ('Чыныгы рынок жарыясынан башкача.',
+        'Башка калькулятордогу санга биз чыныгы рынок жарыясынан башкача карайбыз.'),
+}
+
+
 def main():
     n = 0
     for f in ['methodology.html'] + glob.glob(ROOT + '*' + os.sep + 'methodology.html'):
@@ -93,6 +147,8 @@ def main():
         i = iter(H[lang])
         body, k = re.subn(r'(<h3[^>]*>)(.*?)(</h3>)', lambda m: m.group(1) + next(i) + m.group(3), body, count=7, flags=re.S)
         assert k == 7, (f, k)
+        if FIRST[lang][1] not in body:
+            body = body.replace(FIRST[lang][0], FIRST[lang][1], 1)
 
         def drop_faq(m):
             d = json.loads(m.group(1))
