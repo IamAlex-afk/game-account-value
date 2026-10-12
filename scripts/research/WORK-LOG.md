@@ -330,3 +330,24 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - Not errors, left as is: 506 news titles over 75 chars and 145 descriptions over 200 (Google truncates, no penalty);
   og:description is a deliberately shorter text on 6 page types; marketplace names in CJK on non-CJK pages are sources.
 - README counts updated (59 pages per language, 1,417 pages, 31 articles).
+
+## 2026-10-12 owner's 10-task brief (commits 7ba625e4..8a0b7030, one per task)
+- Calculator confidence ignores checkboxes. Clash of Clans table refreshed from igitems.com ("Updated Oct 12, 2026"):
+  ceiling $260 -> $250, 4,817 listings (sum of TH13-TH18 offers), TH17 rushed no longer above standard; page table,
+  FAQ JSON-LD, comparison, market-report cards, og/clash-of-clans.jpg and calculators.js changed together.
+  NOT changed (owner to decide): the hero badge "checked Sept 12, 2026" and JSON-LD dateModified on the CoC pages.
+- Roblox world section: Japan (GameTrade) and Korea (ItemBay) rows from the September figures the ja/ko pages cite.
+  Live on 2026-10-12: ItemBay 3 listings W35,000-954,000; GameTrade first page Y500-Y99,998, items and accounts mixed
+  -> take into the ~2026-10-28 refresh. Brazil: MercadoLivre / GGMAX / DFG answer 403, still "not verified";
+  pt/free-fire.html cites MercadoLivre R$4,000 in its text while the own-market row says "not verified".
+- Methodology first sentence (methodology_headings.py FIRST, idempotent), llms.txt (59 pages), News hub card -> ./news.html,
+  skip link + og:image:alt translated (no generator; new pages inherit from each language's glossary shell),
+  analytics-placeholder.js / backlink.js removed, cursor-trail loop stops when idle and under gav-still, nav.js fixes,
+  hidden .g-fx / .sticky-cta markup removed from homepages, glass.css + nav.js ?v=20261012a, sw cache 43.
+- BUILD NOTE: home_hub.py drops id="hub" and the creators block - always run home_quick.py and home_creators.py after it.
+- The interactions.js spotlight is still used by FAQ <details>; only the .step half was dead.
+- Sitemap: 145 URLs got lastmod 2026-10-12 (CoC, comparison, market report, Roblox, methodology, about x 24, ja/fortnite);
+  the three template commits are in lastmod-ignore-revs.txt.
+- OPEN (owner): og:image order on game pages; two google-site-verification codes on index / pl / zh; Fresh News button
+  in all languages or not; shared description lead-in on game pages; ?v= for calculators.js, cursor-trail.js,
+  interactions.js, tilt.js (none today).
