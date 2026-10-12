@@ -8,6 +8,8 @@ MARKETS = {
  'roblox': {
    'global': dict(where=[('Eldorado.gg', 'https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0'), ('igitems.com', 'https://igitems.com/roblox-account')], local='$0.50 – $60 (~$800)', usd='$0.50 – $800', demand='rbx_g'),
    'cis': dict(where=[('FunPay', FP + '927/')], local='€0.01 – €117', usd='$0.01 – $133', demand='rbx_c'),
+   'jp': dict(where=[('GameTrade', 'https://gametrade.jp/roblox/exhibits?keyword=roblox')], local='¥3,700 – ¥64,000+', usd='$24 – $407+', demand=None),
+   'kr': dict(where=[('아이템베이 ItemBay', 'https://www.itembay.com/item/sell/game-3806/type-1')], local='₩60,000 – ₩954,000', usd='$44 – $696', demand=None),
    'sea': dict(where=[('igitems.com', 'https://igitems.com/roblox-account')], local='≤ ₫20,095,375', usd='≤ $803', demand='rbx_s')},
  'clash-of-clans': {
    'global': dict(where=[('Eldorado.gg', 'https://www.eldorado.gg/clash-of-clans-account-for-sale/a/18-1-0'), ('igitems.com', 'https://igitems.com/clash-of-clans-account')], local='$10 – $250', usd='$10 – $250', demand='coc_g'),
