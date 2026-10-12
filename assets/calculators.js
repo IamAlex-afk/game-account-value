@@ -885,7 +885,6 @@
         var cbLabel = input.closest(".vc-checkbox");
         state[item.key] = false;
         input.addEventListener("change", function () {
-          touched.add(item.key);
           state[item.key] = input.checked;
           recompute();
         });
