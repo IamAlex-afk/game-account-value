@@ -37,17 +37,17 @@ TEXT = {
    'The calculator above and the bot both turn what they can see into a price range. '
    'Here is where that range stands on firm ground and where it doesn\'t.',
    'Where it holds up',
-   ['It rests on a large sample: 4,463 igitems.com listings, broken out by Town Hall level and upgrade progress '
-    '(September 2026), with Eldorado.gg and EpicNPC listings showing the same general shape.',
+   ['It rests on a large sample: 4,817 igitems.com listings, broken out by Town Hall level and upgrade progress '
+    '(October 2026), with Eldorado.gg and EpicNPC listings showing the same general shape.',
     'Town Hall level and how complete the base is are the two biggest price drivers in that data &mdash; '
-    'a full-max TH18 lists for $100&ndash;$260, a rushed one for $20&ndash;$35.',
+    'a full-max TH18 lists for $100&ndash;$250, a rushed one for $15&ndash;$30.',
     'The quick calculator asks only those two things. The bot\'s screenshot check also reads hero levels, '
     'epic equipment, hero skins, sceneries, CWL medals and Builder Hall level.'],
    'Where it falls short',
    ['These are asking prices, not completed sales: listings show what sellers want, not what buyers finally paid.',
-    'Asking prices are not always logical. At TH17, rushed accounts are listed at up to $55 &mdash; above the $50 '
-    'top of standard ones. The table shows the market as it is, without smoothing it out.',
-    'A snapshot ages. The figures are from September 2026 and shift with every Town Hall release and balance update.',
+    'Asking prices are not always logical. At TH17, rushed accounts are listed at up to $55 &mdash; the same '
+    'top as standard ones. The table shows the market as it is, without smoothing it out.',
+    'A snapshot ages. The figures are from October 2026 and shift with every Town Hall release and balance update.',
     'A price is not a permission. Supercell\'s Terms of Service prohibit selling or transferring accounts, and a '
     'traded account can be banned for good &mdash; the range describes the market, it does not say anyone could '
     'or should sell.']),
@@ -79,17 +79,17 @@ TEXT = {
    'И калькулятор выше, и бот превращают то, что видят, в диапазон цен. '
    'Вот где этот диапазон надёжен, а где нет.',
    'На что можно опираться',
-   ['В основе большая выборка: 4&nbsp;463 объявления igitems.com с разбивкой по уровню Ратуши и прокачке '
-    '(сентябрь 2026), а объявления на Eldorado.gg и EpicNPC показывают ту же общую картину.',
+   ['В основе большая выборка: 4&nbsp;817 объявлений igitems.com с разбивкой по уровню Ратуши и прокачке '
+    '(октябрь 2026), а объявления на Eldorado.gg и EpicNPC показывают ту же общую картину.',
     'Уровень Ратуши и то, насколько докачана база, &mdash; два главных фактора цены в этих данных: '
-    'TH18 в «полном максе» выставляется за $100&ndash;$260, раш-аккаунт &mdash; за $20&ndash;$35.',
+    'TH18 в «полном максе» выставляется за $100&ndash;$250, раш-аккаунт &mdash; за $15&ndash;$30.',
     'Быстрый калькулятор спрашивает только эти два параметра. Бот по скриншотам дополнительно читает уровни героев, '
     'эпическое снаряжение, скины героев, декорации, медали ЛВК и уровень Деревни строителя.'],
    'Где у оценки пределы',
    ['Это цены в объявлениях, а не завершённые сделки: видно, сколько просят продавцы, но не сколько в итоге заплатили.',
-    'Цены в объявлениях не всегда логичны. На TH17 раш-аккаунты выставляют до $55 &mdash; дороже верхней планки '
-    '«Стандарта» ($50). Таблица показывает рынок как есть, без сглаживания.',
-    'Снимок устаревает. Цифры собраны в сентябре 2026 и меняются с каждой новой Ратушей и балансным обновлением.',
+    'Цены в объявлениях не всегда логичны. На TH17 раш-аккаунты выставляют до $55 &mdash; до той же верхней планки, '
+    'что и «Стандарт». Таблица показывает рынок как есть, без сглаживания.',
+    'Снимок устаревает. Цифры собраны в октябре 2026 и меняются с каждой новой Ратушей и балансным обновлением.',
     'Цена &mdash; не разрешение. Условия использования Supercell запрещают продавать и передавать аккаунты, а '
     'проданный аккаунт могут заблокировать навсегда. Диапазон описывает рынок и не означает, что аккаунт можно или '
     'стоит продавать.']),

@@ -10,7 +10,7 @@ MARKETS = {
    'cis': dict(where=[('FunPay', FP + '927/')], local='€0.01 – €117', usd='$0.01 – $133', demand='rbx_c'),
    'sea': dict(where=[('igitems.com', 'https://igitems.com/roblox-account')], local='≤ ₫20,095,375', usd='≤ $803', demand='rbx_s')},
  'clash-of-clans': {
-   'global': dict(where=[('Eldorado.gg', 'https://www.eldorado.gg/clash-of-clans-account-for-sale/a/18-1-0'), ('igitems.com', 'https://igitems.com/clash-of-clans-account')], local='$10 – $260', usd='$10 – $260', demand='coc_g'),
+   'global': dict(where=[('Eldorado.gg', 'https://www.eldorado.gg/clash-of-clans-account-for-sale/a/18-1-0'), ('igitems.com', 'https://igitems.com/clash-of-clans-account')], local='$10 – $250', usd='$10 – $250', demand='coc_g'),
    'cis': dict(where=[('FunPay', FP + '147/')], local='€0.072 – €252.51', usd='$0.08 – $288', demand='coc_c'),
    'sea': dict(where=[('igitems.com', 'https://igitems.com/clashofclans-account')], local='$64 – $289', usd='$64 – $289', demand='coc_s')},
  'clash-royale': {

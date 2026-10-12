@@ -610,12 +610,12 @@
       score: function (v) { return norm(v.th, 13, 18); },
       compute: function (v) {
         var table = {
-          18: { full: [100, 260], standard: [45, 120], rushed: [20, 35] },
-          17: { full: [55, 185], standard: [30, 50], rushed: [30, 55] },
-          16: { full: [40, 100], standard: [20, 35], rushed: [15, 25] },
-          15: { full: [30, 65], standard: [15, 25], rushed: [15, 20] },
-          14: { full: [25, 50], standard: [15, 25], rushed: [10, 20] },
-          13: { full: [15, 40], standard: [10, 15], rushed: [8, 12] }
+          18: { full: [100, 250], standard: [50, 120], rushed: [15, 30] },
+          17: { full: [60, 180], standard: [30, 55], rushed: [25, 55] },
+          16: { full: [40, 95], standard: [20, 45], rushed: [15, 20] },
+          15: { full: [30, 65], standard: [20, 35], rushed: [15, 20] },
+          14: { full: [20, 50], standard: [15, 35], rushed: [10, 20] },
+          13: { full: [15, 35], standard: [10, 20], rushed: [10, 10] }
         };
         return table[v.th][v.type];
       }

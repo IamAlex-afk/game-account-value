@@ -15,7 +15,7 @@ CHROME = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 GAMES = {
     'roblox': ('Roblox', '#38BDF8', '#22C55E', '$0.50 – $60', '~$800'),
     'brawl-stars': ('Brawl Stars', '#FFD21F', '#B86BFF', '$3 – $150', '$300+'),
-    'clash-of-clans': ('Clash of Clans', '#F6B042', '#E8823A', '$10 – $260', ''),
+    'clash-of-clans': ('Clash of Clans', '#F6B042', '#E8823A', '$10 – $250', ''),
     'clash-royale': ('Clash Royale', '#7C9BFF', '#F9C846', '$0.50 – $600+', ''),
     'free-fire': ('Free Fire', '#FF8A1F', '#FF4D4D', '$0.73 – $250', '~$755'),
     'genshin-impact': ('Genshin Impact', '#6EE7D8', '#E9C46A', '$5 – $60', '$9,000'),
