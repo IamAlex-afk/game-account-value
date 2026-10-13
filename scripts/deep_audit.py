@@ -47,7 +47,7 @@ for rel in sorted(pages()):
             if ty in ('AggregateRating', 'Review'): R['self-serving rating/review LD'].append(rel)
         for k in ('datePublished', 'dateModified'):
             for v in re.findall(rf'"{k}":\s*"([^"]+)"', json.dumps(j)):
-                if v[:10] > '2026-10-01': R['date in the future: ' + k].append(f'{rel} {v}')
+                if v[:10] > __import__('datetime').date.today().isoformat(): R['date in the future: ' + k].append(f'{rel} {v}')
     body = s[s.find('<body'):]
     vis = re.sub(r'<script.*?</script>|<style.*?</style>', '', body, flags=re.S)
     if SELF_REF.search(vis):
