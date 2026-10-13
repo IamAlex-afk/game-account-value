@@ -18,9 +18,9 @@ for lang in LANGS:
     for k in keys:
         badge, total, no = CARDS[k]
         price = {"game_name": "Roblox", "tier_badge": badge, "total": total, "min_price": total * 0.75, "max_price": total * 1.25,
-                 "scan_id": f"GAV-SAMPLE-{no:04d}", "cert_number": no, "card_series": 1, "confidence": "HIGH", "is_whale": k == "whale",
-                 "breakdown": [("Limiteds", round(total * 0.6)), ("Account age", round(total * 0.2))]}
-        ai = {"liquidity": "HIGH", "rare_items": ["Dominus Infernus", "Korblox Deathspeaker"]}
+                 "scan_id": f"GAV-SAMPLE-{no:04d}", "cert_number": no, "card_series": 1, "confidence": "HIGH", "screenshots": [3, 3], "is_whale": k == "whale",
+                 "breakdown": [(l, v) for l, v in (("Limiteds", round(total * 0.6)), ("Account age", round(total * 0.2))) if v]}
+        ai = {"liquidity": "HIGH", "quality": "pro", "rare_items": ["Dominus Infernus", "Korblox Deathspeaker"]}
         front, _, _ = drawer._front_image(price, ai, "Player", lang)
         front.convert("RGB").resize((540, 360), Image.LANCZOS).save(os.path.join(OUT, lang, k + ".webp"), "WEBP", quality=82, method=6)
     print("RES", lang, flush=True)
