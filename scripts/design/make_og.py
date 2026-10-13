@@ -13,13 +13,13 @@ CHROME = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 
 # game: (title, accent, second accent, price, top-end note)
 GAMES = {
-    'roblox': ('Roblox', '#38BDF8', '#22C55E', '$0.50 – $60', '~$800'),
+    'roblox': ('Roblox', '#38BDF8', '#22C55E', '$0.50 – $60', '~$1,500'),
     'brawl-stars': ('Brawl Stars', '#FFD21F', '#B86BFF', '$3 – $150', '$300+'),
     'clash-of-clans': ('Clash of Clans', '#F6B042', '#E8823A', '$10 – $250', ''),
     'clash-royale': ('Clash Royale', '#7C9BFF', '#F9C846', '$0.50 – $600+', ''),
     'free-fire': ('Free Fire', '#FF8A1F', '#FF4D4D', '$0.73 – $250', '~$755'),
     'genshin-impact': ('Genshin Impact', '#6EE7D8', '#E9C46A', '$5 – $60', '$9,000'),
-    'mobile-legends': ('Mobile Legends', '#FF6B85', '#F4C95D', '$0.50 – $300', '~$605'),
+    'mobile-legends': ('Mobile Legends', '#FF6B85', '#F4C95D', '$0.50 – $300', '~$2,500'),
     'fortnite': ('Fortnite', '#B98BFF', '#4DB0FF', '$10.90 – $6,200', ''),
     'minecraft': ('Minecraft', '#7BD34F', '#C0925E', '$0.50 – $632', ''),
     # site-wide image (homepages, resource pages)

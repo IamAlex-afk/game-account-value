@@ -131,7 +131,7 @@ def article(L, a):
     aid, game, slug, _, srcs = a
     U, T, G = TEXT[L]['ui'], TEXT[L]['a'][aid], D.GAMES[game]
     me = url(L, slug + '.html')
-    img = f'{SITE}og/{game}.jpg?v=3'
+    img = f'{SITE}og/{game}.jpg?v=4'
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'NewsArticle', '@id': me + '#article', 'mainEntityOfPage': me, 'headline': T['title'][:110], 'description': T['desc'],
          'image': [img], 'datePublished': pub(aid) + 'T09:00:00+00:00', 'dateModified': pub(aid) + 'T09:00:00+00:00',

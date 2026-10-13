@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""2026-10-08 rollout on every page:
+"""SUPERSEDED for part 1 on 2026-10-13 by og_one_image.py (owner decision): one social image per page —
+the game's own card on game pages and their news, the gamepad cover everywhere else. Do not re-run part 1.
+
+2026-10-08 rollout on every page:
 1. Messenger / social preview: the site cover (og-image.jpg, the gamepad with the site name) becomes the first
    og:image and the twitter:image; the page's own share card stays as a second og:image.
 2. New versions of style.css, glass.css and nav.js in the pages (scroll reveal moved from CSS to nav.js)."""
