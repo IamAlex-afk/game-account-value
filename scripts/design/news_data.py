@@ -3,12 +3,20 @@
 PUBLISHED = '2026-10-01'
 # articles added after the first batch carry their own publication day (older ones keep PUBLISHED)
 PUBLISHED_AT = {'cr-shock': '2026-10-06', 'coc-ore': '2026-10-06', 'coc-cosmic': '2026-10-06', 'bs-path27': '2026-10-06',
-                'cr-bal-oct': '2026-10-06', 'ml-asiad': '2026-10-06', 'mc-drop4': '2026-10-06'}
+                'cr-bal-oct': '2026-10-06', 'ml-asiad': '2026-10-06', 'mc-drop4': '2026-10-06',
+                'pm-pmgo2': '2026-10-14', 'pm-asiad': '2026-10-14', 'pm-46': '2026-10-14'}
 GAMES = {'roblox': 'Roblox', 'brawl-stars': 'Brawl Stars', 'clash-of-clans': 'Clash of Clans', 'clash-royale': 'Clash Royale',
-         'free-fire': 'Free Fire', 'genshin-impact': 'Genshin Impact', 'mobile-legends': 'Mobile Legends',
+         'free-fire': 'Free Fire', 'genshin-impact': 'Genshin Impact', 'pubg-mobile': 'PUBG Mobile', 'mobile-legends': 'Mobile Legends',
          'fortnite': 'Fortnite', 'minecraft': 'Minecraft'}
 # id, game, slug, sort date (publisher date), sources [(url, publisher, date or None)]
 ARTICLES = [
+ # PUBG Mobile: the publisher's press releases (Swipe Right newsroom), news_text_pm_*.py
+ ('pm-pmgo2', 'pubg-mobile', 'news-pubg-mobile-2026-10-pmgo-season-2-lahore', '2026-10-13',
+  [('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/2026-pubg-mobile-global-open-pmgo-season-2-introduces-brand-new-format-details-slots-and-dates-revealed-3472313', 'PUBG MOBILE Esports', '2026-10-13')]),
+ ('pm-asiad', 'pubg-mobile', 'news-pubg-mobile-2026-09-asian-games-thailand-gold', '2026-09-29',
+  [('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/solid-gold-performance-powers-thailand-to-triumph-at-the-2026-asian-games-esports-finals-pubg-mobile-asian-games-version-3469780', 'PUBG MOBILE Esports', '2026-09-29')]),
+ ('pm-46', 'pubg-mobile', 'news-pubg-mobile-2026-09-version-4-6-midnight-hunters', '2026-09-08',
+  [('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/pubg-mobile-unleashes-a-vampire-uprising-with-midnight-hunters-mode-in-its-version-4-dot-6-update-3465417', 'PUBG MOBILE', '2026-09-08')]),
  ('cr-bal-oct', 'clash-royale', 'news-clash-royale-2026-10-october-balance-changes', '2026-10-06',
   [('https://supercell.com/en/games/clashroyale/blog/release-notes/october-balance-changes-2026/', 'Supercell', '2026-10-06')]),
  ('ml-asiad', 'mobile-legends', 'news-mobile-legends-2026-10-asian-games-myanmar-gold', '2026-10-01',
