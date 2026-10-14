@@ -29,6 +29,7 @@ Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 scr
 - Clash Royale — King Tower level, card evolutions, champion cards, tower skins, CRL badge
 - Free Fire — diamond count, evo weapon upgrades (Sakura, Hip Hop), rare bundles, OG UID
 - Genshin Impact — Adventure Rank, 5-star character/weapon count, C6 constellations, signature weapons
+- PUBG Mobile — collection level, X-Suits, upgradable guns, supercars, mythic items, UC balance
 - Mobile Legends — rank, collector/legend skins, hero count, Starlight membership
 - Fortnite — locker skin count, OG skins (Renegade Raider, Black Knight, Skull Trooper, Galaxy), V-Bucks
 - Minecraft — account type (Java/Bedrock), OG username, capes, Realms status
@@ -70,7 +71,7 @@ Verify any certificate at: [Certificate Verification](https://t.me/GameAccountVa
 
 ## Research Content (Website)
 
-Beyond the bot, the website publishes original market research — real marketplace price data cross-checked across multiple platforms and regions, not estimates. Fully built out in all 24 languages — each has the same core pages: homepage, 9 dedicated per-game pages, a cross-game market report, a most-valuable-accounts comparison, a trading safety guide, a glossary and the methodology (59 pages per language including about, privacy, terms and the news section), plus a free client-side value-estimate calculator (sliders and buttons only, nothing typed or sent) on the homepage and every game page. Languages: English, Russian, Spanish, French, Portuguese, Indonesian, Arabic, German, Turkish, Vietnamese, Hindi, Italian, Japanese, Korean, Chinese (Simplified), Polish, Thai, Filipino, Swahili, Malay, Uzbek, Kazakh, Turkmen and Kyrgyz. An About page (who runs the project — Aleksei Bitkin, independent developer — how prices are researched, how it is funded, what it never does), the privacy policy and the terms are published in all 24 languages (English is the reference text). The news section is in all 24 languages too: a hub, one page per game and articles summarising official publisher announcements (each links its source; NewsArticle markup). Where a genuine local marketplace source was verified first-hand, it's cited alongside the global sources on that language's pages: GameTrade.jp for Japanese, ItemBay.com for Korean, UU898.com for Chinese (Genshin Impact only), and Allegro Lokalnie for Polish (Roblox only). No regional source is claimed for a language unless it was directly confirmed by viewing live listings — where none could be confirmed, the page states that and cites the same global sources as the English original instead of fabricating a local one.
+Beyond the bot, the website publishes original market research — real marketplace price data cross-checked across multiple platforms and regions, not estimates. Fully built out in all 24 languages — each has the same core pages: homepage, 10 dedicated per-game pages, a cross-game market report, a most-valuable-accounts comparison, a trading safety guide, a glossary and the methodology (64 pages per language including about, privacy, terms and the news section), plus a free client-side value-estimate calculator (sliders and buttons only, nothing typed or sent) on the homepage and every game page. Languages: English, Russian, Spanish, French, Portuguese, Indonesian, Arabic, German, Turkish, Vietnamese, Hindi, Italian, Japanese, Korean, Chinese (Simplified), Polish, Thai, Filipino, Swahili, Malay, Uzbek, Kazakh, Turkmen and Kyrgyz. An About page (who runs the project — Aleksei Bitkin, independent developer — how prices are researched, how it is funded, what it never does), the privacy policy and the terms are published in all 24 languages (English is the reference text). The news section is in all 24 languages too: a hub, one page per game and articles summarising official publisher announcements (each links its source; NewsArticle markup). Where a genuine local marketplace source was verified first-hand, it's cited alongside the global sources on that language's pages: GameTrade.jp for Japanese, ItemBay.com for Korean, UU898.com for Chinese (Genshin Impact only), and Allegro Lokalnie for Polish (Roblox only). No regional source is claimed for a language unless it was directly confirmed by viewing live listings — where none could be confirmed, the page states that and cites the same global sources as the English original instead of fabricating a local one.
 
 - [Roblox](https://gameaccountvalue.com/roblox.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Brawl Stars](https://gameaccountvalue.com/brawl-stars.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
@@ -78,10 +79,11 @@ Beyond the bot, the website publishes original market research — real marketpl
 - [Clash Royale](https://gameaccountvalue.com/clash-royale.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Free Fire](https://gameaccountvalue.com/free-fire.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Genshin Impact](https://gameaccountvalue.com/genshin-impact.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
+- [PUBG Mobile](https://gameaccountvalue.com/pubg-mobile.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Mobile Legends](https://gameaccountvalue.com/mobile-legends.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Fortnite](https://gameaccountvalue.com/fortnite.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Minecraft](https://gameaccountvalue.com/minecraft.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
-- [Market Report](https://gameaccountvalue.com/market-report.html): combined hub page linking all 9 games
+- [Market Report](https://gameaccountvalue.com/market-report.html): combined hub page linking all 10 games
 - [Glossary](https://gameaccountvalue.com/glossary.html): account-trading terms (OG, smurf, reroll, Full Max/Rushed, escrow, chargeback, and 15+ more)
 - [Account Trading Safety](https://gameaccountvalue.com/account-trading-safety.html): scam patterns and safety guide per game
 - [Which Game Accounts Are Most Valuable](https://gameaccountvalue.com/which-game-accounts-are-most-valuable.html): cross-game price comparison
@@ -112,7 +114,7 @@ Every price claim traces to a specific marketplace listing checked on a specific
 ## Frequently Asked Questions
 
 Q: Is GameAccountValue affiliated with game developers?
-A: No. GameAccountValue is an independent third-party tool. It has no affiliation with Roblox Corporation, Supercell, Garena, miHoYo, Epic Games, Mojang, or any game developer.
+A: No. GameAccountValue is an independent third-party tool. It has no affiliation with Roblox Corporation, Supercell, Garena, Krafton, Tencent, miHoYo, Epic Games, Mojang, or any game developer.
 
 Q: Are valuations guaranteed prices?
 A: No. All values are AI estimates for informational reference only. They are not financial advice and do not guarantee any resale price. GameAccountValue does not sell, buy, or broker accounts.

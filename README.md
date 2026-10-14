@@ -45,7 +45,7 @@ Marketplaces show asking prices, not what accounts sell for, and every seller's 
 
 ## Supported games
 
-Roblox · Brawl Stars · Clash of Clans · Clash Royale · Free Fire · Genshin Impact · Mobile Legends · Fortnite · Minecraft
+Roblox · Brawl Stars · Clash of Clans · Clash Royale · Free Fire · Genshin Impact · PUBG Mobile · Mobile Legends · Fortnite · Minecraft
 
 Each game has its own page: calculator, dated price ranges with sources, what raises or lowers value, scam risks and platform rules.
 
@@ -53,7 +53,7 @@ Each game has its own page: calculator, dated price ranges with sources, what ra
 
 English, Русский, Español, Português, Bahasa Indonesia, Türkçe, العربية, Tiếng Việt, हिन्दी, Français, Deutsch, Italiano, 日本語, 한국어, ภาษาไทย, Polski, 中文, Filipino, Kiswahili, Bahasa Melayu, Oʻzbekcha, Қазақша, Türkmençe, Кыргызча.
 
-Every language has the same **59 pages** (home, 9 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, about, privacy policy, terms, plus the news section: a hub, 9 game news pages and 31 articles from official publisher announcements), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
+Every language has the same **64 pages** (home, 10 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, about, privacy policy, terms, plus the news section: a hub, 10 game news pages and 31 articles from official publisher announcements), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
 
 
 ## Privacy in plain words
@@ -82,11 +82,11 @@ Plain HTML, CSS and JavaScript — no framework, no bundler, no build step. Depl
 Installable PWA with a service worker (shell precache, network-first for CSS/JS so updates arrive immediately).
 
 ```
-index.html, {game}.html          English homepage + 9 game reports
+index.html, {game}.html          English homepage + 10 game reports
 market-report.html, methodology.html, glossary.html,
 account-trading-safety.html, which-game-accounts-are-most-valuable.html
 news.html, {game}-news.html      news hub + per-game news; news-{game}-{yyyy-mm}-{slug}.html articles
-{lang}/                          the same 59 pages in each of the 23 other languages
+{lang}/                          the same 64 pages in each of the 23 other languages
 assets/glass.css                 design system, built from scripts/design/css/*.css
 assets/calculators.js            per-game calculators; every price anchor is sourced in a comment
 assets/space-background.js       decorative deep-space scene (per-game view and loot set), starts after load
