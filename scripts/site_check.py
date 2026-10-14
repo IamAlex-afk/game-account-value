@@ -82,6 +82,9 @@ def main():
                     visible = squash(re.sub(r'<script.*?</script>|<style.*?</style>', '', s[s.find('<body'):], flags=re.S))
                 if squash(q.get('name', '')) not in visible:
                     errors.append(f'{rel}: FAQ markup question not visible on the page: {q.get("name", "")[:70]}')
+        # one breadcrumb trail per page (2026-10-14: 72 pages had it twice)
+        if s.count('"BreadcrumbList"') > 1:
+            errors.append(f'{rel}: BreadcrumbList appears {s.count(chr(34) + "BreadcrumbList" + chr(34))} times (keep one)')
         # in-page anchors
         ids = set(re.findall(r'\bid="([^"]+)"', s))
         for h in re.findall(r'<a\b[^>]*\bhref="#([^"]+)"', s):

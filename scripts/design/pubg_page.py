@@ -175,9 +175,10 @@ def build(lang):
         person,
         {'@type': 'FAQPage', '@id': url(lang) + '#faq', 'mainEntity': faq(t)}]}
     s = s.replace(blocks[0], '\n' + json.dumps(ld, ensure_ascii=False, indent=2) + '\n', 1)
-    s = s.replace(short, json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
-        {'@type': 'ListItem', 'position': 1, 'name': home, 'item': crumbs['itemListElement'][0]['item']},
-        {'@type': 'ListItem', 'position': 2, 'name': GAME}]}, ensure_ascii=False), 1)
+    # one BreadcrumbList per page: the skeleton's separate breadcrumb block goes, the
+    # graph above already carries it (with URLs for both steps)
+    s = s.replace('<script type="application/ld+json">' + short + '</script>\n', '', 1)
+    assert s.count('"BreadcrumbList"') == 1, (lang, s.count('"BreadcrumbList"'))
 
     # ---- Free Fire's colour theme off (PUBG uses the site's default gold)
     s = re.sub(r'\n  /\* ===== theme-diamond.*?(?=</style>)', '\n', s, count=1, flags=re.S)
