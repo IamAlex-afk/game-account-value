@@ -18,9 +18,9 @@ import world_markets as WM                      # world-table labels (T) and eac
 from world_events import render_events, render_event_ld
 from world_results import render_results
 from world_extra import NAMES
-import pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d
+import pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d, pubg_text_e
 TEXT = {}
-for mod in (pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d):
+for mod in (pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d, pubg_text_e):
     TEXT.update(mod.TEXT)
 ROWS, BRACKETS = pubg_text_a.ROWS, pubg_text_a.BRACKETS
 NBSP = ' '
