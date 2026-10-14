@@ -501,7 +501,10 @@
     zh: "收藏等级", tl: "Collection level", sw: "Kiwango cha mkusanyiko", ms: "Tahap koleksi", uz: "Kolleksiya darajasi",
     kk: "Коллекция деңгейі", tk: "Kolleksiýa derejesi", ky: "Коллекциянын деңгээли"
   };
-  T.sliders["pubg-mobile"] = { coll: PUBG_LABEL[LANG] };
+  // optional counts (2026-10-14): guns at max level, max-level X-Suits, supercars
+  var PUBG_EXTRA = {"en": ["Guns at max level", "Max-level X-Suits", "Supercars"], "ru": ["Оружие на макс. уровне", "X-костюмы макс. уровня", "Суперкары"], "es": ["Armas al nivel máximo", "X-Suits al máximo", "Superdeportivos"], "pt": ["Armas no nível máximo", "X-Suits no máximo", "Supercarros"], "fr": ["Armes au niveau max", "X-Suits au niveau max", "Supercars"], "de": ["Waffen auf Maximalstufe", "X-Suits auf Maximalstufe", "Supersportwagen"], "it": ["Armi al livello massimo", "X-Suit al massimo", "Supercar"], "tr": ["Maks. seviye silahlar", "Maks. seviye X-Suit’ler", "Süper arabalar"], "ar": ["أسلحة بأقصى مستوى", "بدلات X-Suit بأقصى مستوى", "سيارات خارقة"], "id": ["Senjata level maksimal", "X-Suit level maksimal", "Supercar"], "ms": ["Senjata tahap maksimum", "X-Suit tahap maksimum", "Superkar"], "vi": ["Súng cấp tối đa", "X-Suit cấp tối đa", "Siêu xe"], "hi": ["मैक्स लेवल गन", "मैक्स लेवल X-Suit", "सुपरकार"], "ja": ["最大強化の銃", "最大レベルのX-スーツ", "スーパーカー"], "ko": ["최대 레벨 총기", "최대 레벨 X-슈트", "슈퍼카"], "zh": ["满级枪械", "满级 X 套装", "超跑"], "th": ["ปืนเลเวลสูงสุด", "X-Suit เลเวลสูงสุด", "ซูเปอร์คาร์"], "pl": ["Bronie na maks. poziomie", "X-Suity na maks. poziomie", "Supersamochody"], "tl": ["Mga baril na naka-max", "Mga X-Suit na naka-max", "Supercar"], "sw": ["Bunduki za kiwango cha juu", "X-Suit za kiwango cha juu", "Magari ya kifahari"], "uz": ["Maks. darajadagi qurollar", "Maks. darajadagi X-Suit’lar", "Superkarlar"], "kk": ["Ең жоғары деңгейдегі қарулар", "Ең жоғары деңгейдегі X-Suit’тар", "Суперкарлар"], "tk": ["Iň ýokary derejedäki ýaraglar", "Iň ýokary derejedäki X-Suit’ler", "Superkarlar"], "ky": ["Эң жогорку деңгээлдеги куралдар", "Эң жогорку деңгээлдеги X-Suit’тер", "Суперкарлар"]};
+  var PX = PUBG_EXTRA[LANG] || PUBG_EXTRA.en;
+  T.sliders["pubg-mobile"] = { coll: PUBG_LABEL[LANG], mguns: PX[0], mxs: PX[1], cars: PX[2] };
 
   // One USD-per-Robux range for everything priced in Robux (balance and
   // Robux-cost items): what that many Robux costs to buy on Eldorado.gg,
@@ -713,7 +716,10 @@
     "pubg-mobile": {
       name: "PUBG Mobile",
       sliders: [
-        { key: "coll", min: 30, max: 95, step: 0.5, fmt: function (v) { return v.toFixed(1); } }
+        { key: "coll", min: 30, max: 95, step: 0.5, fmt: function (v) { return v.toFixed(1); } },
+        { key: "mguns", min: 0, max: 20, step: 1, fmt: function (v) { return v; } },
+        { key: "mxs", min: 0, max: 5, step: 1, fmt: function (v) { return v; } },
+        { key: "cars", min: 0, max: 10, step: 1, fmt: function (v) { return v; } }
       ],
       score: function (v) { return norm(v.coll, 40, 90); },
       compute: function (v) {
@@ -726,6 +732,9 @@
             break;
           }
         }
+        // listings ask more for the same level with maxed items: $30 / maxed gun, $100 / max-level X-Suit,
+        // $20 / supercar, capped at 1.2x the level price (bot: core/valuation.py, 2026-10-14)
+        c += Math.min((v.mguns || 0) * 30 + (v.mxs || 0) * 100 + (v.cars || 0) * 20, c * 1.2);
         return [c * 0.55, c * 1.6];
       }
     },
