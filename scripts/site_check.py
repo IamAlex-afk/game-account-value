@@ -85,6 +85,12 @@ def main():
         # one breadcrumb trail per page (2026-10-14: 72 pages had it twice)
         if s.count('"BreadcrumbList"') > 1:
             errors.append(f'{rel}: BreadcrumbList appears {s.count(chr(34) + "BreadcrumbList" + chr(34))} times (keep one)')
+        # JSON-LD is not HTML: an entity like &amp; is read literally by search engines (2026-10-14)
+        for blk in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
+            ent = re.search(r'&(?:amp|quot|lt|gt|nbsp|apos|#\d+|#x[0-9a-f]+);', blk, re.I)
+            if ent:
+                errors.append(f'{rel}: HTML entity {ent.group(0)} inside JSON-LD (write the character itself)')
+                break
         # in-page anchors
         ids = set(re.findall(r'\bid="([^"]+)"', s))
         for h in re.findall(r'<a\b[^>]*\bhref="#([^"]+)"', s):
