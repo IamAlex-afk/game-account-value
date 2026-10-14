@@ -24,6 +24,10 @@ for mod in (pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d, pubg_text_e, pub
     TEXT.update(mod.TEXT)
 ROWS, BRACKETS = pubg_text_a.ROWS, pubg_text_a.BRACKETS
 NBSP = ' '
+# calculator texts: level + maxed guns / X-Suits / supercars (2026-10-14)
+import pubg_text_calc
+for _l, _c in pubg_text_calc.CALC.items():
+    TEXT[_l]["calc_sub"], TEXT[_l]["calc_why"] = _c["calc_sub"], _c["calc_why"]
 
 
 def localize(t):
