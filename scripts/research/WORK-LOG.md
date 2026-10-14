@@ -376,3 +376,6 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - KEPT "9 games" on purpose in the own descriptions of glossary, account-trading-safety and the comparison page:
   their content covers 9 games. NEXT: PUBG sections there (UC, X-Suit, collection level; PUBG scam patterns from the
   pubg page research), then switch them to 10. BUILD NOTE: always run news_pages.py after pubg_page.py.
+- PUBG in glossary ("collection level", after AR) and scam guide (its scam item, after Mobile Legends), 24 languages,
+  visible + FAQPage; text = the PUBG page's own value[0] / a_scams. Their descriptions now say 10 games too.
+  Only the comparison page still says 9 in its own description (its ranking prose does not cover PUBG yet).
