@@ -379,3 +379,7 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - PUBG in glossary ("collection level", after AR) and scam guide (its scam item, after Mobile Legends), 24 languages,
   visible + FAQPage; text = the PUBG page's own value[0] / a_scams. Their descriptions now say 10 games too.
   Only the comparison page still says 9 in its own description (its ranking prose does not cover PUBG yet).
+- Comparison page: PUBG Mobile row ($15-$300 typical = 85% of igitems listings, ceiling $4,960 GameSatış) after Fortnite;
+  $150+ share sentence (igitems 2026-10-13: 165 of 446 = 37%) in 24 languages, visible + FAQPage. Description -> 10.
+  Leftover counts fixed: zh "9个游戏" (not caught by the first pass), "Minecraft and 4/5 more games" -> 5 everywhere.
+  No page says 9 games any more.
