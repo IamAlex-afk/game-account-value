@@ -70,7 +70,7 @@ T = {
         ['Harga terkini mengikut rantau, dengan tarikh dan sumber', 'Julat harga sebenar untuk 10 permainan', 'Permainan mana yang akaunnya paling mahal',
          'Penipuan sebenar dan cara mengelaknya', 'OG, whale, smurf dan 20+ istilah diterangkan', 'Cara kami menyemak setiap angka']),
  'uz': ('Saytda hammasi', 'Yangi narxlar, qoʻllanmalar va har bir raqam ortidagi qoidalar',
-        ['Hududlar boʻyicha yangi narxlar, sana va manbalar bilan', 'Barcha 9 oʻyinning haqiqiy narx oraligʻi', 'Qaysi oʻyinda akkauntlar eng qimmat',
+        ['Hududlar boʻyicha yangi narxlar, sana va manbalar bilan', 'Barcha 10 oʻyinning haqiqiy narx oraligʻi', 'Qaysi oʻyinda akkauntlar eng qimmat',
          'Haqiqiy firibgarlik usullari va ulardan saqlanish', 'OG, whale, smurf va 20+ atama tushuntirilgan', 'Har bir raqamni qanday tekshiramiz']),
  'kk': ('Сайттағының бәрі', 'Жаңа бағалар, нұсқаулықтар және әр санның ережелері',
         ['Өңірлер бойынша жаңа бағалар, күні мен дереккөзімен', 'Барлық 10 ойынның нақты баға ауқымы', 'Қай ойынның аккаунттары ең қымбат',
