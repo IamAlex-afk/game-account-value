@@ -33,3 +33,4 @@ b6dda81c89349c23f0eba4a9476a31902b75cf73  space-background.js version bump on al
 6477ad16748d53cf7363f0bb58dc5b0066787b14  skip link + og:image:alt translations on all pages (template)
 15f5a05526df0acff3f348a890c249ad2418abbf  script tags, asset versions, hidden homepage markup removed (template)
 5c06897af484f5b648893d739e810b24a60c1a2c  # 2026-10-13 one social image per page (head tags only)
+cdc222e587dab5b53de7d563ae800c04f6e37988  menu/footer: PUBG Mobile added to Games (template only)
