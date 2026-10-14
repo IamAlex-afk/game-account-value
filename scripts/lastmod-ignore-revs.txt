@@ -35,3 +35,4 @@ b6dda81c89349c23f0eba4a9476a31902b75cf73  space-background.js version bump on al
 5c06897af484f5b648893d739e810b24a60c1a2c  # 2026-10-13 one social image per page (head tags only)
 cdc222e587dab5b53de7d563ae800c04f6e37988  menu/footer: PUBG Mobile added to Games (template only)
 2a2889a795f104233aeebb0f1b36d372be5f39b3  menu/footer: PUBG Mobile added to Games, tr (template only)
+8b0d7a0714b6e66698f552a0bddd4174727aef04  menu/footer: PUBG Mobile added to Games, es pt (template only)
