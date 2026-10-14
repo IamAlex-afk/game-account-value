@@ -18,9 +18,9 @@ import world_markets as WM                      # world-table labels (T) and eac
 from world_events import render_events, render_event_ld
 from world_results import render_results
 from world_extra import NAMES
-import pubg_text_a, pubg_text_b, pubg_text_c
+import pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d
 TEXT = {}
-for mod in (pubg_text_a, pubg_text_b, pubg_text_c):
+for mod in (pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d):
     TEXT.update(mod.TEXT)
 ROWS, BRACKETS = pubg_text_a.ROWS, pubg_text_a.BRACKETS
 NBSP = ' '
@@ -35,6 +35,10 @@ def localize(t):
                  {kk: fix(vv) for kk, vv in v.items()} if isinstance(v, dict) else v) for k, v in t.items()}
     glue = lambda x: re.sub(r'(?<=\d) (?=[$€₺])', NBSP, x)     # "4.960 $" never breaks between number and sign
     t = {k: (glue(v) if isinstance(v, str) else [glue(i) for i in v] if isinstance(v, list) else v) for k, v in t.items()}
+    if t.get('fr_punct'):                                       # French: no-break space before : ? ! ;
+        fp = lambda x: re.sub(r' (?=[:?!;](?:\s|$|<))', NBSP, x)
+        t = {k: (fp(v) if isinstance(v, str) else [fp(i) for i in v] if isinstance(v, list) else
+                 {kk: fp(vv) for kk, vv in v.items()} if isinstance(v, dict) else v) for k, v in t.items()}
     dec = t.get('dec', '.')
     sep = NBSP if thou == ' ' else thou
 
