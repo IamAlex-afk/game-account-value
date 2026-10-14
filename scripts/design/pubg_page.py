@@ -223,16 +223,21 @@ def build(lang):
     # ---- the rest of <main>: game name in CTAs, other games, sources
     mi, mj = s.index('<main>'), s.index('</main>')
     main = s[mi:mj]
-    main = re.sub(r'(<div class="report-cta"><a [^>]*>)([^<]*)', lambda m: m.group(1) + m.group(2).replace('Free Fire', GAME), main, count=1)
-    main = re.sub(r'(<div class="g-exact" data-g-slot="result"><a [^>]*>)([^<]*)', lambda m: m.group(1) + m.group(2).replace('Free Fire', GAME), main, count=1)
+    # "Free Fire" and compounds like German "Free-Fire-Accounts" → "PUBG Mobile" / "PUBG-Mobile-Accounts"
+    rename = lambda x: re.sub(r'Free([ -])Fire', lambda m: 'PUBG' + m.group(1) + 'Mobile', x)
+    main = re.sub(r'(<div class="report-cta"><a [^>]*>)([^<]*)', lambda m: m.group(1) + rename(m.group(2)), main, count=1)
+    main = re.sub(r'(<div class="g-exact" data-g-slot="result"><a [^>]*>)([^<]*)', lambda m: m.group(1) + rename(m.group(2)), main, count=1)
     main = re.sub(r'(<div class="other-games">\s*<p[^>]*>[^<]*</p>).*?(\n</div>)',
                   lambda m: m.group(1) + ''.join(f'\n  <a href="./{k}.html">{n}</a>' for k, n in OTHER) + m.group(2), main, count=1, flags=re.S)
     main = re.sub(r'(<section class="sources-list">\s*<h2[^>]*>[^<]*</h2>\s*<ul>).*?(</ul>)',
                   lambda m: m.group(1) + ''.join(f'\n    <li>{x}</li>' for x in t['sources']) + '\n  ' + m.group(2), main, count=1, flags=re.S)
     s = s[:mi] + main + s[mj:]
 
-    leftover = [x for x in re.findall(r'[^<>]{0,40}Free Fire[^<>]{0,40}', s[s.index('</nav>'):s.index('<footer>')])
-                if 'free-fire.html' not in x and '>Free Fire<' not in x]
+    # anything of the Free Fire skeleton left in the page itself (head + main, without the other-games links)
+    check = s[:s.index('</head>')] + re.sub(r'<div class="other-games">.*?</div>', '', s[s.index('<main>'):s.index('</main>')], flags=re.S)
+    leftover = re.findall(r'[^<>"]{0,30}(?:Free[ -]?Fire|Garena)[^<>"]{0,30}', check, re.I)
+    if leftover:
+        sys.exit(f'{lang}: Free Fire text left on the PUBG page: {leftover[:3]}')
     out = path(lang) + SLUG + '.html'
     open(out, 'w', encoding='utf-8', newline='').write(s)
     return out, leftover
