@@ -18,7 +18,7 @@ def build(lang, slug, about):
     gl = N.guide_labels(lang)
     cur = lambda k: ' aria-current="page"' if k == slug else ''
     li = lambda k, t: f'<li><a href="./{k}.html"{cur(k)}>{t}</a></li>'
-    games = ''.join(li(k, n) for k, n in N.GAMES)
+    games = ''.join(li(k, n) for k, n in N.GAMES if N.page_exists(lang, k))
     plain = lambda t: re.sub(r'^[^\w]+', '', t).strip()  # menu labels carry an emoji prefix
     guides = li('market-report', plain(mr)) + ''.join(li(k, plain(gl.get(k, k))) for k in N.GUIDES[1:])
     site = li('news', news) + (li('about', about) if about else '')

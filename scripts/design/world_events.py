@@ -22,6 +22,11 @@ EVENTS = {
  'free-fire': [
    dict(id='ff-wsgf', start='2026-11-06', end=None, title='Free Fire World Series 2026 · Global Finals', where=('Bangkok', 'TH'), kind='esports', status='ok', major=True, src=('https://ff.garena.com/en/article/1605/', 'Garena')),
  ],
+ 'pubg-mobile': [
+   # official press release (PUBG MOBILE Esports via Swipe Right, 2025-12-12): Türkiye, $3,000,000; no city or month given
+   dict(id='pm-gc26', month=None, title='PUBG Mobile Global Championship 2026 · $3,000,000', where=(None, 'TR'), kind='esports', status='tba', major=True,
+        src=('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/pubg-mobile-esports-unveils-2026-esports-roadmap-with-expanded-global-opportunities-at-2025-pmgc-3421490', 'PUBG MOBILE Esports')),
+ ],
  'clash-of-clans': [
    dict(id='coc-lcq', month='2026-10', title='Clash of Clans World Championship · Last Chance Qualifier', where=None, kind='esports', status='tba', src=('https://event.supercell.com/clashofclans/en/cups/world-championship/how-to-compete', 'Supercell')),
    dict(id='coc-wf', month=None, title='Clash of Clans World Championship 2026 · Finals · $1,000,000', where=None, kind='esports', status='tba', major=True, src=('https://event.supercell.com/clashofclans/en/cups/world-championship', 'Supercell')),

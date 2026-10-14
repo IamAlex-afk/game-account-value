@@ -493,6 +493,15 @@
     }
   };
   var T = STR[LANG];
+  // PUBG Mobile (2026-10-14): one slider, the in-game collection level.
+  var PUBG_LABEL = {
+    en: "Collection level", ru: "Уровень коллекции", es: "Nivel de colección", pt: "Nível de coleção", tr: "Koleksiyon seviyesi",
+    ar: "مستوى المجموعة", id: "Level koleksi", fr: "Niveau de collection", de: "Sammlungsstufe", it: "Livello di collezione",
+    ja: "コレクションレベル", ko: "컬렉션 레벨", hi: "कलेक्शन लेवल", vi: "Cấp bộ sưu tập", th: "เลเวลคอลเลกชัน", pl: "Poziom kolekcji",
+    zh: "收藏等级", tl: "Collection level", sw: "Kiwango cha mkusanyiko", ms: "Tahap koleksi", uz: "Kolleksiya darajasi",
+    kk: "Коллекция деңгейі", tk: "Kolleksiýa derejesi", ky: "Коллекциянын деңгээли"
+  };
+  T.sliders["pubg-mobile"] = { coll: PUBG_LABEL[LANG] };
 
   // One USD-per-Robux range for everything priced in Robux (balance and
   // Robux-cost items): what that many Robux costs to buy on Eldorado.gg,
@@ -696,6 +705,30 @@
         return [Math.max(base[0], items.lo), Math.max(base[1], items.hi)];
       }
     },
+    // Asking prices by collection level, checked by hand 2026-10-14 (pubg-mobile.html table):
+    // FunPay 41 ≈ $37, 53 ≈ $176; Eldorado.gg 67 $249, 74 $400; GameSatış 71 $272, 74 $909,
+    // 81.5 $1,174, 85 $2,348, 87.8 $3,138, 92.6 $4,960. Centre = the bot's anchor curve
+    // (GameAccountValue_Bot core/valuation.py PUBG_COLL_ANCHORS); the range here is wider
+    // (×0.55–×1.6) than the bot's (×0.70–×1.35), as for every game.
+    "pubg-mobile": {
+      name: "PUBG Mobile",
+      sliders: [
+        { key: "coll", min: 30, max: 95, step: 0.5, fmt: function (v) { return v.toFixed(1); } }
+      ],
+      score: function (v) { return norm(v.coll, 40, 90); },
+      compute: function (v) {
+        var A = [[1, 3], [20, 5], [30, 12], [40, 30], [53, 135], [67, 250], [74, 520], [81.5, 1170], [85, 2350], [88, 3140], [92.6, 4960], [95, 6000]];
+        var x = Math.max(1, Math.min(v.coll, 95)), c = A[A.length - 1][1];
+        for (var i = 0; i < A.length - 1; i++) {
+          if (x <= A[i + 1][0]) {
+            var t = (x - A[i][0]) / (A[i + 1][0] - A[i][0]);
+            c = Math.exp(Math.log(A[i][1]) + t * (Math.log(A[i + 1][1]) - Math.log(A[i][1])));
+            break;
+          }
+        }
+        return [c * 0.55, c * 1.6];
+      }
+    },
     "minecraft": {
       name: "Minecraft",
       choices: [{ key: "type", label: T.sliders["minecraft"].type, options: T.minecraftTypes.map(function (name, i) { return [String(i + 1), name]; }) }],
@@ -731,7 +764,7 @@
   };
 
   var GAME_ORDER = ["roblox", "brawl-stars", "clash-of-clans", "clash-royale", "free-fire",
-    "genshin-impact", "mobile-legends", "fortnite", "minecraft"];
+    "genshin-impact", "pubg-mobile", "mobile-legends", "fortnite", "minecraft"];
 
   var rafIds = new WeakMap();
 

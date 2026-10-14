@@ -10,7 +10,7 @@ SITE = 'https://gameaccountvalue.com/'
 CUR = ' class="lang-current"'
 GAMES = [('roblox', 'Roblox'), ('brawl-stars', 'Brawl Stars'), ('clash-of-clans', 'Clash of Clans'),
          ('clash-royale', 'Clash Royale'), ('free-fire', 'Free Fire'), ('genshin-impact', 'Genshin Impact'),
-         ('mobile-legends', 'Mobile Legends'), ('fortnite', 'Fortnite'), ('minecraft', 'Minecraft')]
+         ('pubg-mobile', 'PUBG Mobile'), ('mobile-legends', 'Mobile Legends'), ('fortnite', 'Fortnite'), ('minecraft', 'Minecraft')]
 GUIDES = ['market-report', 'which-game-accounts-are-most-valuable', 'account-trading-safety', 'glossary', 'methodology']
 LANG_NAMES = [('en', '🇺🇸 English'), ('ru', '🇷🇺 Русский'), ('es', '🇪🇸 Español'), ('pt', '🇧🇷 Português'),
               ('id', '🇮🇩 Indonesia'), ('tr', '🇹🇷 Türkçe'), ('ar', '🇸🇦 العربية'), ('vi', '🇻🇳 Tiếng Việt'),
@@ -71,12 +71,15 @@ def build(lang, slug, logo, cta):
     g, gd, news, mr, sel = L[lang]
     gl = guide_labels(lang)
     rel = lambda s: ('./' if s == 'index' else './' + s + '.html')
-    games = ''.join(f'\n        <a href="{rel(k)}"{CUR if k == slug else ""}>{n}</a>' for k, n in GAMES)
+    # a game appears in a language's menu once its page exists in that language (PUBG Mobile rolls out per language)
+    games = ''.join(f'\n        <a href="{rel(k)}"{CUR if k == slug else ""}>{n}</a>' for k, n in GAMES if page_exists(lang, k))
     guides = f'\n        <a href="{rel("market-report")}"{CUR if slug == "market-report" else ""}>{mr}</a>'
     for k in GUIDES[1:]:
         guides += f'\n        <a href="{rel(k)}"{CUR if k == slug else ""}>{gl.get(k, k)}</a>'
     # News in the reader's language; the game's own news page from a game page.
     news_slug = (slug.replace('-news', '') + '-news') if slug in dict(GAMES) or slug.endswith('-news') else 'news'
+    if not page_exists(lang, news_slug) and not page_exists('en', news_slug):
+        news_slug = 'news'                       # a game without its own news page yet
     news_href = url(lang, news_slug) if page_exists(lang, news_slug) else url('en', news_slug)
     langs = ''
     for code, name in LANG_NAMES:

@@ -19,6 +19,7 @@ GAMES = {
     'clash-royale': ('Clash Royale', '#7C9BFF', '#F9C846', '$0.50 – $600+', ''),
     'free-fire': ('Free Fire', '#FF8A1F', '#FF4D4D', '$0.73 – $250', '~$755'),
     'genshin-impact': ('Genshin Impact', '#6EE7D8', '#E9C46A', '$5 – $60', '$9,000'),
+    'pubg-mobile': ('PUBG Mobile', '#F2A900', '#E86A3A', '$2 – $400', '~$4,960'),
     'mobile-legends': ('Mobile Legends', '#FF6B85', '#F4C95D', '$0.50 – $300', '~$2,500'),
     'fortnite': ('Fortnite', '#B98BFF', '#4DB0FF', '$10.90 – $6,200', ''),
     'minecraft': ('Minecraft', '#7BD34F', '#C0925E', '$0.50 – $632', ''),

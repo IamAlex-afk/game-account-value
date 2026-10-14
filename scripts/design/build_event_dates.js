@@ -8,6 +8,7 @@ const EV = {
   'ff-wsgf': { start: '2026-11-06' }, 'coc-lcq': { month: '2026-10' }, 'gi-6y': { start: '2026-09-28' },
   'r-bswf25': { start: '2025-11-28', end: '2025-11-30' }, 'r-msc26': { start: '2026-08-01' }, 'r-m7': { start: '2026-01-03', end: '2026-01-25' },
   'r-ffewc26': { start: '2026-07-18' }, 'r-fncs26': { start: '2026-09-26', end: '2026-09-27' }, 'r-crl25': { start: '2025-10-31', end: '2025-11-02' }, 'r-cocwc25': { start: '2025-10-31', end: '2025-11-02' },
+  'r-pmwc26': { start: '2026-08-16' },
 };
 const loc = l => (l === 'zh' ? 'zh-Hans' : l);
 const d = s => new Date(s + 'T12:00:00Z');

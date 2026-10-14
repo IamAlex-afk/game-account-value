@@ -13,6 +13,8 @@ RESULTS = {
                          src=('https://en.wikipedia.org/wiki/MLBB_M7_World_Championship', 'Wikipedia'))],
  'free-fire': [dict(id='r-ffewc26', title='Free Fire · Esports World Cup 2026', where=('Paris', 'FR'), winner='LYON', origin='latam', prize='$300,000', pool=None,
                     src=('https://esportsworldcup.com/en/press-releases/lyon-crowned-free-fire-champions-at-ewc26', 'Esports World Cup'))],
+ 'pubg-mobile': [dict(id='r-pmwc26', title='PUBG Mobile World Cup 2026 (EWC)', where=('Paris', 'FR'), winner='S2G Esports', origin='TR', prize='$555,000', pool='$3,025,000',
+                      src=('https://esportsworldcup.com/en/press-releases/s2g-esports-win-nine-day-gauntlet', 'Esports World Cup'))],
  'fortnite': [dict(id='r-fncs26', title='FNCS Global Championship 2026', where=('Antwerp', 'BE'), winner='Swizzy & Pixie', origin=None, prize=None, pool='$2,000,000',
                    src=('https://www.fortnite.com/competitive/fncs-2026-global-championship', 'Epic Games'))],
  'clash-royale': [dict(id='r-crl25', title='Clash Royale League 2025 World Finals', where=('Atlanta', 'US'), winner='Mohamed Light', origin='EG', prize='$200,000', pool='$500,000',
