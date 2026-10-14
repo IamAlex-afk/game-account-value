@@ -367,3 +367,12 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - NEXT: 22 languages (tr first: GameSatış is the own market there), PUBG news hub + articles from official
   sources, then home hub / market report / comparison / glossary / cards / og default "9 games" → 10 /
   footer "not affiliated with ..." to name PUBG's owners.
+- DONE later on 2026-10-14: all 24 languages (05228951); PUBG news x3 x 24 from Swipe Right press releases
+  (0cd456f4; press.levelinfinite.com / gamespress answer 401), PMGO S2 + PMGC Istanbul in tournaments (43a276e5);
+  news pages rebuilt with the game card as NewsArticle image (003ddc47, template-only, in lastmod-ignore-revs).
+- 10 games site-wide (d4353fd9): counts in 24 languages + generators, homepage card + calculator button (picker grid
+  10 columns; on phones the odd last button spans the row), market report card $0.29-$4,960 (market_report_hub.py
+  too), comparison link, Krafton/Tencent in "not affiliated", llms.txt/README 64 pages per language, glass.css ?v=20261014a.
+- KEPT "9 games" on purpose in the own descriptions of glossary, account-trading-safety and the comparison page:
+  their content covers 9 games. NEXT: PUBG sections there (UC, X-Suit, collection level; PUBG scam patterns from the
+  pubg page research), then switch them to 10. BUILD NOTE: always run news_pages.py after pubg_page.py.
