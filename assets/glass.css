@@ -309,7 +309,7 @@ html body .section-title::after { content: ""; display: block; width: 56px; heig
 .game-card.coming-soon { --a: #94A3B8; opacity: 1; }
 .game-card.coming-soon .game-name { color: var(--muted); }
 .g-roblox { --a: #FACC15; } .g-fortnite { --a: #A78BFA; } .g-brawl { --a: #F472B6; } .g-mc { --a: #4ADE80; } .g-genshin { --a: #22D3EE; }
-.g-coc { --a: #FB923C; } .g-cr { --a: #818CF8; } .g-ff { --a: #F97316; } .g-ml { --a: #FB7185; }
+.g-coc { --a: #FB923C; } .g-cr { --a: #818CF8; } .g-ff { --a: #F97316; } .g-ml { --a: #FB7185; } .g-pubg { --a: #FBBF24; }
 .steps { gap: 16px; }
 .step { border-radius: var(--r); background: var(--glass); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid var(--line); padding: 26px 22px; transition: var(--ease); }
 .step:hover { border-color: var(--line-hi); }
@@ -390,7 +390,7 @@ html body .g-intro .section-title::after { display: none; }
 
 /* 1 — game tiles */
 .g-pick-wrap { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 22px; }
-.g-pick { flex: 1; display: grid; grid-template-columns: repeat(9, 1fr); gap: 10px; }
+.g-pick { flex: 1; display: grid; grid-template-columns: repeat(10, 1fr); gap: 10px; }
 .g-pick-btn { --a: var(--cyan); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 92px; padding: 12px 6px;
   border-radius: 14px; border: 1px solid var(--line); background: rgba(2,6,23,.45); color: var(--text); cursor: pointer; font: 700 13px/1.2 var(--body-font); text-align: center; transition: var(--ease); }
 .g-pick-btn svg { width: 32px; height: 32px; color: var(--a); transition: var(--ease); }
@@ -399,7 +399,7 @@ html body .g-intro .section-title::after { display: none; }
 .g-pick-btn[aria-pressed="true"] svg { filter: drop-shadow(0 0 8px var(--a)); }
 .g-pick-btn:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
 .g-roblox { --a: #FACC15; } .g-fortnite { --a: #A78BFA; } .g-brawl-stars { --a: #F472B6; } .g-minecraft { --a: #4ADE80; } .g-genshin-impact { --a: #22D3EE; }
-.g-clash-of-clans { --a: #FB923C; } .g-clash-royale { --a: #818CF8; } .g-free-fire { --a: #F97316; } .g-mobile-legends { --a: #FB7185; }
+.g-clash-of-clans { --a: #FB923C; } .g-clash-royale { --a: #818CF8; } .g-free-fire { --a: #F97316; } .g-mobile-legends { --a: #FB7185; } .g-pubg-mobile { --a: #FBBF24; }
 
 /* 2 + 3 — sliders left, result right (sticky) */
 html body .g-panel .value-calc { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-areas: "s r"; gap: 24px; align-items: start;
@@ -434,6 +434,7 @@ html body .g-about p { max-width: 860px; margin: 0 auto; text-align: center; fon
 }
 @media (max-width: 560px) {
   .g-pick { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .g-pick-btn:last-child:nth-child(3n+1) { grid-column: 1 / -1; min-height: 64px; flex-direction: row; }
   .g-pick-btn { min-height: 84px; font-size: 12px; }
   .g-pick-wrap .g-num { display: none; }
   .g-head { grid-template-columns: 1fr 96px; }

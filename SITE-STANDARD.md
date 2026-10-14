@@ -22,8 +22,8 @@ people-first content, visible dates that change only when content changes, E-E-A
 
 ## Every language (24: en ru es pt id tr ar vi hi fr de it ja ko th pl zh tl sw ms uz kk tk ky)
 Must have the same page set as English, each fully translated (headings, body, alt, meta, JSON-LD):
-home · 9 game pages · market-report · which-game-accounts-are-most-valuable · account-trading-safety ·
-glossary · methodology · news hub + 9 game news · privacy · terms · about.
+home · 10 game pages · market-report · which-game-accounts-are-most-valuable · account-trading-safety ·
+glossary · methodology · news hub + 10 game news · privacy · terms · about.
 Translation = adapted human-quality (local number/date formats, local examples, correct register),
 never machine-dumped; English leftovers only for brand/game/item names.
 

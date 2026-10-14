@@ -18,14 +18,14 @@ def main():
     newest = cards[0]['date']
     nice = datetime.date.fromisoformat(newest).strftime('%B %-d, %Y') if os.name != 'nt' else datetime.date.fromisoformat(newest).strftime('%B %d, %Y').replace(' 0', ' ')
     s = open(ROOT + 'roblox-news.html', encoding='utf-8').read()
-    title = 'Fresh Game Account Market News — 9 Games | GameAccountValue'
+    title = 'Fresh Game Account Market News — 10 Games | GameAccountValue'
     desc = f'Fresh region-by-region account market watch for Roblox, Fortnite, Genshin Impact, Free Fire and 5 more games — real listings, sources and check dates. Latest update {nice}.'
     s = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', s, 1)
     s = re.sub(r'(<meta name="description" content=")[^"]*', r'\g<1>' + H.escape(desc), s, 1)
     s = re.sub(r'(<meta property="og:title" content=")[^"]*', r'\g<1>Fresh Market News — GameAccountValue', s, 1)
     s = re.sub(r'(<meta name="twitter:title" content=")[^"]*', r'\g<1>Fresh Market News — GameAccountValue', s, 1)
     s = re.sub(r'(<meta property="og:description" content=")[^"]*', r'\g<1>' + H.escape(desc), s, 1)
-    s = s.replace('/og/roblox.jpg', '/og/default.jpg').replace('GameAccountValue — Roblox account value', 'GameAccountValue — game account value for 9 games')
+    s = s.replace('/og/roblox.jpg', '/og/default.jpg').replace('GameAccountValue — Roblox account value', 'GameAccountValue — game account value for 10 games')
     s = s.replace(SITE + 'roblox-news.html', SITE + 'news.html')
     items = [{'@type': 'ListItem', 'position': i + 1, 'url': SITE + c['slug'] + '-news.html', 'name': c['h1'].replace('📰 ', '')} for i, c in enumerate(cards)]
     ld = {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Fresh Market News', 'url': SITE + 'news.html',

@@ -24,7 +24,7 @@ GAMES = {
     'fortnite': ('Fortnite', '#B98BFF', '#4DB0FF', '$10.90 – $6,200', ''),
     'minecraft': ('Minecraft', '#7BD34F', '#C0925E', '$0.50 – $632', ''),
     # site-wide image (homepages, resource pages)
-    'default': ('Game Account Value', '#22D3EE', '#A78BFA', '9 games', '24 languages'),
+    'default': ('Game Account Value', '#22D3EE', '#A78BFA', '10 games', '24 languages'),
 }
 
 TPL = '''<!doctype html><meta charset=utf-8><style>
