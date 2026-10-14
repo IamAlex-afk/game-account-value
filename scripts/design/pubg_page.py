@@ -18,9 +18,9 @@ import world_markets as WM                      # world-table labels (T) and eac
 from world_events import render_events, render_event_ld
 from world_results import render_results
 from world_extra import NAMES
-import pubg_text_a
+import pubg_text_a, pubg_text_b
 TEXT = {}
-for mod in (pubg_text_a,):
+for mod in (pubg_text_a, pubg_text_b):
     TEXT.update(mod.TEXT)
 ROWS = pubg_text_a.ROWS
 NBSP = ' '
@@ -33,7 +33,20 @@ def localize(t):
         fix = lambda x: re.sub(r'(?<=\d) (?=\d{3}\b)', NBSP, x)
         t = {k: (fix(v) if isinstance(v, str) else [fix(i) for i in v] if isinstance(v, list) else
                  {kk: fix(vv) for kk, vv in v.items()} if isinstance(v, dict) else v) for k, v in t.items()}
-    t['money'] = lambda x: re.sub(r'(?<=\d),(?=\d{3})', NBSP if thou == ' ' else thou, x)
+    glue = lambda x: re.sub(r'(?<=\d) (?=[$€₺])', NBSP, x)     # "4.960 $" never breaks between number and sign
+    t = {k: (glue(v) if isinstance(v, str) else [glue(i) for i in v] if isinstance(v, list) else v) for k, v in t.items()}
+    dec = t.get('dec', '.')
+    sep = NBSP if thou == ' ' else thou
+
+    def money(x):                                   # "$2,348.50" → this language's separators
+        x = re.sub(r'(?<=\d)\.(?=\d)', '\x00', x)
+        x = re.sub(r'(?<=\d),(?=\d{3})', sep, x)
+        x = x.replace('\x00', dec)
+        if t.get('cur_after'):                        # "$4.960" → "4.960 $" where the language writes it so
+            x = re.sub(r'([$€])(\d[\d.,' + NBSP + r']*\d|\d)', lambda m: m.group(2) + NBSP + m.group(1), x)
+        return x
+    t['money'] = money
+    t['level'] = lambda x: re.sub(r'(?<=\d)\.(?=\d)', dec, x)   # collection level "81.5"
     return t
 
 OTHER = [('roblox', 'Roblox'), ('brawl-stars', 'Brawl Stars'), ('clash-of-clans', 'Clash of Clans'), ('clash-royale', 'Clash Royale'),
@@ -82,13 +95,13 @@ def world(lang, t):
             '<div class="wm-wrap"><table class="wm-table"><thead><tr>' + ''.join(f'<th scope="col">{x}</th>' for x in c) +
             f'</tr></thead><tbody>{rows}</tbody></table></div>\n'
             f'<p class="wm-note">{t["world_note"]} {w["checked"]}: <time datetime="{MODIFIED}">{MODIFIED}</time>.</p>\n'
-            + render_events(SLUG, lang, NAMES) + render_event_ld(SLUG) + render_results(SLUG, lang, NAMES) + '\n</section>\n')
+            + t['money'](render_events(SLUG, lang, NAMES)) + render_event_ld(SLUG) + t['money'](render_results(SLUG, lang, NAMES)) + '\n</section>\n')
 
 
 def sections(t, h2):
     sec = lambda anchor, body: f'<section class="g-card g-news-card"><span id="{anchor}" class="anchor-target"></span>\n{body}\n</section>\n'
     table = ('<table class="tier-table">\n<tbody>\n  <tr>' + ''.join(f'<th>{x}</th>' for x in t['table_head']) + '</tr>\n' +
-             ''.join(f'  <tr><td>{a}</td><td>{t["money"](b)}</td><td>{c}</td></tr>\n' for a, b, c in ROWS) + '</tbody>\n</table>')
+             ''.join(f'  <tr><td>{t["level"](a)}</td><td>{t["money"](b)}</td><td>{c}</td></tr>\n' for a, b, c in ROWS) + '</tbody>\n</table>')
     ul = lambda items, tag='ul': f'<{tag}>\n' + ''.join(f'  <li>{i}</li>\n' for i in items) + f'</{tag}>'
     return (sec('pricing', f'<h2>{h2["pricing"]}</h2>\n<h3>{t["q_worth"]}</h3>\n<p>{t["a_worth"]}</p>\n<h3>{t["q_table"]}</h3>\n{table}\n'
                            f'<p style="font-size:13px; color:var(--muted);">{t["table_note"]}</p>')
@@ -101,7 +114,7 @@ def sections(t, h2):
 
 
 def faq(t):
-    table_txt = ' '.join(t['table_head']) + ' ' + ' '.join(f'{a} {t["money"](b)} {c}' for a, b, c in ROWS) + ' ' + t['table_note']
+    table_txt = ' '.join(t['table_head']) + ' ' + ' '.join(f'{t["level"](a)} {t["money"](b)} {c}' for a, b, c in ROWS) + ' ' + t['table_note']
     qa = [(t['q_worth'], t['a_worth']), (t['q_table'], table_txt), (t['q_value'], ' '.join(t['value'])),
           (t['q_lookup'], ' '.join(t['lookup'])), (t['q_shots'], t['shots_intro'] + ' ' + ' '.join(t['shots']) + ' ' + t['shots_note']),
           (t['q_scams'], t['a_scams']), (t['q_rules'], t['a_rules']), (t['q_where'], t['a_where'])]
