@@ -154,9 +154,36 @@ VENUE = {'pm-pmgo2': ('Lahore', 'Lahore', 'PK'), 'bs-lcq': ('Guangzhou', 'Guangz
 # organizer.url are filled from facts we hold; performer (qualified teams) and
 # offers (ticketing) are left out until the publisher announces them — never guessed.
 ORG_URL = {'Supercell': 'https://supercell.com/', 'MOONTON': 'https://en.moonton.com/', 'Garena': 'https://ff.garena.com/'}
-COUNTRY_EN = {'CN': 'China', 'JP': 'Japan', 'SA': 'Saudi Arabia', 'TH': 'Thailand'}
+COUNTRY_EN = {'CN': 'China', 'JP': 'Japan', 'SA': 'Saudi Arabia', 'TH': 'Thailand', 'PK': 'Pakistan'}
+# description in the page's language (2026-10-14); the place itself is in location
+EVENT_DESC = {
+ "ru": "{title} — официальный офлайн-турнир по киберспорту, объявленный {org}.",
+ "es": "{title}: torneo oficial de esports presencial anunciado por {org}.",
+ "pt": "{title}: torneio oficial e presencial de esports anunciado por {org}.",
+ "fr": "{title} : tournoi officiel d’esport en présentiel annoncé par {org}.",
+ "de": "{title}: offizielles Esport-Turnier vor Ort, angekündigt von {org}.",
+ "it": "{title}: torneo ufficiale di esport dal vivo annunciato da {org}.",
+ "tr": "{title}: {org} tarafından duyurulan resmî yüz yüze e-spor turnuvası.",
+ "ar": "{title}: بطولة رياضات إلكترونية رسمية حضورية أعلنت عنها {org}.",
+ "id": "{title}: turnamen esports resmi secara langsung yang diumumkan oleh {org}.",
+ "ms": "{title}: kejohanan e-sukan rasmi secara fizikal yang diumumkan oleh {org}.",
+ "vi": "{title}: giải đấu thể thao điện tử chính thức tổ chức trực tiếp, do {org} công bố.",
+ "hi": "{title}: {org} द्वारा घोषित आधिकारिक ऑफ़लाइन ईस्पोर्ट्स टूर्नामेंट।",
+ "ja": "{title}：{org}が発表した公式オフラインeスポーツ大会。",
+ "ko": "{title}: {org}에서 발표한 공식 오프라인 e스포츠 대회.",
+ "zh": "{title}：由 {org} 公布的官方线下电竞赛事。",
+ "th": "{title}: การแข่งขันอีสปอร์ตอย่างเป็นทางการแบบออฟไลน์ ประกาศโดย {org}",
+ "pl": "{title}: oficjalny turniej e-sportowy na żywo ogłoszony przez {org}.",
+ "tl": "{title}: opisyal na in-person na esports tournament na inanunsyo ng {org}.",
+ "sw": "{title}: mashindano rasmi ya esports ya ana kwa ana yaliyotangazwa na {org}.",
+ "uz": "{title}: {org} eʼlon qilgan rasmiy oflayn kibersport turniri.",
+ "kk": "{title}: {org} жариялаған ресми офлайн киберспорт турнирі.",
+ "tk": "{title}: {org} tarapyndan yglan edilen resmi oflaýn kibersport ýaryşy.",
+ "ky": "{title}: {org} жарыялаган расмий офлайн киберспорт турнири.",
+}
 
-def render_event_ld(game):
+
+def render_event_ld(game, lang='en'):
     out = []
     for e in EVENTS.get(game, []):
         if e['id'] not in VENUE or not e.get('start') or e['status'] != 'ok':
@@ -167,7 +194,8 @@ def render_event_ld(game):
         if e['src'][1] in ORG_URL:
             org['url'] = ORG_URL[e['src'][1]]
         ev = {'@context': 'https://schema.org', '@type': 'Event', 'name': title,
-              'description': f"{title}: official in-person esports event in {city}, {COUNTRY_EN.get(cc, cc)}, announced by {e['src'][1]}.",
+              'description': (EVENT_DESC[lang].format(title=title, org=e['src'][1]) if lang in EVENT_DESC else
+                              f"{title}: official in-person esports event in {city}, {COUNTRY_EN.get(cc, cc)}, announced by {e['src'][1]}."),
               'image': f'https://gameaccountvalue.com/og/{game}.jpg',
               'startDate': e['start'], 'eventStatus': 'https://schema.org/EventScheduled',
               'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',

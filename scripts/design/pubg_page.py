@@ -132,7 +132,7 @@ def world(lang, t):
             '<div class="wm-wrap"><table class="wm-table"><thead><tr>' + ''.join(f'<th scope="col">{x}</th>' for x in c) +
             f'</tr></thead><tbody>{rows}</tbody></table></div>\n'
             f'<p class="wm-note">{t["world_note"]} {w["checked"]}: <time datetime="{MODIFIED}">{MODIFIED}</time>.</p>\n'
-            + t['money'](render_events(SLUG, lang, NAMES)) + render_event_ld(SLUG) + t['money'](render_results(SLUG, lang, NAMES)) + '\n</section>\n')
+            + t['money'](render_events(SLUG, lang, NAMES)) + render_event_ld(SLUG, lang) + t['money'](render_results(SLUG, lang, NAMES)) + '\n</section>\n')
 
 
 def sections(t, h2):

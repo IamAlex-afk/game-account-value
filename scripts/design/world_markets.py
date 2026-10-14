@@ -206,7 +206,7 @@ def render(game, lang, game_name):
             '<div class="wm-wrap"><table class="wm-table"><thead><tr><th scope="col">' + c[0] + '</th><th scope="col">' + c[1] + '</th><th scope="col">' + c[2] +
             '</th><th scope="col">' + c[3] + '</th><th scope="col">' + c[4] + '</th></tr></thead><tbody>' + rows + '</tbody></table></div>\n'
             '<p class="wm-note">' + t['note'] + ' ' + t['checked'] + ': <time datetime="' + CHECKED + '">' + CHECKED + '</time>.</p>\n' +
-            render_events(game, lang, _NAMES) + render_event_ld(game) + render_results(game, lang, _NAMES) + render_extra(game, lang, game_name) + '\n</section>\n')
+            render_events(game, lang, _NAMES) + render_event_ld(game, lang) + render_results(game, lang, _NAMES) + render_extra(game, lang, game_name) + '\n</section>\n')
 
 def apply(game):
     names = {'brawl-stars': 'Brawl Stars', 'roblox': 'Roblox', 'clash-of-clans': 'Clash of Clans', 'clash-royale': 'Clash Royale', 'free-fire': 'Free Fire',
