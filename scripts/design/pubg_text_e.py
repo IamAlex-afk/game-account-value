@@ -11,7 +11,7 @@ TEXT = {
   og_title='Berapa Nilai Akun PUBG Mobile Saya? — GameAccountValue',
   og_alt='GameAccountValue — nilai akun PUBG Mobile',
   h1='🪂 Nilai Akun PUBG Mobile',
-  intro='Harga yang diminta di empat marketplace, satu angka yang paling menentukan harga itu — level koleksi — dan tangkapan layar yang menunjukkannya.',
+  intro='Harga yang diminta di lima marketplace, satu angka yang paling menentukan harga itu — level koleksi — dan tangkapan layar yang menunjukkannya.',
   updated='Dicek pada Oktober 2026 dari iklan di marketplace. Sumber ada di bagian bawah halaman.',
   badge='🗓️ Iklan dicek manual: 14 Oktober 2026',
   range='Harga yang diminta: $0,29 – $4.960 · igitems: $47 – $781',
@@ -60,7 +60,7 @@ TEXT = {
   a_rules=('Ya. Ketentuan PUBG Mobile (Proxima Beta Pte. Limited) menyebut akun bersifat pribadi dan dilarang diberikan, dipinjamkan, dipindahkan, atau dibiarkan diakses dan dipakai orang lain. '
            'Item dan mata uang virtual juga tidak boleh diperdagangkan atau dijual; penerbit bisa menangguhkan akses atau mengakhiri perjanjian.'),
   q_where='Dari mana iklan-iklan ini?',
-  a_where=('igitems.com, Eldorado.gg dan FunPay adalah marketplace internasional; GameSatış dari Turki. Setiap angka di halaman ini adalah harga yang diminta yang kami cek manual pada 14 Oktober 2026 — '
+  a_where=('igitems.com, Eldorado.gg dan FunPay adalah marketplace internasional; GameSatış dari Turki dan GameTrade dari Jepang. Setiap angka di halaman ini adalah harga yang diminta yang kami cek manual pada 14 Oktober 2026 — '
            'bukan penjualan yang sudah terjadi, dan tidak ada yang dikumpulkan secara otomatis.'),
   world_dem=dict(global_='Level koleksi, X-Suit, M416 Glacier', cis='X-Suit level maksimal (Pharaoh, Raven), supercar, jumlah Mythic',
                  tr='Level koleksi, jumlah item epik, senjata max, supercar',
@@ -81,7 +81,7 @@ TEXT = {
   og_title='Tài khoản PUBG Mobile của tôi đáng giá bao nhiêu? — GameAccountValue',
   og_alt='GameAccountValue — giá trị tài khoản PUBG Mobile',
   h1='🪂 Giá trị tài khoản PUBG Mobile',
-  intro='Giá rao bán trên bốn chợ, con số quyết định phần lớn mức giá đó — cấp bộ sưu tập — và những ảnh chụp cho thấy con số này.',
+  intro='Giá rao bán trên năm chợ, con số quyết định phần lớn mức giá đó — cấp bộ sưu tập — và những ảnh chụp cho thấy con số này.',
   updated='Kiểm tra tháng 10/2026 theo tin rao trên các chợ. Nguồn nằm ở cuối trang.',
   badge='🗓️ Tin rao được kiểm tra thủ công: 14/10/2026',
   range='Giá rao: $0.29 – $4,960 · igitems: ₫1,198,362 – ₫20,014,498',
@@ -130,7 +130,7 @@ TEXT = {
   a_rules=('Có. Điều khoản của PUBG Mobile (Proxima Beta Pte. Limited) ghi rằng tài khoản là của riêng bạn và bị cấm tặng, cho mượn, chuyển nhượng hay để người khác truy cập, sử dụng. '
            'Vật phẩm và tiền ảo cũng không được mua bán, trao đổi; nhà phát hành có thể khóa quyền truy cập hoặc chấm dứt thỏa thuận.'),
   q_where='Những tin rao này lấy từ đâu?',
-  a_where=('igitems.com, Eldorado.gg và FunPay là các chợ quốc tế; GameSatış là của Thổ Nhĩ Kỳ. Mỗi con số trên trang là giá rao chúng tôi xem thủ công ngày 14/10/2026 — '
+  a_where=('igitems.com, Eldorado.gg và FunPay là các chợ quốc tế; GameSatış là của Thổ Nhĩ Kỳ, GameTrade là của Nhật Bản. Mỗi con số trên trang là giá rao chúng tôi xem thủ công ngày 14/10/2026 — '
            'không phải giao dịch đã hoàn tất, và không có gì được thu thập tự động.'),
   world_dem=dict(global_='Cấp bộ sưu tập, X-Suit, M416 Glacier', cis='X-Suit cấp tối đa (Pharaoh, Raven), siêu xe, số đồ Mythic',
                  tr='Cấp bộ sưu tập, số đồ sử thi, súng max, siêu xe',
@@ -151,7 +151,7 @@ TEXT = {
   og_title='บัญชี PUBG Mobile ของฉันมีมูลค่าเท่าไร? — GameAccountValue',
   og_alt='GameAccountValue — มูลค่าบัญชี PUBG Mobile',
   h1='🪂 มูลค่าบัญชี PUBG Mobile',
-  intro='ราคาที่ประกาศขายบนสี่ตลาด ตัวเลขเดียวที่กำหนดราคาเกือบทั้งหมด — เลเวลคอลเลกชัน — และภาพหน้าจอที่แสดงตัวเลขนั้น',
+  intro='ราคาที่ประกาศขายบนห้าตลาด ตัวเลขเดียวที่กำหนดราคาเกือบทั้งหมด — เลเวลคอลเลกชัน — และภาพหน้าจอที่แสดงตัวเลขนั้น',
   updated='ตรวจสอบเดือนตุลาคม 2026 จากประกาศในตลาด แหล่งที่มาอยู่ท้ายหน้า',
   badge='🗓️ ตรวจประกาศด้วยมือ: 14 ตุลาคม 2026',
   range='ราคาที่ประกาศขาย: $0.29 – $4,960 · igitems: $47 – $781',
@@ -200,7 +200,7 @@ TEXT = {
   a_rules=('ผิด ข้อกำหนดของ PUBG Mobile (Proxima Beta Pte. Limited) ระบุว่าบัญชีเป็นของส่วนตัว และห้ามให้ ให้ยืม โอน หรือปล่อยให้ผู้อื่นเข้าถึงหรือใช้งาน '
            'ไอเทมและสกุลเงินเสมือนก็ห้ามซื้อขายหรือแลกเปลี่ยน ผู้จัดจำหน่ายอาจระงับการเข้าถึงหรือยกเลิกข้อตกลงได้'),
   q_where='ประกาศเหล่านี้มาจากไหน?',
-  a_where=('igitems.com, Eldorado.gg และ FunPay เป็นตลาดระหว่างประเทศ ส่วน GameSatış เป็นของตุรกี ตัวเลขทุกตัวในหน้านี้คือราคาประกาศที่เราดูด้วยมือเมื่อวันที่ 14 ตุลาคม 2026 — '
+  a_where=('igitems.com, Eldorado.gg และ FunPay เป็นตลาดระหว่างประเทศ ส่วน GameSatış เป็นของตุรกี และ GameTrade เป็นของญี่ปุ่น ตัวเลขทุกตัวในหน้านี้คือราคาประกาศที่เราดูด้วยมือเมื่อวันที่ 14 ตุลาคม 2026 — '
            'ไม่ใช่ยอดขายที่เกิดขึ้นจริง และไม่มีการเก็บข้อมูลอัตโนมัติ'),
   world_dem=dict(global_='เลเวลคอลเลกชัน, X-Suit, M416 Glacier', cis='X-Suit เลเวลสูงสุด (Pharaoh, Raven), ซูเปอร์คาร์, จำนวนไอเทม Mythic',
                  tr='เลเวลคอลเลกชัน, จำนวนไอเทมระดับ Epic, ปืนอัปเต็ม, ซูเปอร์คาร์',
@@ -221,7 +221,7 @@ TEXT = {
   og_title='Berapakah Nilai Akaun PUBG Mobile Saya? — GameAccountValue',
   og_alt='GameAccountValue — nilai akaun PUBG Mobile',
   h1='🪂 Nilai Akaun PUBG Mobile',
-  intro='Harga yang diminta di empat pasaran, satu nombor yang paling menentukan harga itu — tahap koleksi — dan tangkapan skrin yang menunjukkannya.',
+  intro='Harga yang diminta di lima pasaran, satu nombor yang paling menentukan harga itu — tahap koleksi — dan tangkapan skrin yang menunjukkannya.',
   updated='Disemak pada Oktober 2026 berdasarkan iklan di pasaran. Sumber ada di bahagian bawah halaman.',
   badge='🗓️ Iklan disemak secara manual: 14 Oktober 2026',
   range='Harga diminta: $0.29 – $4,960 · igitems: $47 – $781',
@@ -270,7 +270,7 @@ TEXT = {
   a_rules=('Ya. Terma PUBG Mobile (Proxima Beta Pte. Limited) menyatakan akaun adalah peribadi dan dilarang dihadiahkan, dipinjamkan, dipindahkan atau dibiarkan diakses dan digunakan oleh orang lain. '
            'Item dan mata wang maya juga tidak boleh didagangkan atau dijual; penerbit boleh menggantung akses atau menamatkan perjanjian.'),
   q_where='Dari manakah iklan-iklan ini?',
-  a_where=('igitems.com, Eldorado.gg dan FunPay ialah pasaran antarabangsa; GameSatış dari Turki. Setiap angka di halaman ini ialah harga diminta yang kami semak secara manual pada 14 Oktober 2026 — '
+  a_where=('igitems.com, Eldorado.gg dan FunPay ialah pasaran antarabangsa; GameSatış dari Turki dan GameTrade dari Jepun. Setiap angka di halaman ini ialah harga diminta yang kami semak secara manual pada 14 Oktober 2026 — '
            'bukan jualan yang selesai, dan tiada apa-apa dikumpul secara automatik.'),
   world_dem=dict(global_='Tahap koleksi, X-Suit, M416 Glacier', cis='X-Suit tahap maksimum (Pharaoh, Raven), superkereta, bilangan Mythic',
                  tr='Tahap koleksi, bilangan item epik, senjata max, superkereta',
@@ -291,7 +291,7 @@ TEXT = {
   og_title='Magkano ang PUBG Mobile account ko? — GameAccountValue',
   og_alt='GameAccountValue — halaga ng PUBG Mobile account',
   h1='🪂 Halaga ng PUBG Mobile Account',
-  intro='Mga asking price sa apat na marketplace, ang isang numerong halos lahat sila nakadepende — ang collection level — at ang mga screenshot na nagpapakita nito.',
+  intro='Mga asking price sa limang marketplace, ang isang numerong halos lahat sila nakadepende — ang collection level — at ang mga screenshot na nagpapakita nito.',
   updated='Sinuri noong Oktubre 2026 mula sa mga listing sa marketplace. Nasa ibaba ng page ang mga source.',
   badge='🗓️ Mano-manong sinuri ang mga listing: Oktubre 14, 2026',
   range='Mga asking price: $0.29 – $4,960 · igitems: $47 – $781',
@@ -340,7 +340,7 @@ TEXT = {
   a_rules=('Oo. Sinasabi ng terms ng PUBG Mobile (Proxima Beta Pte. Limited) na personal ang account at bawal itong iregalo, ipahiram, ilipat o hayaang ma-access at magamit ng iba. '
            'Bawal ding i-trade o ibenta ang mga virtual item at currency; puwedeng i-suspend ng publisher ang access o tapusin ang kasunduan.'),
   q_where='Saan galing ang mga listing na ito?',
-  a_where=('Ang igitems.com, Eldorado.gg at FunPay ay mga international marketplace; taga-Türkiye ang GameSatış. Bawat numero sa page na ito ay asking price na mano-mano naming tiningnan noong Oktubre 14, 2026 — '
+  a_where=('Ang igitems.com, Eldorado.gg at FunPay ay mga international marketplace; taga-Türkiye ang GameSatış at taga-Japan ang GameTrade. Bawat numero sa page na ito ay asking price na mano-mano naming tiningnan noong Oktubre 14, 2026 — '
            'hindi natapos na bentahan, at walang kinolekta nang awtomatiko.'),
   world_dem=dict(global_='Collection level, X-Suit, M416 Glacier', cis='Max-level na X-Suit (Pharaoh, Raven), supercar, bilang ng Mythic',
                  tr='Collection level, bilang ng epic item, naka-max na baril, supercar',

@@ -11,7 +11,7 @@ TEXT = {
   og_title='PUBG Mobile Hesabım Ne Kadar Eder? — GameAccountValue',
   og_alt='GameAccountValue — PUBG Mobile hesap değeri',
   h1='🪂 PUBG Mobile Hesap Değeri',
-  intro='Dört pazar yerindeki ilan fiyatları, bu fiyatların bağlı olduğu tek sayı — koleksiyon seviyesi — ve onu gösteren ekran görüntüleri.',
+  intro='Beş pazar yerindeki ilan fiyatları, bu fiyatların bağlı olduğu tek sayı — koleksiyon seviyesi — ve onu gösteren ekran görüntüleri.',
   updated='Ekim 2026’da pazar yeri ilanlarıyla kontrol edildi. Kaynaklar sayfanın altında.',
   badge='🗓️ İlanlar elle kontrol edildi: 14 Ekim 2026',
   range='Görülen ilan fiyatları: 0,29 $ – 4.960 $ · GameSatış: 1.000 ₺ – 245.000 ₺',
@@ -56,7 +56,7 @@ TEXT = {
   a_rules=('Evet. PUBG Mobile kullanım koşullarında (Proxima Beta Pte. Limited) hesabın kişisel olduğu ve onu hediye etmenin, ödünç vermenin, devretmenin veya başka birinin '
            'kullanmasına izin vermenin yasak olduğu yazıyor. Sanal eşya ve para birimi de satılamaz ya da takas edilemez; yayıncı erişimi askıya alabilir veya sözleşmeyi sonlandırabilir.'),
   q_where='Bu ilanlar nereden geliyor?',
-  a_where=('GameSatış Türk pazar yeridir, Eldorado.gg, FunPay ve igitems.com uluslararasıdır. Bu sayfadaki her rakam 14 Ekim 2026’da elle bakılmış bir ilan fiyatıdır — '
+  a_where=('GameSatış Türk pazar yeridir, GameTrade Japon; Eldorado.gg, FunPay ve igitems.com uluslararasıdır. Bu sayfadaki her rakam 14 Ekim 2026’da elle bakılmış bir ilan fiyatıdır — '
            'tamamlanmış satış değildir ve hiçbir veri otomatik olarak toplanmadı.'),
   world_dem=dict(global_='Koleksiyon seviyesi, X-Suit’ler, Buz Diyarı M416', cis='Maksimum seviye X-Suit’ler (Firavun, Blood Raven), spor arabalar, mitik sayısı',
                  tr='Koleksiyon seviyesi, destansı eşya sayısı, max silahlar, spor arabalar',

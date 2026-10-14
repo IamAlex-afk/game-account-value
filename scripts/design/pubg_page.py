@@ -18,9 +18,9 @@ import world_markets as WM                      # world-table labels (T) and eac
 from world_events import render_events, render_event_ld
 from world_results import render_results
 from world_extra import NAMES
-import pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d, pubg_text_e
+import pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d, pubg_text_e, pubg_text_f, pubg_text_g, pubg_text_h
 TEXT = {}
-for mod in (pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d, pubg_text_e):
+for mod in (pubg_text_a, pubg_text_b, pubg_text_c, pubg_text_d, pubg_text_e, pubg_text_f, pubg_text_g, pubg_text_h):
     TEXT.update(mod.TEXT)
 ROWS, BRACKETS = pubg_text_a.ROWS, pubg_text_a.BRACKETS
 NBSP = ' '
@@ -47,7 +47,7 @@ def localize(t):
         x = re.sub(r'(?<=\d),(?=\d{3})', sep, x)
         x = x.replace('\x00', dec)
         if t.get('cur_after'):                        # "$4.960" → "4.960 $" where the language writes it so
-            x = re.sub(r'([$€])(\d[\d.,' + NBSP + r']*\d|\d)', lambda m: m.group(2) + NBSP + m.group(1), x)
+            x = re.sub(r'([$€])(\d[\d.,' + NBSP + r']*\d|\d)', lambda m: m.group(2) + t.get('cur_sep', NBSP) + m.group(1), x)
         return x
     t['money'] = money
     t['level'] = lambda x: re.sub(r'(?<=\d)\.(?=\d)', dec, x)   # collection level "81.5"

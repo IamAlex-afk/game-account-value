@@ -12,7 +12,7 @@ TEXT = {
   og_title='Combien vaut mon compte PUBG Mobile ? — GameAccountValue',
   og_alt='GameAccountValue — valeur d’un compte PUBG Mobile',
   h1='🪂 Valeur d’un compte PUBG Mobile',
-  intro='Les prix demandés sur quatre marketplaces, le chiffre dont ils dépendent presque tous — le niveau de collection — et les captures qui le montrent.',
+  intro='Les prix demandés sur cinq marketplaces, le chiffre dont ils dépendent presque tous — le niveau de collection — et les captures qui le montrent.',
   updated='Vérifié en octobre 2026 à partir d’annonces de marketplaces. Les sources figurent en bas de page.',
   badge='🗓️ Annonces vérifiées à la main : 14 octobre 2026',
   range='Prix demandés : 0,29 $ – 4 960 $ · Eldorado.gg, première page : 2 $ – 400 $',
@@ -60,7 +60,7 @@ TEXT = {
   a_rules=('Oui. Les conditions d’utilisation de PUBG Mobile (Proxima Beta Pte. Limited) précisent que le compte est personnel et qu’il est interdit de l’offrir, de le prêter, '
            'de le transférer ou de laisser quelqu’un d’autre y accéder ou l’utiliser. Les objets et la monnaie virtuels ne peuvent pas non plus être échangés ni vendus ; l’éditeur peut suspendre l’accès ou résilier le contrat.'),
   q_where='D’où viennent ces annonces ?',
-  a_where=('Eldorado.gg, FunPay et igitems.com sont des marketplaces internationales ; GameSatış est turque. Chaque chiffre de cette page est un prix demandé que nous avons relevé à la main le 14 octobre 2026 — '
+  a_where=('Eldorado.gg, FunPay et igitems.com sont des marketplaces internationales ; GameSatış est turque et GameTrade japonaise. Chaque chiffre de cette page est un prix demandé que nous avons relevé à la main le 14 octobre 2026 — '
            'pas une vente conclue, et rien n’a été collecté automatiquement.'),
   world_dem=dict(global_='Niveau de collection, X-Suits, M416 Glacier', cis='X-Suits au niveau maximum (Pharaoh, Raven), supercars, nombre de mythiques',
                  tr='Niveau de collection, nombre d’objets épiques, armes au maximum, supercars',
@@ -82,7 +82,7 @@ TEXT = {
   og_title='Wie viel ist mein PUBG-Mobile-Account wert? — GameAccountValue',
   og_alt='GameAccountValue — Wert eines PUBG-Mobile-Accounts',
   h1='🪂 Wert eines PUBG-Mobile-Accounts',
-  intro='Angebotspreise von vier Marktplätzen, die eine Zahl, nach der sie sich fast alle richten — die Sammlungsstufe —, und die Screenshots, die sie zeigen.',
+  intro='Angebotspreise von fünf Marktplätzen, die eine Zahl, nach der sie sich fast alle richten — die Sammlungsstufe —, und die Screenshots, die sie zeigen.',
   updated='Im Oktober 2026 anhand von Marktplatz-Angeboten geprüft. Die Quellen stehen unten auf der Seite.',
   badge='🗓️ Angebote von Hand geprüft: 14. Oktober 2026',
   range='Gesehene Angebotspreise: 0,29 $ – 4.960 $ · Eldorado.gg, erste Seite: 2 $ – 400 $',
@@ -130,7 +130,7 @@ TEXT = {
   a_rules=('Ja. In den Nutzungsbedingungen von PUBG Mobile (Proxima Beta Pte. Limited) steht, dass der Account persönlich ist und es verboten ist, ihn zu verschenken, zu verleihen, '
            'zu übertragen oder anderen auf andere Weise Zugang zu gewähren. Auch virtuelle Gegenstände und Währung dürfen nicht gehandelt oder verkauft werden; der Publisher kann den Zugang sperren oder den Vertrag beenden.'),
   q_where='Woher stammen diese Angebote?',
-  a_where=('Eldorado.gg, FunPay und igitems.com sind internationale Marktplätze, GameSatış ist türkisch. Jede Zahl auf dieser Seite ist ein Angebotspreis, den wir am 14. Oktober 2026 von Hand nachgesehen haben — '
+  a_where=('Eldorado.gg, FunPay und igitems.com sind internationale Marktplätze, GameSatış ist türkisch, GameTrade japanisch. Jede Zahl auf dieser Seite ist ein Angebotspreis, den wir am 14. Oktober 2026 von Hand nachgesehen haben — '
            'kein abgeschlossener Verkauf, und nichts wurde automatisch gesammelt.'),
   world_dem=dict(global_='Sammlungsstufe, X-Suits, M416 Glacier', cis='X-Suits auf Maximalstufe (Pharaoh, Raven), Supersportwagen, Zahl der Mythics',
                  tr='Sammlungsstufe, Zahl epischer Gegenstände, maximierte Waffen, Supersportwagen',
@@ -152,7 +152,7 @@ TEXT = {
   og_title='Quanto vale il mio account PUBG Mobile? — GameAccountValue',
   og_alt='GameAccountValue — valore di un account PUBG Mobile',
   h1='🪂 Valore di un account PUBG Mobile',
-  intro='I prezzi richiesti su quattro marketplace, il numero da cui dipendono quasi tutti — il livello di collezione — e gli screenshot che lo mostrano.',
+  intro='I prezzi richiesti su cinque marketplace, il numero da cui dipendono quasi tutti — il livello di collezione — e gli screenshot che lo mostrano.',
   updated='Verificato a ottobre 2026 sugli annunci dei marketplace. Le fonti sono in fondo alla pagina.',
   badge='🗓️ Annunci controllati a mano: 14 ottobre 2026',
   range='Prezzi richiesti: $0,29 – $4.960 · Eldorado.gg, prima pagina: $2 – $400',
@@ -200,7 +200,7 @@ TEXT = {
   a_rules=('Sì. I termini di PUBG Mobile (Proxima Beta Pte. Limited) dicono che l’account è personale e che è vietato regalarlo, prestarlo, trasferirlo o permettere in qualsiasi altro modo '
            'a un’altra persona di accedervi o usarlo. Anche oggetti e valuta virtuali non possono essere scambiati né venduti; l’editore può sospendere l’accesso o chiudere il contratto.'),
   q_where='Da dove vengono questi annunci?',
-  a_where=('Eldorado.gg, FunPay e igitems.com sono marketplace internazionali; GameSatış è turco. Ogni cifra di questa pagina è un prezzo richiesto che abbiamo controllato a mano il 14 ottobre 2026: '
+  a_where=('Eldorado.gg, FunPay e igitems.com sono marketplace internazionali; GameSatış è turco e GameTrade giapponese. Ogni cifra di questa pagina è un prezzo richiesto che abbiamo controllato a mano il 14 ottobre 2026: '
            'non sono vendite concluse e nulla è stato raccolto in automatico.'),
   world_dem=dict(global_='Livello di collezione, X-Suit, M416 Glacier', cis='X-Suit al livello massimo (Pharaoh, Raven), supercar, numero di mitici',
                  tr='Livello di collezione, numero di oggetti epici, armi al massimo, supercar',
