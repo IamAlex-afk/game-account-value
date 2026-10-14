@@ -28,7 +28,7 @@ TEXT = {
            'FunPay’de <strong>6.332</strong> ilan, 0,26 € ile 3.286 € arasında (≈ 0,29 $ – 3.676 $). Bu farkın büyük kısmını tek bir sayı açıklıyor: koleksiyon seviyesi.'),
   q_table='Hangi koleksiyon seviyesinde hesaplar ne kadara ilan ediliyor?',
   table_head=('Koleksiyon seviyesi', 'Görülen ilan fiyatı', 'Nerede'),
-  table_note='14 Ekim 2026 ilan fiyatları; dolara 1 $ = 49,4 ₺ ve 0,894 € kuruyla çevrildi. Çoğu satırda tek ilan var — fiyat listesi değil, yön gösterir. '
+  table_note='14 Ekim 2026 ilan fiyatları; dolara 1 $ = 49,4 ₺, 0,894 € ve 25.633 ₫ kuruyla çevrildi. Çoğu satırda tek ilan var — fiyat listesi değil, yön gösterir. '
              '74 seviyedeki 909 $’lık ilanda ayrıca 14 max silah yazıyor.',
   q_value='Bir PUBG Mobile hesabının değerini gerçekte ne belirler?',
   value=['<strong>Koleksiyon seviyesi</strong> — oyunda 95 seviye var; sahip olunan her yeni eşya türüne ve kalitesine göre puan ekler, yani seviye bütün envanteri tek sayıda özetler.',
@@ -64,7 +64,7 @@ TEXT = {
   q_brackets='İlan fiyatları piyasada nasıl dağılıyor?',
   brackets_head=('İlan fiyatı', 'İlandaki hesap'),
   brackets_note='igitems.com piyasa raporu, 13 Ekim 2026: 446 PUBG Mobile hesabı satışta. İlanların çoğu 50 $ ile 300 $ arasında.',
-  world_note='Bunlar ilan fiyatlarıdır, tamamlanmış satışlar değil. 1 $ = 0,894 € ve 49,4 ₺ kuruyla çevrildi (Ekim 2026). Yalnızca piyasayı anlatır — alım ya da satım tavsiyesi değildir; hesap ticareti oyunun kurallarına aykırıdır.',
+  world_note='Bunlar ilan fiyatlarıdır, tamamlanmış satışlar değil. 1 $ = 0,894 €, 49,4 ₺ ve 25.633 ₫ kuruyla çevrildi (Ekim 2026). Yalnızca piyasayı anlatır — alım ya da satım tavsiyesi değildir; hesap ticareti oyunun kurallarına aykırıdır.',
   sources=[f'GameSatış — <a href="{GS}" target="_blank" rel="noopener">PUBG Mobile hesap satışı</a>, 14 Ekim 2026’da kontrol edildi',
            f'Eldorado.gg — <a href="{EL}" target="_blank" rel="noopener">PUBG Mobile hesap ilanları</a> (10.905), 14 Ekim 2026’da kontrol edildi',
            f'FunPay — <a href="{FP}" target="_blank" rel="noopener">PUBG Mobile hesapları</a> (6.332), 14 Ekim 2026’da kontrol edildi',

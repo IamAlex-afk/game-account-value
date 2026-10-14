@@ -44,7 +44,7 @@ TEXT = {
            'On Türkiye’s GameSatış the asking prices ran from 1,000 ₺ to 245,000 ₺ (≈ $20 – $4,960). Most of that spread follows one number: the collection level.'),
   q_table='What do accounts ask at each collection level?',
   table_head=('Collection level', 'Asking price seen', 'Where'),
-  table_note='Asking prices on October 14, 2026, converted at 49.4 TRY and 0.894 EUR per US dollar. Usually one listing per row — a direction, not a price list. '
+  table_note='Asking prices on October 14, 2026, converted at 49.4 TRY, 0.894 EUR and 25,633 VND per US dollar. Usually one listing per row — a direction, not a price list. '
              'The $909 listing at level 74 also names 14 maxed guns.',
   q_value='What actually determines a PUBG Mobile account’s value?',
   value=['<strong>Collection level</strong> — the game has 95 levels; every newly owned item adds points by its type and quality, so the level sums up the whole inventory.',
@@ -79,7 +79,7 @@ TEXT = {
   q_brackets='How are asking prices spread across the market?',
   brackets_head=('Asking price', 'Accounts listed'),
   brackets_note='igitems.com market report, October 13, 2026: 446 PUBG Mobile accounts listed. Most ask $50 – $300.',
-  world_note='Asking prices, not completed sales. Converted at 0.894 EUR and 49.4 TRY per US dollar (October 2026). Descriptive only — not advice to buy or sell; account trading breaks the game’s rules.',
+  world_note='Asking prices, not completed sales. Converted at 0.894 EUR, 49.4 TRY and 25,633 VND per US dollar (October 2026). Descriptive only — not advice to buy or sell; account trading breaks the game’s rules.',
   sources=[f'Eldorado.gg — <a href="{EL}" target="_blank" rel="noopener">PUBG Mobile account listings</a> (10,905), checked October 14, 2026',
            f'FunPay — <a href="{FP}" target="_blank" rel="noopener">PUBG Mobile accounts</a> (6,332), checked October 14, 2026',
            f'GameSatış — <a href="{GS}" target="_blank" rel="noopener">PUBG Mobile hesap satışı</a>, checked October 14, 2026',
@@ -113,7 +113,7 @@ TEXT = {
            'На турецкой GameSatış — от 1 000 ₺ до 245 000 ₺ (≈ $20 – $4 960). Почти весь этот разброс объясняет одно число — уровень коллекции.'),
   q_table='Сколько просят за аккаунт на разных уровнях коллекции?',
   table_head=('Уровень коллекции', 'Цена в объявлении', 'Где'),
-  table_note='Цены объявлений на 14 октября 2026, пересчёт по курсу 49.4 ₺ и €0.894 за доллар. Обычно одно объявление на строку — это ориентир, а не прайс-лист. '
+  table_note='Цены объявлений на 14 октября 2026, пересчёт по курсу 49.4 ₺, €0.894 и 25 633 ₫ за доллар. Обычно одно объявление на строку — это ориентир, а не прайс-лист. '
              'В объявлении за $909 на уровне 74 указаны ещё 14 прокачанных до максимума стволов.',
   q_value='Что на самом деле определяет цену аккаунта PUBG Mobile?',
   value=['<strong>Уровень коллекции</strong> — в игре 95 уровней; за каждый новый предмет начисляются очки в зависимости от типа и редкости, так что уровень показывает весь инвентарь сразу.',
@@ -149,7 +149,7 @@ TEXT = {
   q_brackets='Как распределены цены по рынку?',
   brackets_head=('Цена в объявлении', 'Аккаунтов'),
   brackets_note='Рыночный отчёт igitems.com на 13 октября 2026: 446 аккаунтов PUBG Mobile. Больше всего объявлений — от $50 до $300.',
-  world_note='Это цены объявлений, а не завершённых сделок. Пересчёт по курсу €0.894 и 49.4 ₺ за доллар (октябрь 2026). Только описание рынка — не совет покупать или продавать; торговля аккаунтами нарушает правила игры.',
+  world_note='Это цены объявлений, а не завершённых сделок. Пересчёт по курсу €0.894, 49.4 ₺ и 25 633 ₫ за доллар (октябрь 2026). Только описание рынка — не совет покупать или продавать; торговля аккаунтами нарушает правила игры.',
   sources=[f'Eldorado.gg — <a href="{EL}" target="_blank" rel="noopener">объявления об аккаунтах PUBG Mobile</a> (10 905), проверено 14 октября 2026',
            f'FunPay — <a href="{FP}" target="_blank" rel="noopener">аккаунты PUBG Mobile</a> (6 332), проверено 14 октября 2026',
            f'GameSatış — <a href="{GS}" target="_blank" rel="noopener">PUBG Mobile hesap satışı</a>, проверено 14 октября 2026',

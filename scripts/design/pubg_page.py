@@ -18,9 +18,9 @@ import world_markets as WM                      # world-table labels (T) and eac
 from world_events import render_events, render_event_ld
 from world_results import render_results
 from world_extra import NAMES
-import pubg_text_a, pubg_text_b
+import pubg_text_a, pubg_text_b, pubg_text_c
 TEXT = {}
-for mod in (pubg_text_a, pubg_text_b):
+for mod in (pubg_text_a, pubg_text_b, pubg_text_c):
     TEXT.update(mod.TEXT)
 ROWS, BRACKETS = pubg_text_a.ROWS, pubg_text_a.BRACKETS
 NBSP = ' '
@@ -59,6 +59,7 @@ MARKETS = {   # region → (marketplaces, asking prices seen, ≈ USD)
     'sea': ([('igitems.com', pubg_text_a.IG)], '₫1,198,362 – ₫20,014,498', '$47 – $781'),
 }
 FLAG = {'global': '🌍', 'cis': '🇷🇺', 'tr': '🇹🇷', 'sea': '🌏'}
+BLOCKED = {'br'}   # GGMAX PUBG Mobile page answered 403 on 2026-10-14 (as for every game before)
 
 
 def path(lang):
@@ -89,6 +90,11 @@ def world(lang, t):
                 f'<td data-l="{c[4]}">{t["world_dem"]["global_" if k == "global" else k]}</td></tr>')
     if local in MARKETS:
         rows = row(local, True) + f'<tr class="wm-sep"><td colspan="5">{w["others"]}</td></tr>' + ''.join(row(k, False) for k in order[1:])
+    elif local in BLOCKED:   # the reader's own market, tried and refused (403) — said so, never estimated
+        head = (f'<th scope="row"><span class="wm-flag" aria-hidden="true">{WM.FLAG[local]}</span>{reg(local)}'
+                f' <span class="wm-you">{w["your"]}</span></th>')
+        rows = (f'<tr class="wm-mine">{head}<td colspan="4" class="wm-nv">{w["nv"]}</td></tr>'
+                f'<tr class="wm-sep"><td colspan="5">{w["others"]}</td></tr>' + ''.join(row(k, False) for k in order))
     else:
         rows = ''.join(row(k, False) for k in order)
     return ('<section class="g-card g-news-card g-world"><span id="world" class="anchor-target"></span>\n'
