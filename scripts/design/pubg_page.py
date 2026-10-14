@@ -22,7 +22,7 @@ import pubg_text_a, pubg_text_b
 TEXT = {}
 for mod in (pubg_text_a, pubg_text_b):
     TEXT.update(mod.TEXT)
-ROWS = pubg_text_a.ROWS
+ROWS, BRACKETS = pubg_text_a.ROWS, pubg_text_a.BRACKETS
 NBSP = ' '
 
 
@@ -56,8 +56,9 @@ MARKETS = {   # region → (marketplaces, asking prices seen, ≈ USD)
     'global': ([('Eldorado.gg', pubg_text_a.EL)], '$2 – $399.99', '$2 – $400'),
     'cis': ([('FunPay', pubg_text_a.FP)], '€0.26 – €3,286', '$0.29 – $3,676'),
     'tr': ([('GameSatış', pubg_text_a.GS)], '1,000 ₺ – 245,000 ₺', '$20 – $4,960'),
+    'sea': ([('igitems.com', pubg_text_a.IG)], '₫1,198,362 – ₫20,014,498', '$47 – $781'),
 }
-FLAG = {'global': '🌍', 'cis': '🇷🇺', 'tr': '🇹🇷'}
+FLAG = {'global': '🌍', 'cis': '🇷🇺', 'tr': '🇹🇷', 'sea': '🌏'}
 
 
 def path(lang):
@@ -76,7 +77,7 @@ def world(lang, t):
     w = WM.T[lang]; c = w['cols']
     reg = lambda k: w['reg']['global_' if k == 'global' else k].replace('&', '&amp;')
     local = WM.LOCAL.get(lang, 'global')
-    order = ([local] if local in MARKETS else []) + [k for k in ('global', 'cis', 'tr') if k != local]
+    order = ([local] if local in MARKETS else []) + [k for k in ('global', 'cis', 'tr', 'sea') if k != local]
 
     def row(k, mine):
         where = ', '.join(f'<a href="{u}" target="_blank" rel="noopener">{n}</a>' for n, u in MARKETS[k][0])
@@ -102,9 +103,12 @@ def sections(t, h2):
     sec = lambda anchor, body: f'<section class="g-card g-news-card"><span id="{anchor}" class="anchor-target"></span>\n{body}\n</section>\n'
     table = ('<table class="tier-table">\n<tbody>\n  <tr>' + ''.join(f'<th>{x}</th>' for x in t['table_head']) + '</tr>\n' +
              ''.join(f'  <tr><td>{t["level"](a)}</td><td>{t["money"](b)}</td><td>{c}</td></tr>\n' for a, b, c in ROWS) + '</tbody>\n</table>')
+    brackets = ('<table class="tier-table">\n<tbody>\n  <tr>' + ''.join(f'<th>{x}</th>' for x in t['brackets_head']) + '</tr>\n' +
+                ''.join(f'  <tr><td>{t["money"](a)}</td><td>{b}</td></tr>\n' for a, b in BRACKETS) + '</tbody>\n</table>')
     ul = lambda items, tag='ul': f'<{tag}>\n' + ''.join(f'  <li>{i}</li>\n' for i in items) + f'</{tag}>'
     return (sec('pricing', f'<h2>{h2["pricing"]}</h2>\n<h3>{t["q_worth"]}</h3>\n<p>{t["a_worth"]}</p>\n<h3>{t["q_table"]}</h3>\n{table}\n'
-                           f'<p style="font-size:13px; color:var(--muted);">{t["table_note"]}</p>')
+                           f'<p style="font-size:13px; color:var(--muted);">{t["table_note"]}</p>\n'
+                           f'<h3>{t["q_brackets"]}</h3>\n{brackets}\n<p style="font-size:13px; color:var(--muted);">{t["brackets_note"]}</p>')
             + '{WORLD}' +
             sec('value', f'<h2>{h2["value"]}</h2>\n<h3>{t["q_value"]}</h3>\n{ul(t["value"])}\n<h3>{t["q_lookup"]}</h3>\n{ul(t["lookup"])}') +
             sec('shots', f'<h2>{t["h2_shots"]}</h2>\n<h3>{t["q_shots"]}</h3>\n<p>{t["shots_intro"]}</p>\n{ul(t["shots"])}\n'
@@ -115,7 +119,8 @@ def sections(t, h2):
 
 def faq(t):
     table_txt = ' '.join(t['table_head']) + ' ' + ' '.join(f'{t["level"](a)} {t["money"](b)} {c}' for a, b, c in ROWS) + ' ' + t['table_note']
-    qa = [(t['q_worth'], t['a_worth']), (t['q_table'], table_txt), (t['q_value'], ' '.join(t['value'])),
+    br_txt = ' '.join(t['brackets_head']) + ' ' + ' '.join(f'{t["money"](a)} {b}' for a, b in BRACKETS) + ' ' + t['brackets_note']
+    qa = [(t['q_worth'], t['a_worth']), (t['q_table'], table_txt), (t['q_brackets'], br_txt), (t['q_value'], ' '.join(t['value'])),
           (t['q_lookup'], ' '.join(t['lookup'])), (t['q_shots'], t['shots_intro'] + ' ' + ' '.join(t['shots']) + ' ' + t['shots_note']),
           (t['q_scams'], t['a_scams']), (t['q_rules'], t['a_rules']), (t['q_where'], t['a_where'])]
     return [{'@type': 'Question', 'name': plain(q), 'acceptedAnswer': {'@type': 'Answer', 'text': plain(a)}} for q, a in qa]

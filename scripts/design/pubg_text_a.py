@@ -13,9 +13,12 @@ EWC = 'https://esportsworldcup.com/en/press-releases/s2g-esports-win-nine-day-ga
 GOP = 'https://gamingonphone.com/guides/how-to-get-rewards-collections-rank-in-pubg-mobile-or-bgmi/'
 
 # collection level → asking price seen (one or two listings each), shared by every language
-ROWS = [('41', '≈ $37', 'FunPay'), ('53', '≈ $176', 'FunPay'), ('67', '$249', 'Eldorado.gg'),
+IG = 'https://igitems.com/pubgm-account'
+ROWS = [('41', '≈ $37', 'FunPay'), ('60', '≈ $114', 'igitems.com'), ('67', '$249', 'Eldorado.gg'),
         ('71 – 74', '$272 – $909', 'GameSatış, Eldorado.gg'), ('81.5', '≈ $1,174', 'GameSatış'),
         ('85 – 87.8', '≈ $2,348 – $3,138', 'GameSatış'), ('92.6', '≈ $4,960', 'GameSatış')]
+# igitems market report, 2026-10-13: listings per price bracket (446 accounts)
+BRACKETS = [('$0 – $15', '29'), ('$15 – $50', '56'), ('$50 – $150', '196'), ('$150 – $300', '126'), ('$300+', '39')]
 
 TEXT = {
  'en': dict(
@@ -24,7 +27,7 @@ TEXT = {
   og_title='How Much Is My PUBG Mobile Account Worth? — GameAccountValue',
   og_alt='GameAccountValue — PUBG Mobile account value',
   h1='🪂 PUBG Mobile Account Value',
-  intro='Asking prices from three marketplaces, the one number those prices follow — the collection level — and the screenshots that show it.',
+  intro='Asking prices from four marketplaces, the one number those prices follow — the collection level — and the screenshots that show it.',
   updated='Checked October 2026 against marketplace listings. Sources are listed at the bottom of the page.',
   badge='🗓️ Listings checked by hand: October 14, 2026',
   range='Asking prices seen: $0.29 – $4,960 · Eldorado.gg, first page: $2 – $400',
@@ -69,14 +72,18 @@ TEXT = {
   a_rules=('Yes. The PUBG Mobile terms (Proxima Beta Pte. Limited) say: “Your Account is personal to you and you are prohibited from gifting, lending, transferring or otherwise '
            'permitting any other person to access or use Your Account.” Virtual goods and currency may not be traded or sold either, and the publisher may suspend access or end the agreement.'),
   q_where='Where do these listings come from?',
-  a_where=('Eldorado.gg and FunPay are international marketplaces, GameSatış is Turkish. Every figure on this page is an asking price seen by hand on October 14, 2026 — '
+  a_where=('Eldorado.gg, FunPay and igitems.com are international marketplaces, GameSatış is Turkish. Every figure on this page is an asking price seen by hand on October 14, 2026 — '
            'not a completed sale, and nothing was collected automatically.'),
   world_dem=dict(global_='Collection level, X-Suits, Glacier M416', cis='Max-level X-Suits (Pharaoh, Raven), sports cars, Mythic count',
-                 tr='Collection level, epic item count, maxed guns, sports cars'),
+                 tr='Collection level, epic item count, maxed guns, sports cars', sea='Glacier M416 at max level, Mummy sets, Gun Lab count, Mythic fashion count'),
+  q_brackets='How are asking prices spread across the market?',
+  brackets_head=('Asking price', 'Accounts listed'),
+  brackets_note='igitems.com market report, October 13, 2026: 446 PUBG Mobile accounts listed. Most ask $50 – $300.',
   world_note='Asking prices, not completed sales. Converted at 0.894 EUR and 49.4 TRY per US dollar (October 2026). Descriptive only — not advice to buy or sell; account trading breaks the game’s rules.',
   sources=[f'Eldorado.gg — <a href="{EL}" target="_blank" rel="noopener">PUBG Mobile account listings</a> (10,905), checked October 14, 2026',
            f'FunPay — <a href="{FP}" target="_blank" rel="noopener">PUBG Mobile accounts</a> (6,332), checked October 14, 2026',
            f'GameSatış — <a href="{GS}" target="_blank" rel="noopener">PUBG Mobile hesap satışı</a>, checked October 14, 2026',
+           f'igitems.com — <a href="{IG}" target="_blank" rel="noopener">PUBG Mobile accounts and market report</a> (446), checked October 14, 2026',
            f'Proxima Beta — <a href="{EULA}" target="_blank" rel="noopener">PUBG Mobile terms of service</a>',
            f'PUBG MOBILE Esports — <a href="{PR}" target="_blank" rel="noopener">2026 esports roadmap</a> (press release, December 12, 2025)',
            f'Esports World Cup — <a href="{EWC}" target="_blank" rel="noopener">S2G Esports win the PMWC</a> (August 16, 2026)',
@@ -88,7 +95,7 @@ TEXT = {
   og_title='Сколько стоит мой аккаунт PUBG Mobile? | GameAccountValue',
   og_alt='GameAccountValue — стоимость аккаунта PUBG Mobile',
   h1='🪂 Стоимость аккаунта PUBG Mobile',
-  intro='Цены объявлений на трёх площадках, одно число, от которого они зависят, — уровень коллекции, и скриншоты, на которых его видно.',
+  intro='Цены объявлений на четырёх площадках, одно число, от которого они зависят, — уровень коллекции, и скриншоты, на которых его видно.',
   updated='Проверено в октябре 2026 по объявлениям на площадках. Источники — в конце страницы.',
   badge='🗓️ Объявления проверены вручную: 14 октября 2026',
   range='Цены в объявлениях: $0.29 – $4 960 · Eldorado.gg, первая страница: $2 – $400',
@@ -134,14 +141,19 @@ TEXT = {
   a_rules=('Да. В правилах PUBG Mobile (Proxima Beta Pte. Limited) сказано: аккаунт личный, и его запрещено дарить, одалживать, передавать или иным образом давать '
            'другим людям доступ к нему. Продавать и обменивать виртуальные предметы и валюту тоже нельзя; издатель может заблокировать доступ или расторгнуть соглашение.'),
   q_where='Откуда эти объявления?',
-  a_where=('Eldorado.gg и FunPay — международные площадки, GameSatış — турецкая. Каждая цифра на странице — цена объявления, которую мы посмотрели вручную 14 октября 2026 года; '
+  a_where=('Eldorado.gg, FunPay и igitems.com — международные площадки, GameSatış — турецкая. Каждая цифра на странице — цена объявления, которую мы посмотрели вручную 14 октября 2026 года; '
            'это не завершённые сделки, и автоматически ничего не собиралось.'),
   world_dem=dict(global_='Уровень коллекции, X-костюмы, Glacier M416', cis='X-костюмы максимального уровня (Фараон, Ворон), спорткары, число мификов',
-                 tr='Уровень коллекции, число эпических предметов, прокачанное оружие, спорткары'),
+                 tr='Уровень коллекции, число эпических предметов, прокачанное оружие, спорткары',
+                 sea='Glacier M416 максимального уровня, наборы «Мумия», число стволов из Gun Lab, число мификов'),
+  q_brackets='Как распределены цены по рынку?',
+  brackets_head=('Цена в объявлении', 'Аккаунтов'),
+  brackets_note='Рыночный отчёт igitems.com на 13 октября 2026: 446 аккаунтов PUBG Mobile. Больше всего объявлений — от $50 до $300.',
   world_note='Это цены объявлений, а не завершённых сделок. Пересчёт по курсу €0.894 и 49.4 ₺ за доллар (октябрь 2026). Только описание рынка — не совет покупать или продавать; торговля аккаунтами нарушает правила игры.',
   sources=[f'Eldorado.gg — <a href="{EL}" target="_blank" rel="noopener">объявления об аккаунтах PUBG Mobile</a> (10 905), проверено 14 октября 2026',
            f'FunPay — <a href="{FP}" target="_blank" rel="noopener">аккаунты PUBG Mobile</a> (6 332), проверено 14 октября 2026',
            f'GameSatış — <a href="{GS}" target="_blank" rel="noopener">PUBG Mobile hesap satışı</a>, проверено 14 октября 2026',
+           f'igitems.com — <a href="{IG}" target="_blank" rel="noopener">аккаунты PUBG Mobile и рыночный отчёт</a> (446), проверено 14 октября 2026',
            f'Proxima Beta — <a href="{EULA}" target="_blank" rel="noopener">пользовательское соглашение PUBG Mobile</a>',
            f'PUBG MOBILE Esports — <a href="{PR}" target="_blank" rel="noopener">киберспортивный план на 2026 год</a> (пресс-релиз, 12 декабря 2025)',
            f'Esports World Cup — <a href="{EWC}" target="_blank" rel="noopener">S2G Esports выигрывает PMWC</a> (16 августа 2026)',

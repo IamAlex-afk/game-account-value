@@ -1,7 +1,7 @@
 """PUBG Mobile page text (2026-10-14) — Turkish, written for Turkish players.
 Turkish number format (245.000 ₺, 0,29 $, level 74,5); the own market (GameSatış) comes first.
 Terms as Turkish sellers write them: koleksiyon seviyesi, max silah, spor araba, mitik."""
-from pubg_text_a import EL, FP, GS, EULA, PR, EWC, GOP
+from pubg_text_a import EL, FP, GS, IG, EULA, PR, EWC, GOP
 
 TEXT = {
  'tr': dict(
@@ -11,7 +11,7 @@ TEXT = {
   og_title='PUBG Mobile Hesabım Ne Kadar Eder? — GameAccountValue',
   og_alt='GameAccountValue — PUBG Mobile hesap değeri',
   h1='🪂 PUBG Mobile Hesap Değeri',
-  intro='Üç pazar yerindeki ilan fiyatları, bu fiyatların bağlı olduğu tek sayı — koleksiyon seviyesi — ve onu gösteren ekran görüntüleri.',
+  intro='Dört pazar yerindeki ilan fiyatları, bu fiyatların bağlı olduğu tek sayı — koleksiyon seviyesi — ve onu gösteren ekran görüntüleri.',
   updated='Ekim 2026’da pazar yeri ilanlarıyla kontrol edildi. Kaynaklar sayfanın altında.',
   badge='🗓️ İlanlar elle kontrol edildi: 14 Ekim 2026',
   range='Görülen ilan fiyatları: 0,29 $ – 4.960 $ · GameSatış: 1.000 ₺ – 245.000 ₺',
@@ -56,14 +56,19 @@ TEXT = {
   a_rules=('Evet. PUBG Mobile kullanım koşullarında (Proxima Beta Pte. Limited) hesabın kişisel olduğu ve onu hediye etmenin, ödünç vermenin, devretmenin veya başka birinin '
            'kullanmasına izin vermenin yasak olduğu yazıyor. Sanal eşya ve para birimi de satılamaz ya da takas edilemez; yayıncı erişimi askıya alabilir veya sözleşmeyi sonlandırabilir.'),
   q_where='Bu ilanlar nereden geliyor?',
-  a_where=('GameSatış Türk pazar yeridir, Eldorado.gg ve FunPay uluslararasıdır. Bu sayfadaki her rakam 14 Ekim 2026’da elle bakılmış bir ilan fiyatıdır — '
+  a_where=('GameSatış Türk pazar yeridir, Eldorado.gg, FunPay ve igitems.com uluslararasıdır. Bu sayfadaki her rakam 14 Ekim 2026’da elle bakılmış bir ilan fiyatıdır — '
            'tamamlanmış satış değildir ve hiçbir veri otomatik olarak toplanmadı.'),
   world_dem=dict(global_='Koleksiyon seviyesi, X-Suit’ler, Buz Diyarı M416', cis='Maksimum seviye X-Suit’ler (Firavun, Blood Raven), spor arabalar, mitik sayısı',
-                 tr='Koleksiyon seviyesi, destansı eşya sayısı, max silahlar, spor arabalar'),
+                 tr='Koleksiyon seviyesi, destansı eşya sayısı, max silahlar, spor arabalar',
+                 sea='Maksimum seviye Buz Diyarı M416, Mumya setleri, Gun Lab silah sayısı, mitik kıyafet sayısı'),
+  q_brackets='İlan fiyatları piyasada nasıl dağılıyor?',
+  brackets_head=('İlan fiyatı', 'İlandaki hesap'),
+  brackets_note='igitems.com piyasa raporu, 13 Ekim 2026: 446 PUBG Mobile hesabı satışta. İlanların çoğu 50 $ ile 300 $ arasında.',
   world_note='Bunlar ilan fiyatlarıdır, tamamlanmış satışlar değil. 1 $ = 0,894 € ve 49,4 ₺ kuruyla çevrildi (Ekim 2026). Yalnızca piyasayı anlatır — alım ya da satım tavsiyesi değildir; hesap ticareti oyunun kurallarına aykırıdır.',
   sources=[f'GameSatış — <a href="{GS}" target="_blank" rel="noopener">PUBG Mobile hesap satışı</a>, 14 Ekim 2026’da kontrol edildi',
            f'Eldorado.gg — <a href="{EL}" target="_blank" rel="noopener">PUBG Mobile hesap ilanları</a> (10.905), 14 Ekim 2026’da kontrol edildi',
            f'FunPay — <a href="{FP}" target="_blank" rel="noopener">PUBG Mobile hesapları</a> (6.332), 14 Ekim 2026’da kontrol edildi',
+           f'igitems.com — <a href="{IG}" target="_blank" rel="noopener">PUBG Mobile hesapları ve piyasa raporu</a> (446), 14 Ekim 2026’da kontrol edildi',
            f'Proxima Beta — <a href="{EULA}" target="_blank" rel="noopener">PUBG Mobile kullanım koşulları</a>',
            f'PUBG MOBILE Esports — <a href="{PR}" target="_blank" rel="noopener">2026 espor yol haritası</a> (basın bülteni, 12 Aralık 2025)',
            f'Esports World Cup — <a href="{EWC}" target="_blank" rel="noopener">S2G Esports PMWC şampiyonu</a> (16 Ağustos 2026)',

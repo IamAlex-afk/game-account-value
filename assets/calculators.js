@@ -706,7 +706,7 @@
       }
     },
     // Asking prices by collection level, checked by hand 2026-10-14 (pubg-mobile.html table):
-    // FunPay 41 ≈ $37, 53 ≈ $176; Eldorado.gg 67 $249, 74 $400; GameSatış 71 $272, 74 $909,
+    // FunPay 41 ≈ $37; igitems 60 ≈ $114; Eldorado.gg 67 $249, 74 $400; GameSatış 71 $272, 74 $909,
     // 81.5 $1,174, 85 $2,348, 87.8 $3,138, 92.6 $4,960. Centre = the bot's anchor curve
     // (GameAccountValue_Bot core/valuation.py PUBG_COLL_ANCHORS); the range here is wider
     // (×0.55–×1.6) than the bot's (×0.70–×1.35), as for every game.
@@ -717,7 +717,7 @@
       ],
       score: function (v) { return norm(v.coll, 40, 90); },
       compute: function (v) {
-        var A = [[1, 3], [20, 5], [30, 12], [40, 30], [53, 135], [67, 250], [74, 520], [81.5, 1170], [85, 2350], [88, 3140], [92.6, 4960], [95, 6000]];
+        var A = [[1, 3], [20, 5], [30, 12], [40, 30], [53, 110], [60, 150], [67, 250], [74, 520], [81.5, 1170], [85, 2350], [88, 3140], [92.6, 4960], [95, 6000]];
         var x = Math.max(1, Math.min(v.coll, 95)), c = A[A.length - 1][1];
         for (var i = 0; i < A.length - 1; i++) {
           if (x <= A[i + 1][0]) {
