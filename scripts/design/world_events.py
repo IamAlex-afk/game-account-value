@@ -24,8 +24,12 @@ EVENTS = {
  ],
  'pubg-mobile': [
    # official press release (PUBG MOBILE Esports via Swipe Right, 2025-12-12): Türkiye, $3,000,000; no city or month given
-   dict(id='pm-gc26', month=None, title='PUBG Mobile Global Championship 2026 · $3,000,000', where=(None, 'TR'), kind='esports', status='tba', major=True,
-        src=('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/pubg-mobile-esports-unveils-2026-esports-roadmap-with-expanded-global-opportunities-at-2025-pmgc-3421490', 'PUBG MOBILE Esports')),
+   # PMGO S2: publisher release 2026-10-13 (dates, Lahore, $500,000; first official global PUBG Mobile event in Pakistan)
+   dict(id='pm-pmgo2', start='2026-10-20', end='2026-10-25', title='PUBG Mobile Global Open 2026 Season 2 · $500,000', where=('Lahore', 'PK'), kind='esports', status='ok',
+        src=('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/2026-pubg-mobile-global-open-pmgo-season-2-introduces-brand-new-format-details-slots-and-dates-revealed-3472313', 'PUBG MOBILE Esports')),
+   # PMGC: $3,000,000 (release 2025-12-12); Istanbul named in the release of 2026-10-13 ("later this year"); dates not given
+   dict(id='pm-gc26', month=None, title='PUBG Mobile Global Championship 2026 · $3,000,000', where=('Istanbul', 'TR'), kind='esports', status='tba', major=True,
+        src=('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/2026-pubg-mobile-global-open-pmgo-season-2-introduces-brand-new-format-details-slots-and-dates-revealed-3472313', 'PUBG MOBILE Esports')),
  ],
  'clash-of-clans': [
    dict(id='coc-lcq', month='2026-10', title='Clash of Clans World Championship · Last Chance Qualifier', where=None, kind='esports', status='tba', src=('https://event.supercell.com/clashofclans/en/cups/world-championship/how-to-compete', 'Supercell')),
@@ -142,7 +146,7 @@ def render_events(game, lang, names):
 # ---- schema.org Event (Google event rich results) ------------------------
 # Only in-person events with a confirmed start date (Google excludes
 # virtual-only and undated events). Mirrors the visible timeline.
-VENUE = {'bs-lcq': ('Guangzhou', 'Guangzhou', 'CN'), 'bs-wf': ('Tokyo Metropolitan Gymnasium', 'Tokyo', 'JP'),
+VENUE = {'pm-pmgo2': ('Lahore', 'Lahore', 'PK'), 'bs-lcq': ('Guangzhou', 'Guangzhou', 'CN'), 'bs-wf': ('Tokyo Metropolitan Gymnasium', 'Tokyo', 'JP'),
          'ml-enc': ('Riyadh', 'Riyadh', 'SA'), 'ff-wsgf': ('Bangkok', 'Bangkok', 'TH')}
 
 # Search Console (2026-09-30) listed description, image, organizer.url,

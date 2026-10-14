@@ -13,7 +13,9 @@ RESULTS = {
                          src=('https://en.wikipedia.org/wiki/MLBB_M7_World_Championship', 'Wikipedia'))],
  'free-fire': [dict(id='r-ffewc26', title='Free Fire · Esports World Cup 2026', where=('Paris', 'FR'), winner='LYON', origin='latam', prize='$300,000', pool=None,
                     src=('https://esportsworldcup.com/en/press-releases/lyon-crowned-free-fire-champions-at-ewc26', 'Esports World Cup'))],
- 'pubg-mobile': [dict(id='r-pmwc26', title='PUBG Mobile World Cup 2026 (EWC)', where=('Paris', 'FR'), winner='S2G Esports', origin='TR', prize='$555,000', pool='$3,025,000',
+ 'pubg-mobile': [dict(id='r-asiad26', title='Asian Games 2026 · PUBG Mobile Asian Games Version', where=('Aichi-Nagoya', 'JP'), winner='Thailand', winner_cc='TH', origin='TH', prize=None, pool=None,
+                      src=('https://www.mynewsdesk.com/uk/swipe-right/pressreleases/solid-gold-performance-powers-thailand-to-triumph-at-the-2026-asian-games-esports-finals-pubg-mobile-asian-games-version-3469780', 'PUBG MOBILE Esports')),
+                 dict(id='r-pmwc26', title='PUBG Mobile World Cup 2026 (EWC)', where=('Paris', 'FR'), winner='S2G Esports', origin='TR', prize='$555,000', pool='$3,025,000',
                       src=('https://esportsworldcup.com/en/press-releases/s2g-esports-win-nine-day-gauntlet', 'Esports World Cup'))],
  'fortnite': [dict(id='r-fncs26', title='FNCS Global Championship 2026', where=('Antwerp', 'BE'), winner='Swizzy & Pixie', origin=None, prize=None, pool='$2,000,000',
                    src=('https://www.fortnite.com/competitive/fncs-2026-global-championship', 'Epic Games'))],
@@ -64,7 +66,7 @@ def render_results(game, lang, names):
         place = e['where'][0] + ', ' + names['countries'][lang][e['where'][1]]
         rows += ('<tr><th scope="row">' + e['title'] + '<span class="ev-where">' + date + ' · ' + place +
                  ' · <a href="' + e['src'][0] + '" target="_blank" rel="noopener">' + e['src'][1] + '</a></span></th>'
-                 '<td data-l="' + c[1] + '"><strong>🏆 ' + e['winner'].replace('&', '&amp;') + '</strong></td><td data-l="' + c[2] + '">' + origin + '</td>'
+                 '<td data-l="' + c[1] + '"><strong>🏆 ' + (names['countries'][lang][e['winner_cc']] if e.get('winner_cc') else e['winner']).replace('&', '&amp;') + '</strong></td><td data-l="' + c[2] + '">' + origin + '</td>'
                  '<td data-l="' + c[3] + '" class="wm-num">' + (e['prize'] or '—') + '</td><td data-l="' + c[4] + '" class="wm-num">' + (e['pool'] or '—') + '</td></tr>')
     return ('<h3>🏆 ' + r['h'] + '</h3><div class="wm-wrap"><table class="wm-table wm-small wm-results"><thead><tr><th scope="col">' +
             '</th><th scope="col">'.join(c) + '</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
