@@ -60,6 +60,9 @@ spam policies 2026-08-28):
 ## Page types — what Google's guides ask for
 - **Game page (tool + report):** calculator, real price ranges with sources and dates, what raises/
   lowers value, comparison links, honest pros & cons, scam risks, rules, FAQ, sources list.
+- **Game page answer-first** (for AI answer engines): one short paragraph after the intro with the usual asking
+  range and the top listing (scripts/design/answer_first.py, figures = the comparison ceiling table). Re-run it
+  after pubg_page.py / news_pages.py / any game-page rebuild; keep the table and FIG in sync.
 - **News article:** its own URL, headline from a real fact, visible "Published/Updated", NewsArticle
   JSON-LD (headline, image, datePublished, dateModified, author), sources (official publishers only —
   no marketplace scraping: Eldorado ToS §3.1), links to the game page, homepage and bot.
