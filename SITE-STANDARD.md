@@ -63,6 +63,11 @@ spam policies 2026-08-28):
 - **News article:** its own URL, headline from a real fact, visible "Published/Updated", NewsArticle
   JSON-LD (headline, image, datePublished, dateModified, author), sources (official publishers only —
   no marketplace scraping: Eldorado ToS §3.1), links to the game page, homepage and bot.
+  Names in each language = the publisher's OFFICIAL local names (items, events, currencies: e.g. ja
+  「ポータルペンダント」, not "Portal Pendant") — that is how players search. The headline answers the question
+  players ask (when / what / how to get / does it change account value) with the fact itself, e.g. the date.
+  Check Search Console queries per article monthly (scripts/research/gsc_check.py); fix wording only where the
+  fact is confirmed by the publisher. No keyword lists, no extra pages per query, no FAQ markup for absent text.
 - **About:** how estimates are made, what we never do, how the project is paid for, contact route. Who runs it
   (Aleksei Bitkin) is stated once, in the footer author block of every page and in Person JSON-LD — the owner
   (2026-10-06) does not want it repeated in the page body. Old wording kept for reference: who runs it, what we never do (trade/collect data),
