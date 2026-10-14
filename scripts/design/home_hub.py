@@ -52,7 +52,7 @@ T = {
         ['지역별 최신 가격, 날짜와 출처 포함', '10개 게임의 실제 가격대', '계정이 가장 비싼 게임은?',
          '실제 사기 수법과 피하는 방법', 'OG, whale, smurf 등 20개+ 용어 설명', '모든 숫자를 확인하는 방법']),
  'zh': ('本站全部内容', '最新价格、指南，以及每个数字背后的规则',
-        ['按地区的最新价格，附日期和来源', '全部9款游戏的真实价格区间', '哪款游戏的账号最贵',
+        ['按地区的最新价格，附日期和来源', '全部10款游戏的真实价格区间', '哪款游戏的账号最贵',
          '真实骗局套路及防范方法', 'OG、whale、smurf等20多个术语详解', '我们如何核对每个数字']),
  'pl': ('Wszystko na stronie', 'Świeże ceny, poradniki i zasady stojące za każdą liczbą',
         ['Świeże ceny według regionów, z datami i źródłami', 'Prawdziwe przedziały cen dla 10 gier', 'Która gra ma najdroższe konta',

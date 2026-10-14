@@ -12,14 +12,14 @@ GameAccountValue accepts screenshots of game accounts, analyzes them with Google
 - A procedurally generated PDF collector card with QR verification code: foil colour by value tier (matte WOOD to holographic WHALE), a sequential collection number from #1 (#1-100 GENESIS, #101-1000 FOUNDER editions), a 3D tilt video for paid audits, and clickable links to both the bot and the website. The number and edition are part of the checksummed card, so an edited PDF does not match the QR verification
 - A public Telegraph landing page for sharing
 
-Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 screenshot full audit with a more precise (narrower) range and the PDF certificate, priced in Telegram Stars. No tier gives an exact price — every result is an estimated range.
+Two tiers: a free 1-screenshot rough estimate (once per day), and a paid full audit (2-3 screenshots, 5 for PUBG Mobile) with a more precise (narrower) range and the PDF certificate, priced in Telegram Stars. No tier gives an exact price — every result is an estimated range.
 
 ## Pricing Tiers
 
 - Free: 1-screenshot rough estimate, once per day, no payment
-- Full audit: 2-3 screenshots, PDF certificate with QR verification, one-time payment in Telegram Stars, price adjusted by region
+- Full audit: 2-3 screenshots (5 for PUBG Mobile), PDF certificate with QR verification, one-time payment of 77 Telegram Stars — the same price in every country
 - Unlimited subscription: 7-day or 30-day pass for unlimited full audits, subject to a daily fair-use cap (higher cap on the 30-day tier)
-- Referral program: anyone can share a personal /ref link and earn a percentage of a referred friend's first payment, credited as free-audit balance; a separate paid partner tier (limited slots) earns a higher percentage on an ongoing basis
+- Referral program: anyone can share a personal /ref link and earn 15% of what a referred friend pays, credited as free-audit balance (reversed if that payment is refunded); new paid partner slots are currently closed — existing partners keep their terms
 
 ## Supported Games
 
@@ -36,14 +36,14 @@ Two tiers: a free 1-screenshot rough estimate (once per day), and a paid 2-3 scr
 
 ## Languages Supported
 
-English, Russian, Spanish, Portuguese, Turkish, Arabic, Indonesian, French, German, Italian, Hindi, Vietnamese, Thai, Korean, Japanese, Polish, Chinese, Filipino, Swahili, Malay, Uzbek, Kazakh, Turkmen, Kyrgyz (24 total) — with regional pricing tiers (lower Stars price in lower-purchasing-power regions).
+English, Russian, Spanish, Portuguese, Turkish, Arabic, Indonesian, French, German, Italian, Hindi, Vietnamese, Thai, Korean, Japanese, Polish, Chinese, Filipino, Swahili, Malay, Uzbek, Kazakh, Turkmen, Kyrgyz (24 total).
 
 ## How to Use
 
 1. Open Telegram and search @GameAccountValue_Bot
 2. Send /start and accept the 18+ terms of service
 3. Select a game from the menu
-4. Choose free preview (1 screenshot) or full paid audit (2-3 screenshots, Telegram Stars)
+4. Choose free preview (1 screenshot) or full paid audit (2-3 screenshots, 5 for PUBG Mobile; 77 Telegram Stars)
 5. Send the requested screenshots as prompted
 6. Receive the valuation result, or the PDF certificate for paid audits
 
