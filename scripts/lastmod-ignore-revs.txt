@@ -37,3 +37,4 @@ cdc222e587dab5b53de7d563ae800c04f6e37988  menu/footer: PUBG Mobile added to Game
 2a2889a795f104233aeebb0f1b36d372be5f39b3  menu/footer: PUBG Mobile added to Games, tr (template only)
 8b0d7a0714b6e66698f552a0bddd4174727aef04  menu/footer: PUBG Mobile added to Games, es pt (template only)
 6429540e8030bba48b79ca24678dec5f1d8b776b  menu/footer: PUBG Mobile added to Games, fr de it (template only)
+e7fe9268cedea911fb716287a1049b791147f65e  PUBG pages: hreflang to new languages only (template)
