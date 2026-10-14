@@ -61,9 +61,35 @@ MARKETS = {   # region → (marketplaces, asking prices seen, ≈ USD)
     'cis': ([('FunPay', pubg_text_a.FP)], '€0.26 – €3,286', '$0.29 – $3,676'),
     'tr': ([('GameSatış', pubg_text_a.GS)], '1,000 ₺ – 245,000 ₺', '$20 – $4,960'),
     'sea': ([('igitems.com', pubg_text_a.IG)], '₫1,198,362 – ₫20,014,498', '$47 – $781'),
+    # GameTrade, first page 2026-10-14: 31 accounts ¥50,000 – ¥700,000 (single items from ¥6,000 left out);
+    # collection 84: ¥278,000 / ¥350,000, collection 90: ¥600,000 — inside the bot's range (158.12 JPY/$)
+    'jp': ([('GameTrade', 'https://gametrade.jp/pubg-mobile/exhibits')], '¥50,000 – ¥700,000', '$316 – $4,427'),
 }
-FLAG = {'global': '🌍', 'cis': '🇷🇺', 'tr': '🇹🇷', 'sea': '🌏'}
-BLOCKED = {'br'}   # GGMAX PUBG Mobile page answered 403 on 2026-10-14 (as for every game before)
+FLAG = {'global': '🌍', 'cis': '🇷🇺', 'tr': '🇹🇷', 'sea': '🌏', 'jp': '🇯🇵'}
+# the reader's own market, tried and refused: Brazil (GGMAX 403 on 2026-10-14), Korea (ItemMania /
+# ItemBay refuse automated checks, research/world-markets.md) — said so, never estimated
+BLOCKED = {'br', 'kr'}
+JP_DEM = {
+    'en': 'Collection level 84–90, X-Suits, collab cars (Bentley, Koenigsegg), Japanese-version accounts',
+    'ru': 'Уровень коллекции 84–90, X-костюмы, машины из коллабораций (Bentley, Koenigsegg), аккаунты японской версии',
+    'tr': 'Koleksiyon seviyesi 84–90, X-Suit’ler, iş birliği arabaları (Bentley, Koenigsegg), Japon sürümü hesaplar',
+    'es': 'Nivel de colección 84–90, X-Suits, coches de colaboraciones (Bentley, Koenigsegg), cuentas de la versión japonesa',
+    'pt': 'Nível de coleção 84–90, X-Suits, carros de parcerias (Bentley, Koenigsegg), contas da versão japonesa',
+    'fr': 'Niveau de collection 84–90, X-Suits, voitures de collaborations (Bentley, Koenigsegg), comptes de la version japonaise',
+    'de': 'Sammlungsstufe 84–90, X-Suits, Kooperationsautos (Bentley, Koenigsegg), Accounts der japanischen Version',
+    'it': 'Livello di collezione 84–90, X-Suit, auto delle collaborazioni (Bentley, Koenigsegg), account della versione giapponese',
+    'id': 'Level koleksi 84–90, X-Suit, mobil kolaborasi (Bentley, Koenigsegg), akun versi Jepang',
+    'vi': 'Cấp bộ sưu tập 84–90, X-Suit, xe hợp tác (Bentley, Koenigsegg), tài khoản bản Nhật',
+    'th': 'เลเวลคอลเลกชัน 84–90, X-Suit, รถคอลแลบ (Bentley, Koenigsegg), บัญชีเวอร์ชันญี่ปุ่น',
+    'ms': 'Tahap koleksi 84–90, X-Suit, kereta kolaborasi (Bentley, Koenigsegg), akaun versi Jepun',
+    'tl': 'Collection level 84–90, X-Suit, collab na kotse (Bentley, Koenigsegg), mga account ng Japanese version',
+}
+JP_SRC = {
+    'en': 'checked October 14, 2026', 'ru': 'проверено 14 октября 2026', 'tr': '14 Ekim 2026’da kontrol edildi',
+    'es': 'revisado el 14 de octubre de 2026', 'pt': 'conferido em 14 de outubro de 2026', 'fr': 'vérifié le 14 octobre 2026',
+    'de': 'geprüft am 14. Oktober 2026', 'it': 'controllato il 14 ottobre 2026', 'id': 'dicek 14 Oktober 2026',
+    'vi': 'kiểm tra 14/10/2026', 'th': 'ตรวจเมื่อ 14 ตุลาคม 2026', 'ms': 'disemak 14 Oktober 2026', 'tl': 'sinuri noong Oktubre 14, 2026',
+}
 
 
 def path(lang):
@@ -82,7 +108,7 @@ def world(lang, t):
     w = WM.T[lang]; c = w['cols']
     reg = lambda k: w['reg']['global_' if k == 'global' else k].replace('&', '&amp;')
     local = WM.LOCAL.get(lang, 'global')
-    order = ([local] if local in MARKETS else []) + [k for k in ('global', 'cis', 'tr', 'sea') if k != local]
+    order = ([local] if local in MARKETS else []) + [k for k in ('global', 'cis', 'tr', 'sea', 'jp') if k != local]
 
     def row(k, mine):
         where = ', '.join(f'<a href="{u}" target="_blank" rel="noopener">{n}</a>' for n, u in MARKETS[k][0])
@@ -138,6 +164,10 @@ def faq(t):
 
 def build(lang):
     t = localize(dict(TEXT[lang]))
+    t['world_dem'] = {**{'jp': JP_DEM.get(lang, '')}, **t['world_dem']}
+    if not any('gametrade.jp' in x for x in t['sources']):
+        t['sources'] = t['sources'][:4] + [f'GameTrade — <a href="https://gametrade.jp/pubg-mobile/exhibits" target="_blank" '
+                                           f'rel="noopener">PUBG MOBILE</a>, {JP_SRC[lang]}'] + t['sources'][4:]
     s = open(path(lang) + 'free-fire.html', encoding='utf-8').read()
     langs = list(dict.fromkeys(['en'] + [l for l in TEXT if l != 'en']))
 
@@ -161,7 +191,8 @@ def build(lang):
     blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)
     graph = json.loads(blocks[0])
     person = next(n for n in graph['@graph'] if n.get('@type') == 'Person')
-    short = next(b for b in blocks[1:] if '"BreadcrumbList"' in b)
+    # the skeleton's breadcrumb: in its @graph, or (pages not deduplicated) a separate block
+    short = next((b for b in blocks[1:] if '"BreadcrumbList"' in b), None)
     crumbs = next((n for n in graph['@graph'] if n.get('@type') == 'BreadcrumbList'), None) or json.loads(short)
     home = crumbs['itemListElement'][0]['name']
     ld = {'@context': 'https://schema.org', '@graph': [
@@ -177,7 +208,8 @@ def build(lang):
     s = s.replace(blocks[0], '\n' + json.dumps(ld, ensure_ascii=False, indent=2) + '\n', 1)
     # one BreadcrumbList per page: the skeleton's separate breadcrumb block goes, the
     # graph above already carries it (with URLs for both steps)
-    s = s.replace('<script type="application/ld+json">' + short + '</script>\n', '', 1)
+    if short:
+        s = s.replace('<script type="application/ld+json">' + short + '</script>\n', '', 1)
     assert s.count('"BreadcrumbList"') == 1, (lang, s.count('"BreadcrumbList"'))
 
     # ---- Free Fire's colour theme off (PUBG uses the site's default gold)

@@ -64,7 +64,7 @@ TEXT = {
   q_brackets='İlan fiyatları piyasada nasıl dağılıyor?',
   brackets_head=('İlan fiyatı', 'İlandaki hesap'),
   brackets_note='igitems.com piyasa raporu, 13 Ekim 2026: 446 PUBG Mobile hesabı satışta. İlanların çoğu 50 $ ile 300 $ arasında.',
-  world_note='Bunlar ilan fiyatlarıdır, tamamlanmış satışlar değil. 1 $ = 0,894 €, 49,4 ₺ ve 25.633 ₫ kuruyla çevrildi (Ekim 2026). Yalnızca piyasayı anlatır — alım ya da satım tavsiyesi değildir; hesap ticareti oyunun kurallarına aykırıdır.',
+  world_note='Bunlar ilan fiyatlarıdır, tamamlanmış satışlar değil. 1 $ = 0,894 €, 49,4 ₺, 25.633 ₫ ve 158,12 ¥ kuruyla çevrildi (Ekim 2026). Yalnızca piyasayı anlatır — alım ya da satım tavsiyesi değildir; hesap ticareti oyunun kurallarına aykırıdır.',
   sources=[f'GameSatış — <a href="{GS}" target="_blank" rel="noopener">PUBG Mobile hesap satışı</a>, 14 Ekim 2026’da kontrol edildi',
            f'Eldorado.gg — <a href="{EL}" target="_blank" rel="noopener">PUBG Mobile hesap ilanları</a> (10.905), 14 Ekim 2026’da kontrol edildi',
            f'FunPay — <a href="{FP}" target="_blank" rel="noopener">PUBG Mobile hesapları</a> (6.332), 14 Ekim 2026’da kontrol edildi',
