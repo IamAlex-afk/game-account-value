@@ -36,7 +36,6 @@ EVENTS = {
    dict(id='coc-wf', month=None, title='Clash of Clans World Championship 2026 · Finals · $1,000,000', where=None, kind='esports', status='tba', major=True, src=('https://event.supercell.com/clashofclans/en/cups/world-championship', 'Supercell')),
  ],
  'genshin-impact': [
-   dict(id='gi-6y', start='2026-09-28', end='2026-09-28', title='Genshin Impact · 6', where=None, kind='anniv', status='fact', src=None),
  ],
 }
 
