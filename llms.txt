@@ -83,6 +83,7 @@ Beyond the bot, the website publishes original market research — real marketpl
 - [Mobile Legends](https://gameaccountvalue.com/mobile-legends.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Fortnite](https://gameaccountvalue.com/fortnite.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
 - [Minecraft](https://gameaccountvalue.com/minecraft.html): price ranges, real confirmed value drivers, scam risks, free interactive calculator
+- [Open data (CSV, CC BY 4.0)](https://gameaccountvalue.com/data/game-account-prices.csv): one row per game — usual asking range, top listing, check date, marketplaces; description at https://github.com/IamAlex-afk/game-account-value/tree/main/data
 - [Market Report](https://gameaccountvalue.com/market-report.html): combined hub page linking all 10 games
 - [Glossary](https://gameaccountvalue.com/glossary.html): account-trading terms (OG, smurf, reroll, Full Max/Rushed, escrow, chargeback, and 15+ more)
 - [Account Trading Safety](https://gameaccountvalue.com/account-trading-safety.html): scam patterns and safety guide per game

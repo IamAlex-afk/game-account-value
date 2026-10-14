@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use these game account price ranges, please cite them as below."
+title: "Game account prices: asking-price ranges for 10 games (GameAccountValue)"
+type: dataset
+authors:
+  - family-names: Bitkin
+    given-names: Aleksei
+    orcid: "https://orcid.org/0009-0002-7986-3812"
+url: "https://gameaccountvalue.com/market-report.html"
+repository-code: "https://github.com/IamAlex-afk/game-account-value"
+license: CC-BY-4.0
+date-released: "2026-10-14"
+version: "2026-10"
+keywords:
+  - game accounts
+  - account value
+  - market prices
+  - Roblox
+  - Fortnite
+  - Brawl Stars
+  - PUBG Mobile
+abstract: >-
+  Asking-price ranges for game accounts in Roblox, Brawl Stars, Clash of Clans, Clash Royale,
+  Free Fire, Genshin Impact, PUBG Mobile, Mobile Legends, Fortnite and Minecraft, viewed by hand
+  in public marketplace listings (asking prices, not completed sales), with check dates and sources.
+  File: data/game-account-prices.csv.
