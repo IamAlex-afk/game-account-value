@@ -351,3 +351,19 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
 - OPEN (owner): og:image order on game pages; two google-site-verification codes on index / pl / zh; Fresh News button
   in all languages or not; shared description lead-in on game pages; ?v= for calculators.js, cursor-trail.js,
   interactions.js, tilt.js (none today).
+
+## 2026-10-14 PUBG Mobile — 10th game (dc59154d, cdc222e5)
+- Bot first (GameAccountValue_Bot 101940a, d0c7925): back in the menu, 5 screenshots, priced by COLLECTION LEVEL —
+  the number listings price by (rank resets each season, priced near zero). Anchor curve through listings
+  (bot docs/item-status-sources.md). Bot range ×0.70–×1.35, site calculator ×0.55–×1.6.
+- Sources checked by hand 2026-10-14: Eldorado.gg (10,905), FunPay /en/lots/346/ (6,332, €), GameSatış (₺).
+  OpenSooq UAE: search snippets only, page 403 → not used. Esports Earnings PUBG Mobile: "Cannot connect to the
+  database" → no prize-money-by-country block yet. Terms: pubgmobile.com/PK/terms.shtml (Proxima Beta).
+  PMGC 2026: Türkiye, $3M, city/month NOT officially given (press release 2025-12-12) → TBA.
+- Page generator scripts/design/pubg_page.py + text in pubg_text_*.py (en, ru so far): built on each language's
+  free-fire.html. Add a language = add its TEXT dict (written for that reader, `thou` for the thousands separator),
+  run pubg_page.py, nav_menu.py, footer_nav.py, sitemap entry, sitemap_split.py, site_check.py, IndexNow.
+- nav_menu/footer_nav list a game only where its page exists in that language.
+- NEXT: 22 languages (tr first: GameSatış is the own market there), PUBG news hub + articles from official
+  sources, then home hub / market report / comparison / glossary / cards / og default "9 games" → 10 /
+  footer "not affiliated with ..." to name PUBG's owners.
