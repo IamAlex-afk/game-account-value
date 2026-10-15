@@ -43,3 +43,4 @@ d9a0fe9d765ab846a944c053253de8faa449667e  JSON-LD: duplicate BreadcrumbList remo
 31ae84a7dfdfddc5eb1f13bc588437903c812801  menu/footer: PUBG Mobile added to Games, last 11 languages (template only)
 003ddc47dc9e0d12f6b99bd092f64748239b2d79  news pages: NewsArticle image = game card (template only)
 7643d0bc6193631e0051ac970b7d0ed27d6396ad  hidden markup translated (JSON-LD/aria, template only)
+4967cc8dd109fb8a0e938d82a3d6ab542ca6d00b  space-background version bump (template only)
