@@ -112,7 +112,7 @@ python -m http.server 8080
 
 ## Working standard
 
-Every change follows [SITE-STANDARD.md](SITE-STANDARD.md): full translation in all 24 languages, primary sources only, screenshots at 390/1280 px, push → successful Pages run → live check, Lighthouse mobile ≥ 90.
+Every change follows the project's site standard: full translation in all 24 languages, primary sources only, screenshots at 390/1280 px, push → successful Pages run → live check, Lighthouse mobile ≥ 90.
 
 ## Author and license
 
