@@ -148,10 +148,10 @@ TEXT = {
            'Está prevista una Roblox Card vinculada a Wallet a partir de 2027.'],
    'impact': 'Estos cambios afectan a los pagos a creadores, no a las cuentas de los jugadores: el anuncio no cambió los precios de los Robux, los objetos limitados ni el intercambio. El saldo de Robux y los objetos limitados siguen siendo lo que pondera nuestra calculadora de Roblox.'},
   'ff-ob55': {
-   'title': 'Free Fire OB55: cuatro armas nuevas para Clash Squad, Prime Diamond y rediseño de Kenta',
-   'desc': 'Las notas del parche OB55 de Garena (10 de septiembre de 2026) añaden M7, Skorp, RPK y Hawk a Clash Squad desde el 1 de octubre, presentan Prime Diamond y rediseñan a Kenta.',
+   'title': 'Free Fire OB55: cuatro armas nuevas para Duelo de Escuadras (Clash Squad), Prime Diamond y rediseño de Kenta',
+   'desc': 'Las notas del parche OB55 de Garena (10 de septiembre de 2026) añaden M7, Skorp, RPK y Hawk a Duelo de Escuadras desde el 1 de octubre, presentan Prime Diamond y rediseñan a Kenta.',
    'lead': 'Garena publicó las notas del parche OB55 de Free Fire el 10 de septiembre de 2026; los cambios de armas entran en vigor el 1 de octubre.',
-   'new': ['Armas nuevas de Clash Squad desde el 1 de octubre: M7 (1600 CS Cash), Skorp (1500), RPK (1500) y Hawk (1700).',
+   'new': ['Armas nuevas de Duelo de Escuadras desde el 1 de octubre: M7 (1600 CS Cash), Skorp (1500), RPK (1500) y Hawk (1700).',
            'Prime Diamond: diamantes según el gasto mensual, que se reclaman el mes siguiente tras cualquier recarga.',
            'Kenta se rediseña por completo; Morse, Luna y Wukong reciben cambios de equilibrio.',
            'Desde el 1 de octubre cambia la movilidad por clase de arma: subfusiles más rápidos, francotiradores y tiradores selectos más lentos.'],

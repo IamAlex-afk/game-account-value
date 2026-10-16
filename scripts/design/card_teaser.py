@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 T = {
  'en': ('🎴 + collectible holo card', 'A paid report is your own numbered holo card', 'PDF + video, 9 foil tiers, the first 100 are GENESIS.', 'See all cards ↓'),
  'ru': ('🎴 + коллекционная голографическая карта', 'Платный отчёт — это твоя именная голографическая карта с номером', 'PDF + видео, 9 уровней фольги, первые 100 — GENESIS.', 'Смотреть все карты ↓'),
- 'es': ('🎴 + carta holo coleccionable', 'Un informe de pago es tu propia carta holo numerada', 'PDF + vídeo, 9 niveles de lámina, las primeras 100 son GENESIS.', 'Ver todas las cartas ↓'),
+ 'es': ('🎴 + carta holo coleccionable', 'Un informe de pago es tu propia carta holo numerada', 'PDF + vídeo, 9 niveles de foil, las primeras 100 son GENESIS.', 'Ver todas las cartas ↓'),
  'pt': ('🎴 + carta holo colecionável', 'Um relatório pago é a sua própria carta holo numerada', 'PDF + vídeo, 9 níveis de foil, as primeiras 100 são GENESIS.', 'Ver todas as cartas ↓'),
  'id': ('🎴 + kartu holo koleksi', 'Laporan berbayar = kartu holo bernomor milikmu sendiri', 'PDF + video, 9 tingkat foil, 100 pertama adalah GENESIS.', 'Lihat semua kartu ↓'),
  'tr': ('🎴 + koleksiyonluk holo kart', 'Ücretli rapor, sana ait numaralı bir holo karttır', 'PDF + video, 9 folyo seviyesi, ilk 100 kart GENESIS.', 'Tüm kartları gör ↓'),
