@@ -34,16 +34,7 @@ MIN_HUB_ARTICLES = 3
 GAME_BLOCK_ARTICLES = 3
 
 
-# Languages whose game news hubs are indexed: only where people actually search news here
-# (Search Console 2026-09-27..10-12, news impressions >= 60: ja 514, en 269, ko 213, ru 166,
-# id 114, tr 96, es 90, it 81, de 70; every other language < 50, hubs 0 clicks). Elsewhere the
-# hub stays for readers as 'noindex, follow'. Re-check against Search Console before widening.
-NEWS_INDEX_LANGS = ['en', 'ja', 'ko', 'ru', 'id', 'tr', 'es', 'it', 'de']
-
-
-def hub_indexable(game, L=None):
-    if L is not None and L not in NEWS_INDEX_LANGS:
-        return False
+def hub_indexable(game):
     return sum(1 for a in ARTS if a[1] == game) >= MIN_HUB_ARTICLES
 
 CSS = ('<style>.news-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px 40px; }'
@@ -83,7 +74,7 @@ def esc(v):
     return html.escape(v, quote=True)
 
 
-def shell(L, slug, title, desc, crumbs, ld, main, og_type='website', image=None, index=True, alt_langs=None):
+def shell(L, slug, title, desc, crumbs, ld, main, og_type='website', image=None, index=True):
     s = open(ROOT + ('glossary.html' if L == 'en' else L + '/glossary.html'), encoding='utf-8').read()
     me = url(L, slug + '.html')
     full = title if len(title) > 55 else f'{title} | GameAccountValue'  # long titles: site name is shown by Google anyway
@@ -100,7 +91,7 @@ def shell(L, slug, title, desc, crumbs, ld, main, og_type='website', image=None,
         s = re.sub(r'(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*(")', lambda m: m.group(1) + image + m.group(2), s)
     s = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">\n?', '', s)
     alts = f'<link rel="alternate" hreflang="x-default" href="{url("en", slug + ".html")}">\n' + ''.join(
-        f'<link rel="alternate" hreflang="{x}" href="{url(x, slug + ".html")}">\n' for x in (alt_langs or READY))
+        f'<link rel="alternate" hreflang="{x}" href="{url(x, slug + ".html")}">\n' for x in READY)
     if index:
         s = s.replace(f'<link rel="canonical" href="{me}">', f'<link rel="canonical" href="{me}">\n' + alts.rstrip('\n'), 1)
     else:
@@ -181,8 +172,7 @@ def game_hub(L, game):
             f'<div class="news-wrap">\n' + ''.join(section(L, a) for a in items) +
             f'<div class="news-links"><a href="./{game}.html">{U["calc"].format(game=G)}</a><a href="./news.html">{U["all"]}</a></div>\n'
             f'<p class="news-note">{U["note"]}</p>\n</div>\n<!--CTA-->')
-    shell(L, game + '-news', title, lead, [('./', home_name(L)), ('./news.html', U['news']), (None, G)], ld, main, image=img, index=hub_indexable(game, L),
-          alt_langs=[x for x in READY if x in NEWS_INDEX_LANGS])
+    shell(L, game + '-news', title, lead, [('./', home_name(L)), ('./news.html', U['news']), (None, G)], ld, main, image=img, index=hub_indexable(game))
 
 
 def news_hub(L):
@@ -227,12 +217,12 @@ def sitemap():
     s = open(p, encoding='utf-8').read()
     add, removed = '', 0
     for L in READY:
-        out = ['news.html'] + [g + '-news.html' for g in D.GAMES if not hub_indexable(g, L)] + [a[2] + '.html' for a in ARTS]
+        out = ['news.html'] + [g + '-news.html' for g in D.GAMES if not hub_indexable(g)] + [a[2] + '.html' for a in ARTS]
         for name in out:
             s, n = re.subn(r'\s*<url><loc>' + re.escape(url(L, name)) + r'</loc>.*?</url>', '', s, flags=re.S)
             removed += n
         for g in D.GAMES:
-            if not hub_indexable(g, L):
+            if not hub_indexable(g):
                 continue
             u = url(L, g + '-news.html')
             if f'<loc>{u}</loc>' not in s:
