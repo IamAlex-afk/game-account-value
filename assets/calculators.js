@@ -166,7 +166,7 @@
     ar: {
       sliders: {
         "brawl-stars": { trophies: "الكؤوس", maxed: "مقاتلون بمستوى قوة 11" },
-        "clash-of-clans": { th: "مستوى مركز المدينة" },
+        "clash-of-clans": { th: "مستوى قاعة البلدة" },
         "clash-royale": { kt: "مستوى برج الملك", maxed: "بطاقات بأقصى مستوى" },
         "free-fire": { rank: "الرتبة", bundles: "حزم/رفقاء نادرة" },
         "genshin-impact": { fivestars: "شخصيات 5 نجوم", c6: "شخصيات بمستوى C6" },
