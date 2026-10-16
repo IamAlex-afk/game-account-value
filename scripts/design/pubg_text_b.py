@@ -38,7 +38,7 @@ TEXT = {
          '<strong>Rütbe çok az etkiler</strong>: her sezon sıfırlanır; Eldorado.gg’de “Gold Rank” hesap 1,99 $, “Diamond” hesap 3,75 $ istiyordu.'],
   q_lookup='Hesaplayıcıyı kullanmadan önce oyunda neye bakmalıyım?',
   lookup=['Hesaplayıcı tek bir sayı ister: Koleksiyon ekranındaki <strong>koleksiyon seviyesi</strong> (örneğin 74,5).',
-          'Sonuç, açık ilan fiyatlarına göre kaba bir aralıktır, satın alma teklifi değildir. Hesap alıp satmak oyunun kurallarına aykırıdır — <a href="#rules">kurallara</a> bakın.'],
+          'Sonuç, açık ilan fiyatlarına göre kaba bir aralıktır, satın alma teklifi değildir. Hesap alıp satmak oyunun kurallarına aykırıdır — <a href="#rules">kurallara</a> bak.'],
   q_shots='Bot PUBG Mobile için hangi 5 ekran görüntüsünü istiyor?',
   shots_intro='PUBG Mobile’da değer envanterin farklı sekmelerine dağılmıştır, bu yüzden bot üç değil beş ekran görüntüsü ister:',
   shots=['<strong>Profil</strong> — oyuncu ID’si, hesap seviyesi ve rütbe okunabilmeli.',

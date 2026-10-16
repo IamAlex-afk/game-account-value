@@ -15,7 +15,7 @@ T = {
  'es': ('🎴 + carta holo coleccionable', 'Un informe de pago es tu propia carta holo numerada', 'PDF + vídeo, 9 niveles de lámina, las primeras 100 son GENESIS.', 'Ver todas las cartas ↓'),
  'pt': ('🎴 + carta holo colecionável', 'Um relatório pago é a sua própria carta holo numerada', 'PDF + vídeo, 9 níveis de lâmina, as primeiras 100 são GENESIS.', 'Ver todas as cartas ↓'),
  'id': ('🎴 + kartu holo koleksi', 'Laporan berbayar = kartu holo bernomor milikmu sendiri', 'PDF + video, 9 tingkat foil, 100 pertama adalah GENESIS.', 'Lihat semua kartu ↓'),
- 'tr': ('🎴 + koleksiyonluk holo kart', 'Ücretli rapor, size ait numaralı bir holo karttır', 'PDF + video, 9 folyo seviyesi, ilk 100 kart GENESIS.', 'Tüm kartları gör ↓'),
+ 'tr': ('🎴 + koleksiyonluk holo kart', 'Ücretli rapor, sana ait numaralı bir holo karttır', 'PDF + video, 9 folyo seviyesi, ilk 100 kart GENESIS.', 'Tüm kartları gör ↓'),
  'ar': ('🎴 + بطاقة هولوغرام للمقتنين', 'التقرير المدفوع هو بطاقتك الهولوغرامية المرقّمة', 'PDF + فيديو، 9 مستويات من الرقاقة، وأول 100 بطاقة هي GENESIS.', 'شاهد كل البطاقات ↓'),
  'vi': ('🎴 + thẻ holo sưu tầm', 'Báo cáo trả phí là thẻ holo có số hiệu của riêng bạn', 'PDF + video, 9 cấp lá kim, 100 thẻ đầu tiên là GENESIS.', 'Xem tất cả thẻ ↓'),
  'hi': ('🎴 + संग्रहणीय होलो कार्ड', 'पेड रिपोर्ट = आपका अपना नंबर वाला होलो कार्ड', 'PDF + वीडियो, फ़ॉयल के 9 लेवल, पहले 100 कार्ड GENESIS हैं।', 'सभी कार्ड देखें ↓'),
