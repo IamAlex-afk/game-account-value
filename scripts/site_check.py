@@ -17,6 +17,9 @@ def pages():
         rel = os.path.relpath(f, ROOT).replace(os.sep, '/')
         if rel.startswith(('scripts/', '_', 'node_modules/', 'google')):
             continue
+        # merged news articles are now instant-refresh redirect stubs to their game hub
+        if 'http-equiv="refresh"' in open(f, encoding='utf-8').read(2000):
+            continue
         out.append(rel)
     return sorted(out)
 

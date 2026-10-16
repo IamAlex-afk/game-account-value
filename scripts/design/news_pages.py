@@ -47,6 +47,7 @@ CSS = ('<style>.news-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px 40
        '.news-card { display: block; padding: 16px 18px; border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: inherit; background: rgba(255,255,255,.02); }'
        '.news-card:hover { border-color: rgba(34,211,238,.6); } .news-card strong { display: block; font-size: 17px; line-height: 1.35; margin: 6px 0; color: #fff; }'
        '.news-card span { color: var(--muted); font-size: 14px; } .news-card em { font-style: normal; color: #A5F3FC; font-weight: 700; }'
+       '.news-item { padding: 6px 0 22px; border-bottom: 1px solid var(--border); scroll-margin-top: 80px; } .news-item h3 { font-size: 17px; margin: 18px 0 6px; }'
        '.news-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; } .news-links a { padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; font-size: 14px; }'
        '</style>')
 
@@ -123,32 +124,33 @@ def card(L, a):
     aid, game, slug, _, srcs = a
     T = TEXT[L]['a'][aid]
     d = DATES[L][srcs[0][2]] if srcs[0][2] else srcs[0][1]
-    return (f'<li><a class="news-card" href="./{slug}.html"><span>{D.GAMES[game]} · {d}</span>'
+    return (f'<li><a class="news-card" href="./{game}-news.html#{slug}"><span>{D.GAMES[game]} · {d}</span>'
             f'<strong>{T["title"]}</strong><span>{T["lead"]} <em>{TEXT[L]["ui"]["read"]} →</em></span></a></li>')
 
 
-def article(L, a):
+def section(L, a):
+    """One news item as a section of its game's hub (2026-10-16: articles merged into the hub —
+    Google scaled-content policy: one page per retold announcement x 24 languages added little value)."""
     aid, game, slug, _, srcs = a
-    U, T, G = TEXT[L]['ui'], TEXT[L]['a'][aid], D.GAMES[game]
-    me = url(L, slug + '.html')
-    img = f'{SITE}og/{game}.jpg?v=4'
-    ld = {'@context': 'https://schema.org', '@graph': [
-        {'@type': 'NewsArticle', '@id': me + '#article', 'mainEntityOfPage': me, 'headline': T['title'][:110], 'description': T['desc'],
-         'image': [img], 'datePublished': pub(aid) + 'T09:00:00+00:00', 'dateModified': pub(aid) + 'T09:00:00+00:00',
-         'inLanguage': L, 'author': AUTHOR, 'publisher': PUBLISHER, 'about': {'@type': 'VideoGame', 'name': G},
-         'isBasedOn': [s[0] for s in srcs]},
-        bc(L, [(home_name(L), url(L, '')), (U['news'], url(L, 'news.html')), (U['game_title'].format(game=G), url(L, game + '-news.html')), (T['title'], me)])]}
+    U, T = TEXT[L]['ui'], TEXT[L]['a'][aid]
     src = '<br>'.join(f'<a href="{u}" rel="noopener">{esc(u.split("//")[1].split("/")[0])}</a> — {U["by_on"].format(pub=p, date=DATES[L][d]) if d else p}' for u, p, d in srcs)
-    main = (f'<section class="report-hero" id="main-content">\n  <a class="news-chip" href="./{game}-news.html">{G}</a>\n  <h1>{T["title"]}</h1>\n'
-            f'  <p style="color:var(--muted); font-size:16px;">{T["lead"]}</p>\n'
-            f'  <p class="news-meta">{U["published"]}: <time datetime="{pub(aid)}">{DATES[L][pub(aid)]}</time> · Aleksei Bitkin</p>\n</section>\n'
-            f'<div class="news-wrap">\n<h2>{U["whats_new"]}</h2>\n<ul>' + ''.join(f'<li>{x}</li>' for x in T['new']) + '</ul>\n'
-            f'<h2>{U["impact"]}</h2>\n<p>{T["impact"]}</p>\n'
-            f'<div class="news-src"><strong>{U["source"]}</strong><br>{src}</div>\n'
-            f'<div class="news-links"><a href="./{game}.html">{U["calc"].format(game=G)}</a><a href="./{game}-news.html">{U["more"].format(game=G)}</a><a href="./news.html">{U["all"]}</a></div>\n'
-            f'<p class="news-note">{U["note"]}</p>\n</div>\n<!--CTA-->')
-    crumbs = [('./', home_name(L)), ('./news.html', U['news']), (f'./{game}-news.html', G), (None, T['title'])]
-    shell(L, slug, T['title'], T['desc'], crumbs, ld, main, og_type='article', image=img)
+    return (f'<article class="news-item" id="{slug}">\n<h2>{T["title"]}</h2>\n'
+            f'<p class="news-meta">{U["published"]}: <time datetime="{pub(aid)}">{DATES[L][pub(aid)]}</time></p>\n'
+            f'<p>{T["lead"]}</p>\n<h3>{U["whats_new"]}</h3>\n<ul>' + ''.join(f'<li>{x}</li>' for x in T['new']) + '</ul>\n'
+            f'<h3>{U["impact"]}</h3>\n<p>{T["impact"]}</p>\n'
+            f'<div class="news-src"><strong>{U["source"]}</strong><br>{src}</div>\n</article>\n')
+
+
+def redirect(L, a):
+    """Old article URL -> its section in the game hub. GitHub Pages has no server 301; Google treats
+    an instant meta refresh as a permanent redirect. Canonical points at the hub as well."""
+    aid, game, slug, _, _ = a
+    hub = url(L, game + '-news.html')
+    to = f'./{game}-news.html#{slug}'
+    page = (f'<!DOCTYPE html>\n<html lang="{L}">\n<head>\n<meta charset="utf-8">\n<title>{esc(TEXT[L]["a"][aid]["title"])}</title>\n'
+            f'<link rel="canonical" href="{hub}">\n<meta http-equiv="refresh" content="0; url={to}">\n</head>\n'
+            f'<body>\n<p><a href="{to}">{esc(TEXT[L]["a"][aid]["title"])}</a></p>\n</body>\n</html>\n')
+    open(ROOT + ('' if L == 'en' else L + '/') + slug + '.html', 'w', encoding='utf-8', newline='').write(page)
 
 
 def game_hub(L, game):
@@ -156,15 +158,21 @@ def game_hub(L, game):
     items = [a for a in ARTS if a[1] == game]
     title, lead = U['game_title'].format(game=G), U['game_lead'].format(game=G)
     me = url(L, game + '-news.html')
+    img = f'{SITE}og/{game}.jpg?v=4'
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'CollectionPage', '@id': me, 'url': me, 'name': title, 'description': lead, 'inLanguage': L,
-         'hasPart': [{'@type': 'NewsArticle', 'headline': TEXT[L]['a'][a[0]]['title'][:110], 'url': url(L, a[2] + '.html')} for a in items]},
+         'hasPart': [{'@type': 'NewsArticle', '@id': me + '#' + a[2], 'url': me + '#' + a[2], 'headline': TEXT[L]['a'][a[0]]['title'][:110],
+                      'description': TEXT[L]['a'][a[0]]['desc'], 'image': [img],
+                      'datePublished': pub(a[0]) + 'T09:00:00+00:00', 'dateModified': pub(a[0]) + 'T09:00:00+00:00',
+                      'inLanguage': L, 'author': AUTHOR, 'publisher': PUBLISHER, 'about': {'@type': 'VideoGame', 'name': G},
+                      'isBasedOn': [s[0] for s in a[4]]} for a in items]},
         bc(L, [(home_name(L), url(L, '')), (U['news'], url(L, 'news.html')), (title, me)])]}
-    main = (f'<section class="report-hero" id="main-content">\n  <h1>{title}</h1>\n  <p style="color:var(--muted); font-size:16px;">{lead}</p>\n</section>\n'
-            f'<div class="news-wrap">\n<ul class="news-list">' + ''.join(card(L, a) for a in items) + '</ul>\n'
+    main = (f'<section class="report-hero" id="main-content">\n  <h1>{title}</h1>\n  <p style="color:var(--muted); font-size:16px;">{lead}</p>\n'
+            f'  <p class="news-meta">Aleksei Bitkin</p>\n</section>\n'
+            f'<div class="news-wrap">\n' + ''.join(section(L, a) for a in items) +
             f'<div class="news-links"><a href="./{game}.html">{U["calc"].format(game=G)}</a><a href="./news.html">{U["all"]}</a></div>\n'
             f'<p class="news-note">{U["note"]}</p>\n</div>\n<!--CTA-->')
-    shell(L, game + '-news', title, lead, [('./', home_name(L)), ('./news.html', U['news']), (None, G)], ld, main, index=hub_indexable(game))
+    shell(L, game + '-news', title, lead, [('./', home_name(L)), ('./news.html', U['news']), (None, G)], ld, main, image=img, index=hub_indexable(game))
 
 
 def news_hub(L):
@@ -172,13 +180,13 @@ def news_hub(L):
     me = url(L, 'news.html')
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'CollectionPage', '@id': me, 'url': me, 'name': U['news_title'], 'description': U['news_lead'], 'inLanguage': L,
-         'hasPart': [{'@type': 'NewsArticle', 'headline': TEXT[L]['a'][a[0]]['title'][:110], 'url': url(L, a[2] + '.html')} for a in ARTS]},
+         'hasPart': [{'@type': 'NewsArticle', 'headline': TEXT[L]['a'][a[0]]['title'][:110], 'url': url(L, a[1] + '-news.html#' + a[2])} for a in ARTS]},
         bc(L, [(home_name(L), url(L, '')), (U['news'], me)])]}
     games = ''.join(f'<a href="./{g}-news.html">{n}</a>' for g, n in D.GAMES.items())
     main = (f'<section class="report-hero" id="main-content">\n  <h1>{U["news_title"]}</h1>\n  <p style="color:var(--muted); font-size:16px;">{U["news_lead"]}</p>\n</section>\n'
             f'<div class="news-wrap">\n<div class="news-links" style="margin-top:0">{games}</div>\n<ul class="news-list" style="margin-top:20px">' + ''.join(card(L, a) for a in ARTS) + '</ul>\n'
             f'<p class="news-note">{U["note"]}</p>\n</div>\n<!--CTA-->')
-    shell(L, 'news', U['news_title'], U['news_lead'], [('./', home_name(L)), (None, U['news'])], ld, main)
+    shell(L, 'news', U['news_title'], U['news_lead'], [('./', home_name(L)), (None, U['news'])], ld, main, index=False)
 
 
 def game_block(L, game):
@@ -189,7 +197,7 @@ def game_block(L, game):
     items = ''
     for a in [x for x in ARTS if x[1] == game][:GAME_BLOCK_ARTICLES]:
         d = DATES[L][a[4][0][2]] if a[4][0][2] else a[4][0][1]
-        items += f'<p><a href="./{a[2]}.html"><strong>{TEXT[L]["a"][a[0]]["title"]}</strong></a> <span style="color:var(--muted);unicode-bidi:isolate">· {d}</span></p>'
+        items += f'<p><a href="./{game}-news.html#{a[2]}"><strong>{TEXT[L]["a"][a[0]]["title"]}</strong></a> <span style="color:var(--muted);unicode-bidi:isolate">· {d}</span></p>'
     block = (f'<section class="g-fresh" aria-label="{esc(U["latest"].format(game=G))}"><h2>📰 {U["latest"].format(game=G)}</h2>'
              f'{items}<p><a href="./{game}-news.html">{U["more"].format(game=G)} →</a></p></section>')
     s = re.sub(r'<section class="g-fresh".*?</section>\n?', '', s, flags=re.S)
@@ -203,21 +211,23 @@ def game_block(L, game):
 
 
 def sitemap():
-    """Indexable news URLs in, noindex game hubs out (Google: list only URLs you want in Search)."""
+    """Only indexable game news hubs are listed; article URLs (now redirects) and the noindex
+    news.html overview are taken out (Google: list only URLs you want in Search)."""
     p = ROOT + 'sitemap.xml'
     s = open(p, encoding='utf-8').read()
     add, removed = '', 0
     for L in READY:
+        out = ['news.html'] + [g + '-news.html' for g in D.GAMES if not hub_indexable(g)] + [a[2] + '.html' for a in ARTS]
+        for name in out:
+            s, n = re.subn(r'\s*<url><loc>' + re.escape(url(L, name)) + r'</loc>.*?</url>', '', s, flags=re.S)
+            removed += n
         for g in D.GAMES:
             if not hub_indexable(g):
-                s, n = re.subn(r'\s*<url><loc>' + re.escape(url(L, g + '-news.html')) + r'</loc>.*?</url>', '', s)
-                removed += n
-        names = ['news.html'] + [g + '-news.html' for g in D.GAMES if hub_indexable(g)] + [a[2] + '.html' for a in ARTS]
-        when = {a[2] + '.html': pub(a[0]) for a in ARTS}
-        for name in names:
-            u = url(L, name)
+                continue
+            u = url(L, g + '-news.html')
             if f'<loc>{u}</loc>' not in s:
-                add += f'  <url><loc>{u}</loc><lastmod>{when.get(name, D.PUBLISHED)}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n'
+                last = max(pub(a[0]) for a in ARTS if a[1] == g)
+                add += f'  <url><loc>{u}</loc><lastmod>{last}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n'
     s = s.replace('</urlset>', add + '</urlset>')
     open(p, 'w', encoding='utf-8', newline='\n').write(s)
     return f'+{add.count("<url>")} -{removed}'
@@ -228,7 +238,7 @@ if __name__ == '__main__':
     n = blocks = 0
     for L in only:
         for a in ARTS:
-            article(L, a); n += 1
+            redirect(L, a); n += 1
         for g in D.GAMES:
             game_hub(L, g); n += 1
             blocks += game_block(L, g)

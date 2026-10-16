@@ -63,7 +63,12 @@ spam policies 2026-08-28):
 - **Game page answer-first** (for AI answer engines): one short paragraph after the intro with the usual asking
   range and the top listing (scripts/design/answer_first.py, figures = the comparison ceiling table). Re-run it
   after pubg_page.py / news_pages.py / any game-page rebuild; keep the table and FIG in sync.
-- **News article:** its own URL, headline from a real fact, visible "Published/Updated", NewsArticle
+- **News (since 2026-10-16): NO separate article pages.** Each news item is a section `<article id="<slug>">` of
+  its game's hub `{lang}/<game>-news.html`; the old article URLs are instant meta-refresh redirects (canonical =
+  hub) and are out of the sitemap; `news.html` is a `noindex, follow` overview. Reason: site-wide Google demotion on
+  2026-10-13 after ~800 retold-announcement pages x 24 languages (Google spam policy "scaled content abuse":
+  translating/transforming content into many pages). Never go back to one page per announcement.
+- **News item:** headline from a real fact, visible "Published/Updated", NewsArticle
   JSON-LD (headline, image, datePublished, dateModified, author), sources (official publishers only —
   no marketplace scraping: Eldorado ToS §3.1), links to the game page, homepage and bot.
   Names in each language = the publisher's OFFICIAL local names (items, events, currencies: e.g. ja
@@ -82,8 +87,8 @@ spam policies 2026-08-28):
 - [x] 1. This standard + `scripts/site_check.py`; README/llms.txt fixed (broken og image, cards)
 - [x] 2. privacy + terms in 23 languages (+ hreflang, sitemap, menu)
 - [x] 3. about page in 24 languages (E-E-A-T)
-- [x] 4. News: refresh from official publisher sources → one article per real fact, NewsArticle LD;
-      news hub + articles in 24 languages
+- [x] 4. News: refresh from official publisher sources → one section per real fact inside the game hub
+      (NewsArticle LD per section, url = hub#slug); articles merged into hubs 2026-10-16
 - [ ] 5. Game pages: honest "what an estimate can and can't tell you" block — pilot Clash of Clans EN+RU (2026-10-05);
       rollout one game at a time, other languages after native review
 - [x] 6. Footer section links (Games · Guides · News · About · Privacy · Terms) on every page
