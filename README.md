@@ -53,7 +53,7 @@ Each game has its own page: calculator, dated price ranges with sources, what ra
 
 English, Русский, Español, Português, Bahasa Indonesia, Türkçe, العربية, Tiếng Việt, हिन्दी, Français, Deutsch, Italiano, 日本語, 한국어, ภาษาไทย, Polski, 中文, Filipino, Kiswahili, Bahasa Melayu, Oʻzbekcha, Қазақша, Türkmençe, Кыргызча.
 
-Every language has the same **64 pages** (home, 10 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, about, privacy policy, terms, plus the news section: a hub, 10 game news pages and 31 articles from official publisher announcements), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
+Every language has the same **30 pages** (home, 10 game reports, market report, most-valuable-accounts comparison, trading safety guide, glossary, methodology, about, privacy policy, terms, plus the news section: an index and 10 game news pages, each official publisher announcement a section of its game's page), written as adapted translations with local number formats — not machine dumps. Language versions are linked with `hreflang` and a visible language switcher; there is no automatic redirect by IP.
 
 
 ## Privacy in plain words
@@ -71,7 +71,7 @@ Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.h
 | Check | Result |
 |---|---|
 | Lighthouse mobile, live homepage | 2026-09-30: Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100 (to re-measure after the 2026-10 visual update) |
-| `python scripts/site_check.py` | 1,417 pages, 0 errors (links, JSON-LD, FAQ markup vs visible text, anchors, canonical, hreflang, required blocks) — 2026-10-07 |
+| `python scripts/site_check.py` | 721 pages, 0 errors (links, JSON-LD, FAQ markup vs visible text, anchors, canonical, hreflang, required blocks) — 2026-10-16 |
 | `html-validate` (root pages, `.htmlvalidate.json`) | 0 errors — 2026-10-06 |
 | Layout | no horizontal scroll at 360 / 390 / 768 / 1280 px, including right-to-left Arabic |
 | Security headers | strict CSP (`script-src 'self'`); HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy via Cloudflare; [SECURITY.md](SECURITY.md) |
@@ -85,8 +85,8 @@ Installable PWA with a service worker (shell precache, network-first for CSS/JS 
 index.html, {game}.html          English homepage + 10 game reports
 market-report.html, methodology.html, glossary.html,
 account-trading-safety.html, which-game-accounts-are-most-valuable.html
-news.html, {game}-news.html      news hub + per-game news; news-{game}-{yyyy-mm}-{slug}.html articles
-{lang}/                          the same 64 pages in each of the 23 other languages
+news.html, {game}-news.html      news index + per-game news; old news-{game}-{yyyy-mm}-{slug}.html redirect to their section of {game}-news.html
+{lang}/                          the same 30 pages in each of the 23 other languages
 assets/glass.css                 design system, built from scripts/design/css/*.css
 assets/calculators.js            per-game calculators; every price anchor is sourced in a comment
 assets/space-background.js       decorative deep-space scene (per-game view and loot set), starts after load

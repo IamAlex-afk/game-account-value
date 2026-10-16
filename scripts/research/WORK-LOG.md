@@ -383,3 +383,19 @@ test by owner; optional PDF digital signature; GitHub repo research for ideas.
   $150+ share sentence (igitems 2026-10-13: 165 of 446 = 37%) in 24 languages, visible + FAQPage. Description -> 10.
   Leftover counts fixed: zh "9个游戏" (not caught by the first pass), "Minecraft and 4/5 more games" -> 5 everywhere.
   No page says 9 games any more.
+
+## 2026-10-16 — news merge, Google-rules audit, file consistency
+- Context: site-wide drop in Google on 2026-10-13 ~13:00 UTC (~1000 impr/day -> <30). No push in the 27 h before it,
+  no announced Google update (status dashboard: Sept 2026 spam update ended ~10-08), owner sees no manual action.
+- 55e0cf62: 816 article pages merged into the 240 per-game news pages (sections id=slug, NewsArticle LD per section);
+  old URLs = meta refresh 0 + canonical to the hub (Google: instant meta refresh = permanent redirect). news.html noindex.
+- Audit (report outside the repo: Desktop/ПЛНАН КАПКАН ЗИП/gav_audit/AUDIT-2026-10.md): canonical/hreflang/sitemap clean;
+  URL Inspection on 12 URLs = Google keeps our own canonical (no duplicate clustering). Game pages of one language share
+  30-42% of their non-boilerplate text (one template) — do not roll new identical blocks to all games at once.
+- Pre-drop GSC (09-27..10-12): en pt it es ru ja fr = 10,351 impr / 334 clicks; ar tl th hi ms kk uz ky sw tk =
+  268 impr / 2 clicks. Owner decision pending (~10-21..23): noindex,follow for those 10 languages.
+- Fixes: tl/pubg-mobile English <title> (4f097a81); sitemap lastmod re-dated + 24 language sitemaps re-split, they
+  still listed the 816 redirects (2dc027ac); news.html out of the sitemap, llms.txt links the news index (eb875b97);
+  README/llms.txt page counts: 30 published per language (27 indexable: news.html and the fortnite/genshin hubs
+  with < 3 items are noindex), 648 sitemap URLs; audit_site.py skips meta-refresh stubs.
+- RULE: after any news_pages.py run also run sitemap_lastmod.py (it re-splits the language sitemaps).

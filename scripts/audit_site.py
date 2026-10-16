@@ -9,6 +9,8 @@ BASE = 'https://gameaccountvalue.com/'
 os.chdir(ROOT)
 pages = sorted(p.replace('\\', '/') for p in glob.glob('*.html') + glob.glob('*/*.html')
                if not os.path.basename(p).startswith(('googl', 'proto', '_')))
+# merged news articles (2026-10-16) are meta-refresh stubs to their hub section, not pages
+pages = [p for p in pages if 'http-equiv="refresh"' not in open(p, encoding='utf-8').read()]
 issues = collections.defaultdict(list)
 sitemap = open('sitemap.xml', encoding='utf-8').read()
 sm_urls = set(re.findall(r'<loc>(.*?)</loc>', sitemap))
