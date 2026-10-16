@@ -39,7 +39,7 @@ TEXT = {
   nav_shots='📸 Screenshots',
   h2_shots='Screenshots for an estimate',
   q_worth='How much is a PUBG Mobile account worth?',
-  a_worth=('On October 14, 2026 Eldorado.gg listed <strong>10,905</strong> PUBG Mobile accounts; the first page asked $2 for a plain Gold-rank account and up to $399.99 '
+  a_worth=('On October 14, 2026, Eldorado.gg listed <strong>10,905</strong> PUBG Mobile accounts; the first page asked $2 for a plain Gold-rank account and up to $399.99 '
            'for an account at collection level 74. FunPay listed <strong>6,332</strong>, from €0.26 to €3,286 (≈ $0.29 – $3,676). '
            'On Türkiye’s GameSatış the asking prices ran from 1,000 ₺ to 245,000 ₺ (≈ $20 – $4,960). Most of that spread follows one number: the collection level.'),
   q_table='What do accounts ask at each collection level?',

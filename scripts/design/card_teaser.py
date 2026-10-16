@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 # chip, teaser headline, teaser line (before link), link text
 T = {
  'en': ('🎴 + collectible holo card', 'A paid report is your own numbered holo card', 'PDF + video, 9 foil tiers, the first 100 are GENESIS.', 'See all cards ↓'),
- 'ru': ('🎴 + коллекционная голо-карта', 'Платный отчёт — это твоя именная голо-карта с номером', 'PDF + видео, 9 уровней фольги, первые 100 — GENESIS.', 'Смотреть все карты ↓'),
+ 'ru': ('🎴 + коллекционная голографическая карта', 'Платный отчёт — это твоя именная голографическая карта с номером', 'PDF + видео, 9 уровней фольги, первые 100 — GENESIS.', 'Смотреть все карты ↓'),
  'es': ('🎴 + carta holo coleccionable', 'Un informe de pago es tu propia carta holo numerada', 'PDF + vídeo, 9 niveles de lámina, las primeras 100 son GENESIS.', 'Ver todas las cartas ↓'),
  'pt': ('🎴 + carta holo colecionável', 'Um relatório pago é a sua própria carta holo numerada', 'PDF + vídeo, 9 níveis de lâmina, as primeiras 100 são GENESIS.', 'Ver todas as cartas ↓'),
  'id': ('🎴 + kartu holo koleksi', 'Laporan berbayar = kartu holo bernomor milikmu sendiri', 'PDF + video, 9 tingkat foil, 100 pertama adalah GENESIS.', 'Lihat semua kartu ↓'),
@@ -31,9 +31,9 @@ T = {
  'sw': ('🎴 + kadi ya holo ya mkusanyiko', 'Ripoti ya kulipia ni kadi yako ya holo yenye namba', 'PDF + video, viwango 9 vya foili, 100 za kwanza ni GENESIS.', 'Tazama kadi zote ↓'),
  'ms': ('🎴 + kad holo koleksi', 'Laporan berbayar ialah kad holo bernombor milik anda', 'PDF + video, 9 peringkat foil, 100 yang pertama ialah GENESIS.', 'Lihat semua kad ↓'),
  'uz': ('🎴 + kolleksiya golo-kartasi', 'Pullik hisobot — raqamli shaxsiy golo-kartangiz', 'PDF + video, folganing 9 darajasi, birinchi 100 tasi — GENESIS.', 'Barcha kartalarni koʻrish ↓'),
- 'kk': ('🎴 + коллекциялық голо-карта', 'Ақылы есеп — нөмірі бар өз голо-картаңыз', 'PDF + бейне, фольганың 9 деңгейі, алғашқы 100-і — GENESIS.', 'Барлық карталарды көру ↓'),
+ 'kk': ('🎴 + коллекциялық голографиялық карта', 'Ақылы есеп — нөмірі бар өз голографиялық картаңыз', 'PDF + бейне, фольганың 9 деңгейі, алғашқы 100-і — GENESIS.', 'Барлық карталарды көру ↓'),
  'tk': ('🎴 + kolleksiýa golo-karty', 'Tölegli hasabat — belgili öz golo-kartyňyz', 'PDF + wideo, folganyň 9 derejesi, ilkinji 100-si — GENESIS.', 'Ähli kartlary gör ↓'),
- 'ky': ('🎴 + коллекциялык голо-карта', 'Акы төлөнгөн отчёт — номери бар өз голо-картаң', 'PDF + видео, фольганын 9 деңгээли, алгачкы 100ү — GENESIS.', 'Бардык карталарды көрүү ↓'),
+ 'ky': ('🎴 + коллекциялык голографиялык карта', 'Акы төлөнгөн отчёт — номери бар өз голографиялык картаң', 'PDF + видео, фольганын 9 деңгээли, алгачкы 100ү — GENESIS.', 'Бардык карталарды көрүү ↓'),
 }
 
 

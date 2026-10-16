@@ -57,7 +57,7 @@ TEXT = {'en': {'a': {
  'ff-naruto': {
   'title': 'Free Fire × NARUTO SHIPPUDEN returns: Nine Tails, Hinata bundle (September 16 – October 15)',
   'desc': 'Garena’s NARUTO SHIPPUDEN collaboration runs September 16 – October 15, 2026 with the Sharingan: Control skill, a pick-one Jiraiya or Hinata bundle and themed cosmetics.',
-  'lead': 'Garena announced on September 15, 2026 that the Free Fire × NARUTO SHIPPUDEN collaboration returns from September 16 to October 15.',
+  'lead': 'Garena announced on September 15, 2026, that the Free Fire × NARUTO SHIPPUDEN collaboration returns from September 16 to October 15.',
   'new': ['New skills: Sharingan: Control, which commands Nine Tails, and 8 Trigrams Palm Rotation.',
           'An expanded Ninja Academy in the Hidden Leaf Village map.',
           'A pick-one grand prize: the Jiraiya bundle or the Hinata bundle (Hinata’s debut).',
@@ -66,7 +66,7 @@ TEXT = {'en': {'a': {
  'ml-mtc8': {
   'title': 'MLBB Türkiye Championship Season 8 starts on the road to M8 in Istanbul',
   'desc': 'MTC Season 8 runs September 12 – October 18, 2026 with eight teams and a US$40,000 prize pool, ahead of the M8 World Championship in Istanbul in January 2027.',
-  'lead': 'MOONTON Games announced on September 10, 2026 that the MLBB Türkiye Championship Season 8 starts on September 12.',
+  'lead': 'MOONTON Games announced on September 10, 2026, that the MLBB Türkiye Championship Season 8 starts on September 12.',
   'new': ['Regular season from September 12 to October 18; the grand finals are on November 7, 2026.',
           'Eight teams take part, including Aurora Gaming, FUT Esports, Bushido Wildcats, Pacific Esports, Ozorok and Dark Passage.',
           'The top six teams go to the playoffs for a share of the US$40,000 prize pool.',
@@ -92,8 +92,8 @@ TEXT = {'en': {'a': {
   'impact': 'Minecraft accounts are valued on account type, username and capes, not on game content, so a game drop does not change what an account is worth.'},
  'ff-award': {
   'title': 'Free Fire wins “Best Use of IP or Licence” at the Pocket Gamer Mobile Games Awards 2026',
-  'desc': 'Garena said on September 3, 2026 that Free Fire won Best Use of IP or Licence at the Pocket Gamer Mobile Games Awards 2026 for its NARUTO SHIPPUDEN collaboration.',
-  'lead': 'Garena announced on September 3, 2026 that Free Fire won “Best Use of IP or Licence” at the Pocket Gamer Mobile Games Awards 2026.',
+  'desc': 'Garena said on September 3, 2026, that Free Fire won Best Use of IP or Licence at the Pocket Gamer Mobile Games Awards 2026 for its NARUTO SHIPPUDEN collaboration.',
+  'lead': 'Garena announced on September 3, 2026, that Free Fire won “Best Use of IP or Licence” at the Pocket Gamer Mobile Games Awards 2026.',
   'new': ['The award recognises the NARUTO SHIPPUDEN Chapter 2: Ninja War collaboration.',
           'Garena reports that its Ninja Clash All Stars event in Bangkok drew nearly 5,000 visitors and over 247 million video views.',
           'The collaboration included themed characters, jutsu abilities and a transformed Hidden Leaf Village map.',

@@ -8,7 +8,7 @@ TEXT = {'en': {'a': {
  'pm-pmgo2': {
   'title': 'PMGO 2026 Season 2: 32 teams in Lahore on October 20–25, with points for the PMGC in Istanbul',
   'desc': 'The PUBG Mobile Global Open 2026 Season 2 runs October 20–25 in Lahore — Pakistan’s first official global PUBG Mobile esports event: 32 teams, a $500,000 prize pool and points for the PMGC in Istanbul.',
-  'lead': 'On October 13, 2026 the publisher announced the dates and format of the PUBG Mobile Global Open (PMGO) 2026 Season 2 in Lahore, Pakistan.',
+  'lead': 'On October 13, 2026, the publisher announced the dates and format of the PUBG Mobile Global Open (PMGO) 2026 Season 2 in Lahore, Pakistan.',
   'new': ['32 teams from nine regional finals across Asia, Europe, Africa, the Middle East and the Americas play for a $500,000 prize pool from October 20 to 25.',
           'Group Stage on October 20–21 (two groups of 16, six matches each), Survival Stage on October 22, Grand Finals on October 24–25, on Rondo, Erangel and Miramar.',
           'New this season: ties for qualification places are settled by a best-of-three 4v4 Team Deathmatch on Warehouse, and the Grand Finals can go to a Match 13.',
@@ -17,7 +17,7 @@ TEXT = {'en': {'a': {
  'pm-asiad': {
   'title': 'Thailand wins the Asian Games gold in PUBG Mobile, ahead of China and Pakistan',
   'desc': 'Thailand won the PUBG Mobile Asian Games Version at the 2026 Asian Games in Aichi-Nagoya, its first podium in PUBG Mobile esports; China took silver and Pakistan bronze.',
-  'lead': 'On September 29, 2026 the publisher announced the result of the PUBG Mobile Asian Games Version finals at the 20th Asian Games in Aichi-Nagoya, Japan.',
+  'lead': 'On September 29, 2026, the publisher announced the result of the PUBG Mobile Asian Games Version finals at the 20th Asian Games in Aichi-Nagoya, Japan.',
   'new': ['Thailand took the gold medal — according to the publisher, Thailand’s first podium in PUBG Mobile esports.',
           'China won silver and Pakistan bronze; Pakistan finished five points ahead of Indonesia and Vietnam.',
           '12 teams played two days of battle royale on Erangel and Miramar.',

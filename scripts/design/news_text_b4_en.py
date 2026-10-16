@@ -4,7 +4,7 @@ TEXT = {'en': {'a': {
  'ml-asiad': {
   'title': 'Mobile Legends at the Asian Games: Myanmar wins the first MLBB gold, beating Indonesia 4–0',
   'desc': 'MOONTON reported on October 1, 2026 that Myanmar won the first Asian Games gold in Mobile Legends: Bang Bang at Aichi-Nagoya 2026, sweeping Indonesia 4–0 in the Grand Final.',
-  'lead': 'On October 1, 2026 MOONTON Games announced the result of Mobile Legends: Bang Bang’s first run as an official Asian Games medal event.',
+  'lead': 'On October 1, 2026, MOONTON Games announced the result of Mobile Legends: Bang Bang’s first run as an official Asian Games medal event.',
   'new': ['Myanmar beat Indonesia 4–0 in the Grand Final at Aichi Sky Expo and became the first Asian Games gold medallist in MLBB.',
           'Indonesia took silver; Malaysia and Mongolia took the bronze medals.',
           '22 National Olympic Committees entered from the preliminary rounds, and 12 teams reached the Main Stage.',
@@ -13,7 +13,7 @@ TEXT = {'en': {'a': {
  'mc-drop4': {
   'title': 'Minecraft’s last game drop of 2026 enters testing: ice caves, the frostbite and ice balls',
   'desc': 'Mojang opened testing of the final 2026 game drop on September 30, 2026: ice caves, a frozen zombie variant called the frostbite, ice balls, ice crystals and icicles.',
-  'lead': 'On September 30, 2026 Mojang Studios opened testing for the final Minecraft game drop of 2026.',
+  'lead': 'On September 30, 2026, Mojang Studios opened testing for the final Minecraft game drop of 2026.',
   'new': ['New ice caves, decorated with ice crystals and icicles; the icicles are fragile.',
           'A new mob, the frostbite (a frozen zombie variant), throws ice balls; Mojang also mentions a Freezing potion.',
           'The first test build, on September 30, is a Bedrock Edition preview/beta; the post also explains how to enable Java Edition snapshots in the Minecraft Launcher.',

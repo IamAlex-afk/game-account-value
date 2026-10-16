@@ -21,7 +21,7 @@ TEXT = {'en': {'a': {
  'coc-ore': {
   'title': 'Clash of Clans lowers Gem prices for Ore: Starry Ore from 35 to 20 Gems',
   'desc': 'Supercell announced on October 2, 2026 new baseline Gem prices for Ore: Shiny 1 → 0.5, Glowy 5 → 3, Starry 35 → 20. Maxing Epic Equipment costs roughly half the Gems.',
-  'lead': 'On October 2, 2026 Supercell announced lower Gem prices for Ore in Clash of Clans — as a new baseline, not a limited-time sale.',
+  'lead': 'On October 2, 2026, Supercell announced lower Gem prices for Ore in Clash of Clans — as a new baseline, not a limited-time sale.',
   'new': ['New prices: Shiny Ore 1 Gem → 0.5 Gems, Glowy Ore 5 → 3 Gems, Starry Ore 35 → 20 Gems.',
           'Supercell says the Gem cost of maxing a piece of Epic Equipment comes down by roughly half.',
           'The Trader has used the new prices since July; the Medal shop follows in October’s Medal Event, and the next full update makes them standard everywhere in the game.',
@@ -30,10 +30,10 @@ TEXT = {'en': {'a': {
  'bs-path27': {
   'title': 'Brawl Stars Championship 2027: how the eight teams per region are chosen',
   'desc': 'Supercell explained on October 1, 2026 how teams reach BSC 2027: six direct invitations per region from the 2026 leaderboard and two spots from the BSC Invitational on January 16–17, 2027.',
-  'lead': 'On October 1, 2026 Supercell published the qualification path for the Brawl Stars Championship 2027.',
+  'lead': 'On October 1, 2026, Supercell published the qualification path for the Brawl Stars Championship 2027.',
   'new': ['BSC 2027 has eight teams in each of four regions: APAC, EMEA, South America and North America.',
           'The top six teams of each region’s 2026 BSC Leaderboard get a direct invitation and may change at most one player.',
           'The last two spots per region are decided at the BSC Invitational on January 16–17, 2027: teams ranked 7th–10th play, and 7th–14th in EMEA.',
-          'Invitations go out on November 23, 2026 and teams must answer by December 20; Supercell notes that the dates may change. New teams start from the in-game Championship Challenge and Brawl Stars Challengers.'],
+          'Invitations go out on November 23, 2026, and teams must answer by December 20; Supercell notes that the dates may change. New teams start from the in-game Championship Challenge and Brawl Stars Challengers.'],
   'impact': 'Esports qualification does not change what a regular account is worth. Trophies, brawlers and their Power Levels remain what listings are priced on in our research.'},
 }}}

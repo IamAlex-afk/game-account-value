@@ -127,7 +127,7 @@ T = {
    intro='Angebotspreise auf öffentlichen Marktplätzen in verschiedenen Ländern, alle am selben Tag geprüft. Zuerst dein Markt; die anderen zeigen, was Spieler anderswo am meisten schätzen.',
    your='Dein Markt', others='Andere Märkte', cols=('Markt', 'Wo', 'Gesehene Angebotspreise', '≈ USD', 'Dort am meisten geschätzt'),
    nv='Noch nicht geprüft — die wichtigsten Marktplätze dort blockieren automatische Prüfungen.',
-   note='Angebotspreise, keine abgeschlossenen Verkäufe. In USD umgerechnet zu den Kursen vom 25.–27. September 2026. Nur beschreibend — keine Kauf- oder Verkaufsempfehlung; Kontohandel kann gegen die Spielregeln verstoßen.',
+   note='Angebotspreise, keine abgeschlossenen Verkäufe. In USD umgerechnet zu den Kursen vom 25. bis 27. September 2026. Nur beschreibend — keine Kauf- oder Verkaufsempfehlung; Kontohandel kann gegen die Spielregeln verstoßen.',
    checked='Geprüft',
    reg=dict(global_='Globale / westliche Seiten', cis='Russland & GUS', cn='China', jp='Japan', kr='Südkorea', tr='Türkei', sea='Südostasien', br='Brasilien'),
    dem=dict(global_='Trophäen und Brawler-Anzahl — die teuersten Angebote nennen keinen seltenen Skin', cis='Voll ausgebaute Konten: alle Hypercharges, Münzen', cn='Kosmetik: ausgelaufene und Tierkreis-Skins, Flügel; Meister-Rang; Kontoalter', jp='Meister-Rang, nationales Ranking, Konten aus erster Hand', kr='Nationales Ranking und Prestige; sehr große Skin-Sammlungen', tr='Trophäen, Anzahl der Kostüme, übertragbare E-Mail / Supercell ID', sea='Trophäen und voll ausgebaute Brawler; viele Angebote, sinkende Angebotspreise')),

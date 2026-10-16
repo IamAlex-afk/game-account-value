@@ -40,7 +40,7 @@ TEXT = {
           'Lo siguiente en el calendario son el MLBB Championship Tour y el Mundial M8, cuyas finales serán en Estambul (Turquía).'],
   'impact': 'Los resultados de esports no cambian el valor de las cuentas existentes. Según nuestra investigación, los aspectos, los héroes y el progreso de la cuenta siguen marcando el valor en Mobile Legends.'},
  'mc-drop4': {
-  'title': 'El último game drop de Minecraft de 2026 entra en pruebas: cuevas de hielo, el frostbite y ice balls',
+  'title': 'El último game drop de Minecraft de 2026 entra en pruebas: cuevas de hielo, el frostbite e ice balls',
   'desc': 'Mojang abrió el 30 de septiembre de 2026 las pruebas del último game drop de 2026: cuevas de hielo, una variante de zombi congelado llamada frostbite, ice balls, cristales de hielo y carámbanos.',
   'lead': 'El 30 de septiembre de 2026 Mojang Studios abrió las pruebas del último game drop de Minecraft de 2026.',
   'new': ['Nuevas cuevas de hielo, decoradas con cristales de hielo (ice crystals) y carámbanos (icicles); los carámbanos son frágiles.',
