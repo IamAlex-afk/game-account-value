@@ -733,8 +733,9 @@
           }
         }
         // listings ask more for the same level with maxed items: $30 / maxed gun, $100 / max-level X-Suit,
-        // $20 / supercar, capped at 1.2x the level price (bot: core/valuation.py, 2026-10-14)
-        c += Math.min((v.mguns || 0) * 30 + (v.mxs || 0) * 100 + (v.cars || 0) * 20, c * 1.2);
+        // $20 / supercar (bot: core/valuation.py, 2026-10-14). Each slider adds its own value, with no
+        // cap tied to the collection level, so every slider visibly moves the estimate.
+        c += (v.mguns || 0) * 30 + (v.mxs || 0) * 100 + (v.cars || 0) * 20;
         return [c * 0.55, c * 1.6];
       }
     },
