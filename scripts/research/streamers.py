@@ -33,7 +33,7 @@ GAMES = {  # page slug: (YouTube search query, title keywords, Twitch category n
     "fortnite": ("Fortnite", ["fortnite", "фортнайт"], "Fortnite"),
     "minecraft": ("Minecraft", ["minecraft", "майнкрафт", "マイクラ", "마인크래프트"], "Minecraft"),
 }
-# order = priority: fewer competing pages first (owner, 2026-10-06), English last
+# order = priority: fewer competing pages first, English last
 # per-language search hints: region + words that make the query itself be in that language
 HINT = {
     "pt": ("BR", "{g} melhor deck"), "es": ("MX", "{g} mejor mazo"), "ar": ("SA", "{g} {ar}"), "id": ("ID", "{g} terbaik"),

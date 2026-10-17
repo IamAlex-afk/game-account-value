@@ -1,4 +1,4 @@
-"""Brand pass (owner-approved 2026-09-29 on the ru/brawl-stars sample):
+"""Brand pass:
 - breadcrumbs "Home › page" replace the "← Back to home" button (+ BreadcrumbList JSON-LD)
 - GAV emblem on the homepage robot's chest
 - robot note next to every calculator result: why the number is approximate

@@ -1,5 +1,4 @@
-"""Site-wide consistency pass (2026-09-30, owner: "what the main pages have,
-every page should have"). Idempotent. Run after nav_menu.py, then run
+"""Site-wide consistency pass: every page gets the blocks the main pages have. Idempotent. Run after nav_menu.py, then run
 nav_menu.py again so the pages given a skeleton <nav> here get the full menu.
 
 1. 18+ card above the footer notice on every page with the standard footer

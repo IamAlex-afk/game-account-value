@@ -1,5 +1,4 @@
-"""Methodology page: the seven question-style headings become plain statements
-(owner feedback 2026-09-30: "stupid questions"). Google shows FAQ rich results
+"""Methodology page: the seven question-style headings become plain statements. Google shows FAQ rich results
 only for government/health sites since 2023, so the FAQPage JSON-LD is dropped
 while the Article node stays. Idempotent. Run: python scripts/design/methodology_headings.py"""
 import glob, json, os, re

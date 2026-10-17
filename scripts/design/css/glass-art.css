@@ -1,4 +1,4 @@
-/* Art pass (2026-09-30): raster cyborg characters from owner-supplied Gemini renders.
+/* Art pass (2026-09-30): raster cyborg characters from supplied renders.
    Hero cyborg with scanning beam + game icons, robot sitting on the result bar,
    18+ girl above the footer notice, joystick above the final CTA. */
 .g-tool .g-robot.g-cyborg { width: 270px; --travel: -190px; }
@@ -448,7 +448,7 @@ html body .btn-primary:hover::after, html body[class] .nav-cta:hover::after { tr
   html body .g-panel { padding-top: 20px !important; }
   .g-intro { margin-bottom: 10px !important; }
 }
-/* ---- 2026-10-05: bigger header and hero chips on desktop (owner: the header looked small with a big empty gap) ---- */
+/* ---- 2026-10-05: bigger header and hero chips on desktop ---- */
 @media (min-width: 1180px) {
   nav:not(.crumbs) { padding-top: 12px; padding-bottom: 12px; }
   .logo { font-size: 22px !important; }

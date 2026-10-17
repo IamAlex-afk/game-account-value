@@ -2,7 +2,7 @@
 Placed after 'What Actually Determines Value', before 'Scams & Trading Risks'.
 Every line restates a fact already on that page (price table, sources, rules) or in the
 bot's own pricer (GameAccountValue_Bot core/valuation.py) - nothing new is claimed.
-Rollout is deliberately slow (owner, 2026-10-05): one game at a time, EN + RU first;
+Rollout is deliberately slow: one game at a time, EN + RU first;
 other languages only after native review. Idempotent via <!--limits--> markers.
 Run: python scripts/design/estimate_limits.py"""
 import os, re

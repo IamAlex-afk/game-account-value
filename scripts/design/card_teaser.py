@@ -1,5 +1,4 @@
-"""Card-collection teasers (owner-approved preview 2026-09-30, "afraid they won't
-scroll down to the cards"):
+"""Card-collection teasers, so visitors find the cards without scrolling down:
   1. hero chip next to the AI badge on 24 homepages -> #cards
   2. teaser under the bot CTA in every calculator (homepages + game pages) with
      a live mini card -> the carousel (#cards on the language's homepage)

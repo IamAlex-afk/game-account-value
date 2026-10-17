@@ -25,7 +25,7 @@ site's existing base tokens and the working method for extending them.
 
 `assets/glass.css` is loaded on every page **after** `style.css` and the
 page's inline `<style>`, and re-skins them; `style.css` stays as the
-structural base. Owner decisions behind it: keep all page copy unchanged
+structural base. Design rules behind it: keep all page copy unchanged
 (only visuals and button placement), the site is a free calculator only
 (no uploads, no typing, no data collected — the AI screenshot scan lives in
 the Telegram bot), audience styling is "gamer, not kiddy" (site is 18+).

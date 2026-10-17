@@ -69,7 +69,7 @@ def render(game, out_dir):
     import emblem as em_mod
     em_mod.emblem(192).save(emblem)
     city = open(os.path.join(HERE, 'city.svg'), encoding='utf-8').read()
-    # hero cyborg render (owner-supplied Gemini art, black keyed out) — same as the homepage
+    # hero cyborg render (supplied art, black keyed out) — same as the homepage
     art = os.environ.get('OG_ART', 'robot')
     bot = file_url(os.path.join(ROOT, 'assets', 'robot-calc.webp')) if art == 'robot' else ''
     h1 = 96 if len(title) <= 12 else (78 if len(title) <= 15 else 72)

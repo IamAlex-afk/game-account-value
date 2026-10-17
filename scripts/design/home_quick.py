@@ -1,5 +1,4 @@
-"""Homepage quick links (owner request 2026-10-05: 'all sections on the first screen as big
-buttons'): Games · Guides · News · About as four large tiles right under the hero, before the
+"""Homepage quick links: Games · Guides · News · About as four large tiles right under the hero, before the
 calculator. A plain <div>: every <nav> is styled as the header bar. Labels reuse the header menu (nav_menu.L) and the footer's own About text, so nothing
 new to translate. Games / Guides jump to sections on the same page (#games, #hub).
 Idempotent via <!--quick--> markers. Run after nav_menu.py and home_hub.py."""

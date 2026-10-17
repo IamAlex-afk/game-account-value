@@ -1,4 +1,4 @@
-"""Homepage "Card collection" carousel (owner-approved 2026-09-30) on all 24
+"""Homepage "Card collection" carousel on all 24
 homepages. Replaces the old static certificate sample. Cards are rendered by
 the bot's own drawer (assets/cards/*.webp); the carousel logic lives in
 assets/glass.js, styles in scripts/design/css/glass-art.css. Idempotent.

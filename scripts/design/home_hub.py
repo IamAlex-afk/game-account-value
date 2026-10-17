@@ -1,6 +1,5 @@
 """Homepage block "Everything on the site": news + the 5 guides as cards, so a
-visitor sees the whole site without opening a game first (owner request
-2026-09-30). Labels for the guides come from nav_menu (localized resources
+visitor sees the whole site without opening a game first. Labels for the guides come from nav_menu (localized resources
 callout); card titles/descriptions below. Idempotent. Run after nav_menu.py."""
 import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

@@ -1,4 +1,4 @@
-"""Deep page-by-page audit (owner request 2026-10-01: 'inspect every file, what did we miss').
+"""Deep page-by-page audit.
 Reports counts + examples; not a gate. Complements site_check.py / audit_site.py."""
 import collections, glob, html, json, os, re, sys
 

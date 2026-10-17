@@ -1,4 +1,4 @@
-"""Homepage creators block (owner, 2026-10-06): the most-subscribed verified YouTube creator per game in the page
+"""Homepage creators block: the most-subscribed verified YouTube creator per game in the page
 language (creators.render_home_creators), placed before the 'Everything on the site' hub. Only languages with
 verified data for at least 3 games get the block. Idempotent via <!--creators--> markers.
 Run after scripts/research/streamers.py: python scripts/design/home_creators.py"""

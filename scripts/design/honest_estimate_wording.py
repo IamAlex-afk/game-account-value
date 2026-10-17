@@ -1,4 +1,4 @@
-"""Honest wording (owner, 2026-10-06): the site gives a rough range, the bot a MORE precise estimate —
+"""Honest wording: the site gives a rough range, the bot a MORE precise estimate —
 never "exact". Scoped to the two places that promised it: the calculator subtitle on game pages
 (<div class="vc-subtitle">) and the homepage bot button (text + aria-label). Idempotent.
 Run: python scripts/design/honest_estimate_wording.py"""
