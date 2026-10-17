@@ -11,6 +11,10 @@ LANGS = ['en', 'ru', 'es', 'pt', 'id', 'tr', 'ar', 'vi', 'hi', 'fr', 'de', 'it',
 EN_WORDS = re.compile(r'\b(the|and|with|your|which|this|that|from|have|account is|you can|we do)\b', re.I)
 
 
+GAMES = ['roblox', 'brawl-stars', 'clash-of-clans', 'clash-royale', 'free-fire', 'genshin-impact',
+         'pubg-mobile', 'mobile-legends', 'fortnite', 'minecraft']
+
+
 def pages():
     out = []
     for f in glob.glob(ROOT + '**/*.html', recursive=True):
@@ -122,6 +126,13 @@ def main():
             errors.append(f'{rel}: no breadcrumbs')
         if 'data-g-slot="result"' in s and 'gc-teaser' not in s:
             errors.append(f'{rel}: calculator without card teaser')
+        # homepage "N games" counter must match the game pages that exist in that language (2026-10-17: it said 9 of 10)
+        if base == 'index.html':
+            pre = '' if lang_of(rel) == 'en' else lang_of(rel) + '/'
+            n_games = sum(1 for g in GAMES if pre + g + '.html' in exist)
+            m = re.search(r'<div class="stat-num">(\d+)</div>', s)
+            if m and int(m.group(1)) != n_games:
+                errors.append(f'{rel}: games counter says {m.group(1)}, the language has {n_games} game pages')
         # English leftovers in translated pages
         if lang_of(rel) != 'en':
             main_part = s[s.find('<main'):s.find('</main>')] if '<main' in s else s
@@ -129,6 +140,16 @@ def main():
             bad = [l.strip() for l in txt.split('\n') if len(l.strip()) > 40 and len(EN_WORDS.findall(l)) >= 3]
             if bad:
                 leftovers.append((rel, bad[:2]))
+    # mass-publishing guard: Google's scaled-content policy; a big jump in indexable URLs needs a deliberate decision
+    try:
+        import subprocess
+        old = subprocess.run(['git', '-C', ROOT, 'show', 'HEAD:sitemap.xml'], capture_output=True, text=True, encoding='utf-8').stdout
+        new = open(ROOT + 'sitemap.xml', encoding='utf-8').read()
+        grow = new.count('<loc>') - old.count('<loc>')
+        if old and grow > 20 and os.environ.get('GAV_ALLOW_MASS') != '1':
+            errors.append(f'sitemap.xml: +{grow} indexable URLs in one change. Publish in small batches, or set GAV_ALLOW_MASS=1 after a deliberate decision')
+    except OSError:
+        pass
     print(f'pages: {len(files)}  languages: {len(LANGS)}')
     print(f'ERRORS: {len(errors)}')
     for e in errors[:60]:
