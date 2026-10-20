@@ -63,6 +63,7 @@ Every language has the same **30 pages** (home, 10 game reports, market report, 
 - Telegram user IDs are **stored as SHA-256 hashes**, never raw.
 - No cookies, no analytics or tracking, no ads, no registration; the `data-event` attributes on CTA buttons are inert markup that no script reads.
 - The bot's `/top` leaderboard is opt-in after a paid audit (name on the card or card number only) and removed by `/delete`.
+- A paid audit also creates a public telegra.ph page with the card and the name printed on it. Telegraph does not allow pages to be deleted, so `/delete` cannot remove it.
 
 Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.html](https://gameaccountvalue.com/terms.html)
 

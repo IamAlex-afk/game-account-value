@@ -58,7 +58,7 @@ English, Russian, Spanish, Portuguese, Turkish, Arabic, Indonesian, French, Germ
 
 ## Compliance
 
-- GDPR: no raw personal data stored; /delete command erases all records instantly, including partner/referral data
+- GDPR: the bot keeps only what a valuation needs (Telegram ID as a SHA-256 hash; for paid audits also the name printed on the card). /delete immediately removes the user's records from the bot's database, including partner/referral data. It cannot remove the public telegra.ph page created for a paid card (Telegraph does not allow deletion) or data already processed by Google's Gemini API under Google's terms
 - AI-generated PDF certificates include disclosure metadata (Producer, AIGenerated flag)
 - 18+ only; terms of service acceptance required before first interaction
 - Telegram ToS: compliant native Stars payment flow, /paysupport command available
@@ -121,7 +121,7 @@ Q: Are valuations guaranteed prices?
 A: No. All values are AI estimates for informational reference only. They are not financial advice and do not guarantee any resale price. GameAccountValue does not sell, buy, or broker accounts.
 
 Q: What personal data is stored?
-A: A SHA-256 hash of your Telegram user ID, your selected game, and the valuation result; for paid audits also the name printed on the card, the card number and the payment charge ID (for refunds). Screenshots are processed in-memory and never written to disk. The /top leaderboard is opt-in after a paid audit (name on the card or card number only) and /delete removes everything.
+A: A SHA-256 hash of your Telegram user ID, your selected game, and the valuation result; for paid audits also the name printed on the card, the card number and the payment charge ID (for refunds). Screenshots are sent to Google's Gemini API for the analysis, held in memory and never written to disk by the bot. The /top leaderboard is opt-in after a paid audit (name on the card or card number only). /delete removes the user's records from the bot's database, including the /top entry; it cannot remove the public telegra.ph page created for a paid card.
 
 Q: How are refunds handled?
 A: If the AI cannot identify a valid game account in the provided screenshots, a full Telegram Stars refund is issued automatically (or, for the free tier, the daily quota is restored instead of being consumed).

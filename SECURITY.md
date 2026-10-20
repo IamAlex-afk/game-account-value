@@ -23,7 +23,11 @@ This is a browser-only static landing page on GitHub Pages.
 
 ## Reporting a Vulnerability
 
-Report security issues via GitHub Issues:
-https://github.com/IamAlex-afk/game-account-value/issues
+Please report security issues privately, not in a public issue:
+
+- GitHub private vulnerability report:
+  https://github.com/IamAlex-afk/game-account-value/security/advisories/new
+- or a direct message to https://t.me/GameAccountValue_Bot
+  (the contact in /.well-known/security.txt)
 
 Expected response time: within 7 days.

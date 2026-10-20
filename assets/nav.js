@@ -42,8 +42,14 @@ document.addEventListener('click', function (e) {
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     document.querySelectorAll('.lang-selector.open').forEach(function (sel) {
+      var btn = sel.querySelector('.lang-btn');
+      var hadFocus = sel.contains(document.activeElement);
       sel.classList.remove('open');
-      sel.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-expanded', 'false');
+      // Focus would stay on a now-hidden language link. The burger handler
+      // runs first and has already moved focus to the burger if it closed
+      // the whole phone menu, so this only fires for the dropdown itself.
+      if (hadFocus && btn.getClientRects().length) btn.focus();
     });
   }
 });

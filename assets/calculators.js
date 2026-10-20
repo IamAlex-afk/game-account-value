@@ -53,8 +53,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "year" : "years"); },
       minecraftTypes: ["Regular account", "MVP+/Hypixel, rare cape", "Minecon cape holder", "2-char name (alphanumeric)"],
       checkboxHeading: "Named rare items (optional):",
-      confidence: { low: "Low", medium: "Medium", high: "High" },
-      confidencePrefix: "Confidence: ",
       copiedFallback: "Copied!",
       gamepad: { up: "Previous field", down: "Next field", left: "Decrease", right: "Increase", a: "Reset all fields", b: "Share result", resetCaption: "RESET", shareCaption: "SHARE" }
     },
@@ -74,8 +72,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "год" : (v >= 2 && v <= 4 ? "года" : "лет")); },
       minecraftTypes: ["Обычный аккаунт", "MVP+/Hypixel, редкий скин плаща", "Держатель плаща Minecon", "2-симв. ник (алфавитно-цифровой)"],
       checkboxHeading: "Именные редкие предметы (опционально):",
-      confidence: { low: "Низкая", medium: "Средняя", high: "Высокая" },
-      confidencePrefix: "Уверенность: ",
       copiedFallback: "Скопировано!",
       gamepad: { up: "Предыдущее поле", down: "Следующее поле", left: "Уменьшить", right: "Увеличить", a: "Сбросить всё", b: "Поделиться результатом", resetCaption: "СБРОС", shareCaption: "ПОДЕЛИТЬСЯ" }
     },
@@ -95,8 +91,6 @@
       ageUnit: function (v) { return v + " tahun"; },
       minecraftTypes: ["Akun biasa", "MVP+/Hypixel, cape langka", "Pemilik cape Minecon", "Nama 2 karakter (alfanumerik)"],
       checkboxHeading: "Item langka bernama (opsional):",
-      confidence: { low: "Rendah", medium: "Sedang", high: "Tinggi" },
-      confidencePrefix: "Keyakinan: ",
       copiedFallback: "Disalin!",
       gamepad: { up: "Kolom sebelumnya", down: "Kolom berikutnya", left: "Kurangi", right: "Tambah", a: "Reset semua", b: "Bagikan hasil", resetCaption: "RESET", shareCaption: "BAGIKAN" }
     },
@@ -116,8 +110,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "ano" : "anos"); },
       minecraftTypes: ["Conta comum", "MVP+/Hypixel, cape raro", "Dono de cape Minecon", "Nick de 2 caracteres (alfanumérico)"],
       checkboxHeading: "Itens raros nomeados (opcional):",
-      confidence: { low: "Baixa", medium: "Média", high: "Alta" },
-      confidencePrefix: "Confiança: ",
       copiedFallback: "Copiado!",
       gamepad: { up: "Campo anterior", down: "Próximo campo", left: "Diminuir", right: "Aumentar", a: "Reiniciar tudo", b: "Compartilhar resultado", resetCaption: "REINICIAR", shareCaption: "COMPARTILHAR" }
     },
@@ -137,8 +129,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "año" : "años"); },
       minecraftTypes: ["Cuenta normal", "MVP+/Hypixel, capa rara", "Poseedor de la capa Minecon", "Nick de 2 caracteres (alfanumérico)"],
       checkboxHeading: "Objetos raros con nombre (opcional):",
-      confidence: { low: "Baja", medium: "Media", high: "Alta" },
-      confidencePrefix: "Confianza: ",
       copiedFallback: "¡Copiado!",
       gamepad: { up: "Campo anterior", down: "Campo siguiente", left: "Disminuir", right: "Aumentar", a: "Reiniciar todo", b: "Compartir resultado", resetCaption: "REINICIAR", shareCaption: "COMPARTIR" }
     },
@@ -158,8 +148,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "an" : "ans"); },
       minecraftTypes: ["Compte standard", "MVP+/Hypixel, cape rare", "Détenteur de la cape Minecon", "Pseudo à 2 caractères (alphanumérique)"],
       checkboxHeading: "Objets rares nommés (facultatif) :",
-      confidence: { low: "Faible", medium: "Moyenne", high: "Élevée" },
-      confidencePrefix: "Confiance : ",
       copiedFallback: "Copié !",
       gamepad: { up: "Champ précédent", down: "Champ suivant", left: "Diminuer", right: "Augmenter", a: "Tout réinitialiser", b: "Partager le résultat", resetCaption: "RESET", shareCaption: "PARTAGER" }
     },
@@ -179,8 +167,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "سنة" : "سنوات"); },
       minecraftTypes: ["حساب عادي", "MVP+/Hypixel، عباءة نادرة", "حامل عباءة Minecon", "اسم من حرفين (أرقام وحروف)"],
       checkboxHeading: "عناصر نادرة مسماة (اختياري):",
-      confidence: { low: "منخفضة", medium: "متوسطة", high: "عالية" },
-      confidencePrefix: "مستوى الثقة: ",
       copiedFallback: "تم النسخ!",
       gamepad: { up: "الحقل السابق", down: "الحقل التالي", left: "إنقاص", right: "زيادة", a: "إعادة تعيين الكل", b: "مشاركة النتيجة", resetCaption: "إعادة", shareCaption: "مشاركة" }
     },
@@ -200,8 +186,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "Jahr" : "Jahre"); },
       minecraftTypes: ["Normaler Account", "MVP+/Hypixel, seltener Cape", "Minecon-Cape-Besitzer", "2-Zeichen-Name (alphanumerisch)"],
       checkboxHeading: "Namhafte seltene Items (optional):",
-      confidence: { low: "Niedrig", medium: "Mittel", high: "Hoch" },
-      confidencePrefix: "Sicherheit: ",
       copiedFallback: "Kopiert!",
       gamepad: { up: "Vorheriges Feld", down: "Nächstes Feld", left: "Verringern", right: "Erhöhen", a: "Alles zurücksetzen", b: "Ergebnis teilen", resetCaption: "RESET", shareCaption: "TEILEN" }
     },
@@ -221,8 +205,6 @@
       ageUnit: function (v) { return v + " yıl"; },
       minecraftTypes: ["Normal hesap", "MVP+/Hypixel, nadir pelerin", "Minecon pelerini sahibi", "2 karakterli isim (alfanümerik)"],
       checkboxHeading: "İsimli nadir eşyalar (opsiyonel):",
-      confidence: { low: "Düşük", medium: "Orta", high: "Yüksek" },
-      confidencePrefix: "Güven: ",
       copiedFallback: "Kopyalandı!",
       gamepad: { up: "Önceki alan", down: "Sonraki alan", left: "Azalt", right: "Artır", a: "Tümünü sıfırla", b: "Sonucu paylaş", resetCaption: "SIFIRLA", shareCaption: "PAYLAŞ" }
     },
@@ -242,8 +224,6 @@
       ageUnit: function (v) { return v + " năm"; },
       minecraftTypes: ["Acc thường", "MVP+/Hypixel, cape hiếm", "Sở hữu cape Minecon", "Tên 2 ký tự (chữ+số)"],
       checkboxHeading: "Vật phẩm hiếm có tên (tùy chọn):",
-      confidence: { low: "Thấp", medium: "Trung bình", high: "Cao" },
-      confidencePrefix: "Độ tin cậy: ",
       copiedFallback: "Đã sao chép!",
       gamepad: { up: "Trường trước", down: "Trường tiếp theo", left: "Giảm", right: "Tăng", a: "Đặt lại tất cả", b: "Chia sẻ kết quả", resetCaption: "RESET", shareCaption: "CHIA SẺ" }
     },
@@ -263,8 +243,6 @@
       ageUnit: function (v) { return v + " साल"; },
       minecraftTypes: ["रेगुलर अकाउंट", "MVP+/Hypixel, रेयर केप", "Minecon केप होल्डर", "2-कैरेक्टर नाम (अल्फ़ान्यूमेरिक)"],
       checkboxHeading: "नामी रेयर आइटम्स (ऑप्शनल):",
-      confidence: { low: "कम", medium: "मीडियम", high: "हाई" },
-      confidencePrefix: "कॉन्फिडेंस: ",
       copiedFallback: "कॉपी हो गया!",
       gamepad: { up: "पिछला फ़ील्ड", down: "अगला फ़ील्ड", left: "घटाएं", right: "बढ़ाएं", a: "सब रीसेट करें", b: "रिज़ल्ट शेयर करें", resetCaption: "रीसेट", shareCaption: "शेयर" }
     },
@@ -284,8 +262,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "anno" : "anni"); },
       minecraftTypes: ["Account normale", "MVP+/Hypixel, cape raro", "Possessore cape Minecon", "Nome 2 caratteri (alfanumerico)"],
       checkboxHeading: "Oggetti rari con nome (opzionale):",
-      confidence: { low: "Bassa", medium: "Media", high: "Alta" },
-      confidencePrefix: "Affidabilità: ",
       copiedFallback: "Copiato!",
       gamepad: { up: "Campo precedente", down: "Campo successivo", left: "Diminuisci", right: "Aumenta", a: "Reimposta tutto", b: "Condividi risultato", resetCaption: "RESET", shareCaption: "CONDIVIDI" }
     },
@@ -305,8 +281,6 @@
       ageUnit: function (v) { return v + "年"; },
       minecraftTypes: ["通常アカウント", "MVP+/Hypixel、レアなケープ", "Mineconケープ所持者", "2文字の名前(英数字)"],
       checkboxHeading: "名前付きレアアイテム(任意):",
-      confidence: { low: "低い", medium: "中程度", high: "高い" },
-      confidencePrefix: "信頼度: ",
       copiedFallback: "コピーしました!",
       gamepad: { up: "前のフィールド", down: "次のフィールド", left: "減らす", right: "増やす", a: "すべてリセット", b: "結果をシェア", resetCaption: "リセット", shareCaption: "シェア" }
     },
@@ -326,8 +300,6 @@
       ageUnit: function (v) { return v + "년"; },
       minecraftTypes: ["일반 계정", "MVP+/Hypixel, 희귀 케이프", "Minecon 케이프 보유자", "2글자 이름(영숫자)"],
       checkboxHeading: "네임드 희귀 아이템(선택):",
-      confidence: { low: "낮음", medium: "보통", high: "높음" },
-      confidencePrefix: "신뢰도: ",
       copiedFallback: "복사됨!",
       gamepad: { up: "이전 필드", down: "다음 필드", left: "감소", right: "증가", a: "전체 초기화", b: "결과 공유", resetCaption: "초기화", shareCaption: "공유" }
     },
@@ -347,8 +319,6 @@
       ageUnit: function (v) { return v + "年"; },
       minecraftTypes: ["普通账号", "MVP+/Hypixel，稀有披风", "Minecon披风持有者", "2字符ID(字母数字)"],
       checkboxHeading: "知名稀有道具(可选)：",
-      confidence: { low: "低", medium: "中", high: "高" },
-      confidencePrefix: "可信度：",
       copiedFallback: "已复制！",
       gamepad: { up: "上一项", down: "下一项", left: "减少", right: "增加", a: "全部重置", b: "分享结果", resetCaption: "重置", shareCaption: "分享" }
     },
@@ -368,8 +338,6 @@
       ageUnit: function (v) { return v + " " + (v === 1 ? "rok" : (v >= 2 && v <= 4 ? "lata" : "lat")); },
       minecraftTypes: ["Zwykłe konto", "MVP+/Hypixel, rzadki płaszcz", "Posiadacz płaszcza Minecon", "2-znakowa nazwa (alfanumeryczna)"],
       checkboxHeading: "Rzadkie przedmioty z nazwą (opcjonalnie):",
-      confidence: { low: "Niska", medium: "Średnia", high: "Wysoka" },
-      confidencePrefix: "Pewność: ",
       copiedFallback: "Skopiowano!",
       gamepad: { up: "Poprzednie pole", down: "Następne pole", left: "Zmniejsz", right: "Zwiększ", a: "Resetuj wszystko", b: "Udostępnij wynik", resetCaption: "RESET", shareCaption: "UDOSTĘPNIJ" }
     },
@@ -389,8 +357,6 @@
       ageUnit: function (v) { return v + " ปี"; },
       minecraftTypes: ["บัญชีทั่วไป", "MVP+/Hypixel, เคปหายาก", "เจ้าของเคป Minecon", "ชื่อ 2 ตัวอักษร (ตัวอักษร+ตัวเลข)"],
       checkboxHeading: "ไอเทมหายากที่มีชื่อ (ไม่บังคับ):",
-      confidence: { low: "ต่ำ", medium: "ปานกลาง", high: "สูง" },
-      confidencePrefix: "ความมั่นใจ: ",
       copiedFallback: "คัดลอกแล้ว!",
       gamepad: { up: "ฟิลด์ก่อนหน้า", down: "ฟิลด์ถัดไป", left: "ลด", right: "เพิ่ม", a: "รีเซ็ตทั้งหมด", b: "แชร์ผลลัพธ์", resetCaption: "รีเซ็ต", shareCaption: "แชร์" }
     },
@@ -410,8 +376,6 @@
       ageUnit: function (v) { return v + " tahun"; },
       minecraftTypes: ["Akaun biasa", "MVP+/Hypixel, cape jarang", "Pemegang cape Minecon", "Nama 2 aksara (huruf+nombor)"],
       checkboxHeading: "Item jarang bernama (pilihan):",
-      confidence: { low: "Rendah", medium: "Sederhana", high: "Tinggi" },
-      confidencePrefix: "Keyakinan: ",
       copiedFallback: "Disalin!",
       gamepad: { up: "Medan sebelumnya", down: "Medan seterusnya", left: "Kurangkan", right: "Tambah", a: "Set semula semua medan", b: "Kongsi keputusan", resetCaption: "SET SEMULA", shareCaption: "KONGSI" }
     },
@@ -431,8 +395,6 @@
       ageUnit: function (v) { return v + " yil"; },
       minecraftTypes: ["Oddiy akkaunt", "MVP+/Hypixel, noyob plash", "Minecon plashi egasi", "2 belgili nom (harf+raqam)"],
       checkboxHeading: "Nomli noyob buyumlar (ixtiyoriy):",
-      confidence: { low: "Past", medium: "Oʻrta", high: "Yuqori" },
-      confidencePrefix: "Ishonch: ",
       copiedFallback: "Nusxalandi!",
       gamepad: { up: "Oldingi maydon", down: "Keyingi maydon", left: "Kamaytirish", right: "Oshirish", a: "Barcha maydonlarni tiklash", b: "Natijani ulashish", resetCaption: "TIKLASH", shareCaption: "ULASHISH" }
     },
@@ -442,8 +404,6 @@
       ageUnit: function (v) { return v + " жыл"; },
       minecraftTypes: ["Қарапайым аккаунт", "MVP+/Hypixel, сирек плащ", "Minecon плащының иесі", "2 таңбалы ат (әріп+цифр)"],
       checkboxHeading: "Аталған сирек заттар (міндетті емес):",
-      confidence: {"low": "Төмен", "medium": "Орташа", "high": "Жоғары"},
-      confidencePrefix: "Сенімділік: ",
       copiedFallback: "Көшірілді!",
       gamepad: {"up": "Алдыңғы өріс", "down": "Келесі өріс", "left": "Азайту", "right": "Көбейту", "a": "Барлық өрістерді тазарту", "b": "Нәтижемен бөлісу", "resetCaption": "ТАЗАРТУ", "shareCaption": "БӨЛІСУ"}
     },
@@ -453,8 +413,6 @@
       ageUnit: function (v) { return v + " жыл"; },
       minecraftTypes: ["Жөнөкөй аккаунт", "MVP+/Hypixel, сейрек плащ", "Minecon плащынын ээси", "2 белгилүү ат (тамга+цифра)"],
       checkboxHeading: "Аталган сейрек буюмдар (милдеттүү эмес):",
-      confidence: {"low": "Төмөн", "medium": "Орточо", "high": "Жогору"},
-      confidencePrefix: "Ишенимдүүлүк: ",
       copiedFallback: "Көчүрүлдү!",
       gamepad: {"up": "Мурунку талаа", "down": "Кийинки талаа", "left": "Азайтуу", "right": "Көбөйтүү", "a": "Бардык талааларды тазалоо", "b": "Жыйынтык менен бөлүшүү", "resetCaption": "ТАЗАЛОО", "shareCaption": "БӨЛҮШҮҮ"}
     },
@@ -464,8 +422,6 @@
       ageUnit: function (v) { return v + " ýyl"; },
       minecraftTypes: ["Adaty hasap", "MVP+/Hypixel, seýrek plaş", "Minecon plaşynyň eýesi", "2 nyşanly at (harp+san)"],
       checkboxHeading: "Atly seýrek zatlar (hökmany däl):",
-      confidence: {"low": "Pes", "medium": "Orta", "high": "Ýokary"},
-      confidencePrefix: "Ynamlylyk: ",
       copiedFallback: "Göçürildi!",
       gamepad: {"up": "Öňki meýdan", "down": "Indiki meýdan", "left": "Azaltmak", "right": "Köpeltmek", "a": "Ähli meýdanlary arassalamak", "b": "Netije bilen paýlaşmak", "resetCaption": "ARASSALAMAK", "shareCaption": "PAÝLAŞMAK"}
     },
@@ -475,8 +431,6 @@
       ageUnit: function (v) { return v + " taon"; },
       minecraftTypes: ["Regular na account", "MVP+/Hypixel, rare na cape", "May Minecon cape", "2-character na pangalan (letra+numero)"],
       checkboxHeading: "Pinangalanang rare item (opsyonal):",
-      confidence: {"low": "Mababa", "medium": "Katamtaman", "high": "Mataas"},
-      confidencePrefix: "Katiyakan: ",
       copiedFallback: "Nakopya na!",
       gamepad: {"up": "Nakaraang field", "down": "Susunod na field", "left": "Bawasan", "right": "Dagdagan", "a": "I-reset ang lahat ng field", "b": "I-share ang resulta", "resetCaption": "I-RESET", "shareCaption": "I-SHARE"}
     },
@@ -486,8 +440,6 @@
       ageUnit: function (v) { return (v == 1 ? "mwaka " : "miaka ") + v; },
       minecraftTypes: ["Akaunti ya kawaida", "MVP+/Hypixel, cape adimu", "Mmiliki wa cape ya Minecon", "Jina la herufi 2 (herufi+namba)"],
       checkboxHeading: "Vitu adimu vyenye majina (si lazima):",
-      confidence: {"low": "Chini", "medium": "Wastani", "high": "Juu"},
-      confidencePrefix: "Uhakika: ",
       copiedFallback: "Imenakiliwa!",
       gamepad: {"up": "Sehemu iliyotangulia", "down": "Sehemu inayofuata", "left": "Punguza", "right": "Ongeza", "a": "Futa sehemu zote", "b": "Shiriki matokeo", "resetCaption": "FUTA", "shareCaption": "SHIRIKI"}
     }
@@ -592,12 +544,6 @@
     if (score >= 0.5) return { label: "PRO", cls: "tier-pro" };
     if (score >= 0.25) return { label: "CASUAL", cls: "tier-casual" };
     return { label: "STARTER", cls: "tier-starter" };
-  }
-
-  function confidenceLabel(ratio) {
-    if (ratio >= 0.8) return T.confidence.high;
-    if (ratio >= 0.4) return T.confidence.medium;
-    return T.confidence.low;
   }
 
   // --- per-game config -----------------------------------------------
@@ -812,15 +758,14 @@
       valueEl.insertAdjacentElement("afterend", scale);
       var meta = document.createElement("div");
       meta.className = "vc-meta";
-      meta.innerHTML = '<span class="vc-tier"></span><span class="vc-confidence"></span>';
+      meta.innerHTML = '<span class="vc-tier"></span>';
       scale.insertAdjacentElement("afterend", meta);
     }
     return {
       lo: valueEl.querySelector(".vc-lo"),
       hi: valueEl.querySelector(".vc-hi"),
       scaleFill: resultBox.querySelector(".vc-scale-fill"),
-      tier: resultBox.querySelector(".vc-tier"),
-      confidence: resultBox.querySelector(".vc-confidence")
+      tier: resultBox.querySelector(".vc-tier")
     };
   }
 
@@ -836,9 +781,6 @@
     var resultNote = root.querySelector(".vc-result-note");
 
     var state = {};
-    // Named-item checkboxes are optional, so they don't count toward confidence.
-    var totalInputs = (cfg.sliders || []).length + (cfg.choices ? cfg.choices.length : 0);
-    var touched = new Set();
     var prevLo = null, prevHi = null;
     var controls = []; // gamepad D-pad navigation targets, built in the same order fields are rendered
 
@@ -854,7 +796,6 @@
       var tier = tierFromScore(score);
       els.tier.textContent = tier.label;
       els.tier.className = "vc-tier " + tier.cls;
-      els.confidence.textContent = T.confidencePrefix + confidenceLabel(totalInputs ? touched.size / totalInputs : 1);
     }
 
     (cfg.sliders || []).forEach(function (s) {
@@ -875,7 +816,6 @@
       state[s.key] = s.min;
       valEl.textContent = s.fmt(s.min);
       input.addEventListener("input", function () {
-        touched.add(s.key);
         var v = Number(input.value);
         state[s.key] = v;
         valEl.textContent = s.fmt(v);
@@ -901,7 +841,6 @@
       var radios = Array.prototype.slice.call(field.querySelectorAll('input[type="radio"]'));
       radios.forEach(function (radio) {
         radio.addEventListener("change", function () {
-          touched.add(choice.key);
           state[choice.key] = radio.value;
           recompute();
         });
@@ -1004,7 +943,6 @@
           else if (c.type === "radio") { c.radios[0].checked = true; fire(c.radios[0], "change"); }
           else if (c.type === "checkbox") { if (c.el.checked) { c.el.checked = false; fire(c.el, "change"); } }
         });
-        touched.clear();
         recompute();
         setActive(0);
       });
