@@ -72,7 +72,7 @@ Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.h
 | Check | Result |
 |---|---|
 | Lighthouse mobile, live homepage | 2026-09-30: Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100 (to re-measure after the 2026-10 visual update) |
-| `python scripts/site_check.py` | 721 pages, 0 errors (links, JSON-LD, FAQ markup vs visible text, anchors, canonical, hreflang, required blocks) — 2026-10-16 |
+| Site check (maintainer's build tools) | 721 pages, 0 errors (links, JSON-LD, FAQ markup vs visible text, anchors, canonical, hreflang, required blocks) — 2026-10-16 |
 | `html-validate` (root pages, `.htmlvalidate.json`) | 0 errors — 2026-10-06 |
 | Layout | no horizontal scroll at 360 / 390 / 768 / 1280 px, including right-to-left Arabic |
 | Security headers | strict CSP (`script-src 'self'`); HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy via Cloudflare; [SECURITY.md](SECURITY.md) |
@@ -88,14 +88,13 @@ market-report.html, methodology.html, glossary.html,
 account-trading-safety.html, which-game-accounts-are-most-valuable.html
 news.html, {game}-news.html      news index + per-game news; old news-{game}-{yyyy-mm}-{slug}.html redirect to their section of {game}-news.html
 {lang}/                          the same 30 pages in each of the 23 other languages
-assets/glass.css                 design system, built from scripts/design/css/*.css
+assets/glass.css                 design system
 assets/calculators.js            per-game calculators; every price anchor is sourced in a comment
 assets/space-background.js       decorative deep-space scene (per-game view and loot set), starts after load
 assets/space/                    scene images (sky, planets, objects, game items, phones; no logos)
 assets/cards/{lang}/             collector card samples rendered by the bot's own card drawer
 sitemap.xml, robots.txt          SEO; sitemaps/sitemap-{lang}.xml per-language copies for Search Console
 llms.txt, ai.txt                 plain-text summary for AI assistants
-scripts/site_check.py            one-command quality gate
 ```
 
 ## Run locally
@@ -107,9 +106,9 @@ python -m http.server 8080
 
 ## Publishing a new page
 
-1. Add it to `sitemap.xml`, commit, then `python scripts/sitemap_lastmod.py` (lastmod from git history, skipping template-only commits in `scripts/lastmod-ignore-revs.txt`; also refreshes `sitemaps/`).
-2. `python scripts/site_check.py` must report **0 errors**.
-3. After the GitHub Pages run succeeds: `python scripts/indexnow.py https://gameaccountvalue.com/<page>.html` (Bing, Yandex and other IndexNow members) and URL Inspection in Google Search Console.
+The pages are generated and checked with the maintainer's build tools, which are not part of this repository. Before a page
+goes live: it is added to `sitemap.xml` (lastmod from git history), the site check must report **0 errors**, and after the
+GitHub Pages run it is submitted via IndexNow and URL Inspection in Google Search Console.
 
 ## Working standard
 
