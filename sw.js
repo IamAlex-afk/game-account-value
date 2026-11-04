@@ -1,5 +1,5 @@
 /* GameAccountValue Service Worker — offline + PWA install */
-const CACHE = 'gav-landing-2026-48';
+const CACHE = 'gav-landing-2026-49';
 // Only the shell: other languages' homepages are NOT precached any more — on a
 // phone that was ~1.5 MB of background download competing with the page.
 const PRECACHE = [
@@ -32,7 +32,9 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(c => c.put(e.request, copy));
         }
         return res;
-      }).catch(() => caches.match(e.request).then(cached => cached || caches.match('./index.html')))
+      }).catch(() => caches.match(e.request, { ignoreSearch: true })
+        .then(cached => cached || caches.match('./'))
+        .then(page => page || caches.match('./404.html')))
     );
     return;
   }
@@ -50,7 +52,8 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(c => c.put(e.request, copy));
         }
         return res;
-      }).catch(() => caches.match(e.request))
+      // '?v=' versions of a precached file still match it when offline
+      }).catch(() => caches.match(e.request, { ignoreSearch: true }))
     );
     return;
   }
