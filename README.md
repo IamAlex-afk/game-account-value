@@ -17,6 +17,12 @@
 
 ---
 
+> **Short answer:** GameAccountValue estimates what a game account is worth from dated, sourced
+> asking-price ranges for 10 games. The website calculator is free and runs in your browser; the
+> Telegram bot [@GameAccountValue_Bot](https://t.me/GameAccountValue_Bot) reads 1–3 screenshots with
+> AI and returns a price range. It never buys, sells or brokers accounts and never asks for a login.
+> Estimates are approximate and not financial advice.
+
 ## In one minute
 
 **The question:** *"How much is my Roblox / Fortnite / Genshin account actually worth?"*
@@ -25,7 +31,7 @@ Marketplaces show asking prices, not what accounts sell for, and every seller's 
 **What we do:**
 1. **On the site** — a free calculator per game gives a rough range right in the browser. Nothing is typed into a server, nothing is sent anywhere.
 2. **In the Telegram bot** — send 1–3 screenshots. AI vision reads the inventory (rare items, skins, levels), compares it with dated market reference points and returns a price range, a confidence level and a liquidity rating.
-3. **Paid full audit** — adds a verifiable PDF **collector card** with a QR check and a short 3D tilt video.
+3. **Paid full audit** — adds a verifiable PDF **collector card** with a QR check and a short 3D tilt video. Paid in Telegram Stars; refunds and the EU/EEA/UK withdrawal right are explained in the [terms](https://gameaccountvalue.com/terms.html).
 
 **What we don't do:** trade accounts, ask for logins, store screenshots, or scrape marketplaces.
 
@@ -49,6 +55,26 @@ Roblox · Brawl Stars · Clash of Clans · Clash Royale · Free Fire · Genshin 
 
 Each game has its own page: calculator, dated price ranges with sources, what raises or lowers value, scam risks and platform rules.
 
+## Where the prices come from
+
+Every range is an **asking-price** range from live public marketplace listings, checked by hand —
+not completed sales and not numbers copied from other value calculators. Each game page shows the
+date its data was last checked.
+
+- **Sources:** Eldorado.gg (live listings sorted by price), igitems.com (price-bracket distributions
+  with listing counts), MercadoLivre (Brazil cross-check, Free Fire), Tokopedia (Indonesia
+  cross-check, Mobile Legends). Minecraft rare usernames: documented community sales.
+- **Two-listing rule:** an item is named as a value driver only if it appears in two or more
+  independent top-price listings.
+- Full method: [methodology.html](https://gameaccountvalue.com/methodology.html).
+
+## Data and how to cite
+
+The price ranges are published as a dataset: [`data/game-account-prices.csv`](data/game-account-prices.csv)
+(asking-price ranges for 10 games, with check dates and sources), licensed **CC BY 4.0**.
+Citation metadata: [`CITATION.cff`](CITATION.cff) — GitHub shows a "Cite this repository" button.
+Human-readable summary: [market-report.html](https://gameaccountvalue.com/market-report.html).
+
 ## Languages
 
 English, Русский, Español, Português, Bahasa Indonesia, Türkçe, العربية, Tiếng Việt, हिन्दी, Français, Deutsch, Italiano, 日本語, 한국어, ภาษาไทย, Polski, 中文, Filipino, Kiswahili, Bahasa Melayu, Oʻzbekcha, Қазақша, Türkmençe, Кыргызча.
@@ -60,12 +86,30 @@ Every language has the same **30 pages** (home, 10 game reports, market report, 
 
 - The site calculator runs **entirely in your browser**.
 - The bot processes screenshots **in memory only** and discards them after the analysis.
+- **How AI is used:** to produce a valuation, screenshots are sent to **Google's Gemini API** for image analysis at the moment you submit them; no other third party receives them. Google processes them under its own API terms.
 - Telegram user IDs are **stored as SHA-256 hashes**, never raw.
 - No cookies, no analytics or tracking, no ads, no registration; the `data-event` attributes on CTA buttons are inert markup that no script reads.
 - The bot's `/top` leaderboard is opt-in after a paid audit (name on the card or card number only) and removed by `/delete`.
 - A paid audit also creates a public telegra.ph page with the card and the name printed on it. Telegraph does not allow pages to be deleted, so `/delete` cannot remove it.
 
 Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.html](https://gameaccountvalue.com/terms.html)
+
+## FAQ
+
+### Does GameAccountValue buy or sell accounts?
+No. It only estimates value; it never buys, sells, brokers or holds accounts, and is not affiliated with any marketplace or game publisher.
+
+### Do I need to give my login or password?
+No. The bot works from 1–3 screenshots of your inventory and never asks for a login or password.
+
+### Is it free?
+The website calculators are free. In the bot, the full audit with the PDF collector card is paid in Telegram Stars; see the [terms](https://gameaccountvalue.com/terms.html) for prices, refunds and the withdrawal right.
+
+### How accurate is the estimate?
+It is an approximate range, not an appraisal or financial advice: it is based on asking prices (what sellers ask, not what buyers paid) on the check date shown on each page, and marketplace prices move.
+
+### Which games are covered?
+Roblox, Brawl Stars, Clash of Clans, Clash Royale, Free Fire, Genshin Impact, PUBG Mobile, Mobile Legends, Fortnite and Minecraft — each with its own page in 24 languages.
 
 ## Quality, measured
 
@@ -93,6 +137,7 @@ assets/calculators.js            per-game calculators; every price anchor is sou
 assets/space-background.js       decorative deep-space scene (per-game view and loot set), starts after load
 assets/space/                    scene images (sky, planets, objects, game items, phones; no logos)
 assets/cards/{lang}/             collector card samples rendered by the bot's own card drawer
+data/game-account-prices.csv     the price dataset (CC BY 4.0), cited by CITATION.cff
 sitemap.xml, robots.txt          SEO; sitemaps/sitemap-{lang}.xml per-language copies for Search Console
 llms.txt, ai.txt                 plain-text summary for AI assistants
 ```
@@ -116,5 +161,5 @@ Every change follows the project's site standard: full translation in all 24 lan
 
 ## Author and license
 
-Made by **Aleksei Bitkin**. Code under **GPL-3.0** — see [LICENSE](LICENSE). © 2026.
+Made by **Aleksei Bitkin** ([ORCID 0009-0002-7986-3812](https://orcid.org/0009-0002-7986-3812)). Code under **GPL-3.0** — see [LICENSE](LICENSE); the price dataset under **CC BY 4.0** (see [CITATION.cff](CITATION.cff)). © 2026.
 Game names and trademarks belong to their owners; GameAccountValue is not affiliated with any game publisher or marketplace.
