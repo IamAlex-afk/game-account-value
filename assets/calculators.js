@@ -679,9 +679,9 @@
           }
         }
         // listings ask more for the same level with maxed items: $30 / maxed gun, $100 / max-level X-Suit,
-        // $20 / supercar (bot: core/valuation.py, 2026-10-14). Each slider adds its own value, with no
+        // $60 / supercar (bot: core/valuation.py, 2026-11-04). Each slider adds its own value, with no
         // cap tied to the collection level, so every slider visibly moves the estimate.
-        c += (v.mguns || 0) * 30 + (v.mxs || 0) * 100 + (v.cars || 0) * 20;
+        c += (v.mguns || 0) * 30 + (v.mxs || 0) * 100 + (v.cars || 0) * 60;
         return [c * 0.55, c * 1.6];
       }
     },
