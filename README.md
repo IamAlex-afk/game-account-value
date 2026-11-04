@@ -23,6 +23,11 @@
 > AI and returns a price range. It never buys, sells or brokers accounts and never asks for a login.
 > Estimates are approximate and not financial advice.
 
+**Our promise, the same on the site and in the bot:**
+- ✅ **We only value accounts** — we never buy, sell or broker them.
+- 🔒 **All we need are screenshots** — no login, password or sign-up. The website needs nothing at all: the calculator runs in your browser and sends nothing. The bot does not store screenshots.
+- 🧹 **We keep the minimum** — a hashed Telegram ID and your result ([full list](https://gameaccountvalue.com/privacy.html)); `/delete` in the bot erases it.
+
 ## In one minute
 
 **The question:** *"How much is my Roblox / Fortnite / Genshin account actually worth?"*
