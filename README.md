@@ -26,7 +26,7 @@
 **Our promise, the same on the site and in the bot:**
 - ✅ **We only value accounts** — we never buy, sell or broker them.
 - 🔒 **All we need are screenshots** — no login, password or sign-up. The website needs nothing at all: the calculator runs in your browser and sends nothing. The bot does not store screenshots.
-- 🧹 **We keep the minimum** — a hashed Telegram ID and your result ([full list](https://gameaccountvalue.com/privacy.html)); `/delete` in the bot erases it.
+- 🧹 **We keep the minimum** — the full list is in the [privacy policy](https://gameaccountvalue.com/privacy.html); `/delete` in the bot erases it from our database.
 
 ## In one minute
 
