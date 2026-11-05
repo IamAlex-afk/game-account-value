@@ -19,7 +19,7 @@
 
 > **Short answer:** GameAccountValue estimates what a game account is worth from dated, sourced
 > asking-price ranges for 10 games. The website calculator is free and runs in your browser; the
-> Telegram bot [@GameAccountValue_Bot](https://t.me/GameAccountValue_Bot) reads 1–3 screenshots with
+> Telegram bot [@GameAccountValue_Bot](https://t.me/GameAccountValue_Bot) reads 1–5 screenshots with
 > AI and returns a price range. It never buys, sells or brokers accounts and never asks for a login.
 > Estimates are approximate and not financial advice.
 
@@ -35,7 +35,7 @@ Marketplaces show asking prices, not what accounts sell for, and every seller's 
 
 **What we do:**
 1. **On the site** — a free calculator per game gives a rough range right in the browser. Nothing is typed into a server, nothing is sent anywhere.
-2. **In the Telegram bot** — send 1–3 screenshots. AI vision reads the inventory (rare items, skins, levels), compares it with dated market reference points and returns a price range, a confidence level and a liquidity rating.
+2. **In the Telegram bot** — send 1–5 screenshots (depends on the game). AI vision reads the inventory (rare items, skins, levels), compares it with dated market reference points and returns a price range with the rare items it found.
 3. **Paid full audit** — adds a verifiable PDF **collector card** with a QR check and a short 3D tilt video. Paid in Telegram Stars; refunds and the EU/EEA/UK withdrawal right are explained in the [terms](https://gameaccountvalue.com/terms.html).
 
 **What we don't do:** trade accounts, ask for logins, store screenshots, or scrape marketplaces.
@@ -105,7 +105,7 @@ Full text: [privacy.html](https://gameaccountvalue.com/privacy.html) · [terms.h
 No. It only estimates value; it never buys, sells, brokers or holds accounts, and is not affiliated with any marketplace or game publisher.
 
 ### Do I need to give my login or password?
-No. The bot works from 1–3 screenshots of your inventory and never asks for a login or password.
+No. The bot works from 1–5 screenshots of your inventory and never asks for a login or password.
 
 ### Is it free?
 The website calculators are free. In the bot, the full audit with the PDF collector card is paid in Telegram Stars; see the [terms](https://gameaccountvalue.com/terms.html) for prices, refunds and the withdrawal right.
