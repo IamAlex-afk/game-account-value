@@ -203,6 +203,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -311,46 +315,46 @@
 
 <div class="article-body">
 
-<h3>Tại sao trade acc cụ thể thu hút nhiều lừa đảo đến vậy?</h3>
+<h2 class="q">Tại sao trade acc cụ thể thu hút nhiều lừa đảo đến vậy?</h2>
 <p>Vì "sản phẩm" được bán là một bộ thông tin đăng nhập — khi người mua đã có nó, không gì ngăn cản họ về mặt vật lý khỏi việc đổi mật khẩu và khóa người bán ra ngoài, và cũng không gì ngăn cản người bán bán cùng một acc cho năm người mua khác nhau trước khi ai đó phát hiện. Không có gì để giao hàng chặn lại, không có hàng vật lý để kiểm tra. Điểm yếu cấu trúc đó là lý do mọi game chúng tôi nghiên cứu đều có ít nhất một kiểu lừa đảo được ghi nhận cụ thể cho chợ của riêng nó.</p>
 
-<h3>Kiểu lừa đảo phổ biến nhất trên tất cả các game là gì?</h3>
+<h2 class="q">Kiểu lừa đảo phổ biến nhất trên tất cả các game là gì?</h2>
 <div class="risk-box">
   <span class="tag">Được xác nhận cụ thể trên Fortnite và Free Fire:</span>
   <p><strong>Gian lận chargeback.</strong> Người mua thanh toán — thường bằng thẻ bị đánh cắp — nhận thông tin đăng nhập, rồi khiếu nại khoản thanh toán với ngân hàng vài tuần sau. Thanh toán bị hoàn, nhưng người bán đã giao toàn bộ quyền truy cập acc. Không có quy trình phía game nào để khôi phục điều này, vì "vụ trộm" xảy ra hoàn toàn ở phía thanh toán, ngoài tầm kiểm soát của game.</p>
 </div>
 
-<h3>Kiểu lừa đảo nào cụ thể cho Roblox?</h3>
+<h2 class="q">Kiểu lừa đảo nào cụ thể cho Roblox?</h2>
 <div class="risk-box">
   <p>Dịch vụ "trung gian" giả và các trang phishing giả mạo trang đăng nhập Roblox để đánh cắp thông tin, cộng với lừa đảo "tool tạo Robux miễn phí" yêu cầu quyền truy cập acc trực tiếp. Điều khoản Dịch vụ của Roblox cấm hoàn toàn việc chuyển nhượng acc, nên một acc bị lừa không có cách nào khôi phục — Roblox sẽ không hoàn tác một vụ chuyển nhượng trái phép ngay cả cho nạn nhân.</p>
 </div>
 
-<h3>Kiểu lừa đảo nào cụ thể cho Brawl Stars và Clash Royale?</h3>
+<h2 class="q">Kiểu lừa đảo nào cụ thể cho Brawl Stars và Clash Royale?</h2>
 <div class="risk-box">
   <p>Trung gian escrow giả trên Discord nhận tiền rồi biến mất không giao thông tin đăng nhập, và setup "cho dùng thử trước khi mua" khi người bán cấp quyền truy cập tạm thời, thu tiền, rồi đổi lại mật khẩu và biến mất. Cả hai đều hoạt động vì không có bảo vệ tích hợp sẵn trong một giao dịch trực tiếp giữa hai bên trên Discord.</p>
 </div>
 
-<h3>Kiểu lừa đảo nào cụ thể cho Mobile Legends?</h3>
+<h2 class="q">Kiểu lừa đảo nào cụ thể cho Mobile Legends?</h2>
 <div class="risk-box">
   <p>Trung gian giả trong nhóm Facebook/Discord, cộng với biến thể "thuê để mua": người mua được cấp quyền truy cập tạm thời, thanh toán, rồi người bán đổi email liên kết và khóa họ ra ngoài trước khi giao dịch được cho là hoàn tất.</p>
 </div>
 
-<h3>Kiểu lừa đảo nào cụ thể cho PUBG Mobile?</h3>
+<h2 class="q">Kiểu lừa đảo nào cụ thể cho PUBG Mobile?</h2>
 <div class="risk-box">
   <p>Một tài khoản PUBG Mobile có thể liên kết cùng lúc với nhiều kiểu đăng nhập, ví dụ Facebook, Twitter hoặc Google Play. Liên kết nào còn nằm trong tay người bán thì đó là đường quay lại: sau khi nhận tiền, tài khoản bị “khôi phục” và người mua mất trắng. Một phần tin trên FunPay là cho thuê (ghi “Rent”), không phải bán. Vì quy định của nhà phát hành cấm chuyển nhượng tài khoản, khi giao dịch hỏng thì không bên nào có thể nhờ bộ phận hỗ trợ.</p>
 </div>
 
-<h3>Kiểu lừa đảo nào cụ thể cho Genshin Impact?</h3>
+<h2 class="q">Kiểu lừa đảo nào cụ thể cho Genshin Impact?</h2>
 <div class="risk-box">
   <p>Ít là "lừa đảo" hơn là rủi ro cấu trúc: bảo mật acc của HoYoverse chủ động đánh dấu đăng nhập từ thiết bị/vị trí mới sau khi chuyển nhượng, và có thể khóa vĩnh viễn acc — gần như không thể khiếu nại, vì lịch sử thanh toán liên kết và xác minh ID khiến việc tranh chấp gần như bất khả thi. Đây là mức thực thi nghiêm ngặt nhất trong số các game chúng tôi nghiên cứu, cũng là một phần lý do chợ acc Genshin nhỏ hơn Fortnite hay Free Fire.</p>
 </div>
 
-<h3>Kiểu lừa đảo nào cụ thể cho thị trường username Minecraft?</h3>
+<h2 class="q">Kiểu lừa đảo nào cụ thể cho thị trường username Minecraft?</h2>
 <div class="risk-box">
   <p>Lừa đảo "name-squatting": người bán hứa thả một username ngắn vào ngày cụ thể cho người mua đang chờ lấy, rồi thả sớm hơn cho người khác hoặc không thả gì cả. Vì Mojang/Microsoft không hỗ trợ chính thức việc chuyển nhượng acc, không có quy trình giải quyết tranh chấp nếu điều này xảy ra.</p>
 </div>
 
-<h3>Điều gì thực sự bảo vệ người mua hoặc người bán, nếu họ vẫn trade?</h3>
+<h2 class="q">Điều gì thực sự bảo vệ người mua hoặc người bán, nếu họ vẫn trade?</h2>
 <ul>
   <li><strong>Escrow</strong> — một bên thứ ba đáng tin cậy (tích hợp sẵn trong các chợ như Eldorado.gg dưới tên "TrustShield") giữ tiền cho đến khi người mua xác nhận acc hoạt động, trước khi giải ngân cho người bán. Đây là biện pháp bảo vệ cấu trúc lớn nhất còn thiếu trong hầu hết giao dịch trên Discord.</li>
   <li><strong>Đánh giá/lịch sử review người bán trên chợ</strong> — lịch sử giao dịch hoàn tất ít nhất là một tín hiệu, dù nó có thể bị làm giả theo thời gian.</li>
@@ -358,10 +362,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Không điều nào trong số này thay đổi thực tế cơ bản: trade vẫn vi phạm Điều khoản Dịch vụ của mọi game, và ngay cả một giao dịch "thành công", không bị lừa cũng có thể kết thúc bằng khóa vĩnh viễn vài tháng sau nếu game phát hiện ra.</p>
 
-<h3>Có game nào được đề cập ở đây mà trade thực sự ít rủi ro không?</h3>
+<h2 class="q">Có game nào được đề cập ở đây mà trade thực sự ít rủi ro không?</h2>
 <p>Không. Điều khoản Dịch vụ của mọi game chúng tôi kiểm tra (Roblox, các game của Supercell, Free Fire của Garena, Genshin Impact của HoYoverse, Fortnite của Epic, Minecraft của Mojang, Mobile Legends của Moonton) đều cấm rõ ràng việc chuyển nhượng acc lấy tiền thật. "Ít rủi ro lừa đảo" và "vi phạm quy định" là hai câu hỏi khác nhau, và không game nào chúng tôi nghiên cứu đạt cả hai.</p>
 
-<h3>Đây không phải về trade — tôi chỉ chuyển quốc gia hoặc đổi điện thoại mới. Acc của tôi có rủi ro không?</h3>
+<h2 class="q">Đây không phải về trade — tôi chỉ chuyển quốc gia hoặc đổi điện thoại mới. Acc của tôi có rủi ro không?</h2>
 <p>Phụ thuộc nhiều vào game nào, và đây là câu hỏi hoàn toàn khác với rủi ro trade — nó liên quan đến kiểu đăng nhập của chính chủ sở hữu hợp pháp, không phải giao thông tin đăng nhập cho người lạ. Những gì chúng tôi thực sự tìm thấy theo từng game:</p>
 <div class="risk-box">
   <span class="tag">Rủi ro thực sự, đã ghi nhận:</span>

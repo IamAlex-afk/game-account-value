@@ -161,6 +161,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -269,46 +273,46 @@
 
 <div class="article-body">
 
-<h3>계정 거래에는 왜 유독 사기가 많이 몰리나요?</h3>
+<h2 class="q">계정 거래에는 왜 유독 사기가 많이 몰리나요?</h2>
 <p>판매되는 "상품"이 로그인 정보 한 세트이기 때문이다 — 구매자가 일단 그것을 손에 넣으면, 비밀번호를 바꿔서 판매자를 잠가버리는 것을 물리적으로 막을 방법이 없고, 판매자가 같은 계정을 아무도 모르게 다섯 명의 서로 다른 구매자에게 파는 것도 물리적으로 막을 방법이 없다. 가로챌 배송도, 검사할 실물도 없다. 이런 구조적 취약점 때문에 우리가 조사한 모든 게임에서 각자의 마켓플레이스에 특화된 사기 패턴이 최소 하나씩 확인됐다.</p>
 
-<h3>모든 게임에서 가장 흔한 단일 사기는?</h3>
+<h2 class="q">모든 게임에서 가장 흔한 단일 사기는?</h2>
 <div class="risk-box">
   <span class="tag">특히 Fortnite와 Free Fire에서 확인됨:</span>
   <p><strong>차지백 사기.</strong> 구매자가 (흔히 도난 카드로) 결제하고 로그인 정보를 받은 뒤, 몇 주 후 은행에 결제를 이의 제기한다. 결제는 취소되지만, 판매자는 이미 계정 전체 접근권을 넘긴 뒤다. "도난"이 전적으로 결제 측에서, 게임의 통제 밖에서 일어났기 때문에 게임 측에서 이를 복구할 방법이 없다.</p>
 </div>
 
-<h3>Roblox에 특화된 사기는?</h3>
+<h2 class="q">Roblox에 특화된 사기는?</h2>
 <div class="risk-box">
   <p>Roblox 로그인 페이지를 복제해 인증 정보를 훔치는 가짜 "미들맨" 거래 서비스와 피싱 사이트, 그리고 계정 접근을 직접 요구하는 "무료 Robux 생성기" 사기. Roblox 자체 이용약관이 계정 양도를 완전히 금지하기 때문에, 사기당한 계정은 복구 경로가 없다 — Roblox는 피해자를 위해서도 무단 양도를 되돌리지 않는다.</p>
 </div>
 
-<h3>Brawl Stars와 Clash Royale에 특화된 사기는?</h3>
+<h2 class="q">Brawl Stars와 Clash Royale에 특화된 사기는?</h2>
 <div class="risk-box">
   <p>Discord에서 결제만 받고 로그인 정보를 넘기지 않고 사라지는 가짜 에스크로 미들맨, 그리고 판매자가 임시 접근권을 주고 결제를 받은 뒤 비밀번호를 다시 바꿔 사라지는 "trial before you buy" 사기. 둘 다 직접적인 개인 대 개인 Discord 거래에는 내장된 보호 장치가 없기 때문에 가능하다.</p>
 </div>
 
-<h3>Mobile Legends에 특화된 사기는?</h3>
+<h2 class="q">Mobile Legends에 특화된 사기는?</h2>
 <div class="risk-box">
   <p>Facebook/Discord 그룹의 가짜 미들맨, 그리고 "rent-to-buy" 변형: 구매자에게 임시 접근권을 주고 결제를 받은 뒤, 판매가 확정되기 전에 판매자가 연결된 이메일을 바꿔 잠가버린다.</p>
 </div>
 
-<h3>PUBG Mobile에 특화된 사기는?</h3>
+<h2 class="q">PUBG Mobile에 특화된 사기는?</h2>
 <div class="risk-box">
   <p>PUBG Mobile 계정은 Facebook, Twitter, Google Play 등 여러 로그인에 동시에 연동될 수 있습니다. 판매자에게 남은 연동은 되돌아갈 길입니다: 결제 후 계정이 “회수”되고 구매자에게는 아무것도 남지 않습니다. FunPay 매물 일부는 판매가 아니라 대여(“Rent” 표시)입니다. 퍼블리셔 규칙이 계정 양도 자체를 금지하므로 거래가 틀어져도 어느 쪽도 고객 지원에 기댈 수 없습니다.</p>
 </div>
 
-<h3>Genshin Impact에 특화된 사기는?</h3>
+<h2 class="q">Genshin Impact에 특화된 사기는?</h2>
 <div class="risk-box">
   <p>"사기"라기보다는 구조적 리스크에 가깝다: HoYoverse의 계정 보안은 양도 후 새 디바이스/위치에서의 로그인을 적극적으로 플래그하며, 계정을 영구 정지시킬 수 있다 — 연결된 결제 이력과 ID 인증 때문에 이의 제기가 거의 불가능해 사실상 항소 수단이 없다. 우리 조사에서 이는 모든 게임 중 가장 엄격한 단속이며, Genshin의 계정 마켓플레이스가 Fortnite나 Free Fire보다 작게 유지되는 이유 중 하나이기도 하다.</p>
 </div>
 
-<h3>Minecraft 닉네임 시장에 특화된 사기는?</h3>
+<h2 class="q">Minecraft 닉네임 시장에 특화된 사기는?</h2>
 <div class="risk-box">
   <p>"네임 스쿼팅" 사기: 판매자가 기다리는 구매자를 위해 특정 날짜에 짧은 닉네임을 풀겠다고 약속해놓고, 다른 사람에게 미리 풀거나 아예 풀지 않는다. Mojang/Microsoft가 계정 양도를 공식 지원하지 않기 때문에, 이런 일이 생겨도 분쟁 해결 절차가 없다.</p>
 </div>
 
-<h3>그래도 거래한다면, 구매자나 판매자를 실제로 보호하는 것은?</h3>
+<h2 class="q">그래도 거래한다면, 구매자나 판매자를 실제로 보호하는 것은?</h2>
 <ul>
   <li><strong>에스크로</strong> — 신뢰할 수 있는 제3자(Eldorado.gg 같은 마켓플레이스에 "TrustShield"라는 이름으로 내장)가 구매자가 계정이 정상 작동함을 확인할 때까지 결제를 보류했다가 판매자에게 자금을 풀어준다. 대부분의 Discord 기반 거래에 빠져 있는 가장 큰 단일 구조적 보호 장치다.</li>
   <li><strong>마켓플레이스 판매자 평점/리뷰 이력</strong> — 완료된 판매 이력은 최소한의 신호가 되지만, 시간이 지나면 조작될 수 있다.</li>
@@ -316,10 +320,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">이 중 어느 것도 근본적인 사실을 바꾸지는 않는다: 거래는 여전히 모든 게임의 이용약관을 위반하며, 심지어 사기당하지 않은 "성공적인" 거래조차 게임이 이를 감지하면 몇 달 뒤 영구 정지로 끝날 수 있다.</p>
 
-<h3>여기서 다룬 게임 중 거래가 실제로 저위험인 게임이 있나요?</h3>
+<h2 class="q">여기서 다룬 게임 중 거래가 실제로 저위험인 게임이 있나요?</h2>
 <p>없다. 우리가 확인한 모든 게임의 이용약관(Roblox, Supercell 게임들, Garena의 Free Fire, HoYoverse의 Genshin Impact, Epic의 Fortnite, Mojang의 Minecraft, Moonton의 Mobile Legends)이 실제 돈을 받는 계정 양도를 명시적으로 금지한다. "낮은 사기 리스크"와 "규정 위반"은 별개의 질문이며, 우리가 조사한 게임 중 둘 다 통과하는 게임은 없다.</p>
 
-<h3>거래 얘기가 아니라 — 그냥 이사를 갔거나 새 폰을 샀는데, 제 계정도 위험한가요?</h3>
+<h2 class="q">거래 얘기가 아니라 — 그냥 이사를 갔거나 새 폰을 샀는데, 제 계정도 위험한가요?</h2>
 <p>이는 어떤 게임이냐에 크게 좌우되며, 거래 리스크와는 완전히 다른 질문이다 — 낯선 사람에게 정보를 넘기는 게 아니라 정당한 소유자 본인의 로그인 패턴에 관한 문제다. 게임별로 실제로 확인한 것:</p>
 <div class="risk-box">
   <span class="tag">실제, 문서화된 리스크:</span>

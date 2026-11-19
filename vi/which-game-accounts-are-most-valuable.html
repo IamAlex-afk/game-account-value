@@ -187,6 +187,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .tier-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
   .tier-table td, .tier-table th { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
   .tier-table th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -290,7 +294,7 @@
 
 <div class="article-body">
 
-<h3>Game nào có giá acc cao nhất được ghi nhận?</h3>
+<h2 class="q">Game nào có giá acc cao nhất được ghi nhận?</h2>
 <table class="tier-table">
   <tr><th>Game</th><th>Khoảng giá điển hình</th><th>Mức trần đã ghi nhận</th></tr>
   <tr><td>Minecraft (username hiếm)</td><td>thị trường ngách riêng</td><td>~$200,000 (ngoại lệ)</td></tr>
@@ -306,28 +310,28 @@
 </table>
 <p style="font-size:13px; color:var(--muted);">Mọi con số từ tin đăng chợ thực tế và các trang theo dõi giá cộng đồng, kiểm tra tháng 9/2026 — xem báo cáo thị trường riêng của từng game để biết nguồn đầy đủ.</p>
 
-<h3>Vậy Minecraft thực sự có acc giá trị nhất không?</h3>
+<h2 class="q">Vậy Minecraft thực sự có acc giá trị nhất không?</h2>
 <p>Chỉ theo một nghĩa hẹp: username số 2 chữ số hiếm nhất, được báo cáo gần $200,000, là con số cao nhất duy nhất trên trang này. Nhưng đó là một hạng mục collector rất nhỏ — một acc Minecraft bình thường với username bình thường bán $0.50-$632, rẻ hơn phần lớn khoảng giá điển hình của các game khác. Minecraft thực sự là hai thị trường riêng biệt mang chung một cái tên, và câu trả lời "$200,000" chỉ áp dụng cho một số ít acc tồn tại.</p>
 
-<h3>Mức trần cao nhất trong số các game có thị trường bán lại rộng, thực sự đang hoạt động là gì?</h3>
+<h2 class="q">Mức trần cao nhất trong số các game có thị trường bán lại rộng, thực sự đang hoạt động là gì?</h2>
 <p>Hạng mục acc whale riêng của Genshin Impact, đạt đỉnh $8,995 cho một acc 20×C6. Khác với thị trường ngách username của Minecraft, đây là một phần của chợ thực sự, đang hoạt động với vòng quay thường xuyên — Eldorado.gg vận hành nó như một hạng mục cố định, không phải tin đăng đơn lẻ.</p>
 
-<h3>Game nào có khoảng cách lớn nhất giữa giá "điển hình" và giá "ngoại lệ"?</h3>
+<h2 class="q">Game nào có khoảng cách lớn nhất giữa giá "điển hình" và giá "ngoại lệ"?</h2>
 <p>Fortnite, chênh lệch rất lớn. Tin đăng thực tế điển hình là $15-$300, nhưng các báo cáo lịch sử cũ (không phải tin đăng chợ hiện tại) trích dẫn một acc khoảng ~$90,000 gắn với skin Aerial Assault Trooper — con số cao gấp khoảng 15 lần tin đăng đắt nhất hiện nay ($6,200, một acc có đủ bốn skin OG gốc năm 2017). Đây là ví dụ rõ ràng nhất trong nghiên cứu của chúng tôi về lý do tại sao các tiêu đề "giao dịch kỷ lục" từ vài năm trước không nên được tin tưởng như hướng dẫn giá hiện tại.</p>
 
-<h3>Mọi game trong danh sách này có thực sự có chợ bán lại thật không?</h3>
+<h2 class="q">Mọi game trong danh sách này có thực sự có chợ bán lại thật không?</h2>
 <p>Có — kể cả Roblox và Genshin Impact, những game mà một số nguồn mô tả là không có chợ acc nào cả. Mọi game được đề cập ở đây đều có ít nhất một chợ bên thứ ba đang hoạt động với giá thực tế, có thể thấy được, ngay cả khi — như acc thường của Minecraft hay tin đăng không-username của Roblox — giá thị trường thấp hơn nhiều $25.</p>
 
-<h3>Giá trị acc của game nào phụ thuộc nhiều nhất vào một item cụ thể có tên, thay vì tiến trình tổng thể?</h3>
+<h2 class="q">Giá trị acc của game nào phụ thuộc nhiều nhất vào một item cụ thể có tên, thay vì tiến trình tổng thể?</h2>
 <p>Fortnite, dựa trên mức độ tập trung của các tin đăng top: 4/10 tin đăng thực tế giá cao nhất chúng tôi kiểm tra nêu tên cụ thể skin IKONIK. Genshin Impact theo sát phía sau — Mavuika xuất hiện ở C6 trong 5/10 tin đăng whale giá cao nhất. Ngược lại, Brawl Stars, Clash of Clans, Clash Royale, và Free Fire không cho thấy sự tập trung item có tên nào trong các tin đăng top của họ — giá trị ở đó hoàn toàn về chỉ số (cúp, cấp Town Hall/King Tower, rank).</p>
 
-<h3>Chợ acc của game nào đang nóng lên hoặc nguội đi nhanh nhất?</h3>
+<h2 class="q">Chợ acc của game nào đang nóng lên hoặc nguội đi nhanh nhất?</h2>
 <p>Trong số các game mà nguồn của chúng tôi công bố giá rao trung bình trước/sau, Free Fire tăng nhiều nhất — từ $56.95 lên $78.32 (tăng ~37%) trong 14 tuần. Clash Royale tăng từ $81.89 lên $107.20 (tăng ~31%) trong khung theo dõi, dù giá thực sự bán ra thấp hơn khoảng 21% so với giá rao, nghĩa là người mua đang mặc cả mạnh hơn người bán nhượng bộ. Giá trung bình acc thường của Genshin Impact cũng tăng mạnh lên ~$147 trong 14 tuần (con số trước đó không được công bố). Fortnite đi ngược hướng — giảm 17.8% xuống $59.37 trong 90 ngày, khi nguồn cung tin đăng mới vượt cầu. Roblox, Brawl Stars, Clash of Clans, Mobile Legends, và Minecraft không có con số trước/sau tương đương được công bố trong nguồn của chúng tôi, nên không có tuyên bố xu hướng nào cho chúng.</p>
 
-<h3>Phụ phí giá theo khu vực lớn nhất ở đâu?</h3>
+<h2 class="q">Phụ phí giá theo khu vực lớn nhất ở đâu?</h2>
 <p>Free Fire, theo tiêu chí này: tin đăng MercadoLivre của Brazil đạt ~$755 so với mức trần điển hình toàn cầu $250 — khoảng 3 lần. Tin đăng Tokopedia riêng cho Indonesia của Mobile Legends đạt ~$605 so với mức trần điển hình toàn cầu $300 — khoảng 2 lần. Cả hai đều là chợ khu vực thực sự, cố định (không phải tin đăng đơn lẻ), và cả hai đều cao hơn đáng kể so với trung bình toàn cầu của game đó — nhưng khoảng cách khu vực của Free Fire rộng hơn.</p>
 
-<h3>Game nào có tỷ lệ tin đăng đắt ($150+) cao nhất, và mức trần cao có nghĩa là game đó thường bán giá cao hơn không?</h3>
+<h2 class="q">Game nào có tỷ lệ tin đăng đắt ($150+) cao nhất, và mức trần cao có nghĩa là game đó thường bán giá cao hơn không?</h2>
 <p>Không — hai điều này không khớp nhau. Mobile Legends (28.3% trong 1,147 tin đăng theo dõi, 325 acc) và Clash Royale (26.6% trong 852 tin đăng, 227 acc) có tỷ lệ tin đăng $150+ lớn nhất trong số các game chúng tôi tìm được dữ liệu phân bố mức giá. Fortnite có mức trần được ghi nhận là $6,200, nhưng chỉ 4.4% trong 932 tin đăng theo dõi (41 acc) thực sự vượt $150 — phần lớn acc Fortnite bán thấp hơn nhiều so với con số tiêu đề của game đó. Free Fire cũng ở đầu kia, với 11.3% (33/293). PUBG Mobile, kiểm tra riêng trên igitems.com ngày 13/10/2026, còn cao hơn nữa: 37% trong 446 tin đăng (165 acc) đòi giá từ $150 trở lên.</p>
 
 </div>

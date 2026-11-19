@@ -74,6 +74,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .article-body ul { margin: 8px 0 8px 20px; }
   .article-body li { margin-bottom: 6px; }
   .source-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
@@ -178,7 +182,7 @@
 
 <div class="article-body">
 
-<h3>Giá của chúng tôi đến từ đâu</h3>
+<h2 class="q">Giá của chúng tôi đến từ đâu</h2>
 <p>Chúng tôi kiểm tra trang tin đăng trực tiếp trên các chợ bên thứ ba đang hoạt động, sắp xếp theo giá, thay vì dựa vào bài viết cũ hay lời kể trên diễn đàn. Nguồn chính của chúng tôi theo từng game:</p>
 <table class="source-table">
   <tr><th>Nguồn</th><th>Chúng tôi dùng để làm gì</th></tr>
@@ -189,22 +193,22 @@
 </table>
 <p>Minecraft là ngoại lệ: giao dịch username hiếm được ghi nhận qua báo cáo cộng đồng thay vì một chợ duy nhất, vì hạng mục đó giao dịch không chính thức.</p>
 
-<h3>Quy tắc hai tin đăng: khi nào một vật phẩm quyết định giá trị</h3>
+<h2 class="q">Quy tắc hai tin đăng: khi nào một vật phẩm quyết định giá trị</h2>
 <p>Chúng tôi chỉ công bố một item, skin, hoặc nhân vật cụ thể là yếu tố quyết định giá trị thực sự nếu nó xuất hiện trong <strong>hai tin đăng giá cao nhất độc lập trở lên</strong>. Chỉ được nhắc một lần thì không đủ — nó được đánh dấu nội bộ là chưa xác nhận và không được đưa vào bất cứ điều gì chúng tôi tuyên bố là sự thật. Đó là lý do, ví dụ, trang Fortnite của chúng tôi nêu tên cụ thể IKONIK (nó lặp lại trong 4/10 tin đăng hàng đầu chúng tôi kiểm tra) trong khi các skin khác chỉ thấy một lần thì không được nêu tên là yếu tố quyết định giá trị.</p>
 
-<h3>Khi không có gì lặp lại, chỉ số quyết định giá</h3>
+<h2 class="q">Khi không có gì lặp lại, chỉ số quyết định giá</h2>
 <p>Chúng tôi nói thẳng rằng giá trị được quyết định bởi chỉ số chứ không nêu tên một danh sách "top skin" mà chúng tôi phải đoán mò. Riêng với Brawl Stars, Clash of Clans, Clash Royale, và Free Fire, nghiên cứu top-10-theo-giá của chúng tôi tìm thấy 0 skin có tên lặp lại — không có skin hay cosmetic nào xuất hiện hai lần trong các tin đăng giá cao nhất chúng tôi kiểm tra. Vì vậy bốn trang đó chỉ ra cúp, cấp Town Hall/King Tower, và rank là yếu tố quyết định giá trị thực sự thay thế.</p>
 
-<h3>Chúng tôi kiểm tra lại bao lâu một lần và ngày trên trang nghĩa là gì</h3>
+<h2 class="q">Chúng tôi kiểm tra lại bao lâu một lần và ngày trên trang nghĩa là gì</h2>
 <p>Huy hiệu dưới tiêu đề mỗi trang nêu ngày dữ liệu trang đó được kiểm tra lần cuối so với tin đăng thực tế. Đây không phải bảo đảm vĩnh viễn — giá chợ luôn thay đổi — nhưng nó cho bạn biết chính xác con số bạn đang đọc cũ bao lâu, thay vì để bạn phải đoán liệu một tuyên bố "top acc" là từ tháng này hay ba năm trước (phần so sánh Fortnite trên <a href="./which-game-accounts-are-most-valuable.html">trang so sánh liên-game</a> của chúng tôi cho thấy chính xác tại sao sự khác biệt đó quan trọng).</p>
 
-<h3>Những điều chúng tôi không bao giờ làm với con số</h3>
+<h2 class="q">Những điều chúng tôi không bao giờ làm với con số</h2>
 <p>Chúng tôi không ngoại suy khoảng giá điển hình của một game từ một số ít tin đăng cao cấp, không dùng lại giá của một khu vực như thể áp dụng toàn cầu mà không đối chiếu khu vực, và không mang theo một con số từ phiên bản trang trước đó mà không xác minh lại với tin đăng hiện tại trước.</p>
 
-<h3>Vì sao chúng tôi không sao chép số liệu từ máy tính khác</h3>
+<h2 class="q">Vì sao chúng tôi không sao chép số liệu từ máy tính khác</h2>
 <p>Chúng tôi xử lý con số từ một máy tính khác theo cách khác với một tin đăng thực tế trên chợ. Trọng số giá trị đô-la trên mỗi item của một trang tính toán là giả định nội bộ của riêng công cụ đó, không phải giao dịch đã xác nhận hay giá rao trực tiếp — nên chúng tôi không công bố các con số đó như sự thật trừ khi có thể xác minh độc lập bằng cách khác, ví dụ đối chiếu với chi phí tiền tệ trong game chính thức thực tế của item đó. Khi con số của một công cụ tính toán không thể xác minh theo cách đó, chúng tôi bỏ qua thay vì trình bày một trọng số chưa xác nhận như thể đã được nghiên cứu.</p>
 
-<h3>Một con số cần bao nhiêu nguồn</h3>
+<h2 class="q">Một con số cần bao nhiêu nguồn</h2>
 <p>Không cho bất cứ điều gì được tuyên bố là sự thật đã xác nhận. Mọi khoảng giá trên trang này được kiểm tra trực tiếp với ít nhất một chợ thực tế. Khi một con số là ngoại lệ thực sự — một giao dịch kỷ lục, tổng chi tiêu trọn đời tự khai, một tin đăng ví dụ của một nền tảng — chúng tôi gắn nhãn rõ ràng là hạng mục riêng của nó (ví dụ ghi chú về tài sản được báo cáo trên trang Roblox) thay vì trộn nó vào khoảng giá thị trường thông thường.</p>
 
 </div>

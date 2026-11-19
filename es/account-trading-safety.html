@@ -203,6 +203,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -311,46 +315,46 @@
 
 <div class="article-body">
 
-<h3>¿Por qué el comercio de cuentas atrae tantas estafas específicamente?</h3>
+<h2 class="q">¿Por qué el comercio de cuentas atrae tantas estafas específicamente?</h2>
 <p>Porque el "producto" que se vende es un conjunto de credenciales de inicio de sesión — una vez que un comprador las tiene, nada le impide físicamente cambiar la contraseña y dejar fuera al vendedor, y nada le impide físicamente a un vendedor vender la misma cuenta a cinco compradores diferentes antes de que alguien se dé cuenta. No hay una entrega que interceptar, ni un bien físico que inspeccionar. Esa debilidad estructural es la razón por la que cada uno de los juegos que investigamos tenía al menos un patrón de estafa documentado específico de su propio marketplace.</p>
 
-<h3>¿Cuál es la estafa individual más común en todos los juegos?</h3>
+<h2 class="q">¿Cuál es la estafa individual más común en todos los juegos?</h2>
 <div class="risk-box">
   <span class="tag">Confirmado específicamente en Fortnite y Free Fire:</span>
   <p><strong>Fraude de contracargo.</strong> Un comprador paga — a menudo con una tarjeta robada — recibe el inicio de sesión, y disputa el cargo con su banco semanas después. El pago se revierte, pero el vendedor ya entregó el acceso completo a la cuenta. No hay ningún proceso del lado del juego para recuperar esto, ya que el "robo" ocurrió enteramente del lado del pago, fuera del control del juego.</p>
 </div>
 
-<h3>¿Qué estafa es específica de Roblox?</h3>
+<h2 class="q">¿Qué estafa es específica de Roblox?</h2>
 <div class="risk-box">
   <p>Servicios falsos de "intermediario" de comercio y sitios de phishing que clonan la página de inicio de sesión de Roblox para robar credenciales, más estafas de "generador de Robux gratis" que solicitan acceso a la cuenta directamente. Los propios Términos de Servicio de Roblox prohíben totalmente las transferencias de cuenta, así que una cuenta estafada no tiene camino de recuperación — Roblox no revertirá una transferencia no autorizada ni siquiera para la víctima.</p>
 </div>
 
-<h3>¿Qué estafa es específica de Brawl Stars y Clash Royale?</h3>
+<h2 class="q">¿Qué estafa es específica de Brawl Stars y Clash Royale?</h2>
 <div class="risk-box">
   <p>Intermediarios falsos de depósito en garantía en Discord que cobran el pago y simplemente desaparecen sin entregar las credenciales, y configuraciones de "prueba antes de comprar" donde un vendedor da acceso temporal, cobra el pago, y luego cambia la contraseña de vuelta y desaparece. Ambas funcionan porque no hay protección incorporada en un trato directo entre pares en Discord.</p>
 </div>
 
-<h3>¿Qué estafa es específica de Mobile Legends?</h3>
+<h2 class="q">¿Qué estafa es específica de Mobile Legends?</h2>
 <div class="risk-box">
   <p>Intermediarios falsos en grupos de Facebook/Discord, más una variante de "alquiler para comprar": a un comprador se le da acceso temporal, paga, y el vendedor luego cambia el correo vinculado y lo bloquea antes de que la venta supuestamente se finalice.</p>
 </div>
 
-<h3>¿Qué estafa es específica de PUBG Mobile?</h3>
+<h2 class="q">¿Qué estafa es específica de PUBG Mobile?</h2>
 <div class="risk-box">
   <p>Una cuenta de PUBG Mobile puede estar vinculada a varios inicios de sesión a la vez, por ejemplo Facebook, Twitter o Google Play. Cualquier vínculo que conserve el vendedor es un camino de vuelta: tras el pago, la cuenta se “recupera” y el comprador se queda sin nada. Parte de los anuncios de FunPay son alquileres (marcados “Rent”), no ventas. Como las normas del editor prohíben transferir cuentas, si el trato sale mal ninguna de las dos partes puede acudir al soporte.</p>
 </div>
 
-<h3>¿Qué estafa es específica de Genshin Impact?</h3>
+<h2 class="q">¿Qué estafa es específica de Genshin Impact?</h2>
 <div class="risk-box">
   <p>Menos una "estafa" que un riesgo estructural: la seguridad de cuentas de HoYoverse marca activamente los inicios de sesión desde dispositivos/ubicaciones nuevas tras una transferencia, y puede suspender la cuenta permanentemente — sin apelación esencialmente, ya que el historial de pago vinculado y la verificación de identidad hacen casi imposible impugnarlo. Esta es la aplicación más estricta de cualquier juego en nuestra investigación, lo cual también es parte de por qué el marketplace de cuentas de Genshin se mantiene más pequeño que el de Fortnite o Free Fire.</p>
 </div>
 
-<h3>¿Qué estafa es específica del mercado de nombres de usuario de Minecraft?</h3>
+<h2 class="q">¿Qué estafa es específica del mercado de nombres de usuario de Minecraft?</h2>
 <div class="risk-box">
   <p>Estafas de "name-squatting": un vendedor promete liberar un nombre de usuario corto en una fecha específica para que un comprador que espera lo reclame, y luego lo libera antes a otra persona o nunca lo hace. Como Mojang/Microsoft no soporta oficialmente las transferencias de cuenta, no hay proceso de disputa si esto sucede.</p>
 </div>
 
-<h3>¿Qué protege realmente a un comprador o vendedor, si comercian de todos modos?</h3>
+<h2 class="q">¿Qué protege realmente a un comprador o vendedor, si comercian de todos modos?</h2>
 <ul>
   <li><strong>Depósito en garantía (escrow)</strong> — un tercero de confianza (integrado en marketplaces como Eldorado.gg como "TrustShield") retiene el pago hasta que el comprador confirma que la cuenta funciona, antes de liberar los fondos al vendedor. Esta es la mayor protección estructural individual ausente en la mayoría de los tratos basados en Discord.</li>
   <li><strong>Calificaciones/historial de reseñas del vendedor en el marketplace</strong> — un historial de ventas completadas es al menos alguna señal, aunque se puede falsear con el tiempo.</li>
@@ -358,10 +362,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Nada de esto cambia el hecho subyacente: comerciar sigue rompiendo los Términos de Servicio de todos los juegos, e incluso un trato "exitoso" y sin estafa puede terminar en un baneo permanente meses después si el juego lo detecta.</p>
 
-<h3>¿Hay algún juego cubierto aquí donde comerciar sea realmente de bajo riesgo?</h3>
+<h2 class="q">¿Hay algún juego cubierto aquí donde comerciar sea realmente de bajo riesgo?</h2>
 <p>No. Los Términos de Servicio de cada juego que verificamos (Roblox, los juegos de Supercell, Free Fire de Garena, Genshin Impact de HoYoverse, Fortnite de Epic, Minecraft de Mojang, Mobile Legends de Moonton) prohíben explícitamente las transferencias de cuenta por dinero real. "Bajo riesgo de estafa" y "contra las reglas" son dos preguntas separadas, y ningún juego que investigamos supera ambas.</p>
 
-<h3>Esto no es sobre comerciar — simplemente me mudé de país o compré un teléfono nuevo. ¿Mi propia cuenta está en riesgo?</h3>
+<h2 class="q">Esto no es sobre comerciar — simplemente me mudé de país o compré un teléfono nuevo. ¿Mi propia cuenta está en riesgo?</h2>
 <p>Depende mucho del juego, y esta es una pregunta completamente diferente al riesgo de comercio — se trata del propio patrón de inicio de sesión de un dueño legítimo, no de entregar credenciales a un extraño. Lo que realmente encontramos por juego:</p>
 <div class="risk-box">
   <span class="tag">Riesgo real y documentado:</span>

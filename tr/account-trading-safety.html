@@ -203,6 +203,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -311,46 +315,46 @@
 
 <div class="article-body">
 
-<h3>Hesap ticareti neden özellikle bu kadar çok dolandırıcılık çekiyor?</h3>
+<h2 class="q">Hesap ticareti neden özellikle bu kadar çok dolandırıcılık çekiyor?</h2>
 <p>Çünkü satılan "ürün" bir dizi giriş bilgisidir — bir alıcı bunlara sahip olduğunda, fiziksel olarak hiçbir şey onu şifreyi değiştirip satıcıyı dışarıda bırakmaktan alıkoymaz ve fiziksel olarak hiçbir şey bir satıcıyı, kimse fark etmeden önce aynı hesabı beş farklı alıcıya satmaktan alıkoymaz. Ele geçirilecek bir teslimat, incelenecek fiziksel bir mal yoktur. Bu yapısal zayıflık, araştırdığımız her oyunun kendi pazar yerine özgü en az bir belgelenmiş dolandırıcılık kalıbına sahip olmasının nedenidir.</p>
 
-<h3>Tüm oyunlarda en yaygın tek dolandırıcılık nedir?</h3>
+<h2 class="q">Tüm oyunlarda en yaygın tek dolandırıcılık nedir?</h2>
 <div class="risk-box">
   <span class="tag">Özellikle Fortnite ve Free Fire'da onaylandı:</span>
   <p><strong>Geri ödeme dolandırıcılığı.</strong> Bir alıcı — genellikle çalıntı bir kartla — ödeme yapar, girişi alır ve haftalar sonra bankasıyla ödemeye itiraz eder. Ödeme geri alınır, ancak satıcı zaten tam hesap erişimini teslim etmiştir. Bunu kurtarmak için oyun tarafında bir süreç yoktur, çünkü "hırsızlık" tamamen ödeme tarafında, oyunun kontrolü dışında gerçekleşmiştir.</p>
 </div>
 
-<h3>Roblox'a özgü dolandırıcılık nedir?</h3>
+<h2 class="q">Roblox'a özgü dolandırıcılık nedir?</h2>
 <div class="risk-box">
   <p>Giriş bilgilerini çalmak için Roblox giriş sayfasını kopyalayan sahte "aracı" takas hizmetleri ve kimlik avı siteleri, ayrıca doğrudan hesap erişimi isteyen "ücretsiz Robux üretici" dolandırıcılıkları. Roblox'un kendi Kullanım Şartları hesap transferlerini tamamen yasaklar, bu yüzden dolandırılan bir hesabın kurtarma yolu yoktur — Roblox, mağdur için bile yetkisiz bir transferi geri almaz.</p>
 </div>
 
-<h3>Brawl Stars ve Clash Royale'e özgü dolandırıcılık nedir?</h3>
+<h2 class="q">Brawl Stars ve Clash Royale'e özgü dolandırıcılık nedir?</h2>
 <div class="risk-box">
   <p>Ödemeyi alıp giriş bilgilerini teslim etmeden ortadan kaybolan sahte Discord emanet aracıları, ve bir satıcının geçici erişim verdiği, ödemeyi topladığı, sonra şifreyi geri değiştirip kaybolduğu "satın almadan önce dene" düzenleri. İkisi de doğrudan eşler arası bir Discord anlaşmasında yerleşik bir koruma olmadığı için işe yarıyor.</p>
 </div>
 
-<h3>Mobile Legends'a özgü dolandırıcılık nedir?</h3>
+<h2 class="q">Mobile Legends'a özgü dolandırıcılık nedir?</h2>
 <div class="risk-box">
   <p>Facebook/Discord gruplarında sahte aracılar, ayrıca bir "kirala-satın-al" varyantı: alıcıya geçici erişim verilir, öder, ve satıcı satış sözde tamamlanmadan önce bağlı e-postayı değiştirip onu dışarıda bırakır.</p>
 </div>
 
-<h3>PUBG Mobile'a özgü dolandırıcılık nedir?</h3>
+<h2 class="q">PUBG Mobile'a özgü dolandırıcılık nedir?</h2>
 <div class="risk-box">
   <p>Bir PUBG Mobile hesabı aynı anda birden fazla girişe bağlanabilir — örneğin Facebook, Twitter veya Google Play. Satıcıda kalan her bağlantı geri dönüş yoludur: ödemeden sonra hesap “kurtarılır” ve alıcı elinde hiçbir şeyle kalmaz. FunPay’deki ilanların bir kısmı zaten satış değil kiralamadır (“Rent” işaretli). Yayıncının kuralları hesap devrini tamamen yasakladığı için anlaşma bozulursa iki taraf da desteğe başvuramaz.</p>
 </div>
 
-<h3>Genshin Impact'e özgü dolandırıcılık nedir?</h3>
+<h2 class="q">Genshin Impact'e özgü dolandırıcılık nedir?</h2>
 <div class="risk-box">
   <p>Bir "dolandırıcılıktan" çok yapısal bir risk: HoYoverse'in hesap güvenliği, bir transferden sonra yeni cihazlardan/konumlardan girişleri aktif olarak işaretler ve hesabı kalıcı olarak askıya alabilir — bağlı ödeme geçmişi ve kimlik doğrulaması itirazı neredeyse imkansız hale getirdiğinden esasen itiraz hakkı yoktur. Bu, araştırmamızdaki herhangi bir oyunun en katı uygulamasıdır, bu da kısmen Genshin'in hesap pazarının Fortnite veya Free Fire'ınkinden daha küçük kalmasının nedenidir.</p>
 </div>
 
-<h3>Minecraft'ın kullanıcı adı pazarına özgü dolandırıcılık nedir?</h3>
+<h2 class="q">Minecraft'ın kullanıcı adı pazarına özgü dolandırıcılık nedir?</h2>
 <div class="risk-box">
   <p>"İsim işgali" dolandırıcılıkları: bir satıcı, bekleyen bir alıcının kapması için belirli bir tarihte kısa bir kullanıcı adını serbest bırakacağına söz verir, sonra ya erken başka birine bırakır ya da hiç bırakmaz. Mojang/Microsoft hesap transferlerini resmi olarak desteklemediği için, bu olursa bir anlaşmazlık süreci yoktur.</p>
 </div>
 
-<h3>Yine de ticaret yaparlarsa bir alıcıyı veya satıcıyı gerçekte ne korur?</h3>
+<h2 class="q">Yine de ticaret yaparlarsa bir alıcıyı veya satıcıyı gerçekte ne korur?</h2>
 <ul>
   <li><strong>Emanet (escrow)</strong> — güvenilir bir üçüncü taraf (Eldorado.gg gibi pazar yerlerine "TrustShield" olarak yerleşiktir), alıcı hesabın çalıştığını onaylayana kadar ödemeyi tutar, ardından fonları satıcıya serbest bırakır. Bu, çoğu Discord tabanlı anlaşmada eksik olan tek en büyük yapısal korumadır.</li>
   <li><strong>Pazar yeri satıcı puanları/inceleme geçmişi</strong> — tamamlanmış satışların bir geçmişi en azından bir sinyaldir, ancak zamanla sahte olarak oluşturulabilir.</li>
@@ -358,10 +362,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Bunların hiçbiri temel gerçeği değiştirmez: ticaret hala her oyunun Kullanım Şartlarını ihlal eder ve "başarılı", dolandırılmamış bir işlem bile oyun bunu tespit ederse aylar sonra kalıcı bir yasaklamayla sonuçlanabilir.</p>
 
-<h3>Burada kapsanan, ticaretin gerçekten düşük riskli olduğu bir oyun var mı?</h3>
+<h2 class="q">Burada kapsanan, ticaretin gerçekten düşük riskli olduğu bir oyun var mı?</h2>
 <p>Hayır. Kontrol ettiğimiz her oyunun Kullanım Şartları (Roblox, Supercell'in oyunları, Garena'nın Free Fire'ı, HoYoverse'in Genshin Impact'i, Epic'in Fortnite'ı, Mojang'ın Minecraft'ı, Moonton'ın Mobile Legends'ı) gerçek para karşılığında hesap transferlerini açıkça yasaklıyor. "Düşük dolandırıcılık riski" ve "kurallara aykırı" iki ayrı sorudur ve araştırdığımız hiçbir oyun ikisini de temize çıkarmıyor.</p>
 
-<h3>Bu ticaretle ilgili değil — sadece ülke değiştirdim veya yeni bir telefon aldım. Kendi hesabım risk altında mı?</h3>
+<h2 class="q">Bu ticaretle ilgili değil — sadece ülke değiştirdim veya yeni bir telefon aldım. Kendi hesabım risk altında mı?</h2>
 <p>Bu büyük ölçüde hangi oyuna bağlıdır ve bu, ticaret riskinden tamamen farklı bir sorudur — bu, yabancıya kimlik bilgisi vermek değil, meşru bir sahibin kendi giriş kalıbıyla ilgilidir. Oyun başına gerçekte bulduklarımız:</p>
 <div class="risk-box">
   <span class="tag">Gerçek, belgelenmiş risk:</span>

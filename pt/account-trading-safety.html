@@ -203,6 +203,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -311,46 +315,46 @@
 
 <div class="article-body">
 
-<h3>Por que a negociação de contas atrai tantos golpes especificamente?</h3>
+<h2 class="q">Por que a negociação de contas atrai tantos golpes especificamente?</h2>
 <p>Porque o "produto" sendo vendido é um conjunto de credenciais de login — assim que o comprador as tem, nada impede fisicamente que ele troque a senha e bloqueie o vendedor, e nada impede fisicamente que um vendedor venda a mesma conta para cinco compradores diferentes antes que alguém perceba. Não há entrega para interceptar, nenhum bem físico para inspecionar. Essa fragilidade estrutural é o motivo pelo qual todo jogo que pesquisamos tinha pelo menos um padrão de golpe documentado específico do seu próprio marketplace.</p>
 
-<h3>Qual é o golpe mais comum entre todos os jogos?</h3>
+<h2 class="q">Qual é o golpe mais comum entre todos os jogos?</h2>
 <div class="risk-box">
   <span class="tag">Confirmado especificamente em Fortnite e Free Fire:</span>
   <p><strong>Fraude de chargeback.</strong> Um comprador paga — frequentemente com um cartão roubado — recebe o login, e contesta a cobrança com o banco semanas depois. O pagamento é revertido, mas o vendedor já entregou acesso total à conta. Não há processo do lado do jogo para recuperar isso, já que o "roubo" aconteceu inteiramente do lado do pagamento, fora do controle do jogo.</p>
 </div>
 
-<h3>Qual golpe é específico do Roblox?</h3>
+<h2 class="q">Qual golpe é específico do Roblox?</h2>
 <div class="risk-box">
   <p>Falsos serviços de "intermediário" de negociação e sites de phishing que clonam a página de login do Roblox para roubar credenciais, além de golpes de "gerador de Robux grátis" que pedem acesso direto à conta. Os próprios Termos de Serviço do Roblox proíbem totalmente a transferência de contas, então uma conta vítima de golpe não tem caminho de recuperação — o Roblox não reverte uma transferência não autorizada nem mesmo para a vítima.</p>
 </div>
 
-<h3>Qual golpe é específico de Brawl Stars e Clash Royale?</h3>
+<h2 class="q">Qual golpe é específico de Brawl Stars e Clash Royale?</h2>
 <div class="risk-box">
   <p>Intermediários falsos de escrow no Discord que recebem o pagamento e simplesmente desaparecem sem entregar as credenciais, e esquemas de "teste antes de comprar", em que o vendedor dá acesso temporário, recebe o pagamento, e então troca a senha de volta e desaparece. Ambos funcionam porque não há proteção embutida em um acordo direto peer-to-peer no Discord.</p>
 </div>
 
-<h3>Qual golpe é específico do Mobile Legends?</h3>
+<h2 class="q">Qual golpe é específico do Mobile Legends?</h2>
 <div class="risk-box">
   <p>Intermediários falsos em grupos de Facebook/Discord, além de uma variante de "aluguel para comprar": o comprador recebe acesso temporário, paga, e o vendedor então troca o e-mail vinculado e o bloqueia antes de a venda supostamente ser finalizada.</p>
 </div>
 
-<h3>Qual golpe é específico do PUBG Mobile?</h3>
+<h2 class="q">Qual golpe é específico do PUBG Mobile?</h2>
 <div class="risk-box">
   <p>Uma conta de PUBG Mobile pode estar vinculada a vários logins ao mesmo tempo, por exemplo Facebook, Twitter ou Google Play. Qualquer vínculo que fique com o vendedor é um caminho de volta: depois do pagamento a conta é “recuperada” e o comprador fica sem nada. Parte dos anúncios da FunPay é aluguel (marcado “Rent”), não venda. Como as regras da publicadora proíbem transferir contas, se o negócio der errado nenhum dos dois lados pode recorrer ao suporte.</p>
 </div>
 
-<h3>Qual golpe é específico do Genshin Impact?</h3>
+<h2 class="q">Qual golpe é específico do Genshin Impact?</h2>
 <div class="risk-box">
   <p>Menos um "golpe" e mais um risco estrutural: a segurança de conta da HoYoverse sinaliza ativamente logins de novos dispositivos/locais após uma transferência, e pode suspender a conta permanentemente — essencialmente sem possibilidade de recurso, já que o histórico de pagamento vinculado e a verificação de identidade tornam quase impossível contestar. Essa é a fiscalização mais rígida de qualquer jogo em nossa pesquisa, o que também explica em parte por que o marketplace de contas do Genshin permanece menor que os de Fortnite ou Free Fire.</p>
 </div>
 
-<h3>Qual golpe é específico do mercado de usernames do Minecraft?</h3>
+<h2 class="q">Qual golpe é específico do mercado de usernames do Minecraft?</h2>
 <div class="risk-box">
   <p>Golpes de "name-squatting": um vendedor promete liberar um username curto em uma data específica para um comprador que está esperando pegá-lo, e então o libera antes para outra pessoa, ou nunca o libera. Como a Mojang/Microsoft não suporta oficialmente transferências de conta, não há processo de disputa se isso acontecer.</p>
 </div>
 
-<h3>O que realmente protege um comprador ou vendedor, se eles negociarem mesmo assim?</h3>
+<h2 class="q">O que realmente protege um comprador ou vendedor, se eles negociarem mesmo assim?</h2>
 <ul>
   <li><strong>Escrow</strong> — um terceiro de confiança (incorporado a marketplaces como o Eldorado.gg sob o nome "TrustShield") retém o pagamento até que o comprador confirme que a conta funciona, antes de liberar os fundos para o vendedor. Essa é a maior proteção estrutural ausente na maioria dos acordos baseados em Discord.</li>
   <li><strong>Avaliações/histórico de reputação do vendedor no marketplace</strong> — um histórico de vendas concluídas é ao menos algum sinal, embora possa ser falsificado ao longo do tempo.</li>
@@ -358,10 +362,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Nada disso muda o fato de fundo: negociar ainda viola os Termos de Serviço de todo jogo, e mesmo uma negociação "bem-sucedida", sem golpe, pode terminar em banimento permanente meses depois, se o jogo detectar.</p>
 
-<h3>Existe algum jogo coberto aqui em que negociar seja realmente de baixo risco?</h3>
+<h2 class="q">Existe algum jogo coberto aqui em que negociar seja realmente de baixo risco?</h2>
 <p>Não. Todos os Termos de Serviço que verificamos (Roblox, os jogos da Supercell, o Free Fire da Garena, o Genshin Impact da HoYoverse, o Fortnite da Epic, o Minecraft da Mojang, o Mobile Legends da Moonton) proíbem explicitamente a transferência de contas por dinheiro real. "Baixo risco de golpe" e "contra as regras" são duas perguntas separadas, e nenhum jogo que pesquisamos passa nas duas.</p>
 
-<h3>Isso não é sobre negociação — eu simplesmente mudei de país ou troquei de celular. Minha própria conta está em risco?</h3>
+<h2 class="q">Isso não é sobre negociação — eu simplesmente mudei de país ou troquei de celular. Minha própria conta está em risco?</h2>
 <p>Depende muito de qual jogo, e essa é uma pergunta totalmente diferente do risco de negociação — trata-se do próprio padrão de login de um dono legítimo, não da entrega de credenciais a um estranho. O que realmente encontramos por jogo:</p>
 <div class="risk-box">
   <span class="tag">Risco real e documentado:</span>

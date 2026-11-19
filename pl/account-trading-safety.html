@@ -161,6 +161,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -269,46 +273,46 @@
 
 <div class="article-body">
 
-<h3>Dlaczego handel kontami przyciąga akurat tak wiele oszustw?</h3>
+<h2 class="q">Dlaczego handel kontami przyciąga akurat tak wiele oszustw?</h2>
 <p>Ponieważ "produktem" sprzedawanym jest zestaw danych logowania — gdy kupujący je ma, nic fizycznie nie powstrzymuje go przed zmianą hasła i zablokowaniem sprzedającego, a nic fizycznie nie powstrzymuje sprzedającego przed sprzedaniem tego samego konta pięciu różnym kupującym, zanim ktokolwiek się zorientuje. Nie ma dostawy do przechwycenia, nie ma fizycznego towaru do sprawdzenia. Ta strukturalna słabość jest powodem, dla którego w każdej zbadanej przez nas grze znaleźliśmy co najmniej jeden udokumentowany schemat oszustwa specyficzny dla jej własnego rynku.</p>
 
-<h3>Jakie jest najbardziej powszechne oszustwo we wszystkich grach?</h3>
+<h2 class="q">Jakie jest najbardziej powszechne oszustwo we wszystkich grach?</h2>
 <div class="risk-box">
   <span class="tag">Potwierdzone konkretnie we Fortnite i Free Fire:</span>
   <p><strong>Oszustwo chargeback.</strong> Kupujący płaci — często kradzioną kartą — otrzymuje login, a tygodnie później kwestionuje płatność u swojego banku. Płatność zostaje cofnięta, ale sprzedający już przekazał pełny dostęp do konta. Nie ma procesu odzyskania po stronie gry, ponieważ "kradzież" nastąpiła całkowicie po stronie płatności, poza kontrolą gry.</p>
 </div>
 
-<h3>Jakie oszustwo jest specyficzne dla Roblox?</h3>
+<h2 class="q">Jakie oszustwo jest specyficzne dla Roblox?</h2>
 <div class="risk-box">
   <p>Fałszywe usługi "pośredników" handlowych i strony phishingowe kopiujące stronę logowania Roblox w celu kradzieży danych, plus oszustwa "generator darmowych Robux", które bezpośrednio żądają dostępu do konta. Ponieważ regulamin Roblox całkowicie zabrania transferu kont, oszukane konto nie ma żadnej drogi odzyskania — Roblox nie cofnie nieautoryzowanego transferu nawet dla ofiary.</p>
 </div>
 
-<h3>Jakie oszustwo jest specyficzne dla Brawl Stars i Clash Royale?</h3>
+<h2 class="q">Jakie oszustwo jest specyficzne dla Brawl Stars i Clash Royale?</h2>
 <div class="risk-box">
   <p>Fałszywi pośrednicy escrow na Discordzie, którzy przyjmują płatność i po prostu znikają bez dostarczenia danych logowania, oraz setupy "wypróbuj przed zakupem", gdzie sprzedający daje tymczasowy dostęp, zbiera płatność, a następnie zmienia hasło z powrotem i znika. Oba działają, ponieważ w bezpośredniej transakcji peer-to-peer na Discordzie nie ma wbudowanej ochrony.</p>
 </div>
 
-<h3>Jakie oszustwo jest specyficzne dla Mobile Legends?</h3>
+<h2 class="q">Jakie oszustwo jest specyficzne dla Mobile Legends?</h2>
 <div class="risk-box">
   <p>Fałszywi pośrednicy w grupach Facebook/Discord, plus wariant "rent-to-buy": kupujący otrzymuje tymczasowy dostęp, płaci, a następnie sprzedający zmienia powiązany e-mail i blokuje go przed rzekomym sfinalizowaniem sprzedaży.</p>
 </div>
 
-<h3>Jakie oszustwo jest specyficzne dla PUBG Mobile?</h3>
+<h2 class="q">Jakie oszustwo jest specyficzne dla PUBG Mobile?</h2>
 <div class="risk-box">
   <p>Konto PUBG Mobile może być połączone z kilkoma sposobami logowania naraz, np. Facebook, Twitter lub Google Play. Każde powiązanie, które zostaje u sprzedającego, to droga powrotu: po zapłacie konto jest „odzyskiwane”, a kupujący zostaje z niczym. Część ogłoszeń na FunPay to wynajem (oznaczony „Rent”), a nie sprzedaż. Ponieważ zasady wydawcy w ogóle zabraniają przekazywania kont, gdy transakcja się nie uda, żadna ze stron nie może zwrócić się do pomocy technicznej.</p>
 </div>
 
-<h3>Jakie oszustwo jest specyficzne dla Genshin Impact?</h3>
+<h2 class="q">Jakie oszustwo jest specyficzne dla Genshin Impact?</h2>
 <div class="risk-box">
   <p>To mniej "oszustwo", a bardziej ryzyko strukturalne: zespół bezpieczeństwa kont HoYoverse aktywnie flaguje logowania z nowych urządzeń/lokalizacji po transferze i może trwale zawiesić konto — praktycznie bez możliwości odwołania, ponieważ powiązana historia płatności i weryfikacja tożsamości sprawiają, że jest to niemal niemożliwe do zakwestionowania. To najściślejsze egzekwowanie ze wszystkich gier w naszym badaniu, co jest też częścią powodu, dla którego rynek kont Genshin pozostaje mniejszy niż Fortnite czy Free Fire.</p>
 </div>
 
-<h3>Jakie oszustwo jest specyficzne dla rynku nazw użytkownika Minecraft?</h3>
+<h2 class="q">Jakie oszustwo jest specyficzne dla rynku nazw użytkownika Minecraft?</h2>
 <div class="risk-box">
   <p>Oszustwa "name-squatting": sprzedający obiecuje zwolnić krótką nazwę użytkownika w konkretnym dniu dla czekającego kupującego, a następnie albo zwalnia ją wcześniej komuś innemu, albo wcale. Ponieważ Mojang/Microsoft oficjalnie nie wspiera transferów kont, nie ma procesu rozstrzygania sporów, jeśli tak się stanie.</p>
 </div>
 
-<h3>Co faktycznie chroni kupującego lub sprzedającego, jeśli mimo wszystko handlują?</h3>
+<h2 class="q">Co faktycznie chroni kupującego lub sprzedającego, jeśli mimo wszystko handlują?</h2>
 <ul>
   <li><strong>Escrow</strong> — zaufana strona trzecia (wbudowana w platformy jak Eldorado.gg pod nazwą "TrustShield") przetrzymuje płatność kupującego, dopóki nie potwierdzi, że konto działa zgodnie z opisem, zanim środki zostaną uwolnione do sprzedającego. To pojedyncza największa strukturalna ochrona brakująca w większości transakcji opartych na Discordzie.</li>
   <li><strong>Oceny/historia recenzji sprzedawcy na platformie</strong> — historia ukończonych sprzedaży daje przynajmniej jakiś sygnał, choć z czasem można to sfałszować.</li>
@@ -316,10 +320,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Nic z tego nie zmienia podstawowego faktu: handel nadal łamie regulamin każdej gry, a nawet "udana", nieoszukana transakcja może zakończyć się trwałym zablokowaniem miesiące później, jeśli gra to wykryje.</p>
 
-<h3>Czy jest tu jakaś gra, w której handel jest faktycznie niskiego ryzyka?</h3>
+<h2 class="q">Czy jest tu jakaś gra, w której handel jest faktycznie niskiego ryzyka?</h2>
 <p>Nie. Regulamin każdej sprawdzonej przez nas gry (Roblox, gry Supercell, Free Fire od Garena, Genshin Impact od HoYoverse, Fortnite od Epic, Minecraft od Mojang, Mobile Legends od Moonton) wyraźnie zabrania transferu kont za prawdziwe pieniądze. "Niskie ryzyko oszustwa" i "wbrew regulaminowi" to dwa osobne pytania, i żadna zbadana przez nas gra nie spełnia obu warunków jednocześnie.</p>
 
-<h3>To nie dotyczy handlu — po prostu zmieniłem kraj lub kupiłem nowy telefon. Czy moje własne konto jest zagrożone?</h3>
+<h2 class="q">To nie dotyczy handlu — po prostu zmieniłem kraj lub kupiłem nowy telefon. Czy moje własne konto jest zagrożone?</h2>
 <p>Zależy to mocno od tego, o którą grę chodzi, i to zupełnie inne pytanie niż ryzyko handlu — dotyczy własnego wzorca logowania legalnego właściciela, nie przekazywania danych obcej osobie. Co faktycznie znaleźliśmy dla każdej gry:</p>
 <div class="risk-box">
   <span class="tag">Realne, udokumentowane ryzyko:</span>

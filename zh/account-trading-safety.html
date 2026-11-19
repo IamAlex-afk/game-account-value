@@ -161,6 +161,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -269,46 +273,46 @@
 
 <div class="article-body">
 
-<h3>为什么账号交易特别容易招致诈骗？</h3>
+<h2 class="q">为什么账号交易特别容易招致诈骗？</h2>
 <p>因为被出售的"商品"是一组登录凭证——一旦买家拿到手，没有任何物理手段能阻止他们改密码把卖家锁在外面，也没有任何物理手段能阻止卖家在被人发现之前把同一个账号卖给五个不同的买家。没有可以拦截的快递，没有可以检查的实物。这种结构性弱点正是为什么我们调研的每一个游戏都至少有一种记录在案、专属于自己交易平台的诈骗模式。</p>
 
-<h3>所有游戏中最常见的单一诈骗是什么？</h3>
+<h2 class="q">所有游戏中最常见的单一诈骗是什么？</h2>
 <div class="risk-box">
   <span class="tag">在Fortnite和Free Fire中被特别证实：</span>
   <p><strong>拒付欺诈。</strong>买家付款——通常用被盗信用卡——收到登录信息，几周后向自己的银行申请拒付。付款被撤销，但卖家已经交出了完整的账号访问权限。这个游戏方没有任何流程可以挽回，因为"盗窃"完全发生在支付环节，超出了游戏的控制范围。</p>
 </div>
 
-<h3>Roblox专属的诈骗是什么？</h3>
+<h2 class="q">Roblox专属的诈骗是什么？</h2>
 <div class="risk-box">
   <p>虚假"中间人"交易服务，以及克隆Roblox登录页面窃取凭证的钓鱼网站，还有直接索要账号访问权限的"免费Robux生成器"诈骗。Roblox自身服务条款完全禁止账号转让，所以被骗的账号没有任何找回途径——即使是受害者，Roblox也不会撤销未经授权的转让。</p>
 </div>
 
-<h3>Brawl Stars和Clash Royale专属的诈骗是什么？</h3>
+<h2 class="q">Brawl Stars和Clash Royale专属的诈骗是什么？</h2>
 <div class="risk-box">
   <p>Discord上收款后直接消失、不交付凭证的虚假担保中间人，以及"先试用再购买"骗局——卖家给临时访问权限，收款后改回密码并消失。这两种都能得逞，是因为直接的Discord点对点交易没有任何内置保护。</p>
 </div>
 
-<h3>Mobile Legends专属的诈骗是什么？</h3>
+<h2 class="q">Mobile Legends专属的诈骗是什么？</h2>
 <div class="risk-box">
   <p>Facebook/Discord群组里的虚假中间人，以及一种"先租后买"变体：给买家临时访问权限，收款后，卖家在交易"完成"前更改绑定邮箱把他们锁在外面。</p>
 </div>
 
-<h3>PUBG Mobile专属的诈骗是什么？</h3>
+<h2 class="q">PUBG Mobile专属的诈骗是什么？</h2>
 <div class="risk-box">
   <p>一个 PUBG Mobile 账号可以同时绑定多种登录方式，例如 Facebook、Twitter 或 Google Play。卖家手里留下的任何一个绑定都是回头路：付款后账号被“找回”，买家什么都没有。FunPay 上有一部分挂单本来就是租号（标有“Rent”），不是出售。由于发行商规则完全禁止转让账号，交易出问题时双方都无法求助客服。</p>
 </div>
 
-<h3>Genshin Impact专属的诈骗是什么？</h3>
+<h2 class="q">Genshin Impact专属的诈骗是什么？</h2>
 <div class="risk-box">
   <p>与其说是"诈骗"，不如说是结构性风险：米哈游的账号安全系统会主动标记转让后来自新设备/新地点的登录，并可能永久封禁账号——基本无法申诉，因为关联的付款历史和实名认证使其几乎不可能被推翻。这是我们调研中所有游戏里执行最严格的，这也是Genshin的账号交易市场比Fortnite或Free Fire小的部分原因。</p>
 </div>
 
-<h3>Minecraft用户名市场专属的诈骗是什么？</h3>
+<h2 class="q">Minecraft用户名市场专属的诈骗是什么？</h2>
 <div class="risk-box">
   <p>"占名"诈骗：卖家承诺在特定日期释放一个短用户名供等待的买家抢注，然后要么提前释放给别人，要么根本不释放。由于Mojang/微软并不官方支持账号转让，一旦发生这种情况就没有纠纷处理流程。</p>
 </div>
 
-<h3>如果还是要交易，实际能保护买家或卖家的是什么？</h3>
+<h2 class="q">如果还是要交易，实际能保护买家或卖家的是什么？</h2>
 <ul>
   <li><strong>担保交易</strong> — 一个受信任的第三方(内置于Eldorado.gg等交易平台，名为"TrustShield")在买家确认账号可用之前先扣留付款，然后才把资金释放给卖家。这是大多数基于Discord的交易中缺失的最大一块结构性保护。</li>
   <li><strong>交易平台卖家评分/评价历史</strong> — 已完成销售的记录至少能提供一些信号，尽管随时间推移也可能被伪造。</li>
@@ -316,10 +320,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">这些都不能改变一个根本事实：交易仍然违反每个游戏的服务条款，即便是一笔"成功的"、没被骗的交易，如果游戏检测到了，几个月后也可能以永久封禁告终。</p>
 
-<h3>这里涵盖的游戏中，有没有真正低风险的交易？</h3>
+<h2 class="q">这里涵盖的游戏中，有没有真正低风险的交易？</h2>
 <p>没有。我们查阅的每一个游戏服务条款(Roblox、Supercell的游戏、Garena的Free Fire、米哈游的Genshin Impact、Epic的Fortnite、Mojang的Minecraft、Moonton的Mobile Legends)都明确禁止以真实货币转让账号。"低诈骗风险"和"违反规定"是两个独立的问题，我们调研的游戏中没有一个同时符合两者。</p>
 
-<h3>这跟交易无关——我只是搬了国家或换了新手机。我自己的账号有风险吗？</h3>
+<h2 class="q">这跟交易无关——我只是搬了国家或换了新手机。我自己的账号有风险吗？</h2>
 <p>这在很大程度上取决于具体是哪个游戏，而且这完全是一个和交易风险不同的问题——它关乎的是正当所有者自己的登录模式，而不是把凭证交给陌生人。我们针对每个游戏实际发现的情况：</p>
 <div class="risk-box">
   <span class="tag">真实的、有据可查的风险：</span>

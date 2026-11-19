@@ -161,6 +161,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -269,46 +273,46 @@
 
 <div class="article-body">
 
-<h3>なぜアカウント取引は特にこれほど多くの詐欺を引き寄せるのか？</h3>
+<h2 class="q">なぜアカウント取引は特にこれほど多くの詐欺を引き寄せるのか？</h2>
 <p>販売されている「商品」がログイン認証情報一式だからだ — 買い手がそれを手にした瞬間、物理的に何もパスワードを変更して売り手をロックアウトすることを止められない。そして物理的に何も、誰かに気づかれる前に売り手が同じアカウントを5人の異なる買い手に売ることを止められない。傍受すべき配送物も、検査すべき物理的な商品もない。この構造的な弱さこそが、我々が調査したすべてのゲームで、それぞれのマーケットプレイスに固有の少なくとも1つの記録された詐欺パターンがあった理由だ。</p>
 
-<h3>全ゲーム共通で最も多い単一の詐欺は？</h3>
+<h2 class="q">全ゲーム共通で最も多い単一の詐欺は？</h2>
 <div class="risk-box">
   <span class="tag">特にFortniteとFree Fireで確認：</span>
   <p><strong>チャージバック詐欺。</strong>買い手が — しばしば盗難カードで — 支払い、ログイン情報を受け取り、数週間後に銀行にチャージを異議申し立てする。支払いは取り消されるが、売り手はすでに完全なアカウントアクセスを引き渡している。この「窃盗」は完全に支払い側で起きており、ゲームのコントロール外であるため、これを回復するゲーム側のプロセスはない。</p>
 </div>
 
-<h3>Robloxに固有の詐欺は？</h3>
+<h2 class="q">Robloxに固有の詐欺は？</h2>
 <div class="risk-box">
   <p>Robloxのログインページを模倣して認証情報を盗む偽の「middleman」取引サービスとフィッシングサイト、そしてアカウントアクセスを直接要求する「free Robux generator」詐欺。Roblox自身のTerms of Serviceはアカウント移転を完全に禁止しているため、詐欺に遭ったアカウントには復元手段がない — Robloxは被害者のためであっても無許可の移転を取り消さない。</p>
 </div>
 
-<h3>Brawl StarsとClash Royaleに固有の詐欺は？</h3>
+<h2 class="q">Brawl StarsとClash Royaleに固有の詐欺は？</h2>
 <div class="risk-box">
   <p>Discord上で支払いを受け取ったら認証情報を渡さずに単純に姿を消す偽のエスクロー仲介者、そして売り手が一時的なアクセスを提供し支払いを回収した後にパスワードを元に戻して姿を消す「購入前お試し」の仕組み。どちらも、直接的なピアツーピアのDiscord取引に組み込みの保護がないために機能する。</p>
 </div>
 
-<h3>Mobile Legendsに固有の詐欺は？</h3>
+<h2 class="q">Mobile Legendsに固有の詐欺は？</h2>
 <div class="risk-box">
   <p>Facebook/Discordグループの偽仲介者、そして「rent-to-buy」の亜種：買い手に一時的なアクセスが与えられ支払いを行うと、売り手は紐づいたメールを変更し、販売が確定したとされる前にロックアウトする。</p>
 </div>
 
-<h3>PUBG Mobileに固有の詐欺は？</h3>
+<h2 class="q">PUBG Mobileに固有の詐欺は？</h2>
 <div class="risk-box">
   <p>PUBG Mobile のアカウントは、Facebook、Twitter、Google Play など複数のログイン方法に同時に連携できます。売り手の手元に残った連携は「戻り道」です。支払い後にアカウントが「復旧」され、買い手には何も残りません。FunPay の出品の一部は販売ではなくレンタル（「Rent」と表示）です。パブリッシャーの規約はアカウントの譲渡そのものを禁止しているので、取引がこじれてもどちらもサポートに頼れません。</p>
 </div>
 
-<h3>Genshin Impactに固有の詐欺は？</h3>
+<h2 class="q">Genshin Impactに固有の詐欺は？</h2>
 <div class="risk-box">
   <p>「詐欺」というより構造的リスクだ：HoYoverseのアカウントセキュリティは、移転後の新しいデバイス/場所からのログインを積極的にフラグし、アカウントを永久停止できる — 紐づいた支払い履歴とID認証により異議申し立てはほぼ不可能なため、実質的に上訴手段はない。これは我々の調査における他のどのゲームよりも厳格なエンフォースメントであり、これもGenshinのアカウントマーケットプレイスがFortniteやFree Fireより小さい理由の一部だ。</p>
 </div>
 
-<h3>Minecraftのユーザー名マーケットに固有の詐欺は？</h3>
+<h2 class="q">Minecraftのユーザー名マーケットに固有の詐欺は？</h2>
 <div class="risk-box">
   <p>「Name-squatting」詐欺：売り手が特定の日にユーザー名を解放すると約束し待っている買い手に取得させると言いながら、早めに他の誰かに解放するか、まったく解放しない。Mojang/Microsoftがアカウント移転を公式にサポートしていないため、これが起きた場合の紛争解決プロセスはない。</p>
 </div>
 
-<h3>それでも取引する場合、買い手や売り手を実際に守るものは何か？</h3>
+<h2 class="q">それでも取引する場合、買い手や売り手を実際に守るものは何か？</h2>
 <ul>
   <li><strong>エスクロー</strong> — 信頼できる第三者（Eldorado.ggなどのマーケットプレイスに「TrustShield」として組み込まれている）が、買い手がアカウントの動作を確認するまで支払いを保持し、その後で売り手に資金を解放する。これはほとんどのDiscordベースの取引に欠けている、最大の構造的保護だ。</li>
   <li><strong>マーケットプレイスの販売者評価/レビュー履歴</strong> — 完了した販売の実績は少なくとも1つのシグナルになるが、時間をかけて偽装されることもある。</li>
@@ -316,10 +320,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">これらのどれも根本的な事実を変えない：取引はそれでもすべてのゲームのTerms of Serviceを破っており、「成功した」、詐欺に遭っていない取引でさえ、ゲームがそれを検知すれば数ヶ月後に永久BANで終わる可能性がある。</p>
 
-<h3>ここで扱っているゲームの中に、実際に取引が低リスクなものはあるか？</h3>
+<h2 class="q">ここで扱っているゲームの中に、実際に取引が低リスクなものはあるか？</h2>
 <p>ない。我々が確認したすべてのゲームのTerms of Service（Roblox、Supercellのゲーム群、GarenaのFree Fire、HoYoverseのGenshin Impact、EpicのFortnite、MojangのMinecraft、MoontonのMobile Legends）は、実際の金銭でのアカウント移転を明確に禁止している。「詐欺リスクが低い」ことと「規約違反」は2つの別々の問題であり、我々が調査したどのゲームも両方をクリアしていない。</p>
 
-<h3>これは取引の話ではなく — 引っ越しや新しいスマホに変えただけだ。自分のアカウントはリスクにさらされているか？</h3>
+<h2 class="q">これは取引の話ではなく — 引っ越しや新しいスマホに変えただけだ。自分のアカウントはリスクにさらされているか？</h2>
 <p>これはどのゲームかによって大きく異なり、取引リスクとはまったく別の問題だ — 見知らぬ人に認証情報を渡すことではなく、正当な所有者自身のログインパターンについての話だ。我々がゲームごとに実際に見つけたもの：</p>
 <div class="risk-box">
   <span class="tag">実際の、記録されたリスク：</span>

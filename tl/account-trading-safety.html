@@ -201,6 +201,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -325,46 +329,46 @@
 
 <div class="article-body">
 
-<h3>Bakit napakaraming scam ang naaakit ng bentahan ng account?</h3>
+<h2 class="q">Bakit napakaraming scam ang naaakit ng bentahan ng account?</h2>
 <p>Dahil ang "produktong" ibinebenta ay login credentials — kapag nasa buyer na ang mga ito, walang pisikal na pumipigil sa kanyang palitan ang password at i-lock out ang seller, at walang pisikal na pumipigil sa seller na ibenta ang iisang account sa limang buyer bago may makapansin. Walang delivery na maharang, walang pisikal na produktong masuri. Dahil sa kahinaang ito sa istruktura, bawat larong sinaliksik namin ay may kahit isang dokumentadong pattern ng scam na partikular sa sarili nitong marketplace.</p>
 
-<h3>Ano ang pinakakaraniwang scam sa lahat ng laro?</h3>
+<h2 class="q">Ano ang pinakakaraniwang scam sa lahat ng laro?</h2>
 <div class="risk-box">
   <span class="tag">Kinumpirma partikular sa Fortnite at Free Fire:</span>
   <p><strong>Chargeback fraud.</strong> Nagbabayad ang buyer — madalas gamit ang nakaw na card — natatanggap ang login, at dinidispute ang bayad sa bangko makalipas ang ilang linggo. Nababawi ang bayad, pero naibigay na ng seller ang buong access sa account. Walang proseso sa panig ng laro para mabawi ito, dahil buong nangyari ang "pagnanakaw" sa panig ng bayad, labas sa kontrol ng laro.</p>
 </div>
 
-<h3>Anong scam ang partikular sa Roblox?</h3>
+<h2 class="q">Anong scam ang partikular sa Roblox?</h2>
 <div class="risk-box">
   <p>Mga pekeng "middleman" na serbisyo sa trade at phishing site na kumokopya sa login page ng Roblox para magnakaw ng credentials, pati mga scam na "libreng Robux generator" na direktang humihingi ng access sa account. Tuluyang ipinagbabawal ng Terms of Service ng Roblox ang paglilipat ng account, kaya walang paraan para mabawi ang na-scam na account — hindi ibabalik ng Roblox ang hindi awtorisadong paglilipat kahit para sa biktima.</p>
 </div>
 
-<h3>Anong scam ang partikular sa Brawl Stars at Clash Royale?</h3>
+<h2 class="q">Anong scam ang partikular sa Brawl Stars at Clash Royale?</h2>
 <div class="risk-box">
   <p>Mga pekeng escrow middleman sa Discord na tumatanggap ng bayad at basta na lang naglalaho nang walang ibinibigay na credentials, at mga setup na "subukan muna bago bumili" kung saan nagbibigay ang seller ng pansamantalang access, kinokolekta ang bayad, saka ibinabalik ang password at naglalaho. Gumagana ang dalawa dahil walang built-in na proteksyon sa direktang peer-to-peer na deal sa Discord.</p>
 </div>
 
-<h3>Anong scam ang partikular sa Mobile Legends?</h3>
+<h2 class="q">Anong scam ang partikular sa Mobile Legends?</h2>
 <div class="risk-box">
   <p>Mga pekeng middleman sa mga grupo sa Facebook/Discord, pati variant na "rent-to-buy": binibigyan ang buyer ng pansamantalang access, nagbabayad siya, saka pinapalitan ng seller ang naka-link na email at nila-lock out siya bago raw matapos ang bentahan.</p>
 </div>
 
-<h3>Anong scam ang partikular sa PUBG Mobile?</h3>
+<h2 class="q">Anong scam ang partikular sa PUBG Mobile?</h2>
 <div class="risk-box">
   <p>Puwedeng naka-link ang isang PUBG Mobile account sa ilang login nang sabay, halimbawa Facebook, Twitter o Google Play. Bawat link na naiwan sa seller ay daan pabalik: pagkatapos magbayad, “nire-recover” ang account at walang natitira sa buyer. Ang ilang listing sa FunPay ay paupahan talaga (may markang “Rent”), hindi bentahan. Dahil ipinagbabawal ng publisher ang paglilipat ng account, walang panig na makakalapit sa support kapag nagkaproblema ang deal.</p>
 </div>
 
-<h3>Anong scam ang partikular sa Genshin Impact?</h3>
+<h2 class="q">Anong scam ang partikular sa Genshin Impact?</h2>
 <div class="risk-box">
   <p>Hindi ito gaanong "scam" kundi panganib sa istruktura: aktibong nag-fa-flag ang account security ng HoYoverse ng mga login mula sa bagong device/lokasyon matapos ang paglilipat, at puwedeng permanenteng i-suspend ang account — halos walang apela, dahil ang naka-link na kasaysayan ng bayad at ID verification ay halos imposibleng tutulan. Ito ang pinakamahigpit na pagpapatupad sa lahat ng laro sa aming pananaliksik, at bahagi rin ito ng dahilan kung bakit mas maliit ang account marketplace ng Genshin kaysa sa Fortnite o Free Fire.</p>
 </div>
 
-<h3>Anong scam ang partikular sa merkado ng Minecraft username?</h3>
+<h2 class="q">Anong scam ang partikular sa merkado ng Minecraft username?</h2>
 <div class="risk-box">
   <p>Mga scam na "name-squatting": nangangako ang seller na ire-release ang maikling username sa isang partikular na petsa para makuha ng naghihintay na buyer, saka ito nire-release nang maaga sa iba o hindi talaga. Dahil hindi opisyal na sinusuportahan ng Mojang/Microsoft ang paglilipat ng account, walang proseso ng dispute kapag nangyari ito.</p>
 </div>
 
-<h3>Ano talaga ang nagpoprotekta sa buyer o seller, kung magbebentahan pa rin sila?</h3>
+<h2 class="q">Ano talaga ang nagpoprotekta sa buyer o seller, kung magbebentahan pa rin sila?</h2>
 <ul>
   <li><strong>Escrow</strong> — isang pinagkakatiwalaang third party (built-in sa mga marketplace tulad ng Eldorado.gg bilang "TrustShield") ang humahawak ng bayad hanggang kumpirmahin ng buyer na gumagana ang account, bago ibigay ang pera sa seller. Ito ang pinakamalaking proteksyon sa istruktura na wala sa karamihan ng deal sa Discord.</li>
   <li><strong>Rating/kasaysayan ng review ng seller sa marketplace</strong> — ang track record ng mga natapos na benta ay kahit paano may senyales, bagaman puwede itong pekein sa paglipas ng panahon.</li>
@@ -372,10 +376,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Wala sa mga ito ang nagbabago sa pangunahing katotohanan: labag pa rin ang bentahan sa Terms of Service ng bawat laro, at kahit ang "matagumpay" at hindi na-scam na trade ay puwedeng mauwi sa permanenteng ban makalipas ang ilang buwan kung matuklasan ito ng laro.</p>
 
-<h3>May laro ba rito kung saan talagang mababa ang panganib ng bentahan?</h3>
+<h2 class="q">May laro ba rito kung saan talagang mababa ang panganib ng bentahan?</h2>
 <p>Wala. Bawat Terms of Service na sinuri namin (Roblox, mga laro ng Supercell, Free Fire ng Garena, Genshin Impact ng HoYoverse, Fortnite ng Epic, Minecraft ng Mojang, Mobile Legends ng Moonton) ay tahasang nagbabawal sa paglilipat ng account para sa tunay na pera. Magkaibang tanong ang "mababang panganib ng scam" at "labag sa patakaran", at walang larong sinaliksik namin ang pumapasa sa pareho.</p>
 
-<h3>Hindi ito tungkol sa bentahan — lumipat lang ako ng bansa o nagpalit ng phone. Nanganganib ba ang sarili kong account?</h3>
+<h2 class="q">Hindi ito tungkol sa bentahan — lumipat lang ako ng bansa o nagpalit ng phone. Nanganganib ba ang sarili kong account?</h2>
 <p>Malaki ang nakadepende sa laro, at ganap na ibang tanong ito mula sa panganib ng bentahan — tungkol ito sa sariling pattern ng login ng lehitimong may-ari, hindi sa pagbibigay ng credentials sa estranghero. Ang aktuwal naming nakita bawat laro:</p>
 <div class="risk-box">
   <span class="tag">Tunay at dokumentadong panganib:</span>

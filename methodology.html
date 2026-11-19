@@ -74,6 +74,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .article-body ul { margin: 8px 0 8px 20px; }
   .article-body li { margin-bottom: 6px; }
   .source-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
@@ -178,7 +182,7 @@
 
 <div class="article-body">
 
-<h3>Where our prices come from</h3>
+<h2 class="q">Where our prices come from</h2>
 <p>We check live listing pages on active third-party marketplaces, sorted by price, rather than relying on old articles or forum claims. Our primary sources per game:</p>
 <table class="source-table">
 <tbody>
@@ -191,22 +195,22 @@
 </table>
 <p>Minecraft is the exception: rare-username sales are documented through community reporting rather than a single marketplace, since that niche trades informally.</p>
 
-<h3>The two-listing rule: when an item counts as a value driver</h3>
+<h2 class="q">The two-listing rule: when an item counts as a value driver</h2>
 <p>We only publish a specific item, skin, or character as a genuine value driver if it appears in <strong>two or more independent top-price listings</strong>. A single mention doesn't make the cut — it gets flagged internally as unconfirmed and left out of anything we state as fact. This is why, for example, our Fortnite page names IKONIK specifically (it repeated across 4 of the top 10 listings we checked) while other skins we saw only once are not named as value drivers.</p>
 
-<h3>When nothing repeats, stats set the price</h3>
+<h2 class="q">When nothing repeats, stats set the price</h2>
 <p>We state plainly that value is driven by stats rather than naming a "top skins" list we'd have to guess. For Brawl Stars, Clash of Clans, Clash Royale, and Free Fire specifically, our top-10-by-price research found zero named-skin repeats — no single skin or cosmetic showed up twice across the highest-priced listings we checked. So those four pages point to trophies, Town Hall/King Tower level, and rank as the real value drivers instead.</p>
 
-<h3>How often we re-check, and what the date badge means</h3>
+<h2 class="q">How often we re-check, and what the date badge means</h2>
 <p>The badge under each page's headline states the date that page's data was last checked against live listings. It is not a permanent guarantee — marketplace prices move — but it tells you exactly how old the numbers you're reading are, rather than leaving you to guess whether a "top accounts" claim is from this month or three years ago (the Fortnite comparison on our <a href="./which-game-accounts-are-most-valuable.html">cross-game comparison page</a> shows exactly why that distinction matters).</p>
 
-<h3>What we never do with the numbers</h3>
+<h2 class="q">What we never do with the numbers</h2>
 <p>We don't extrapolate a game's typical price range from a handful of high-end listings, don't reuse a price found for one region as if it applies globally without a regional cross-check, and don't carry forward a number from an earlier version of this site without re-verifying it against a current listing first.</p>
 
-<h3>Why we don't copy numbers from other value calculators</h3>
+<h2 class="q">Why we don't copy numbers from other value calculators</h2>
 <p>We treat a number from another value calculator differently from a real marketplace listing. A calculator site's per-item dollar weight is that tool's own internal assumption, not a confirmed sale or a live asking price — so we don't publish those figures as fact unless we can independently verify them another way, such as against an item's actual official in-game currency cost. When a calculator's number can't be verified that way, we leave it out rather than present an unconfirmed weight as if it were researched.</p>
 
-<h3>How many sources a number needs</h3>
+<h2 class="q">How many sources a number needs</h2>
 <p>Not for anything stated as a confirmed fact. Every price range on this site is checked against at least one live marketplace directly. Where a figure is a genuine outlier — a record sale, a self-reported lifetime spending total, a single platform's example listing — we label it explicitly as its own category (see, for instance, the reported-holdings note on the Roblox page) rather than blending it into the regular market range.</p>
 
 </div>

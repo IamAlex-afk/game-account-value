@@ -74,6 +74,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .article-body ul { margin: 8px 0 8px 20px; }
   .article-body li { margin-bottom: 6px; }
   .source-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
@@ -178,7 +182,7 @@
 
 <div class="article-body">
 
-<h3>가격 데이터의 출처</h3>
+<h2 class="q">가격 데이터의 출처</h2>
 <p>오래된 기사나 포럼 주장에 의존하는 대신, 활동 중인 제3자 마켓플레이스의 실시간 매물 페이지를 가격순으로 확인한다. 게임별 주요 출처:</p>
 <table class="source-table">
 <tbody>
@@ -193,22 +197,22 @@
 </table>
 <p>Minecraft는 예외다: 희귀 사용자명 판매는 단일 마켓플레이스가 아니라 커뮤니티 보고를 통해 기록된다. 그 틈새시장이 비공식적으로 거래되기 때문이다.</p>
 
-<h3>두 매물 규칙: 아이템이 가치를 좌우한다고 보는 기준</h3>
+<h2 class="q">두 매물 규칙: 아이템이 가치를 좌우한다고 보는 기준</h2>
 <p>특정 아이템, 스킨, 캐릭터를 진짜 가치 결정 요인으로 공개하는 것은 <strong>2건 이상의 독립적인 최고가 매물</strong>에 등장할 때뿐이다. 단 한 번의 언급으로는 기준을 충족하지 못한다 — 내부적으로 미확인으로 표시되고 사실로 언급하는 모든 것에서 제외된다. 예를 들어 우리의 Fortnite 페이지가 IKONIK을 구체적으로 명시하는 이유가 바로 이것이다(확인한 상위 10개 매물 중 4건에서 반복됨), 반면 한 번만 본 다른 스킨들은 가치 결정 요인으로 명시하지 않는다.</p>
 
-<h3>반복되는 것이 없으면 수치가 가격을 정합니다</h3>
+<h2 class="q">반복되는 것이 없으면 수치가 가격을 정합니다</h2>
 <p>우리는 추측해야 하는 "상위 스킨" 목록을 만드는 대신, 가치가 스탯에 의해 결정된다고 명확히 말한다. 특히 Brawl Stars, Clash of Clans, Clash Royale, Free Fire의 경우, 가격 상위 10개 조사에서 이름이 반복된 스킨이 하나도 없었다 — 확인한 최고가 매물 중 동일한 스킨이나 코스메틱이 두 번 등장한 적이 없었다. 그래서 이 네 페이지는 대신 트로피, Town Hall/King Tower 레벨, 랭크를 실제 가치 결정 요인으로 지목한다.</p>
 
-<h3>재확인 주기와 날짜 배지의 의미</h3>
+<h2 class="q">재확인 주기와 날짜 배지의 의미</h2>
 <p>각 페이지 제목 아래 배지는 해당 페이지 데이터가 마지막으로 실시간 매물과 대조 확인된 날짜를 나타낸다. 영구적인 보증은 아니다 — 마켓플레이스 가격은 변동한다 — 하지만 "상위 계정" 주장이 이번 달 것인지 3년 전 것인지 추측하게 만드는 대신, 읽고 있는 숫자가 얼마나 오래됐는지 정확히 알려준다(<a href="./which-game-accounts-are-most-valuable.html">게임 간 비교 페이지</a>의 Fortnite 비교가 이 구분이 왜 중요한지 정확히 보여준다).</p>
 
-<h3>숫자에 대해 우리가 절대 하지 않는 것</h3>
+<h2 class="q">숫자에 대해 우리가 절대 하지 않는 것</h2>
 <p>소수의 고가 매물로부터 게임의 전형적인 가격대를 외삽하지 않는다. 한 지역에서 발견된 가격을 지역 교차 확인 없이 전 세계에 적용되는 것처럼 재사용하지 않는다. 사이트의 이전 버전에 있던 숫자를 현재 매물과 재검증하지 않고 그대로 가져오지 않는다.</p>
 
-<h3>다른 계산기의 숫자를 가져오지 않는 이유</h3>
+<h2 class="q">다른 계산기의 숫자를 가져오지 않는 이유</h2>
 <p>다른 계산기의 숫자는 실제 마켓플레이스 매물과는 다르게 다룬다. 계산기 사이트의 아이템별 달러 가중치는 그 도구 자체의 내부적 가정일 뿐, 확인된 판매나 실시간 희망 가격이 아니다 — 그래서 아이템의 실제 공식 게임 내 화폐 비용과 대조하는 등 다른 방법으로 독립적으로 검증할 수 없는 한, 그 수치를 사실로 공개하지 않는다. 계산기 수치가 그런 방식으로 검증되지 않으면, 조사된 것처럼 미확인 가중치를 제시하는 대신 제외한다.</p>
 
-<h3>숫자 하나에 필요한 출처 수</h3>
+<h2 class="q">숫자 하나에 필요한 출처 수</h2>
 <p>확인된 사실로 언급하는 것에 대해서는 전혀 없다. 이 사이트의 모든 가격대는 최소 하나의 실시간 마켓플레이스와 직접 대조 확인된다. 수치가 진짜 이상치인 경우 — 기록적인 판매, 자진 신고한 평생 지출 총액, 단일 플랫폼의 예시 매물 — 일반 시장 범위에 섞는 대신 명시적으로 별도 카테고리로 표시한다(예: Roblox 페이지의 신고된 보유 자산 관련 참고 사항 참조).</p>
 
 </div>

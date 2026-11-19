@@ -203,6 +203,10 @@
   .article-body { max-width: 720px; margin: 0 auto; padding: 0 24px 20px; }
   .article-body h3 { font-family: var(--serif); font-variation-settings: 'wght' 700; font-size: 21px; margin: 32px 0 10px; }
   .article-body h3:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; text-transform: none; padding: 0; border: 0; }
+    html body .article-body h2.q::after { content: none; }
+    html body .article-body h2.q:first-of-type { margin-top: 8px; }
+    html body .article-body h2.q:not(:first-child) { margin-top: 30px; }
   .risk-box { background: rgba(212,175,55,0.05); border: 1px solid #1a1f35; border-radius: 10px; padding: 14px 18px; margin: 10px 0; font-size: 14px; }
   .risk-box .tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; }
   .report-cta { margin: 28px 0 10px; text-align: center; }
@@ -311,46 +315,46 @@
 
 <div class="article-body">
 
-<h3>Pourquoi le commerce de comptes attire-t-il autant d'arnaques spécifiquement ?</h3>
+<h2 class="q">Pourquoi le commerce de comptes attire-t-il autant d'arnaques spécifiquement ?</h2>
 <p>Parce que le « produit » vendu est un ensemble d'identifiants de connexion — une fois qu'un acheteur les a, rien ne l'empêche physiquement de changer le mot de passe et de bloquer le vendeur, et rien n'empêche physiquement un vendeur de vendre le même compte à cinq acheteurs différents avant que quiconque le remarque. Il n'y a pas de livraison à intercepter, pas de bien physique à inspecter. Cette faiblesse structurelle explique pourquoi chaque jeu que nous avons étudié avait au moins un schéma d'arnaque documenté spécifique à son propre marketplace.</p>
 
-<h3>Quelle est l'arnaque la plus courante dans tous les jeux ?</h3>
+<h2 class="q">Quelle est l'arnaque la plus courante dans tous les jeux ?</h2>
 <div class="risk-box">
   <span class="tag">Confirmé spécifiquement dans Fortnite et Free Fire :</span>
   <p><strong>La fraude au rétrofacturation.</strong> Un acheteur paie — souvent avec une carte volée — reçoit la connexion, et conteste le paiement auprès de sa banque des semaines plus tard. Le paiement est annulé, mais le vendeur a déjà remis l'accès complet au compte. Il n'y a aucun processus côté jeu pour récupérer cela, puisque le « vol » s'est produit entièrement du côté du paiement, hors du contrôle du jeu.</p>
 </div>
 
-<h3>Quelle arnaque est spécifique à Roblox ?</h3>
+<h2 class="q">Quelle arnaque est spécifique à Roblox ?</h2>
 <div class="risk-box">
   <p>De faux services d'échange « intermédiaire » et des sites de phishing qui clonent la page de connexion Roblox pour voler des identifiants, plus des arnaques de « générateur de Robux gratuit » qui demandent directement l'accès au compte. Les propres Conditions d'Utilisation de Roblox interdisent totalement les transferts de comptes, donc un compte arnaqué n'a aucun chemin de récupération — Roblox n'annulera pas un transfert non autorisé même pour la victime.</p>
 </div>
 
-<h3>Quelle arnaque est spécifique à Brawl Stars et Clash Royale ?</h3>
+<h2 class="q">Quelle arnaque est spécifique à Brawl Stars et Clash Royale ?</h2>
 <div class="risk-box">
   <p>De faux intermédiaires de séquestre sur Discord qui prennent le paiement et disparaissent simplement sans livrer les identifiants, et des configurations « essai avant achat » où un vendeur donne un accès temporaire, collecte le paiement, puis change le mot de passe et disparaît. Les deux fonctionnent car il n'y a aucune protection intégrée dans un accord direct entre particuliers sur Discord.</p>
 </div>
 
-<h3>Quelle arnaque est spécifique à Mobile Legends ?</h3>
+<h2 class="q">Quelle arnaque est spécifique à Mobile Legends ?</h2>
 <div class="risk-box">
   <p>De faux intermédiaires dans des groupes Facebook/Discord, plus une variante de « location-achat » : un acheteur reçoit un accès temporaire, paie, et le vendeur change ensuite l'e-mail lié et le bloque avant que la vente soit supposément finalisée.</p>
 </div>
 
-<h3>Quelle arnaque est spécifique à PUBG Mobile ?</h3>
+<h2 class="q">Quelle arnaque est spécifique à PUBG Mobile ?</h2>
 <div class="risk-box">
   <p>Un compte PUBG Mobile peut être lié à plusieurs connexions à la fois, par exemple Facebook, Twitter ou Google Play. Chaque liaison que le vendeur garde est une porte de retour : après le paiement, le compte est « récupéré » et l’acheteur se retrouve sans rien. Une partie des annonces FunPay sont des locations (marquées « Rent »), pas des ventes. Comme les règles de l’éditeur interdisent tout transfert de compte, aucune des deux parties ne peut se tourner vers le support si l’affaire tourne mal.</p>
 </div>
 
-<h3>Quelle arnaque est spécifique à Genshin Impact ?</h3>
+<h2 class="q">Quelle arnaque est spécifique à Genshin Impact ?</h2>
 <div class="risk-box">
   <p>Moins une « arnaque » qu'un risque structurel : la sécurité des comptes de HoYoverse signale activement les connexions depuis de nouveaux appareils/emplacements après un transfert, et peut suspendre le compte de façon permanente — sans appel possible essentiellement, puisque l'historique de paiement lié et la vérification d'identité rendent presque impossible toute contestation. C'est l'application la plus stricte de tous les jeux de notre recherche, ce qui explique en partie pourquoi le marketplace de comptes de Genshin reste plus petit que celui de Fortnite ou Free Fire.</p>
 </div>
 
-<h3>Quelle arnaque est spécifique au marché des pseudos de Minecraft ?</h3>
+<h2 class="q">Quelle arnaque est spécifique au marché des pseudos de Minecraft ?</h2>
 <div class="risk-box">
   <p>Les arnaques de « name-squatting » : un vendeur promet de libérer un pseudo court à une date précise pour qu'un acheteur en attente le récupère, puis le libère plus tôt à quelqu'un d'autre ou jamais du tout. Comme Mojang/Microsoft ne soutient pas officiellement les transferts de comptes, il n'y a pas de processus de résolution de litige si cela se produit.</p>
 </div>
 
-<h3>Qu'est-ce qui protège réellement un acheteur ou un vendeur, s'ils commercent quand même ?</h3>
+<h2 class="q">Qu'est-ce qui protège réellement un acheteur ou un vendeur, s'ils commercent quand même ?</h2>
 <ul>
   <li><strong>Le séquestre (escrow)</strong> — un tiers de confiance (intégré dans des marketplaces comme Eldorado.gg sous le nom « TrustShield ») retient le paiement jusqu'à ce que l'acheteur confirme que le compte fonctionne, avant de libérer les fonds au vendeur. C'est la plus grande protection structurelle absente de la plupart des accords basés sur Discord.</li>
   <li><strong>Les notes/l'historique d'avis de vendeur sur le marketplace</strong> — un historique de ventes complétées est au moins un signal, bien qu'il puisse être falsifié avec le temps.</li>
@@ -358,10 +362,10 @@
 </ul>
 <p style="font-size:13px; color:var(--muted);">Rien de tout cela ne change le fait sous-jacent : commercer viole toujours les Conditions d'Utilisation de tous les jeux, et même un échange « réussi » et sans arnaque peut se terminer par un bannissement permanent des mois plus tard si le jeu le détecte.</p>
 
-<h3>Y a-t-il un jeu couvert ici où commercer est réellement peu risqué ?</h3>
+<h2 class="q">Y a-t-il un jeu couvert ici où commercer est réellement peu risqué ?</h2>
 <p>Non. Les Conditions d'Utilisation de chaque jeu que nous avons vérifiées (Roblox, les jeux de Supercell, Free Fire de Garena, Genshin Impact de HoYoverse, Fortnite d'Epic, Minecraft de Mojang, Mobile Legends de Moonton) interdisent explicitement les transferts de comptes contre de l'argent réel. « Faible risque d'arnaque » et « contraire aux règles » sont deux questions séparées, et aucun jeu que nous avons étudié ne réussit les deux.</p>
 
-<h3>Ce n'est pas à propos du commerce — j'ai juste changé de pays ou de téléphone. Mon propre compte est-il à risque ?</h3>
+<h2 class="q">Ce n'est pas à propos du commerce — j'ai juste changé de pays ou de téléphone. Mon propre compte est-il à risque ?</h2>
 <p>Cela dépend beaucoup du jeu, et c'est une question complètement différente du risque de commerce — il s'agit du propre schéma de connexion d'un propriétaire légitime, pas de remettre des identifiants à un inconnu. Ce que nous avons réellement trouvé par jeu :</p>
 <div class="risk-box">
   <span class="tag">Risque réel et documenté :</span>
