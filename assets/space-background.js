@@ -72,6 +72,13 @@
   function ready(i) { return i && i.complete && i.naturalWidth > 0; }
   function el(tag, css) { var e = document.createElement(tag); e.setAttribute("aria-hidden", "true"); e.style.cssText = css; return e; }
 
+  function paintPlanet(e) {   // draw the planet image into its canvas at its on-screen size (re-run on resize)
+    var im = e._img; if (!im || !im.complete || !im.naturalWidth || !e._p) return;
+    var w = Math.round(e._p.w), h = Math.round(w * im.naturalHeight / im.naturalWidth), r = Math.min(window.devicePixelRatio || 1, 2);
+    e.width = Math.round(w * r); e.height = Math.round(h * r); e.style.height = h + "px";
+    var c = e.getContext("2d"); c.clearRect(0, 0, e.width, e.height); c.drawImage(im, 0, 0, e.width, e.height);
+  }
+
   function build() {
     dpr = Math.min(window.devicePixelRatio || 1, phone ? 1 : 1.5);
     // phones: size to the LARGE viewport (URL bar hidden) and never shrink, so the browser bar
@@ -92,8 +99,10 @@
 
     P.forEach(function (p, k) {
       var e = planetEls[k];
-      if (!e) { e = el("img", "position:fixed;left:0;top:0;z-index:-4;pointer-events:none;will-change:transform;user-select:none"); e.alt = ""; e.decoding = "async"; e.src = BASE + p.src; document.body.insertBefore(e, near); planetEls[k] = e; }
-      e._p = p; e.style.width = Math.round(p.w) + "px"; e.style.opacity = p.op;
+      // a <canvas>, not an <img>: drawn once from an off-DOM image, so this decorative planet (added after load) can never
+      // become the page's Largest Contentful Paint element (web.dev/articles/lcp: canvas is not an LCP candidate)
+      if (!e) { e = el("canvas", "position:fixed;left:0;top:0;z-index:-4;pointer-events:none;will-change:transform;user-select:none"); e._img = new Image(); e._img.decoding = "async"; e._img.onload = paintPlanet.bind(null, e); e._img.src = BASE + p.src; document.body.insertBefore(e, near); planetEls[k] = e; }
+      e._p = p; e.style.width = Math.round(p.w) + "px"; e.style.opacity = p.op; paintPlanet(e);
     });
   }
 
