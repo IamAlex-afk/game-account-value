@@ -26,11 +26,20 @@
     return [lo, hi];
   }
 
+  // Money in the page language's format, matching the page text: local separators (CLDR via Intl) for the
+  // languages localised on the site; "$" after the amount for de/fr/it/pl (NBSP) and ar, before it elsewhere.
+  var PAGE_LANG = (document.documentElement.lang || "en").toLowerCase().slice(0, 2);
+  var NUM_LOCALE = /^(tr|de|es|it|id|pt|vi|fr|ru|kk|ky|uz|pl|tk)$/.test(PAGE_LANG) ? PAGE_LANG : "en-US";
+  var USD_AFTER = { de: "\u00a0$", fr: "\u00a0$", it: "\u00a0$", pl: "\u00a0$", ar: "$" };
   function formatMoney(n) {
-    if (n < 10) return "$" + n.toFixed(2).replace(/\.00$/, "");
-    if (n < 1000) return "$" + Math.round(n);
-    var rounded = n < 10000 ? Math.round(n / 10) * 10 : Math.round(n / 100) * 100;
-    return "$" + rounded.toLocaleString("en-US");
+    var v, dec = 0;
+    if (n < 10) { v = Math.round(n * 100) / 100; dec = v % 1 ? 2 : 0; }
+    else if (n < 1000) v = Math.round(n);
+    else v = n < 10000 ? Math.round(n / 10) * 10 : Math.round(n / 100) * 100;
+    var s;
+    try { s = v.toLocaleString(NUM_LOCALE, { minimumFractionDigits: dec, maximumFractionDigits: dec }); }
+    catch (e) { s = v.toFixed(dec); }
+    return USD_AFTER[PAGE_LANG] ? s + USD_AFTER[PAGE_LANG] : "$" + s;
   }
 
   // --- i18n --------------------------------------------------------------
