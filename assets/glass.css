@@ -1327,3 +1327,6 @@ html body { background: transparent !important; }
 .gav-motion:hover, .gav-motion:focus-visible { border-color: var(--cyan); color: #fff; }
 .gav-motion:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
 html.gav-still *, html.gav-still *::before, html.gav-still *::after { animation-play-state: paused !important; }
+
+/* Japanese: wrap headings/links between phrases, not inside words (word-break:auto-phrase; ignored where unsupported) */
+:lang(ja) :is(h1, h2, h3, a, .price-range) { word-break: auto-phrase; }
